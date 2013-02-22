@@ -1,0 +1,12 @@
+E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\bin\Debug\HN36Pho.exe
+E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\bin\Debug\HN36Pho.pdb
+E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\bin\Debug\DevComponents.DotNetBar2.dll
+E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\HN36Pho.Properties.Resources.resources
+E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\ResGen.read.1.tlog
+E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\ResGen.write.1.tlog
+E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\HN36Pho.exe.licenses
+E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\HN36Pho.exe
+E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\HN36Pho.pdb
+E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\HN36Pho.UserControl1.resources
+E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\HN36Pho.frmMainA.resources
