@@ -8,5 +8,6 @@ E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\ResGen.write.1.tlog
 E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\HN36Pho.exe.licenses
 E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\HN36Pho.exe
 E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\HN36Pho.pdb
-E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\HN36Pho.UserControl1.resources
 E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\HN36Pho.frmMainA.resources
+E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\HN36Pho.frmLogin.resources
+E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\HN36Pho.frmAbout.resources

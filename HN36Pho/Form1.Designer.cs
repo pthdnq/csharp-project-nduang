@@ -1,6 +1,6 @@
 ﻿namespace HN36Pho
 {
-    partial class frmMainA
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -47,13 +47,11 @@
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.txtSearchUser = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.dGView = new System.Windows.Forms.DataGridView();
             this.frmMain.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.ribbonBar1.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.btnEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGView)).BeginInit();
             this.SuspendLayout();
             // 
             // frmMain
@@ -123,7 +121,7 @@
             this.mnAdmin.ImagePaddingHorizontal = 8;
             this.mnAdmin.Name = "mnAdmin";
             this.mnAdmin.Panel = this.ribbonPanel1;
-            this.mnAdmin.Text = "Quản trị HT";
+            this.mnAdmin.Text = "Quản lý người dùng";
             // 
             // mnFuction
             // 
@@ -221,7 +219,7 @@
             // 
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
+            this.txtSearchUser.Border.Class = "TextBoxBorder";
             this.txtSearchUser.Location = new System.Drawing.Point(419, 8);
             this.txtSearchUser.Name = "txtSearchUser";
             this.txtSearchUser.Size = new System.Drawing.Size(246, 23);
@@ -238,31 +236,20 @@
             this.textBoxX1.Size = new System.Drawing.Size(252, 25);
             this.textBoxX1.TabIndex = 0;
             // 
-            // dGView
-            // 
-            this.dGView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGView.Location = new System.Drawing.Point(16, 212);
-            this.dGView.Name = "dGView";
-            this.dGView.Size = new System.Drawing.Size(665, 152);
-            this.dGView.TabIndex = 1;
-            // 
-            // frmMainA
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 378);
-            this.Controls.Add(this.dGView);
+            this.ClientSize = new System.Drawing.Size(697, 333);
             this.Controls.Add(this.frmMain);
-            this.Name = "frmMainA";
+            this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.frmMainA_Load);
             this.frmMain.ResumeLayout(false);
             this.frmMain.PerformLayout();
             this.ribbonPanel1.ResumeLayout(false);
             this.ribbonBar1.ResumeLayout(false);
             this.ribbonPanel2.ResumeLayout(false);
             this.btnEdit.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dGView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -288,6 +275,5 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem2;
         private DevComponents.DotNetBar.Controls.TextBoxX txtSearchUser;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
-        private System.Windows.Forms.DataGridView dGView;
     }
 }
