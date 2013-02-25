@@ -37,6 +37,7 @@ namespace HN36Pho
 
             // sqlQuery = "select * from account";
             showData(sqlQuery, dGViewUser);
+            loadDataToComboBox("Pho");
 
             //tabQuanTriHT.Visible = false;
 
@@ -88,20 +89,7 @@ namespace HN36Pho
 
         private void txtSearchPho_InputTextChanged(object sender)
         {
-            DataObject pho = new DataObject();
-            string sqlQuery = "";
-            string condition = txtSearchPho.ControlText.Trim();
-
-            if (condition == "")
-            {
-                sqlQuery = "select * from pho";
-            }
-            else
-            {
-                sqlQuery = "select * from pho where ten_pho=N'" + condition + "'";
-            }
-
-            showData(sqlQuery, dGViewPho);
+            searchPho();
         }
         public void fillDataToControl(string dgView, DataGridViewCellEventArgs e)
         {
@@ -547,10 +535,61 @@ namespace HN36Pho
             }
         }
 
-
+        private void loadDataToComboBox(string tblName)
+        {
+            if (tblName == "account")
+            {
+               // DataObject dataObject = new DataObject();
+               // dataObject.getDataObject("select ID, ")
+                cboSearchPho.Items.Add("ID");
+                cboSearchPho.Items.Add("Fullname");
+                cboSearchPho.Items.Add("Pass");
+                cboSearchPho.Items.Add("Level");
+            }
+            else
+            {
+                cboSearchPho.Items.Add("ID");
+                cboSearchPho.Items.Add("Ten_pho");
+                cboSearchPho.Items.Add("Ten_tieng_phap");
+                cboSearchPho.Items.Add("Lich_su");
+                cboSearchPho.Items.Add("Di_tich");
+                cboSearchPho.Items.Add("Giao_thong");
+                cboSearchPho.Items.Add("Tuyen_xe_bus");
+                //cboSearchPho.Items.
+            }
+        }
         private bool isInsert = false;
         private bool isUpdate = false;
         private string imgName = "";
         private int m_iLevel = 3;
+        private void searchPho()
+        {
+            DataObject pho = new DataObject();
+            string sqlQuery = "";
+            string condition = txtSearchPho.ControlText.Trim();
+            if (condition == "")
+            {
+                sqlQuery = "select * from pho";
+            }
+            else
+            {
+                if (cboSearchPho.SelectedIndex == -1)
+                {
+                    sqlQuery = @"select * from pho where ID_Pho like N'%" + condition + "%'";
+                }
+                else
+                {
+                    sqlQuery = @"select * from pho where N'" + cboSearchPho.SelectedItem.ToString().Trim() + "'like N'%" + condition + "%'";
+                }
+
+            }
+
+            showData(sqlQuery, dGViewPho);
+        }
+
+        private void cboSearchPho_ExpandChange(object sender, EventArgs e)
+        {
+            searchPho();
+        }
     }
 }

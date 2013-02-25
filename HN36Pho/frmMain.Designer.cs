@@ -34,17 +34,14 @@
             this.mnFuction = new DevComponents.DotNetBar.RibbonTabItem();
             this.mnAdmin = new DevComponents.DotNetBar.RibbonTabItem();
             this.tabControl1 = new DevComponents.DotNetBar.TabControl();
-            this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
-            this.ribbonBar3 = new DevComponents.DotNetBar.RibbonBar();
-            this.btnHelp = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
-            this.btnAbout = new DevComponents.DotNetBar.ButtonItem();
-            this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
             this.btnAdd = new DevComponents.DotNetBar.TabControlPanel();
+            this.btnImg = new DevComponents.DotNetBar.ButtonX();
             this.btnOKPho = new DevComponents.DotNetBar.ButtonX();
             this.btnCancelPho = new DevComponents.DotNetBar.ButtonX();
             this.picBox = new System.Windows.Forms.PictureBox();
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
+            this.labelX16 = new DevComponents.DotNetBar.LabelX();
+            this.txtDoDai = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX15 = new DevComponents.DotNetBar.LabelX();
             this.txtTuyenBus = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX13 = new DevComponents.DotNetBar.LabelX();
@@ -71,8 +68,16 @@
             this.btnDelPho = new DevComponents.DotNetBar.ButtonItem();
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
             this.txtSearchPho = new DevComponents.DotNetBar.TextBoxItem();
+            this.cboSearchPho = new DevComponents.DotNetBar.ComboBoxItem();
             this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
+            this.ribbonBar3 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnHelp = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnAbout = new DevComponents.DotNetBar.ButtonItem();
+            this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
+            this.dgViewRole = new System.Windows.Forms.DataGridView();
             this.btnOK = new DevComponents.DotNetBar.ButtonX();
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.txtSearchUser = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -96,20 +101,16 @@
             this.tabQuanTriHT = new DevComponents.DotNetBar.TabItem(this.components);
             this.txtSearch = new DevComponents.DotNetBar.TextBoxItem();
             this.txtSearch2 = new DevComponents.DotNetBar.TextBoxItem();
-            this.btnImg = new DevComponents.DotNetBar.ButtonX();
-            this.txtDoDai = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX16 = new DevComponents.DotNetBar.LabelX();
             this.fdg = new System.Windows.Forms.OpenFileDialog();
-            this.dgViewRole = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabControlPanel3.SuspendLayout();
             this.btnAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGViewPho)).BeginInit();
+            this.tabControlPanel3.SuspendLayout();
             this.tabControlPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGViewUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgViewRole)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGViewUser)).BeginInit();
             this.SuspendLayout();
             // 
             // frmMain
@@ -149,8 +150,8 @@
             // 
             this.tabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.tabControl1.CanReorderTabs = true;
-            this.tabControl1.Controls.Add(this.tabControlPanel1);
             this.tabControl1.Controls.Add(this.btnAdd);
+            this.tabControl1.Controls.Add(this.tabControlPanel1);
             this.tabControl1.Controls.Add(this.tabControlPanel3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(4, 46);
@@ -164,63 +165,6 @@
             this.tabControl1.Tabs.Add(this.tabItem2);
             this.tabControl1.Tabs.Add(this.tabItem3);
             this.tabControl1.Text = "tabControl1";
-            // 
-            // tabControlPanel3
-            // 
-            this.tabControlPanel3.Controls.Add(this.ribbonBar3);
-            this.tabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel3.Location = new System.Drawing.Point(0, 26);
-            this.tabControlPanel3.Name = "tabControlPanel3";
-            this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel3.Size = new System.Drawing.Size(973, 554);
-            this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(209)))), ((int)(((byte)(255)))));
-            this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
-            this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel3.Style.BorderColor.Color = System.Drawing.SystemColors.ControlDark;
-            this.tabControlPanel3.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel3.Style.GradientAngle = 90;
-            this.tabControlPanel3.TabIndex = 3;
-            this.tabControlPanel3.TabItem = this.tabItem3;
-            // 
-            // ribbonBar3
-            // 
-            this.ribbonBar3.AutoOverflowEnabled = true;
-            this.ribbonBar3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ribbonBar3.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnHelp,
-            this.buttonItem6,
-            this.btnAbout});
-            this.ribbonBar3.Location = new System.Drawing.Point(1, 1);
-            this.ribbonBar3.Name = "ribbonBar3";
-            this.ribbonBar3.Size = new System.Drawing.Size(971, 40);
-            this.ribbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.ribbonBar3.TabIndex = 1;
-            this.ribbonBar3.Text = "Chức năng trợ giúp";
-            // 
-            // btnHelp
-            // 
-            this.btnHelp.ImagePaddingHorizontal = 8;
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Text = "Help";
-            // 
-            // buttonItem6
-            // 
-            this.buttonItem6.ImagePaddingHorizontal = 8;
-            this.buttonItem6.Name = "buttonItem6";
-            // 
-            // btnAbout
-            // 
-            this.btnAbout.ImagePaddingHorizontal = 8;
-            this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Text = "About";
-            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
-            // 
-            // tabItem3
-            // 
-            this.tabItem3.AttachedControl = this.tabControlPanel3;
-            this.tabItem3.Name = "tabItem3";
-            this.tabItem3.Text = "Trợ giúp";
             // 
             // btnAdd
             // 
@@ -266,6 +210,16 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.TabItem = this.tabItem2;
             // 
+            // btnImg
+            // 
+            this.btnImg.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnImg.Location = new System.Drawing.Point(652, 296);
+            this.btnImg.Name = "btnImg";
+            this.btnImg.Size = new System.Drawing.Size(75, 23);
+            this.btnImg.TabIndex = 36;
+            this.btnImg.Text = "Chọn ảnh";
+            this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
+            // 
             // btnOKPho
             // 
             this.btnOKPho.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -302,6 +256,25 @@
             this.labelX14.Size = new System.Drawing.Size(75, 23);
             this.labelX14.TabIndex = 32;
             this.labelX14.Text = "Ảnh minh họa";
+            // 
+            // labelX16
+            // 
+            this.labelX16.Location = new System.Drawing.Point(12, 191);
+            this.labelX16.Name = "labelX16";
+            this.labelX16.Size = new System.Drawing.Size(75, 23);
+            this.labelX16.TabIndex = 32;
+            this.labelX16.Text = "Độ dài";
+            // 
+            // txtDoDai
+            // 
+            // 
+            // 
+            // 
+            this.txtDoDai.Border.Class = "TextBoxBorder";
+            this.txtDoDai.Location = new System.Drawing.Point(130, 195);
+            this.txtDoDai.Name = "txtDoDai";
+            this.txtDoDai.Size = new System.Drawing.Size(211, 20);
+            this.txtDoDai.TabIndex = 8;
             // 
             // labelX15
             // 
@@ -499,7 +472,8 @@
             this.btnEditPho,
             this.btnDelPho,
             this.labelItem1,
-            this.txtSearchPho});
+            this.txtSearchPho,
+            this.cboSearchPho});
             this.ribbonBar2.Location = new System.Drawing.Point(1, 1);
             this.ribbonBar2.Name = "ribbonBar2";
             this.ribbonBar2.Size = new System.Drawing.Size(971, 40);
@@ -551,11 +525,76 @@
             this.txtSearchPho.TextBoxWidth = 300;
             this.txtSearchPho.InputTextChanged += new DevComponents.DotNetBar.TextBoxItem.TextChangedEventHandler(this.txtSearchPho_InputTextChanged);
             // 
+            // cboSearchPho
+            // 
+            this.cboSearchPho.ComboWidth = 200;
+            this.cboSearchPho.DropDownHeight = 106;
+            this.cboSearchPho.DropDownWidth = 200;
+            this.cboSearchPho.Name = "cboSearchPho";
+            this.cboSearchPho.ExpandChange += new System.EventHandler(this.cboSearchPho_ExpandChange);
+            // 
             // tabItem2
             // 
             this.tabItem2.AttachedControl = this.btnAdd;
             this.tabItem2.Name = "tabItem2";
             this.tabItem2.Text = "Chức năng";
+            // 
+            // tabControlPanel3
+            // 
+            this.tabControlPanel3.Controls.Add(this.ribbonBar3);
+            this.tabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel3.Location = new System.Drawing.Point(0, 26);
+            this.tabControlPanel3.Name = "tabControlPanel3";
+            this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel3.Size = new System.Drawing.Size(973, 554);
+            this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(209)))), ((int)(((byte)(255)))));
+            this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
+            this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel3.Style.BorderColor.Color = System.Drawing.SystemColors.ControlDark;
+            this.tabControlPanel3.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel3.Style.GradientAngle = 90;
+            this.tabControlPanel3.TabIndex = 3;
+            this.tabControlPanel3.TabItem = this.tabItem3;
+            // 
+            // ribbonBar3
+            // 
+            this.ribbonBar3.AutoOverflowEnabled = true;
+            this.ribbonBar3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ribbonBar3.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnHelp,
+            this.buttonItem6,
+            this.btnAbout});
+            this.ribbonBar3.Location = new System.Drawing.Point(1, 1);
+            this.ribbonBar3.Name = "ribbonBar3";
+            this.ribbonBar3.Size = new System.Drawing.Size(971, 40);
+            this.ribbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ribbonBar3.TabIndex = 1;
+            this.ribbonBar3.Text = "Chức năng trợ giúp";
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.ImagePaddingHorizontal = 8;
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Text = "Help";
+            // 
+            // buttonItem6
+            // 
+            this.buttonItem6.ImagePaddingHorizontal = 8;
+            this.buttonItem6.Name = "buttonItem6";
+            // 
+            // btnAbout
+            // 
+            this.btnAbout.ImagePaddingHorizontal = 8;
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Text = "About";
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            // 
+            // tabItem3
+            // 
+            this.tabItem3.AttachedControl = this.tabControlPanel3;
+            this.tabItem3.Name = "tabItem3";
+            this.tabItem3.Text = "Trợ giúp";
             // 
             // tabControlPanel1
             // 
@@ -590,6 +629,14 @@
             this.tabControlPanel1.Style.GradientAngle = 90;
             this.tabControlPanel1.TabIndex = 1;
             this.tabControlPanel1.TabItem = this.tabQuanTriHT;
+            // 
+            // dgViewRole
+            // 
+            this.dgViewRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgViewRole.Location = new System.Drawing.Point(3, 522);
+            this.dgViewRole.Name = "dgViewRole";
+            this.dgViewRole.Size = new System.Drawing.Size(37, 32);
+            this.dgViewRole.TabIndex = 30;
             // 
             // btnOK
             // 
@@ -788,48 +835,11 @@
             this.txtSearch2.SelectionStart = 0;
             this.txtSearch2.TextBoxWidth = 64;
             // 
-            // btnImg
-            // 
-            this.btnImg.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnImg.Location = new System.Drawing.Point(652, 296);
-            this.btnImg.Name = "btnImg";
-            this.btnImg.Size = new System.Drawing.Size(75, 23);
-            this.btnImg.TabIndex = 36;
-            this.btnImg.Text = "Chọn ảnh";
-            this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
-            // 
-            // txtDoDai
-            // 
-            // 
-            // 
-            // 
-            this.txtDoDai.Border.Class = "TextBoxBorder";
-            this.txtDoDai.Location = new System.Drawing.Point(130, 195);
-            this.txtDoDai.Name = "txtDoDai";
-            this.txtDoDai.Size = new System.Drawing.Size(211, 20);
-            this.txtDoDai.TabIndex = 8;
-            // 
-            // labelX16
-            // 
-            this.labelX16.Location = new System.Drawing.Point(12, 191);
-            this.labelX16.Name = "labelX16";
-            this.labelX16.Size = new System.Drawing.Size(75, 23);
-            this.labelX16.TabIndex = 32;
-            this.labelX16.Text = "Độ dài";
-            // 
             // fdg
             // 
             this.fdg.FileName = "Select Image";
             this.fdg.Filter = "Image Files|*.jpg|All files|*.*";
             this.fdg.Title = "Chọn ảnh";
-            // 
-            // dgViewRole
-            // 
-            this.dgViewRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgViewRole.Location = new System.Drawing.Point(3, 522);
-            this.dgViewRole.Name = "dgViewRole";
-            this.dgViewRole.Size = new System.Drawing.Size(37, 32);
-            this.dgViewRole.TabIndex = 30;
             // 
             // frmMainA
             // 
@@ -844,13 +854,13 @@
             this.Load += new System.EventHandler(this.frmMainA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabControlPanel3.ResumeLayout(false);
             this.btnAdd.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGViewPho)).EndInit();
+            this.tabControlPanel3.ResumeLayout(false);
             this.tabControlPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dGViewUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgViewRole)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGViewUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -929,6 +939,7 @@
         private DevComponents.DotNetBar.Controls.TextBoxX txtDoDai;
         private System.Windows.Forms.OpenFileDialog fdg;
         private System.Windows.Forms.DataGridView dgViewRole;
+        private DevComponents.DotNetBar.ComboBoxItem cboSearchPho;
 
 
     }
