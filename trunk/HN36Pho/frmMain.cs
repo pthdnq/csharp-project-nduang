@@ -38,6 +38,7 @@ namespace HN36Pho
             // sqlQuery = "select * from account";
             showData(sqlQuery, dGViewUser);
             loadDataToComboBox("Pho");
+            loadDataToComboBox("account");
 
             //tabQuanTriHT.Visible = false;
 
@@ -89,7 +90,8 @@ namespace HN36Pho
 
         private void txtSearchPho_InputTextChanged(object sender)
         {
-            searchPho();
+            int index = cboUser.SelectedIndex;
+            searchPho(index);
         }
         public void fillDataToControl(string dgView, DataGridViewCellEventArgs e)
         {
@@ -520,6 +522,7 @@ namespace HN36Pho
                     // btnOK.Visible = false;
                     // btnCancel.Visible = false;
                     txtSearchUser.Visible = false;
+                    cboUser.Visible = false;
                     break;
                 case 2://user- chi xem, ko thay doi noi dung dc,ko xem quan tri user dc
                 default:
@@ -541,10 +544,11 @@ namespace HN36Pho
             {
                // DataObject dataObject = new DataObject();
                // dataObject.getDataObject("select ID, ")
-                cboSearchPho.Items.Add("ID");
-                cboSearchPho.Items.Add("Fullname");
-                cboSearchPho.Items.Add("Pass");
-                cboSearchPho.Items.Add("Level");
+                cboUser.Items.Add("ID");
+                cboUser.Items.Add("Fullname");
+                cboUser.Items.Add("Username");
+               // cboSearchPho.Items.Add("Pass");
+                cboUser.Items.Add("Level");
             }
             else
             {
@@ -562,7 +566,7 @@ namespace HN36Pho
         private bool isUpdate = false;
         private string imgName = "";
         private int m_iLevel = 3;
-        private void searchPho()
+        private void searchPho(int index)
         {
             DataObject pho = new DataObject();
             string sqlQuery = "";
@@ -573,23 +577,88 @@ namespace HN36Pho
             }
             else
             {
-                if (cboSearchPho.SelectedIndex == -1)
+                if (index==-1)
                 {
                     sqlQuery = @"select * from pho where ID_Pho like N'%" + condition + "%'";
                 }
                 else
                 {
-                    sqlQuery = @"select * from pho where N'" + cboSearchPho.SelectedItem.ToString().Trim() + "'like N'%" + condition + "%'";
+                    string field = cboSearchPho.Items[index].ToString();
+                    sqlQuery = @"select * from pho where " + field + "like N'%" + condition + "%'";
                 }
 
             }
 
             showData(sqlQuery, dGViewPho);
         }
+        private void searchUser(int index)
+        {
+            DataObject pho = new DataObject();
+            string sqlQuery = "";
+            string condition = txtSearchUser.ControlText.Trim();
+            if (condition == "")
+            {
+                sqlQuery = "select * from account";
+            }
+            else
+            {
+                if (index==-1)
+                {
+                    sqlQuery = @"select * from account where ID like N'%" + condition + "%'";
+                }
+                if(index>=0)
+                {
+                    string field = cboUser.Items[index].ToString();
+                  // string field= cboUser.Items[cboUser.SelectedIndex].ToString();
+                   sqlQuery = @"select * from account where " + field + " like N'%" + condition + "%'";
+                }
+            }
 
+            showData(sqlQuery, dGViewUser);
+        }
         private void cboSearchPho_ExpandChange(object sender, EventArgs e)
         {
-            searchPho();
+           // searchPho();
+        }
+
+        private void txtSearchUser_InputTextChanged(object sender)
+        {
+            int index = cboUser.SelectedIndex;
+            searchUser(index);
+        }
+
+        private void cboUser_ExpandChange(object sender, EventArgs e)
+        {
+            //searchUser();
+        }
+
+        private void cboUser_TextChanged(object sender, EventArgs e)
+        {
+            //searchUser();
+        }
+
+        private void cboSearchPho_VisibleChanged(object sender, EventArgs e)
+        {
+            //int index = cboSearchPho.SelectedIndex;
+            //searchPho(index);
+        }
+
+        private void cboUser_VisibleChanged(object sender, EventArgs e)
+        {
+           // searchUser();
+        }
+
+        private void cboUser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int i = cboUser.SelectedIndex;
+            searchUser(i);
+        }
+
+        private void cboSearchPho_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = cboSearchPho.SelectedIndex;
+            searchPho(index);
+            //searchPho();
         }
     }
 }
