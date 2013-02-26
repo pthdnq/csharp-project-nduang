@@ -1,0 +1,4 @@
+E:\ProjectsC++&C#\C#\Projects\Exercises\ToUpper\ToUpper\obj\x86\Debug\ToUpper.exe
+E:\ProjectsC++&C#\C#\Projects\Exercises\ToUpper\ToUpper\obj\x86\Debug\ToUpper.pdb
+E:\ProjectsC++&C#\C#\Projects\Exercises\ToUpper\ToLower\obj\x86\Debug\ToUpper.exe
+E:\ProjectsC++&C#\C#\Projects\Exercises\ToUpper\ToLower\obj\x86\Debug\ToUpper.pdb
