@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data;
-
+using System.IO;
 namespace HN36Pho
 {
     class DataLayer
@@ -12,7 +15,8 @@ namespace HN36Pho
         public SqlConnection conn = new SqlConnection();
         public bool OpenConnection()
         {
-            conn.ConnectionString=ModuleConfig.strConnection;
+
+            conn.ConnectionString = getConnectionString();
             conn.Open();
             if (conn==null)
             {
@@ -61,5 +65,13 @@ namespace HN36Pho
             CloseConnection();
             return numberRow;
         }
+        public string getConnectionString()
+        {
+            string conn = "";
+            string strAppStart = Application.StartupPath;
+            conn = @"Data Source=.\SQLEXPRESS;AttachDbFilename="+strAppStart+@"\HN36Pho.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+            return conn;
+        }
+
     }
 }
