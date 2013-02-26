@@ -18,7 +18,10 @@ namespace bài_tập_2
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello here");
+
+            string A = txtBox1.Text;
+            MessageBox.Show(A);
+;
         }
     }
 }

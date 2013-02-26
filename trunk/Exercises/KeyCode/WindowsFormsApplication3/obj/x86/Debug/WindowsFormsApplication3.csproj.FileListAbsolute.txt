@@ -7,3 +7,5 @@ E:\ProjectsC++&C#\C#\HN36Pho\KeyCode\WindowsFormsApplication3\obj\x86\Debug\ResG
 E:\ProjectsC++&C#\C#\HN36Pho\KeyCode\WindowsFormsApplication3\obj\x86\Debug\ResGen.write.1.tlog
 E:\ProjectsC++&C#\C#\HN36Pho\KeyCode\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.exe
 E:\ProjectsC++&C#\C#\HN36Pho\KeyCode\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.pdb
+E:\vs\HN36\HN36Pho\Exercises\KeyCode\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.exe
+E:\vs\HN36\HN36Pho\Exercises\KeyCode\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.pdb
