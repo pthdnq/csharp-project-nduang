@@ -90,7 +90,7 @@ namespace HN36Pho
 
         private void txtSearchPho_InputTextChanged(object sender)
         {
-            int index = cboUser.SelectedIndex;
+            int index = iCboIndexPho;
             searchPho(index);
         }
         public void fillDataToControl(string dgView, DataGridViewCellEventArgs e)
@@ -651,14 +651,18 @@ namespace HN36Pho
         private void cboUser_SelectedIndexChanged(object sender, EventArgs e)
         {
             int i = cboUser.SelectedIndex;
+            iCboIndexUser = i;
             searchUser(i);
         }
 
         private void cboSearchPho_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = cboSearchPho.SelectedIndex;
+            iCboIndexPho=index ;
             searchPho(index);
             //searchPho();
         }
+        private int iCboIndexUser = -1;
+        private int iCboIndexPho = -1;
     }
 }
