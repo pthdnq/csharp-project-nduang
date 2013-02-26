@@ -21,7 +21,8 @@ namespace WindowsFormsApplication3
             if(e.KeyCode==Keys.Enter)
             {
                 txtBox1.Text = txtBox2.Text;
-                txtBox1.Text = "";
+               // txtBox1.Text = "";
+                txtBox2.Text = "";
             }
         }
     }
