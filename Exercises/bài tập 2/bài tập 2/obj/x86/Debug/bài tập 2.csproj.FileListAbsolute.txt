@@ -7,3 +7,12 @@ E:\vi du.VS\bài tập 2\bài tập 2\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\vi du.VS\bài tập 2\bài tập 2\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\vi du.VS\bài tập 2\bài tập 2\obj\x86\Debug\bài tập 2.exe
 E:\vi du.VS\bài tập 2\bài tập 2\obj\x86\Debug\bài tập 2.pdb
+E:\ProjectsC++&C#\C#\Projects\Exercises\bài tập 2\bài tập 2\obj\x86\Debug\bài tập 2.exe
+E:\ProjectsC++&C#\C#\Projects\Exercises\bài tập 2\bài tập 2\obj\x86\Debug\bài tập 2.pdb
+E:\ProjectsC++&C#\C#\Projects\Exercises\bài tập 2\bài tập 2\bin\Debug\bài tập 2.exe
+E:\ProjectsC++&C#\C#\Projects\Exercises\bài tập 2\bài tập 2\bin\Debug\bài tập 2.pdb
+E:\ProjectsC++&C#\C#\Projects\Exercises\bài tập 2\bài tập 2\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\ProjectsC++&C#\C#\Projects\Exercises\bài tập 2\bài tập 2\obj\x86\Debug\bài_tập_2.Form1.resources
+E:\ProjectsC++&C#\C#\Projects\Exercises\bài tập 2\bài tập 2\obj\x86\Debug\bài_tập_2.Properties.Resources.resources
+E:\ProjectsC++&C#\C#\Projects\Exercises\bài tập 2\bài tập 2\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\ProjectsC++&C#\C#\Projects\Exercises\bài tập 2\bài tập 2\obj\x86\Debug\GenerateResource.write.1.tlog
