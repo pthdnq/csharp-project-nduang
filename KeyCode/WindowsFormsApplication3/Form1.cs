@@ -20,7 +20,8 @@ namespace WindowsFormsApplication3
         {
             if(e.KeyCode==Keys.Enter)
             {
-                //viet code o day
+                txtBox1.Text = txtBox2.Text;
+                txtBox1.Text = "";
             }
         }
     }
