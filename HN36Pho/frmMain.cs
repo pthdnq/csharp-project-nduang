@@ -285,7 +285,7 @@ namespace HN36Pho
             DataObject dataObject = new DataObject();
             if (txtIDUser.Text.Trim() != "")
             {
-                string sqlQuery = @"delete from account where id=N'" + txtIDUser.Text + "'";
+                string sqlQuery = @"delete from account where id=N'" + txtIDUser.Text + "'and Online=0";
                 bool ok = dataObject.delObject(sqlQuery);
                 if (ok)
                 {
