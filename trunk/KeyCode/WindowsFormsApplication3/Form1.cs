@@ -28,8 +28,13 @@ namespace WindowsFormsApplication3
 
         private void txtBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            txtBox2.Text = txtBox1.Text;// gan chu o duoi len o tren
-            txtBox1.Text = "";// xoa chu o tren
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtBox2.Text = txtBox1.Text;// gan chu o duoi len o tren
+                txtBox1.Text = "";// xoa chu o tren
+
+            }
+
         }
     }
 }
