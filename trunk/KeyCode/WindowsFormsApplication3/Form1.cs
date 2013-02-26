@@ -31,7 +31,7 @@ namespace WindowsFormsApplication3
             if (e.KeyCode == Keys.Enter)
             {
                 txtBox2.Text = txtBox1.Text;// gan chu o duoi len o tren
-                txtBox1.Text = "";// xoa chu o tren
+                txtBox1.Text = "";// xoa chu o duoi
 
             }
 
