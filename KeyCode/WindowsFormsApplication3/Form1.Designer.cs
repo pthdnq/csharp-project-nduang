@@ -45,6 +45,7 @@
             this.txtBox1.Name = "txtBox1";
             this.txtBox1.Size = new System.Drawing.Size(156, 20);
             this.txtBox1.TabIndex = 0;
+            this.txtBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBox1_KeyDown);
             // 
             // Form1
             // 
