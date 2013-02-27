@@ -28,3 +28,19 @@ E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\ResGen.read.1.tlog
 E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\ResGen.write.1.tlog
 E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\obj\x86\Debug\HN36Pho.exe.licenses
+C:\Users\Administrator\Desktop\Projects C#\HN36Pho\bin\Debug\HN36Pho.exe.config
+C:\Users\Administrator\Desktop\Projects C#\HN36Pho\obj\x86\Debug\HN36Pho.exe
+C:\Users\Administrator\Desktop\Projects C#\HN36Pho\obj\x86\Debug\HN36Pho.pdb
+C:\Users\Administrator\Desktop\Projects C#\HN36Pho\bin\Debug\HN36Pho.exe
+C:\Users\Administrator\Desktop\Projects C#\HN36Pho\bin\Debug\HN36Pho.pdb
+C:\Users\Administrator\Desktop\Projects C#\HN36Pho\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Administrator\Desktop\Projects C#\HN36Pho\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Projects C#\HN36Pho\obj\x86\Debug\HN36Pho.frmAbout.resources
+C:\Users\Administrator\Desktop\Projects C#\HN36Pho\obj\x86\Debug\HN36Pho.frmMainA.resources
+C:\Users\Administrator\Desktop\Projects C#\HN36Pho\obj\x86\Debug\HN36Pho.frmLogin.resources
+C:\Users\Administrator\Desktop\Projects C#\HN36Pho\obj\x86\Debug\HN36Pho.Properties.Resources.resources
+C:\Users\Administrator\Desktop\Projects C#\HN36Pho\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Administrator\Desktop\Projects C#\HN36Pho\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\Administrator\Desktop\Projects C#\HN36Pho\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Administrator\Desktop\Projects C#\HN36Pho\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\Administrator\Desktop\Projects C#\HN36Pho\obj\x86\Debug\HN36Pho.exe.licenses

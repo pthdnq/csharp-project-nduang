@@ -76,10 +76,7 @@ namespace HN36Pho
 
         private void txtLevelID_TextChanged(object sender, EventArgs e)
         {
-            DataObject pho = new DataObject();
-            string sqlQuery = "select Function_Level from level";
-            DataTable dt = pho.getDataObject(sqlQuery);
-            // txtLevel.Text = dt.Rows[0].
+            loadInfoLevel();
         }
 
         private void btnAbout_Click(object sender, EventArgs e)
@@ -197,15 +194,22 @@ namespace HN36Pho
             isInsert = true;
             isUpdate = false;
             setEnableControl(true, 0);
+            if (m_iLevel==0)
+            {
+                txtLevelID.Enabled = true;
+            }
+            else
+            {
+                txtLevelID.Enabled = false;
+            }
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
             DataObject dataObject = new DataObject();
             string sqlQuery = "";
-            if (isInsert == true)
+            if (isInsert == true && isLevelValid)
             {
-
                 sqlQuery = "insert into account(Fullname,Username,Pass,Level) values(N'" + txtFullname.Text + "',N'" + txtAccount.Text + "',N'" + txtPass.Text + "',N'" + txtLevelID.Text + "')";
                 bool ok = dataObject.addObject(sqlQuery);
                 if (ok)
@@ -231,8 +235,9 @@ namespace HN36Pho
                 isInsert = true;
                 isUpdate = false;
             }
-            if (isUpdate && txtIDUser.Text.Trim() != "")
+            if (isUpdate && txtIDUser.Text.Trim() != "" && isLevelValid)
             {
+
                 sqlQuery = @"update account set Fullname=N'" + txtFullname.Text + "',Username=N'" + txtAccount.Text + "',Pass=N'" + txtPass.Text + "',Level=N'" + txtLevelID.Text + "' where id=N'" + txtIDUser.Text + "'";
                 bool ok = dataObject.addObject(sqlQuery);
                 if (ok)
@@ -260,7 +265,7 @@ namespace HN36Pho
                 txtAccount.Enabled = status;
                 txtPass.Enabled = status;
                 txtLevelID.Enabled = status;
-                if (txtLevelID.Text.Trim() != "0")
+                if (txtLevelID.Text.Trim() == "0" || txtLevelID.Text.Trim() == "")
                     txtLevelID.Enabled = false;
                 // txtLevel.Enabled = status;
             }
@@ -514,15 +519,17 @@ namespace HN36Pho
             switch (iLevel)
             {
                 case 0://Toan quyen, super admin quan tri tai khoan va noi dung
+                    if (txtLevelID.Text.Trim() != "" ||txtLevelID.Text.Trim() != "0")
+                        txtLevelID.Enabled = true;
+                    else
+                        txtLevelID.Enabled = false;
                     break;
                 case 1: //quan tri noi dung
                     btnNewUser.Visible = false;
                     btnDelUser1.Visible = false;
                     btnSearchUser.Visible = false;
-                    // btnOK.Visible = false;
-                    // btnCancel.Visible = false;
                     txtSearchUser.Visible = false;
-                    cboUser.Visible = false;
+                    cboUser.Enabled = false;
                     break;
                 case 2://user- chi xem, ko thay doi noi dung dc,ko xem quan tri user dc
                 default:
@@ -544,15 +551,15 @@ namespace HN36Pho
             {
                // DataObject dataObject = new DataObject();
                // dataObject.getDataObject("select ID, ")
-                cboUser.Items.Add("ID");
+                //cboUser.Items.Add("ID");
                 cboUser.Items.Add("Fullname");
                 cboUser.Items.Add("Username");
                // cboSearchPho.Items.Add("Pass");
-                cboUser.Items.Add("Level");
+                //cboUser.Items.Add("Level");
             }
             else
             {
-                cboSearchPho.Items.Add("ID");
+               // cboSearchPho.Items.Add("ID");
                 cboSearchPho.Items.Add("Ten_pho");
                 cboSearchPho.Items.Add("Ten_tieng_phap");
                 cboSearchPho.Items.Add("Lich_su");
@@ -562,10 +569,6 @@ namespace HN36Pho
                 //cboSearchPho.Items.
             }
         }
-        private bool isInsert = false;
-        private bool isUpdate = false;
-        private string imgName = "";
-        private int m_iLevel = 3;
         private void searchPho(int index)
         {
             DataObject pho = new DataObject();
@@ -584,7 +587,7 @@ namespace HN36Pho
                 else
                 {
                     string field = cboSearchPho.Items[index].ToString();
-                    sqlQuery = @"select * from pho where " + field + "like N'%" + condition + "%'";
+                    sqlQuery = @"select * from pho where " + field + " like N'%" + condition + "%'";
                 }
 
             }
@@ -610,7 +613,7 @@ namespace HN36Pho
                 {
                     string field = cboUser.Items[index].ToString();
                   // string field= cboUser.Items[cboUser.SelectedIndex].ToString();
-                   sqlQuery = @"select * from account where " + field + " like N'%" + condition + "%'";
+                   sqlQuery = @"select * from account where  " + field + " like N'%" + condition + "%'";
                 }
             }
 
@@ -662,7 +665,66 @@ namespace HN36Pho
             searchPho(index);
             //searchPho();
         }
+        private void loadInfoLevel()
+        {
+            int iLevel;
+           // DataObject dataObject = new DataObject();
+            string sqlQuery = "";
+            string condition = txtLevelID.Text.Trim();
+                    // string field= cboUser.Items[cboUser.SelectedIndex].ToString();
+            if (condition=="")
+            {
+                txtLevel.Text = "";
+                return;
+            }
+             sqlQuery = @"select * from Level where  ID_Level = "+condition+"";
+             //showData(sqlQuery, dgLevel);
+            // int iLevel = 3;
+             DataObject dataObject = new DataObject();
+             //string sqlQuery = @"select * from Level where online=1";
+             DataTable dt = dataObject.getDataObject(sqlQuery);
+             if (dt.Rows.Count > 0)
+             {
+                 dgLevel.Visible = false;
+                 dgLevel.DataSource = dt;
+                 string strTmp = dgLevel.Rows[0].Cells[1].Value.ToString();
+                 iLevel=int.Parse(dgLevel.Rows[0].Cells[0].Value.ToString().Trim());
+                 txtLevel.Text = strTmp.Trim();
+                 //if (iLevel < 0 && iLevel >2)
+                 //{
+                 //    txtLevel.Text = "Gía trị level chỉ được nhập là 0,1,2";
+                 //    isLevelValid=false;
+                 //}
+                 //else
+                 //{
+                 //    isLevelValid=true;
+                 //}
+             }
+            //valid khi nhap moi user
+             string tmp=txtLevelID.Text.Trim();
+             iLevel=int.Parse(tmp);
+             if(iLevel<0||iLevel>2)
+             {
+                 txtLevel.Text = "Gía trị level chỉ được nhập là 0,1,2";
+                 isLevelValid = false;
+             }           
+        }
         private int iCboIndexUser = -1;
         private int iCboIndexPho = -1;
+        private bool isInsert = false;
+        private bool isUpdate = false;
+        private string imgName = "";
+        private int m_iLevel = 3;
+
+        private void frmMainA_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void frmMainA_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+        private bool isLevelValid = false;
     }
 }

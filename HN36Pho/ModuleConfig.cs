@@ -7,7 +7,7 @@ namespace HN36Pho
 {
     class ModuleConfig
     {
-       public static string strConnection = @"Data Source=.\SQLEXPRESS;AttachDbFilename=E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\Database\HN36Pho.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+      // public static string strConnection = @"Data Source=.\SQLEXPRESS;AttachDbFilename=E:\ProjectsC++&C#\C#\HN36Pho\HN36Pho\Database\HN36Pho.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
 
        public static string Title       = "Tiltle   :     Chương trình tra cứu thông tin phố cổ Hà Nội";
        public static string Product     = "Product  :     HN36Pho";
