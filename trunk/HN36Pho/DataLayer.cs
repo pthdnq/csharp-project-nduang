@@ -15,14 +15,23 @@ namespace HN36Pho
         public SqlConnection conn = new SqlConnection();
         public bool OpenConnection()
         {
-
-            conn.ConnectionString = getConnectionString();
-            conn.Open();
-            if (conn==null)
+            try
             {
+                conn.ConnectionString = getConnectionString();
+                conn.Open();
+                if (conn == null)
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Không thể kết nối cơ sở dữ liệu!!!!");
+                Application.Exit();
                 return false;
             }
-            return true;
+
         }
         public bool CloseConnection()
         {
@@ -36,7 +45,11 @@ namespace HN36Pho
         }
         public DataTable getData(string sqlQuery)
         {
-            OpenConnection();
+            bool ok = OpenConnection();
+            if (!ok)
+            {
+                return null;
+            }
             SqlDataAdapter ad = new SqlDataAdapter(sqlQuery, conn);
             DataTable dt = new DataTable();
             ad.Fill(dt);
@@ -45,7 +58,11 @@ namespace HN36Pho
         }
         public bool updateData(string sqlQuery)
         {
-            OpenConnection();
+            bool ok=OpenConnection();
+            if(!ok)
+            {
+                return false;
+            }
             SqlCommand sqlCommand = new SqlCommand(sqlQuery, conn);
             int Result=sqlCommand.ExecuteNonQuery();
             CloseConnection();
@@ -57,7 +74,11 @@ namespace HN36Pho
         }
         public int countRow(string sqlQuery)
         {
-            OpenConnection();
+            bool ok = OpenConnection();
+            if (!ok)
+            {
+                return 0;
+            }
             SqlDataAdapter ad = new SqlDataAdapter(sqlQuery, conn);
             DataTable dt = new DataTable();
             ad.Fill(dt);
@@ -69,7 +90,7 @@ namespace HN36Pho
         {
             string conn = "";
             string strAppStart = Application.StartupPath;
-            conn = @"Data Source=.\SQLEXPRESS;AttachDbFilename="+strAppStart+@"\HN36Pho.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+            conn = @"Data Source=.\SQLEXPRESS;AttachDbFilename=" + strAppStart + @"\Database\HN36Pho.mdf;Integrated Security=True;Connect Timeout=3;User Instance=True";
             return conn;
         }
 
