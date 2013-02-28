@@ -34,32 +34,6 @@
             this.mnFuction = new DevComponents.DotNetBar.RibbonTabItem();
             this.mnAdmin = new DevComponents.DotNetBar.RibbonTabItem();
             this.lbHintSearch = new DevComponents.DotNetBar.TabControl();
-            this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
-            this.dgViewRole = new System.Windows.Forms.DataGridView();
-            this.btnOK = new DevComponents.DotNetBar.ButtonX();
-            this.btnCancel = new DevComponents.DotNetBar.ButtonX();
-            this.dGViewUser = new System.Windows.Forms.DataGridView();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX5 = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.txtLevelID = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtLevel = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtPass = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtIDUser = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtAccount = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtFullname = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
-            this.cboUser = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.btnNewUser = new DevComponents.DotNetBar.ButtonItem();
-            this.btnEditUser = new DevComponents.DotNetBar.ButtonItem();
-            this.btnDelUser1 = new DevComponents.DotNetBar.ButtonItem();
-            this.btnSearchUser = new DevComponents.DotNetBar.ButtonItem();
-            this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
-            this.txtSearchUser = new DevComponents.DotNetBar.TextBoxItem();
-            this.labelItem2 = new DevComponents.DotNetBar.LabelItem();
-            this.tabQuanTriHT = new DevComponents.DotNetBar.TabItem(this.components);
             this.btnAdd = new DevComponents.DotNetBar.TabControlPanel();
             this.btnImg = new DevComponents.DotNetBar.ButtonX();
             this.btnOKPho = new DevComponents.DotNetBar.ButtonX();
@@ -98,6 +72,33 @@
             this.txtSearchPho = new DevComponents.DotNetBar.TextBoxItem();
             this.labelItem3 = new DevComponents.DotNetBar.LabelItem();
             this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
+            this.dgLevel = new System.Windows.Forms.DataGridView();
+            this.dgViewRole = new System.Windows.Forms.DataGridView();
+            this.btnOK = new DevComponents.DotNetBar.ButtonX();
+            this.btnCancel = new DevComponents.DotNetBar.ButtonX();
+            this.dGViewUser = new System.Windows.Forms.DataGridView();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.txtLevelID = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtLevel = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtPass = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtIDUser = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtAccount = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtFullname = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
+            this.cboUser = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.btnNewUser = new DevComponents.DotNetBar.ButtonItem();
+            this.btnEditUser = new DevComponents.DotNetBar.ButtonItem();
+            this.btnDelUser1 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnSearchUser = new DevComponents.DotNetBar.ButtonItem();
+            this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
+            this.txtSearchUser = new DevComponents.DotNetBar.TextBoxItem();
+            this.labelItem2 = new DevComponents.DotNetBar.LabelItem();
+            this.tabQuanTriHT = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
             this.ribbonBar3 = new DevComponents.DotNetBar.RibbonBar();
             this.btnHelp = new DevComponents.DotNetBar.ButtonItem();
@@ -107,19 +108,18 @@
             this.txtSearch = new DevComponents.DotNetBar.TextBoxItem();
             this.txtSearch2 = new DevComponents.DotNetBar.TextBoxItem();
             this.fdg = new System.Windows.Forms.OpenFileDialog();
-            this.dgLevel = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.lbHintSearch)).BeginInit();
             this.lbHintSearch.SuspendLayout();
-            this.tabControlPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgViewRole)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dGViewUser)).BeginInit();
-            this.ribbonBar1.SuspendLayout();
             this.btnAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGViewPho)).BeginInit();
             this.ribbonBar2.SuspendLayout();
-            this.tabControlPanel3.SuspendLayout();
+            this.tabControlPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgLevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgViewRole)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGViewUser)).BeginInit();
+            this.ribbonBar1.SuspendLayout();
+            this.tabControlPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // frmMain
@@ -175,6 +175,409 @@
             this.lbHintSearch.Tabs.Add(this.tabItem3);
             this.lbHintSearch.Text = "tabControl1";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Controls.Add(this.btnImg);
+            this.btnAdd.Controls.Add(this.btnOKPho);
+            this.btnAdd.Controls.Add(this.btnCancelPho);
+            this.btnAdd.Controls.Add(this.picBox);
+            this.btnAdd.Controls.Add(this.labelX14);
+            this.btnAdd.Controls.Add(this.labelX16);
+            this.btnAdd.Controls.Add(this.txtDoDai);
+            this.btnAdd.Controls.Add(this.labelX15);
+            this.btnAdd.Controls.Add(this.txtTuyenBus);
+            this.btnAdd.Controls.Add(this.labelX13);
+            this.btnAdd.Controls.Add(this.txtToaDoCuoi);
+            this.btnAdd.Controls.Add(this.labelX12);
+            this.btnAdd.Controls.Add(this.txtToaDoDau);
+            this.btnAdd.Controls.Add(this.labelX11);
+            this.btnAdd.Controls.Add(this.txtGiaoThong);
+            this.btnAdd.Controls.Add(this.labelX10);
+            this.btnAdd.Controls.Add(this.txtLichSu);
+            this.btnAdd.Controls.Add(this.labelX9);
+            this.btnAdd.Controls.Add(this.txtDiTich);
+            this.btnAdd.Controls.Add(this.labelX8);
+            this.btnAdd.Controls.Add(this.txtTenPhap);
+            this.btnAdd.Controls.Add(this.labelX7);
+            this.btnAdd.Controls.Add(this.txtTenPho);
+            this.btnAdd.Controls.Add(this.labelX6);
+            this.btnAdd.Controls.Add(this.txtIDPho);
+            this.btnAdd.Controls.Add(this.dGViewPho);
+            this.btnAdd.Controls.Add(this.ribbonBar2);
+            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAdd.Location = new System.Drawing.Point(0, 26);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Padding = new System.Windows.Forms.Padding(1);
+            this.btnAdd.Size = new System.Drawing.Size(973, 554);
+            this.btnAdd.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
+            this.btnAdd.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
+            this.btnAdd.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.btnAdd.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            this.btnAdd.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.btnAdd.Style.GradientAngle = 90;
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.TabItem = this.tabItem2;
+            // 
+            // btnImg
+            // 
+            this.btnImg.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnImg.Location = new System.Drawing.Point(652, 339);
+            this.btnImg.Name = "btnImg";
+            this.btnImg.Size = new System.Drawing.Size(75, 23);
+            this.btnImg.TabIndex = 13;
+            this.btnImg.Text = "Chọn ảnh";
+            this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
+            // 
+            // btnOKPho
+            // 
+            this.btnOKPho.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnOKPho.Location = new System.Drawing.Point(362, 339);
+            this.btnOKPho.Name = "btnOKPho";
+            this.btnOKPho.Size = new System.Drawing.Size(75, 23);
+            this.btnOKPho.TabIndex = 14;
+            this.btnOKPho.Text = "OK";
+            this.btnOKPho.Click += new System.EventHandler(this.btnOKPho_Click);
+            // 
+            // btnCancelPho
+            // 
+            this.btnCancelPho.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnCancelPho.Location = new System.Drawing.Point(453, 339);
+            this.btnCancelPho.Name = "btnCancelPho";
+            this.btnCancelPho.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelPho.TabIndex = 12;
+            this.btnCancelPho.Text = "Cancel";
+            this.btnCancelPho.Click += new System.EventHandler(this.btnCancelPho_Click);
+            // 
+            // picBox
+            // 
+            this.picBox.Location = new System.Drawing.Point(652, 123);
+            this.picBox.Name = "picBox";
+            this.picBox.Size = new System.Drawing.Size(157, 197);
+            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox.TabIndex = 33;
+            this.picBox.TabStop = false;
+            // 
+            // labelX14
+            // 
+            this.labelX14.Location = new System.Drawing.Point(652, 90);
+            this.labelX14.Name = "labelX14";
+            this.labelX14.Size = new System.Drawing.Size(75, 23);
+            this.labelX14.TabIndex = 32;
+            this.labelX14.Text = "Ảnh minh họa";
+            // 
+            // labelX16
+            // 
+            this.labelX16.Location = new System.Drawing.Point(12, 234);
+            this.labelX16.Name = "labelX16";
+            this.labelX16.Size = new System.Drawing.Size(75, 23);
+            this.labelX16.TabIndex = 32;
+            this.labelX16.Text = "Độ dài";
+            // 
+            // txtDoDai
+            // 
+            // 
+            // 
+            // 
+            this.txtDoDai.Border.Class = "TextBoxBorder";
+            this.txtDoDai.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtDoDai.Location = new System.Drawing.Point(130, 238);
+            this.txtDoDai.Name = "txtDoDai";
+            this.txtDoDai.Size = new System.Drawing.Size(211, 20);
+            this.txtDoDai.TabIndex = 6;
+            // 
+            // labelX15
+            // 
+            this.labelX15.Location = new System.Drawing.Point(12, 321);
+            this.labelX15.Name = "labelX15";
+            this.labelX15.Size = new System.Drawing.Size(75, 23);
+            this.labelX15.TabIndex = 32;
+            this.labelX15.Text = "Tuyến xe bus";
+            // 
+            // txtTuyenBus
+            // 
+            // 
+            // 
+            // 
+            this.txtTuyenBus.Border.Class = "TextBoxBorder";
+            this.txtTuyenBus.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtTuyenBus.Location = new System.Drawing.Point(130, 325);
+            this.txtTuyenBus.Name = "txtTuyenBus";
+            this.txtTuyenBus.Size = new System.Drawing.Size(211, 20);
+            this.txtTuyenBus.TabIndex = 9;
+            // 
+            // labelX13
+            // 
+            this.labelX13.Location = new System.Drawing.Point(12, 292);
+            this.labelX13.Name = "labelX13";
+            this.labelX13.Size = new System.Drawing.Size(75, 23);
+            this.labelX13.TabIndex = 32;
+            this.labelX13.Text = "Tọa độ cuối";
+            // 
+            // txtToaDoCuoi
+            // 
+            // 
+            // 
+            // 
+            this.txtToaDoCuoi.Border.Class = "TextBoxBorder";
+            this.txtToaDoCuoi.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtToaDoCuoi.Location = new System.Drawing.Point(130, 296);
+            this.txtToaDoCuoi.Name = "txtToaDoCuoi";
+            this.txtToaDoCuoi.Size = new System.Drawing.Size(211, 20);
+            this.txtToaDoCuoi.TabIndex = 8;
+            // 
+            // labelX12
+            // 
+            this.labelX12.Location = new System.Drawing.Point(12, 263);
+            this.labelX12.Name = "labelX12";
+            this.labelX12.Size = new System.Drawing.Size(75, 23);
+            this.labelX12.TabIndex = 32;
+            this.labelX12.Text = "Tọa độ đầu";
+            // 
+            // txtToaDoDau
+            // 
+            // 
+            // 
+            // 
+            this.txtToaDoDau.Border.Class = "TextBoxBorder";
+            this.txtToaDoDau.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtToaDoDau.Location = new System.Drawing.Point(130, 267);
+            this.txtToaDoDau.Name = "txtToaDoDau";
+            this.txtToaDoDau.Size = new System.Drawing.Size(211, 20);
+            this.txtToaDoDau.TabIndex = 7;
+            // 
+            // labelX11
+            // 
+            this.labelX11.Location = new System.Drawing.Point(12, 206);
+            this.labelX11.Name = "labelX11";
+            this.labelX11.Size = new System.Drawing.Size(75, 23);
+            this.labelX11.TabIndex = 32;
+            this.labelX11.Text = "Giao thông";
+            // 
+            // txtGiaoThong
+            // 
+            // 
+            // 
+            // 
+            this.txtGiaoThong.Border.Class = "TextBoxBorder";
+            this.txtGiaoThong.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtGiaoThong.Location = new System.Drawing.Point(130, 210);
+            this.txtGiaoThong.Name = "txtGiaoThong";
+            this.txtGiaoThong.Size = new System.Drawing.Size(211, 20);
+            this.txtGiaoThong.TabIndex = 5;
+            // 
+            // labelX10
+            // 
+            this.labelX10.Location = new System.Drawing.Point(357, 91);
+            this.labelX10.Name = "labelX10";
+            this.labelX10.Size = new System.Drawing.Size(75, 23);
+            this.labelX10.TabIndex = 32;
+            this.labelX10.Text = "Lịch sử";
+            // 
+            // txtLichSu
+            // 
+            // 
+            // 
+            // 
+            this.txtLichSu.Border.Class = "TextBoxBorder";
+            this.txtLichSu.Location = new System.Drawing.Point(357, 123);
+            this.txtLichSu.Multiline = true;
+            this.txtLichSu.Name = "txtLichSu";
+            this.txtLichSu.Size = new System.Drawing.Size(279, 197);
+            this.txtLichSu.TabIndex = 10;
+            this.txtLichSu.WatermarkColor = System.Drawing.SystemColors.ButtonHighlight;
+            // 
+            // labelX9
+            // 
+            this.labelX9.Location = new System.Drawing.Point(12, 177);
+            this.labelX9.Name = "labelX9";
+            this.labelX9.Size = new System.Drawing.Size(75, 23);
+            this.labelX9.TabIndex = 32;
+            this.labelX9.Text = "Di tích";
+            // 
+            // txtDiTich
+            // 
+            // 
+            // 
+            // 
+            this.txtDiTich.Border.Class = "TextBoxBorder";
+            this.txtDiTich.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtDiTich.Location = new System.Drawing.Point(130, 181);
+            this.txtDiTich.Name = "txtDiTich";
+            this.txtDiTich.Size = new System.Drawing.Size(211, 20);
+            this.txtDiTich.TabIndex = 4;
+            // 
+            // labelX8
+            // 
+            this.labelX8.Location = new System.Drawing.Point(12, 148);
+            this.labelX8.Name = "labelX8";
+            this.labelX8.Size = new System.Drawing.Size(75, 23);
+            this.labelX8.TabIndex = 32;
+            this.labelX8.Text = "Tên tiếng pháp";
+            // 
+            // txtTenPhap
+            // 
+            // 
+            // 
+            // 
+            this.txtTenPhap.Border.Class = "TextBoxBorder";
+            this.txtTenPhap.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtTenPhap.Location = new System.Drawing.Point(130, 152);
+            this.txtTenPhap.Name = "txtTenPhap";
+            this.txtTenPhap.Size = new System.Drawing.Size(211, 20);
+            this.txtTenPhap.TabIndex = 3;
+            // 
+            // labelX7
+            // 
+            this.labelX7.Location = new System.Drawing.Point(12, 119);
+            this.labelX7.Name = "labelX7";
+            this.labelX7.Size = new System.Drawing.Size(75, 23);
+            this.labelX7.TabIndex = 32;
+            this.labelX7.Text = "Tên Phố";
+            // 
+            // txtTenPho
+            // 
+            // 
+            // 
+            // 
+            this.txtTenPho.Border.Class = "TextBoxBorder";
+            this.txtTenPho.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtTenPho.Location = new System.Drawing.Point(130, 123);
+            this.txtTenPho.Name = "txtTenPho";
+            this.txtTenPho.Size = new System.Drawing.Size(211, 20);
+            this.txtTenPho.TabIndex = 2;
+            // 
+            // labelX6
+            // 
+            this.labelX6.Location = new System.Drawing.Point(12, 90);
+            this.labelX6.Name = "labelX6";
+            this.labelX6.Size = new System.Drawing.Size(75, 23);
+            this.labelX6.TabIndex = 32;
+            this.labelX6.Text = "ID_Phố";
+            // 
+            // txtIDPho
+            // 
+            // 
+            // 
+            // 
+            this.txtIDPho.Border.Class = "TextBoxBorder";
+            this.txtIDPho.Enabled = false;
+            this.txtIDPho.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtIDPho.HideSelection = false;
+            this.txtIDPho.Location = new System.Drawing.Point(130, 94);
+            this.txtIDPho.Name = "txtIDPho";
+            this.txtIDPho.Size = new System.Drawing.Size(211, 20);
+            this.txtIDPho.TabIndex = 1;
+            // 
+            // dGViewPho
+            // 
+            this.dGViewPho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGViewPho.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dGViewPho.Location = new System.Drawing.Point(1, 366);
+            this.dGViewPho.MultiSelect = false;
+            this.dGViewPho.Name = "dGViewPho";
+            this.dGViewPho.ReadOnly = true;
+            this.dGViewPho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dGViewPho.Size = new System.Drawing.Size(971, 187);
+            this.dGViewPho.TabIndex = 30;
+            this.dGViewPho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGViewPho_CellClick);
+            this.dGViewPho.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGViewPho_CellLeave);
+            // 
+            // ribbonBar2
+            // 
+            this.ribbonBar2.AutoOverflowEnabled = true;
+            this.ribbonBar2.Controls.Add(this.cboSearchPho);
+            this.ribbonBar2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ribbonBar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnAddPho,
+            this.buttonItem2,
+            this.btnEditPho,
+            this.btnDelPho,
+            this.labelItem1,
+            this.controlContainerItem2,
+            this.txtSearchPho,
+            this.labelItem3});
+            this.ribbonBar2.Location = new System.Drawing.Point(1, 1);
+            this.ribbonBar2.Name = "ribbonBar2";
+            this.ribbonBar2.Size = new System.Drawing.Size(971, 40);
+            this.ribbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ribbonBar2.TabIndex = 1;
+            this.ribbonBar2.Text = "Chức năng của chương trình";
+            // 
+            // cboSearchPho
+            // 
+            this.cboSearchPho.DisplayMember = "Text";
+            this.cboSearchPho.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboSearchPho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSearchPho.FormattingEnabled = true;
+            this.cboSearchPho.Location = new System.Drawing.Point(236, 3);
+            this.cboSearchPho.Name = "cboSearchPho";
+            this.cboSearchPho.Size = new System.Drawing.Size(121, 21);
+            this.cboSearchPho.TabIndex = 37;
+            this.cboSearchPho.SelectedIndexChanged += new System.EventHandler(this.cboSearchPho_SelectedIndexChanged);
+            // 
+            // btnAddPho
+            // 
+            this.btnAddPho.ImagePaddingHorizontal = 8;
+            this.btnAddPho.Name = "btnAddPho";
+            this.btnAddPho.Text = "Thêm phố mới";
+            this.btnAddPho.Click += new System.EventHandler(this.btnAddPho_Click);
+            // 
+            // buttonItem2
+            // 
+            this.buttonItem2.ImagePaddingHorizontal = 8;
+            this.buttonItem2.Name = "buttonItem2";
+            // 
+            // btnEditPho
+            // 
+            this.btnEditPho.ImagePaddingHorizontal = 8;
+            this.btnEditPho.Name = "btnEditPho";
+            this.btnEditPho.Text = "Sửa thông tin";
+            this.btnEditPho.Click += new System.EventHandler(this.btnEditPho_Click);
+            // 
+            // btnDelPho
+            // 
+            this.btnDelPho.ImagePaddingHorizontal = 8;
+            this.btnDelPho.Name = "btnDelPho";
+            this.btnDelPho.Text = "Xóa";
+            this.btnDelPho.Click += new System.EventHandler(this.btnDelPho_Click);
+            // 
+            // labelItem1
+            // 
+            this.labelItem1.Name = "labelItem1";
+            this.labelItem1.Text = "Tìm kiếm";
+            // 
+            // controlContainerItem2
+            // 
+            this.controlContainerItem2.AllowItemResize = false;
+            this.controlContainerItem2.Control = this.cboSearchPho;
+            this.controlContainerItem2.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
+            this.controlContainerItem2.Name = "controlContainerItem2";
+            // 
+            // txtSearchPho
+            // 
+            this.txtSearchPho.AlwaysShowCaption = false;
+            this.txtSearchPho.ControlText = "";
+            this.txtSearchPho.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
+            this.txtSearchPho.Name = "txtSearchPho";
+            this.txtSearchPho.RecentlyUsed = false;
+            this.txtSearchPho.SelectedText = "";
+            this.txtSearchPho.SelectionLength = 0;
+            this.txtSearchPho.SelectionStart = 0;
+            this.txtSearchPho.TextBoxWidth = 300;
+            this.txtSearchPho.InputTextChanged += new DevComponents.DotNetBar.TextBoxItem.TextChangedEventHandler(this.txtSearchPho_InputTextChanged);
+            // 
+            // labelItem3
+            // 
+            this.labelItem3.Name = "labelItem3";
+            this.labelItem3.Text = "Chọn tiêu chuẩn tìm kiếm( mặc định là tìm theo ID)";
+            // 
+            // tabItem2
+            // 
+            this.tabItem2.AttachedControl = this.btnAdd;
+            this.tabItem2.Name = "tabItem2";
+            this.tabItem2.Text = "Chức năng";
+            // 
             // tabControlPanel1
             // 
             this.tabControlPanel1.Controls.Add(this.dgLevel);
@@ -199,15 +602,24 @@
             this.tabControlPanel1.Name = "tabControlPanel1";
             this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
             this.tabControlPanel1.Size = new System.Drawing.Size(973, 554);
-            this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(209)))), ((int)(((byte)(255)))));
-            this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
+            this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
+            this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
             this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.SystemColors.ControlDark;
+            this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
             this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
                         | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.tabControlPanel1.Style.GradientAngle = 90;
             this.tabControlPanel1.TabIndex = 1;
             this.tabControlPanel1.TabItem = this.tabQuanTriHT;
+            // 
+            // dgLevel
+            // 
+            this.dgLevel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgLevel.Location = new System.Drawing.Point(55, 521);
+            this.dgLevel.Name = "dgLevel";
+            this.dgLevel.Size = new System.Drawing.Size(37, 32);
+            this.dgLevel.TabIndex = 30;
+            this.dgLevel.Visible = false;
             // 
             // dgViewRole
             // 
@@ -424,398 +836,6 @@
             this.tabQuanTriHT.Name = "tabQuanTriHT";
             this.tabQuanTriHT.Text = "Quản trị hệ thống";
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Controls.Add(this.btnImg);
-            this.btnAdd.Controls.Add(this.btnOKPho);
-            this.btnAdd.Controls.Add(this.btnCancelPho);
-            this.btnAdd.Controls.Add(this.picBox);
-            this.btnAdd.Controls.Add(this.labelX14);
-            this.btnAdd.Controls.Add(this.labelX16);
-            this.btnAdd.Controls.Add(this.txtDoDai);
-            this.btnAdd.Controls.Add(this.labelX15);
-            this.btnAdd.Controls.Add(this.txtTuyenBus);
-            this.btnAdd.Controls.Add(this.labelX13);
-            this.btnAdd.Controls.Add(this.txtToaDoCuoi);
-            this.btnAdd.Controls.Add(this.labelX12);
-            this.btnAdd.Controls.Add(this.txtToaDoDau);
-            this.btnAdd.Controls.Add(this.labelX11);
-            this.btnAdd.Controls.Add(this.txtGiaoThong);
-            this.btnAdd.Controls.Add(this.labelX10);
-            this.btnAdd.Controls.Add(this.txtLichSu);
-            this.btnAdd.Controls.Add(this.labelX9);
-            this.btnAdd.Controls.Add(this.txtDiTich);
-            this.btnAdd.Controls.Add(this.labelX8);
-            this.btnAdd.Controls.Add(this.txtTenPhap);
-            this.btnAdd.Controls.Add(this.labelX7);
-            this.btnAdd.Controls.Add(this.txtTenPho);
-            this.btnAdd.Controls.Add(this.labelX6);
-            this.btnAdd.Controls.Add(this.txtIDPho);
-            this.btnAdd.Controls.Add(this.dGViewPho);
-            this.btnAdd.Controls.Add(this.ribbonBar2);
-            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAdd.Location = new System.Drawing.Point(0, 26);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Padding = new System.Windows.Forms.Padding(1);
-            this.btnAdd.Size = new System.Drawing.Size(973, 554);
-            this.btnAdd.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(209)))), ((int)(((byte)(255)))));
-            this.btnAdd.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
-            this.btnAdd.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.btnAdd.Style.BorderColor.Color = System.Drawing.SystemColors.ControlDark;
-            this.btnAdd.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.btnAdd.Style.GradientAngle = 90;
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.TabItem = this.tabItem2;
-            // 
-            // btnImg
-            // 
-            this.btnImg.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnImg.Location = new System.Drawing.Point(652, 339);
-            this.btnImg.Name = "btnImg";
-            this.btnImg.Size = new System.Drawing.Size(75, 23);
-            this.btnImg.TabIndex = 13;
-            this.btnImg.Text = "Chọn ảnh";
-            this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
-            // 
-            // btnOKPho
-            // 
-            this.btnOKPho.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnOKPho.Location = new System.Drawing.Point(362, 339);
-            this.btnOKPho.Name = "btnOKPho";
-            this.btnOKPho.Size = new System.Drawing.Size(75, 23);
-            this.btnOKPho.TabIndex = 14;
-            this.btnOKPho.Text = "OK";
-            this.btnOKPho.Click += new System.EventHandler(this.btnOKPho_Click);
-            // 
-            // btnCancelPho
-            // 
-            this.btnCancelPho.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnCancelPho.Location = new System.Drawing.Point(453, 339);
-            this.btnCancelPho.Name = "btnCancelPho";
-            this.btnCancelPho.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelPho.TabIndex = 12;
-            this.btnCancelPho.Text = "Cancel";
-            this.btnCancelPho.Click += new System.EventHandler(this.btnCancelPho_Click);
-            // 
-            // picBox
-            // 
-            this.picBox.Location = new System.Drawing.Point(652, 123);
-            this.picBox.Name = "picBox";
-            this.picBox.Size = new System.Drawing.Size(157, 197);
-            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBox.TabIndex = 33;
-            this.picBox.TabStop = false;
-            // 
-            // labelX14
-            // 
-            this.labelX14.Location = new System.Drawing.Point(652, 90);
-            this.labelX14.Name = "labelX14";
-            this.labelX14.Size = new System.Drawing.Size(75, 23);
-            this.labelX14.TabIndex = 32;
-            this.labelX14.Text = "Ảnh minh họa";
-            // 
-            // labelX16
-            // 
-            this.labelX16.Location = new System.Drawing.Point(12, 234);
-            this.labelX16.Name = "labelX16";
-            this.labelX16.Size = new System.Drawing.Size(75, 23);
-            this.labelX16.TabIndex = 32;
-            this.labelX16.Text = "Độ dài";
-            // 
-            // txtDoDai
-            // 
-            // 
-            // 
-            // 
-            this.txtDoDai.Border.Class = "TextBoxBorder";
-            this.txtDoDai.Location = new System.Drawing.Point(130, 238);
-            this.txtDoDai.Name = "txtDoDai";
-            this.txtDoDai.Size = new System.Drawing.Size(211, 20);
-            this.txtDoDai.TabIndex = 6;
-            // 
-            // labelX15
-            // 
-            this.labelX15.Location = new System.Drawing.Point(12, 321);
-            this.labelX15.Name = "labelX15";
-            this.labelX15.Size = new System.Drawing.Size(75, 23);
-            this.labelX15.TabIndex = 32;
-            this.labelX15.Text = "Tuyến xe bus";
-            // 
-            // txtTuyenBus
-            // 
-            // 
-            // 
-            // 
-            this.txtTuyenBus.Border.Class = "TextBoxBorder";
-            this.txtTuyenBus.Location = new System.Drawing.Point(130, 325);
-            this.txtTuyenBus.Name = "txtTuyenBus";
-            this.txtTuyenBus.Size = new System.Drawing.Size(211, 20);
-            this.txtTuyenBus.TabIndex = 9;
-            // 
-            // labelX13
-            // 
-            this.labelX13.Location = new System.Drawing.Point(12, 292);
-            this.labelX13.Name = "labelX13";
-            this.labelX13.Size = new System.Drawing.Size(75, 23);
-            this.labelX13.TabIndex = 32;
-            this.labelX13.Text = "Tọa độ cuối";
-            // 
-            // txtToaDoCuoi
-            // 
-            // 
-            // 
-            // 
-            this.txtToaDoCuoi.Border.Class = "TextBoxBorder";
-            this.txtToaDoCuoi.Location = new System.Drawing.Point(130, 296);
-            this.txtToaDoCuoi.Name = "txtToaDoCuoi";
-            this.txtToaDoCuoi.Size = new System.Drawing.Size(211, 20);
-            this.txtToaDoCuoi.TabIndex = 8;
-            // 
-            // labelX12
-            // 
-            this.labelX12.Location = new System.Drawing.Point(12, 263);
-            this.labelX12.Name = "labelX12";
-            this.labelX12.Size = new System.Drawing.Size(75, 23);
-            this.labelX12.TabIndex = 32;
-            this.labelX12.Text = "Tọa độ đầu";
-            // 
-            // txtToaDoDau
-            // 
-            // 
-            // 
-            // 
-            this.txtToaDoDau.Border.Class = "TextBoxBorder";
-            this.txtToaDoDau.Location = new System.Drawing.Point(130, 267);
-            this.txtToaDoDau.Name = "txtToaDoDau";
-            this.txtToaDoDau.Size = new System.Drawing.Size(211, 20);
-            this.txtToaDoDau.TabIndex = 7;
-            // 
-            // labelX11
-            // 
-            this.labelX11.Location = new System.Drawing.Point(12, 206);
-            this.labelX11.Name = "labelX11";
-            this.labelX11.Size = new System.Drawing.Size(75, 23);
-            this.labelX11.TabIndex = 32;
-            this.labelX11.Text = "Giao thông";
-            // 
-            // txtGiaoThong
-            // 
-            // 
-            // 
-            // 
-            this.txtGiaoThong.Border.Class = "TextBoxBorder";
-            this.txtGiaoThong.Location = new System.Drawing.Point(130, 210);
-            this.txtGiaoThong.Name = "txtGiaoThong";
-            this.txtGiaoThong.Size = new System.Drawing.Size(211, 20);
-            this.txtGiaoThong.TabIndex = 5;
-            // 
-            // labelX10
-            // 
-            this.labelX10.Location = new System.Drawing.Point(357, 91);
-            this.labelX10.Name = "labelX10";
-            this.labelX10.Size = new System.Drawing.Size(75, 23);
-            this.labelX10.TabIndex = 32;
-            this.labelX10.Text = "Lịch sử";
-            // 
-            // txtLichSu
-            // 
-            // 
-            // 
-            // 
-            this.txtLichSu.Border.Class = "TextBoxBorder";
-            this.txtLichSu.Location = new System.Drawing.Point(357, 123);
-            this.txtLichSu.Multiline = true;
-            this.txtLichSu.Name = "txtLichSu";
-            this.txtLichSu.Size = new System.Drawing.Size(279, 197);
-            this.txtLichSu.TabIndex = 10;
-            // 
-            // labelX9
-            // 
-            this.labelX9.Location = new System.Drawing.Point(12, 177);
-            this.labelX9.Name = "labelX9";
-            this.labelX9.Size = new System.Drawing.Size(75, 23);
-            this.labelX9.TabIndex = 32;
-            this.labelX9.Text = "Di tích";
-            // 
-            // txtDiTich
-            // 
-            // 
-            // 
-            // 
-            this.txtDiTich.Border.Class = "TextBoxBorder";
-            this.txtDiTich.Location = new System.Drawing.Point(130, 181);
-            this.txtDiTich.Name = "txtDiTich";
-            this.txtDiTich.Size = new System.Drawing.Size(211, 20);
-            this.txtDiTich.TabIndex = 4;
-            // 
-            // labelX8
-            // 
-            this.labelX8.Location = new System.Drawing.Point(12, 148);
-            this.labelX8.Name = "labelX8";
-            this.labelX8.Size = new System.Drawing.Size(75, 23);
-            this.labelX8.TabIndex = 32;
-            this.labelX8.Text = "Tên tiếng pháp";
-            // 
-            // txtTenPhap
-            // 
-            // 
-            // 
-            // 
-            this.txtTenPhap.Border.Class = "TextBoxBorder";
-            this.txtTenPhap.Location = new System.Drawing.Point(130, 152);
-            this.txtTenPhap.Name = "txtTenPhap";
-            this.txtTenPhap.Size = new System.Drawing.Size(211, 20);
-            this.txtTenPhap.TabIndex = 3;
-            // 
-            // labelX7
-            // 
-            this.labelX7.Location = new System.Drawing.Point(12, 119);
-            this.labelX7.Name = "labelX7";
-            this.labelX7.Size = new System.Drawing.Size(75, 23);
-            this.labelX7.TabIndex = 32;
-            this.labelX7.Text = "Tên Phố";
-            // 
-            // txtTenPho
-            // 
-            // 
-            // 
-            // 
-            this.txtTenPho.Border.Class = "TextBoxBorder";
-            this.txtTenPho.Location = new System.Drawing.Point(130, 123);
-            this.txtTenPho.Name = "txtTenPho";
-            this.txtTenPho.Size = new System.Drawing.Size(211, 20);
-            this.txtTenPho.TabIndex = 2;
-            // 
-            // labelX6
-            // 
-            this.labelX6.Location = new System.Drawing.Point(12, 90);
-            this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(75, 23);
-            this.labelX6.TabIndex = 32;
-            this.labelX6.Text = "ID_Phố";
-            // 
-            // txtIDPho
-            // 
-            // 
-            // 
-            // 
-            this.txtIDPho.Border.Class = "TextBoxBorder";
-            this.txtIDPho.Enabled = false;
-            this.txtIDPho.Location = new System.Drawing.Point(130, 94);
-            this.txtIDPho.Name = "txtIDPho";
-            this.txtIDPho.Size = new System.Drawing.Size(211, 20);
-            this.txtIDPho.TabIndex = 1;
-            // 
-            // dGViewPho
-            // 
-            this.dGViewPho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGViewPho.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dGViewPho.Location = new System.Drawing.Point(1, 366);
-            this.dGViewPho.MultiSelect = false;
-            this.dGViewPho.Name = "dGViewPho";
-            this.dGViewPho.ReadOnly = true;
-            this.dGViewPho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dGViewPho.Size = new System.Drawing.Size(971, 187);
-            this.dGViewPho.TabIndex = 30;
-            this.dGViewPho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGViewPho_CellClick);
-            this.dGViewPho.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGViewPho_CellLeave);
-            // 
-            // ribbonBar2
-            // 
-            this.ribbonBar2.AutoOverflowEnabled = true;
-            this.ribbonBar2.Controls.Add(this.cboSearchPho);
-            this.ribbonBar2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ribbonBar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnAddPho,
-            this.buttonItem2,
-            this.btnEditPho,
-            this.btnDelPho,
-            this.labelItem1,
-            this.controlContainerItem2,
-            this.txtSearchPho,
-            this.labelItem3});
-            this.ribbonBar2.Location = new System.Drawing.Point(1, 1);
-            this.ribbonBar2.Name = "ribbonBar2";
-            this.ribbonBar2.Size = new System.Drawing.Size(971, 40);
-            this.ribbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.ribbonBar2.TabIndex = 1;
-            this.ribbonBar2.Text = "Chức năng của chương trình";
-            // 
-            // cboSearchPho
-            // 
-            this.cboSearchPho.DisplayMember = "Text";
-            this.cboSearchPho.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboSearchPho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboSearchPho.FormattingEnabled = true;
-            this.cboSearchPho.Location = new System.Drawing.Point(236, 3);
-            this.cboSearchPho.Name = "cboSearchPho";
-            this.cboSearchPho.Size = new System.Drawing.Size(121, 21);
-            this.cboSearchPho.TabIndex = 37;
-            this.cboSearchPho.SelectedIndexChanged += new System.EventHandler(this.cboSearchPho_SelectedIndexChanged);
-            // 
-            // btnAddPho
-            // 
-            this.btnAddPho.ImagePaddingHorizontal = 8;
-            this.btnAddPho.Name = "btnAddPho";
-            this.btnAddPho.Text = "Thêm phố mới";
-            this.btnAddPho.Click += new System.EventHandler(this.btnAddPho_Click);
-            // 
-            // buttonItem2
-            // 
-            this.buttonItem2.ImagePaddingHorizontal = 8;
-            this.buttonItem2.Name = "buttonItem2";
-            // 
-            // btnEditPho
-            // 
-            this.btnEditPho.ImagePaddingHorizontal = 8;
-            this.btnEditPho.Name = "btnEditPho";
-            this.btnEditPho.Text = "Sửa thông tin";
-            this.btnEditPho.Click += new System.EventHandler(this.btnEditPho_Click);
-            // 
-            // btnDelPho
-            // 
-            this.btnDelPho.ImagePaddingHorizontal = 8;
-            this.btnDelPho.Name = "btnDelPho";
-            this.btnDelPho.Text = "Xóa";
-            this.btnDelPho.Click += new System.EventHandler(this.btnDelPho_Click);
-            // 
-            // labelItem1
-            // 
-            this.labelItem1.Name = "labelItem1";
-            this.labelItem1.Text = "Tìm kiếm";
-            // 
-            // controlContainerItem2
-            // 
-            this.controlContainerItem2.AllowItemResize = false;
-            this.controlContainerItem2.Control = this.cboSearchPho;
-            this.controlContainerItem2.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
-            this.controlContainerItem2.Name = "controlContainerItem2";
-            // 
-            // txtSearchPho
-            // 
-            this.txtSearchPho.AlwaysShowCaption = false;
-            this.txtSearchPho.ControlText = "";
-            this.txtSearchPho.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
-            this.txtSearchPho.Name = "txtSearchPho";
-            this.txtSearchPho.RecentlyUsed = false;
-            this.txtSearchPho.SelectedText = "";
-            this.txtSearchPho.SelectionLength = 0;
-            this.txtSearchPho.SelectionStart = 0;
-            this.txtSearchPho.TextBoxWidth = 300;
-            this.txtSearchPho.InputTextChanged += new DevComponents.DotNetBar.TextBoxItem.TextChangedEventHandler(this.txtSearchPho_InputTextChanged);
-            // 
-            // labelItem3
-            // 
-            this.labelItem3.Name = "labelItem3";
-            this.labelItem3.Text = "Chọn tiêu chuẩn tìm kiếm( mặc định là tìm theo ID)";
-            // 
-            // tabItem2
-            // 
-            this.tabItem2.AttachedControl = this.btnAdd;
-            this.tabItem2.Name = "tabItem2";
-            this.tabItem2.Text = "Chức năng";
-            // 
             // tabControlPanel3
             // 
             this.tabControlPanel3.Controls.Add(this.ribbonBar3);
@@ -824,10 +844,10 @@
             this.tabControlPanel3.Name = "tabControlPanel3";
             this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
             this.tabControlPanel3.Size = new System.Drawing.Size(973, 554);
-            this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(209)))), ((int)(((byte)(255)))));
-            this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
+            this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
+            this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
             this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel3.Style.BorderColor.Color = System.Drawing.SystemColors.ControlDark;
+            this.tabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
             this.tabControlPanel3.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
                         | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.tabControlPanel3.Style.GradientAngle = 90;
@@ -903,15 +923,6 @@
             this.fdg.Filter = "Image Files|*.jpg|All files|*.*";
             this.fdg.Title = "Chọn ảnh";
             // 
-            // dgLevel
-            // 
-            this.dgLevel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgLevel.Location = new System.Drawing.Point(55, 521);
-            this.dgLevel.Name = "dgLevel";
-            this.dgLevel.Size = new System.Drawing.Size(37, 32);
-            this.dgLevel.TabIndex = 30;
-            this.dgLevel.Visible = false;
-            // 
             // frmMainA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -927,16 +938,16 @@
             this.Load += new System.EventHandler(this.frmMainA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lbHintSearch)).EndInit();
             this.lbHintSearch.ResumeLayout(false);
-            this.tabControlPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgViewRole)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dGViewUser)).EndInit();
-            this.ribbonBar1.ResumeLayout(false);
             this.btnAdd.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGViewPho)).EndInit();
             this.ribbonBar2.ResumeLayout(false);
-            this.tabControlPanel3.ResumeLayout(false);
+            this.tabControlPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgLevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgViewRole)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGViewUser)).EndInit();
+            this.ribbonBar1.ResumeLayout(false);
+            this.tabControlPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

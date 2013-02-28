@@ -44,3 +44,4 @@ C:\Users\Administrator\Desktop\Projects C#\HN36Pho\obj\x86\Debug\ResGen.read.1.t
 C:\Users\Administrator\Desktop\Projects C#\HN36Pho\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Administrator\Desktop\Projects C#\HN36Pho\obj\x86\Debug\ResGen.write.1.tlog
 C:\Users\Administrator\Desktop\Projects C#\HN36Pho\obj\x86\Debug\HN36Pho.exe.licenses
+D:\VS\HN36\HN36Pho\HN36Pho\bin\Debug\HN36Pho.pdb
