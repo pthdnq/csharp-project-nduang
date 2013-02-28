@@ -210,7 +210,21 @@ namespace HN36Pho
             string sqlQuery = "";
             if (isInsert == true && isLevelValid)
             {
+                if (txtPass.Text.Trim()=="")
+                {
+                    MessageBox.Show("Chưa nhập mật khẩu");
+                    return;
+                }
+                if(txtLevelID.Text.Trim()=="")
+                {
+                    MessageBox.Show("Chưa nhập level");
+                    return;
+                }
                 sqlQuery = "insert into account(Fullname,Username,Pass,Level) values(N'" + txtFullname.Text + "',N'" + txtAccount.Text + "',N'" + txtPass.Text + "',N'" + txtLevelID.Text + "')";
+                if (isExistAccount())
+                {
+                    return;
+                }
                 bool ok = dataObject.addObject(sqlQuery);
                 if (ok)
                 {
@@ -339,6 +353,25 @@ namespace HN36Pho
         {
             DataObject dataObject = new DataObject();
             string sqlQuery = "";
+            if (txtDoDai.Text.Trim() != "")
+            {
+                string numberText=txtDoDai.Text.Trim();
+                bool ok = IsNumeric(numberText);
+                if (!ok)
+                {
+                    MessageBox.Show("Độ dài không hợp lệ");
+                    return;
+                }
+                if(int.Parse(numberText)<0)
+                {
+                    MessageBox.Show("Độ dài không được âm");
+                    return;
+                }
+            }
+            else
+            {
+                txtDoDai.Text = "0";
+            }
             if (isInsert == true)
             {
                 sqlQuery = @"insert into Pho
@@ -361,7 +394,7 @@ namespace HN36Pho
                                         N'" + txtLichSu.Text.Trim() + "'," + @"
                                         N'" + txtDiTich.Text.Trim() + "'," + @"
                                         N'" + txtGiaoThong.Text.Trim() + "'," + @"
-                                        N'" + txtDoDai.Text.Trim() + "'," + @"
+                                        " + txtDoDai.Text.Trim() + "," + @"
                                         N'" + txtToaDoDau.Text.Trim() + "'," + @"
                                         N'" + txtToaDoCuoi.Text.Trim() + "'," + @"
                                         N'" + txtTuyenBus.Text.Trim() + "'," + @"
@@ -725,6 +758,40 @@ namespace HN36Pho
         {
             Application.Exit();
         }
-        private bool isLevelValid = false;
+        public bool IsNumeric(string NumericText)
+        {
+
+            bool isnumber = true;
+
+            foreach (char c in NumericText)
+            {
+
+                isnumber = char.IsNumber(c);
+
+                if (!isnumber)
+                {
+
+                    return isnumber;
+
+                }
+
+            }
+
+            return isnumber;
+
+        }
+        private bool isExistAccount()
+        {
+            DataLayer DL = new DataLayer();
+            string sqlQuery = @"select * from account where account=N' " + txtAccount.Text.Trim() +"'";
+            int numberRow = DL.countRow(sqlQuery);
+            if (numberRow >0)
+            {
+                MessageBox.Show("Tài khoản đã tồn tại!!!!");
+                return true;
+            }
+            return false;
+        }
+        private bool isLevelValid = true;
     }
 }
