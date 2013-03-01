@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace HN36Pho
@@ -11,7 +10,7 @@ namespace HN36Pho
 
        public static string Title       = "Tiltle   :     Chương trình tra cứu thông tin phố cổ Hà Nội";
        public static string Product     = "Product  :     HN36Pho";
-       public static string Company     = "Company  :     ĐH Mật mã";
+       public static string Company     = "Company  :     HV Mật mã";
        public static string Copyright   = "Copyright:     Ngọc";
        public static string Version     = "Version  :     1.0";
        public static string Description = "Description: Chương trình cho phép tra cứu thông tin và cập nhật thông tin về phố cổ ở Hà Nội";
