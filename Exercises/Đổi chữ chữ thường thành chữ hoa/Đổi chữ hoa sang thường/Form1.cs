@@ -19,7 +19,7 @@ namespace Đổi_chữ_hoa_sang_thường
         private void button1_Click(object sender, EventArgs e)
         {
             string chuoithuong = txtA.Text;
-            string chuoihoa = chuoithuong.ToUpper();
+            string chuoihoa = chuoithuong.ToLower();
             txtB.Text = chuoihoa;
         }
     }
