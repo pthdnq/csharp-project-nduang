@@ -1,0 +1,9 @@
+E:\vi du.VS\CSDL\CSDL\bin\Debug\CSDL.exe
+E:\vi du.VS\CSDL\CSDL\bin\Debug\CSDL.pdb
+E:\vi du.VS\CSDL\CSDL\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\vi du.VS\CSDL\CSDL\obj\x86\Debug\CSDL.Form1.resources
+E:\vi du.VS\CSDL\CSDL\obj\x86\Debug\CSDL.Properties.Resources.resources
+E:\vi du.VS\CSDL\CSDL\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\vi du.VS\CSDL\CSDL\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\vi du.VS\CSDL\CSDL\obj\x86\Debug\CSDL.exe
+E:\vi du.VS\CSDL\CSDL\obj\x86\Debug\CSDL.pdb
