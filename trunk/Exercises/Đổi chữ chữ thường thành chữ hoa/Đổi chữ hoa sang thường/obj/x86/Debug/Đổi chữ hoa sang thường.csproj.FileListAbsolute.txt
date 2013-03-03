@@ -1,0 +1,18 @@
+c:\users\quang tho\documents\visual studio 2010\Projects\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\bin\Debug\Đổi chữ hoa sang thường.exe
+c:\users\quang tho\documents\visual studio 2010\Projects\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\bin\Debug\Đổi chữ hoa sang thường.pdb
+c:\users\quang tho\documents\visual studio 2010\Projects\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\quang tho\documents\visual studio 2010\Projects\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\obj\x86\Debug\Đổi_chữ_hoa_sang_thường.frmDoichu.resources
+c:\users\quang tho\documents\visual studio 2010\Projects\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\obj\x86\Debug\Đổi_chữ_hoa_sang_thường.Properties.Resources.resources
+c:\users\quang tho\documents\visual studio 2010\Projects\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\quang tho\documents\visual studio 2010\Projects\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\quang tho\documents\visual studio 2010\Projects\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\obj\x86\Debug\Đổi chữ hoa sang thường.exe
+c:\users\quang tho\documents\visual studio 2010\Projects\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\obj\x86\Debug\Đổi chữ hoa sang thường.pdb
+E:\vi du.VS\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\obj\x86\Debug\Đổi chữ hoa sang thường.exe
+E:\vi du.VS\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\obj\x86\Debug\Đổi chữ hoa sang thường.pdb
+E:\vi du.VS\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\bin\Debug\Đổi chữ hoa sang thường.exe
+E:\vi du.VS\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\bin\Debug\Đổi chữ hoa sang thường.pdb
+E:\vi du.VS\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\vi du.VS\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\obj\x86\Debug\Đổi_chữ_hoa_sang_thường.frmDoichu.resources
+E:\vi du.VS\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\obj\x86\Debug\Đổi_chữ_hoa_sang_thường.Properties.Resources.resources
+E:\vi du.VS\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\vi du.VS\Đổi chữ hoa sang thường\Đổi chữ hoa sang thường\obj\x86\Debug\GenerateResource.write.1.tlog
