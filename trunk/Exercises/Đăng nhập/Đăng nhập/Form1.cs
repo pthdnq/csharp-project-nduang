@@ -17,9 +17,13 @@ namespace Đăng_nhập
         }
         private void bntOK_Click(object sender, EventArgs e)
         {
-            if (txt1.Text.ToString() == "admin") ;
+            if (txtTendangnhap.Text.Trim()=="admin"&&txtMatkhau.Text.Trim() == "admin") ;
             {
                 MessageBox.Show("đăng nhập thành công");
+            }
+            else 
+            {
+                MessageBox.Show("kết nối thất bại");
             }
 
         }
