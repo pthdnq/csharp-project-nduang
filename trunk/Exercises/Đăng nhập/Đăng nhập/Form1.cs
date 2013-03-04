@@ -17,7 +17,7 @@ namespace Đăng_nhập
         }
         private void bntOK_Click(object sender, EventArgs e)
         {
-            if (txtTendangnhap.Text.Trim()=="admin"&&txtMatkhau.Text.Trim() == "admin") ;
+            if (txtTendangnhap.Text.Trim()=="admin"&&txtMatkhau.Text.Trim() == "admin")
             {
                 MessageBox.Show("đăng nhập thành công");
             }

@@ -7,3 +7,5 @@ E:\vi du.VS\Đăng nhập\Đăng nhập\bin\Debug\Đăng nhập.exe
 E:\vi du.VS\Đăng nhập\Đăng nhập\bin\Debug\Đăng nhập.pdb
 E:\vi du.VS\Đăng nhập\Đăng nhập\obj\x86\Debug\Đăng nhập.exe
 E:\vi du.VS\Đăng nhập\Đăng nhập\obj\x86\Debug\Đăng nhập.pdb
+E:\Projects\Exercises\Đăng nhập\Đăng nhập\obj\x86\Debug\Đăng nhập.exe
+E:\Projects\Exercises\Đăng nhập\Đăng nhập\obj\x86\Debug\Đăng nhập.pdb
