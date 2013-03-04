@@ -1,0 +1,9 @@
+E:\vi du.VS\Đăng nhập\Đăng nhập\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\vi du.VS\Đăng nhập\Đăng nhập\obj\x86\Debug\Đăng_nhập.Form1.resources
+E:\vi du.VS\Đăng nhập\Đăng nhập\obj\x86\Debug\Đăng_nhập.Properties.Resources.resources
+E:\vi du.VS\Đăng nhập\Đăng nhập\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\vi du.VS\Đăng nhập\Đăng nhập\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\vi du.VS\Đăng nhập\Đăng nhập\bin\Debug\Đăng nhập.exe
+E:\vi du.VS\Đăng nhập\Đăng nhập\bin\Debug\Đăng nhập.pdb
+E:\vi du.VS\Đăng nhập\Đăng nhập\obj\x86\Debug\Đăng nhập.exe
+E:\vi du.VS\Đăng nhập\Đăng nhập\obj\x86\Debug\Đăng nhập.pdb
