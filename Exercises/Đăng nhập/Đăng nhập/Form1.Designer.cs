@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt1 = new System.Windows.Forms.TextBox();
-            this.txt2 = new System.Windows.Forms.TextBox();
+            this.txtTendangnhap = new System.Windows.Forms.TextBox();
+            this.txtMatkhau = new System.Windows.Forms.TextBox();
             this.bntOK = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txt1
+            // txtTendangnhap
             // 
-            this.txt1.Location = new System.Drawing.Point(93, 52);
-            this.txt1.Multiline = true;
-            this.txt1.Name = "txt1";
-            this.txt1.Size = new System.Drawing.Size(261, 46);
-            this.txt1.TabIndex = 0;
+            this.txtTendangnhap.Location = new System.Drawing.Point(93, 52);
+            this.txtTendangnhap.Multiline = true;
+            this.txtTendangnhap.Name = "txtTendangnhap";
+            this.txtTendangnhap.Size = new System.Drawing.Size(261, 46);
+            this.txtTendangnhap.TabIndex = 0;
             // 
-            // txt2
+            // txtMatkhau
             // 
-            this.txt2.Location = new System.Drawing.Point(93, 166);
-            this.txt2.Multiline = true;
-            this.txt2.Name = "txt2";
-            this.txt2.Size = new System.Drawing.Size(261, 51);
-            this.txt2.TabIndex = 2;
+            this.txtMatkhau.Location = new System.Drawing.Point(93, 166);
+            this.txtMatkhau.Multiline = true;
+            this.txtMatkhau.Name = "txtMatkhau";
+            this.txtMatkhau.Size = new System.Drawing.Size(261, 51);
+            this.txtMatkhau.TabIndex = 2;
             // 
             // bntOK
             // 
@@ -87,8 +87,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bntOK);
-            this.Controls.Add(this.txt2);
-            this.Controls.Add(this.txt1);
+            this.Controls.Add(this.txtMatkhau);
+            this.Controls.Add(this.txtTendangnhap);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -98,8 +98,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txt1;
-        private System.Windows.Forms.TextBox txt2;
+        private System.Windows.Forms.TextBox txtTendangnhap;
+        private System.Windows.Forms.TextBox txtMatkhau;
         private System.Windows.Forms.Button bntOK;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
