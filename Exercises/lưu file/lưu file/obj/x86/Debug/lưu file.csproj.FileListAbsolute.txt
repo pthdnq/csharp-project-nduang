@@ -1,0 +1,9 @@
+E:\vi du.VS\lưu file\lưu file\bin\Debug\lưu file.exe
+E:\vi du.VS\lưu file\lưu file\bin\Debug\lưu file.pdb
+E:\vi du.VS\lưu file\lưu file\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\vi du.VS\lưu file\lưu file\obj\x86\Debug\lưu_file.Form1.resources
+E:\vi du.VS\lưu file\lưu file\obj\x86\Debug\lưu_file.Properties.Resources.resources
+E:\vi du.VS\lưu file\lưu file\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\vi du.VS\lưu file\lưu file\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\vi du.VS\lưu file\lưu file\obj\x86\Debug\lưu file.exe
+E:\vi du.VS\lưu file\lưu file\obj\x86\Debug\lưu file.pdb
