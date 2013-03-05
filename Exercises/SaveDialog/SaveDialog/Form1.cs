@@ -32,11 +32,11 @@ namespace SaveDialog
                 {
                     if ((myStream = saveFileDialog1.OpenFile()) != null)
                     {
-                        StreamWriter sw = new StreamWriter();
+                        StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
                         string chuoi = txt1.Text;
                         sw.Write(chuoi);
                         sw.Close();
-                        myStream.Close();
+                        
                     }
                 }
             
