@@ -1,4 +1,4 @@
-﻿namespace HN36PhoVer2
+﻿namespace HN36PhoVer2GUI
 {
     partial class frmMain
     {

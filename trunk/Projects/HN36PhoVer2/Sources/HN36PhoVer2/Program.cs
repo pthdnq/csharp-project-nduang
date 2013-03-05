@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace HN36PhoVer2
+namespace HN36PhoVer2GUI
 {
     static class Program
     {
