@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace HN36PhoVer2
+namespace HN36PhoVer2GUI
 {
     partial class frmAbout : Form
     {
