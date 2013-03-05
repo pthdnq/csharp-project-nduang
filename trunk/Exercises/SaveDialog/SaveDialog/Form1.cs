@@ -22,7 +22,7 @@ namespace SaveDialog
         {
             
                 Stream myStream;
-                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                
 
                 saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
                 //saveFileDialog1.FilterIndex = 2;
@@ -41,6 +41,11 @@ namespace SaveDialog
                     }
                 }
             
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

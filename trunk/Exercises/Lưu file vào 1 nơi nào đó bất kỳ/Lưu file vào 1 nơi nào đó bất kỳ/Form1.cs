@@ -22,16 +22,16 @@ namespace Lưu_file_vào_1_nơi_nào_đó_bất_kỳ
             try
             {
                 SaveFileDialog saveFileDlg = new SaveFileDialog();
-                saveFileDlg.InitialDirectory = Application.ExecutablePath;
+                //saveFileDlg.InitialDirectory = Application.ExecutablePath;
                 saveFileDlg.Filter = "all file (*.txt)|*.txt";
                 if (saveFileDlg.ShowDialog() == DialogResult.OK)
                 {
-                    FileStream fs = new FileStream(saveFileDlg.FileName, FileMode.Create);
-                    StreamWriter sw = new StreamWriter(fs);
+                   // FileStream fs = new FileStream(saveFileDlg.FileName, FileMode.Create);
+                    StreamWriter sw = new StreamWriter(saveFileDlg.FileName);
                     sw.Write(txtFile.Text.ToString());
                     sw.Flush();
                     sw.Close();
-                    fs.Close();
+                    
 
                 }
             }
