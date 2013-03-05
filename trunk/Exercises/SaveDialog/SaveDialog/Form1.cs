@@ -33,6 +33,7 @@ namespace SaveDialog
                         StreamWriter strW = new StreamWriter(myStream);
                         string st = txt1.Text;
                         strW.Write(st);
+                        strW.Close();
                         myStream.Close();
                     }
                 }
