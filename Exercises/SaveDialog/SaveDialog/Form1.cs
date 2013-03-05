@@ -22,22 +22,18 @@ namespace SaveDialog
         {
             
                 Stream myStream;
-                
-
                 saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-                //saveFileDialog1.FilterIndex = 2;
-                //saveFileDialog1.RestoreDirectory = true;
-
+                saveFileDialog1.FilterIndex = 2;
+                saveFileDialog1.RestoreDirectory = true;
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    if ((myStream = saveFileDialog1.OpenFile()) != null)
+                    myStream = saveFileDialog1.OpenFile();
+                    if (myStream != null)
                     {
-                        StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
-                        string chuoi = txt1.Text;
-                        sw.Write(chuoi);
-                        sw.Flush();
-                        sw.Close();
-                        
+                        StreamWriter strW = new StreamWriter(myStream);
+                        string st = txt1.Text;
+                        strW.Write(st);
+                        myStream.Close();
                     }
                 }
             
