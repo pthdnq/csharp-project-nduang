@@ -31,6 +31,7 @@
             this.txt1 = new System.Windows.Forms.TextBox();
             this.btn1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // txt1
@@ -60,6 +61,10 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "nhap DL";
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -80,6 +85,7 @@
         private System.Windows.Forms.TextBox txt1;
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 
