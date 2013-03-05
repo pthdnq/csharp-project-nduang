@@ -25,8 +25,8 @@ namespace SaveDialog
                 SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
                 saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-                saveFileDialog1.FilterIndex = 2;
-                saveFileDialog1.RestoreDirectory = true;
+                //saveFileDialog1.FilterIndex = 2;
+                //saveFileDialog1.RestoreDirectory = true;
 
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
@@ -35,6 +35,7 @@ namespace SaveDialog
                         StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
                         string chuoi = txt1.Text;
                         sw.Write(chuoi);
+                        sw.Flush();
                         sw.Close();
                         
                     }
