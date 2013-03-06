@@ -1,5 +1,0 @@
-D:\visua studio\HN36\projects\Projects\HN36PhoVer2\Sources\Build\Debug\DataLayer.dll
-D:\visua studio\HN36\projects\Projects\HN36PhoVer2\Sources\Build\Debug\DataLayer.pdb
-D:\visua studio\HN36\projects\Projects\HN36PhoVer2\Sources\DataLayer\obj\Debug\ResolveAssemblyReference.cache
-D:\visua studio\HN36\projects\Projects\HN36PhoVer2\Sources\DataLayer\obj\Debug\DataLayer.dll
-D:\visua studio\HN36\projects\Projects\HN36PhoVer2\Sources\DataLayer\obj\Debug\DataLayer.pdb
