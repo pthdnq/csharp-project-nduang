@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabHeThong = new System.Windows.Forms.TabPage();
+            this.tabChucnang = new System.Windows.Forms.TabPage();
+            this.tabTroGiup = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabHeThong);
+            this.tabControl1.Controls.Add(this.tabChucnang);
+            this.tabControl1.Controls.Add(this.tabTroGiup);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -47,35 +47,35 @@
             this.tabControl1.Size = new System.Drawing.Size(661, 262);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // tabHeThong
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(653, 118);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabHeThong.Location = new System.Drawing.Point(4, 22);
+            this.tabHeThong.Name = "tabHeThong";
+            this.tabHeThong.Padding = new System.Windows.Forms.Padding(3);
+            this.tabHeThong.Size = new System.Drawing.Size(653, 236);
+            this.tabHeThong.TabIndex = 0;
+            this.tabHeThong.Text = "Quản Trị Hệ Thống";
+            this.tabHeThong.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabChucnang
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(653, 118);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabChucnang.Location = new System.Drawing.Point(4, 22);
+            this.tabChucnang.Name = "tabChucnang";
+            this.tabChucnang.Padding = new System.Windows.Forms.Padding(3);
+            this.tabChucnang.Size = new System.Drawing.Size(653, 236);
+            this.tabChucnang.TabIndex = 1;
+            this.tabChucnang.Text = "Chức Năng";
+            this.tabChucnang.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // tabTroGiup
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(653, 236);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabTroGiup.Location = new System.Drawing.Point(4, 22);
+            this.tabTroGiup.Name = "tabTroGiup";
+            this.tabTroGiup.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTroGiup.Size = new System.Drawing.Size(653, 236);
+            this.tabTroGiup.TabIndex = 2;
+            this.tabTroGiup.Text = "Trợ Giúp";
+            this.tabTroGiup.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
@@ -93,8 +93,8 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabHeThong;
+        private System.Windows.Forms.TabPage tabChucnang;
+        private System.Windows.Forms.TabPage tabTroGiup;
     }
 }
