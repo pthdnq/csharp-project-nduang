@@ -28,34 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabHeThong = new System.Windows.Forms.TabPage();
-            this.tabChucnang = new System.Windows.Forms.TabPage();
             this.tabTroGiup = new System.Windows.Forms.TabPage();
+            this.tabChucnang = new System.Windows.Forms.TabPage();
+            this.tabHeThong = new System.Windows.Forms.TabPage();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabTroGiup
             // 
-            this.tabControl1.Controls.Add(this.tabHeThong);
-            this.tabControl1.Controls.Add(this.tabChucnang);
-            this.tabControl1.Controls.Add(this.tabTroGiup);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(661, 262);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // tabHeThong
-            // 
-            this.tabHeThong.Location = new System.Drawing.Point(4, 22);
-            this.tabHeThong.Name = "tabHeThong";
-            this.tabHeThong.Padding = new System.Windows.Forms.Padding(3);
-            this.tabHeThong.Size = new System.Drawing.Size(653, 236);
-            this.tabHeThong.TabIndex = 0;
-            this.tabHeThong.Text = "Quản Trị Hệ Thống";
-            this.tabHeThong.UseVisualStyleBackColor = true;
+            this.tabTroGiup.AllowDrop = true;
+            this.tabTroGiup.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.tabTroGiup.Location = new System.Drawing.Point(4, 22);
+            this.tabTroGiup.Name = "tabTroGiup";
+            this.tabTroGiup.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTroGiup.Size = new System.Drawing.Size(653, 236);
+            this.tabTroGiup.TabIndex = 2;
+            this.tabTroGiup.Text = "Trợ Giúp";
+            this.tabTroGiup.UseVisualStyleBackColor = true;
+            this.tabTroGiup.UseWaitCursor = true;
+            this.tabTroGiup.Click += new System.EventHandler(this.tabTroGiup_Click);
             // 
             // tabChucnang
             // 
@@ -67,15 +59,29 @@
             this.tabChucnang.Text = "Chức Năng";
             this.tabChucnang.UseVisualStyleBackColor = true;
             // 
-            // tabTroGiup
+            // tabHeThong
             // 
-            this.tabTroGiup.Location = new System.Drawing.Point(4, 22);
-            this.tabTroGiup.Name = "tabTroGiup";
-            this.tabTroGiup.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTroGiup.Size = new System.Drawing.Size(653, 236);
-            this.tabTroGiup.TabIndex = 2;
-            this.tabTroGiup.Text = "Trợ Giúp";
-            this.tabTroGiup.UseVisualStyleBackColor = true;
+            this.tabHeThong.Location = new System.Drawing.Point(4, 22);
+            this.tabHeThong.Name = "tabHeThong";
+            this.tabHeThong.Padding = new System.Windows.Forms.Padding(3);
+            this.tabHeThong.Size = new System.Drawing.Size(653, 236);
+            this.tabHeThong.TabIndex = 0;
+            this.tabHeThong.Text = "Quản Trị Hệ Thống";
+            this.tabHeThong.UseVisualStyleBackColor = true;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabHeThong);
+            this.tabControl1.Controls.Add(this.tabChucnang);
+            this.tabControl1.Controls.Add(this.tabTroGiup);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(661, 262);
+            this.tabControl1.TabIndex = 2;
+            this.tabControl1.Visible = false;
+            this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // frmMain
             // 
@@ -92,9 +98,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabHeThong;
-        private System.Windows.Forms.TabPage tabChucnang;
         private System.Windows.Forms.TabPage tabTroGiup;
+        private System.Windows.Forms.TabPage tabChucnang;
+        private System.Windows.Forms.TabPage tabHeThong;
+        private System.Windows.Forms.TabControl tabControl1;
+
     }
 }
