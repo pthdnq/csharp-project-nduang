@@ -40,7 +40,7 @@
             this.btnok.Location = new System.Drawing.Point(37, 130);
             this.btnok.Name = "btnok";
             this.btnok.Size = new System.Drawing.Size(75, 23);
-            this.btnok.TabIndex = 0;
+            this.btnok.TabIndex = 2;
             this.btnok.Text = "OK";
             this.btnok.UseVisualStyleBackColor = true;
             this.btnok.Click += new System.EventHandler(this.btnok_Click);
@@ -50,7 +50,7 @@
             this.button2.Location = new System.Drawing.Point(132, 130);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
+            this.button2.TabIndex = 3;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -69,14 +69,14 @@
             this.txt1.Location = new System.Drawing.Point(49, 34);
             this.txt1.Name = "txt1";
             this.txt1.Size = new System.Drawing.Size(158, 20);
-            this.txt1.TabIndex = 2;
+            this.txt1.TabIndex = 0;
             // 
             // txt2
             // 
             this.txt2.Location = new System.Drawing.Point(49, 72);
             this.txt2.Name = "txt2";
             this.txt2.Size = new System.Drawing.Size(158, 20);
-            this.txt2.TabIndex = 2;
+            this.txt2.TabIndex = 1;
             // 
             // frmLogin
             // 
