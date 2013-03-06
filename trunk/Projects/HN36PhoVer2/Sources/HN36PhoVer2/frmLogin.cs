@@ -13,5 +13,22 @@ namespace HN36PhoVer2GUI
         {
             InitializeComponent();
         }
+
+        private void btnok_Click(object sender, EventArgs e)
+        {
+            if (txt1.Text == "")
+            {
+                MessageBox.Show("Nhap ten dang nhap");
+                txt1.Focus();
+                
+            }
+            if(txt2.Text == "")
+            {
+                MessageBox.Show("Nhap pass");
+                txt2.Focus();
+                
+
+            }
+        }
     }
 }
