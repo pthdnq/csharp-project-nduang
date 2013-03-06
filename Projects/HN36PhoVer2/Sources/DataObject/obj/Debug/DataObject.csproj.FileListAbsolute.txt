@@ -1,0 +1,5 @@
+D:\visua studio\HN36\projects\Projects\HN36PhoVer2\Sources\Build\Debug\DataObject.dll
+D:\visua studio\HN36\projects\Projects\HN36PhoVer2\Sources\Build\Debug\DataObject.pdb
+D:\visua studio\HN36\projects\Projects\HN36PhoVer2\Sources\DataObject\obj\Debug\ResolveAssemblyReference.cache
+D:\visua studio\HN36\projects\Projects\HN36PhoVer2\Sources\DataObject\obj\Debug\DataObject.dll
+D:\visua studio\HN36\projects\Projects\HN36PhoVer2\Sources\DataObject\obj\Debug\DataObject.pdb
