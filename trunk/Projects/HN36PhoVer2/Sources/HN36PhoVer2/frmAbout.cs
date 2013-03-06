@@ -99,5 +99,11 @@ namespace HN36PhoVer2GUI
             }
         }
         #endregion
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }
