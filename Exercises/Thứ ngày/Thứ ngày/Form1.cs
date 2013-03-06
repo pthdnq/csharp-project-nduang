@@ -14,44 +14,50 @@ namespace Thứ_ngày
         public Form1()
         {
             InitializeComponent();
-
         }
+
         private void txtSo_TextChanged(object sender, EventArgs e)
         {
-           
-            byte so;
-            Console.Write("nhập số của thứ");
-            so = byte.Parse(Console.ReadLine());
+   
+            string chuso = txtThu.Text;
+            byte so = byte.Parse(chuso);
+          
             switch (so)
             {
+                
                 case 2:
-                    Console.Write(@"tthứ hai");
+                    chuso.ToString("thứ hai");
                     break;
                 case 3:
-                    Console.Write(@"thứ ba");
+                    chuso.ToString(@"thứ ba");
                     break;
                 case 4:
-                    Console.Write(@"thứ tư");
+                    chuso.ToString(@"thứ tư");
                     break;
                 case 5:
-                    Console.Write(@"thứ 5");
+                    chuso.ToString(@"thứ 5");
                     break;
                 case 6:
-                    Console.Write(@"thứ 6");
+                    chuso.ToString(@"thứ 6");
                     break;
                 case 7:
-                    Console.Write(@"thứ 7");
+                    chuso.ToString(@"thứ 7");
                     break;
                 case 8:
-                    Console.Write(@"chủ nhật");
+                    chuso.ToString(@"chủ nhật");
                     break;
                 default:
-                    Console.Write(@"ko có thứ");
+                    chuso.ToString(@"ko có thứ");
                     break;
             }
-            Console.ReadLine();
+          
             }
 	
         }
     }
 
+
+
+        }
+    }
+}

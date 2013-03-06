@@ -34,7 +34,7 @@
             // 
             // txtSo
             // 
-            this.txtSo.Location = new System.Drawing.Point(97, 51);
+            this.txtSo.Location = new System.Drawing.Point(73, 81);
             this.txtSo.Name = "txtSo";
             this.txtSo.Size = new System.Drawing.Size(100, 20);
             this.txtSo.TabIndex = 0;
@@ -42,11 +42,10 @@
             // 
             // txtThu
             // 
-            this.txtThu.Location = new System.Drawing.Point(97, 125);
+            this.txtThu.Location = new System.Drawing.Point(73, 150);
             this.txtThu.Name = "txtThu";
             this.txtThu.Size = new System.Drawing.Size(100, 20);
             this.txtThu.TabIndex = 1;
-            this.txtThu.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Form1
             // 
