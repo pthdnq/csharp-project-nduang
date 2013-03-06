@@ -20,12 +20,13 @@ namespace HN36PhoVer2GUI
             {
                 MessageBox.Show("Nhap ten dang nhap");
                 txt1.Focus();
-                
+                return;
             }
             if(txt2.Text == "")
             {
                 MessageBox.Show("Nhap pass");
                 txt2.Focus();
+                return;
                 
 
             }
