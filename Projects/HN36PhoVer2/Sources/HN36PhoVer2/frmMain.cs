@@ -15,6 +15,15 @@ namespace HN36PhoVer2GUI
             InitializeComponent();
         }
 
+       
+
+        private void tabTroGiup_Click(object sender, EventArgs e)
+        {
+            frmAbout frmabout = new frmAbout();
+            frmabout.ShowDialog();
+        }
+
+        
         
     }
 }
