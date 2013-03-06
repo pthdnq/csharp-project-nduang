@@ -14,5 +14,7 @@ namespace HN36PhoVer2GUI
         {
             InitializeComponent();
         }
+
+        
     }
 }
