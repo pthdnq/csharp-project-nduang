@@ -25,7 +25,7 @@ namespace DataGreadView
        {
            SqlConnection cnn = new SqlConnection();
            string strAppStart = Application.StartupPath;
-           cnn.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=" + strAppStart + @"\Database\QLSV.mdf;Integrated Security=True;Connect Timeout=3;User Instance=True";
+           cnn.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=" + strAppStart + @"\Database\QLSV.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
            
            try
            {
