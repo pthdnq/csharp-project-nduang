@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnok = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.chBoxRemember = new System.Windows.Forms.CheckBox();
             this.txt1 = new System.Windows.Forms.TextBox();
             this.txt2 = new System.Windows.Forms.TextBox();
@@ -45,15 +45,15 @@
             this.btnok.UseVisualStyleBackColor = true;
             this.btnok.Click += new System.EventHandler(this.btnok_Click);
             // 
-            // button2
+            // btnCancel
             // 
-            this.button2.Location = new System.Drawing.Point(132, 130);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnCancel.Location = new System.Drawing.Point(132, 130);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // chBoxRemember
             // 
@@ -87,7 +87,7 @@
             this.Controls.Add(this.txt2);
             this.Controls.Add(this.txt1);
             this.Controls.Add(this.chBoxRemember);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnok);
             this.Name = "frmLogin";
             this.Text = "Login";
@@ -99,7 +99,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnok;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.CheckBox chBoxRemember;
         private System.Windows.Forms.TextBox txt1;
         private System.Windows.Forms.TextBox txt2;

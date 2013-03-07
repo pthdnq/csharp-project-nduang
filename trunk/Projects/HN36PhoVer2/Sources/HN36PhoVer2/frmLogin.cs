@@ -30,9 +30,11 @@ namespace HN36PhoVer2GUI
                 
 
             }
-        }
+            //viet tiep vao doan nay de hien ra form main va an form dang nhap
 
-        private void button2_Click(object sender, EventArgs e)
+
+        }
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
