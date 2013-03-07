@@ -31,6 +31,10 @@ namespace HN36PhoVer2GUI
 
             }
             //viet tiep vao doan nay de hien ra form main va an form dang nhap
+            frmMain main = new frmMain();
+            this.Hide();
+            main.ShowDialog();
+          
 
 
         }
