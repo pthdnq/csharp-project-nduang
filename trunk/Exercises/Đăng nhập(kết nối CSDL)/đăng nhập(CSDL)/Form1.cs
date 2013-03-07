@@ -20,19 +20,19 @@ namespace đăng_nhập_CSDL_
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=QUANGTHO-PC\SQLEXPRESS;Initial Catalog=account;Integrated Security=True";
-            SqlConnection conn = new SqlConnection(connectionString);
-            try
-            {
-                conn.Open();
+            //string connectionString = @"Data Source=QUANGTHO-PC\SQLEXPRESS;Initial Catalog=account;Integrated Security=True";
+            //SqlConnection conn = new SqlConnection(connectionString);
+            //try
+            //{
+            //    conn.Open();
              
-                MessageBox.Show("kết nối thành công");
-            }
-            catch (SqlException sqle)
-            {
+            //    MessageBox.Show("kết nối thành công");
+            //}
+            //catch (SqlException sqle)
+            //{
                 
-                MessageBox.Show("kết nối thất bại");
-            }
+            //    MessageBox.Show("kết nối thất bại");
+            //}
              
         }
 
@@ -40,7 +40,18 @@ namespace đăng_nhập_CSDL_
         {
             string connectionString = @"Data Source=QUANGTHO-PC\SQLEXPRESS;Initial Catalog=account;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connectionString);
-            SqlDataAdapter ad = new SqlDataAdapter(@"select * from acount where ID=ngocham and Pass=ham115", connectionString);
+            try
+            {
+                conn.Open();
+
+               // MessageBox.Show("kết nối thành công");
+            }
+            catch (SqlException sqle)
+            {
+
+                MessageBox.Show("kết nối thất bại");
+            }
+            SqlDataAdapter ad = new SqlDataAdapter(@"select * from acount where ID=N'"+txtID.Text.Trim()+"' and Pass=N'"+txtPass.Text.Trim()+"'", connectionString);
             DataTable dt = new DataTable();
             ad.Fill(dt);
             int numberRow = dt.Rows.Count;
