@@ -20,7 +20,7 @@ namespace đăng_nhập_CSDL_
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=E:\vs\HN36\HN36Pho\HN36Pho\bin\Debug\Database\HN36Pho.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+            string connectionString = @"Data Source=QUANGTHO-PC\SQLEXPRESS;Initial Catalog=account;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connectionString);
             try
             {
