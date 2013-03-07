@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGreadView", "DataGreadView\DataGreadView.csproj", "{3F0CBA81-6E61-44FF-9983-13B6F0FFC099}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGreadView", "DataGreadView.csproj", "{3F0CBA81-6E61-44FF-9983-13B6F0FFC099}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
