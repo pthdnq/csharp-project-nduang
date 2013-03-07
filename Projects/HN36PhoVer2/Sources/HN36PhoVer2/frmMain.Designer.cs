@@ -81,7 +81,7 @@
             this.tabControl1.Size = new System.Drawing.Size(661, 262);
             this.tabControl1.TabIndex = 2;
             this.tabControl1.Visible = false;
-            this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
+            //this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // frmMain
             // 
