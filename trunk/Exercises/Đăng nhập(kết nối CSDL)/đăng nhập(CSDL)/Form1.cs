@@ -24,17 +24,33 @@ namespace đăng_nhập_CSDL_
             SqlConnection conn = new SqlConnection(connectionString);
             try
             {
-
                 conn.Open();
-
+             
                 MessageBox.Show("kết nối thành công");
             }
             catch (SqlException sqle)
             {
-
-
+                
                 MessageBox.Show("kết nối thất bại");
+            }
+             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string connectionString = @"Data Source=QUANGTHO-PC\SQLEXPRESS;Initial Catalog=account;Integrated Security=True";
+            SqlConnection conn = new SqlConnection(connectionString);
+            SqlDataAdapter ad = new SqlDataAdapter(@"select * from acount where ID=ngocham and Pass=ham115", connectionString);
+            DataTable dt = new DataTable();
+            ad.Fill(dt);
+            int numberRow = dt.Rows.Count;
+            if (numberRow == 0)
+            {
+                
+                MessageBox.Show("tài khoản hoặc mật khẩu không đúng");
+                return;
             }
         }
     }
+   
 }
