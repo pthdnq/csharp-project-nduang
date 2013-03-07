@@ -35,14 +35,15 @@ namespace DataGreadView
            catch (SqlException)
            {
                MessageBox.Show("that bai");
+               return;
            }
             
-          string sql = " select * from account";
+            string sql = " select * from account";
             SqlDataAdapter ad = new SqlDataAdapter(sql, cnn);
             DataTable t = new DataTable();
-        ad.Fill(t);
-           dtgv.DataSource = t;
-           cnn.Close();
+            ad.Fill(t);
+            dtgv.DataSource = t;
+            cnn.Close();
        }
        
     }
