@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "đăng nhập(CSDL)", "đăng nhập(CSDL)\đăng nhập(CSDL).csproj", "{EE459AEE-F875-49BB-A4D4-E2387A8192FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE459AEE-F875-49BB-A4D4-E2387A8192FA}.Debug|x86.ActiveCfg = Debug|x86
+		{EE459AEE-F875-49BB-A4D4-E2387A8192FA}.Debug|x86.Build.0 = Debug|x86
+		{EE459AEE-F875-49BB-A4D4-E2387A8192FA}.Release|x86.ActiveCfg = Release|x86
+		{EE459AEE-F875-49BB-A4D4-E2387A8192FA}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

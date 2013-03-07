@@ -28,3 +28,17 @@ E:\Projects C#\HN36Pho\obj\x86\Release\ResGen.write.1.tlog
 E:\Projects C#\HN36Pho\obj\x86\Release\HN36Pho.exe.licenses
 E:\Projects C#\HN36Pho\obj\x86\Release\HN36Pho.exe
 E:\Projects C#\HN36Pho\obj\x86\Release\HN36Pho.pdb
+E:\Projects\HN36Pho\bin\Release\HN36Pho.exe.config
+E:\Projects\HN36Pho\obj\x86\Release\HN36Pho.exe
+E:\Projects\HN36Pho\obj\x86\Release\HN36Pho.pdb
+E:\Projects\HN36Pho\bin\Release\HN36Pho.exe
+E:\Projects\HN36Pho\bin\Release\HN36Pho.pdb
+E:\Projects\HN36Pho\bin\Release\DevComponents.DotNetBar2.dll
+E:\Projects\HN36Pho\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Projects\HN36Pho\obj\x86\Release\HN36Pho.frmAbout.resources
+E:\Projects\HN36Pho\obj\x86\Release\HN36Pho.frmMainA.resources
+E:\Projects\HN36Pho\obj\x86\Release\HN36Pho.frmLogin.resources
+E:\Projects\HN36Pho\obj\x86\Release\HN36Pho.Properties.Resources.resources
+E:\Projects\HN36Pho\obj\x86\Release\ResGen.read.1.tlog
+E:\Projects\HN36Pho\obj\x86\Release\ResGen.write.1.tlog
+E:\Projects\HN36Pho\obj\x86\Release\HN36Pho.exe.licenses
