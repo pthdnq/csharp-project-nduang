@@ -45,7 +45,7 @@
             // 
             // dtgv
             // 
-            this.dtgv.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dtgv.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgv.Location = new System.Drawing.Point(27, 80);
             this.dtgv.Name = "dtgv";

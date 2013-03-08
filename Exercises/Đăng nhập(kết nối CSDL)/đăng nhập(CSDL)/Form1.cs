@@ -18,24 +18,6 @@ namespace đăng_nhập_CSDL_
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            //string connectionString = @"Data Source=QUANGTHO-PC\SQLEXPRESS;Initial Catalog=account;Integrated Security=True";
-            //SqlConnection conn = new SqlConnection(connectionString);
-            //try
-            //{
-            //    conn.Open();
-             
-            //    MessageBox.Show("kết nối thành công");
-            //}
-            //catch (SqlException sqle)
-            //{
-                
-            //    MessageBox.Show("kết nối thất bại");
-            //}
-             
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string connectionString = @"Data Source=QUANGTHO-PC\SQLEXPRESS;Initial Catalog=account;Integrated Security=True";
@@ -57,9 +39,14 @@ namespace đăng_nhập_CSDL_
             int numberRow = dt.Rows.Count;
             if (numberRow == 0)
             {
-                
+
                 MessageBox.Show("tài khoản hoặc mật khẩu không đúng");
                 return;
+            }
+            else
+            {
+                MessageBox.Show("đăng nhập thành công");
+ 
             }
         }
     }
