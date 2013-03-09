@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Đăng_nhập_CSDL_.Properties
+namespace lưu_file.Properties
 {
 
 

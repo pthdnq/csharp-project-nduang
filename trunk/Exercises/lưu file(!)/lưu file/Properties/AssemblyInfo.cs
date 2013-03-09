@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Đăng nhập(CSDL)")]
+[assembly: AssemblyTitle("lưu file")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Đăng nhập(CSDL)")]
+[assembly: AssemblyProduct("lưu file")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6e81be8b-a871-43d4-ade6-93e74532178f")]
+[assembly: Guid("140dbaf2-9454-438a-bd48-7987af22f546")]
 
 // Version information for an assembly consists of the following four values:
 //

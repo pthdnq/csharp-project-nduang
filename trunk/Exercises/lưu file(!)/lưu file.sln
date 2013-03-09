@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lưu file", "lưu file\lưu file.csproj", "{93B96B48-D992-4FE7-8235-CC0F8D56C1F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93B96B48-D992-4FE7-8235-CC0F8D56C1F9}.Debug|x86.ActiveCfg = Debug|x86
+		{93B96B48-D992-4FE7-8235-CC0F8D56C1F9}.Debug|x86.Build.0 = Debug|x86
+		{93B96B48-D992-4FE7-8235-CC0F8D56C1F9}.Release|x86.ActiveCfg = Release|x86
+		{93B96B48-D992-4FE7-8235-CC0F8D56C1F9}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
