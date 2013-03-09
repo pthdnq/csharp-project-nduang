@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B06A2B3B-D1EB-49D5-B375-5786F994FCDD}</ProjectGuid>
+    <ProjectGuid>{93B96B48-D992-4FE7-8235-CC0F8D56C1F9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Đăng_nhập_CSDL_</RootNamespace>
-    <AssemblyName>Đăng nhập%28CSDL%29</AssemblyName>
+    <RootNamespace>lưu_file</RootNamespace>
+    <AssemblyName>lưu file</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>

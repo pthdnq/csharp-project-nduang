@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Đăng_nhập_CSDL_
+namespace lưu_file
 {
     static class Program
     {
