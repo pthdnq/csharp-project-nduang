@@ -31,8 +31,8 @@
             this.btnok = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.chBoxRemember = new System.Windows.Forms.CheckBox();
-            this.txt1 = new System.Windows.Forms.TextBox();
-            this.txt2 = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnok
@@ -65,27 +65,27 @@
             this.chBoxRemember.Text = "Remember ";
             this.chBoxRemember.UseVisualStyleBackColor = true;
             // 
-            // txt1
+            // txtID
             // 
-            this.txt1.Location = new System.Drawing.Point(49, 34);
-            this.txt1.Name = "txt1";
-            this.txt1.Size = new System.Drawing.Size(158, 20);
-            this.txt1.TabIndex = 0;
+            this.txtID.Location = new System.Drawing.Point(49, 34);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(158, 20);
+            this.txtID.TabIndex = 0;
             // 
-            // txt2
+            // txtPass
             // 
-            this.txt2.Location = new System.Drawing.Point(49, 72);
-            this.txt2.Name = "txt2";
-            this.txt2.Size = new System.Drawing.Size(158, 20);
-            this.txt2.TabIndex = 1;
+            this.txtPass.Location = new System.Drawing.Point(49, 72);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(158, 20);
+            this.txtPass.TabIndex = 1;
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(258, 198);
-            this.Controls.Add(this.txt2);
-            this.Controls.Add(this.txt1);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.chBoxRemember);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnok);
@@ -101,8 +101,8 @@
         private System.Windows.Forms.Button btnok;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.CheckBox chBoxRemember;
-        private System.Windows.Forms.TextBox txt1;
-        private System.Windows.Forms.TextBox txt2;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtPass;
     }
 }
 
