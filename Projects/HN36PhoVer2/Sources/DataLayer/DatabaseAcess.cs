@@ -8,19 +8,19 @@ using System.IO;
 
 namespace DataLayer
 {
-    public class DatabaseAccess
+    public class DatabaseAcess
     {
         SqlConnection conn = new SqlConnection();
-        private string strStarPath;
-        private void setStartUpPath(string strStartPath_)
+        public string strStarPath;
+        public void setStartUpPath(string strStartPath_)
         {
             strStarPath = strStartPath_;
         }
-        private string getStartUpPath()
+        public string getStartUpPath()
         {
             return strStarPath;
         }
-        private string getStringConnection()
+        public string getStringConnection()
         {
             //string strAppStart = Application.StartupPath
 
@@ -28,7 +28,7 @@ namespace DataLayer
             string connectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=" + strAppStart + @"\Database\QLSV.mdf;Integrated Security=True;Connect Timeout=10;User Instance=True";
             return connectionString;
         }
-        private void openConnection()
+        public void openConnection()
         {
             string connectionString = getStringConnection();
             //SqlConnection conn = new SqlConnection(connectionString);
@@ -47,7 +47,7 @@ namespace DataLayer
                 return;
             }
         }
-        private void closeConnection()
+        public void closeConnection()
         {
             try
             {
