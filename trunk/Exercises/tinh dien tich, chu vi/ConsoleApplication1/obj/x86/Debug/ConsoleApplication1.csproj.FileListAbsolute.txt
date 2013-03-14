@@ -1,0 +1,5 @@
+D:\Hoc tap\visua studio\HN36\projects\Exercises\Tinh_Tong\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\Hoc tap\visua studio\HN36\projects\Exercises\Tinh_Tong\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\Hoc tap\visua studio\HN36\projects\Exercises\Tinh_Tong\ConsoleApplication1\ConsoleApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Hoc tap\visua studio\HN36\projects\Exercises\Tinh_Tong\ConsoleApplication1\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+D:\Hoc tap\visua studio\HN36\projects\Exercises\Tinh_Tong\ConsoleApplication1\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb

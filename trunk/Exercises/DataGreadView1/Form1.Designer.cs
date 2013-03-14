@@ -35,7 +35,10 @@
             this.dtgv = new System.Windows.Forms.DataGridView();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
+            this.pb = new System.Windows.Forms.PictureBox();
+            this.btnThemAnh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb)).BeginInit();
             this.SuspendLayout();
             // 
             // btnok
@@ -86,7 +89,6 @@
             this.dtgv.Name = "dtgv";
             this.dtgv.Size = new System.Drawing.Size(392, 137);
             this.dtgv.TabIndex = 4;
-           // this.dtgv.MultiSelectChanged += new System.EventHandler(this.dtgv_MultiSelectChanged);
             this.dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_CellClick);
             // 
             // txtPass
@@ -103,11 +105,32 @@
             this.txtUsername.Size = new System.Drawing.Size(100, 20);
             this.txtUsername.TabIndex = 6;
             // 
+            // pb
+            // 
+            this.pb.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pb.Location = new System.Drawing.Point(28, 204);
+            this.pb.Name = "pb";
+            this.pb.Size = new System.Drawing.Size(100, 141);
+            this.pb.TabIndex = 7;
+            this.pb.TabStop = false;
+            // 
+            // btnThemAnh
+            // 
+            this.btnThemAnh.Location = new System.Drawing.Point(610, 233);
+            this.btnThemAnh.Name = "btnThemAnh";
+            this.btnThemAnh.Size = new System.Drawing.Size(75, 23);
+            this.btnThemAnh.TabIndex = 8;
+            this.btnThemAnh.Text = "Them Anh";
+            this.btnThemAnh.UseVisualStyleBackColor = true;
+            this.btnThemAnh.Click += new System.EventHandler(this.btnThemAnh_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 376);
+            this.ClientSize = new System.Drawing.Size(735, 376);
+            this.Controls.Add(this.btnThemAnh);
+            this.Controls.Add(this.pb);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.dtgv);
@@ -118,6 +141,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dtgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +156,7 @@
         private System.Windows.Forms.DataGridView dtgv;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.PictureBox pb;
+        private System.Windows.Forms.Button btnThemAnh;
     }
 }

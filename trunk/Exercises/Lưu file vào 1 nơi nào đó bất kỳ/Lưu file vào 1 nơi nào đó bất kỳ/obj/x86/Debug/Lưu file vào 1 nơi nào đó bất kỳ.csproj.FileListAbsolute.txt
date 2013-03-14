@@ -16,3 +16,5 @@ D:\visua studio\HN36\projects\Exercises\Lưu file vào 1 nơi nào đó bất k�
 D:\visua studio\HN36\projects\Exercises\Lưu file vào 1 nơi nào đó bất kỳ\Lưu file vào 1 nơi nào đó bất kỳ\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\visua studio\HN36\projects\Exercises\Lưu file vào 1 nơi nào đó bất kỳ\Lưu file vào 1 nơi nào đó bất kỳ\bin\Debug\Lưu file vào 1 nơi nào đó bất kỳ.exe
 D:\visua studio\HN36\projects\Exercises\Lưu file vào 1 nơi nào đó bất kỳ\Lưu file vào 1 nơi nào đó bất kỳ\bin\Debug\Lưu file vào 1 nơi nào đó bất kỳ.pdb
+D:\Hoc tap\visua studio\HN36\projects\Exercises\Lưu file vào 1 nơi nào đó bất kỳ\Lưu file vào 1 nơi nào đó bất kỳ\obj\x86\Debug\Lưu file vào 1 nơi nào đó bất kỳ.exe
+D:\Hoc tap\visua studio\HN36\projects\Exercises\Lưu file vào 1 nơi nào đó bất kỳ\Lưu file vào 1 nơi nào đó bất kỳ\obj\x86\Debug\Lưu file vào 1 nơi nào đó bất kỳ.pdb

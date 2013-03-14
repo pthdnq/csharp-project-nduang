@@ -79,7 +79,7 @@ namespace DataGreadView
             {
                 conn.Close();
             }
-            catch (SqlException sqle)
+            catch (SqlException )
             {
                 MessageBox.Show("kết nối thất bại");
                 return;
@@ -183,6 +183,7 @@ namespace DataGreadView
             showData();
 
         }
+        
         private bool isExistAccount()
         {
             string connectionString = getStringConnection();
@@ -261,6 +262,57 @@ namespace DataGreadView
             xoaDl();
             dltdatatextbox();
             closeConnection();
+        }
+         private string imgName = "";
+        private void btnThemAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fdg = new OpenFileDialog();
+            imgName = "";
+            string ImageName = "";
+            if (fdg.ShowDialog() == DialogResult.OK)
+            {
+
+                pb.Image = new Bitmap(fdg.FileName);
+                string tmp = System.IO.Path.GetFileName(fdg.FileName);
+                // txtTenAnh.Text = tmp;
+                //tạo đối tượng fileinfo để lấy thông tin file
+                FileInfo fl = new FileInfo(fdg.FileName);
+                //Lấy tên ảnh tự động bằng mã sinh viên+ định dạng ban đầu của ảnh
+                //ten_anh = txtMaSV.Text + fl.Extension;
+
+                //lấy đường dẫn đầy đủ của file ảnh lên texbox
+                // txtAnh.Text = fl.FullName;
+                // ImageName
+                ImageName = fl.Name;
+                imgName = ImageName;
+
+                ///
+            }
+            //them tạo thư mục Image chứa ảnh
+            string dr = "Images";
+            string appPath = Application.StartupPath;
+            if (Directory.Exists(Path.Combine(appPath, dr)) == false)
+                Directory.CreateDirectory(Path.Combine(appPath, dr));
+            if (fdg.FileName != "")
+            {
+                string fileName = ImageName;
+
+                string destFile = Path.Combine(dr, fileName);
+                try
+                {
+                    destFile = Path.Combine(appPath, destFile);
+                    System.IO.File.Copy(fdg.FileName, destFile, true);// chép đè file ảnh nếu trùng tên ảnh khi sửa thông tin sinh viên
+                }
+                catch (Exception)
+                {
+                    //DialogResult rt = MessageBox.Show("Không muốn dùng ảnh khác!\n Ấn OK để up lại ảnh khác", "Lỗi khi tải ảnh", MessageBoxButtons.OKCancel);
+                    //if (rt == DialogResult.OK) return;
+                    // chon.FileName = "noimage.jpg";
+                }
+            }
+        }
+
+
         }
     }
 }
