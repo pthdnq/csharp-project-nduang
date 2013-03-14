@@ -8,8 +8,7 @@ namespace DataObject
     {
         private void setStartUpPath(string strStartPath_)
         {
-            DatabaseAccess dbAccess = new DatabaseAccess();
-            dbAccess.setStartUpPath(strStartPath_);
+            DatabaseAcess dbAcess = new DatabaseAcess();
         }
     }
 }
