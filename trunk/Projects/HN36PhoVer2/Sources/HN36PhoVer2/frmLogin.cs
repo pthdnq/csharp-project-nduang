@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using DataObject;
 namespace HN36PhoVer2GUI
 {
     public partial class frmLogin : Form
@@ -69,6 +70,12 @@ namespace HN36PhoVer2GUI
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        private void setConnectionAppStart()
+        {
+            string strAppStart = Application.StartupPath;
+
+
         }
     }
 }
