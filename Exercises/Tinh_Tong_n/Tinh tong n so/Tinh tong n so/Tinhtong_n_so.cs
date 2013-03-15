@@ -22,10 +22,10 @@ namespace Tinh_tong_n_so
             }
             Console.WriteLine();
             Console.ReadLine();
-            tongla = tongn(n);
+            tongla = tongn(arr, n);
 
         }
-        public int tongn(int n)
+        public int tongn(int[] arr,int n)
         {
             int tong = 0;
             for (int i = 0; i < n; i++)
