@@ -9,3 +9,5 @@ E:\vi du.VS\Đăng nhập\Đăng nhập\obj\x86\Debug\Đăng nhập.exe
 E:\vi du.VS\Đăng nhập\Đăng nhập\obj\x86\Debug\Đăng nhập.pdb
 E:\Projects\Exercises\Đăng nhập\Đăng nhập\obj\x86\Debug\Đăng nhập.exe
 E:\Projects\Exercises\Đăng nhập\Đăng nhập\obj\x86\Debug\Đăng nhập.pdb
+D:\Hoc tap\visua studio\HN36\projects\Exercises\Đăng nhập\Đăng nhập\obj\x86\Debug\Đăng nhập.exe
+D:\Hoc tap\visua studio\HN36\projects\Exercises\Đăng nhập\Đăng nhập\obj\x86\Debug\Đăng nhập.pdb
