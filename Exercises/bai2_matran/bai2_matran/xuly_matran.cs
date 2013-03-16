@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 namespace bai2_matran
 {
     class xuly_matran
@@ -45,15 +46,36 @@ namespace bai2_matran
             
         }
 
-        public int demsoduong( out int dem1)
+        //public int demsoduong( out int dem1)
+        //{
+        //    dem1 = 0;
+        //    try
+        //    {
+        //        for (int i = 0; i < this.So_Hang; i++)
+        //            for (int j = 0; j < this.So_Cot; j++)
+        //            {
+        //                if (MT[i, j] > 0)
+        //                {
+        //                    dem1++;
+        //                }
+        //            }
+        //        return 0;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        dem1 = 0;
+        //        return -1;
+        //    }
+        //}
+        public int demsoduong(out int dem1,int m,int n,int [,] MT2)
         {
             dem1 = 0;
             try
             {
-                for (int i = 0; i < this.So_Hang; i++)
-                    for (int j = 0; j < this.So_Cot; j++)
+                for (int i = 0; i < m; i++)
+                    for (int j = 0; j < n; j++)
                     {
-                        if (MT[i, j] > 0)
+                        if (MT2[i, j] > 0)
                         {
                             dem1++;
                         }
