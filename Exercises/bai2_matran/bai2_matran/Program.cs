@@ -14,13 +14,17 @@ namespace bai2_matran
            // xl.NhapMT();
             int [,] MT;
             int m,n;
+            int tong;
             Matrantruyxuattufile mtFile = new Matrantruyxuattufile();
             mtFile.ReadFile("matran.txt", out m,out n, out MT);
             int dem1;
             err=xl.demsoduong(out dem1,m,n,MT);
             Console.Write("so duong la : " + dem1);
+            xl.tinhtongduong(m, n, MT, out tong);
+            Console.Write("tong so duong la : " +tong );
+            float GTTB=(float)tong/dem1;
+            Console.Write("Gia tri tb cua cac so duong la : " + GTTB );
             Console.ReadLine();
-            
 
         }
     }

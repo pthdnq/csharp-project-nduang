@@ -88,5 +88,27 @@ namespace bai2_matran
                 return -1;
             }
         }
+        public int tinhtongduong(int m,int n,int [,]MT2,out int tong)
+        {
+            int s=0;
+            try
+            {
+                for (int i = 0; i < m; i++)
+                    for (int j = 0; j < n; j++)
+                    {
+                        if (MT2[i, j] > 0)
+                        {
+                            s = s + MT2[i, j];
+                        }
+                    }
+                tong = s;
+                return 0;
+            }
+            catch (Exception)
+            {
+                tong = 0;
+                return -1;
+            }
+        }
     }
 }
