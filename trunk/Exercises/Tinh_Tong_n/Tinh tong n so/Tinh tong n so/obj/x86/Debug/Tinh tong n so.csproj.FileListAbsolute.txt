@@ -8,3 +8,5 @@ D:\Hoc tap\visua studio\HN36\projects\Exercises\Tinh_Tong_n\Tinh tong n so\Tinh 
 D:\Hoc tap\visua studio\HN36\projects\Exercises\Tinh_Tong_n\Tinh tong n so\Tinh tong n so\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\Hoc tap\visua studio\HN36\projects\Exercises\Tinh_Tong_n\Tinh tong n so\Tinh tong n so\bin\Debug\Tinh tong n so.exe
 D:\Hoc tap\visua studio\HN36\projects\Exercises\Tinh_Tong_n\Tinh tong n so\Tinh tong n so\bin\Debug\Tinh tong n so.pdb
+E:\Projects\Exercises\Tinh_Tong_n\Tinh tong n so\Tinh tong n so\obj\x86\Debug\Tinh tong n so.exe
+E:\Projects\Exercises\Tinh_Tong_n\Tinh tong n so\Tinh tong n so\obj\x86\Debug\Tinh tong n so.pdb
