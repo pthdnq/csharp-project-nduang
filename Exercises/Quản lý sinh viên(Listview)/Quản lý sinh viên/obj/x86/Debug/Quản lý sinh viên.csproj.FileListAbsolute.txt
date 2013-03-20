@@ -1,9 +1,9 @@
-E:\Projects\Exercises\Quản lý sinh viên(Listview)1\Quản lý sinh viên\bin\Debug\Quản lý sinh viên.exe
-E:\Projects\Exercises\Quản lý sinh viên(Listview)1\Quản lý sinh viên\bin\Debug\Quản lý sinh viên.pdb
-E:\Projects\Exercises\Quản lý sinh viên(Listview)1\Quản lý sinh viên\obj\x86\Debug\ResolveAssemblyReference.cache
-E:\Projects\Exercises\Quản lý sinh viên(Listview)1\Quản lý sinh viên\obj\x86\Debug\Quản_lý_sinh_viên.frmMain.resources
-E:\Projects\Exercises\Quản lý sinh viên(Listview)1\Quản lý sinh viên\obj\x86\Debug\Quản_lý_sinh_viên.Properties.Resources.resources
-E:\Projects\Exercises\Quản lý sinh viên(Listview)1\Quản lý sinh viên\obj\x86\Debug\GenerateResource.read.1.tlog
-E:\Projects\Exercises\Quản lý sinh viên(Listview)1\Quản lý sinh viên\obj\x86\Debug\GenerateResource.write.1.tlog
-E:\Projects\Exercises\Quản lý sinh viên(Listview)1\Quản lý sinh viên\obj\x86\Debug\Quản lý sinh viên.exe
-E:\Projects\Exercises\Quản lý sinh viên(Listview)1\Quản lý sinh viên\obj\x86\Debug\Quản lý sinh viên.pdb
+E:\Projects C#\Exercises\Quản lý sinh viên(Listview)\Quản lý sinh viên\bin\Debug\Quản lý sinh viên.exe
+E:\Projects C#\Exercises\Quản lý sinh viên(Listview)\Quản lý sinh viên\bin\Debug\Quản lý sinh viên.pdb
+E:\Projects C#\Exercises\Quản lý sinh viên(Listview)\Quản lý sinh viên\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Projects C#\Exercises\Quản lý sinh viên(Listview)\Quản lý sinh viên\obj\x86\Debug\Quản_lý_sinh_viên.frmMain.resources
+E:\Projects C#\Exercises\Quản lý sinh viên(Listview)\Quản lý sinh viên\obj\x86\Debug\Quản_lý_sinh_viên.Properties.Resources.resources
+E:\Projects C#\Exercises\Quản lý sinh viên(Listview)\Quản lý sinh viên\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Projects C#\Exercises\Quản lý sinh viên(Listview)\Quản lý sinh viên\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Projects C#\Exercises\Quản lý sinh viên(Listview)\Quản lý sinh viên\obj\x86\Debug\Quản lý sinh viên.exe
+E:\Projects C#\Exercises\Quản lý sinh viên(Listview)\Quản lý sinh viên\obj\x86\Debug\Quản lý sinh viên.pdb

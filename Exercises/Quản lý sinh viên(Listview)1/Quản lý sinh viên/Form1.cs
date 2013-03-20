@@ -44,6 +44,10 @@ namespace Quản_lý_sinh_viên
             txtMaSV.Text = "";
             txtTenSV.Text = "";
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private void showData()
         {
             string[] row = { txtMaSV.Text, txtTenSV.Text, txtDiem.Text };
@@ -53,6 +57,7 @@ namespace Quản_lý_sinh_viên
         }
         private void loadData()
         {
+            listView1.Items.Clear();
             StreamReader line = new StreamReader("Du lieu.txt", true);
             while (!line.EndOfStream)
             {
@@ -71,7 +76,7 @@ namespace Quản_lý_sinh_viên
         }
         private void luuDl()
         {
-            StreamWriter sw = new StreamWriter("Du lieu.txt", true);
+            StreamWriter sw = new StreamWriter("Du lieu.txt", false);
             foreach (ListViewItem row in listView1.Items)
             {
                 //int i;
@@ -87,15 +92,15 @@ namespace Quản_lý_sinh_viên
         {
             if (listView1.SelectedItems != null)
             {
-                foreach (ListViewItem item in listView1.SelectedItems )
-                {
-                    ListViewItem view = listView1.SelectedItems[0];
-                    view.SubItems[0].Text = txtMaSV.Text;
-                    view.SubItems[1].Text = txtTenSV.Text;
-                    view.SubItems[2].Text = txtDiem.Text;
-
-                }
-            }
+//                 foreach (ListViewItem item in listView1.SelectedItems )
+//                 {
+                    //ListViewItem view = listView1.SelectedItems[0];
+                listView1.SelectedItems[0].SubItems[0].Text = txtMaSV.Text;
+                listView1.SelectedItems[0].SubItems[1].Text = txtTenSV.Text;
+                listView1.SelectedItems[0].SubItems[2].Text = txtDiem.Text;
+// 
+//                 }
+             }
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -114,8 +119,8 @@ namespace Quản_lý_sinh_viên
                     }
                 else
                     {
-                        foreach (ListViewItem item in listView1.Items)
-                        listView1.Items[0].Remove();
+//                         foreach (ListViewItem item in listView1.Items)
+//                         listView1.Items[0].Remove();
                         sv.themSV(masv, ten, diem);
                         showData();
                         xoaText();
@@ -144,7 +149,7 @@ namespace Quản_lý_sinh_viên
             if (listView1.SelectedItems.Count > 0)
             {
                 ListViewItem view = listView1.SelectedItems[0];
-                txtMaSV.Text = view.SubItems[0].Text;
+                txtMaSV.Text = listView1.SelectedItems[0].Text;
                 txtTenSV.Text = view.SubItems[1].Text;
                 txtDiem.Text = view.SubItems[2].Text;
             }
