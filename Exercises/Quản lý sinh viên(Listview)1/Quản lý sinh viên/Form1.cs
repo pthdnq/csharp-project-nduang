@@ -46,15 +46,33 @@ namespace Quản_lý_sinh_viên
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            Process_Sinh_Vien sv = new Process_Sinh_Vien();
-            string chuoi = txtMaSV.Text;
-            string chuoi1 = txtDiem.Text;
-            int masv = int.Parse(chuoi);
-            int diem = int.Parse(chuoi1);
-            string ten = txtTenSV.Text.Trim();
-            sv.themSV(masv, ten, diem);
-            showData();
-            xoaText();
+            if (listView1.Items.Count == 0)
+            {
+                Process_Sinh_Vien sv = new Process_Sinh_Vien();
+                string chuoi = txtMaSV.Text;
+                string chuoi1 = txtDiem.Text;
+                int masv = int.Parse(chuoi);
+                int diem = int.Parse(chuoi1);
+                string ten = txtTenSV.Text.Trim();
+                sv.themSV(masv, ten, diem);
+                showData();
+                xoaText();
+            }
+            else
+            {
+                foreach (ListViewItem item in listView1.Items)
+                listView1.Items[0].Remove();
+                Process_Sinh_Vien sv = new Process_Sinh_Vien();
+                string chuoi = txtMaSV.Text;
+                string chuoi1 = txtDiem.Text;
+                int masv = int.Parse(chuoi);
+                int diem = int.Parse(chuoi1);
+                string ten = txtTenSV.Text.Trim();
+                sv.themSV(masv, ten, diem);
+                showData();
+                xoaText();
+ 
+            }
         }
         private void showData()
         {
@@ -135,14 +153,7 @@ namespace Quản_lý_sinh_viên
         private void btnSua_Click(object sender, EventArgs e)
         {
             anTexbox(true);
-            //Process_Sinh_Vien sv = new Process_Sinh_Vien();
-            //string chuoi = txtMaSV.Text;
-            //string chuoi1 = txtDiem.Text;
-            //int masv = int.Parse(chuoi);
-            //int diem = int.Parse(chuoi1);
-            //string ten = txtTenSV.Text.Trim();
-            //sv.themSV(masv, ten, diem);
-            //luuDl();
+            
         }
 
        
