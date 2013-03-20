@@ -74,10 +74,10 @@ namespace Quản_lý_sinh_viên
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            StreamWriter sw = new StreamWriter(@"E:\Test chơi tí cho vui\Quản lý sinh viên(Listview)\Quản lý sinh viên\bin\Debug\Du lieu.txt");
+            StreamWriter sw = new StreamWriter("Du lieu.txt");
             foreach (ListViewItem row in listView1.Items)
             {
-                sw.WriteLine(row.SubItems[0].Text + "         " + row.SubItems[1].Text + "         " + row.SubItems[2].Text);
+                sw.WriteLine(row.SubItems[0].Text + " " + row.SubItems[1].Text + " " + row.SubItems[2].Text);
             }
             sw.Flush();
             sw.Close();
@@ -98,7 +98,7 @@ namespace Quản_lý_sinh_viên
         }
         private void loadData()
         {
-            StreamReader line = new StreamReader(@"E:\Test chơi tí cho vui\Quản lý sinh viên(Listview)\Quản lý sinh viên\bin\Debug\Du lieu.txt");
+            StreamReader line = new StreamReader("Du lieu.txt");
             while (!line.EndOfStream)
             {
                 string docline = line.ReadLine();
@@ -106,7 +106,10 @@ namespace Quản_lý_sinh_viên
                 int i;
                 for ( i =0; i < cat.Length ; i ++)
                 {
-                ListViewItem item = new ListViewItem(cat[i]);
+               ListViewItem item = new ListViewItem(cat[0]);
+                //item.SubItems.Add(cat[0]);
+                item.SubItems.Add(cat[1]);
+                item.SubItems.Add(cat[2]);
                 listView1.Items.Add(item);
                 listView1.View = View.Details;
                 }
