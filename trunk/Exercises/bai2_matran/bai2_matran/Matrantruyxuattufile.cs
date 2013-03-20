@@ -16,7 +16,6 @@ namespace ConsoleApplication3
             M = Convert.ToInt32(sr.ReadLine());
             N = Convert.ToInt32(sr.ReadLine());
             Mat = new int[M, N];
-
             string s = "";
             string[] S;
 
