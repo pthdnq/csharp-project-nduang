@@ -45,7 +45,7 @@
             this.cl1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cl2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cl3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnShow = new System.Windows.Forms.Button();
+            this.btnShowData = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -67,6 +67,7 @@
             this.btnSua.TabIndex = 1;
             this.btnSua.Text = "Sữa TT SV";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -76,6 +77,7 @@
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xóa SV";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // comboBox
             // 
@@ -168,12 +170,13 @@
             this.cl3});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(23, 170);
+            this.listView1.Location = new System.Drawing.Point(23, 161);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(425, 176);
+            this.listView1.Size = new System.Drawing.Size(399, 176);
             this.listView1.TabIndex = 8;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // cl1
             // 
@@ -190,23 +193,23 @@
             this.cl3.Text = "Điểm";
             this.cl3.Width = 111;
             // 
-            // btnShow
+            // btnShowData
             // 
-            this.btnShow.Location = new System.Drawing.Point(456, 101);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(75, 23);
-            this.btnShow.TabIndex = 9;
-            this.btnShow.Text = "Xem bảng";
-            this.btnShow.UseVisualStyleBackColor = true;
-            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            this.btnShowData.Location = new System.Drawing.Point(489, 102);
+            this.btnShowData.Name = "btnShowData";
+            this.btnShowData.Size = new System.Drawing.Size(75, 23);
+            this.btnShowData.TabIndex = 9;
+            this.btnShowData.Text = "Xem bảng";
+            this.btnShowData.UseVisualStyleBackColor = true;
+            this.btnShowData.Click += new System.EventHandler(this.btnShowData_Click);
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(482, 255);
+            this.btnLuu.Location = new System.Drawing.Point(489, 228);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(94, 91);
+            this.btnLuu.Size = new System.Drawing.Size(75, 62);
             this.btnLuu.TabIndex = 10;
-            this.btnLuu.Text = "Luu";
+            this.btnLuu.Text = "Lưu lại";
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -217,7 +220,7 @@
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(601, 396);
             this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.btnShow);
+            this.Controls.Add(this.btnShowData);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.txtDiem);
             this.Controls.Add(this.txtTenSV);
@@ -259,7 +262,7 @@
         private System.Windows.Forms.ColumnHeader cl1;
         private System.Windows.Forms.ColumnHeader cl2;
         private System.Windows.Forms.ColumnHeader cl3;
-        private System.Windows.Forms.Button btnShow;
+        private System.Windows.Forms.Button btnShowData;
         private System.Windows.Forms.Button btnLuu;
     }
 }
