@@ -30,3 +30,12 @@ D:\Hoc tap\visua studio\HN36\projects\Exercises\DataGreadView1\obj\x86\Debug\Dat
 D:\Hoc tap\visua studio\HN36\projects\Exercises\DataGreadView1\obj\x86\Debug\DataGreadView.Properties.Resources.resources
 D:\Hoc tap\visua studio\HN36\projects\Exercises\DataGreadView1\obj\x86\Debug\GenerateResource.read.1.tlog
 D:\Hoc tap\visua studio\HN36\projects\Exercises\DataGreadView1\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Hoc tap\visual studio\HN36\projects\Exercises\DataGreadView1\obj\x86\Debug\DataGreadView.exe
+D:\Hoc tap\visual studio\HN36\projects\Exercises\DataGreadView1\obj\x86\Debug\DataGreadView.pdb
+D:\Hoc tap\visual studio\HN36\projects\Exercises\DataGreadView1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Hoc tap\visual studio\HN36\projects\Exercises\DataGreadView1\obj\x86\Debug\DataGreadView.Form1.resources
+D:\Hoc tap\visual studio\HN36\projects\Exercises\DataGreadView1\obj\x86\Debug\DataGreadView.Properties.Resources.resources
+D:\Hoc tap\visual studio\HN36\projects\Exercises\DataGreadView1\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Hoc tap\visual studio\HN36\projects\Exercises\DataGreadView1\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Hoc tap\visual studio\HN36\projects\Exercises\DataGreadView1\bin\Debug\DataGreadView.exe
+D:\Hoc tap\visual studio\HN36\projects\Exercises\DataGreadView1\bin\Debug\DataGreadView.pdb

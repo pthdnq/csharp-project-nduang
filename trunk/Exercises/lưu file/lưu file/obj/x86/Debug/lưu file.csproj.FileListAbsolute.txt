@@ -7,3 +7,5 @@ E:\vi du.VS\lưu file\lưu file\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\vi du.VS\lưu file\lưu file\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\vi du.VS\lưu file\lưu file\obj\x86\Debug\lưu file.exe
 E:\vi du.VS\lưu file\lưu file\obj\x86\Debug\lưu file.pdb
+D:\Hoc tap\visual studio\HN36\projects\Exercises\lưu file\lưu file\obj\x86\Debug\lưu file.exe
+D:\Hoc tap\visual studio\HN36\projects\Exercises\lưu file\lưu file\obj\x86\Debug\lưu file.pdb
