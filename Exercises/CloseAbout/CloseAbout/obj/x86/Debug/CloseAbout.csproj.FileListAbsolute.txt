@@ -8,3 +8,5 @@ D:\visua studio\HN36\projects\hoc tap\CloseAbout\CloseAbout\obj\x86\Debug\Genera
 D:\visua studio\HN36\projects\hoc tap\CloseAbout\CloseAbout\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\visua studio\HN36\projects\hoc tap\CloseAbout\CloseAbout\obj\x86\Debug\CloseAbout.exe
 D:\visua studio\HN36\projects\hoc tap\CloseAbout\CloseAbout\obj\x86\Debug\CloseAbout.pdb
+D:\Hoc tap\visual studio\HN36\projects\Exercises\CloseAbout\CloseAbout\obj\x86\Debug\CloseAbout.exe
+D:\Hoc tap\visual studio\HN36\projects\Exercises\CloseAbout\CloseAbout\obj\x86\Debug\CloseAbout.pdb
