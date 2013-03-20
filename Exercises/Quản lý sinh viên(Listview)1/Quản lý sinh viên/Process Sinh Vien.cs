@@ -18,10 +18,12 @@ namespace Quản_lý_sinh_viên
 
 
         }
-        //public void suaSV(string ten, int diem)
-        //{
-
-        //}
+        public void suaSV(string ten, int diem)
+        {
+            Sinh_Vien SV_ = new Sinh_Vien();
+            SV_.setHoten(ten);
+            SV_.setDiem(diem);
+        }
        
     }
 }

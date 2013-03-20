@@ -44,52 +44,32 @@ namespace Quản_lý_sinh_viên
             txtMaSV.Text = "";
             txtTenSV.Text = "";
         }
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            if (listView1.Items.Count == 0)
-            {
-                Process_Sinh_Vien sv = new Process_Sinh_Vien();
-                string chuoi = txtMaSV.Text;
-                string chuoi1 = txtDiem.Text;
-                int masv = int.Parse(chuoi);
-                int diem = int.Parse(chuoi1);
-                string ten = txtTenSV.Text.Trim();
-                sv.themSV(masv, ten, diem);
-                showData();
-                xoaText();
-            }
-            else
-            {
-                foreach (ListViewItem item in listView1.Items)
-                listView1.Items[0].Remove();
-                Process_Sinh_Vien sv = new Process_Sinh_Vien();
-                string chuoi = txtMaSV.Text;
-                string chuoi1 = txtDiem.Text;
-                int masv = int.Parse(chuoi);
-                int diem = int.Parse(chuoi1);
-                string ten = txtTenSV.Text.Trim();
-                sv.themSV(masv, ten, diem);
-                showData();
-                xoaText();
- 
-            }
-        }
         private void showData()
         {
-            //row.Text = txtTenSV.Text;
-            //row.SubItems.Add(txtTenSV.Text);
-
-            //row.Text = txtDiem.Text;
-            //row.SubItems.Add(txtDiem.Text);
-
-            //row.Text = txtMaSV.Text;
-            //row.SubItems.Add(txtMaSV.Text);
             string[] row = { txtMaSV.Text, txtTenSV.Text, txtDiem.Text };
             var list = new ListViewItem(row);
             listView1.Items.Add(list);
             listView1.EndUpdate();
         }
-        private void btnLuu_Click(object sender, EventArgs e)
+        private void loadData()
+        {
+            StreamReader line = new StreamReader("Du lieu.txt", true);
+            while (!line.EndOfStream)
+            {
+                string docline = line.ReadLine();
+                String[] cat = docline.Split(' ');
+                ListViewItem item = new ListViewItem(cat[0]);
+                //item.SubItems.Add(cat[0]);
+                item.SubItems.Add(cat[1]);
+                item.SubItems.Add(cat[2]);
+                listView1.Items.Add(item);
+                listView1.View = View.Details;
+            }
+
+            line.Close();
+
+        }
+        private void luuDl()
         {
             StreamWriter sw = new StreamWriter("Du lieu.txt", true);
             foreach (ListViewItem row in listView1.Items)
@@ -102,6 +82,49 @@ namespace Quản_lý_sinh_viên
             sw.Flush();
             sw.Close();
             sw.Dispose();
+        }
+        private void upDate()
+        {
+            if (listView1.SelectedItems != null)
+            {
+                foreach (ListViewItem item in listView1.SelectedItems )
+                {
+                    ListViewItem view = listView1.SelectedItems[0];
+                    view.SubItems[0].Text = txtMaSV.Text;
+                    view.SubItems[1].Text = txtTenSV.Text;
+                    view.SubItems[2].Text = txtDiem.Text;
+
+                }
+            }
+        }
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            
+                Process_Sinh_Vien sv = new Process_Sinh_Vien();
+                string chuoi = txtMaSV.Text;
+                string chuoi1 = txtDiem.Text;
+                int masv = int.Parse(chuoi);
+                int diem = int.Parse(chuoi1);
+                string ten = txtTenSV.Text.Trim();
+                if (listView1.Items.Count == 0)
+                    {
+                        sv.themSV(masv, ten, diem);
+                        showData();
+                        xoaText();
+                    }
+                else
+                    {
+                        foreach (ListViewItem item in listView1.Items)
+                        listView1.Items[0].Remove();
+                        sv.themSV(masv, ten, diem);
+                        showData();
+                        xoaText();
+ 
+                    }
+        }
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            luuDl();
         }
         private void btnShowData_Click(object sender, EventArgs e)
         {
@@ -116,24 +139,6 @@ namespace Quản_lý_sinh_viên
             loadData();
             }
         }
-        private void loadData()
-        {
-            StreamReader line = new StreamReader("Du lieu.txt",true);
-            while (!line.EndOfStream)
-            {
-                string docline = line.ReadLine();
-                String[] cat = docline.Split(' ');
-               ListViewItem item = new ListViewItem(cat[0]);
-                //item.SubItems.Add(cat[0]);
-                item.SubItems.Add(cat[1]);
-                item.SubItems.Add(cat[2]);
-                listView1.Items.Add(item);
-                listView1.View = View.Details;
-           }
-
-            line.Close();
-
-        }
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listView1.SelectedItems.Count > 0)
@@ -147,12 +152,13 @@ namespace Quản_lý_sinh_viên
             {
                 return;
             }
-            anTexbox(false);
+            //anTexbox(false);
 
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
-            anTexbox(true);
+           // anTexbox(true);
+            upDate();
             
         }
 

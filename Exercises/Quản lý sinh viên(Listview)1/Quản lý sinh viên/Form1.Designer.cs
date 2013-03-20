@@ -257,12 +257,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader cl1;
         private System.Windows.Forms.ColumnHeader cl2;
         private System.Windows.Forms.ColumnHeader cl3;
         private System.Windows.Forms.Button btnShowData;
         private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.ListView listView1;
     }
 }
 
