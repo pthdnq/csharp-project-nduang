@@ -21,7 +21,7 @@ namespace BTMOI
             Console.Write("Nhap diem cua sinh vien: ");
             int diem = int.Parse(Console.ReadLine());
             SV_.setDiem(diem);
-            listSinhVien.Add(SV_);
+           // listSinhVien.Add(SV_);
         }
         public void Suadiem()
         {

@@ -45,7 +45,8 @@
             this.cl1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cl2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cl3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnShowData = new System.Windows.Forms.Button();
+            this.btnShow = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnThem
@@ -167,7 +168,7 @@
             this.cl3});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(58, 168);
+            this.listView1.Location = new System.Drawing.Point(23, 170);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(425, 176);
             this.listView1.TabIndex = 8;
@@ -189,14 +190,25 @@
             this.cl3.Text = "Điểm";
             this.cl3.Width = 111;
             // 
-            // btnShowData
+            // btnShow
             // 
-            this.btnShowData.Location = new System.Drawing.Point(456, 101);
-            this.btnShowData.Name = "btnShowData";
-            this.btnShowData.Size = new System.Drawing.Size(75, 23);
-            this.btnShowData.TabIndex = 9;
-            this.btnShowData.Text = "Xem bảng";
-            this.btnShowData.UseVisualStyleBackColor = true;
+            this.btnShow.Location = new System.Drawing.Point(456, 101);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(75, 23);
+            this.btnShow.TabIndex = 9;
+            this.btnShow.Text = "Xem bảng";
+            this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(482, 255);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(94, 91);
+            this.btnLuu.TabIndex = 10;
+            this.btnLuu.Text = "Luu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // frmMain
             // 
@@ -204,7 +216,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(601, 396);
-            this.Controls.Add(this.btnShowData);
+            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.btnShow);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.txtDiem);
             this.Controls.Add(this.txtTenSV);
@@ -246,7 +259,8 @@
         private System.Windows.Forms.ColumnHeader cl1;
         private System.Windows.Forms.ColumnHeader cl2;
         private System.Windows.Forms.ColumnHeader cl3;
-        private System.Windows.Forms.Button btnShowData;
+        private System.Windows.Forms.Button btnShow;
+        private System.Windows.Forms.Button btnLuu;
     }
 }
 
