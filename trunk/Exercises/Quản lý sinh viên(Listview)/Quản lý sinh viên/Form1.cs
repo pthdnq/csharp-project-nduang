@@ -15,7 +15,7 @@ namespace Quản_lý_sinh_viên
         public frmMain()
         {
             InitializeComponent();
-           
+
         }
         ListViewItem row = new ListViewItem();
         private void frmMain_Load(object sender, EventArgs e)
@@ -25,13 +25,13 @@ namespace Quản_lý_sinh_viên
             comboBox.Items.Add("Tim kiem theo ma SV va Ho ten");
 
         }
-        //private void readFile()
-        //{
-        //   StreamWriter w = new StreamWriter("dulieu.txt", true);
-        //   w.WriteLine(txtMaSV.Text);
-        //   w.WriteLine(txtTenSV.Text);
-        //   w.WriteLine(txtDiem.Text);
-        //}
+        private void readFile()
+        {
+
+            Stream s = File.OpenRead("node.txt");
+            StreamReader st = new StreamReader(s);
+            string str = st.ReadLine();
+        }
         public void anTexbox(bool status)
         {
             txtDiem.Enabled = status;
@@ -39,59 +39,98 @@ namespace Quản_lý_sinh_viên
             txtTenSV.Enabled = status;
 
         }
+        public void xoaText()
+        {
+            txtDiem.Text = "";
+            txtMaSV.Text = "";
+            txtTenSV.Text = "";
+        }
         private void showData()
         {
-            //             row.Text = txtTenSV.Text;
-            //             row.SubItems.Add(txtTenSV.Text);
-            //             row.Text = txtDiem.Text;
-            //             row.SubItems.Add(txtDiem.Text);
-            //             row.Text = txtMaSV.Text;
-            //             row.SubItems.Add(txtMaSV.Text);
-            //             listView1.Items.Add(row);
+            //row.Text = txtTenSV.Text;
+            //row.SubItems.Add(txtTenSV.Text);
+
+            //row.Text = txtDiem.Text;
+            //row.SubItems.Add(txtDiem.Text);
+
+            //row.Text = txtMaSV.Text;
+            //row.SubItems.Add(txtMaSV.Text);
             string[] row = { txtMaSV.Text, txtTenSV.Text, txtDiem.Text };
             var list = new ListViewItem(row);
             listView1.Items.Add(list);
+            listView1.EndUpdate();
         }
-        private void luudl()
+        private void loadData()
         {
-            using (StreamWriter sw = new StreamWriter("file.txt", true))
+            StreamReader line = new StreamReader("Dlieu.txt");
+            while (!line.EndOfStream)
             {
-                foreach (ListViewItem item in listView1.Items)
-                {
-                    sw.Write(item.Text);
-                    for (int i = 1; i < item.SubItems.Count; i++)
-                    {
-                        sw.Write("        " + item.SubItems[i].Text);
-                        sw.Write("\n");
-
-                    }
-                    sw.WriteLine();
-                }
-                
-            }
-
-        }
-        private void fillData()
-        {
-            string a;
-            StreamReader ReadFile = new StreamReader("File.txt");
-            a = ReadFile.ReadLine();
-            while (a != null)
-            {
-                string[] str = a.Split(',');
-                ListViewItem item = new ListViewItem(str[0]); //Đưa vào cột Mã sv
-                item.SubItems.Add(str[1]); //Đưa vào cột tên sv
-                item.SubItems.Add(str[2]);//đưa vào cột điểm
+                string docline = line.ReadLine();
+                String[] cat = docline.Split(' ');
+                ListViewItem item = new ListViewItem(cat[0]);
+                //item.SubItems.Add(cat[0]);
+                item.SubItems.Add(cat[1]);
+                item.SubItems.Add(cat[2]);
                 listView1.Items.Add(item);
-                a = ReadFile.ReadLine();
-                break;
+                // listView1.View = View.Details;
+
             }
-            ReadFile.Close();
-            ReadFile.Dispose();
+
+
+
+        }
+        public void luuDL()
+            {
+                StreamWriter sw = new StreamWriter("DLieu.txt");
+                foreach (ListViewItem row in listView1.Items)
+                {
+                    sw.WriteLine(row.SubItems[0].Text + " " + row.SubItems[1].Text + " " + row.SubItems[2].Text);
+                }
+                sw.Flush();
+                sw.Close();
+                sw.Dispose();
+            }
+        private void Xoa1hoacnhieudl()
+        {
+            if (listView1.SelectedItems != null)
+            {
+                foreach (ListViewItem item in listView1.SelectedItems)
+                {
+                    //Remove Items đc chọn
+                    listView1.Items.Remove(item);
+                    txtMaSV.Text = "";
+                    txtTenSV.Text = "";
+                    txtDiem.Text = "";
+                }
+            }
+        }
+        private void Xoa1dongdl()
+        {
+            for (int i = 0; i < listView1.Items.Count; i++)//duyệt tất cả các item
+            {
+                if (listView1.Items[i].Selected)//nếu item đó dc chọn
+                {
+                    listView1.Items.RemoveAt(i);//xóa item đó
+                    //listView1.Items.Clear();//xóa tất cả dữ liệu 
+                }
+            }
+        }
+        private void UpdateDL()
+        {
+           // anTexbox(true);
+             if (listView1.SelectedItems != null)
+            {
+               // foreach (ListViewItem item in listView1.SelectedItems)
+                //{
+                    ListViewItem view = listView1.SelectedItems[0];
+                    //view.SubItems[0].Text = txtMaSV.Text;
+                    view.SubItems[1].Text = txtTenSV.Text;
+                    view.SubItems[2].Text = txtDiem.Text;
+                //}
+            }
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-          
             Process_Sinh_Vien sv = new Process_Sinh_Vien();
             string chuoi = txtMaSV.Text;
             string chuoi1 = txtDiem.Text;
@@ -99,23 +138,56 @@ namespace Quản_lý_sinh_viên
             int diem = int.Parse(chuoi1);
             string ten = txtTenSV.Text.Trim();
             sv.themSV(masv, ten, diem);
-           showData();
-           txtMaSV.Text = "";
-           txtTenSV.Text = "";
-           txtDiem.Text = "";
+            showData();
+            xoaText();
         }
         
         private void btnLuu_Click(object sender, EventArgs e)
-         {
-             luudl();
-         }
-
-        private void btnShow_Click(object sender, EventArgs e)
         {
-            fillData();
+            luuDL();
         }
-         }
+
+        private void btnShowData_Click(object sender, EventArgs e)
+        {
+            if (listView1.Items.Count == 0)
+            {
+            loadData();
+            }
+            else
+            {
+            foreach (ListViewItem item in listView1.Items)
+            listView1.Items[0].Remove();
+            loadData();
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                ListViewItem view = listView1.SelectedItems[0];
+                txtMaSV.Text = view.SubItems[0].Text;
+                txtTenSV.Text = view.SubItems[1].Text;
+                txtDiem.Text = view.SubItems[2].Text;
+            }
+            else
+            {
+                return;
+            }
+           //anTexbox(false);
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+            Xoa1hoacnhieudl();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            UpdateDL();
+            
+        }
        
     }
-
-
+}
