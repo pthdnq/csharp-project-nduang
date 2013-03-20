@@ -27,7 +27,6 @@ namespace Quản_lý_sinh_viên
         }
         private void readFile()
         {
-
             Stream s = File.OpenRead("node.txt");
             StreamReader st = new StreamReader(s);
             string str = st.ReadLine();
@@ -74,9 +73,12 @@ namespace Quản_lý_sinh_viên
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            StreamWriter sw = new StreamWriter("Du lieu.txt");
+            StreamWriter sw = new StreamWriter("Du lieu.txt", true);
             foreach (ListViewItem row in listView1.Items)
             {
+                //int i;
+                //for(i=0; i< listView1.Items.Count; i++)
+                //{ if 
                 sw.WriteLine(row.SubItems[0].Text + " " + row.SubItems[1].Text + " " + row.SubItems[2].Text);
             }
             sw.Flush();
@@ -98,27 +100,22 @@ namespace Quản_lý_sinh_viên
         }
         private void loadData()
         {
-            StreamReader line = new StreamReader("Du lieu.txt");
+            StreamReader line = new StreamReader("Du lieu.txt",true);
             while (!line.EndOfStream)
             {
                 string docline = line.ReadLine();
                 String[] cat = docline.Split(' ');
-                int i;
-                for ( i =0; i < cat.Length ; i ++)
-                {
                ListViewItem item = new ListViewItem(cat[0]);
                 //item.SubItems.Add(cat[0]);
                 item.SubItems.Add(cat[1]);
                 item.SubItems.Add(cat[2]);
                 listView1.Items.Add(item);
                 listView1.View = View.Details;
-                }
-            }
-            
+           }
 
+            line.Close();
 
         }
-
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listView1.SelectedItems.Count > 0)
@@ -132,8 +129,22 @@ namespace Quản_lý_sinh_viên
             {
                 return;
             }
+            anTexbox(false);
 
         }
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            anTexbox(true);
+            //Process_Sinh_Vien sv = new Process_Sinh_Vien();
+            //string chuoi = txtMaSV.Text;
+            //string chuoi1 = txtDiem.Text;
+            //int masv = int.Parse(chuoi);
+            //int diem = int.Parse(chuoi1);
+            //string ten = txtTenSV.Text.Trim();
+            //sv.themSV(masv, ten, diem);
+            //luuDl();
+        }
+
        
     }
 }

@@ -67,6 +67,7 @@
             this.btnSua.TabIndex = 1;
             this.btnSua.Text = "Sữa TT SV";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
