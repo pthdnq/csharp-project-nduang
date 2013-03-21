@@ -100,19 +100,44 @@ namespace Quản_lý_sinh_viên
         }
         private void searchMaSV()
         {
-            loadData();
-            for (int i=0; i< listView1.Items.Count ; i++)
+//             loadData();
+//             for (int i=0; i< listView1.Items.Count ; i++)
+//             {
+//                 if (listView1.Items[i].SubItems[0].ToString() == txtMaSV.Text)
+//                 {
+//                     listView1.Items.Clear();
+//                     ListViewItem item = new ListViewItem();
+//                     //item.SubItems.Add(item[1]);
+//                     //item.SubItems.Add(cat[2]);
+//                     listView1.Items.Add(item);
+//                     listView1.View = View.Details;
+//                 }
+//             }
+
+            listView1.Items.Clear();
+            if(txtMaSV.Text.Trim()=="")//neu chua nhap ma sinh vien thi ket qua tim kiem la tat ca
             {
-                if (listView1.Items[i].SubItems[0].ToString() == txtMaSV.Text)
+                loadData();
+                return;
+            }
+            StreamReader line = new StreamReader("Du lieu.txt", true);
+            while (!line.EndOfStream)
+            {
+                string docline = line.ReadLine();
+                String[] cat = docline.Split(' ');
+                string masv= cat[0];//phan tu dau tien la ma sv trong 1 hang doc duoc
+                if (masv.Trim() == txtMaSV.Text.Trim())
                 {
-                    listView1.Items.Clear();
-                    ListViewItem item = new ListViewItem();
-                    //item.SubItems.Add(item[1]);
-                    //item.SubItems.Add(cat[2]);
+                    ListViewItem item = new ListViewItem(cat[0]);
+                    //item.SubItems.Add(cat[0]);
+                    item.SubItems.Add(cat[1]);
+                    item.SubItems.Add(cat[2]);
                     listView1.Items.Add(item);
                     listView1.View = View.Details;
                 }
             }
+
+            line.Close();
 
         }
         private void btnThem_Click(object sender, EventArgs e)
