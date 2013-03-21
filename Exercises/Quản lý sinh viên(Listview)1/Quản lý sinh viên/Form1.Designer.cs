@@ -47,6 +47,7 @@
             this.cl3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnShowData = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
+            this.btnTimkiem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnThem
@@ -77,11 +78,12 @@
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xóa SV";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // comboBox
             // 
             this.comboBox.FormattingEnabled = true;
-            this.comboBox.Location = new System.Drawing.Point(372, 14);
+            this.comboBox.Location = new System.Drawing.Point(350, 11);
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(159, 21);
             this.comboBox.TabIndex = 4;
@@ -89,7 +91,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(321, 17);
+            this.label1.Location = new System.Drawing.Point(295, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 5;
@@ -212,12 +214,23 @@
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
+            // btnTimkiem
+            // 
+            this.btnTimkiem.Location = new System.Drawing.Point(515, 11);
+            this.btnTimkiem.Name = "btnTimkiem";
+            this.btnTimkiem.Size = new System.Drawing.Size(74, 24);
+            this.btnTimkiem.TabIndex = 11;
+            this.btnTimkiem.Text = "Tìm Kiếm";
+            this.btnTimkiem.UseVisualStyleBackColor = true;
+            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(601, 396);
+            this.Controls.Add(this.btnTimkiem);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnShowData);
             this.Controls.Add(this.listView1);
@@ -263,6 +276,7 @@
         private System.Windows.Forms.Button btnShowData;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button btnTimkiem;
     }
 }
 
