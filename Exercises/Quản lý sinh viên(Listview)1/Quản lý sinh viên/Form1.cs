@@ -151,7 +151,7 @@ namespace Quản_lý_sinh_viên
                 string ten = txtTenSV.Text.Trim();
                 if (listView1.Items.Count == 0)
                     {
-                        sv.themSV(masv, ten, diem);
+                        //sv.themSV(masv, ten, diem);
                         showData();
                         xoaText();
                     }
@@ -224,7 +224,6 @@ namespace Quản_lý_sinh_viên
         {
             searchMaSV();
         }
-        
-       
+
     }
 }

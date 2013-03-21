@@ -1,3 +1,4 @@
 1 ngoc 6
 2 chung 5
 3 nga 8
+4 quang 10
