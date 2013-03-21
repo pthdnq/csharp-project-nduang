@@ -44,10 +44,6 @@ namespace Quản_lý_sinh_viên
             txtMaSV.Text = "";
             txtTenSV.Text = "";
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
         private void showData()
         {
             string[] row = { txtMaSV.Text, txtTenSV.Text, txtDiem.Text };
@@ -102,9 +98,26 @@ namespace Quản_lý_sinh_viên
 //                 }
              }
         }
+        private void searchMaSV()
+        {
+            loadData();
+            for (int i=0; i< listView1.Items.Count ; i++)
+            {
+                if (listView1.Items[i].SubItems[0].ToString() == txtMaSV.Text)
+                {
+                    listView1.Items.Clear();
+                    ListViewItem item = new ListViewItem();
+                    //item.SubItems.Add(item[1]);
+                    //item.SubItems.Add(cat[2]);
+                    listView1.Items.Add(item);
+                    listView1.View = View.Details;
+                }
+            }
+
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            
+                loadData();
                 Process_Sinh_Vien sv = new Process_Sinh_Vien();
                 string chuoi = txtMaSV.Text;
                 string chuoi1 = txtDiem.Text;
@@ -166,7 +179,27 @@ namespace Quản_lý_sinh_viên
             upDate();
             
         }
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Chọn hàng cần xóa ^-^ :d ");
+            }
+            else
+            {
+                foreach (ListViewItem item in listView1.SelectedItems)
+                {
+                    listView1.Items.Remove(item);
+                    xoaText();
+                }
+            }
+        }
 
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+            searchMaSV();
+        }
+        
        
     }
 }
