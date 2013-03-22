@@ -21,7 +21,7 @@ namespace Quan_li_SV_3_lớp_
         }
         private void loadData()
         {
-            DL.docDLfile();
+           // DL.docDLfile();
             listView1.Items.Clear();
             //Sinh_Vien sv = new Sinh_Vien();
             //sv = (Sinh_Vien)list
@@ -53,7 +53,7 @@ namespace Quan_li_SV_3_lớp_
         }
         private void btnxem_Click(object sender, EventArgs e)
         {
-            DL.docDLfile();
+           // DL.docDLfile();
         }
 
     }
