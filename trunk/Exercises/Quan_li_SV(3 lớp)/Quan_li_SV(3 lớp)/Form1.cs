@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Windows.Forms;
-using System.IO;
 using System.Collections;
+using System.Data;
+using System.IO;
+using System.Windows.Forms;
 
 namespace Quan_li_SV_3_lớp_
 {
@@ -21,11 +19,24 @@ namespace Quan_li_SV_3_lớp_
         }
         private void loadData()
         {
-           // DL.docDLfile();
             listView1.Items.Clear();
-            //Sinh_Vien sv = new Sinh_Vien();
-            //sv = (Sinh_Vien)list
-           // for(int i =0; i< listSinhVien
+           // ArrayList ds = new ArrayList();
+             ArrayList ds = DL.getDSSinhVienFromFile();
+             for (int i = 0; i < ds.Count; i++)
+             {
+                 Sinh_Vien sv = new Sinh_Vien();
+                 sv = (Sinh_Vien)ds[i];
+                 //sv.getMaSV();
+                 //sv.getHoten();
+                 //sv.getDiem();
+                 //ds.Add(sv);
+                 ListViewItem item = new ListViewItem();
+                 item.SubItems.Add(sv.getMaSV().ToString());
+                 item.SubItems.Add(sv.getHoten());
+                 item.SubItems.Add(sv.getDiem().ToString());
+                 listView1.Items.Add(item);
+                 listView1.View = View.Details;
+             }
         }
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -53,7 +64,7 @@ namespace Quan_li_SV_3_lớp_
         }
         private void btnxem_Click(object sender, EventArgs e)
         {
-           // DL.docDLfile();
+            loadData();
         }
 
     }
