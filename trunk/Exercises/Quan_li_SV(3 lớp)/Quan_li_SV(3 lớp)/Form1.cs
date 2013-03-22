@@ -20,18 +20,13 @@ namespace Quan_li_SV_3_lớp_
         private void loadData()
         {
             listView1.Items.Clear();
-           // ArrayList ds = new ArrayList();
              ArrayList ds = DL.getDSSinhVienFromFile();
              for (int i = 0; i < ds.Count; i++)
              {
                  Sinh_Vien sv = new Sinh_Vien();
                  sv = (Sinh_Vien)ds[i];
-                 //sv.getMaSV();
-                 //sv.getHoten();
-                 //sv.getDiem();
-                 //ds.Add(sv);
-                 ListViewItem item = new ListViewItem();
-                 item.SubItems.Add(sv.getMaSV().ToString());
+                 ListViewItem item = new ListViewItem(sv.getMaSV().ToString());
+                 //item.SubItems.Add(sv.getMaSV().ToString());
                  item.SubItems.Add(sv.getHoten());
                  item.SubItems.Add(sv.getDiem().ToString());
                  listView1.Items.Add(item);
@@ -65,6 +60,7 @@ namespace Quan_li_SV_3_lớp_
         private void btnxem_Click(object sender, EventArgs e)
         {
             loadData();
+           
         }
 
     }
