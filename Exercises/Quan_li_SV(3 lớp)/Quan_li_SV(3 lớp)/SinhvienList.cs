@@ -124,19 +124,39 @@ namespace Quan_li_SV_3_lớp_
             sw.Close();
             sw.Dispose();
         }
-        public void docDLfile()
+//         public void docDLfile()
+//         {
+//             StreamReader line = new StreamReader("Du lieu.txt");
+//             while (!line.EndOfStream)
+//             {
+//                 string docline = line.ReadLine();
+//                 String[] cat = docline.Split(' ');
+//                 listSinhVien.Add(cat[0] +"" +cat[1] +"" +cat[2]);
+//                 //listSinhVien.Add(cat[1]);
+//                 //listSinhVien.Add(cat[2]);
+//             }
+// 
+//             line.Close();
+//         }
+        public ArrayList getDSSinhVienFromFile()
         {
             StreamReader line = new StreamReader("Du lieu.txt");
             while (!line.EndOfStream)
             {
                 string docline = line.ReadLine();
                 String[] cat = docline.Split(' ');
-                listSinhVien.Add(cat[0] +"" +cat[1] +"" +cat[2]);
-                //listSinhVien.Add(cat[1]);
-                //listSinhVien.Add(cat[2]);
+                
+               // listSinhVien.Add(cat[0] + "" + cat[1] + "" + cat[2]);
+                Sinh_Vien sv = new Sinh_Vien();//tao 1 sinh vien
+                sv.setMaSV(int.Parse(cat[0]));//dua thong tin tung dong doc duoc vao sinh vien nay
+                sv.setHoten(cat[1].Trim());
+                sv.setDiem(int.Parse(cat[2]));
+                listSinhVien.Clear();
+                listSinhVien.Add(sv);//dua sinh vien vao danh sach
             }
-
             line.Close();
+            return listSinhVien;// tra ve danh sach sinh vien
         }
+
     }
 }
