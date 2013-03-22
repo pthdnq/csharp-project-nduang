@@ -40,29 +40,46 @@ namespace Quan_li_SV_3_lớp_
                 listSinhVien[i] = sv;
             }
         }
-     
         public void timSV(int masv)
         {
             for (int i = 0; i < listSinhVien.Count; i++)
             {
                 Sinh_Vien sv = new Sinh_Vien();
                 sv = (Sinh_Vien)listSinhVien[i];
-                if (sv.getMaSV() == masv)
-                {
-
+                 StreamReader line = new StreamReader("Du lieu.txt");
+                  while (!line.EndOfStream)
+                     {
+                          string docline = line.ReadLine();
+                          String[] cat = docline.Split(' ');
+                          string masv1 = cat[0];
+                            if (masv.ToString() == masv1)
+                                {
+                                    listSinhVien.Add(cat[0] + "" + cat[1] + "" + cat[2]);
+                                    //listSinhVien.Add(cat[0]);
+                                    //listSinhVien.Add(cat[1]);
+                                    //listSinhVien.Add(cat[2]);
+                                }
+                            line.Close();
+                      }
                 }
-            }
-
-        }
+           }
         public void timSV(string tensv)
         {
             for (int i = 0; i < listSinhVien.Count; i++)
             {
                 Sinh_Vien sv = new Sinh_Vien();
                 sv = (Sinh_Vien)listSinhVien[i];
-                if (sv.getHoten() == tensv)
+                StreamReader line = new StreamReader("Du lieu.txt");
+                while (!line.EndOfStream)
                 {
-
+                    string docline = line.ReadLine();
+                    String[] cat = docline.Split(' ');
+                    string tensv1 = cat[1];
+                    if (tensv == tensv1)
+                    {
+                        listSinhVien.Add(cat[0] + "" + cat[1] + "" + cat[2]);
+                    }
+                    line.Close();
                 }
             }
         }
@@ -72,9 +89,18 @@ namespace Quan_li_SV_3_lớp_
             {
                 Sinh_Vien sv = new Sinh_Vien();
                 sv = (Sinh_Vien)listSinhVien[i];
-                if (sv.getMaSV() == masv && sv.getHoten() == tensv)
+                StreamReader line = new StreamReader("Du lieu.txt");
+                while (!line.EndOfStream)
                 {
-                    
+                    string docline = line.ReadLine();
+                    String[] cat = docline.Split(' ');
+                    string tensv1 = cat[1];
+                    string masv1 = cat[0];
+                    if (masv.ToString() == masv1 && tensv == tensv1)
+                    {
+                        listSinhVien.Add(cat[0] + "" + cat[1] + "" + cat[2]);
+                    }
+                    line.Close();
                 }
             }
         }
@@ -84,28 +110,30 @@ namespace Quan_li_SV_3_lớp_
             StreamReader st = new StreamReader(s);
             string str = st.ReadLine();
         }
-        public void luuDL()
+        public void luuDLfile()
         {
+            
             StreamWriter sw = new StreamWriter("Du lieu.txt", false);
              for ( int i=0; i < listSinhVien.Count ; i ++)
             {
-                sw.WriteLine(listSinhVien[0].ToString() + " " + listSinhVien[1].ToString() + " " + listSinhVien[2].ToString());
-                 
+                 Sinh_Vien sv = new Sinh_Vien();
+                sv = (Sinh_Vien)listSinhVien[i];
+                sw.WriteLine(sv.getMaSV() + " " + sv.getHoten() + " " + sv.getDiem());
             }
             sw.Flush();
             sw.Close();
             sw.Dispose();
         }
-        public void docDL()
+        public void docDLfile()
         {
             StreamReader line = new StreamReader("Du lieu.txt");
             while (!line.EndOfStream)
             {
                 string docline = line.ReadLine();
                 String[] cat = docline.Split(' ');
-                listSinhVien.Add(cat[0]);
-                listSinhVien.Add(cat[1]);
-                listSinhVien.Add(cat[2]);
+                listSinhVien.Add(cat[0] +"" +cat[1] +"" +cat[2]);
+                //listSinhVien.Add(cat[1]);
+                //listSinhVien.Add(cat[2]);
             }
 
             line.Close();
