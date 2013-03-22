@@ -104,6 +104,7 @@
             this.btnxoa.TabIndex = 3;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // btntim
             // 
@@ -130,6 +131,7 @@
             this.btnxem.TabIndex = 6;
             this.btnxem.Text = "Xem";
             this.btnxem.UseVisualStyleBackColor = true;
+            this.btnxem.Click += new System.EventHandler(this.btnxem_Click);
             // 
             // btnluu
             // 
