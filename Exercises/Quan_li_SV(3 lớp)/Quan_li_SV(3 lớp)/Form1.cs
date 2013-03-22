@@ -26,15 +26,15 @@ namespace Quan_li_SV_3_lớp_
             comboBox.Items.Add("Tim kiem theo ma_SV va Ten_SV");
         }
 
-        private void btnxem_Click(object sender, EventArgs e)
+        private void btnluu_Click(object sender, EventArgs e)
         {
-            DL.hienThiList();
+            DL.luuDL(); 
         }
 
-        private void btnthem_Click(object sender, EventArgs e)
+        private void btnthem_Click_1(object sender, EventArgs e)
         {
             string chuoi = txtmasv.Text;
-            string chuoi1 = txttensv.Text;
+            string chuoi1 = txtdiem.Text;
             int masv = int.Parse(chuoi);
             int diem = int.Parse(chuoi1);
             string ten = txttensv.Text.Trim();
