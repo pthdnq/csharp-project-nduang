@@ -85,6 +85,7 @@
             this.btnthem.TabIndex = 1;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click_1);
             // 
             // btnsua
             // 
@@ -97,7 +98,7 @@
             // 
             // btnxoa
             // 
-            this.btnxoa.Location = new System.Drawing.Point(425, 29);
+            this.btnxoa.Location = new System.Drawing.Point(412, 29);
             this.btnxoa.Name = "btnxoa";
             this.btnxoa.Size = new System.Drawing.Size(75, 23);
             this.btnxoa.TabIndex = 3;
@@ -138,6 +139,7 @@
             this.btnluu.TabIndex = 7;
             this.btnluu.Text = "Lưu";
             this.btnluu.UseVisualStyleBackColor = true;
+            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
             // 
             // txtmasv
             // 
