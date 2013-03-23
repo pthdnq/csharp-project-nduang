@@ -42,6 +42,7 @@ namespace Quan_li_SV_3_lớp_
         private void btnluu_Click(object sender, EventArgs e)
         {
             DL.luuDLfile(); 
+
         }
         private void btnthem_Click_1(object sender, EventArgs e)
         {
@@ -54,13 +55,31 @@ namespace Quan_li_SV_3_lớp_
         }
         private void btnxoa_Click(object sender, EventArgs e)
         {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Chọn hàng cần xóa ^-^ :d ");
+            }
+            else
+            {
+                foreach (ListViewItem item in listView1.SelectedItems)
+                {
+                    DL.xoaDL();
+                    //listView1.Items.Remove(item);
+                    
+                }
+            }
+
             
-            DL.xoaDL();
         }
         private void btnxem_Click(object sender, EventArgs e)
         {
             loadData();
            
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
     }
