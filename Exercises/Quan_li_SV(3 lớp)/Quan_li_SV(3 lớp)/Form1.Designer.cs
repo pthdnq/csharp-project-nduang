@@ -96,10 +96,11 @@
             this.btnsua.TabIndex = 2;
             this.btnsua.Text = "Sữa";
             this.btnsua.UseVisualStyleBackColor = true;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // btnxoa
             // 
-            this.btnxoa.Location = new System.Drawing.Point(412, 29);
+            this.btnxoa.Location = new System.Drawing.Point(425, 29);
             this.btnxoa.Name = "btnxoa";
             this.btnxoa.Size = new System.Drawing.Size(75, 23);
             this.btnxoa.TabIndex = 3;
@@ -115,9 +116,11 @@
             this.btntim.TabIndex = 4;
             this.btntim.Text = "Tìm_kiếm";
             this.btntim.UseVisualStyleBackColor = true;
+            this.btntim.Click += new System.EventHandler(this.btntim_Click);
             // 
             // comboBox
             // 
+            this.comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Location = new System.Drawing.Point(522, 31);
             this.comboBox.Name = "comboBox";
@@ -130,9 +133,9 @@
             this.btnxem.Name = "btnxem";
             this.btnxem.Size = new System.Drawing.Size(75, 46);
             this.btnxem.TabIndex = 6;
-            this.btnxem.Text = "Xem";
+            this.btnxem.Text = "ViewAll";
             this.btnxem.UseVisualStyleBackColor = true;
-            this.btnxem.Click += new System.EventHandler(this.btnxem_Click);
+            this.btnxem.Click += new System.EventHandler(this.btnxem_Click_1);
             // 
             // btnluu
             // 
