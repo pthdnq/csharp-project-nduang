@@ -25,7 +25,7 @@ namespace Quan_li_SV_3_lớp_
             {
                 Sinh_Vien sv = new Sinh_Vien();
                 sv = (Sinh_Vien)listSinhVien[i];
-                listSinhVien.RemoveAt(i);
+                listSinhVien.Remove(i);
             }
 
         }
@@ -112,7 +112,6 @@ namespace Quan_li_SV_3_lớp_
         }
         public void luuDLfile()
         {
-            
             StreamWriter sw = new StreamWriter("Du lieu.txt", false);
              for ( int i=0; i < listSinhVien.Count ; i ++)
             {
@@ -147,26 +146,19 @@ namespace Quan_li_SV_3_lớp_
                 string docline = line.ReadLine();
                 String[] cat = docline.Split(' ');
                // listSinhVien.Add(cat[0] + "" + cat[1] + "" + cat[2]);
-<<<<<<< .mine
                 Sinh_Vien sv = new Sinh_Vien();//tao 1 sinh vien
                 sv.setMaSV(int.Parse(cat[0]));//dua thong tin tung dong doc duoc vao sinh vien nay
                 sv.setHoten(cat[1].Trim());
                 sv.setDiem(int.Parse(cat[2]));
                 
                 listSinhVien.Add(sv);//dua sinh vien vao danh sach
-=======
+
                 //Sinh_Vien sv = new Sinh_Vien();//tao 1 sinh vien
 //                 sv.setMaSV(int.Parse(cat[0]));//dua thong tin tung dong doc duoc vao sinh vien nay
 //                 sv.setHoten(cat[1].Trim());
 //                 sv.setDiem(int.Parse(cat[2]));
 //                 listSinhVien.Clear();
 //                 listSinhVien.Insert(0, sv);//dua sinh vien vao danh sach
-                int masv = int.Parse(cat[0]);
-                string strHoten = cat[1];
-                int diem = int.Parse(cat[2]);
-                themSV(masv, strHoten, diem);
-
->>>>>>> .r202
             }
             line.Close();
             return listSinhVien;// tra ve danh sach sinh vien
