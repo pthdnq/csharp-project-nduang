@@ -1,0 +1,5 @@
+D:\LapTrinhC#\SOCKET\Chat_Conso_Client\Chat_Conso_Client\obj\Debug\ResolveAssemblyReference.cache
+D:\LapTrinhC#\SOCKET\Chat_Conso_Client\Chat_Conso_Client\bin\Debug\Chat_Conso_Client.exe
+D:\LapTrinhC#\SOCKET\Chat_Conso_Client\Chat_Conso_Client\bin\Debug\Chat_Conso_Client.pdb
+D:\LapTrinhC#\SOCKET\Chat_Conso_Client\Chat_Conso_Client\obj\Debug\Chat_Conso_Client.exe
+D:\LapTrinhC#\SOCKET\Chat_Conso_Client\Chat_Conso_Client\obj\Debug\Chat_Conso_Client.pdb

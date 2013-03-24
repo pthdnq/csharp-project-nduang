@@ -1,0 +1,5 @@
+D:\LapTrinhC#\SOCKET\DaTuyen_Server\DaTuyen_Server\obj\Debug\ResolveAssemblyReference.cache
+D:\LapTrinhC#\SOCKET\DaTuyen_Server\DaTuyen_Server\bin\Debug\DaTuyen_Server.exe
+D:\LapTrinhC#\SOCKET\DaTuyen_Server\DaTuyen_Server\bin\Debug\DaTuyen_Server.pdb
+D:\LapTrinhC#\SOCKET\DaTuyen_Server\DaTuyen_Server\obj\Debug\DaTuyen_Server.exe
+D:\LapTrinhC#\SOCKET\DaTuyen_Server\DaTuyen_Server\obj\Debug\DaTuyen_Server.pdb

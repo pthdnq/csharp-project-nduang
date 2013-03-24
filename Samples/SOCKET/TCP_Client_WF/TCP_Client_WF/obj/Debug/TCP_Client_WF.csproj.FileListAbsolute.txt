@@ -1,0 +1,8 @@
+D:\LapTrinhC#\SOCKET\TCP_Client_WF\TCP_Client_WF\obj\Debug\ResolveAssemblyReference.cache
+D:\LapTrinhC#\SOCKET\TCP_Client_WF\TCP_Client_WF\obj\Debug\TCP_Client_WF.Form1.resources
+D:\LapTrinhC#\SOCKET\TCP_Client_WF\TCP_Client_WF\obj\Debug\TCP_Client_WF.Properties.Resources.resources
+D:\LapTrinhC#\SOCKET\TCP_Client_WF\TCP_Client_WF\obj\Debug\TCP_Client_WF.csproj.GenerateResource.Cache
+D:\LapTrinhC#\SOCKET\TCP_Client_WF\TCP_Client_WF\bin\Debug\TCP_Client_WF.exe
+D:\LapTrinhC#\SOCKET\TCP_Client_WF\TCP_Client_WF\bin\Debug\TCP_Client_WF.pdb
+D:\LapTrinhC#\SOCKET\TCP_Client_WF\TCP_Client_WF\obj\Debug\TCP_Client_WF.exe
+D:\LapTrinhC#\SOCKET\TCP_Client_WF\TCP_Client_WF\obj\Debug\TCP_Client_WF.pdb

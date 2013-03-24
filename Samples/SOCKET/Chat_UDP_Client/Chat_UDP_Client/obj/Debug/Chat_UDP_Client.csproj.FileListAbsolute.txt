@@ -1,0 +1,8 @@
+D:\LapTrinhC#\SOCKET\Chat_UDP_Client\Chat_UDP_Client\bin\Debug\Chat_UDP_Client.exe
+D:\LapTrinhC#\SOCKET\Chat_UDP_Client\Chat_UDP_Client\bin\Debug\Chat_UDP_Client.pdb
+D:\LapTrinhC#\SOCKET\Chat_UDP_Client\Chat_UDP_Client\obj\Debug\ResolveAssemblyReference.cache
+D:\LapTrinhC#\SOCKET\Chat_UDP_Client\Chat_UDP_Client\obj\Debug\Chat_UDP_Client.Form1.resources
+D:\LapTrinhC#\SOCKET\Chat_UDP_Client\Chat_UDP_Client\obj\Debug\Chat_UDP_Client.Properties.Resources.resources
+D:\LapTrinhC#\SOCKET\Chat_UDP_Client\Chat_UDP_Client\obj\Debug\Chat_UDP_Client.csproj.GenerateResource.Cache
+D:\LapTrinhC#\SOCKET\Chat_UDP_Client\Chat_UDP_Client\obj\Debug\Chat_UDP_Client.exe
+D:\LapTrinhC#\SOCKET\Chat_UDP_Client\Chat_UDP_Client\obj\Debug\Chat_UDP_Client.pdb

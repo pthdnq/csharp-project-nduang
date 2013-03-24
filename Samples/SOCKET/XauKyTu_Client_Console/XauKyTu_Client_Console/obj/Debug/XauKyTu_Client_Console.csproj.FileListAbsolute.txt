@@ -1,0 +1,5 @@
+D:\LapTrinhC#\SOCKET\XauKyTu_Client_Console\XauKyTu_Client_Console\bin\Debug\XauKyTu_Client_Console.exe
+D:\LapTrinhC#\SOCKET\XauKyTu_Client_Console\XauKyTu_Client_Console\bin\Debug\XauKyTu_Client_Console.pdb
+D:\LapTrinhC#\SOCKET\XauKyTu_Client_Console\XauKyTu_Client_Console\obj\Debug\ResolveAssemblyReference.cache
+D:\LapTrinhC#\SOCKET\XauKyTu_Client_Console\XauKyTu_Client_Console\obj\Debug\XauKyTu_Client_Console.exe
+D:\LapTrinhC#\SOCKET\XauKyTu_Client_Console\XauKyTu_Client_Console\obj\Debug\XauKyTu_Client_Console.pdb

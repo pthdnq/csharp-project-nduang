@@ -1,0 +1,5 @@
+D:\LapTrinhC#\SOCKET\XauKyTu_Server_Console\XauKyTu_Server_Console\obj\Debug\ResolveAssemblyReference.cache
+D:\LapTrinhC#\SOCKET\XauKyTu_Server_Console\XauKyTu_Server_Console\bin\Debug\XauKyTu_Server_Console.exe
+D:\LapTrinhC#\SOCKET\XauKyTu_Server_Console\XauKyTu_Server_Console\bin\Debug\XauKyTu_Server_Console.pdb
+D:\LapTrinhC#\SOCKET\XauKyTu_Server_Console\XauKyTu_Server_Console\obj\Debug\XauKyTu_Server_Console.exe
+D:\LapTrinhC#\SOCKET\XauKyTu_Server_Console\XauKyTu_Server_Console\obj\Debug\XauKyTu_Server_Console.pdb
