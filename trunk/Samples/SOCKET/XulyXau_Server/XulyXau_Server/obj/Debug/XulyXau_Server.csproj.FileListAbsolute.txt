@@ -1,0 +1,5 @@
+D:\LapTrinhC#\SOCKET\XulyXau_Server\XulyXau_Server\bin\Debug\XulyXau_Server.exe
+D:\LapTrinhC#\SOCKET\XulyXau_Server\XulyXau_Server\bin\Debug\XulyXau_Server.pdb
+D:\LapTrinhC#\SOCKET\XulyXau_Server\XulyXau_Server\obj\Debug\ResolveAssemblyReference.cache
+D:\LapTrinhC#\SOCKET\XulyXau_Server\XulyXau_Server\obj\Debug\XulyXau_Server.exe
+D:\LapTrinhC#\SOCKET\XulyXau_Server\XulyXau_Server\obj\Debug\XulyXau_Server.pdb

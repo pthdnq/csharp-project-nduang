@@ -1,0 +1,5 @@
+D:\LapTrinhC#\SOCKET\BT1_Sever\BT1_Sever\bin\Debug\BT1_Sever.exe
+D:\LapTrinhC#\SOCKET\BT1_Sever\BT1_Sever\bin\Debug\BT1_Sever.pdb
+D:\LapTrinhC#\SOCKET\BT1_Sever\BT1_Sever\obj\Debug\ResolveAssemblyReference.cache
+D:\LapTrinhC#\SOCKET\BT1_Sever\BT1_Sever\obj\Debug\BT1_Sever.exe
+D:\LapTrinhC#\SOCKET\BT1_Sever\BT1_Sever\obj\Debug\BT1_Sever.pdb

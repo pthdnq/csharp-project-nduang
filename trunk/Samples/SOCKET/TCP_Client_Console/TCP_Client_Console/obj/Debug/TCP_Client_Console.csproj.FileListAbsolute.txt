@@ -1,0 +1,5 @@
+D:\LapTrinhC#\SOCKET\TCP_Client_Console\TCP_Client_Console\obj\Debug\ResolveAssemblyReference.cache
+D:\LapTrinhC#\SOCKET\TCP_Client_Console\TCP_Client_Console\bin\Debug\TCP_Client_Console.exe
+D:\LapTrinhC#\SOCKET\TCP_Client_Console\TCP_Client_Console\bin\Debug\TCP_Client_Console.pdb
+D:\LapTrinhC#\SOCKET\TCP_Client_Console\TCP_Client_Console\obj\Debug\TCP_Client_Console.exe
+D:\LapTrinhC#\SOCKET\TCP_Client_Console\TCP_Client_Console\obj\Debug\TCP_Client_Console.pdb

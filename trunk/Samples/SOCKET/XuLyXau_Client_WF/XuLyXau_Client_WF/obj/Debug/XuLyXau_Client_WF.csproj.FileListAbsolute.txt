@@ -1,0 +1,8 @@
+D:\LapTrinhC#\SOCKET\XuLyXau_Client_WF\XuLyXau_Client_WF\obj\Debug\ResolveAssemblyReference.cache
+D:\LapTrinhC#\SOCKET\XuLyXau_Client_WF\XuLyXau_Client_WF\obj\Debug\XuLyXau_Client_WF.ChuanHoaXau.resources
+D:\LapTrinhC#\SOCKET\XuLyXau_Client_WF\XuLyXau_Client_WF\obj\Debug\XuLyXau_Client_WF.Properties.Resources.resources
+D:\LapTrinhC#\SOCKET\XuLyXau_Client_WF\XuLyXau_Client_WF\obj\Debug\XuLyXau_Client_WF.csproj.GenerateResource.Cache
+D:\LapTrinhC#\SOCKET\XuLyXau_Client_WF\XuLyXau_Client_WF\bin\Debug\XuLyXau_Client_WF.exe
+D:\LapTrinhC#\SOCKET\XuLyXau_Client_WF\XuLyXau_Client_WF\bin\Debug\XuLyXau_Client_WF.pdb
+D:\LapTrinhC#\SOCKET\XuLyXau_Client_WF\XuLyXau_Client_WF\obj\Debug\XuLyXau_Client_WF.exe
+D:\LapTrinhC#\SOCKET\XuLyXau_Client_WF\XuLyXau_Client_WF\obj\Debug\XuLyXau_Client_WF.pdb

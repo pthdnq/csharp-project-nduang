@@ -1,0 +1,5 @@
+D:\LapTrinhC#\SOCKET\BT1\BT1\obj\Debug\ResolveAssemblyReference.cache
+D:\LapTrinhC#\SOCKET\BT1\BT1\bin\Debug\BT1.exe
+D:\LapTrinhC#\SOCKET\BT1\BT1\bin\Debug\BT1.pdb
+D:\LapTrinhC#\SOCKET\BT1\BT1\obj\Debug\BT1.exe
+D:\LapTrinhC#\SOCKET\BT1\BT1\obj\Debug\BT1.pdb

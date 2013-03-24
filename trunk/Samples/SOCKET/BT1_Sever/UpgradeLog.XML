@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="BT1_Sever">
+</Property><Property Name="Solution File" Value="C:\Users\Administrator\Desktop\SOCKET\BT1_Sever\BT1_Sever.sln">
+</Property><Property Name="User Options File" Value="C:\Users\Administrator\Desktop\SOCKET\BT1_Sever\BT1_Sever.suo">
+</Property><Property Name="Date" Value="19 Tháng Ba 2013">
+</Property><Property Name="Time" Value="22:04 CH">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="BT1_Sever.sln" Description="File successfully backed up as C:\Users\Administrator\Desktop\SOCKET\BT1_Sever\Backup\BT1_Sever.sln">
+</Event><Event ErrorLevel="0" Project="" Source="BT1_Sever.suo" Description="File successfully backed up as C:\Users\Administrator\Desktop\SOCKET\BT1_Sever\Backup\BT1_Sever.suo">
+</Event><Event ErrorLevel="0" Project="BT1_Sever" Source="BT1_Sever\BT1_Sever.csproj" Description="Project file successfully backed up as C:\Users\Administrator\Desktop\SOCKET\BT1_Sever\Backup\BT1_Sever\BT1_Sever.csproj">
+</Event><Event ErrorLevel="0" Project="BT1_Sever" Source="BT1_Sever\Program.cs" Description="File successfully backed up as C:\Users\Administrator\Desktop\SOCKET\BT1_Sever\Backup\BT1_Sever\Program.cs">
+</Event><Event ErrorLevel="0" Project="BT1_Sever" Source="BT1_Sever\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\Administrator\Desktop\SOCKET\BT1_Sever\Backup\BT1_Sever\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="BT1_Sever" Source="BT1_Sever\BT1_Sever.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="BT1_Sever" Source="BT1_Sever\BT1_Sever.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="BT1_Sever.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="BT1_Sever.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="BT1_Sever" Source="BT1_Sever\BT1_Sever.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

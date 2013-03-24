@@ -1,0 +1,5 @@
+D:\LapTrinhC#\SOCKET\BT2_Server\BT2_Server\bin\Debug\BT2_Server.exe
+D:\LapTrinhC#\SOCKET\BT2_Server\BT2_Server\bin\Debug\BT2_Server.pdb
+D:\LapTrinhC#\SOCKET\BT2_Server\BT2_Server\obj\Debug\ResolveAssemblyReference.cache
+D:\LapTrinhC#\SOCKET\BT2_Server\BT2_Server\obj\Debug\BT2_Server.exe
+D:\LapTrinhC#\SOCKET\BT2_Server\BT2_Server\obj\Debug\BT2_Server.pdb

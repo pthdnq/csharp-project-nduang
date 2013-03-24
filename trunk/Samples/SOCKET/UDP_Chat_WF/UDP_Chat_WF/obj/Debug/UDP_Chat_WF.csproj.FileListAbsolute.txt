@@ -1,0 +1,8 @@
+D:\LapTrinhC#\SOCKET\UDP_Chat_WF\UDP_Chat_WF\obj\Debug\ResolveAssemblyReference.cache
+D:\LapTrinhC#\SOCKET\UDP_Chat_WF\UDP_Chat_WF\obj\Debug\UDP_Chat_WF.Form1.resources
+D:\LapTrinhC#\SOCKET\UDP_Chat_WF\UDP_Chat_WF\obj\Debug\UDP_Chat_WF.Properties.Resources.resources
+D:\LapTrinhC#\SOCKET\UDP_Chat_WF\UDP_Chat_WF\obj\Debug\UDP_Chat_WF.csproj.GenerateResource.Cache
+D:\LapTrinhC#\SOCKET\UDP_Chat_WF\UDP_Chat_WF\bin\Debug\UDP_Chat_WF.exe
+D:\LapTrinhC#\SOCKET\UDP_Chat_WF\UDP_Chat_WF\bin\Debug\UDP_Chat_WF.pdb
+D:\LapTrinhC#\SOCKET\UDP_Chat_WF\UDP_Chat_WF\obj\Debug\UDP_Chat_WF.exe
+D:\LapTrinhC#\SOCKET\UDP_Chat_WF\UDP_Chat_WF\obj\Debug\UDP_Chat_WF.pdb

@@ -1,0 +1,5 @@
+D:\LapTrinhC#\SOCKET\MayTinh_Server\MayTinh_Server\obj\Debug\ResolveAssemblyReference.cache
+D:\LapTrinhC#\SOCKET\MayTinh_Server\MayTinh_Server\bin\Debug\MayTinh_Server.exe
+D:\LapTrinhC#\SOCKET\MayTinh_Server\MayTinh_Server\bin\Debug\MayTinh_Server.pdb
+D:\LapTrinhC#\SOCKET\MayTinh_Server\MayTinh_Server\obj\Debug\MayTinh_Server.exe
+D:\LapTrinhC#\SOCKET\MayTinh_Server\MayTinh_Server\obj\Debug\MayTinh_Server.pdb

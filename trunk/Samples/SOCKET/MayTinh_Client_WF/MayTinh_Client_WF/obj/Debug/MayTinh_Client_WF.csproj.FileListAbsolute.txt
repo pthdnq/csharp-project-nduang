@@ -1,0 +1,8 @@
+D:\LapTrinhC#\SOCKET\MayTinh_Client_WF\MayTinh_Client_WF\obj\Debug\ResolveAssemblyReference.cache
+D:\LapTrinhC#\SOCKET\MayTinh_Client_WF\MayTinh_Client_WF\obj\Debug\MayTinh_Client_WF.Form1.resources
+D:\LapTrinhC#\SOCKET\MayTinh_Client_WF\MayTinh_Client_WF\obj\Debug\MayTinh_Client_WF.Properties.Resources.resources
+D:\LapTrinhC#\SOCKET\MayTinh_Client_WF\MayTinh_Client_WF\obj\Debug\MayTinh_Client_WF.csproj.GenerateResource.Cache
+D:\LapTrinhC#\SOCKET\MayTinh_Client_WF\MayTinh_Client_WF\bin\Debug\MayTinh_Client_WF.exe
+D:\LapTrinhC#\SOCKET\MayTinh_Client_WF\MayTinh_Client_WF\bin\Debug\MayTinh_Client_WF.pdb
+D:\LapTrinhC#\SOCKET\MayTinh_Client_WF\MayTinh_Client_WF\obj\Debug\MayTinh_Client_WF.exe
+D:\LapTrinhC#\SOCKET\MayTinh_Client_WF\MayTinh_Client_WF\obj\Debug\MayTinh_Client_WF.pdb

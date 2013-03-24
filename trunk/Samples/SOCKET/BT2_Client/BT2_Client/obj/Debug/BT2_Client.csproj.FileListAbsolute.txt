@@ -1,0 +1,5 @@
+D:\LapTrinhC#\SOCKET\BT2_Client\BT2_Client\obj\Debug\ResolveAssemblyReference.cache
+D:\LapTrinhC#\SOCKET\BT2_Client\BT2_Client\bin\Debug\BT2_Client.exe
+D:\LapTrinhC#\SOCKET\BT2_Client\BT2_Client\bin\Debug\BT2_Client.pdb
+D:\LapTrinhC#\SOCKET\BT2_Client\BT2_Client\obj\Debug\BT2_Client.exe
+D:\LapTrinhC#\SOCKET\BT2_Client\BT2_Client\obj\Debug\BT2_Client.pdb
