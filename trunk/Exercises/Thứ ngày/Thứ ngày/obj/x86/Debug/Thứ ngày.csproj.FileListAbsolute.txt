@@ -14,3 +14,4 @@ E:\Projects\Exercises\Thứ ngày\Thứ ngày\obj\x86\Debug\Thứ_ngày.Properti
 E:\Projects\Exercises\Thứ ngày\Thứ ngày\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\Projects\Exercises\Thứ ngày\Thứ ngày\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\Projects\Exercises\Thứ ngày\Thứ ngày\obj\x86\Debug\Thứ ngày.pdb
+D:\Hoc tap\visual studio\HN36\projects\Exercises\Thứ ngày\Thứ ngày\obj\x86\Debug\Thứ ngày.exe
