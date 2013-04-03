@@ -9,10 +9,9 @@ namespace TaiBoi
     {
         static void Main(string[] args)
         {
-            congSo so = new congSo();
-            so.nhapso();
-            congChuoi chuoi = new congChuoi();
-            chuoi.nhapchuoi();
+            Cong so = new Cong();
+            so.nhapSo();
+            so.nhapChuoi();
 
         }
     }
