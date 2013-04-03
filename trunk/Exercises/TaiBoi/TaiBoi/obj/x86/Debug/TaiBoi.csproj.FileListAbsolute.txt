@@ -1,0 +1,5 @@
+D:\Hoc tap\visual studio\HN36\projects\Exercises\TaiBoi\TaiBoi\bin\Debug\TaiBoi.exe
+D:\Hoc tap\visual studio\HN36\projects\Exercises\TaiBoi\TaiBoi\bin\Debug\TaiBoi.pdb
+D:\Hoc tap\visual studio\HN36\projects\Exercises\TaiBoi\TaiBoi\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Hoc tap\visual studio\HN36\projects\Exercises\TaiBoi\TaiBoi\obj\x86\Debug\TaiBoi.exe
+D:\Hoc tap\visual studio\HN36\projects\Exercises\TaiBoi\TaiBoi\obj\x86\Debug\TaiBoi.pdb
