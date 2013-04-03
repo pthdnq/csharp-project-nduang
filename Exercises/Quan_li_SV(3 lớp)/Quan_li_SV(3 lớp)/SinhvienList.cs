@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Collections;
+using System.Data;
 using System.IO;
 
 namespace Quan_li_SV_3_lớp_
@@ -86,21 +87,21 @@ namespace Quan_li_SV_3_lớp_
             StreamWriter sw = new StreamWriter("Du lieu.txt");
             sw.WriteLine(sv.getMaSV() + " " + sv.getHoten() + " " + sv.getDiem());
         }
-        public void hienThiList()
-        {
-            for (int i = 0; i < listSV.Count; i++)
-            {
-                Sinh_Vien sv = new Sinh_Vien();
-                sv = (Sinh_Vien)listSV[i];
+        //public void hienThiList()
+        //{
+        //    for (int i = 0; i < listSV.Count; i++)
+        //    {
+        //        Sinh_Vien sv = new Sinh_Vien();
+        //        sv = (Sinh_Vien)listSV[i];
 
-            }
-        }
-        public void readFile()
-        {
-            Stream s = File.OpenRead("node.txt");
-            StreamReader st = new StreamReader(s);
-            string str = st.ReadLine();
-        }
+        //    }
+        //}
+        //public void readFile()
+        //{
+        //    Stream s = File.OpenRead("node.txt");
+        //    StreamReader st = new StreamReader(s);
+        //    string str = st.ReadLine();
+        //}
         public void luuDL()
          {
 
