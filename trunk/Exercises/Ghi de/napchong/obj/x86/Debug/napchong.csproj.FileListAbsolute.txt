@@ -3,3 +3,8 @@ D:\Hoc tap\visual studio\HN36\projects\Exercises\napchong\napchong\bin\Debug\nap
 D:\Hoc tap\visual studio\HN36\projects\Exercises\napchong\napchong\bin\Debug\napchong.pdb
 D:\Hoc tap\visual studio\HN36\projects\Exercises\napchong\napchong\obj\x86\Debug\napchong.exe
 D:\Hoc tap\visual studio\HN36\projects\Exercises\napchong\napchong\obj\x86\Debug\napchong.pdb
+D:\Hoc tap\visual studio\HN36\projects\Exercises\Ghi de\napchong\obj\x86\Debug\napchong.exe
+D:\Hoc tap\visual studio\HN36\projects\Exercises\Ghi de\napchong\obj\x86\Debug\napchong.pdb
+D:\Hoc tap\visual studio\HN36\projects\Exercises\Ghi de\napchong\bin\Debug\napchong.exe
+D:\Hoc tap\visual studio\HN36\projects\Exercises\Ghi de\napchong\bin\Debug\napchong.pdb
+D:\Hoc tap\visual studio\HN36\projects\Exercises\Ghi de\napchong\obj\x86\Debug\ResolveAssemblyReference.cache
