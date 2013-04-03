@@ -1,0 +1,5 @@
+D:\Hoc tap\visual studio\HN36\projects\Exercises\napchong\napchong\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Hoc tap\visual studio\HN36\projects\Exercises\napchong\napchong\bin\Debug\napchong.exe
+D:\Hoc tap\visual studio\HN36\projects\Exercises\napchong\napchong\bin\Debug\napchong.pdb
+D:\Hoc tap\visual studio\HN36\projects\Exercises\napchong\napchong\obj\x86\Debug\napchong.exe
+D:\Hoc tap\visual studio\HN36\projects\Exercises\napchong\napchong\obj\x86\Debug\napchong.pdb
