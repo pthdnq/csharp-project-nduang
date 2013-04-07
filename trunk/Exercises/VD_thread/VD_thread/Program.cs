@@ -17,14 +17,16 @@ namespace VD_thread
             Thread t2 =new Thread(new ThreadStart(MethodB));
             t1.Start();
             t2.Start();
-            MethodB();
+            //MethodB();
+            Console.ReadLine();
         }
         static void MethodA()
         {
                 StreamWriter wr = new StreamWriter("luuDL.txt");
                 wr.Write("100-200-300");
                 wr.Close();
-                Console.ReadLine();
+               // Console.ReadLine();
+
         }
         static void MethodB()
         {
@@ -39,7 +41,7 @@ namespace VD_thread
                      Console.Write(x.ToString() + "-" + y.ToString() + "-" + z.ToString());
                 }
                 doc.Close();
-                Console.ReadLine(); 
+                //Console.ReadLine(); 
         }
     }
 }
