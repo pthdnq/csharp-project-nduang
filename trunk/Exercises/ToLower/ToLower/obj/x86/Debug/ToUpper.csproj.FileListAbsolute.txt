@@ -1,9 +1,0 @@
-E:\ProjectsC++&C#\C#\Projects\Exercises\ToUpper\ToUpper\obj\x86\Debug\ResolveAssemblyReference.cache
-E:\ProjectsC++&C#\C#\Projects\Exercises\ToUpper\ToUpper\obj\x86\Debug\ToUpper.Form1.resources
-E:\ProjectsC++&C#\C#\Projects\Exercises\ToUpper\ToUpper\obj\x86\Debug\ToUpper.Properties.Resources.resources
-E:\ProjectsC++&C#\C#\Projects\Exercises\ToUpper\ToUpper\obj\x86\Debug\ResGen.read.1.tlog
-E:\ProjectsC++&C#\C#\Projects\Exercises\ToUpper\ToUpper\obj\x86\Debug\ResGen.write.1.tlog
-E:\ProjectsC++&C#\C#\Projects\Exercises\ToUpper\ToUpper\bin\Debug\ToUpper.exe
-E:\ProjectsC++&C#\C#\Projects\Exercises\ToUpper\ToUpper\bin\Debug\ToUpper.pdb
-E:\ProjectsC++&C#\C#\Projects\Exercises\ToUpper\ToUpper\obj\x86\Debug\ToUpper.exe
-E:\ProjectsC++&C#\C#\Projects\Exercises\ToUpper\ToUpper\obj\x86\Debug\ToUpper.pdb
