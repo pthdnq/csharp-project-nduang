@@ -1,5 +1,0 @@
-D:\Hoc tap\visual studio\HN36\projects\Exercises\dientich_kethua\dientich_kethua\bin\Debug\dientich_kethua.exe
-D:\Hoc tap\visual studio\HN36\projects\Exercises\dientich_kethua\dientich_kethua\bin\Debug\dientich_kethua.pdb
-D:\Hoc tap\visual studio\HN36\projects\Exercises\dientich_kethua\dientich_kethua\obj\x86\Debug\ResolveAssemblyReference.cache
-D:\Hoc tap\visual studio\HN36\projects\Exercises\dientich_kethua\dientich_kethua\obj\x86\Debug\dientich_kethua.exe
-D:\Hoc tap\visual studio\HN36\projects\Exercises\dientich_kethua\dientich_kethua\obj\x86\Debug\dientich_kethua.pdb
