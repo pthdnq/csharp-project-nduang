@@ -10,7 +10,7 @@ namespace VD_thread
 {
     class Program
     {
-        ArrayList list = new ArrayList();
+        //ArrayList list = new ArrayList();
         static void Main(string[] args)
         {
             Thread t1 = new Thread(new ThreadStart(MethodA));
