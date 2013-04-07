@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataObject
 {
-    public class Class1
+    public class Pho
     {
     }
 }
