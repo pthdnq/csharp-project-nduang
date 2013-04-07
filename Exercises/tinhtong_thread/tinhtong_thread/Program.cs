@@ -8,33 +8,32 @@ namespace tinhtong_thread
 {
     class Program
     {
+//         int m_TongChan = 0;
+//         int m_TongLe = 0;
+        static int[] niz = new int[100000];
         static void Main(string[] args)
 
         {
             Thread t1 = new Thread(new ThreadStart(tongChan));
             Thread t2 = new Thread(new ThreadStart(tongLe));
-            Console.Write("Nhap N= ");
+            //Console.Write("Nhap N= ");
             t1.Start();
             t2.Start();
             Console.ReadLine();
         }
-        int m_TongChan = 0;
-        int m_TongLe = 0;
-        int[] niz;
-        public void TaoMangSoNgauNhien()
+        static public void TaoMangSoNgauNhien(int[] niz)
         {
-            niz = new int[100000];
-            //int [] niz = new int[100000];
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 100000; i++)
             {
                 Random m = new Random();
                 int ZOMG = m.Next(0, 100000);
                 niz[i] = ZOMG;
-                Console.Write(niz[i]);//in ra man hinh xem thu
+               // Console.Write(niz[i]);//in ra man hinh xem thu
             }
         }
-        public void tongChan()
+        static public void tongChan()
         {
+            TaoMangSoNgauNhien(niz);
             int iTongChan = 0;
             for (int i = 0; i < 100000; i++)
             {
@@ -45,8 +44,9 @@ namespace tinhtong_thread
             }
             Console.WriteLine("Tong chan la" + iTongChan);
         }
-        public void tongLe()
+        static public void tongLe()
         {
+            TaoMangSoNgauNhien(niz);
             int iTongChan = 0;
             for (int i = 0; i < 100000; i++)
             {
