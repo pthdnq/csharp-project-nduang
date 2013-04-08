@@ -11,6 +11,10 @@ namespace VD_server
     {
         static void Main(string[] args)
         {
+            MyMath Math = new MyMath();
+            string strA_;
+            int A;
+            int B;
             Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint ie = new IPEndPoint(IPAddress.Any, 9000);
             s.Bind(ie);
@@ -34,6 +38,7 @@ namespace VD_server
                 dl = Encoding.ASCII.GetBytes(st);
                 sc.Send(dl, dl.Length, SocketFlags.None);
             }
+            Math.Tachchuoi(strA_, out A, out B);
             sc.Close();
             s.Close();
         }
