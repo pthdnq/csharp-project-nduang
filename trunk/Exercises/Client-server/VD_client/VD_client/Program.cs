@@ -20,7 +20,7 @@ namespace VD_client
             Console.WriteLine("Loi chao tu Server:{0}",Encoding.ASCII.GetString(data,0,k));
             while(true)
             {
-                Console.WriteLine("Nhap du lieu gui len server");
+                Console.WriteLine("Moi nhap du lieu can tinh");
                 string st=Console.ReadLine();
                 byte[] dl=new byte[1024];
                 dl=Encoding.ASCII.GetBytes(st);
@@ -29,7 +29,7 @@ namespace VD_client
                     break;
                 dl=new byte[1024];
                 int k1=s.Receive(dl);
-                Console.WriteLine("Du lieu tu server la:{0}",Encoding.ASCII.GetString(dl,0,k1));
+                Console.WriteLine("Ket qua tinh tong tu server tra ve:{0}", Encoding.ASCII.GetString(dl, 0, k1));
             }
             s.Disconnect(true);
             s.Close();

@@ -12,11 +12,11 @@ namespace VD_server
             float Tong = a + b;
             return Tong;
         }
-        public void Tachchuoi(string strA,out int A,out int B)
+        public void Tachchuoi(string strA,out float A,out float B)
         {
             string[] cat = strA.Split('-');
-            A = int.Parse(cat[0]);
-            B = int.Parse(cat[1]);
+            A = float.Parse(cat[0]);
+            B = float.Parse(cat[1]);
         }
     }
 }
