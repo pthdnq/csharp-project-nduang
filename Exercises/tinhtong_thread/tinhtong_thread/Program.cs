@@ -47,15 +47,15 @@ namespace tinhtong_thread
         static public void tongLe()
         {
             TaoMangSoNgauNhien(niz);
-            int iTongChan = 0;
+            int iTongLe = 0;
             for (int i = 0; i < 100000; i++)
             {
                 if (niz[i] % 2 != 0)//phan tu thu i trong mang chia het cho 2
                 {
-                    iTongChan = iTongChan + niz[i];//dua gia tri cua phan tu do vao tong chan
+                    iTongLe = iTongLe + niz[i];//dua gia tri cua phan tu do vao tong chan
                 }
             }
-            Console.WriteLine("Tong le la" + iTongChan);
+            Console.WriteLine("Tong le la" + iTongLe);
         }
        
     }
