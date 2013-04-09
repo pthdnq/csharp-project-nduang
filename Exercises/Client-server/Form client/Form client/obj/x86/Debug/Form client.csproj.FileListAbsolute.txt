@@ -1,0 +1,9 @@
+D:\Hoc tap\visual studio\HN36\projects\Exercises\Client-server\Form client\Form client\bin\Debug\Form client.exe
+D:\Hoc tap\visual studio\HN36\projects\Exercises\Client-server\Form client\Form client\bin\Debug\Form client.pdb
+D:\Hoc tap\visual studio\HN36\projects\Exercises\Client-server\Form client\Form client\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Hoc tap\visual studio\HN36\projects\Exercises\Client-server\Form client\Form client\obj\x86\Debug\Form_client.Form1.resources
+D:\Hoc tap\visual studio\HN36\projects\Exercises\Client-server\Form client\Form client\obj\x86\Debug\Form_client.Properties.Resources.resources
+D:\Hoc tap\visual studio\HN36\projects\Exercises\Client-server\Form client\Form client\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Hoc tap\visual studio\HN36\projects\Exercises\Client-server\Form client\Form client\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Hoc tap\visual studio\HN36\projects\Exercises\Client-server\Form client\Form client\obj\x86\Debug\Form client.exe
+D:\Hoc tap\visual studio\HN36\projects\Exercises\Client-server\Form client\Form client\obj\x86\Debug\Form client.pdb
