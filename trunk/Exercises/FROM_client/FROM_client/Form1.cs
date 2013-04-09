@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
+using System.Collections;
 
 namespace FROM_client
 {
@@ -17,7 +18,6 @@ namespace FROM_client
         {
             InitializeComponent();
         }
-
         private void btnOK_Click(object sender, EventArgs e)
         {
             Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -25,20 +25,14 @@ namespace FROM_client
             s.Connect(ie);
             MessageBox.Show("Connected to Server.....");
             byte[] data = new byte[1024];
-            int k = s.Receive(data);
             string A = txtNumber1.Text;
             string B = txtNumber2.Text;
-            float Number1 = float.Parse(A);
-            float Number2 = float.Parse(B);
-//             float ketqua = sothu1 + sothu2;
-//             txtKQ.Text = ketqua.ToString();
-           // txtKQ.Text += " = ";
-            data = Encoding.ASCII.GetBytes(txtNumber1.Text);
-            data = Encoding.ASCII.GetBytes(txtNumber2.Text);
+            string gep = string.Concat(A, "-", B).Trim();
+            data = Encoding.ASCII.GetBytes(gep);
             s.Send(data, data.Length, SocketFlags.None);
             data = new byte[1024];
+            int k = s.Receive(data);
             txtKQ.Text += Encoding.ASCII.GetString(data, 0, k);
-
         }
     }
 }
