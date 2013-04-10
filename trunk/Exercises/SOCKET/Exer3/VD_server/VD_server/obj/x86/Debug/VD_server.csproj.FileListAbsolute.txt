@@ -1,0 +1,5 @@
+E:\Projects\Exercises\SOCKET\Exer1\VD_server\VD_server\bin\Debug\VD_server.exe
+E:\Projects\Exercises\SOCKET\Exer1\VD_server\VD_server\bin\Debug\VD_server.pdb
+E:\Projects\Exercises\SOCKET\Exer1\VD_server\VD_server\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Projects\Exercises\SOCKET\Exer1\VD_server\VD_server\obj\x86\Debug\VD_server.exe
+E:\Projects\Exercises\SOCKET\Exer1\VD_server\VD_server\obj\x86\Debug\VD_server.pdb
