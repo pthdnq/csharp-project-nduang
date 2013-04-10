@@ -33,22 +33,17 @@ namespace VD_server
                 byte[] dl = new byte[1024];
                 int k = sc.Receive(dl);// du lieu nhan ve tu client dang mang byte
                 st = Encoding.ASCII.GetString(dl, 0, k);// chuyen thanh chuoi
-
                 if (st.ToUpper().Equals("QUIT"))//kiem tra xem chuoi la tu QUIT thi thoat
                     break;
                 Console.WriteLine("Du lieu tu Client:{0}", st);//In chuoi server nhan duoc tu client
                 //st = st.ToUpper();
                 dl = new byte[1024];
-                
-                
                 Math.Tachchuoi(st, out fA, out fB);// tach chuoi nhan duoc de lay ra 2 so
                 fTong = Math.TinhTong(fA, fB);//tinh tong 2 so
                 string strTong = fTong.ToString();//chuyen tong thanh chuoi
                 dl = Encoding.ASCII.GetBytes(strTong);//chuyen chuoi sang mang byte
                 sc.Send(dl, dl.Length, SocketFlags.None);//gui du lieu cho client
-
             }
-            
             sc.Close();
             s.Close();
         }
