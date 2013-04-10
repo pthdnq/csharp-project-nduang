@@ -24,20 +24,31 @@ namespace VD_server
             s.Listen(10);//so cong nghe
             Console.WriteLine("Waiting data from Client....");
             Socket sc = s.Accept();// socket bat chap nhap ket noi
-            byte[] data = new byte[1024];
-            data = Encoding.ASCII.GetBytes("Chao Client");// gui cau chao client dang ma byte cho client
-            sc.Send(data, data.Length, SocketFlags.None);// gui du lieu
+//             byte[] data = new byte[1024];
+//             data = Encoding.ASCII.GetBytes("Chao Client");// gui cau chao client dang ma byte cho client
+//             sc.Send(data, data.Length, SocketFlags.None);// gui du lieu
             while (true)
             {
                 string st;
+                int k = 0;
                 byte[] dl = new byte[1024];
-                int k = sc.Receive(dl);// du lieu nhan ve tu client dang mang byte
+                try
+                {
+                    k = sc.Receive(dl);// du lieu nhan ve tu client dang mang byte
+                }
+                catch (System.Exception ex)
+                {
+                    break;//gap loi thoat luon
+                }
+                
                 st = Encoding.ASCII.GetString(dl, 0, k);// chuyen thanh chuoi
-                if (st.ToUpper().Equals("QUIT"))//kiem tra xem chuoi la tu QUIT thi thoat
-                    break;
+//                 if (st.ToUpper().Equals("QUIT"))//kiem tra xem chuoi la tu QUIT thi thoat
+//                     break;
                 Console.WriteLine("Du lieu tu Client:{0}", st);//In chuoi server nhan duoc tu client
                 //st = st.ToUpper();
                 dl = new byte[1024];
+                if (st == null)
+                    continue;// tiep tuc chay sang luot lap tiep theo ma ko chay cac lenh phia duoi
                 Math.Tachchuoi(st, out fA, out fB);// tach chuoi nhan duoc de lay ra 2 so
                 fTong = Math.TinhTong(fA, fB);//tinh tong 2 so
                 string strTong = fTong.ToString();//chuyen tong thanh chuoi
