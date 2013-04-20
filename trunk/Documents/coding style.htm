@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0050)http://dc180.4shared.com/doc/t4VJxlrY/preview.html -->
+<html><meta style="visibility: hidden !important; display: block !important; width: 0px !important; height: 0px !important; border-style: none !important;"><embed id="__IDM__" type="application/x-idm-downloader" width="1" height="1" style="visibility: hidden !important; display: block !important; width: 1px !important; height: 1px !important; border-style: none !important; position: absolute !important; top: 0px !important; left: 0px !important;"></meta><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title></title>
+	<meta name="GENERATOR" content="OpenOffice.org 3.1  (Unix)">
+	<meta name="AUTHOR" content="War10ck">
+	<meta name="CREATED" content="20100315;15460000">
+	<meta name="CHANGEDBY" content="War10ck">
+	<meta name="CHANGED" content="20100315;18250000">
+	<style type="text/css">
+	<!--
+		@page { margin: 1in }
+		P { margin-bottom: 0.08in; direction: ltr; color: #000000; line-height: 115%; text-align: left; widows: 2; orphans: 2 }
+		P.western { font-family: "Times New Roman", serif; font-size: 12pt; so-language: en-US }
+		P.cjk { font-family: "Calibri", sans-serif; font-size: 12pt; so-language: zxx }
+		P.ctl { font-family: "Times New Roman", serif; font-size: 12pt; so-language: ar-SA }
+		H1 { margin-bottom: 0.04in; direction: ltr; color: #000000; line-height: 115%; text-align: left; widows: 2; orphans: 2 }
+		H1.western { font-family: "Cambria", serif; font-size: 16pt; so-language: en-US }
+		H1.cjk { font-family: "Times New Roman", serif; font-size: 16pt; so-language: zxx }
+		H1.ctl { font-family: "Times New Roman", serif; font-size: 16pt; so-language: ar-SA }
+		H2 { margin-bottom: 0.04in; direction: ltr; color: #000000; line-height: 115%; text-align: left; widows: 2; orphans: 2 }
+		H2.western { font-family: "Cambria", serif; font-size: 14pt; so-language: en-US; font-style: italic }
+		H2.cjk { font-family: "Times New Roman", serif; font-size: 14pt; so-language: zxx; font-style: italic }
+		H2.ctl { font-family: "Times New Roman", serif; font-size: 14pt; so-language: ar-SA; font-style: italic }
+		H3 { margin-bottom: 0.08in; direction: ltr; color: #000000; line-height: 115%; text-align: left; widows: 2; orphans: 2 }
+		H3.western { font-family: "Arial", sans-serif; so-language: en-US }
+		H3.cjk { font-family: "Lucida Sans Unicode"; so-language: zxx }
+		H3.ctl { font-family: "Tahoma"; so-language: ar-SA }
+		PRE { direction: ltr; color: #000000; line-height: 115%; text-align: left; widows: 2; orphans: 2 }
+		PRE.western { font-family: "Courier New", monospace; so-language: en-US }
+		PRE.cjk { font-family: "Courier New", monospace; so-language: zxx }
+		PRE.ctl { font-family: "Courier New", monospace; so-language: ar-SA }
+		CODE { font-family: "Courier New", monospace }
+	-->
+	</style>
+</head>
+<body lang="en-US" text="#000000" dir="LTR">
+<p class="western" align="CENTER" style="margin-bottom: 0.14in"><font size="5"><b>Báo
+cáo Thực tập cơ sở</b></font></p>
+<p class="western" style="margin-bottom: 0.14in"><i><u><b>Giai đoạn
+2 :</b></u></i> Tìm hiểu về Coding Convention trong C++.</p>
+<p class="western" style="margin-bottom: 0.14in">SV thực hiện :
+Phạm Duy Hiệp	MSSV : 20071172</p>
+<p class="western" style="margin-bottom: 0.14in">Lớp Khoa học máy
+tính K52</p>
+<h1 class="western">1/ M<font face="Times New Roman, serif">ở</font>
+đ<font face="Times New Roman, serif">ầ</font>u :</h1>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Việc sử dụng thống nhất một bộ tiêu chuẩn chung về
+quy ước đặt tên biến, chú thích, xây dựng hàm, … là
+rất quan trọng, đặc biệt là khi chia sẻ một dự án
+nào đó với người khác. Điều này sẽ giúp tiết kiệm
+thời gian và công sức, nhờ nâng cao tính trong sáng và
+minh bạch của mã nguồn, cung cấp một mặt bằng chung,
+làm cho việc gỡ lỗi dễ dàng hơn, và tăng khả năng bảo
+trì, nâng cấp, phát triển cho mã nguồn.</p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Không có một quy ước quốc tế nào cho việc lập trình,
+tuy nhiên có rất nhiều tổ chức công bố quy tắc về
+phong cách lập trình riêng của mình. Việc lựa chọn tuân
+theo quy ước nào cần dựa trên sự hợp lý và tính đồng
+thuận cao khi tiến hành thực hiện một dự án. Các lập
+trình viên cũng thường có xu hướng gắn bó với một
+phong cách nhất định và rất khó thay đổi. Phong cách
+lập trình phổ biến trong C++ hiện nay là ANSI hay Allman,
+ngoài ra nhiều chương trình C sử dụng quy ước được
+Brian Kernighan và Dennis Ritchie trình bày trong “The C
+Programming Language” (2nd edition), mà ta gọi tắt là phong
+cách K&amp;R.</p>
+<h1 class="western">2/ C++ coding style (<font face="Times New Roman, serif">ở</font>
+đây áp d<font face="Times New Roman, serif">ụ</font>ng ANSI có
+m<font face="Times New Roman, serif">ộ</font>t vài đi<font face="Times New Roman, serif">ể</font>m
+s<font face="Times New Roman, serif">ử</font>a đ<font face="Times New Roman, serif">ổ</font>i
+và c<font face="Times New Roman, serif">ụ</font> th<font face="Times New Roman, serif">ể</font>
+hóa) :</h1>
+<h2 class="western"><a name="DDE_LINK"></a>2.1/ Quy cách đặt tên
+- Naming identifiers :</h2>
+<h3 class="western">2.1.1/  Quy định chung :</h3>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Việc đặt tên biến, hàm cần gợi nhớ, súc tích và
+phải đảm bảo không trùng với từ khóa nào. Những biến
+cục bộ, được dùng ít thì càng ngắn gọn càng tốt,
+những biến toàn cục được sử dụng rộng rãi nên đặt
+tên có khả năng mô tả càng rõ ràng càng tốt. Chỉ dùng
+các tên có 1 chữ cái cho các biến chạy, hoặc sử dụng
+khi có ít biến, không khó khăn để phân biệt chúng với
+nhau.</p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Nên có sự thống nhất về ngôn ngữ, chẳng hạn không
+đặt một biến theo tiếng Việt, một biến hay hàm khác
+lại là tiếng Anh (cần tránh  getStringLength(xauNhapVao) ; )</p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Tránh các tên chứa ký tự dễ trùng với tên khác (0 và
+o, hay I với 1, l,...) hoặc chỉ sai khác về chữ hoa/chữ
+thường (khi đã khai báo string thì không khai báo String mà
+tốt nhất nên dùng string1, string2, stringFirst, stringSecond,
+...)</p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Đôi nét về cú pháp Hungary : viết tên biến bắt đầu
+bằng một vài ký tự ngắn gọn gợi nhớ kiểu (chẳng
+hạn int iNumOfWays, DWORD dwBytesToRead, LPTSTR lpPointer,…) Cách
+viết này trước đây được dùng phổ biến và cũng có
+ích khi cần kiểm tra tham số truyền vào, nhưng ngày nay
+nó lại bất tiện nếu người lập trình muốn thay đổi
+kiểu của biến Hơn nữa các IDE có thể đảm nhiệm việc
+kiểm tra tham số, vì thế không cần thiết phải dùng cú
+pháp này.</p>
+<h3 class="western">2.1.2/ Quy tắc đặt tên lớp, biến,
+phương thức và hàm :</h3>
+<ul>
+	<li><p class="western" style="margin-bottom: 0.14in">Các tên định
+	kiểu, tên lớp bắt đầu với chữ hoa, viết liền các
+	từ, ví dụ Node, EvenHandler,…</p>
+	</li><li><p class="western" style="margin-bottom: 0.14in">Các tên biến
+	và tên hàm, phương thức bắt đầu bằng chữ thường,
+	các từ tiếp theo viết nối liền vào và bắt đầu bằng
+	chữ hoa, ví dụ node, myVar, myMethod(), evenHandler, getName()…
+	Các cụm từ viết tắt không dùng chữ hoa nếu còn từ
+	khác ở sau nó, chẳng hạn thay vì đặt tên hàm
+	exportHTMLSource() ta dùng tên exportHtmlSource().</p>
+	</li><li><p class="western" style="margin-bottom: 0.14in">Các hàm và
+	phương thức nên có tên chứa động từ cho biết mục
+	đích cụ thể của nó, ví dụ với một phương thức
+	kiểm tra xem chuỗi nhập vào có phải là chữ số hay
+	không, tên gọi stringIsNumbers(char* testString) sẽ dễ hiểu
+	hơn tên gọi có vẻ mơ hồ là checkString(char* testString)</p>
+	</li><li><p class="western" style="margin-bottom: 0.14in">Tránh sử
+	dụng tên bắt đầu bằng một hay hai dấu gạch dưới,
+	vì dễ dẫn tới xung đột với các biến theo tiêu chuẩn
+	của hệ thống nào đó.</p>
+	</li><li><p class="western" style="margin-bottom: 0.14in">Với các
+	project lớn, cần thêm tiền tố xác định phạm vi của
+	biến :</p>
+	<ol>
+		<li><p class="western" style="margin-bottom: 0.14in"> m : biến
+		thành viên của một lớp.</p>
+		</li><li><p class="western" style="margin-bottom: 0.14in"> g : biến
+		toàn cục.</p>
+		</li><li><p class="western" style="margin-bottom: 0.14in"> c : biến
+		tĩnh của một lớp (bao gồm cả hằng số)</p>
+		</li><li><p class="western" style="margin-bottom: 0.14in"> &lt;empty&gt;
+		: biến cục bộ.</p>
+	</li></ol>
+</li></ul>
+<h3 class="western">2.1.3/ Quy tắc về hằng số :</h3>
+<ul>
+	<li><p class="western" style="margin-bottom: 0.14in">Các hằng số
+	dùng chữ hoa toàn bộ và dấu gạch dưới để phân cách
+	các từ, ví dụ MAX_INT, …</p>
+</li></ul>
+<h2 class="western">2.2/ Quy định về khoảng trắng và cách
+lùi đầu dòng - Whitespace and Indentation :</h2>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Khoảng trắng cần thiết để tách các từ và số liền
+kề, nó sẽ được bỏ qua ở mọi chỗ, ngoại trừ trong
+dấu nháy kép và các chỉ thị tiền biên dịch. Mọi khối
+mã lệnh và định danh cần tuân theo quy tắc lùi đầu
+dòng nhất quán. Ở đây dùng 4 khoảng trắng :</p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+<font face="Courier New, monospace"><font size="2">// Using an
+indentation size of 4</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+<font face="Courier New, monospace"><font size="2">if (a &gt; 5)</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+<font face="Courier New, monospace"><font size="2">{</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+    <font face="Courier New, monospace"><font size="2">b = a;</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+    <font face="Courier New, monospace"><font size="2">a++;</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+<font face="Courier New, monospace"><font size="2">}</font></font></p>
+<h2 class="western">2.3/ Quy định về dấu ngoặc - Placement
+of braces :</h2>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Đặt các dấu ngoặc nhọn trên một dòng tách biệt và
+phần thân của khối lệnh viết lùi đầu dòng :</p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+<font face="Courier New, monospace"><font size="2">if (a &gt; 5) </font></font>
+</p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+<font face="Courier New, monospace"><font size="2">{</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+  <font face="Courier New, monospace"><font size="2">// This is ANSI
+C++ style</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+<font face="Courier New, monospace"><font size="2">}</font></font></p>
+<h2 class="western">2.4/ Quy định về chú thích - Comments :</h2>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Chú thích không đúng cách có thể làm cho chương trình
+khó hiểu. Không viết các chú thích thừa, thay vì giải
+thích đoạn chương trình làm những việc gì thì nên tập
+trung vào việc giải thích đoạn chương trình đó nhằm
+mục đích gì. Cách tốt nhất là viết chú thích ngắn
+gọn trước mỗi hàm, phương thức, sau đó trong đoạn
+lệnh thì thêm một vài chú thích cho những chi tiết quan
+trọng. Đoạn code sau dùng nhiều chú thích thừa, cần
+tránh trường hợp tương tự :</p>
+<pre class="western" style="text-indent: 0.38in">switch (ch) {
+                case 'd':
+                case 'i':
+                        /* print the int */
+                        printInt(nextArg());
+                        break;
+                case 's':
+                        /* print the string */
+                        printString(nextArg());
+                        break;
+                /*
+                 *  Default:
+                 */
+                default:
+                        break;
+        }
+        /* return number converted */
+        return numConverted;</pre><p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Trong nhiều trường hợp ở đầu mỗi tệp cần có một
+đoạn chú thích cho biết các thông tin cơ bản như : tên
+file, tên project, tên tác giả, ngày tạo, các quy định về
+bản quyền và trách nhiệm, các liên kết cần
+thiết,...Đoạn chú thích này đặt trong khối bắt đầu
+với /* và kết thúc bởi */, ví dụ :</p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+<font face="Courier New, monospace"><font size="2">/*</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+ <font face="Courier New, monospace"><font size="2">* File name :
+Sample.cpp</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+ <font face="Courier New, monospace"><font size="2">* Project : Sample
+Project</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+ <font face="Courier New, monospace"><font size="2">* Author : Hiep
+Pham duy</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+ <font face="Courier New, monospace"><font size="2">* Email :
+sample@samplehost</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+ <font face="Courier New, monospace"><font size="2">* URL :
+http://sampledomain.samplehost</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+ <font face="Courier New, monospace"><font size="2">* Time &amp;&amp;
+Date : 17/03/2010</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+ <font face="Courier New, monospace"><font size="2">* This program is
+free software; you can redistribute it and/or</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+ <font face="Courier New, monospace"><font size="2">*  modify it under
+the terms of the GNU General Public License</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+ <font face="Courier New, monospace"><font size="2">*  as published by
+the Free Software Foundation; either version 2</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+ <font face="Courier New, monospace"><font size="2">*  of the License,
+or (at your option) any later version.</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+ <font face="Courier New, monospace"><font size="2">*</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+ <font face="Courier New, monospace"><font size="2">*  This program is
+distributed in the hope that it will be useful,</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+ <font face="Courier New, monospace"><font size="2">*  but WITHOUT ANY
+WARRANTY; without even the implied warranty of</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+ <font face="Courier New, monospace"><font size="2">*  MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE.  See the</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+ <font face="Courier New, monospace"><font size="2">*  GNU General
+Public License for more details. </font></font>
+</p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+ <font face="Courier New, monospace"><font size="2">*/</font></font></p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+<br><br>
+</p>
+<h2 class="western">2.5/ Quy định về khai báo hàm :</h2>
+<ul>
+	<li><p class="western" style="margin-bottom: 0.14in">Đặt tên và
+	kiểu trả về của hàm, tên và kiểu của các tham số
+	trên cùng một dòng nếu có thể. Áp dụng điều này với
+	nguyên mẫu của hàm trong cả tệp tin header lẫn trong mã
+	lệnh.</p>
+</li></ul>
+<pre class="western" style="text-indent: 0.38in">static void printInt (int i)
+{
+    printf("%d", i);
+}</pre>
+<ul>
+	<li><p class="western" style="margin-bottom: 0.14in">Nếu hàm hay
+	phương thức có tham số truyền vào quá dài thì nên cắt
+	nó ra thành nhiều dòng, và đảm bảo dấu phẩy ở cuối
+	mỗi dòng (chứ không phải đầu dòng tiếp theo).</p>
+</li></ul>
+<pre class="western" style="text-indent: 0.38in; line-height: 115%; text-align: left; widows: 2; orphans: 2">static int dispatch_instruction (Instruction *i,
+<font color="#000000">                        </font><font color="#000000"><span lang="en-US">long pc, Process *p)</span></font>
+<span lang="en-US">{</span>
+<font color="#000000">    </font><font color="#000000"><span lang="en-US">&lt;statements here…&gt;</span></font>
+<span lang="en-US">}</span>
+</pre><h2 class="western">
+2.6/ Quy tắc về coding :</h2>
+<h3 class="western">2.6.1/ Các lệnh rẽ nhánh :</h3>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+- Lệnh if, if else, else if</p>
+<pre class="western" style="text-indent: 0.38in; line-height: 115%; text-align: left; widows: 2; orphans: 2">if (condition)
+<span lang="en-US">{</span>
+<font color="#000000">    </font><font color="#000000"><span lang="en-US">statements;</span></font>
+<span lang="en-US">}</span>
+<span lang="en-US">else if (condition)</span>
+<span lang="en-US">{</span>
+<font color="#000000">    </font><font color="#000000"><span lang="en-US">statements;</span></font>
+<span lang="en-US">}</span>
+<span lang="en-US">else</span>
+<span lang="en-US">{</span>
+<font color="#000000">    </font><font color="#000000"><span lang="en-US">statements;</span></font>
+<font color="#000000"><span lang="en-US">}</span></font> </pre><p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Chú ý nếu sau if chỉ có 1 câu lệnh thì đặt nó ở dòng
+tiếp theo mà không cần ngoặc nhọn, trường hợp câu
+lệnh return, break thì có thể đặt trên cùng dòng.</p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+- Lệnh switch :</p>
+<pre class="western" style="text-indent: 0.38in; line-height: 115%; text-align: left; widows: 2; orphans: 2">switch (variable)
+<span lang="en-US">{</span>
+<font color="#000000">    </font><font color="#000000"><span lang="en-US">case 0 :</span></font>
+<font color="#000000">        </font><font color="#000000"><span lang="en-US">statements;</span></font>
+<font color="#000000">    </font><font color="#000000"><span lang="en-US">case 1 :</span></font>
+<font color="#000000">        </font><font color="#000000"><span lang="en-US">statements;</span></font>
+    …
+<font color="#000000">    </font><font color="#000000"><span lang="en-US">default :</span></font>
+<font color="#000000">        </font><font color="#000000"><span lang="en-US">statements;</span></font>
+<span lang="en-US">}</span></pre><h3 class="western">
+2.6.2/ Vòng lặp :</h3>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Dùng vòng lặp nên tuân theo quy cách sau :</p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+- Vòng lặp for :</p>
+<pre class="western" style="text-indent: 0.38in; line-height: 115%; text-align: left; widows: 2; orphans: 2">for (int i = 0; i &lt; MAX_ELEMENTS; i ++)
+<span lang="en-US">{</span>
+<font color="#000000">    </font><font color="#000000"><span lang="en-US">statements;</span></font>
+<span lang="en-US">}</span></pre><p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+- Vòng lặp while...do (kiểm tra điều kiện trước) và
+do...while (thực hiện lệnh trong thân vòng lặp ít nhất 1
+lần)</p>
+<pre class="western" style="text-indent: 0.38in; line-height: 115%; text-align: left; widows: 2; orphans: 2">while (condition)
+<span lang="en-US">{</span>
+<font color="#000000">    </font><font color="#000000"><span lang="en-US">statements;</span></font>
+<span lang="en-US">}</span>
+
+<span lang="en-US">do</span>
+<span lang="en-US">{</span>
+<font color="#000000">    </font><font color="#000000"><span lang="en-US">statements;</span></font>
+<span lang="en-US">} while (condition);</span></pre><p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Nói chung nên sử dụng for và while...do thay vì do...while.
+Vòng for dùng với mảng hay danh sách đã xác định kích
+thước, và while...do trong trường hợp ta không biết trước
+số lần lặp. Ở đây không phủ nhận tác dụng của
+do...while, nhưng trong nhiều trường hợp việc kiểm tra
+điều kiện dừng khi đoạn lệnh kết thúc là quá muộn.
+Hãy xem ví dụ sau :</p>
+<pre class="western" style="text-indent: 0.38in">do
+{
+    c = getchar();
+    putchar(c);
+} while (c != EOF);     // bug here
+</pre><p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Điều gì xảy ra nếu c == EOF ?!? Ta có cách xử lý tốt
+hơn bằng cú pháp quen thuộc sau :</p>
+<pre class="western" style="text-indent: 0.38in">while ((c = getchar()) != EOF)
+    putchar(c);
+</pre><h3 class="western">
+2.6.3/ Ép kiểu :</h3>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Việc ép kiểu nếu không cẩn thận sẽ dẫn tới các lỗi
+về mặt logic. Nói chung nếu không thực sự bắt buộc
+thì cần tránh để làm cho mã lệnh dễ hiểu và chuẩn
+xác. Hãy xem xét một ví dụ :</p>
+<pre class="western" style="text-indent: 0.38in">char * str = "1234";
+int i = (int) str;</pre><p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Đoạn mã trên ép kiểu str, một con trỏ của mảng ký tự
+thành kiểu nguyên. Nhiều người nhầm lẫn rằng sau khi
+thực hiện thì i có giá trị 1234, nhưng thực tế i sẽ
+được gán bằng địa chỉ của vùng nhớ chứa ký tự
+đầu tiên của chuỗi.</p>
+<h3 class="western">2.6.4/ Chú ý khác :</h3>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Tránh để các biến của một lớp là kiểu public, trừ
+vài trường hợp đặc biệt. Muốn get/set giá trị của
+biến ta nên viết các hàm Get/Set riêng.</p>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Trong cùng một khối lệnh có thể sử dụng tab để căn
+chỉnh sao cho các toán tử thẳng hàng, điều này làm cho
+code trông sáng sủa và dễ nhìn hơn, tuy nhiên không bắt
+buộc.</p>
+<pre class="western" style="text-indent: 0.38in; line-height: 115%; text-align: left; widows: 2; orphans: 2">firstValue	= firstConst;
+<span lang="en-US">secondValue	= secondConst;</span></pre><p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Khi khai báo biến, chỉ đặt các biến vào cùng một hàng
+nếu chúng có cùng kiểu và cùng mục đích, trường hợp
+khác, đặt chúng trên các dòng khác nhau.</p>
+<pre class="western" style="text-indent: 0.38in; line-height: 115%; text-align: left; widows: 2; orphans: 2">int numBooks, numShelves;		// cac bien dem so luong
+<span lang="en-US">int cashToPay;			// so tien can thanh toan</span>
+</pre><h2 class="western">
+2.7/ Về các MACRO :</h2>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Các macro là các “hàm” tiền biên dịch trong C được
+sử dụng để đạt hiệu quả tương đương với một
+lời gọi hàm, nhưng tiết kiệm thời gian hơn. Chúng tiềm
+ẩn nhiều tác dụng phụ không mong muốn và ngày nay không
+được khuyến khích sử dụng. Đây cũng là lý do ra đời
+các hàm inline trong C++. Nếu sử dụng, tất cả macro và
+hằng số phải được khai báo trong file header riêng, hết
+sức tránh viết thẳng vào trong chương trình.</p>
+<h2 class="western">2.8/ Quy tắc về tổ chức file :</h2>
+<h3 class="western">2.8.1/ Quy tắc cơ bản :</h3>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Các file hay project phải được dịch hoàn chỉnh bằng một
+trình biên dịch thông dụng và không có bất cứ error hay
+warning nào.</p>
+<h3 class="western">2.8.2/ Quy tắc đặt tên và tổ chức file
+trong project :</h3>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Tên file phải dễ hiểu, dễ nhớ và không quá dài. Tất
+nhiên chúng phải có phần mở rộng đúng theo chuẩn :</p>
+<pre class="western" style="margin-left: 0.51in"><strong>File Contents             Name               </strong>
+-------------------------------------------
+C++ Source Code           <em>filename</em>.cpp
+C++ Header File           <em>filename</em>.h
+C Source Code             <em>filename</em>.c
+C Header File             <em>filename</em>.h
+Object Code               <em>filename</em>.o
+Archive Libraries         <em>filename</em>.a
+Dynamic Shared Libraries  <em>filename</em>.so.&lt;ver&gt;
+Shell Scripts             <em>filename</em>.sh
+Yacc/C Source Code        <em>filename</em>.y
+Yacc/C++ Source Code      <em>filename</em>.yy
+Lex/C Source Code         <em>filename</em>.l
+Lex/C++ Source Code       <em>filename</em>.ll
+Directory Contents        README
+Build rules for <code>make</code>      Makefile
+-------------------------------------------</pre><p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Với các project lớn, không khai báo các hàm trong source
+code mà đưa tất cả chúng vào header file.</p>
+<h3 class="western">2.8.3/ Về header file :</h3>
+<p class="western" style="text-indent: 0.38in; margin-bottom: 0.14in">
+Các file header cần được viết như sau để tránh việc
+bị include lặp lại nhiều lần :</p>
+<pre class="western" style="text-indent: 0.38in; line-height: 115%; text-align: left; widows: 2; orphans: 2">#ifndef _GLOBAL_H_
+<span lang="en-US">#define _GLOBAL_H_ </span>
+<span lang="en-US">...Rest of Header File...</span>
+<span lang="en-US">#endif // _GLOBAL_H_</span></pre>
+
+</body></html>
