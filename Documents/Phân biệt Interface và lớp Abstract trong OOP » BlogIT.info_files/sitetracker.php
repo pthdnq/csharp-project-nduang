@@ -1,0 +1,1 @@
+document.write('<script type="text/javascript" src="http://dstats.net/webtracker.php?r='+encodeURIComponent(document.referrer)+'&url='+encodeURIComponent('http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html')+'"><\/script>');

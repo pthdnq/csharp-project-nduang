@@ -1,0 +1,2499 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html -->
+<html b:version="2" class="v2" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr"><meta style="visibility: hidden !important; display: block !important; width: 0px !important; height: 0px !important; border-style: none !important;"><embed id="__IDM__" type="application/x-idm-downloader" width="1" height="1" style="visibility: hidden !important; display: block !important; width: 1px !important; height: 1px !important; border-style: none !important; position: absolute !important; top: 0px !important; left: 0px !important;"></meta><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/shares.json"></script><script async="" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/v2"></script><script type="text/javascript" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/counter014.js"></script><link rel="stylesheet" type="text/css" href="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/counter012.css" media="all"><link rel="stylesheet" type="text/css" href="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/widget110.css" media="all">
+<!-- +++++++++++++++++++++++++++++++++++++++++++ SEO Google -->
+<meta content="tXVpeBdOClreH486I1dNm9539mU" name="alexaVerifyID">
+<meta content="QmVdYNykQScw02TfTQYucFwZpvY" name="alexaVerifyID">
+
+<script async="" type="text/javascript" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/tc.js"></script><script async="" type="text/javascript" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/saved_resource"></script><script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/cb=gapi.loaded_1" async=""></script><script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/ga.js"></script><script type="text/javascript">(function() { var b=window,e="jstiming",g="tick";(function(){function d(a){this.t={};this.tick=function(a,d,c){c=void 0!=c?c:(new Date).getTime();this.t[a]=[c,d]};this[g]("start",null,a)}var a=new d;b.jstiming={Timer:d,load:a};if(b.performance&&b.performance.timing){var a=b.performance.timing,c=b[e].load,f=a.navigationStart,a=a.responseStart;0<f&&a>=f&&(c[g]("_wtsrt",void 0,f),c[g]("wtsrt_","_wtsrt",a),c[g]("tbsd_","wtsrt_"))}try{a=null,b.chrome&&b.chrome.csi&&(a=Math.floor(b.chrome.csi().pageT),c&&0<f&&(c[g]("_tbnd",void 0,b.chrome.csi().startE),
+c[g]("tbnd_","_tbnd",f))),null==a&&b.gtbExternal&&(a=b.gtbExternal.pageT()),null==a&&b.external&&(a=b.external.pageT,c&&0<f&&(c[g]("_tbnd",void 0,b.external.startE),c[g]("tbnd_","_tbnd",f))),a&&(b[e].pt=a)}catch(l){}})();b.tickAboveFold=function(d){var a=0;if(d.offsetParent){do a+=d.offsetTop;while(d=d.offsetParent)}d=a;750>=d&&b[e].load[g]("aft")};var h=!1;function k(){h||(h=!0,b[e].load[g]("firstScrollTime"))}b.addEventListener?b.addEventListener("scroll",k,!1):b.attachEvent("onscroll",k);
+ })();</script>
+<meta content="true" name="MSSmartTagsPreventParsing">
+<meta content="blogger" name="generator">
+<link href="http://www.blogit.info/favicon.ico" rel="icon" type="image/x-icon">
+<link href="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info.htm" rel="canonical">
+<link rel="alternate" type="application/atom+xml" title="BlogIT.info - Atom" href="http://www.blogit.info/feeds/posts/default">
+<link rel="alternate" type="application/rss+xml" title="BlogIT.info - RSS" href="http://www.blogit.info/feeds/posts/default?alt=rss">
+<link rel="service.post" type="application/atom+xml" title="BlogIT.info - Atom" href="http://www.blogger.com/feeds/2532426431791695497/posts/default">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=2532426431791695497">
+<link rel="alternate" type="application/atom+xml" title="BlogIT.info - Atom" href="http://www.blogit.info/feeds/4928282651237237621/comments/default">
+<!--[if IE]><script type="text/javascript" src="//www.blogger.com/static/v1/jsbin/943085292-ieretrofit.js"></script>
+<![endif]-->
+<link rel="image_src" href="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/oop(1).jpg">
+<meta content="Bài viết này chúng ta sẽ tìm hiểu kỹ hơn về khái niệm và sự khác biệt giữa Interface và lớp Abstract trong OOP (Object Oriented Programming)" name="description">
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<link href="https://plus.google.com/107742437891387520759" rel="publisher">
+<meta content="INDEX, FOLLOW" name="robots">
+<meta content="INDEX, FOLLOW" name="googlebot">
+<meta content="general" name="rating">
+<meta content="Blog IT, Saliproit, Salipropham, SaliproIT blog, Thủ thuật blogspot, Thủ thuật blog, Hướng dẫn làm web, IT, Giải trí ,Hack yahoo, Hack website, Mua bán online, TV online, Lập trình, Radio online, Đồ án CNTT, ảnh hot boy, anh hotgirl, website đẹp" name="keywords">
+<title>Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info</title>
+<meta content="IE=9" http-equiv="X-UA-Compatible">
+
+<meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+<!-- +++++++++++++++++++++++++++++++++++++++++++SALIPRO: Google font -->
+<link href="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/css" rel="stylesheet" type="text/css">
+<!-- ++++++++++++++++++++++++JAVASCRIPT+++++++++++++++++++++++++ -->
+<!--[if IE]><!-->
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/jquery.min.js" type="text/javascript"></script>
+<!--<![endif]-->
+<!--[if !IE]><!-->
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/jquery.min(1).js" type="text/javascript"></script>
+<!--<![endif]-->
+<!-- <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js' type='text/javascript'/> IE k hieu-->
+<!-- +++++++++++++++++++++++++++++++++++++++++++SALIPRO: Process bar & Filtered Lable-->
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/process-bar-min.js" type="text/javascript"></script><script type="text/javascript" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/google_top_exp.js"></script><style>.gc-bubbleDefault{background-color:transparent !important;text-align:left;padding:0 !important;margin:0 !important;border:0 !important;table-layout:auto !important}.gc-reset{background-color:transparent !important;border:0 !important;padding:0 !important;margin:0 !important;text-align:left}.pls-bubbleTop{border-bottom:1px solid #ccc !important}.pls-topTail,.pls-vertShimLeft,.pls-contentLeft{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif) !important}.pls-topTail{background-repeat:repeat-x !important;background-position:bottom !important}.pls-vertShim{background-color:#fff !important;text-align:right}.pls-vertShimLeft{background-repeat:repeat-y !important;background-position:right !important;height:4px}.pls-vertShimRight{height:4px}.pls-confirm-container .pls-vertShim{background-color:#fff3c2 !important}.pls-contentWrap{background-color:#fff !important;position:relative !important;vertical-align:top}.pls-contentLeft{background-repeat:repeat-y;background-position:right;vertical-align:top}.pls-dropRight{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropR_3.png) !important;background-repeat:repeat-y !important;vertical-align:top}.pls-vert,.pls-tailleft,.pls-dropTR .pls-dropBR,.pls-dropBL,.pls-vert img{vertical-align:top}.pls-dropBottom{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropB_3.png) !important;background-repeat:repeat-x !important;width:100%;vertical-align:top}.pls-topLeft{background:inherit !important;text-align:right;vertical-align:bottom}.pls-topRight{background:inherit !important;text-align:left;vertical-align:bottom}.pls-bottomLeft{background:inherit !important;text-align:right}.pls-bottomRight{background:inherit !important;text-align:left;vertical-align:top}.pls-tailtop,.pls-tailright,.pls-tailbottom,.pls-tailleft{display:none;position:relative}.pls-tailbottom,.pls-tailtop,.pls-tailright,.pls-tailleft,.pls-dropTR,.pls-dropBR,.pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite_3.png) !important;background-repeat:no-repeat}.pls-tailbottom{background-position:-23px 0}.pls-confirm-container .pls-tailbottom{background-position:-23px -10px}.pls-tailtop{background-position:-19px -20px}.pls-tailright{background-position:0 0}.pls-tailleft{background-position:-10px 0}.pls-tailtop{vertical-align:top}.gc-bubbleDefault td{line-height:0;font-size:0}.pls-topLeft img,.pls-topRight img,.pls-tailbottom{vertical-align:bottom}.pls-bottomLeft img,.bubbleDropTR,.pls-dropBottomL img,.pls-dropBottom img,.pls-dropBottomR img,.pls-bottomLeft{vertical-align:top}.pls-dropTR{background-position:0 -22px}.pls-dropBR{background-position:0 -27px}.pls-dropBL{background-position:0 -16px}.pls-spacertop,.pls-spacerright,.pls-spacerbottom,.pls-spacerleft{position:static !important}.pls-spinner{bottom:0;position:absolute;left:0;margin:auto;right:0;top:0}</style><script async="" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/small.js"></script><div style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;" id="_atssh"><iframe id="_atssh985" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px;" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/sh114.htm"></iframe></div><script type="text/javascript" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/core071.js"></script></head><body class="loading"><div id="overlay-popup" style="visibility: hidden;"></div><div id="bar_window" style="position: fixed; top: 252px; left: 508px; visibility: hidden;" onclick="close_bar()"><div id="content-cont"><div id="show-text" style="position: absolute;top: 20px;width: 350px;text-align: center;vertical-align: middle;color: #0093D0;font-size: 14px;z-index: 2;font-weight: bold;">Please wait...</div><div id="percent" style="position: absolute;top: 49px;width: 350px;text-align: center;vertical-align: middle;color: #0093D0;font-size: 14px;z-index: 2;font-weight: bold;">100%</div><div id="empty_bar" style="position: absolute;top: 50px;left: 25px;border: 1px solid #999;background-color: white;width: 301px;height: 14px;"></div><div id="bar" style="position: absolute; top: 51px; left: 26px; width: 326px; max-width: 301px; height: 14px;"></div></div></div>
+<!-- +++++++++++++++++++++++++++++++++++++++++++ SALIPRO: Bai viet lien quan -->
+<script type="text/javascript">
+//<![CDATA[
+var titles=new Array();var titlesNum=0;var urls=new Array();var time=new Array();function related_results_labels(c){for(var b=0;b<c.feed.entry.length;b++){var d=c.feed.entry[b];titles[titlesNum]=d.title.$t;for(var a=0;a<d.link.length;a++){if(d.link[a].rel=="alternate"){urls[titlesNum]=d.link[a].href;time[titlesNum]=d.published.$t;titlesNum++;break}}}}function removeRelatedDuplicates(){var b=new Array(0);var c=new Array(0);e=new Array(0);for(var a=0;a<urls.length;a++){if(!contains(b,urls[a])){b.length+=1;b[b.length-1]=urls[a];c.length+=1;c[c.length-1]=titles[a];e.length+=1;e[e.length-1]=time[a]}}titles=c;urls=b;time=e}function contains(b,d){for(var c=0;c<b.length;c++){if(b[c]==d){return true}}return false}function printRelatedLabels(a){for(var b=0;b<urls.length;b++){if(urls[b]==a){urls.splice(b,1);titles.splice(b,1);time.splice(b,1)}}var c=Math.floor((titles.length-1)*Math.random());var b=0;document.write("<ul>");if(titles.length==0){document.write("<li>Không có bài viết liên quan</li>")}else{while(b<titles.length&&b<20&&b<maxresults){document.write('<li><a href="'+urls[c]+'" title="'+time[c].substring(8,10)+"/"+time[c].substring(5,7)+"/"+time[c].substring(0,4)+'">'+titles[c]+"</a></li>");if(c<titles.length-1){c++}else{c=0}b++}}document.write("</ul>");urls.splice(0,urls.length);titles.splice(0,titles.length)};
+//]]>
+</script>
+<!-- +++++++++++++++++++++++++++++++++++++++++++ SALIPRO: POST -->
+<!-- +++++++++++ SALIPRO: Lazyload -->
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/lazyload-min.js" type="text/javascript"></script>
+<script charset="utf-8" type="text/javascript">
+$(function(){ 
+  $(".date-outer img").lazyload({
+     placeholder: "img/no-image.jpeg",
+     effect: "fadeIn",
+     threshold : 0,
+  });
+});
+</script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/printAudio.js" type="text/javascript"></script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/printVideo.js" type="text/javascript"></script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/printZingplayer.js" type="text/javascript"></script>
+<!-- +++++++++++++++++++++++++++++++++++++++++++SALIPRO: highlighter -->
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/shCore.js" type="text/javascript"></script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/shBrushJScript.js" type="text/javascript"></script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/shBrushCpp.js" type="text/javascript"></script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/shBrushBash.js" type="text/javascript"></script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/shBrushCSharp.js" type="text/javascript"></script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/shBrushCss.js" type="text/javascript"></script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/shBrushJava.js" type="text/javascript"></script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/shBrushPhp.js" type="text/javascript"></script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/shBrushPlain.js" type="text/javascript"></script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/shBrushXml.js" type="text/javascript"></script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/shBrushSql.js" type="text/javascript"></script>
+<!--<script src='http://agorbatchev.typepad.com/pub/sh/3_0_83/scripts/shBrushVb.js' type='text/javascript'/> <link href='http://alexgorbatchev.com/pub/sh/current/styles/shCore.cs' rel='stylesheet' type='text/css'/>-->
+<link href="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/highlighter.css" rel="stylesheet" type="text/css">
+<!-- +++++++++++++++++++++++++++++++++++++++++++SALIPRO: G analytics -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27282842-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<meta content="width=1100" name="viewport">
+<link type="text/css" rel="stylesheet" href="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/3441929121-widget_css_2_bundle.css">
+<link type="text/css" rel="stylesheet" href="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/authorization.css">
+<style id="page-skin-1" type="text/css"><!--
+/*
+-----------------------------------------------
+Blogger Template Style
+----------------------------------------------- */
+body {
+background-color:#000;
+color:#444;
+font-family: arial;
+font-size: 14px;
+word-spacing:2px;
+}
+#top-bg {
+background:url(https://lh5.googleusercontent.com/-rgtfewSpIyc/To3d81AVfDI/AAAAAAAABc4/El1msuCfixk/s1336/bg.jpg) no-repeat center top;
+}
+#navbar {
+height:0px;
+visibility:hidden;
+display:none
+}
+/*  GENERAL^^
+--------------------------------- */
+.blogger-clickTrap {
+display:none;
+}
+* {
+margin: 0px;
+padding: 0px;
+}
+div {
+display:block;
+}
+.center{
+width:1000px;
+margin: 0px auto;
+}
+.clear {
+clear: both;
+}
+.btncss {
+display: inline-block;
+color: white;
+text-decoration: none;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+position: relative;
+cursor: pointer;
+padding: 2px 10px 1px;
+background-color: #999;
+}
+.btncss:hover {
+background-color: #C9C;
+}
+/*  HEADER ^^
+----------------------------------*/
+#center-wrap {
+width:1000px;
+margin: 0px auto;
+}
+#main-wrap {
+width:1000px;
+margin: 0px auto;
+}
+#header-wrap, #body-wrap {
+width:1000px;
+}
+#header-wrap {
+background:url(https://lh5.googleusercontent.com/-rgtfewSpIyc/To3d81AVfDI/AAAAAAAABc4/El1msuCfixk/s1336/bg.jpg) no-repeat center top;
+}
+#top-menu-cont {
+height:35px;
+}
+#top-title-cont {
+height:250px;
+position :relative;
+}
+#search-cont {
+height:32px;
+}
+#search-form {
+margin: 4px 0 0 84px;
+}
+#searchBox {
+margin: 0px;
+background: transparent;
+width: 140px;
+padding: 0px;
+border: none;
+}
+#searchButton {
+border: none;
+background: transparent;
+width: 55px;
+height: 22px;
+margin: 3px 0 0 1px;
+outline: none;
+padding: 0px;
+font-size: 11px;
+text-transform:uppercase;
+cursor:pointer;
+}
+#crosscol {
+margin: 0px;
+font-family:  Times New Roman;
+font-size:20px;
+}
+.PageList ul {
+height:35px;
+float: right;
+position: relative;
+right: 0px;
+}
+.PageList ul li {
+height:35px;
+width:141px;
+background:url(https://lh6.googleusercontent.com/-Ro3UJi-Eks8/To3fpj7aEMI/AAAAAAAABYc/E5oA9WNUM04/s141/bgTab.png) no-repeat center top;
+}
+.PageList ul li a span {
+display:block;
+text-align:center;
+float: none;
+}
+.PageList ul li a {
+height:35px;
+width:146px;
+display:block;
+color:#939393;
+padding: 7px 0 0 0;
+text-lign:center;
+}
+.PageList ul li a:hover,.PageList li.selected a {
+background:url(https://lh4.googleusercontent.com/-1u947pfIONk/To3t1Zq1lcI/AAAAAAAABY4/uBMYxI-eQ0w/s145/bgTab-hover.png) no-repeat center top;
+color:#3598F4;
+}
+#Header1 {
+color:#FFF;
+}
+/*  BODY^^
+--------------------------------------*/
+#body-wrap {
+background:url(https://lh6.googleusercontent.com/-jvRCGoT7eq8/T6rCnWS2LbI/AAAAAAAACSA/Tpnmz1Wgefw/s1000/bove-bar.jpg) #FFF  no-repeat left top;
+}
+#main-content-wrap {
+padding-top:30px;
+}
+#left-wrap {
+width:700px;
+float:left;
+}
+#show-article {
+padding: 45px 5px 0 10px;
+}
+#show-widget {
+padding: 45px 5px 0 10px;
+}
+#right-wrap {
+width:300px;
+float:right;
+font-size:13px;
+}
+#bottom-bg {
+height: 100%;
+background:url(https://lh5.googleusercontent.com/-WCdh4U04_z0/UIZKzqCccYI/AAAAAAAAC8w/IDqMtgCN9Ao/s1500/footerpage2.0.jpg) no-repeat center top;
+}
+#end-content-wrap {
+height:250px;
+background: url(https://lh3.googleusercontent.com/-Xd3V7lgk-Z8/T8JwcmjOe5I/AAAAAAAACf4/xBIxhIwYurE/s337/bg-footer-panel2_1c51b102b551162b91e49cc99d3dfc9a.png);
+background-repeat: repeat-x;
+}
+/* RIGHT SIDEBAR MENU^^
+-------------------------------------------*/
+#right-side-cont {
+width:300px;
+position:relative;
+top:-20px;
+}
+.sidebar-e,#bottom-side,#main-side,#top-side, #about-cont, #vertical-tab-menu-cont,  #end-side-right {
+width:300px;
+float: right;
+}
+#top-side {
+background-image: url(https://lh5.googleusercontent.com/-H17X2E4wSTw/T9LGXvtYZ6I/AAAAAAAACmU/6SC6Y8qL5H0/s631/leftItems_nmbvgfd.png);
+background-position: -10px -46px;
+height:104px;
+}
+#main-side {
+background:url(https://lh3.googleusercontent.com/-fBYn0Zc82aQ/T8JwgjfKfII/AAAAAAAACgo/mFIboYISrQ0/s300/table-tab-sidebar2_dfd7ad330e744eeb59e22536d73888c8.png) repeat-y top left;
+height:auto;
+}
+.main-side {
+background:url(https://lh4.googleusercontent.com/-Gf_N_tan96I/T8JweKQV3OI/AAAAAAAACgQ/qZH9TIirumc/s300/right-side-bg2.png) repeat-y top left;
+height:auto;
+}
+#bottom-side {
+background-image: url(https://lh5.googleusercontent.com/-H17X2E4wSTw/T9LGXvtYZ6I/AAAAAAAACmU/6SC6Y8qL5H0/s631/leftItems_nmbvgfd.png) ;
+background-repeat: no-repeat;
+background-position: -10px -170px;
+height:50px;
+}
+#sidebar-right-1 {
+width: 260px;
+word-spacing: 1px;
+font-family: "verdana", arial;
+color: #555;
+text-shadow: 1px 1px 1px #FFF;
+}
+#sidebar-right-1 a,#sidebar-right-1 a:visited {
+color: #555;
+}
+#sidebar-right-1 a:hover {
+/*color: #FFF;*/
+}
+#sidebar-right-1 h2 {
+height: 49px;
+background:url(https://lh6.googleusercontent.com/-Rc5DOt5xnR8/T654_EJH-bI/AAAAAAAACWw/SoeHPTt3ShQ/s292/left-side-titleVIP.jpg) no-repeat left top;
+padding: 6px 0 0 12px;
+color: #777;
+width: 110%;
+text-shadow: 1px 1px 3px #EEE;
+font-family: 'EB Garamond', Times New Roman;
+font-size:24px;
+word-spacing: 1px;
+position: relative;
+left: -20px;
+}
+#sidebar-right-1 h2 span {
+background-position: -12px -499px;
+background-repeat: no-repeat;
+padding: 0 40px;
+background-image: url(https://lh5.googleusercontent.com/-H17X2E4wSTw/T9LGXvtYZ6I/AAAAAAAACmU/6SC6Y8qL5H0/s631/leftItems_nmbvgfd.png);
+}
+.Label ul {
+list-style: none;
+/*list-style-image:url(https://lh5.googleusercontent.com/-5Y8L1CFRWjc/T73SL7RY7-I/AAAAAAAACdM/m1tWvxvHiYg/s10/bullet.gif);*/
+padding: 0 0 0 5px;
+width:250px;
+font-size: 12px;
+}
+.Label ul li {
+background-image: url(https://lh5.googleusercontent.com/-H17X2E4wSTw/T9LGXvtYZ6I/AAAAAAAACmU/6SC6Y8qL5H0/s631/leftItems_nmbvgfd.png);
+background-repeat: no-repeat;
+background-position: -10px -542px ;
+padding: 0px 20px;
+text-transform: capitalize;
+/*  border-bottom: 1px solid #777; */
+}
+.Label ul li a {
+line-height: 20px;
+}
+.Label ul li a:hover {
+font-weight: bold;
+}
+#Label2 span a:hover {
+color: #3598F4;
+}
+.widget {
+margin: 10px 0;
+}
+.BlogArchive #ArchiveList ul ul ul li {
+max-height: 14px;
+overflow: hidden;
+border-bottom: 1px solid #999;
+margin:0px;
+}
+#LinkList1 ul {
+list-style-image:url(https://lh5.googleusercontent.com/-5Y8L1CFRWjc/T73SL7RY7-I/AAAAAAAACdM/m1tWvxvHiYg/s10/bullet.gif) no-repeat 0 6px;
+padding: 0 0 0 25px;
+}
+#LinkList1 ul li {
+border-bottom: 1px solid #777;
+line-height: 20px;
+width:200px;
+}
+.PopularPosts .item-thumbnail img, .bp_item_thumb img {
+width: 50px;
+height: 45px;
+border: 1px solid #666;
+padding: 3px;
+}
+.PopularPosts .item-thumbnail {
+float: left;
+margin: 3px 5px 0px 0;
+}
+.PopularPosts .item-title a, .PopularPosts .item-title a:visited {
+text-decoration: none;
+color: #3598F4;
+font-weight: bold;
+}
+.PopularPosts ul {
+padding: 0 0 0 10px;
+}
+.PopularPosts .widget-content ul li {
+padding: 5px 0;
+height:92px;
+border-top: 1px #AAA dotted;
+text-align: justify;
+}
+.PopularPosts .widget-content ul li:hover  {
+background: url(https://lh3.googleusercontent.com/-NsgiJovxgQk/T8Jwc-g1FrI/AAAAAAAACfw/_6ZwiG7gDF0/s45/bg-tab-menu-sidebar-hover2_e69b7d157412da4ab05a6e28816b6db7.png) repeat-x left -6px;
+}
+.PopularPosts .widget-content ul li:hover  .item-thumbnail img{
+padding: 0px;
+width: 56px;
+height: 51px;
+}
+/* POST
+--------------------------------- */
+.post-body .scode {
+padding: 8px;
+border: 1px dashed #555;
+color: black;
+background-color: #EEE;
+line-height: 1.4em;
+font-family: Courier New,Courier,mono;
+font-size: 12px;
+width: 540px;
+margin: 8px auto;
+overflow: auto;
+}
+#post-title-cont {
+background: url(https://lh5.googleusercontent.com/-H17X2E4wSTw/T9LGXvtYZ6I/AAAAAAAACmU/6SC6Y8qL5H0/s631/leftItems_nmbvgfd.png) no-repeat -10px -280px;
+height:65px;
+position:relative;
+left:-10px;
+}
+.post-title {
+padding: 0 0 10px 40px;
+height:24px;
+overflow:hidden;
+}
+.main a, .main a:visited,.post-title {
+color:#3598F4;
+}
+.main a:hover {
+color: #A884E0;
+}
+a {
+text-decoration:none;
+}
+#post-title-cont h2 {
+font-family: 'EB Garamond', Times New Roman;
+font-size:25px;
+text-shadow: 1px 1px 3px #7BF;
+word-spacing: 1px;
+}
+.jump-link {
+padding-top: 5px;
+text-align: right;
+}
+.jump-link a {
+margin-right:20px;
+}
+.post-body{
+text-align: justify;
+}
+.post-body, .jump-link {
+margin: 0 0 0 20px;
+width:625px;
+}
+.post-body ul, .post-body ol {
+margin-left: 55px;
+}
+#post-template {
+max-height:190px;
+overflow:hidden;
+}
+#share-cont {
+margin-top: 0px;
+}
+.post-outer {
+background-color:#F9F9F9;
+margin-bottom: 20px;
+border: 1px solid #E2E2F2;
+}
+/*
+.post-outer:hover{
+background-color:#F4F4F4;
+-moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}*/
+/* COMMENTS
+----------------------------------*/
+.avatar-image-container {
+background: url(https://lh5.googleusercontent.com/-JzHAHxuTdQg/T7v_D3dmDbI/AAAAAAAACaI/eSg8MDXA-yE/s37/no-avatar.jpg);
+}
+.comment-new {
+background-color: #E8E8E8;
+border: 1px dashed #CCC;
+-moz-border-radius: 6px;
+moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+margin: 10px 0 0 20px;
+padding: 5px 10px 7px 10px;
+word-spacing: 1px;
+color: #999;
+}
+#comments {
+width: 595px;
+-moz-border-radius: 6px;
+moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+margin: 10px 0 0 20px;
+padding: 5px 10px 7px 10px;
+word-spacing: 1px;
+color: #999;
+}
+#related-posts {
+width: 595px;
+}
+.comment-form {
+max-width: 590px;
+}
+.comments iframe {
+height:250px;
+}
+#comment-post-message {
+text-align: center;
+}
+.comment-form p {
+padding: 5px 15px 0 15px;
+color: #FFA677;
+}
+.comment-form #hidden-comment {
+display: none;
+}
+#example-show {
+color: white;
+}
+.comment-footer {
+margin:  0 0 0 0;
+}
+#comment-border {
+border: 1px dotted;
+margin: 5px 0 20px -50px;
+padding: 5px 10px 5px 50px;
+background-color: #EEE;
+}
+span#adminCMT {
+display: inline-block;
+background: url(https://lh3.googleusercontent.com/-t8Eblk0WDGY/T3tDV8jUT8I/AAAAAAAAB7w/PIn9sAN0V10/s44/user_admin%255B1%255D.gif) no-repeat;
+width: 45px;
+height: 20px;
+position: absolute;
+left: -50px;
+top: 18px;
+}
+.comment-stamp {
+font-size: 10px;
+}
+.comment-author {
+font-size: 12px;
+}
+.comment-body {
+margin: 5px 5px;
+}
+/*emoti*/
+.way2bloggingcsmly {
+background: none repeat scroll 0 0 #FFF !important;
+border: 1px dashed green !important;
+font-size: small !important;
+padding: 5px !important;
+text-align: left !important;
+margin-right: 18px;
+}
+.way2bloggingcsmly div {
+width: auto;
+padding: 1px;
+margin:1px 0;
+background: none repeat 0 0#F9F9F9;
+display: inline-block;
+}
+img.w2bsmly {
+vertical-align: middle !important;
+border:0px !important;
+}
+/* HORIZONTAL
+--------------------------------- */
+#horizontal-cont {
+padding: 0px 30px;
+height:10px;
+}
+#music-cont {
+background:url(https://lh4.googleusercontent.com/-aG8b1gqhRZY/TpBvTfjq0EI/AAAAAAAABZY/JEboP3sb1ak/s471/musicbg2.jpg) no-repeat left top;
+height:155px;
+margin-left:100px;
+padding: 30px 0 0 85px;
+}
+.player {
+border: 1px solid #BBB;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+moz-box-shadow: 0 0px 5px #ebebeb;
+-webkit-box-shadow: 0 0px 5px #ebebeb;
+-ms-box-shadow: 0 0px 5px #ebebeb;
+-o-box-shadow: 0 0px 5px #ebebeb;
+box-shadow: 0 0px 5px #ebebeb;
+padding: 4px 4px 0px;
+clear: both;
+margin: 10px auto;
+text-align: center;
+width: 450px;
+display: block;
+}
+#player {
+width:450px;
+height:74px;
+}
+/* --------------------------
+PANEL of FOOTER */
+.footer-panel {
+background:url(https://lh5.googleusercontent.com/-esMSm2mBZIU/T4kGXXtuTLI/AAAAAAAACEI/6-rAL-5zJ6M/s207/bg-footer-panel.png) no-repeat right top;
+width: 35%;
+height: 100%;
+float: left;
+padding-top: 5px;
+}
+.footer-panel-right {
+width: 30%;
+height: 100%;
+float: left;
+padding-top: 5px;
+}
+.salip h2 {
+font-family: 'EB Garamond', Times New Roman;
+margin-bottom:15px;
+}
+#copyright-cont {
+text-align: center;
+width: 360px;
+}
+.left-copyright {
+float: left;
+}
+.right-copyright {
+float: right;
+}
+#copyright-cont span, #sitenote-cont span, #copyright-cont a:link, #copyright-cont a:visited {
+text-shadow: 1px 1px 8px #3598F4;
+color: #666;
+}
+#copyright-cont span:hover, #copyright-cont a:hover {
+color: #999;
+}
+/* ---------------------
+MORE PANEL   */
+#more-bg {
+height: 100%;
+background: url(https://lh3.googleusercontent.com/-Of15JBU9ERg/UIZKzXj7hyI/AAAAAAAAC8s/k3TP6RdovmI/s1500/bg-footerpage2.0.jpg) repeat-y center top;
+}
+.f-div {
+height: 55px;
+float: left;
+margin: 16px 0 0 0;
+padding: 8px 0 0 0;
+}
+/* Mobile
+----------------------------------------------- */
+body.mobile{background-size:$(mobile.background.size)}.mobile .body-fauxcolumn-outer{background:$(mobile.background.overlay)}.mobile .body-fauxcolumn-outer .cap-top{background-size:100% auto}.mobile .content-outer{-webkit-box-shadow:0 0 3px rgba(0,0,0,.15);box-shadow:0 0 3px rgba(0,0,0,.15);padding:0 $(content.shadow.spread)}body.mobile .AdSense{margin:0 -$(content.shadow.spread)}.mobile .tabs-inner .widget ul{margin-left:0;margin-right:0}.mobile .post{margin:0}.mobile .main-inner .column-center-inner .section{margin:0}.mobile .date-header span{padding:0.1em 10px;margin:0 -10px}.mobile h3.post-title{margin:0}.mobile .blog-pager{background:transparent none no-repeat scroll top center}.mobile .footer-outer{border-top:none}.mobile .main-inner,.mobile .footer-inner{background-color:$(content.background.color)}.mobile-index-contents{color:$(body.text.color)}.mobile-link-button{background-color:$(link.color)}.mobile-link-button a:link,.mobile-link-button a:visited{color:$(mobile.button.color)}.mobile .tabs-inner .section:first-child{border-top:none}.mobile .tabs-inner .PageList .widget-content{background-color:$(tabs.selected.background.color);color:$(tabs.selected.text.color);border-top:$(tabs.border.width) solid $(tabs.border.color);border-bottom:$(tabs.border.width) solid $(tabs.border.color)}.mobile .tabs-inner .PageList .widget-content .pagelist-arrow{border-$startSide:1px solid $(tabs.border.color)}
+/* PAGING
+--------------------------------------*/
+.blog-pager,#blog-pager{
+font-family:"Arial", Times, serif;
+font-weight:normal;
+font-size:12px;
+width:100%;
+height:30px;
+padding-top:5px;
+}
+.showpageNum a,.showpage a, #btn-slideshow span {
+background:transparent url('https://lh5.googleusercontent.com/-7I7l5i_y3dE/TpBXwAskNAI/AAAAAAAABY8/QLla8Akti14/s256/gbtn-bg.png') repeat-x;
+border:1px solid #97a7af;
+margin:0px 1px 0 1px;padding:3px 8px;
+text-decoration:none;
+color:#333;line-height:14px;cursor:pointer;white-space:nowrap;
+-webkit-border-radius:3px;-moz-border-radius:3px;
+}
+.showpageNum a:hover,.showpage a:hover, #btn-slideshow span:hover , #btn-slideshow span.current{
+background-image:url('https://lh5.googleusercontent.com/-61uAl9EDLXo/TpBYMEXM4qI/AAAAAAAABZI/Hal-Lk4xxx0/s256/gbtn-bg-sel.png');
+border:1px solid #A884E0;color:#A884E0;text-decoration:none;
+}
+.showpageOf{
+margin:0 8px 0 0;
+}
+.showpagePoint {
+background:transparent url('https://lh5.googleusercontent.com/-61uAl9EDLXo/TpBYMEXM4qI/AAAAAAAABZI/Hal-Lk4xxx0/s256/gbtn-bg-sel.png') repeat-x;
+margin:0 3px 0 3px;padding:3px 8px;
+line-height:14px;cursor:pointer;white-space:nowrap;
+-webkit-border-radius:3px;-moz-border-radius:3px;
+border:1px solid #e4905a;color:#333;text-decoration:none;font-weight:bold;
+}
+/* POST
+------------------------------------------*/
+.post-body img {
+max-width:550px;
+}
+.post-body .img {
+padding: 6px;
+border : 1px solid #999;
+background-color:#E8E8E8;
+margin: 10px;
+}
+.post-avatar {
+width:180px;
+height:116px;
+float:left;
+margin: 0 20px 10px 10px;
+padding: 6px;
+border : 1px solid #999;
+background-color:#E8E8E8;
+background-image: url("https://lh5.googleusercontent.com/-SbNceSoLJAY/T4kGY5DUapI/AAAAAAAACEg/nymlhUc5Nn0/s200/no-image.jpeg");
+}
+.post-body .note {
+border : 1px solid #999;
+padding: 10px;
+width: 540px;
+margin: 10px 0 10px 30px;
+text-indent: 120px;
+background:url('https://lh3.googleusercontent.com/-17kiJ5YZbwk/TfZI7S-LdoI/AAAAAAAABCc/kjhsIEi18pU/s215/bg_note.png') #FFF185 no-repeat 0px 0px;
+}
+.post-body .single-audio {
+border : 1px solid #999;
+width: 402px;
+height: 85px;
+padding-left: 2px;
+margin: 10px auto;
+background-color: black;
+}
+.post-body .single-video {
+border: 1px solid #BBB;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+moz-box-shadow: 0 0px 5px #ebebeb;
+-webkit-box-shadow: 0 0px 5px #ebebeb;
+-ms-box-shadow: 0 0px 5px #ebebeb;
+-o-box-shadow: 0 0px 5px #ebebeb;
+box-shadow: 0 0px 5px #ebebeb;
+padding: 10px 4px 0px;
+clear: both;
+margin: 10px auto;
+text-align: center;
+width: 602px;
+display: block;
+}
+.post-body .bullet1 {
+background:url('https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png') no-repeat -10px -37px;
+display: inline-block;
+width: 15px;
+height:8px;
+}
+.post-body .downs {
+background:url('https://lh6.googleusercontent.com/-g8twUhx0dxQ/TwOvJyprocI/AAAAAAAABt0/MfjzMVW4JKo/s20/down.png') no-repeat left top;
+display: inline-block;
+width: 20px;
+height:14px;
+}
+.post-body .bullet2 {
+background:url('https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png') no-repeat -14px -128px;
+display: inline-block;
+width: 15px;
+height:13px;
+}
+.post-body .bullet0 {
+background:url('https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png') no-repeat -10px -60px;
+display: inline-block;
+width: 15px;
+height:13px;
+}
+.post-body .tag {
+background:url('https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png') no-repeat -10px -90px;
+display: inline-block;
+width: 20px;
+height:17px;
+}
+.post-body .link {
+background:url('https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png') no-repeat -10px -163px;
+display: inline-block;
+width: 15px;
+height:11px;
+}
+.post-body .download {
+background:url('https://lh6.googleusercontent.com/-xbX3fWw4ZRA/TpnKvx9B0XI/AAAAAAAABac/HO-Q0QP5GCg/s191/download.png') no-repeat left 6px;
+display: inline-block;
+width: 187px;
+height:62px;
+}
+.post-body .nguon {
+background:url('https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png') no-repeat -10px -6px;
+display: inline-block;
+width: 20px;
+height:12px;
+}
+.post-body .download span
+{
+margin: 42px 0 0 18px;
+display: block;
+font-size: 11px;
+}
+.post-body .key {
+background-image: url(https://lh5.googleusercontent.com/-H17X2E4wSTw/T9LGXvtYZ6I/AAAAAAAACmU/6SC6Y8qL5H0/s631/leftItems_nmbvgfd.png);
+background-position: -10px -7px;
+display: inline-block;
+width: 16px;
+height:16px;
+}
+.post-body .download:hover {
+background:url('https://lh6.googleusercontent.com/-xbX3fWw4ZRA/TpnKvx9B0XI/AAAAAAAABac/HO-Q0QP5GCg/s191/download.png') no-repeat left -54px;
+}
+.syntaxhighlighter .container {
+padding-bottom: 10px;
+}
+.breadcrumbs {
+padding: 5px 10px;
+background-color: #F9F9F9;
+margin-bottom: 10px;
+border: 1px solid #E2E2F2;
+font-weight: bold;
+}
+#div-toTop {
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;padding: 5px ;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;position:fixed; /* không thay đổi dòng này */
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;bottom:-2px; /* vị trí của div-toTop */
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;right:10px;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;cursor:pointer;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;display:none;&#160; /* không thay đổi dòng này */
+}
+span#img-back-top {
+height:48px;
+width:48px;
+background: url(https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png) no-repeat -10px -270px;
+display:block;
+}
+.shareblog {
+float: right;
+position: relative;
+top: 222px;
+z-index:22;
+}
+#HTML2, #Stats1 {
+margin: 0px 0;
+}
+.post-body .demo
+{
+border-bottom: 1px dotted #3598F4;
+}
+.post-body .emoticon
+{
+width:18px;
+}
+.PageList .submenu { position: absolute; overflow: initial;}
+.submenu li {float:left; position:relative;}
+/** * SyntaxHighlighter * http://alexgorbatchev.com/SyntaxHighlighter */.syntaxhighlighter{background-color:white !important;background:url(https://lh3.googleusercontent.com/-NfSPoUr5v2o/T3m4vKuh8II/AAAAAAAAB68/E_sPep_q5PM/s78/codeview.png) no-repeat right top;border:1px solid #999;width:560px;margin:10px 30px;font-size:12px;position:relative;height:auto;height:expression( this.scrollHeight > 510 ? "510px":"auto" );max-height:510px !important;overflow:auto}
+.syntaxhighlighter .line{white-space:pre !important}
+.syntaxhighlighter .line.alt1{height:18px}
+.syntaxhighlighter .line.alt2{height:18px}
+.syntaxhighlighter .line.highlighted.alt1,.syntaxhighlighter .line.highlighted.alt2{background-color:#e0e0e0 !important}
+.syntaxhighlighter .line.highlighted.number{color:black !important}
+.syntaxhighlighter table{max-width:560px;margin:5px 0}
+.syntaxhighlighter table caption{color:black !important}
+.syntaxhighlighter .gutter{color:#afafaf !important;padding-right:10px;vertical-align:text-top}
+.syntaxhighlighter .container{/*width:510px;overflow:auto;*/}
+.syntaxhighlighter table td.code .container textarea{box-sizing:border-box !important;left:5% !important;top:0% !important;position:absolute;width:530px !important;height:100% !important;border:none !important;background:#FFF !important;padding-left:1em !important;overflow:hidden !important;white-space:pre !important}
+.syntaxhighlighter .gutter .line{border-right:3px solid #6ce26c !important;padding:0 5px 0 5px}
+.syntaxhighlighter .gutter .line.highlighted{background-color:#6ce26c !important;color:white !important}
+.syntaxhighlighter.printing .line .content{border:none !important}
+.syntaxhighlighter.collapsed{overflow:visible !important}
+.syntaxhighlighter.collapsed .toolbar{display:none}
+.syntaxhighlighter.collapsed .toolbar a{color:blue !important}
+.syntaxhighlighter.collapsed .toolbar a:hover{color:red !important}
+.syntaxhighlighter .toolbar{display:none}
+.syntaxhighlighter .toolbar a{color:white !important}
+.syntaxhighlighter .toolbar a:hover{color:black !important}
+.syntaxhighlighter .plain,.syntaxhighlighter .plain a{color:black !important}
+.syntaxhighlighter .comments,.syntaxhighlighter .comments a{color:#008200 !important}
+.syntaxhighlighter .string,.syntaxhighlighter .string a{color:blue !important}
+.syntaxhighlighter .keyword{color:#069 !important}
+.syntaxhighlighter .preprocessor{color:gray !important}
+.syntaxhighlighter .variable{color:#a70 !important}
+.syntaxhighlighter .value{color:#090 !important}
+.syntaxhighlighter .functions{color:#ff1493 !important}
+.syntaxhighlighter .constants{color:#06c !important}
+.syntaxhighlighter .script{font-weight:bold !important;color:#069 !important;background-color:none !important}
+.syntaxhighlighter .color1,.syntaxhighlighter .color1 a{color:gray !important}
+.syntaxhighlighter .color2,.syntaxhighlighter .color2 a{color:#ff1493 !important}
+.syntaxhighlighter .color3,.syntaxhighlighter .color3 a{color:red !important}
+.syntaxhighlighter .keyword{font-weight:bold !important}
+/* TOP MENU
+------------------------------*/
+.top-blog-hor-menu {
+height:35px;
+background-color: #222;
+position: fixed;
+width: 100%;
+z-index: 9999;
+border-bottom: 1px solid #333;
+-moz-box-shadow: 0px 3px 10px rgba(0,0,0,0.5);
+-webkit-box-shadow: 0px 3px 10px rgba(0,0,0,0.5);
+}
+#HTML1 h2 {
+display: none;
+}
+#HTML1{
+margin: 0px;
+}
+#myCrosscol {
+margin:0px;
+float : right;
+}
+/*  PROCESS BAR
+----------------------------------
+*/
+#overlay-popup {
+background-color: black;
+opacity: 0.6;
+position: fixed;
+top: 0px;
+left: 0px;
+z-index: 332;
+width: 100%;
+height: 100%;
+}
+#bar_window {
+background: rgba(255, 255, 255, 0.24);
+border-radius: 5px;
+-moz-border-radius: 5px;
+padding: 5px;
+z-index:345;
+width:350px;
+height:80px;
+}
+#content-cont {
+height: 100%;
+width: 100%;
+background-color: rgba(255, 255, 255, 0.8);
+}
+#bar {
+background: url('https://lh6.googleusercontent.com/-zPYpBKC__zU/T8UKqeDrL4I/AAAAAAAACio/rtkb-JWWRog/s302/bg-progress-bar_16015f9f.jpeg') blue no-repeat top left;
+}
+.error-page h3 {
+font-family: sans-serif, times new roman;
+font-size: 14px;
+}
+.error-page ul {
+list-style: none;
+}
+.error-page .other-things {
+margin-bottom:10px;
+}
+/* +++++++++++ RATING ++++++++++++ */
+.sologan {
+margin: 5px 15px;
+float: right;
+font-style: italic;
+font-size: 11px;
+}
+
+--></style>
+<!-- ++++++++++ Hidden Footer in Static-page +++++++++ -->
+<script type="text/javascript">
+SyntaxHighlighter.all();
+</script>
+<script type="text/javascript">var a=navigator,b="userAgent",c="indexOf",f="&m=1",g="(^|&)m=",h="?",k="?m=1";function l(){var d=window.location.href,e=d.split(h);switch(e.length){case 1:return d+k;case 2:return 0<=e[1].search(g)?null:d+f;default:return null}}if(-1!=a[b][c]("Mobile")&&-1!=a[b][c]("WebKit")&&-1==a[b][c]("iPad")||-1!=a[b][c]("Opera Mini")||-1!=a[b][c]("IEMobile")){var m=l();m&&window.location.replace(m)};
+</script><script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script>
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+<div class="navbar section" id="navbar"><div class="widget Navbar" id="Navbar1"><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<div id="navbar-iframe-container"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="" tabindex="0" vspace="0" width="100%" id="navbar-iframe" name="navbar-iframe" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/navbar.htm"></iframe></div>
+<script type="text/javascript" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/plusone.js" gapi_processed="true"></script>
+<script type="text/javascript">
+        gapi.load("iframes-styles-bubble", function() {
+          if (window.iframes && iframes.open) {
+            iframes.open(
+                '//www.blogger.com/navbar.g?targetBlogID\0752532426431791695497\46blogName\75BlogIT.info\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75http://www.blogit.info/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://www.blogit.info/\46targetPostID\0754928282651237237621\46blogPostOrPageUrl\75http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html\46vt\75971078042260456398',
+                {
+                  container: "navbar-iframe-container",
+                  id: "navbar-iframe"
+                },
+                {
+                });
+          }
+        });
+      </script><script type="text/javascript">
+(function() {
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/google_top_exp.js';
+var head = document.getElementsByTagName('head')[0];
+if (head) {
+head.appendChild(script);
+}})();
+</script>
+</div></div>
+<!-- @CHECK ERROR PAGE 404 -->
+<!-- #IF NOT ERROR PAGE'LL SHOW -->
+<script type="text/javascript">widget_online_visitors("bl", "0ff5d95e");
+ </script>
+<div class="top-blog-hor-menu">
+<div class="center">
+<div class="dynamic-post-title" style="left: 175px; display: block; text-shadow: rgb(34, 187, 255) 0px 0px 5px;">
+Phân biệt Interface và lớp Abstract trong OOP
+</div>
+<div class="myTabs section" id="myCrosscol"><div class="widget HTML" id="HTML1">
+<h2 class="title">Tab Menu</h2>
+<div class="widget-content">
+<ul class="topnav">  
+    <li><a href="http://salipropham.blogspot.com/" style="color: rgb(187, 187, 187);">Trang Chủ</a></li>      
+    <li>  
+        <a href="javascript:void(0)" style="color: rgb(187, 187, 187);">Công Cụ</a>
+			<div class="subnav-cont" id="sub-congcu">
+				<div class="left-column">
+					<h3>Webmaster</h3>
+					<ul class="subnav">  
+						<li><a target="_blank" href="http://salipropham.blogspot.com/p/css-optimizer.html" style="color: rgb(187, 187, 187);">CSS optimizer</a></li>
+						<li><a target="_blank" href="http://www.cssformatter.com/" style="color: rgb(187, 187, 187);">CSS formatter</a></li>
+						<li><a target="_blank" href="http://salipropham.blogspot.com/p/javascript-compressor.html" style="color: rgb(187, 187, 187);">JS compressor</a>     </li>
+						<li><a target="_blank" href="http://salipropham.blogspot.com/p/js-beautify.html" style="color: rgb(187, 187, 187);">JS beautify</a></li>
+						<li><a target="_blank" href="http://salipropham.blogspot.com/p/encodedecode-text.html" style="color: rgb(187, 187, 187);">En/Decode Text</a>  </li>
+                                                <li><a target="_blank" href="http://salipro4ever.99k.org/blog/convert.html" style="color: rgb(187, 187, 187);">Convert HTML</a></li>
+                                                <li><a target="_blank" href="http://salipropham.blogspot.com/p/text-to-html-converter.html" style="color: rgb(187, 187, 187);">Convert TEXT</a></li>
+					</ul>  
+				</div>
+				    
+				<div class="left-column">
+					<h3>Tổng hợp</h3>
+					<ul class="subnav">  
+						<li><a target="_blank" href="http://www.seocentro.com/tools/search-engines/keyword-suggestion.html" style="color: rgb(187, 187, 187);">Keyword suggestion</a></li>
+                                                <li><a target="_blank" href="http://gtmetrix.com/" style="color: rgb(187, 187, 187);">Performance opt</a></li>
+                                                <li><a target="_blank" href="http://www.md5decrypt.org/" style="color: rgb(187, 187, 187);">MD5 En/Decrypt</a></li>
+                                                <li><a target="_blank" href="http://dataurl.net/#dataurlmaker" style="color: rgb(187, 187, 187);">DataURL Scheme</a></li>
+                                                <li><a target="_blank" href="http://fontface.codeandmore.com/index.php" style="color: rgb(187, 187, 187);">WebFont Convert </a></li>
+						
+					</ul>  
+				</div>
+			</div>
+    </li>
+    <li>  
+        <a href="http://salipropham.blogspot.com/p/lien-he.html" style="color: rgb(187, 187, 187);">Liên Hệ</a>     
+    </li>     
+    <li><a href="http://salipropham.blogspot.com/p/trang.html" style="color: rgb(187, 187, 187);">Site Map</a>
+    </li>
+    <li>  
+        <a href="http://www.blogger.com/blogger.g?blogID=2532426431791695497#overviewstats" style="color: rgb(187, 187, 187);">Admin</a>  
+        <div class="subnav-cont">
+			<div class="left-column">
+				<h3>Blog</h3>
+				<ul class="subnav">  					
+					<li><a href="http://www.blogger.com/blogger.g?blogID=2532426431791695497#editor" style="color: rgb(187, 187, 187);">Create a post</a></li>        
+					<li><a href="http://www.blogger.com/blogger.g?blogID=2532426431791695497#publishedcomments" style="color: rgb(187, 187, 187);">Manage comments</a></li> 
+					<li><a href="http://www.blogger.com/blogger.g?blogID=2532426431791695497#template" style="color: rgb(187, 187, 187);">Design blog</a></li>  
+
+
+				 
+				</ul>
+			</div>
+			<div class="left-column">
+				<h3>Other</h3>
+				<ul class="subnav">  
+<li><a target="_blank" href="http://www.blogit.info/2011/10/first-article.html" style="color: rgb(187, 187, 187);">Article Demo</a></li>					
+<li><a target="_blank" href="http://nksali.blogspot.com/" style="color: rgb(187, 187, 187);">My diary</a></li>
+					
+				</ul>
+			</div>
+			
+		</div>
+    </li>  
+  
+</ul>
+
+
+<style>
+body {
+margin: 0px;
+}
+
+ul.topnav {  
+    list-style: none;  
+    padding: 0px;  
+    margin: 0;  
+    float: right;   
+    background: #222;  
+    font-size: 13px;
+    font-weight: bold;
+    width: 435px;	
+	position: relative;
+}  
+ul.topnav li {  
+    float: left;  
+    margin: 0;  
+    padding: 0px; 
+    /* --position: relative; Declare X and Y axis base for sub navigation--*/  
+    border-left: 1px solid black;
+	border-top:3px solid #222;
+    border-right: 1px solid #444;
+}  
+ul.topnav li:first-child {
+    border-left: 1px solid #444;
+}
+ul.topnav li a{  
+    padding: 8px 15px 9px;  
+    display: block;  
+    text-decoration: none;      
+    text-shadow: 1px 1px 0px #000;
+    color:#777;
+}
+ul.topnav li a:hover{
+	color: #BBB;
+}
+.selected ,ul.topnav li:hover{  
+    color: #BBB;
+    background-color: #444;  
+    border-top:3px solid #3598F4
+}  
+ul.topnav .subnav-cont{    
+	position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/  
+    left: 0px; 
+    top: 35px;  
+    margin: 0; padding: 10px 0px;  
+    display: none;      
+    width: 100%;
+    background-color: #444; 
+ -webkit-box-shadow: black 0px 2px 4px;
+box-shadow: black 0px 2px 10px;	
+}
+ul.topnav li ul.subnav {  
+    list-style: none;      
+    font-size: 13px;
+	margin: 0px;
+	padding: 0px;
+}  
+ul.topnav li ul.subnav li{  
+    margin: 0 1px; padding: 0;  
+    border: 0px; 
+	clear:left;
+	font-weight: normal;
+} 
+.subnav-cont .left-column {
+	float: left;
+	width: 30%;
+	padding-right: 5px;
+        margin-left:10px;
+} 
+.left-column h3 {
+	padding: 0 0 2px;
+    margin: 0 0 5px;
+	border-bottom: 1px solid #888;
+       text-shadow: 2px 2px 0px black;
+}
+html ul.topnav li ul.subnav li a {      
+	width: auto;
+	padding: 4px 0px;
+	background-color: #444;
+	border: 0px;
+	border-bottom: 1px solid #444;
+}  
+html ul.topnav li ul.subnav li a:hover {
+	color: #BBB;
+    background-color: #444;  
+    border-bottom: 1px solid #3598F4;
+}  
+</style>
+<script>
+$(document).ready(function () {
+ $("ul.topnav li").hover( function() {
+  $(this).find(".subnav-cont").stop(true,true).slideDown(200);
+ },function() {
+   $(this).find(".subnav-cont").stop(true,true).slideUp(100);
+ });
+});
+</script>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=2532426431791695497&widgetType=HTML&widgetId=HTML1&action=editWidget&sectionId=myCrosscol" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML1&quot;));" target="configHTML1" title="Edit" style="color: rgb(187, 187, 187);">
+<img alt="" height="18" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div></div>
+</div>
+</div>
+<div id="top-bg">
+<div id="center-wrap">
+<div id="main-wrap">
+<!-- Show content here -->
+<div id="header-wrap">
+<div id="top-menu-cont">
+<!-- MENU cu tại đây -->
+</div>
+<div style="clear:both"></div>
+<div id="top-title-cont">
+<!-- <b:section class='header' id='header' maxwidgets='1' showaddelement='no'> <b:widget id='Header1' locked='true' title='SaliproIT Blog (Tiêu đề)' type='Header'/> </b:section> -->
+<!-- Embed banner FLASH : NHO DAT TRONG CAP THE IE -->
+<!--[if !IE]><!-->
+<div style="z-index: 1; left: -90px; width: 45px; position: absolute; top: 0px; height: 1px">
+<embed allowfullscreen="false" allowscriptaccess="always" height="260" menu="false" quality="high" src="http://salipro4ever.99k.org/blog/ngoisao.swf" type="application/x-shockwave-flash" width="1100" wmode="transparent" __idm_id__="-1940078591">
+</div>
+<!-- http://salipro4ever.99k.org/blog/ngoisao.swf <div style='z-index: 1; left: 650px; width: 45px; position: absolute; top: 0px; height: 1px'> <embed allowfullscreen='false' allowscriptaccess='always' height='160' menu='false' quality='high' src='http://salipro4ever.99k.org/blog/phaohoa.swf' type='application/x-shockwave-flash' width='350' wmode='transparent'/> </div>-->
+<!--<![endif]-->
+<!-- <div class='shareblog'> <g:plusone href='http://salipropham.blogspot.com' size='tall'/> <iframe allowtransparency='true' frameborder='0' scrolling='no' src='//www.facebook.com/plugins/like.php? href=http%3A%2F%2Fsalipropham.blogspot.com%2F&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=90&amp;appId=217581504979622' style='border:none; overflow:hidden; width:45px; height:60px;'/> </div> -->
+</div>
+<div id="search-cont">
+<div id="search-form">
+<form action="http://www.blogit.info/search" id="searchThis" method="get" style="display:inline;">
+<input id="searchBox" name="q" type="text">
+<input id="searchButton" type="submit" value="Search">
+</form>
+</div>
+</div>
+</div>
+<!-- main -->
+<div id="body-wrap">
+<div id="main-content-wrap">
+<div id="left-wrap">
+<div id="show-article">
+<div class="main section" id="main-article"><div class="widget Blog" id="Blog1">
+<div class="blog-posts hfeed">
+<div class="breadcrumbs">
+<img src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/home.png" style="position: relative;top: 3px;" width="20"> »  <a href="http://www.blogit.info/" rel="tag">Home</a>
+ » 
+                 <a href="http://www.blogit.info/search/label/OOP?&max-results=5" rel="tag">OOP</a>
+ 
+             » <span>Phân biệt Interface và lớp Abstract trong OOP</span>
+</div>
+<!-- google_ad_section_start(name=default) -->
+
+          <div class="date-outer">
+        
+
+          <div class="date-posts">
+        
+<div class="post-outer">
+<div class="post hentry">
+<a name="4928282651237237621"></a>
+<div id="post-title-cont">
+<h2 class="post-title entry-title">
+Phân biệt Interface và lớp Abstract trong OOP
+</h2>
+</div>
+<div class="post-header">
+<div class="post-header-line-1">
+<style>
+.post-header-line-1 {
+top: 35px;
+height: 20px;
+position: absolute;
+float: right;
+right: -2px;
+font-size: 12px;
+background-color: #E8E8E8;
+color: #777;
+text-decoration: none;
+-moz-border-border-top-left-radius: 5px;
+-webkit-border-top-left-radius: 5px;
+-moz-border-border-bottom-left-radius: 5px;
+-webkit-border-bottom-left-radius: 5px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+padding: 2px 8px 1px 10px;
+}
+</style>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/sitetracker.php" type="text/javascript"></script><script type="text/javascript" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/webtracker.php"></script>
+<script type="text/javascript">
+document.write("Xem: "+ dsCounter );
+</script>Xem: 5305
+</div>
+</div>
+<div class="post-body entry-content" id="post-body-4928282651237237621">
+<img alt="Interface vs Abstract class in OOP" class="post-avatar" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/oop.jpg" original="https://lh5.googleusercontent.com/-RkUS78ODW6c/UAmlwzZgpbI/AAAAAAAACtQ/jjMrqY_Z0o8/s200/oop.jpg"><span class="key"></span> <b>Interface vs Abstract class in OOP</b><br>
+Hiện nay mặc dù OOP (Object Oriented Programming) đã rất phổ biến nhưng đa số vẫn còn khá mơ hồ trong việc phân biệt và định nghĩa hai khái niệm lớp Interface và Abstract. Bài viết này chúng ta sẽ tìm hiểu kỹ hơn về khái niệm và sự khác biệt giữa chúng, lưu ý ở đây là Abstract Class chứ không phải là Abstract Method nhé!<br>
+<a name="more"></a><br>
+<span class="bullet0"></span> <b>What is an Abstract Class?</b><br>
+Lớp trừu tượng đơn giản được xem như một class cha cho tất cả các Class có <i>cùng bản chất</i>. Do đó mỗi lớp dẫn xuất (lớp con) <i>chỉ có thể kế thừa từ một lớp trừu tượng</i>. Bên cạnh đó nó không cho phép tạo instance, nghĩa là sẽ không thể tạo được các đối tượng thuộc lớp đó.<br>
+<br>
+<span class="bullet0"></span> <b>What is an Interface?</b><br>
+Lớp này được xem như một mặt nạ cho tất cả các Class <i>cùng cách thức hoạt động</i> nhưng có thể khác nhau về bản chất. Từ đó lớp dẫn xuất <i>có thể kế thừa từ nhiều lớp Interface</i> để bổ sung đầy đủ cách thức hoạt động của mình (đa kế thừa - Multiple inheritance).<br>
+<br>
+<b><i>Ví dụ:</i></b><br>
+- Abstract class <i>ConVat</i> có các lớp con <i>Chim, Ca</i>.<br>
+- Abstract class <i>MayMoc</i> có các lớp con <i>MayBay, Thuyen</i><br>
+- Interface: <i> iBay, iBoi, iChay.</i><br>
+=&gt; <i>MayBay, Chim</i> sẽ có cùng Interface là <i>iBay</i>. Rõ ràng mặc dù&nbsp;<i>MayBay, Chim</i> có cùng cách thức hoạt động là bay nhưng chúng khác nhau về bản chất.<br>
+=&gt;&nbsp;<i>MayBay</i> cũng&nbsp;có interface là <i>iChay</i> nhưng <i>Chim</i> không thể nào kế thừa thêm abstract class <i>MayMoc</i><br>
+<br>
+<span class="bullet0"></span>&nbsp;<b>Abstract Class vs Interface</b><br>
+<span class="bullet1"></span> Nhìn chung cả 2 đều là "bản thiết kế" cho các lớp dẫn xuất, do đó chúng&nbsp;<i>chỉ chứa các khai báo</i>&nbsp;Properties và Method mà không quan tâm bên trong thực hiện những gì. Nhưng cụ thể thì Abstract Class là "bản thiết kế" cho Class còn Interface là "bản thiết kế" cho Method.<br>
+<i>(Ở đây s dùng C# làm ngôn ngữ cho ví dụ)</i><br>
+<div><div id="highlighter_878322" class="syntaxhighlighter  csharp"><div class="toolbar"><span><a href="http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp comments">//** Ví dụ 1</code></div><div class="line number2 index1 alt1"><code class="csharp comments">//** Abstract class</code></div><div class="line number3 index2 alt2"><code class="csharp keyword">public</code> <code class="csharp keyword">abstract</code> <code class="csharp keyword">class</code> <code class="csharp plain">Employee</code></div><div class="line number4 index3 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number5 index4 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">//Khai báo Properties</code></div><div class="line number6 index5 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp keyword">abstract</code> <code class="csharp plain">String ID</code></div><div class="line number7 index6 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number8 index7 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">get</code><code class="csharp plain">;</code></div><div class="line number9 index8 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">set</code><code class="csharp plain">;</code></div><div class="line number10 index9 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number11 index10 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">//Khai báo Method</code></div><div class="line number12 index11 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp keyword">abstract</code> <code class="csharp plain">String Add();</code></div><div class="line number13 index12 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp keyword">abstract</code> <code class="csharp plain">String Update();</code></div><div class="line number14 index13 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number15 index14 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number16 index15 alt1"><code class="csharp plain">}</code></div><div class="line number17 index16 alt2"><code class="csharp comments">//** Interface</code></div><div class="line number18 index17 alt1"><code class="csharp keyword">public</code> <code class="csharp keyword">interface</code> <code class="csharp plain">IEmployee</code></div><div class="line number19 index18 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number20 index19 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">//Khai báo Properties</code></div><div class="line number21 index20 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">String ID</code></div><div class="line number22 index21 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number23 index22 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">get</code><code class="csharp plain">;</code></div><div class="line number24 index23 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">set</code><code class="csharp plain">;</code></div><div class="line number25 index24 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number26 index25 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">//Khai báo Method</code></div><div class="line number27 index26 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">String Add();</code></div><div class="line number28 index27 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">String Update();</code></div><div class="line number29 index28 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number30 index29 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number31 index30 alt2"><code class="csharp plain">}</code></div></div></td></tr></tbody></table></div></div><span class="bullet1"></span> Do được xem là bản thiết kế cho toàn Class, nên ngoài những khai báo&nbsp;Properties hoặc Method bắt buộc thì Abstarct class vẫn có thể chứa thêm các Method đã được triển khai hoặc các biến hằng. Ngược lại thì Interface hoàn toàn không thể làm được điều đó.<br>
+<div><div id="highlighter_758549" class="syntaxhighlighter  csharp"><div class="toolbar"><span><a href="http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div><div class="line number37 index36 alt2">37</div><div class="line number38 index37 alt1">38</div><div class="line number39 index38 alt2">39</div><div class="line number40 index39 alt1">40</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp comments">//** Ví dụ 2</code></div><div class="line number2 index1 alt1"><code class="csharp comments">//** Abstract class</code></div><div class="line number3 index2 alt2"><code class="csharp keyword">public</code> <code class="csharp keyword">abstract</code> <code class="csharp keyword">class</code> <code class="csharp plain">Employee</code></div><div class="line number4 index3 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{ </code></div><div class="line number5 index4 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">//Khai báo biến hằng (field and constant)</code></div><div class="line number6 index5 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp plain">String id;</code></div><div class="line number7 index6 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp plain">String name;</code></div><div class="line number8 index7 alt1">&nbsp;</div><div class="line number9 index8 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">//Khai báo Properties</code></div><div class="line number10 index9 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp keyword">abstract</code> <code class="csharp plain">String ID</code></div><div class="line number11 index10 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number12 index11 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">get</code><code class="csharp plain">;</code></div><div class="line number13 index12 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">set</code><code class="csharp plain">;</code></div><div class="line number14 index13 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number15 index14 alt2">&nbsp;</div><div class="line number16 index15 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">//Khai báo Method</code></div><div class="line number17 index16 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">protected</code> <code class="csharp keyword">abstract</code> <code class="csharp plain">String Add();</code></div><div class="line number18 index17 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number19 index18 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">//Method đã triển khai không dùng abstract</code></div><div class="line number20 index19 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp plain">String Update()</code></div><div class="line number21 index20 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number22 index21 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">return</code> <code class="csharp string">"Update"</code><code class="csharp plain">;</code></div><div class="line number23 index22 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number24 index23 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number25 index24 alt2"><code class="csharp plain">}</code></div><div class="line number26 index25 alt1"><code class="csharp comments">//** Interface</code></div><div class="line number27 index26 alt2"><code class="csharp keyword">public</code> <code class="csharp keyword">interface</code> <code class="csharp plain">IEmployee</code></div><div class="line number28 index27 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number29 index28 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">//Khai báo Properties</code></div><div class="line number30 index29 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">String ID</code></div><div class="line number31 index30 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number32 index31 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">get</code><code class="csharp plain">;</code></div><div class="line number33 index32 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">set</code><code class="csharp plain">;</code></div><div class="line number34 index33 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number35 index34 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">//Khai báo Method</code></div><div class="line number36 index35 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">String Add();</code></div><div class="line number37 index36 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">String Update();</code></div><div class="line number38 index37 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number39 index38 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number40 index39 alt1"><code class="csharp plain">}</code></div></div></td></tr></tbody></table></div></div><span class="bullet1"></span> Toàn bộ những Method và Properties trong Interface không cần khai báo Access modifier vì mặc định là Public. Abstract class thì phải bắt buộc khai báo (Public, Protected) và bắt buộc có từ khóa <b>abstract </b>trong các Method và Properties được khai báo trừu tượng.<br>
+<div><div id="highlighter_619504" class="syntaxhighlighter  csharp"><div class="toolbar"><span><a href="http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp comments">// Xem ví dụ 2</code></div></div></td></tr></tbody></table></div></div><span class="bullet1"></span> Một điểm khác biệt nữa là ở lớp dẫn xuất của Interface class bắt buộc phải thực hiện toàn bộ những Method và Properties đã khai báo, ngược lại lớp dẫn xuất của Abstract class chỉ cần thực hiện những Method và Properties được khai báo trừu tượng (có từ khóa <b>abstract</b>)<br>
+<div><div id="highlighter_402275" class="syntaxhighlighter  csharp"><div class="toolbar"><span><a href="http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div><div class="line number37 index36 alt2">37</div><div class="line number38 index37 alt1">38</div><div class="line number39 index38 alt2">39</div><div class="line number40 index39 alt1">40</div><div class="line number41 index40 alt2">41</div><div class="line number42 index41 alt1">42</div><div class="line number43 index42 alt2">43</div><div class="line number44 index43 alt1">44</div><div class="line number45 index44 alt2">45</div><div class="line number46 index45 alt1">46</div><div class="line number47 index46 alt2">47</div><div class="line number48 index47 alt1">48</div><div class="line number49 index48 alt2">49</div><div class="line number50 index49 alt1">50</div><div class="line number51 index50 alt2">51</div><div class="line number52 index51 alt1">52</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp comments">//** Sử dụng Abstract class và Interface ở ví dụ 2</code></div><div class="line number2 index1 alt1"><code class="csharp comments">//** Lớp dẫn xuất Abstract class</code></div><div class="line number3 index2 alt2"><code class="csharp spaces">&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp keyword">class</code> <code class="csharp plain">Employee1 : Employee</code></div><div class="line number4 index3 alt1"><code class="csharp spaces">&nbsp;</code><code class="csharp plain">{</code></div><div class="line number5 index4 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">//Không cần khai báo lại biến hằng.</code></div><div class="line number6 index5 alt1">&nbsp;</div><div class="line number7 index6 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">//Triển khai Properties với từ khóa override</code></div><div class="line number8 index7 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp keyword">override</code> <code class="csharp plain">String ID</code></div><div class="line number9 index8 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number10 index9 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">get</code><code class="csharp plain">{ </code><code class="csharp keyword">return</code> <code class="csharp plain">id; }</code></div><div class="line number11 index10 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">set</code><code class="csharp plain">{ id = value; }</code></div><div class="line number12 index11 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number13 index12 alt2">&nbsp;</div><div class="line number14 index13 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">//Triển khai Method với access modifier như ở Abstract class.</code></div><div class="line number15 index14 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">protected</code> <code class="csharp keyword">override</code> <code class="csharp plain">String Add()</code></div><div class="line number16 index15 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number17 index16 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">return</code> <code class="csharp string">"Add"</code><code class="csharp plain">;</code></div><div class="line number18 index17 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number19 index18 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number20 index19 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">//Không cần triển khai lại Update() mà chỉ việc sử dụng.</code></div><div class="line number21 index20 alt2">&nbsp;</div><div class="line number22 index21 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">// Phần triển khai của Employee1</code></div><div class="line number23 index22 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">...</code></div><div class="line number24 index23 alt1"><code class="csharp spaces">&nbsp;</code><code class="csharp plain">}</code></div><div class="line number25 index24 alt2">&nbsp;</div><div class="line number26 index25 alt1"><code class="csharp comments">//** Lớp dẫn xuất Interface</code></div><div class="line number27 index26 alt2"><code class="csharp spaces">&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp keyword">class</code> <code class="csharp plain">Employee1 : IEmployee</code></div><div class="line number28 index27 alt1"><code class="csharp spaces">&nbsp;</code><code class="csharp plain">{</code></div><div class="line number29 index28 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">// Biến hằng được định nghĩa ở đây.</code></div><div class="line number30 index29 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">protected</code> <code class="csharp plain">String id;</code></div><div class="line number31 index30 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">protected</code> <code class="csharp plain">String name;</code></div><div class="line number32 index31 alt1">&nbsp;</div><div class="line number33 index32 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">// Triển khai Properties</code></div><div class="line number34 index33 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">String ID</code></div><div class="line number35 index34 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number36 index35 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">get</code><code class="csharp plain">{ </code><code class="csharp keyword">return</code> <code class="csharp plain">id; }</code></div><div class="line number37 index36 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">set</code><code class="csharp plain">{ id = value; }</code></div><div class="line number38 index37 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number39 index38 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">//Triển khai tất cả các Method có ở Interface</code></div><div class="line number40 index39 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp plain">String Add()</code></div><div class="line number41 index40 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number42 index41 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">return</code> <code class="csharp string">"Add"</code><code class="csharp plain">;</code></div><div class="line number43 index42 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number44 index43 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp plain">String Update()</code></div><div class="line number45 index44 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number46 index45 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">return</code> <code class="csharp string">"Update"</code><code class="csharp plain">;</code></div><div class="line number47 index46 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number48 index47 alt1">&nbsp;</div><div class="line number49 index48 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp comments">// Phần triển khai của Employee1</code></div><div class="line number50 index49 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">...</code></div><div class="line number51 index50 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number52 index51 alt1"><code class="csharp spaces">&nbsp;</code><code class="csharp plain">}</code></div></div></td></tr></tbody></table></div></div><span class="bullet1"></span> Ở PHP, sự phân biệt này càng rõ ràng hơn với từ khóa <b>implement</b> cho Interface và <b>extend</b> cho Abstract class. Thực vậy, lớp dẫn xuất của Abstract class chỉ là mở rộng (extend) còn Interface thì buộc là thực hiện (implement) tất cả.<br>
+<br>
+<span class="nguon"></span> Reference: <a target="_blank" href="http://www.codeproject.com/Articles/11155/Abstract-Class-versus-Interface">www.codeproject.com</a><br>
+<div class="sologan" itemscope="" itemtype="http://data-vocabulary.org/Review">Cùng <span itemprop="itemreviewed">SaliproIT Blog</span> chia sẻ  <span itemprop="reviewer">Thế giới công nghệ </span>  <span id="rate-post" itemprop="rating">5</span> sao </div>
+<div style="clear: both;"></div>
+</div>
+<div id="post-footer-cont">
+<div class="post-footer">
+<div class="post-footer-line post-footer-line-1"><span class="post-author vcard">
+Đăng bởi
+<span class="fn"><b>Salipro Phạm</b></span>
+</span>
+<span class="post-timestamp">
+lúc
+<abbr class="published" title="2012-07-21T11:46:00+07:00">11:46 AM ngày <span><b>7/21/12</b></span></abbr>
+</span>
+<span class="post-comment-link" style="margin-left: -15px;">
+</span>
+<span class="post-icons">
+<span class="item-control blog-admin pid-1656084867">
+<a href="http://www.blogger.com/post-edit.g?blogID=2532426431791695497&postID=4928282651237237621&from=pencil" title="Edit Post">
+<img alt="" class="icon-action" height="18" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/icon18_edit_allbkg.gif" width="18" original="http://img2.blogblog.com/img/icon18_edit_allbkg.gif" style="">
+</a>
+</span>
+</span>
+</div>
+<div class="post-footer-line post-footer-line-2">
+<span class="post-labels">
+Labels:
+<a href="http://www.blogit.info/search/label/Ki%E1%BA%BFn%20th%E1%BB%A9c%20IT?&max-results=5" rel="tag">Kiến thức IT</a>,
+<a href="http://www.blogit.info/search/label/L%E1%BA%ADp%20tr%C3%ACnh?&max-results=5" rel="tag">Lập trình</a>,
+<a href="http://www.blogit.info/search/label/OOP?&max-results=5" rel="tag">OOP</a>
+</span>
+</div>
+<div class="post-footer-line post-footer-line-3">
+
+ Chia sẻ: <div class="post-share-buttons goog-inline-block" id="share-cont">
+<a class="goog-inline-block share-button sb-email" href="http://www.blogger.com/share-post.g?blogID=2532426431791695497&postID=4928282651237237621&target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a><a class="goog-inline-block share-button sb-blog" href="http://www.blogger.com/share-post.g?blogID=2532426431791695497&postID=4928282651237237621&target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a><a class="goog-inline-block share-button sb-twitter" href="http://www.blogger.com/share-post.g?blogID=2532426431791695497&postID=4928282651237237621&target=twitter" target="_blank" title="Share to Twitter"><span class="share-button-link-text">Share to Twitter</span></a><a class="goog-inline-block share-button sb-facebook" href="http://www.blogger.com/share-post.g?blogID=2532426431791695497&postID=4928282651237237621&target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a>
+<div style="position: absolute;top: 0px;left: 350px;">
+<div style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px; background-position: initial initial; background-repeat: initial initial;" id="___plusone_0"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1365276317694" name="I0_1365276317694" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/fastbutton.htm" allowtransparency="true" data-gapiattached="true" title="+1"></iframe></div>
+<iframe allowtransparency="true" frameborder="0" scrolling="no" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/like(1).htm" style="border:none; overflow:hidden; width:90px; height:21px;position: absolute;right: -100px;top: 0px;"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="comment-new" id="related-posts">
+<b>Bài viết liên quan:</b>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/Kiến thức IT" type="text/javascript"></script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/Lập trình" type="text/javascript"></script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/OOP" type="text/javascript"></script>
+<script type="text/javascript">var maxresults=6;removeRelatedDuplicates();printRelatedLabels('http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html');</script><ul><li><a href="http://www.blogit.info/2012/09/nhung-selectors-can-nho-de-bat-dau-voi-css3.html" title="09/09/2012">Những Selectors cần nhớ để bắt đầu với CSS3 </a></li><li><a href="http://www.blogit.info/2012/07/su-khac-biet-giua-mo-hinh-mvc-va-3-lop.html" title="31/07/2012">Sự khác biệt giữa mô hình MVC và 3 lớp</a></li><li><a href="http://www.blogit.info/2012/07/mo-hinh-3-lop-three-layer.html" title="30/07/2012">Mô hình 3 lớp - Three Layer</a></li><li><a href="http://www.blogit.info/2012/07/tim-hieu-mo-hinh-mvc-la-gi.html" title="23/07/2012">Tìm hiểu mô hình MVC là gì?</a></li><li><a href="http://www.blogit.info/2012/07/tim-hieu-overriding-va-overloading.html" title="22/07/2012">Tìm hiểu Overriding và Overloading trong OOP</a></li><li><a href="http://www.blogit.info/2012/07/khac-phuc-loi-preparing-to-recycle.html" title="20/07/2012">Khắc phục lỗi: Preparing to Recycle... trong Win7</a></li></ul>
+</div>
+<div class="comments" id="comments">
+<a name="comments"></a>
+<h4>Hiện có 
+        
+          1 comments:
+        
+</h4>
+<div id="Blog1_comments-block-wrapper">
+<dl class="avatar-comment-indent" id="comments-block">
+<div id="comment-border">
+<dt class="comment-author " id="c181229536895913614">
+<a name="c181229536895913614"></a>
+<div class="avatar-image-container avatar-stock"><span dir="ltr"><a href="http://www.blogger.com/profile/03468685174836935677" rel="nofollow" onclick="" class="avatar-hovercard" id="av-0-03468685174836935677"><img src="http://img2.blogblog.com/img/b16-rounded.gif" width="16" height="16" alt="" title="khong biet canh su dung the nao nhi?" original="http://img2.blogblog.com/img/b16-rounded.gif" style="display: block;">
+
+</a></span></div>
+<a href="http://www.blogger.com/profile/03468685174836935677" rel="nofollow">khong biet canh su dung the nao nhi?</a>
+</dt>
+<dd class="comment-body" id="Blog1_cmt-181229536895913614">
+<p>
+Bài viết rất hay, thanks bạn
+</p>
+</dd>
+<dd class="comment-footer">
+<span class="comment-stamp">
+<a href="http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html?showComment=1356556820886#c181229536895913614" title="comment permalink">
+December 27, 2012 at 4:20 AM
+</a>
+<span class="item-control blog-admin pid-896800279">
+<a class="comment-delete" href="http://www.blogger.com/delete-comment.g?blogID=2532426431791695497&postID=181229536895913614" title="Delete Comment">
+<img src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" original="//www.blogger.com/img/icon_delete13.gif" style="">
+</a>
+</span>
+<span class="comment-reply" style="float:right"><a href="https://www.blogger.com/comment.g?blogID=2532426431791695497&postID=4928282651237237621&isPopup=true&postBody=%3C%61%20%68%72%65%66%3D%22%23c181229536895913614%22%3E@khong%20biet%20canh%20su%20dung%20the%20nao%20nhi?%20%3C%2F%61%3E#form" onclick="javascript:window.open(this.href,  &quot;bloggerPopup&quot;,  &quot;toolbar=0,left =200,statusbar=1,menubar=0,scrollbars=yes,width=750,height=450&quot;);  return false;">[ Trả lời ]</a></span>
+</span>
+</dd>
+</div>
+</dl>
+</div>
+<p class="comment-footer">
+</p><div class="comment-form">
+<a name="comment-form"></a>
+<h4 id="comment-post-message">
+<a class="showLink btncss" href="http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html#" id="example-show" onclick="showHide(&#39;hidden-comment&#39;);return false;">
+Post a Comment</a></h4>
+<script type="text/javascript">
+function showHide(shID) {
+	    var a = document.getElementById(shID).style.display;
+		if (a == 'none' || a == "") {
+                        $('#'+shID).slideDown();
+                      $('#example-show').html("Ẩn nhận xét");			
+			//document.getElementById(shID).style.display = 'block';
+		}
+		else {
+                         $('#'+shID).slideUp();
+                        $('#example-show').html("Đăng nhận xét");
+			//document.getElementById(shID).style.display = 'none';
+		}	
+}
+</script>
+<div id="hidden-comment">
+<p>Bạn có thể tự do cho ý kiến, thảo luận về bài viết này nhưng phải theo những điều khoản sau:<br>- Phải nghiêm túc, không dung tục, không spam.<br>- Nội dung phải liên quan đến bài viết.<br>- Không mang tính chất chính trị...<br>- Hạn chế sử dụng Ẩn danh, hãy dùng Tên/URL để thay thế.<br><b>Lưu ý </b>: Có thể sử dụng tag HTML cơ bản trong comment: br, b, i, u, a href=  ...</p>
+<div class="way2bloggingcsmly">
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title=":)" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/1.gif" style="">:) </div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title=":(" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/2.gif" style="">:( </div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title=";)" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/3.gif" style="">;) </div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title=":D" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/4.gif" style="">:D </div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title="=))" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/24.gif" style="">=))  </div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title=":-/" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/7.gif" style="">:-/ </div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title=":x" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/8.gif" style="">:x  </div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title="I-)" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/28.gif" style="">I-) </div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title="@-)" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/43.gif" style="">@-)</div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title="=\D:" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/41.gif" style="">=D: </div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title=":-q" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/112.gif" style="">:-q</div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title=":-w" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/45.gif" style="">:-w </div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title="[-X" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/68.gif" style="">[-X </div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title="B-)" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/16.gif" style="">B-)</div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title=":((" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/20.gif" style="">:((</div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title=":-B" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/26.gif" style="">:-B</div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title=":-h" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/103.gif" style="">:-h</div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title=":X" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/10.gif" style="">:x(</div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title=":-*" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/11.gif" style="">:-*</div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title="~O)" original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/57.gif" style="">~O) </div>
+<div><img class="w2bsmly" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/no-image.jpeg" title="@};- " original="http://l.yimg.com/us.yimg.com/i/mesg/emoticons7/53.gif" style="">@};- </div>
+</div>
+<a href="http://www.blogger.com/comment-iframe.g?blogID=2532426431791695497&postID=4928282651237237621&blogspotRpcToken=1367486" id="comment-editor-src"></a>
+<iframe allowtransparency="true" class="blogger-iframe-colorize blogger-comment-from-post" frameborder="0" height="308px" id="comment-editor" name="comment-editor" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/comment-iframe.htm" width="100%"></iframe>
+</div>
+<script type="text/javascript" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/314201885-comment_from_post_iframe.js"></script>
+<script type="text/javascript">
+      BLOG_CMT_createIframe('http://www.blogger.com/rpc_relay.html', '14780232191822849793');
+    </script>
+</div>
+<p></p>
+<div id="backlinks-container">
+<div id="Blog1_backlinks-container">
+</div>
+</div>
+</div>
+</div>
+
+        </div>  </div>
+      
+<!-- google_ad_section_end -->
+</div>
+<div id="btn-slideshow"></div>
+<div class="blog-pager" id="blog-pager">
+<span id="blog-pager-newer-link">
+<a class="blog-pager-newer-link" href="http://www.blogit.info/2012/07/tim-hieu-overriding-va-overloading.html" id="Blog1_blog-pager-newer-link" title="Newer Post"><span class="enable btncss" id="left-btn-pager">« Bài mới hơn</span></a></span>
+<span id="blog-pager-older-link">
+<a class="blog-pager-older-link" href="http://www.blogit.info/2012/07/khac-phuc-loi-preparing-to-recycle.html" id="Blog1_blog-pager-older-link" title="Older Post"><span class="enable btncss" id="right-btn-pager">Bài cũ hơn »</span></a>
+</span>
+</div>
+<div class="clear"></div>
+<div class="post-feeds">
+</div>
+<script type="text/javascript">window.___gcfg = {'lang': 'en'};</script>
+</div></div>
+<!-- +++++++++++++++++@SALIPRO: Show filtered featured label in Homepage ++++++++++++++++++++ -->
+<!-- +++++++++++++++++////@SALIPRO: Show featured label ++++++++++++++++++++ -->
+</div>
+<div id="show-widget"><!-- Show left widget -->
+<div class="tabs section" id="feed"></div>
+</div>
+</div>
+<div id="right-wrap">
+<div id="right-side-cont">
+<div id="hover-share-text">
+<div id="top-side"></div>
+<div class="main-side" id="about-cont">
+<div class="tabs section" id="about"><div class="widget HTML" id="HTML7">
+<h2 class="title">About</h2>
+<div class="widget-content">
+<div class="share-text" style="opacity: 0.3;"></div>
+<div class="post_share rail" style="opacity: 0.8;"><div class="wdt_button"><iframe id="tweet_frame_124134" name="tweet_frame_124134" class="twitter-share-button" allowtransparency="true" frameborder="0" role="presentation" scrolling="no" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/tweet_button.htm" width="55" height="63"></iframe></div><div class="wdt_button"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/like.htm" style="border:none; overflow:hidden; width:50px; height:65px;"></iframe></div><div class="wdt_button"><div style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 50px; height: 60px; background-position: initial initial; background-repeat: initial initial;" id="___plusone_1"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 50px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 60px;" tabindex="0" vspace="0" width="100%" id="I0_1365276317827" name="I0_1365276317827" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/fastbutton(1).htm" allowtransparency="true" data-gapiattached="true" title="+1"></iframe></div></div><div class="wdt_button"><div class="addthis_toolbox addthis_default_style "><a class="addthis_counter" style="display: inline-block;" href="http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html#"><a class="addthis_button_expanded" title="View more services" href="http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html#">4</a><a class="atc_s addthis_button_compact"><span></span></a></a><div class="atclear"></div></div></div></div>
+
+<script>
+$(document).ready(function () {
+var s = document.createElement("script");
+s.type = "text/javascript";
+s.src = "http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4faac4ca7db73a47";
+
+	var html = '<div class="wdt_button"><iframe id="tweet_frame_124134" name="tweet_frame_124134" class="twitter-share-button" allowtransparency="true" frameborder="0" role="presentation" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.html?url=http://www.blogit.info/&amp;via=SaliproPham&amp;text=SaliproIT Blog | Chia sẻ đam mê... &amp;count=vertical" width="55" height="63"></iframe></div>'
+		+ '<div class="wdt_button"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="//www.facebook.com/plugins/like.php?href=http://www.blogit.info/&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=90&amp;appId=217581504979622" style="border:none; overflow:hidden; width:50px; height:65px;"></iframe></div>'
+		+ '<div class="wdt_button"><g:plusone href="http://www.blogit.info/" size="tall"/></g:plusone></div>'
+		+ '<div class="wdt_button"><div class="addthis_toolbox addthis_default_style "><a class="addthis_counter"></a></div></div>' 
+		
+	$('.post_share').html(html);	
+	$(".post_share").prepend(s);
+});
+</script>
+
+	<div style="clear:both"></div>
+
+<form style="padding: 0px 20px 0px 10px; opacity: 0.7;" action="http://feedburner.google.com/fb/a/mailverify" method="post" onsubmit="window.open(&quot;http://feedburner.google.com/fb/a/mailverify?uri=SaliproitBlog&quot;, &quot;popupwindow&quot;, &quot;scrollbars=yes,width=550,height=520&quot;); return true" target="popupwindow" id="frmEmail">
+	<input class="follow-by-email-address" id="followBox" name="email" placeholder="Email here ..." type="text">
+	<input class="follow-by-email-submit" id="followBtn" type="submit" value="OK!">
+	<input name="uri" type="hidden" value="SaliproitBlog">
+	<input name="loc" type="hidden" value="en_US">
+	<span id="rssbtn"><a href="http://salipropham.blogspot.com/feeds/posts/default" target="_blank">RSS</a>
+	</span>
+</form>
+<div style="clear:both"></div>
+ <style>
+.post_share.rail {
+border-radius: 4px;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+padding: 0px 0 0 5px;
+z-index: 10;
+float: left;
+width: 100%;
+margin-left: 0px;
+height: 100%;
+}
+.wdt_button {
+ float: left;
+ margin: 5px;
+}
+#HTML5 h2 {
+ display:none;
+}
+.share-text {
+background-image: url(https://lh5.googleusercontent.com/-H17X2E4wSTw/T9LGXvtYZ6I/AAAAAAAACmU/6SC6Y8qL5H0/s631/leftItems_nmbvgfd.png);
+background-repeat: no-repeat;
+  background-position: -10px -366px; 
+width: 100%;
+height: 50px;
+/*opacity: 0.4;
+filter: alpha(opacity = 50);*/
+left: 0px;
+}
+#about-cont {
+height: 120px;
+}
+#about{
+position: relative;
+top: -40px;
+}
+</style>​
+<script type="text/javascript">
+$(".post_share").fadeTo(1, 0.8);
+$(".share-text").fadeTo(1, 0.3); 
+$("#frmEmail").fadeTo(1, 0.7);	
+$(document).ready(function(){					   
+$("#hover-share-text").hover(function(){						   $(".share-text").stop().fadeTo("slow", 1.0);
+$(".post_share").stop().fadeTo("slow", 1.0);
+$("#frmEmail").stop().fadeTo(800, 1.0);				   },function(){						   $(".share-text").stop().fadeTo("1000", 0.3); 
+$(".post_share").stop().fadeTo("1000", 0.8); 
+$("#frmEmail").stop().fadeTo(700, 0.7);		   	});
+	   });
+</script>
+<!-- Subscribe by email -->
+<style>
+#rssbtn {
+display: block;
+background-image: url(https://lh5.googleusercontent.com/-H17X2E4wSTw/T9LGXvtYZ6I/AAAAAAAACmU/6SC6Y8qL5H0/s631/leftItems_nmbvgfd.png);
+background-repeat: no-repeat;
+  background-position: 0px -432px; 
+padding: 8px 25px 5px 0px;
+float: right;
+font-weight: bold;
+color: #F22600;
+text-decoration: underline;
+}
+#followBox {
+width: 85px;
+background-image: url(https://lh5.googleusercontent.com/-H17X2E4wSTw/T9LGXvtYZ6I/AAAAAAAACmU/6SC6Y8qL5H0/s631/leftItems_nmbvgfd.png);
+background-repeat: no-repeat;
+  background-position: -23px -460px; 
+padding: 5px 5px 5px 35px;
+color: #666;
+font-weight: bold;
+text-decoration: none;
+border: 1px solid lightGrey;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+}
+#followBtn{
+color: #666;
+font-weight: bold;
+text-decoration: none;
+padding: 5px 6px;
+border: 1px solid lightGrey;
+cursor: pointer;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+-goog-ms-border-radius: 4px;
+border-radius: 4px;
+background: #FBFBFB;
+background: -moz-linear-gradient(top, #FBFBFB 0%, #F4F4F4 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FBFBFB), color-stop(100%,#F4F4F4));
+background: -webkit-linear-gradient(top, #FBFBFB 0%,#F4F4F4 100%);
+background: -o-linear-gradient(top, #FBFBFB 0%,#F4F4F4 100%);
+background: -ms-linear-gradient(top, #FBFBFB 0%,#F4F4F4 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FBFBFB', endColorstr='#F4F4F4',GradientType=0 );
+background: linear-gradient(top, #FBFBFB 0%,#F4F4F4 100%);
+}
+</style>
+<!--[if !IE]><!-->
+<script type="text/javascript">
+$(document).ready(function(){						   
+$("#followBox").focus(function(){	
+    $("#rssbtn").animate({opacity: 0,
+  top: 60}, 500);
+   $("#followBox").delay(200).animate({
+  width: "145px"}, 600);					    		   	     });
+$("#followBox").blur(function(){	
+    $("#followBox").delay(800).animate({
+  width: "85px"}, 300);	
+   $("#rssbtn").delay(1000).animate({opacity: 1,
+  top: 0}, 800);				    		   	     });
+});
+</script>
+<!--<![endif]-->
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=2532426431791695497&widgetType=HTML&widgetId=HTML7&action=editWidget&sectionId=about" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML7&quot;));" target="configHTML7" title="Edit">
+<img alt="" height="18" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div></div>
+</div>
+<div id="bottom-side"></div>
+</div>
+<!-- @SALIPRO: Menu tabs dọc -->
+<script type="text/javascript">
+            jQuery(document).ready(function($){
+				// Khởi tạo tabs
+                $(".tabs-widget-content").hide();
+            	$("ul.tabs-widget-container li:first").addClass("tabs-widget-current");
+                $("ul.tabs-widget-container li:first a").addClass("tabs-widget-current2");
+            	$(".tabs-widget-content:first").show();
+				// Sự kiện tabs
+            	$("ul.tabs-widget-container li a").click(function() {
+            		$("ul.tabs-widget-container li").removeClass("tabs-widget-current"); 
+                        $("ul.tabs-widget-container li a").removeClass("tabs-widget-current2"); 
+            		$(this).parent().addClass("tabs-widget-current"); 
+                       $(this).addClass("tabs-widget-current2"); 
+            		$(".tabs-widget-content").hide(); 
+            	    var activeTab = $(this).attr("href"); 
+					$(activeTab).fadeIn(1000);
+                             // Nhảm nhí kèm theo
+                         $("#tab-id3 iframe").removeAttr("style"); 
+                         $("#tab-id3 iframe").css({'width':'100%','height':'340px'}); 
+            	 	return false;
+            	});
+            });
+</script>
+<div class="sidebar-e" id="vertical-tab-menu-cont" style="display:block; margin: 10px 0;">
+<div class="sidebar-e" id="table-vertical-tab-top">
+<ul class="tabs-widget tabs-widget-container">
+<li class="tabs-widget-current"><a href="http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html#tab-id1" class="tabs-widget-current2">Bài nổi bật</a></li>
+<li><a href="http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html#tab-id2">Bài đăng mới</a></li>
+<li><a href="http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html#tab-id3">Bình luận</a></li>
+</ul>
+</div>
+<div class="sidebar-e" id="table-vertical-tab-main">
+<div class="tabs-widget-content" id="tab-id1" style="display: block;"><div class="tabs section" id="sl-tab1"><div class="widget PopularPosts" id="PopularPosts1">
+<h2>Bài nổi bật</h2>
+<div class="widget-content popular-posts">
+<div class="newsticker-jcarousellite" style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; height: 309px;">
+<ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; height: 927px; top: -309px;"><li style="overflow: hidden; float: none; width: 265px; height: 92px;">
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="http://www.blogit.info/2012/10/tu-thiet-ke-template-joomla-25-30-phan-1.html" target="_blank">
+<img alt="" border="0" height="72" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/design-template-25.jpg" width="72">
+</a>
+</div>
+<div class="item-title"><a href="http://www.blogit.info/2012/10/tu-thiet-ke-template-joomla-25-30-phan-1.html">Tự thiết kế Template Joomla 2.5 - 3.0 - Phần 1</a></div>
+<div class="item-snippet"> How to create Joomla Template 2.5.  Chắc hẳn với những ai đã từng thiết kế website thì Joomla không còn lạ gì nữa, vấn đề chung của việc dù...</div>
+</div>
+<div style="clear: both;"></div>
+</li><li style="overflow: hidden; float: none; width: 265px; height: 92px;">
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="http://www.blogit.info/2011/11/bai-tap-vi-du-rmi-trong-java.html" target="_blank">
+<img alt="" border="0" height="72" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/rmi-java.jpg" width="72">
+</a>
+</div>
+<div class="item-title"><a href="http://www.blogit.info/2011/11/bai-tap-vi-du-rmi-trong-java.html">Bài tập 1 - Ví dụ đơn giản RMI trong Java</a></div>
+<div class="item-snippet"> A simple Java RMI example.    Sau khi giới thiệu về RMI trong Java ở bài trước. Hôm nay s cùng với các bạn sẽ làm một ví dụ đơn giản về lập...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li style="overflow: hidden; float: none; width: 265px; height: 92px;">
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="http://www.blogit.info/2012/10/tong-hop-font-viet-theo-tung-ban-ma.html" target="_blank">
+<img alt="" border="0" height="72" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/font-vietnam.jpg" width="72">
+</a>
+</div>
+<div class="item-title"><a href="http://www.blogit.info/2012/10/tong-hop-font-viet-theo-tung-ban-ma.html">Tổng hợp FONT Việt theo từng bản mã</a></div>
+<div class="item-snippet"> Tổng hợp FONT Việt theo từng bản mã.  Vô tình bằng cách nào đó, bạn có trong tay một font tiếng việt tuyệt đẹp nhưng bạn không biết dùng bả...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li style="overflow: hidden; float: none; width: 265px; height: 92px;">
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info.htm" target="_blank">
+<img alt="" border="0" height="72" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/oop(1).jpg" width="72">
+</a>
+</div>
+<div class="item-title"><a href="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info.htm">Phân biệt Interface và lớp Abstract trong OOP</a></div>
+<div class="item-snippet"> Interface vs Abstract class in OOP  Hiện nay mặc dù OOP (Object Oriented Programming) đã rất phổ biến nhưng đa số vẫn còn khá mơ hồ trong v...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li style="overflow: hidden; float: none; width: 265px; height: 92px;">
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="http://www.blogit.info/2011/11/cai-at-giao-dien-timeline-cho-facebook.html" target="_blank">
+<img alt="" border="0" height="72" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/facebook-timeline_thumb.jpg" width="72">
+</a>
+</div>
+<div class="item-title"><a href="http://www.blogit.info/2011/11/cai-at-giao-dien-timeline-cho-facebook.html">Cài đặt giao diện Timeline cho Facebook</a></div>
+<div class="item-snippet"> Enable timeline on facebook   Chắc hẳn thời gian gần đây đã có rất nhìu bạn dùng giao diện Timeline cho facebook rùi. Hôm nay mình xin hướn...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li style="overflow: hidden; float: none; width: 265px; height: 92px;">
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="http://www.blogit.info/2012/06/mf-photodex-proshow-gold-503222-full.html" target="_blank">
+<img alt="" border="0" height="72" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/Photodex%20ProShow%20Gold%205.jpg" width="72">
+</a>
+</div>
+<div class="item-title"><a href="http://www.blogit.info/2012/06/mf-photodex-proshow-gold-503222-full.html">[MF] Photodex ProShow Gold 5.0.3222 Full + Crack</a></div>
+<div class="item-snippet"> Photodex ProShow Gold 5 Free Download  Proshow Gold một chương trình tạo video từ những bức ảnh (slideshow) một cách dễ dàng và nhanh chóng...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li style="overflow: hidden; float: none; width: 265px; height: 92px;">
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="http://www.blogit.info/2012/10/tu-thiet-ke-template-joomla-25-30-phan-1.html" target="_blank">
+<img alt="" border="0" height="72" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/design-template-25.jpg" width="72">
+</a>
+</div>
+<div class="item-title"><a href="http://www.blogit.info/2012/10/tu-thiet-ke-template-joomla-25-30-phan-1.html">Tự thiết kế Template Joomla 2.5 - 3.0 - Phần 1</a></div>
+<div class="item-snippet"> How to create Joomla Template 2.5.  Chắc hẳn với những ai đã từng thiết kế website thì Joomla không còn lạ gì nữa, vấn đề chung của việc dù...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li style="overflow: hidden; float: none; width: 265px; height: 92px;">
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="http://www.blogit.info/2011/11/bai-tap-vi-du-rmi-trong-java.html" target="_blank">
+<img alt="" border="0" height="72" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/rmi-java.jpg" width="72">
+</a>
+</div>
+<div class="item-title"><a href="http://www.blogit.info/2011/11/bai-tap-vi-du-rmi-trong-java.html">Bài tập 1 - Ví dụ đơn giản RMI trong Java</a></div>
+<div class="item-snippet"> A simple Java RMI example.    Sau khi giới thiệu về RMI trong Java ở bài trước. Hôm nay s cùng với các bạn sẽ làm một ví dụ đơn giản về lập...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li style="overflow: hidden; float: none; width: 265px; height: 92px;">
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="http://www.blogit.info/2012/10/tong-hop-font-viet-theo-tung-ban-ma.html" target="_blank">
+<img alt="" border="0" height="72" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/font-vietnam.jpg" width="72">
+</a>
+</div>
+<div class="item-title"><a href="http://www.blogit.info/2012/10/tong-hop-font-viet-theo-tung-ban-ma.html">Tổng hợp FONT Việt theo từng bản mã</a></div>
+<div class="item-snippet"> Tổng hợp FONT Việt theo từng bản mã.  Vô tình bằng cách nào đó, bạn có trong tay một font tiếng việt tuyệt đẹp nhưng bạn không biết dùng bả...</div>
+</div>
+<div style="clear: both;"></div>
+</li></ul>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=2532426431791695497&widgetType=PopularPosts&widgetId=PopularPosts1&action=editWidget&sectionId=sl-tab1" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;PopularPosts1&quot;));" target="configPopularPosts1" title="Edit">
+<img alt="" height="18" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div></div></div>
+<div class="tabs-widget-content" id="tab-id2" style="display: none;"><div class="tabs section" id="sl-tab2"><div class="widget HTML" id="HTML5">
+<h2 class="title">Bài mới</h2>
+<div class="widget-content">
+<div id="bp_recent"><div class="recent-post-cont"><div class="bp_item_title"><a href="http://www.blogit.info/2013/01/jscrollpane-jquery-scrollbar-nhu-facebook.html?utm_source=BP_recent&utm-medium=gadget&utm_campaign=bp_recent" target="_top" title="jScrollPane - jQuery Scrollbar như facebook">jScrollPane - jQuery Scrollbar như...</a></div><div class="bp_item_thumb"><a href="http://www.blogit.info/2013/01/jscrollpane-jquery-scrollbar-nhu-facebook.html?utm_source=bp_recent&utm-medium=gadget&utm_campaign=bp_recent" target="_top" title="jScrollPane - jQuery Scrollbar như facebook"><img src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/jquery-scrollbar-facebook.jpg" style="float: left; margin: 5px;" alt="jScrollPane - jQuery Scrollbar như facebook" width="50" height="50"></a></div><div class="bp_item_summary"> jScrollPane - jQuery Scrollbar like facebook.
+Cũng khá lâu rồi, hôm nay mới rãnh...</div></div><div class="bp_recent_separator"></div><div class="recent-post-cont"><div class="bp_item_title"><a href="http://www.blogit.info/2012/12/nhung-website-luu-va-chia-se-code-truc-tuyen.html?utm_source=BP_recent&utm-medium=gadget&utm_campaign=bp_recent" target="_top" title="Những website lưu và chia sẽ code trực tuyến">Những website lưu và chia sẽ code ...</a></div><div class="bp_item_thumb"><a href="http://www.blogit.info/2012/12/nhung-website-luu-va-chia-se-code-truc-tuyen.html?utm_source=bp_recent&utm-medium=gadget&utm_campaign=bp_recent" target="_top" title="Những website lưu và chia sẽ code trực tuyến"><img src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/pasteandsharecode.jpg" style="float: left; margin: 5px;" alt="Những website lưu và chia sẽ code trực tuyến" width="50" height="50"></a></div><div class="bp_item_summary"> Paste and share code online.
+Đây là một số trong rất nhiều những website cho phép...</div></div><div class="bp_recent_separator"></div><div class="recent-post-cont"><div class="bp_item_title"><a href="http://www.blogit.info/2012/12/tu-thiet-ke-template-joomla-25-30-phan-2.html?utm_source=BP_recent&utm-medium=gadget&utm_campaign=bp_recent" target="_top" title="Tự thiết kế Template Joomla 2.5, 3.0 - Phần 2">Tự thiết kế Template Joomla 2.5, 3...</a></div><div class="bp_item_thumb"><a href="http://www.blogit.info/2012/12/tu-thiet-ke-template-joomla-25-30-phan-2.html?utm_source=bp_recent&utm-medium=gadget&utm_campaign=bp_recent" target="_top" title="Tự thiết kế Template Joomla 2.5, 3.0 - Phần 2"><img src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/design-template-25(1).jpg" style="float: left; margin: 5px;" alt="Tự thiết kế Template Joomla 2.5, 3.0 - Phần 2" width="50" height="50"></a></div><div class="bp_item_summary"> How to create Joomla Template 2.5. 
+Qua bài viết hôm trước có lẽ các bạn cũng hiểu...</div></div><div class="bp_recent_separator"></div><div class="recent-post-cont"><div class="bp_item_title"><a href="http://www.blogit.info/2012/10/tu-thiet-ke-template-joomla-25-30-phan-1.html?utm_source=BP_recent&utm-medium=gadget&utm_campaign=bp_recent" target="_top" title="Tự thiết kế Template Joomla 2.5 - 3.0 - Phần 1">Tự thiết kế Template Joomla 2.5 - ...</a></div><div class="bp_item_thumb"><a href="http://www.blogit.info/2012/10/tu-thiet-ke-template-joomla-25-30-phan-1.html?utm_source=bp_recent&utm-medium=gadget&utm_campaign=bp_recent" target="_top" title="Tự thiết kế Template Joomla 2.5 - 3.0 - Phần 1"><img src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/design-template-25(1).jpg" style="float: left; margin: 5px;" alt="Tự thiết kế Template Joomla 2.5 - 3.0 - Phần 1" width="50" height="50"></a></div><div class="bp_item_summary"> How to create Joomla Template 2.5. 
+Chắc hẳn với những ai đã từng thiết kế website...</div></div><div class="bp_recent_separator"></div><div class="recent-post-cont"><div class="bp_item_title"><a href="http://www.blogit.info/2012/10/cai-dat-visualsvn-server-va-tortoisesvn-tren-windows.html?utm_source=BP_recent&utm-medium=gadget&utm_campaign=bp_recent" target="_top" title="Cài đặt VisualSVN server và TortoiseSVN trên Windows">Cài đặt VisualSVN server và Tortoi...</a></div><div class="bp_item_thumb"><a href="http://www.blogit.info/2012/10/cai-dat-visualsvn-server-va-tortoisesvn-tren-windows.html?utm_source=bp_recent&utm-medium=gadget&utm_campaign=bp_recent" target="_top" title="Cài đặt VisualSVN server và TortoiseSVN trên Windows"><img src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/visualsvn-server_thumb.jpg" style="float: left; margin: 5px;" alt="Cài đặt VisualSVN server và TortoiseSVN trên Windows" width="50" height="50"></a></div><div class="bp_item_summary"> How to install and use VisualSVN server và TortoiseSVN on Windows. 
+Bài viết này s...</div><div class="bp_clear_float" style="clear: left;"></div></div><div class="bp_recent_separator"></div></div>
+<script style="text/javascript" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/recentposts_min.js">
+</script>
+<script style="text/javascript">
+var numberOfPosts = 5;
+var showPostDate = false;
+var showSummary = true;
+var summaryLength = 84;
+var titleLength = 34;
+var showCommentCount = false;
+var showThumbs = true;
+var showNoImage = true;
+var imgDim = 50;
+var imgFloat = 'left';
+var myMargin = 5;
+var mediaThumbsOnly = true;
+var showReadMore = false;
+</script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/summary"></script>
+<style type="text/css">
+/* -------  Recent posts style -------- */
+.recent-post-cont {
+border-bottom: 1px dotted #999;
+text-align: justify;
+width: 265px;
+padding: 7px 0;
+}
+.recent-post-cont div.bp_item_title a {
+text-decoration: none;
+color: #3598F4;
+font-weight: bold;
+}
+div.bp_recent_separator {
+clear: both;
+}
+ .bp_item_thumb img {
+width: 50px;
+height: 40px;
+border: 1px solid #666;
+padding: 2px;
+}
+.recent-post-cont:hover  {
+background: url(https://lh3.googleusercontent.com/-NsgiJovxgQk/T8Jwc-g1FrI/AAAAAAAACfw/_6ZwiG7gDF0/s45/bg-tab-menu-sidebar-hover2_e69b7d157412da4ab05a6e28816b6db7.png) repeat-x left -6px;
+}
+.recent-post-cont:hover img {
+padding:0px;
+width: 54px;
+height: 44px;
+}
+</style>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=2532426431791695497&widgetType=HTML&widgetId=HTML5&action=editWidget&sectionId=sl-tab2" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML5&quot;));" target="configHTML5" title="Edit">
+<img alt="" height="18" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div></div></div>
+<div class="tabs-widget-content" id="tab-id3" style="display: none;">
+<div class="tabs section" id="sl-tab3"><div class="widget HTML" id="HTML6">
+<h2 class="title">Comments</h2>
+<div class="widget-content">
+<script style="text/javascript">
+/*
+*	Recent comments blogger - blogspot
+*	Collected by SaliproPham {http://salipropham.blogspot.com}
+*	Update 22/05/2012 
+*/
+eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('1k 1o(A){b W=1s;b w=1q;b V=1j;b U=1l;Q(b i=0;i<W;i++){b f=A.P.M[i];b n;l(i==A.P.M.B)D;Q(b k=0;k<f.s.B;k++){l(f.s[k].1g==\'1h\'){n=f.s[k].G;D}}b K=n;n=n.x("#","#1n-");b p=n.y("#");p=p[0];b m=p.y("/");m=m[5];m=m.y(".1i");m=m[0];b z=m.x(/-/g," ");z=z.s(p);b q=f.1m.$t;b F=q.o(0,4);b H=q.o(5,7);b I=q.o(8,10);b J=q.o(11,16);b E=J+" "+I+"/"+H+"/"+F;b e=1t 1u();e[1]="1w";e[2]="1A";e[3]="15";e[4]="17";e[5]="18";e[6]="19";e[7]="1a";e[8]="1b";e[9]="1c";e[10]="1d";e[11]="1e";e[12]="1f";l("N"O f){b d=f.N.$t}v l("R"O f){b d=f.R.$t}v b d="";b T=/<\\S[^>]*>/g;d=d.x(T,"");j.h(\'<u 1p="C-1r">\');j.h(\'<X Y="C-Z"><a G="\'+n+\'">\'+f.Z[0].1v.$t+\'</a> : </X>\');l(w==0){j.h(\'\')}v{l(d.B<w){j.h(d)}v{d=d.o(0,w);b 13=d.1x(" ");d=d.o(0,13);j.h(d+\'&1y;\')}}j.h(\'<u Y="C-1z">\');l(V==14)j.h("Lúc "+E);l(U==14){b r="1B";r=r.s(K);j.h(" | "+r)}j.h(\'</u>\');j.h(\'</u>\')}}',62,100,'|||||||||||var||l_rc|k_rc|b_rc||write||document||if|e_rc|c_rc|substring|d_rc|g_rc||link||div|else|o_rc|replace|split|f_rc|json|length|rc|break|dateCmt|h_rc|href|i_rc|j_rc|x_rc|linkCmt||entry|content|in|feed|for|summary||re|n_rc|m_rc|a_rc|span|id|author||||p_rc|true|Mar||Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|rel|alternate|html|displayDate|function|displayArticle|published|comment|showrecentcomments|class|summaryLength|comments|numberOfComments|new|Array|name|Jan|lastIndexOf|hellip|footer|Feb|Xem &#187;'.split('|'),0,{}))
+</script>
+<script style="text/javascript">var numberOfComments=5;var displayDate=true;var displayArticle=true;var summaryLength=100;</script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/default"></script><div class="rc-comments"><span id="rc-author"><a href="http://www.blogit.info/2011/12/tao-list-va-grid-view-voi-jquery-va-css.html?showComment=1364745095692#comment-c3210622687852019386">Salipro Phạm</a> : </span>@Omi Tien  Blog ban rất mượt! Để đơn giản, đầu tiên là bạn phải thiết kế được cái layout Gridview…<div id="rc-footer">Lúc 22:51 31/03/2013 | <a href="http://www.blogit.info/2011/12/tao-list-va-grid-view-voi-jquery-va-css.html?showComment=1364745095692#c3210622687852019386">Xem »</a></div></div><div class="rc-comments"><span id="rc-author"><a href="http://www.blogit.info/2011/12/fixed-floating-when-scrolling-voi.html?showComment=1364744571283#comment-c4570809065003678176">Salipro Phạm</a> : </span>@Trương Chương  Liên hệ mail mình nha.<div id="rc-footer">Lúc 22:42 31/03/2013 | <a href="http://www.blogit.info/2011/12/fixed-floating-when-scrolling-voi.html?showComment=1364744571283#c4570809065003678176">Xem »</a></div></div><div class="rc-comments"><span id="rc-author"><a href="http://www.blogit.info/2012/05/tao-trang-redirect-cuc-kool-ngay-trong.html?showComment=1364624823693#comment-c5240296461341168716">bksharing</a> : </span>Thank you!Rất cool,mình đã làm được theo cách 2 (cách 3 sẽ làm nặng template, ko nên áp dụng)Lúc…<div id="rc-footer">Lúc 13:27 30/03/2013 | <a href="http://www.blogit.info/2012/05/tao-trang-redirect-cuc-kool-ngay-trong.html?showComment=1364624823693#c5240296461341168716">Xem »</a></div></div><div class="rc-comments"><span id="rc-author"><a href="http://www.blogit.info/2013/01/jscrollpane-jquery-scrollbar-nhu-facebook.html?showComment=1363818987267#comment-c6869977422572150547">Anonymous</a> : </span>It's amazing to visit this web page and reading the views of all friends concerning this post,…<div id="rc-footer">Lúc 05:36 21/03/2013 | <a href="http://www.blogit.info/2013/01/jscrollpane-jquery-scrollbar-nhu-facebook.html?showComment=1363818987267#c6869977422572150547">Xem »</a></div></div><div class="rc-comments"><span id="rc-author"><a href="http://www.blogit.info/2011/12/fixed-floating-when-scrolling-voi.html?showComment=1363771322410#comment-c4502928355409469386">Trương Chương</a> : </span>Chào bạn, mình đã xem hướng dẫn của bạn xong và áp dụng vào website mình nhưng làm hoài vẫn k được,…<div id="rc-footer">Lúc 16:22 20/03/2013 | <a href="http://www.blogit.info/2011/12/fixed-floating-when-scrolling-voi.html?showComment=1363771322410#c4502928355409469386">Xem »</a></div></div>
+<noscript>Your browser does not support JavaScript!</noscript>
+<style>
+span#rc-author a, span#rc-author a.visited{
+text-decoration: none;
+color: 
+#3598F4;
+font-weight: bold;
+}
+span#rc-author {
+background: url(https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png) no-repeat -10px -234px;
+padding-left: 23px;
+}
+.rc-comments a, .rc-comments a.visited{
+color: #A884E0;
+}
+div.rc-comments {
+margin: 0px 10px 0 2px;
+border-bottom: 1px dotted 
+#AAA;
+padding: 5px 0px;
+}
+div.rc-comments:hover {
+background: url(https://lh3.googleusercontent.com/-NsgiJovxgQk/T8Jwc-g1FrI/AAAAAAAACfw/_6ZwiG7gDF0/s45/bg-tab-menu-sidebar-hover2_e69b7d157412da4ab05a6e28816b6db7.png) repeat-x left -6px;
+}
+</style>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=2532426431791695497&widgetType=HTML&widgetId=HTML6&action=editWidget&sectionId=sl-tab3" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML6&quot;));" target="configHTML6" title="Edit">
+<img alt="" height="18" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div></div></div>
+</div>
+<div class="sidebar-e" id="table-vertical-tab-bottom"></div>
+</div>
+<style type="text/css">
+/* ---------------- PopularPosts style -------------- */
+#PopularPosts1{width:265px}
+ul.tabs-widget-container{list-style:none;padding:0;margin:0;height:60px;width:290px;background:url(https://lh6.googleusercontent.com/-SVkROUyK8aI/T8Jwc1R0SgI/AAAAAAAACf0/LfWhXkIaT5U/s61/bg-tab-menu-sidebar_5699643e4311e80bc126f0c5179df485.png) repeat-x center top;position:relative;border-top:3px solid #666}
+ul.tabs-widget-container li{float:left;padding:0 0 15px;width:33.3%}
+ul.tabs-widget-container li a{text-align:center;display:block;line-height:42px;padding:0 1px;font-family:Times New Roman;font-size:15px;text-shadow:1px 1px 3px #EEE;word-spacing:-1px;color:#444;font-weight:bold}
+ul.tabs-widget-container li a:hover{background:url(https://lh6.googleusercontent.com/-07Q7jQ45k0o/T61NGmFq0ZI/AAAAAAAACV0/3ZGj9-PkQu8/s95/bg-tab-menu-sidebar-hover3.png) no-repeat center 3px}
+li.tabs-widget-current{background:url(https://lh3.googleusercontent.com/-0DNPy4ABifY/T8JwgqquNnI/AAAAAAAACgg/bEFtWLPE9-8/s30/tick.jpeg) no-repeat center 43px}
+a.tabs-widget-current2{background:url(https://lh3.googleusercontent.com/-NsgiJovxgQk/T8Jwc-g1FrI/AAAAAAAACfw/_6ZwiG7gDF0/s45/bg-tab-menu-sidebar-hover2_e69b7d157412da4ab05a6e28816b6db7.png) repeat-x center 0}
+#table-vertical-tab-top{background:url(https://lh3.googleusercontent.com/-fBYn0Zc82aQ/T8JwgjfKfII/AAAAAAAACgo/mFIboYISrQ0/s300/table-tab-sidebar2_dfd7ad330e744eeb59e22536d73888c8.png) 0 top repeat-y}
+#table-vertical-tab-main{background:url(https://lh3.googleusercontent.com/-fBYn0Zc82aQ/T8JwgjfKfII/AAAAAAAACgo/mFIboYISrQ0/s300/table-tab-sidebar2_dfd7ad330e744eeb59e22536d73888c8.png) 0 top repeat-y}
+#table-vertical-tab-bottom,.table-vertical-tab-bottom{height:25px;background:url(https://lh4.googleusercontent.com/-l25yueFxplM/T8JwhJo5EMI/AAAAAAAACgs/iiQ2WRPDHGk/s300/table-tab-sidebar3_d0bbcea88b97b00f1dc646b44edc8386.png) 0 top repeat-y}
+
+</style>
+<!-- @SALIPRO: Nội dung sidebar -->
+<div id="main-side">
+<aside>
+<div class="sidebar section" id="sidebar-right-1"><div class="widget Label" id="Label1">
+<h2 style="font-size: 24px;"><span style="">Chuyên mục</span></h2>
+<div class="widget-content list-label-widget-content">
+<ul>
+<li>
+<a dir="ltr" href="http://www.blogit.info/search/label/Ki%E1%BA%BFn%20th%E1%BB%A9c%20IT?&max-results=5">Kiến thức IT</a>
+</li>
+<li>
+<a dir="ltr" href="http://www.blogit.info/search/label/Web-Blog%20tips?&max-results=5">Web-Blog tips</a>
+</li>
+<li>
+<a dir="ltr" href="http://www.blogit.info/search/label/L%E1%BA%ADp%20tr%C3%ACnh?&max-results=5">Lập trình</a>
+</li>
+<li>
+<a dir="ltr" href="http://www.blogit.info/search/label/Tutorials?&max-results=5">Tutorials</a>
+</li>
+<li>
+<a dir="ltr" href="http://www.blogit.info/search/label/Th%E1%BB%A7%20thu%E1%BA%ADt%20Blogspot?&max-results=5">Thủ thuật Blogspot</a>
+</li>
+<li>
+<a dir="ltr" href="http://www.blogit.info/search/label/Windows%20OS?&max-results=5">Windows OS</a>
+</li>
+<li>
+<a dir="ltr" href="http://www.blogit.info/search/label/G%C3%B3c%20gi%E1%BA%A3i%20tr%C3%AD?&max-results=5">Góc giải trí</a>
+</li>
+<li>
+<a dir="ltr" href="http://www.blogit.info/search/label/Kho%20ph%E1%BA%A7n%20m%E1%BB%81m?&max-results=5">Kho phần mềm</a>
+</li>
+<li>
+<a dir="ltr" href="http://www.blogit.info/search/label/Ki%E1%BA%BFn%20th%E1%BB%A9c%20Network?&max-results=5">Kiến thức Network</a>
+</li>
+<li>
+<a dir="ltr" href="http://www.blogit.info/search/label/Linh%20tinh?&max-results=5">Linh tinh</a>
+</li>
+<li>
+<a dir="ltr" href="http://www.blogit.info/search/label/audio%20online?&max-results=5">audio online</a>
+</li>
+<li>
+<a dir="ltr" href="http://www.blogit.info/search/label/Linux%20OS?&max-results=5">Linux OS</a>
+</li>
+<li>
+<a dir="ltr" href="http://www.blogit.info/search/label/Kho%20%C4%91%E1%BB%93%20h%E1%BB%8Da?&max-results=5">Kho đồ họa</a>
+</li>
+<li>
+<a dir="ltr" href="http://www.blogit.info/search/label/Tin%20c%C3%B4ng%20ngh%E1%BB%87?&max-results=5">Tin công nghệ</a>
+</li>
+<li>
+<a dir="ltr" href="http://www.blogit.info/search/label/%C4%90i%E1%BB%87n%20tho%E1%BA%A1i?&max-results=5">Điện thoại</a>
+</li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=2532426431791695497&widgetType=Label&widgetId=Label1&action=editWidget&sectionId=sidebar-right-1" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;Label1&quot;));" target="configLabel1" title="Edit">
+<img alt="" height="18" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget Label" id="Label2">
+<h2 style="font-size: 24px;"><span style="">Tag cloud</span></h2>
+<div class="widget-content cloud-label-widget-content">
+<span class="label-size label-size-4">
+<a dir="ltr" href="http://www.blogit.info/search/label/asp.net?&max-results=5">asp.net</a>
+</span>.
+      
+<span class="label-size label-size-4">
+<a dir="ltr" href="http://www.blogit.info/search/label/B%E1%BA%A3o%20m%E1%BA%ADt?&max-results=5">Bảo mật</a>
+</span>.
+      
+<span class="label-size label-size-4">
+<a dir="ltr" href="http://www.blogit.info/search/label/C%23?&max-results=5">C#</a>
+</span>.
+      
+<span class="label-size label-size-1">
+<a dir="ltr" href="http://www.blogit.info/search/label/c%2B%2B?&max-results=5">c++</a>
+</span>.
+      
+<span class="label-size label-size-3">
+<a dir="ltr" href="http://www.blogit.info/search/label/CCNA?&max-results=5">CCNA</a>
+</span>.
+      
+<span class="label-size label-size-3">
+<a dir="ltr" href="http://www.blogit.info/search/label/CSS?&max-results=5">CSS</a>
+</span>.
+      
+<span class="label-size label-size-3">
+<a dir="ltr" href="http://www.blogit.info/search/label/facebook?&max-results=5">facebook</a>
+</span>.
+      
+<span class="label-size label-size-5">
+<a dir="ltr" href="http://www.blogit.info/search/label/Google%20sites?&max-results=5">Google sites</a>
+</span>.
+      
+<span class="label-size label-size-4">
+<a dir="ltr" href="http://www.blogit.info/search/label/java?&max-results=5">java</a>
+</span>.
+      
+<span class="label-size label-size-5">
+<a dir="ltr" href="http://www.blogit.info/search/label/jquery?&max-results=5">jquery</a>
+</span>.
+      
+<span class="label-size label-size-2">
+<a dir="ltr" href="http://www.blogit.info/search/label/NAT?&max-results=5">NAT</a>
+</span>.
+      
+<span class="label-size label-size-2">
+<a dir="ltr" href="http://www.blogit.info/search/label/ng%C3%A0y%20%C4%91%C3%A1ng%20nh%E1%BB%9B?&max-results=5">ngày đáng nhớ</a>
+</span>.
+      
+<span class="label-size label-size-3">
+<a dir="ltr" href="http://www.blogit.info/search/label/photoshop?&max-results=5">photoshop</a>
+</span>.
+      
+<span class="label-size label-size-1">
+<a dir="ltr" href="http://www.blogit.info/search/label/php?&max-results=5">php</a>
+</span>.
+      
+<span class="label-size label-size-3">
+<a dir="ltr" href="http://www.blogit.info/search/label/RMI?&max-results=5">RMI</a>
+</span>.
+      
+<span class="label-size label-size-3">
+<a dir="ltr" href="http://www.blogit.info/search/label/SQL?&max-results=5">SQL</a>
+</span>.
+      
+<span class="label-size label-size-1">
+<a dir="ltr" href="http://www.blogit.info/search/label/truy%E1%BB%87n%20vui?&max-results=5">truyện vui</a>
+</span>.
+      
+<span class="label-size label-size-4">
+<a dir="ltr" href="http://www.blogit.info/search/label/t%C3%A0i%20li%E1%BB%87u%20IT?&max-results=5">tài liệu IT</a>
+</span>.
+      
+<span class="label-size label-size-3">
+<a dir="ltr" href="http://www.blogit.info/search/label/XML?&max-results=5">XML</a>
+</span>.
+      
+<span class="label-size label-size-1">
+<a dir="ltr" href="http://www.blogit.info/search/label/%E1%BA%A3nh%20vui?&max-results=5">ảnh vui</a>
+</span>.
+      
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=2532426431791695497&widgetType=Label&widgetId=Label2&action=editWidget&sectionId=sidebar-right-1" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;Label2&quot;));" target="configLabel2" title="Edit">
+<img alt="" height="18" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div>
+<div class="widget HTML" id="HTML4">
+<div class="widget-content">
+<a href="http://adf.ly/?id=1785644"><img width="260" height="79" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/quangcao_adf.png" alt="Hướng dẫn kiếm tiền với ADF.LY" border="0"></a>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=2532426431791695497&widgetType=HTML&widgetId=HTML4&action=editWidget&sectionId=sidebar-right-1" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML4&quot;));" target="configHTML4" title="Edit">
+<img alt="" height="18" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div></div>
+</aside>
+</div>
+<div class="table-vertical-tab-bottom" id="end-side-right"></div>
+<div style="clear:both"></div>
+</div>
+</div>
+<div style="clear:both"></div>
+<div id="horizontal-wrap"><!-- Horizontal show here-->
+<div id="horizontal-cont">
+<div class="tabs section" id="horizontal"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- end main -->
+</div>
+<!-- end show content -->
+</div>
+</div><iframe frameborder="0" name="google_top_static_frame" style="height: 0px; width: 0px; position: absolute;" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/blank.htm"></iframe>
+<div id="bottom-bg">
+<div class="center bg-footer">
+<div id="end-content-wrap">
+<!-- @SALIPRO: Footer Panel -->
+<div class="footer-panel footer-panel-left">
+<div class="salip section" id="bottom1-1"></div>
+</div>
+<div class="footer-panel footer-panel-center">
+<div class="salip section" id="bottom1-2"><div class="widget HTML" id="HTML3">
+<h2 class="title">Âm nhạc</h2>
+<div class="widget-content">
+<div id="playerbg" style="font-family: time new romans">
+Hãy để âm nhạc xoa dịu đau thương và nhân đôi hạnh phúc trong mỗi chúng ta!!!
+<img src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/Music.jpg">
+</div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=2532426431791695497&widgetType=HTML&widgetId=HTML3&action=editWidget&sectionId=bottom1-2" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML3&quot;));" target="configHTML3" title="Edit">
+<img alt="" height="18" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div></div>
+</div>
+<div class="footer-panel-right">
+<div class="salip section" id="bottom1-3"><div class="widget HTML" id="HTML2">
+<h2 class="title">Thống kê</h2>
+<div class="widget-content html2">
+<script id="_wauev1">var _wau = _wau || []; _wau.push(["small", "4v32ml3tdq83", "ev1"]);(function() { var s=document.createElement("script"); s.async=true; s.src="http://widgets.amung.us/small.js";document.getElementsByTagName("head")[0].appendChild(s);})();</script><div style="position: relative; display: inline-block; background-image: url(data:image/gif;base64,R0lGODlhUAAXAMQAAM1iTdBuWMQ4MsdHOt+ch/js5+/Qw+vCs/Pe1dR6Y+OolNuQespVQ9eFbsAnLX9/fzAwL////zU1NQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAABQABcAAAX/ICSOZGmeaKqu7Bi9L3IcBWzfeK7vfI+LMAPAQXQEEBGJcslsOp/QqFQaAUYMAiIjMnAIDMmpeEweVyGRQtcxIByy7Fd5Ti+fIwTiABYoKsJ1gYJMd30OeIhDRoCDjXR3igAEEQAChgCMjppihUULL3CLm6OcQHlEEQ0JEX6ZpK9Ld2qofZRxrrCvd1dZrA4AlWC5w7FWEQgJRQ4JSMTOuzAFMzU+1dbX1i3a29zdJhIwSkk24OGAOOU56eJyYw8S73ax7bGE54y45fP1YvFzYXIy4btH6Mm4feKYPIi3kCE8eAuXRHRy8OA6duzQkUuYMSMghyAfhnzYpF1FKPjsNPEDyI8jyXchYSqB2ZBiPYs2W+rjyNIlOIkzX4oU6s9gwB4lN4ZzaW5pmIkxhUIs6uzRsBAAOw==); width: 80px; height: 15px; padding: 0px; margin: 0px; overflow: hidden; cursor: pointer; direction: ltr;" title="Click to see stats for this site by whos.amung.us (4v32ml3tdq83)"><div style="background-image: url(data:image/gif;base64,R0lGODlhUAAXAMQAAM1iTdBuWMQ4MsdHOt+ch/js5+/Qw+vCs/Pe1dR6Y+OolNuQespVQ9eFbsAnLX9/fzAwL////zU1NQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAABQABcAAAX/ICSOZGmeaKqu7Bi9L3IcBWzfeK7vfI+LMAPAQXQEEBGJcslsOp/QqFQaAUYMAiIjMnAIDMmpeEweVyGRQtcxIByy7Fd5Ti+fIwTiABYoKsJ1gYJMd30OeIhDRoCDjXR3igAEEQAChgCMjppihUULL3CLm6OcQHlEEQ0JEX6ZpK9Ld2qofZRxrrCvd1dZrA4AlWC5w7FWEQgJRQ4JSMTOuzAFMzU+1dbX1i3a29zdJhIwSkk24OGAOOU56eJyYw8S73ax7bGE54y45fP1YvFzYXIy4btH6Mm4feKYPIi3kCE8eAuXRHRy8OA6duzQkUuYMSMghyAfhnzYpF1FKPjsNPEDyI8jyXchYSqB2ZBiPYs2W+rjyNIlOIkzX4oU6s9gwB4lN4ZzaW5pmIkxhUIs6uzRsBAAOw==); background-attachment: scroll; position: absolute; width: 3px; height: 8px; top: 4px; left: 20px; line-height: 8px; overflow: hidden; padding: 0px; margin: 0px; background-position: -5px -15px; background-repeat: no-repeat no-repeat;"></div><div style="background-image: url(data:image/gif;base64,R0lGODlhUAAXAMQAAM1iTdBuWMQ4MsdHOt+ch/js5+/Qw+vCs/Pe1dR6Y+OolNuQespVQ9eFbsAnLX9/fzAwL////zU1NQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAABQABcAAAX/ICSOZGmeaKqu7Bi9L3IcBWzfeK7vfI+LMAPAQXQEEBGJcslsOp/QqFQaAUYMAiIjMnAIDMmpeEweVyGRQtcxIByy7Fd5Ti+fIwTiABYoKsJ1gYJMd30OeIhDRoCDjXR3igAEEQAChgCMjppihUULL3CLm6OcQHlEEQ0JEX6ZpK9Ld2qofZRxrrCvd1dZrA4AlWC5w7FWEQgJRQ4JSMTOuzAFMzU+1dbX1i3a29zdJhIwSkk24OGAOOU56eJyYw8S73ax7bGE54y45fP1YvFzYXIy4btH6Mm4feKYPIi3kCE8eAuXRHRy8OA6duzQkUuYMSMghyAfhnzYpF1FKPjsNPEDyI8jyXchYSqB2ZBiPYs2W+rjyNIlOIkzX4oU6s9gwB4lN4ZzaW5pmIkxhUIs6uzRsBAAOw==); background-attachment: scroll; position: absolute; width: 24px; height: 8px; top: 4px; left: 24px; line-height: 8px; overflow: hidden; padding: 0px; margin: 0px; background-position: -50px -15px; background-repeat: no-repeat no-repeat;"></div></div>
+<br>
+<a id="loadAlexa" target="_blank" href="http://www.alexa.com/siteinfo/http://salipropham.blogspot.com"><a href="http://www.alexa.com/data/details/main?url=http://blogit.info" class="AlexaSiteStatsWidget"><img src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/s.gif" border="0" alt="Alexa Certified Site Stats for http://blogit.info"></a><script type="text/javascript" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/a"></script></a>
+<br>
+<!--
+<p><a target="_blank" href="http://feeds.feedburner.com/SaliproitBlog"><img src="http://feeds.feedburner.com/~fc/SaliproitBlog?bg=444444&amp;fg=FFFFFF&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a></p>-->
+<!--<img height='28px' style="border: 0px solid ; display: inline;" alt="hit counter" src="http://hit-counter.info/hit.php?id=201155&amp;counter=37" />-->
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=2532426431791695497&widgetType=HTML&widgetId=HTML2&action=editWidget&sectionId=bottom1-3" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML2&quot;));" target="configHTML2" title="Edit">
+<img alt="" height="18" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget Stats" id="Stats1">
+<div class="widget-content">
+<div id="Stats1_content" style="">
+<span class="counter-wrapper graph-counter-wrapper" id="Stats1_totalCount"><span class="digit stage-0"><strong>1</strong><span class="blind-plate"></span></span><span class="digit stage-0"><strong>6</strong><span class="blind-plate"></span></span><span class="digit stage-0"><strong>6</strong><span class="blind-plate"></span></span><span class="digit stage-0"><strong>2</strong><span class="blind-plate"></span></span><span class="digit stage-0"><strong>5</strong><span class="blind-plate"></span></span><span class="digit stage-0"><strong>8</strong><span class="blind-plate"></span></span></span>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=2532426431791695497&widgetType=Stats&widgetId=Stats1&action=editWidget&sectionId=bottom1-3" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;Stats1&quot;));" target="configStats1" title="Edit">
+<img alt="" height="18" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div>
+</div></div>
+</div>
+<!-- SALIPRO: Only Homepage play music <b:if cond='data:blog.pageType == &quot;index&quot;'> <b:if cond='data:blog.homepageUrl == data:blog.url'> <div id='music-cont'> <b:section class='tabs' id='music-widget' maxwidgets='1' showaddelement='yes'/> </div> </b:if> </b:if> SALIPRO: End Only Homepage play music -->
+</div>
+</div>
+<div class="center">
+<div class="f-div" id="copyright-cont">
+<div class="left-copyright"><span>Night-Sky v2.0 © 10/2011. Designed by SaliproPham. <br><a style=" font-size: 10px;"> Power by Blogger, recommended Chrome 1280 x 768 </a></span></div>
+</div>
+<div class="f-div" id="more-panel">
+<a href="javascript:void(0);">More...
+                      <span>Mở rộng</span>
+</a>
+</div>
+<div class="f-div" id="copyright-cont">
+<div class="right-copyright">
+<a href="https://docs.google.com/spreadsheet/viewform?formkey=dHpDdEZRemtaNkViV09vWnZNcVFzRGc6MQ" target="_blank">Trao đổi liên kết  </a> | <a href="https://plus.google.com/u/0/107742437891387520759/posts" target="_blank"> About me </a>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<div id="more-bg">
+<div class="center" id="hidden-zone">Coming soon... :))
+
+
+
+           </div>
+</div>
+<style>
+#more-panel {
+	width: 250px;
+}
+#more-panel a {
+position: relative;
+	padding: 5px 0 0 0;
+	text-align: center;
+	margin-top: 20px;
+	height: 30px;
+	display: block;
+	background: url(https://lh6.googleusercontent.com/-tUh1N2gelKw/UEyvLJQtHOI/AAAAAAAAC0g/6wbxvkQ1NHI/s496/bottom-panel-btn.png) no-repeat top left;
+}
+#more-panel a:hover { 
+     cursor: pointer;
+     background: url(https://lh6.googleusercontent.com/-tUh1N2gelKw/UEyvLJQtHOI/AAAAAAAAC0g/6wbxvkQ1NHI/s496/bottom-panel-btn.png
+) no-repeat -248px 0px;
+}
+#hidden-zone {  
+        display: none;
+        height: 100px;
+}
+#more-panel a span {
+padding:20px 40px;
+border-radius: 50%;
+border: 5px solid #CCC;
+background-color: #FFF;
+color: #3598F4;
+font-weight: bold;
+position: absolute;
+bottom: 0px;
+opacity: 0;
+box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+-webkit-transform: scale(0.2);
+-moz-transform: scale(0.2);
+-o-transform: scale(0.2);
+-ms-transform: scale(0.2);
+transform: scale(0.2);
+-webkit-transition: all 0.3s ease-in-out;
+-moz-transition: all 0.3s ease-in-out;
+-o-transition: all 0.3s ease-in-out;
+-ms-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+}
+#more-panel a:hover span {
+width: 100px;
+opacity: 0.9;
+bottom: 40px;
+-webkit-transform: scale(1);
+-moz-transform: scale(1);
+-o-transform: scale(1);
+-ms-transform: scale(1);
+transform: scale(1);
+}
+</style>
+<script>
+$(function(){
+    $('#more-panel a').click(function() {
+         $('#hidden-zone').slideToggle();
+         $('html, body').animate({scrollTop: $('body').height()}, 800);
+    });
+});
+</script>
+<!-- ******************************************************** -->
+<div class="tabs section" id="crosscol-overflow"></div>
+<aside>
+</aside>
+<div class="foot section" id="footer-1"></div>
+<table border="0" cellpadding="0" cellspacing="0" class="section-columns columns-2">
+<tbody>
+<tr>
+<td class="first columns-cell">
+<div class="foot section" id="footer-2-1"></div>
+</td>
+<td class="columns-cell">
+<div class="foot section" id="footer-2-2"></div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- <script type='text/javascript'> window.setTimeout(function() { document.body.className = document.body.className.replace(&#39;loading&#39;, &#39;&#39;); }, 10); </script>-->
+<!-- SALIPRO: PAGING -->
+<script type="text/javascript">;
+var home_page='/';
+var urlactivepage=location.href;
+var postperpage=5;
+var numshowpage=4;
+var upPageWord ='Prev';
+var downPageWord ='Next';
+</script>
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/paging2-min.js" type="text/javascript"></script>
+<!-- ++++++++++++++++++++++++++++++++SALIPRO: SCROLL TOTOP -->
+<div id="div-toTop" style="display: block;"><span alt="back to top" id="img-back-top"></span></div>
+<!-- @SALIPRO: DIV SHOW TITLE -->
+<div id="show-up-title" style="left: 204px; display: none; top: 35px;"></div>
+<!--[if !IE]><!-->
+<script type="text/javascript">
+$(function() {
+  var p = $("#show-article").position();
+  var pos = $(".center").position().left;
+  var i = 0; //Flag chi hien thi 1 lan.
+ $(window).scroll(function() {
+// Show title post
+ if($(this).scrollTop() >= p.top+47+50) {
+     $("#show-up-title").css("left", $("#main-content-wrap").position().left + 29+"px");
+      $(".dynamic-post-title").animate({
+              left: $("#main-content-wrap").position().left, opacity:"show"
+    },500, "easeOutBounce", function() {
+$(".dynamic-post-title").css("text-shadow","0 0 5px #2BF");
+if(i==0)
+{$("#show-up-title").show().delay(200).animate({top:40},400)
+.animate({top:60},400).animate({top:50},200).animate({top:35,opacity: "hide"},300); 
+i=1;}                 
+});
+   
+} else {
+  $("#show-up-title").removeAttr("style");
+  $(".dynamic-post-title").css("text-shadow","");
+   $(".dynamic-post-title").animate({
+              left: 0, opacity:"hide"
+    },200);
+i=0;
+}
+});
+});
+</script>
+<!--<![endif]-->
+<script type="text/javascript">
+$(function() {
+ var h = $(window).height()-100;
+  var p = $("#show-article").position();
+  var pos = $(".center").position().left;
+  var i = 0; //Flag chi hien thi 1 lan.
+var flag = 0;
+ $(window).scroll(function() {
+
+// Highlight sidebar menu
+var a123 = $(this).scrollTop();
+$("#main-side h2").each(function() { 
+var b123 = $(this).offset().top;
+if(a123 > b123-h && a123 < b123-150) {
+ if($(this).css("color")=="rgb(119, 119, 119)") {
+   $(this).stop().animate({fontSize:"30px"},250,function() {                    
+                       $(this).stop().animate({fontSize:"24px"},200); 
+                                            
+   });
+  $('#main-side h2').filter(function() {return ( 
+           $(this).css('color') == 'rgb(53, 152, 244)' );
+}).css({"color":"rgb(119, 119, 118)"});
+  $('#main-side h2 span').css("background-position","");
+  $(this).css("color","#3598F4");
+  $(this).children().css("background-position","-497px -499px");
+
+ }
+  } else {     
+     $(this).css("color",""); 
+    $(this).children().css("background-position","");
+  }
+
+
+});
+// Highlight top menu
+  if($(this).scrollTop() != 0) {
+
+   $('#div-toTop').fadeIn(); 
+   $('#myCrosscol a').css('color', '#BBB');
+  } else {
+   $('#div-toTop').fadeOut();
+   //$('#myCrosscol a').css('color', '#777');
+  $('#myCrosscol a').removeAttr("style");
+  }
+ });
+
+// Hàm cuộn lên
+$('#div-toTop').click(function() {
+  $('body,html').animate({scrollTop:0},800);
+ }); 
+});
+</script>
+<!-- SALIPRO: Emoticons - Replace body -->
+<script src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/replace-ysmileys_bodyx.js" type="text/javascript"></script>
+<!-- +++++++++++++++++++++@SALIPRO: Effect share panel jqyery -->
+<style>
+.post-outer{padding:5px 0 10px 0}
+#post-footer-cont{background-color:#E8E8E8;border:1px dashed #CCC;-moz-border-radius:6px;moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;margin-top:5px;padding:0 5px 0 5px;width:605px;color:#999;margin:10px 0 0 20px}
+</style>
+<!-- #SALIPRO: Effect share panel -->
+<!-- ++++++++++++++++++++SALIPRO: TITLE ARTICLE+++++++++++++++++++ -->
+<script>
+ $(".dynamic-post-title").html($("#post-title-cont h2").html()); 
+</script>
+<style>
+#show-up-title{display:none;background:url(https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png) no-repeat -10px -336px;height:88px;width:65px;position:fixed;top:60px;z-index:10000}
+.dynamic-post-title{left:0;display:none;position:fixed;z-index:10000;top:0;font-family:Arial;font-size:14px;text-shadow:2px 2px 3px black;color:#AAA;height:30px;padding:10px 0 0 25px;background:url(https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png) no-repeat -8px -188px}
+
+</style>
+<!-- #SALIPRO: ERROR PAGE -->
+<script language="JavaScript">
+    jQuery(document).ready(function($){
+     var myframe = $('#Gadget2 iframe').attr('id');
+
+myframe = '#'+myframe;
+// alert(myframe);
+     var x = $(myframe).contents().find('html body').html() ;
+var x2 = $(myframe).attr('name') ;
+ $('#copyright-cont').html(x2);
+     });
+        
+</script>
+<!-- ++++++++++++ @SALIPRO: JQuery for MENU ++++++++++++++ -->
+<script type="text/javascript">
+    var dur = 200; // Duration Of Animation in Milli Seconds
+    $(document).ready(function() {
+        $('#Label1 ul li a').hover(function() {
+            $(this).stop().animate({
+                paddingLeft: '15px',
+               fontSize:"14px"
+            }, dur);
+        }, function() {
+            $(this).stop().animate({
+                paddingLeft: 0,
+                fontSize:"12px"
+            }, dur);
+        });
+ });
+</script>
+<!-- **************************** DEMO POSISION JS **************************** -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++SALIPRO: Define jCarousel Lite & Easing effect-->
+<script defer="defer" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/jcarousellite_easing.js" type="text/javascript"></script>
+<!-- +++++++++++++++++++++++++++++++++++++++++++SALIPRO: Vertical Scrolling jCarousel Lite -->
+<script type="text/javascript">
+$(function() {
+	$(".newsticker-jcarousellite").jCarouselLite({
+		vertical: true,
+		hoverPause:true,
+		visible: 3,
+		auto:5000,
+		speed:1000
+	});
+});
+</script>
+<!-- +++++++++++++++++++++++++++++++++++++++++++@SALIPRO: FadeSlide on home +++++++++++++++ -->
+<!-- ///@SALIPRO: FadeSlide on home +++++++++++++++ -->
+<!-- **************************** //DEMO POSISION JS **************************** -->
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+</script><script type="text/javascript" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/3934819169-widgets.js"></script>
+<script type="text/javascript" src="./Phân biệt Interface và lớp Abstract trong OOP » BlogIT.info_files/plusone.js" gapi_processed="true"></script>
+<script type="text/javascript">
+if (typeof(BLOG_attachCsiOnload) != 'undefined' && BLOG_attachCsiOnload != null) { window['blogger_templates_experiment_id'] = "templatesV2";window['blogger_blog_id'] = '2532426431791695497';BLOG_attachCsiOnload('item_'); }_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d2532426431791695497','//www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html','2532426431791695497');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '2532426431791695497', 'bloggerUrl': 'http://www.blogger.com', 'title': 'BlogIT.info', 'pageType': 'item', 'url': 'http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html', 'canonicalUrl': 'http://www.blogit.info/2012/07/phan-biet-interface-va-lop-abstract.html', 'canonicalHomepageUrl': 'http://www.blogit.info/', 'homepageUrl': 'http://www.blogit.info/', 'blogspotFaviconUrl': 'http://www.blogit.info/favicon.ico', 'enabledCommentProfileImages': true, 'adultContent': false, 'disableAdSenseWidget': false, 'analyticsAccountNumber': 'UA-27198959-1', 'searchLabel': '', 'searchQuery': '', 'pageName': 'Phân biệt Interface và lớp Abstract trong OOP', 'pageTitle': 'BlogIT.info: Phân biệt Interface và lớp Abstract trong OOP', 'metaDescription': 'Bài viết này chúng ta sẽ tìm hiểu kỹ hơn về khái niệm và sự khác biệt giữa Interface và lớp Abstract trong OOP (Object Oriented Programming)', 'encoding': 'UTF-8', 'locale': 'en', 'localeLanguage': 'en', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'languageDirection': 'ltr', 'feedLinks': '\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42BlogIT.info - Atom\42 href\75\42http://www.blogit.info/feeds/posts/default\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/rss+xml\42 title\75\42BlogIT.info - RSS\42 href\75\42http://www.blogit.info/feeds/posts/default?alt\75rss\42 /\76\n\74link rel\75\42service.post\42 type\75\42application/atom+xml\42 title\75\42BlogIT.info - Atom\42 href\75\42http://www.blogger.com/feeds/2532426431791695497/posts/default\42 /\76\n\74link rel\75\42EditURI\42 type\75\42application/rsd+xml\42 title\75\42RSD\42 href\75\42http://www.blogger.com/rsd.g?blogID\0752532426431791695497\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42BlogIT.info - Atom\42 href\75\42http://www.blogit.info/feeds/4928282651237237621/comments/default\42 /\76\n', 'meTag': '', 'openIdOpTag': '', 'postImageThumbnailUrl': 'https://lh5.googleusercontent.com/-RkUS78ODW6c/UAmlwzZgpbI/AAAAAAAACtQ/jjMrqY_Z0o8/s72-c/oop.jpg', 'imageSrcTag': '\74link rel\75\42image_src\42 href\75\42https://lh5.googleusercontent.com/-RkUS78ODW6c/UAmlwzZgpbI/AAAAAAAACtQ/jjMrqY_Z0o8/s72-c/oop.jpg\42 /\76\n', 'latencyHeadScript': '\74script type\75\42text/javascript\42\76(function() { var b\75window,e\75\42jstiming\42,g\75\42tick\42;(function(){function d(a){this.t\75{};this.tick\75function(a,d,c){c\75void 0!\75c?c:(new Date).getTime();this.t[a]\75[c,d]};this[g](\42start\42,null,a)}var a\75new d;b.jstiming\75{Timer:d,load:a};if(b.performance\46\46b.performance.timing){var a\75b.performance.timing,c\75b[e].load,f\75a.navigationStart,a\75a.responseStart;0\74f\46\46a\76\75f\46\46(c[g](\42_wtsrt\42,void 0,f),c[g](\42wtsrt_\42,\42_wtsrt\42,a),c[g](\42tbsd_\42,\42wtsrt_\42))}try{a\75null,b.chrome\46\46b.chrome.csi\46\46(a\75Math.floor(b.chrome.csi().pageT),c\46\0460\74f\46\46(c[g](\42_tbnd\42,void 0,b.chrome.csi().startE),\nc[g](\42tbnd_\42,\42_tbnd\42,f))),null\75\75a\46\46b.gtbExternal\46\46(a\75b.gtbExternal.pageT()),null\75\75a\46\46b.external\46\46(a\75b.external.pageT,c\46\0460\74f\46\46(c[g](\42_tbnd\42,void 0,b.external.startE),c[g](\42tbnd_\42,\42_tbnd\42,f))),a\46\46(b[e].pt\75a)}catch(l){}})();b.tickAboveFold\75function(d){var a\0750;if(d.offsetParent){do a+\75d.offsetTop;while(d\75d.offsetParent)}d\75a;750\76\75d\46\46b[e].load[g](\42aft\42)};var h\75!1;function k(){h||(h\75!0,b[e].load[g](\42firstScrollTime\42))}b.addEventListener?b.addEventListener(\42scroll\42,k,!1):b.attachEvent(\42onscroll\42,k);\n })();\74/script\076', 'mobileHeadScript': '', 'ieCssRetrofitLinks': '\74!--[if IE]\76\74script type\75\42text/javascript\42 src\75\42//www.blogger.com/static/v1/jsbin/943085292-ieretrofit.js\42\76\74/script\76\n\74![endif]--\076', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/2ad9a09a40260f49', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sf': 'n', 'tf': ''}}, {'name': 'skin', 'data': {'vars': {}, 'override': ''}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '/?view\75classic'}, 'flipcard': {'name': 'flipcard', 'url': '/?view\75flipcard'}, 'magazine': {'name': 'magazine', 'url': '/?view\75magazine'}, 'mosaic': {'name': 'mosaic', 'url': '/?view\75mosaic'}, 'sidebar': {'name': 'sidebar', 'url': '/?view\75sidebar'}, 'snapshot': {'name': 'snapshot', 'url': '/?view\75snapshot'}, 'timeslide': {'name': 'timeslide', 'url': '/?view\75timeslide'}}}]);
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main-article', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': '//www.blogger.com/static/v1/jsbin/2941532444-lbx.js', 'lightboxCssUrl': '//www.blogger.com/static/v1/v-css/228702327-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML8', 'right-featured-cont', null, document.getElementById('HTML8'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML11', 'right-featured-cont', null, document.getElementById('HTML11'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML12', 'right-featured-cont', null, document.getElementById('HTML12'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML7', 'about', null, document.getElementById('HTML7'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PopularPostsView', new _WidgetInfo('PopularPosts1', 'sl-tab1', null, document.getElementById('PopularPosts1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML5', 'sl-tab2', null, document.getElementById('HTML5'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML9', 'left-featured-cont', null, document.getElementById('HTML9'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML10', 'left-featured-cont', null, document.getElementById('HTML10'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML13', 'left-featured-cont', null, document.getElementById('HTML13'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML6', 'sl-tab3', null, document.getElementById('HTML6'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'myCrosscol', null, document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label1', 'sidebar-right-1', null, document.getElementById('Label1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label2', 'sidebar-right-1', null, document.getElementById('Label2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML4', 'sidebar-right-1', null, document.getElementById('HTML4'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML3', 'bottom1-2', null, document.getElementById('HTML3'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'bottom1-3', null, document.getElementById('HTML2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_StatsView', new _WidgetInfo('Stats1', 'bottom1-3', null, document.getElementById('Stats1'), {'title': '', 'showGraphicalCounter': true, 'showAnimatedCounter': true, 'showSparkline': false, 'statsUrl': '//www.blogit.info/b/stats?style\75WHITE_TRANSPARENT\46timeRange\75ALL_TIME\46token\75FL-G4j0BAAA.CcY_W4YIX4glv74j8ulOS6tBnF08_PUWunrlqxc1A84.tIU4VqL2btMj1LY5xipR7w'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_NavbarView', new _WidgetInfo('Navbar1', 'navbar', null, document.getElementById('Navbar1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PageListView', new _WidgetInfo('PageList1', 'null', null, document.getElementById('PageList1'), {'title': 'Pages', 'links': [{'href': 'http://www.blogit.info/', 'title': 'Trang chủ', 'isCurrentPage': false}, {'href': 'http://www.blogit.info/p/trang.html', 'title': 'Site map', 'isCurrentPage': false}, {'href': 'http://www.blogit.info/p/lien-he.html', 'title': 'Liên hệ', 'isCurrentPage': false}, {'href': 'http://www.blogit.info/p/css-optimizer.html', 'title': 'CSS Optimizer', 'isCurrentPage': false}, {'href': 'http://www.blogit.info/p/javascript-compressor.html', 'title': 'JS compressor', 'isCurrentPage': false}, {'href': 'http://www.blogit.info/p/js-beautify.html', 'title': 'JS beautify', 'isCurrentPage': false}, {'href': 'http://www.blogit.info/p/encodedecode-text.html', 'title': 'Encode/Decode text', 'isCurrentPage': false}, {'href': 'http://www.blogit.info/p/text-to-html-converter.html', 'title': 'Text to HTML Converter', 'isCurrentPage': false}, {'href': 'http://www.blogit.info/p/redirect.html', 'title': 'Redirect', 'isCurrentPage': false}], 'mobile': false}, 'displayModeFull'));
+</script>
+
+<!-- EEEEEEEEEEEEEEENNNNNNNNNNNNNNNNNNNDDDDDDDDDDDDDDDDDDD -->
+</body></html>

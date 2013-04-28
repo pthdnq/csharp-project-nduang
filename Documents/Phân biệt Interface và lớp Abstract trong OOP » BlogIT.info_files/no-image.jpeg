@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html b:version='2' class='v2' dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<!-- +++++++++++++++++++++++++++++++++++++++++++ SEO Google -->
+<meta content='tXVpeBdOClreH486I1dNm9539mU' name='alexaVerifyID'/>
+<meta content='QmVdYNykQScw02TfTQYucFwZpvY' name='alexaVerifyID'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">(function() { var b=window,e="jstiming",g="tick";(function(){function d(a){this.t={};this.tick=function(a,d,c){c=void 0!=c?c:(new Date).getTime();this.t[a]=[c,d]};this[g]("start",null,a)}var a=new d;b.jstiming={Timer:d,load:a};if(b.performance&&b.performance.timing){var a=b.performance.timing,c=b[e].load,f=a.navigationStart,a=a.responseStart;0<f&&a>=f&&(c[g]("_wtsrt",void 0,f),c[g]("wtsrt_","_wtsrt",a),c[g]("tbsd_","wtsrt_"))}try{a=null,b.chrome&&b.chrome.csi&&(a=Math.floor(b.chrome.csi().pageT),c&&0<f&&(c[g]("_tbnd",void 0,b.chrome.csi().startE),
+c[g]("tbnd_","_tbnd",f))),null==a&&b.gtbExternal&&(a=b.gtbExternal.pageT()),null==a&&b.external&&(a=b.external.pageT,c&&0<f&&(c[g]("_tbnd",void 0,b.external.startE),c[g]("tbnd_","_tbnd",f))),a&&(b[e].pt=a)}catch(l){}})();b.tickAboveFold=function(d){var a=0;if(d.offsetParent){do a+=d.offsetTop;while(d=d.offsetParent)}d=a;750>=d&&b[e].load[g]("aft")};var h=!1;function k(){h||(h=!0,b[e].load[g]("firstScrollTime"))}b.addEventListener?b.addEventListener("scroll",k,!1):b.attachEvent("onscroll",k);
+ })();</script>
+<meta content='true' name='MSSmartTagsPreventParsing'/>
+<meta content='blogger' name='generator'/>
+<link href='http://www.blogit.info/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='http://www.blogit.info//2012/07/img/no-image.jpeg' rel='canonical'/>
+<link rel="alternate" type="application/atom+xml" title="BlogIT.info - Atom" href="http://www.blogit.info/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="BlogIT.info - RSS" href="http://www.blogit.info/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="BlogIT.info - Atom" href="http://www.blogger.com/feeds/2532426431791695497/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=2532426431791695497" />
+<!--[if IE]><script type="text/javascript" src="//www.blogger.com/static/v1/jsbin/943085292-ieretrofit.js"></script>
+<![endif]-->
+<meta content='Life is the sharing - Chia sẻ đam mê, trao đổi kinh nghiệm, mở rộng hiểu biết, lưu giữ kiến thức IT' name='description'/>
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<link href='https://plus.google.com/107742437891387520759' rel='publisher'/>
+<meta content='INDEX, FOLLOW' name='robots'/>
+<meta content='INDEX, FOLLOW' name='googlebot'/>
+<meta content='general' name='rating'/>
+<meta content='Blog IT, Saliproit, Salipropham, SaliproIT blog, Thủ thuật blogspot, Thủ thuật blog, Hướng dẫn làm web, IT, Giải trí ,Hack yahoo, Hack website, Mua bán online, TV online, Lập trình, Radio online, Đồ án CNTT, ảnh hot boy, anh hotgirl, website đẹp' name='keywords'/>
+<meta content='SaliproIT blog - Life is the sharing - Chia sẻ đam mê, trao đổi kinh nghiệm, mở rộng hiểu biết, lưu giữ kiến thức IT, thủ thuật blogspot' name='description'/>
+<title>BlogIT.info &#187; Chia sẻ đam mê ...</title>
+<meta content='IE=9' http-equiv='X-UA-Compatible'/>
+<meta content='text/html; charset=utf-8' http-equiv='content-type'/>
+<meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/>
+<!-- +++++++++++++++++++++++++++++++++++++++++++SALIPRO: Google font -->
+<link href='http://fonts.googleapis.com/css?family=EB+Garamond&subset=latin,vietnamese' rel='stylesheet' type='text/css'/>
+<!-- ++++++++++++++++++++++++JAVASCRIPT+++++++++++++++++++++++++ -->
+<!--[if IE]><!-->
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js' type='text/javascript'></script>
+<!--<![endif]-->
+<!--[if !IE]><!-->
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'></script>
+<!--<![endif]-->
+<!-- <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js' type='text/javascript'/> IE k hieu-->
+<!-- +++++++++++++++++++++++++++++++++++++++++++SALIPRO: Process bar & Filtered Lable-->
+<!-- +++++++++++++++++++++++++++++++++++++++++++ SALIPRO: Bai viet lien quan -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++ SALIPRO: POST -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++SALIPRO: G analytics -->
+<script type='text/javascript'>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27282842-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<meta content='width=1100' name='viewport'/>
+<link type='text/css' rel='stylesheet' href='//www.blogger.com/static/v1/widgets/3441929121-widget_css_2_bundle.css' />
+<link type="text/css" rel="stylesheet" href="//www.blogger.com/dyn-css/authorization.css?targetBlogID=2532426431791695497&zx=f711d4e6-1bd5-422b-89f3-3e0e19d91017"/>
+<style id='page-skin-1' type='text/css'><!--
+/*
+-----------------------------------------------
+Blogger Template Style
+----------------------------------------------- */
+body {
+background-color:#000;
+color:#444;
+font-family: arial;
+font-size: 14px;
+word-spacing:2px;
+}
+#top-bg {
+background:url(https://lh5.googleusercontent.com/-rgtfewSpIyc/To3d81AVfDI/AAAAAAAABc4/El1msuCfixk/s1336/bg.jpg) no-repeat center top;
+}
+#navbar {
+height:0px;
+visibility:hidden;
+display:none
+}
+/*  GENERAL^^
+--------------------------------- */
+.blogger-clickTrap {
+display:none;
+}
+* {
+margin: 0px;
+padding: 0px;
+}
+div {
+display:block;
+}
+.center{
+width:1000px;
+margin: 0px auto;
+}
+.clear {
+clear: both;
+}
+.btncss {
+display: inline-block;
+color: white;
+text-decoration: none;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+position: relative;
+cursor: pointer;
+padding: 2px 10px 1px;
+background-color: #999;
+}
+.btncss:hover {
+background-color: #C9C;
+}
+/*  HEADER ^^
+----------------------------------*/
+#center-wrap {
+width:1000px;
+margin: 0px auto;
+}
+#main-wrap {
+width:1000px;
+margin: 0px auto;
+}
+#header-wrap, #body-wrap {
+width:1000px;
+}
+#header-wrap {
+background:url(https://lh5.googleusercontent.com/-rgtfewSpIyc/To3d81AVfDI/AAAAAAAABc4/El1msuCfixk/s1336/bg.jpg) no-repeat center top;
+}
+#top-menu-cont {
+height:35px;
+}
+#top-title-cont {
+height:250px;
+position :relative;
+}
+#search-cont {
+height:32px;
+}
+#search-form {
+margin: 4px 0 0 84px;
+}
+#searchBox {
+margin: 0px;
+background: transparent;
+width: 140px;
+padding: 0px;
+border: none;
+}
+#searchButton {
+border: none;
+background: transparent;
+width: 55px;
+height: 22px;
+margin: 3px 0 0 1px;
+outline: none;
+padding: 0px;
+font-size: 11px;
+text-transform:uppercase;
+cursor:pointer;
+}
+#crosscol {
+margin: 0px;
+font-family:  Times New Roman;
+font-size:20px;
+}
+.PageList ul {
+height:35px;
+float: right;
+position: relative;
+right: 0px;
+}
+.PageList ul li {
+height:35px;
+width:141px;
+background:url(https://lh6.googleusercontent.com/-Ro3UJi-Eks8/To3fpj7aEMI/AAAAAAAABYc/E5oA9WNUM04/s141/bgTab.png) no-repeat center top;
+}
+.PageList ul li a span {
+display:block;
+text-align:center;
+float: none;
+}
+.PageList ul li a {
+height:35px;
+width:146px;
+display:block;
+color:#939393;
+padding: 7px 0 0 0;
+text-lign:center;
+}
+.PageList ul li a:hover,.PageList li.selected a {
+background:url(https://lh4.googleusercontent.com/-1u947pfIONk/To3t1Zq1lcI/AAAAAAAABY4/uBMYxI-eQ0w/s145/bgTab-hover.png) no-repeat center top;
+color:#3598F4;
+}
+#Header1 {
+color:#FFF;
+}
+/*  BODY^^
+--------------------------------------*/
+#body-wrap {
+background:url(https://lh6.googleusercontent.com/-jvRCGoT7eq8/T6rCnWS2LbI/AAAAAAAACSA/Tpnmz1Wgefw/s1000/bove-bar.jpg) #FFF  no-repeat left top;
+}
+#main-content-wrap {
+padding-top:30px;
+}
+#left-wrap {
+width:700px;
+float:left;
+}
+#show-article {
+padding: 45px 5px 0 10px;
+}
+#show-widget {
+padding: 45px 5px 0 10px;
+}
+#right-wrap {
+width:300px;
+float:right;
+font-size:13px;
+}
+#bottom-bg {
+height: 100%;
+background:url(https://lh5.googleusercontent.com/-WCdh4U04_z0/UIZKzqCccYI/AAAAAAAAC8w/IDqMtgCN9Ao/s1500/footerpage2.0.jpg) no-repeat center top;
+}
+#end-content-wrap {
+height:250px;
+background: url(https://lh3.googleusercontent.com/-Xd3V7lgk-Z8/T8JwcmjOe5I/AAAAAAAACf4/xBIxhIwYurE/s337/bg-footer-panel2_1c51b102b551162b91e49cc99d3dfc9a.png);
+background-repeat: repeat-x;
+}
+/* RIGHT SIDEBAR MENU^^
+-------------------------------------------*/
+#right-side-cont {
+width:300px;
+position:relative;
+top:-20px;
+}
+.sidebar-e,#bottom-side,#main-side,#top-side, #about-cont, #vertical-tab-menu-cont,  #end-side-right {
+width:300px;
+float: right;
+}
+#top-side {
+background-image: url(https://lh5.googleusercontent.com/-H17X2E4wSTw/T9LGXvtYZ6I/AAAAAAAACmU/6SC6Y8qL5H0/s631/leftItems_nmbvgfd.png);
+background-position: -10px -46px;
+height:104px;
+}
+#main-side {
+background:url(https://lh3.googleusercontent.com/-fBYn0Zc82aQ/T8JwgjfKfII/AAAAAAAACgo/mFIboYISrQ0/s300/table-tab-sidebar2_dfd7ad330e744eeb59e22536d73888c8.png) repeat-y top left;
+height:auto;
+}
+.main-side {
+background:url(https://lh4.googleusercontent.com/-Gf_N_tan96I/T8JweKQV3OI/AAAAAAAACgQ/qZH9TIirumc/s300/right-side-bg2.png) repeat-y top left;
+height:auto;
+}
+#bottom-side {
+background-image: url(https://lh5.googleusercontent.com/-H17X2E4wSTw/T9LGXvtYZ6I/AAAAAAAACmU/6SC6Y8qL5H0/s631/leftItems_nmbvgfd.png) ;
+background-repeat: no-repeat;
+background-position: -10px -170px;
+height:50px;
+}
+#sidebar-right-1 {
+width: 260px;
+word-spacing: 1px;
+font-family: "verdana", arial;
+color: #555;
+text-shadow: 1px 1px 1px #FFF;
+}
+#sidebar-right-1 a,#sidebar-right-1 a:visited {
+color: #555;
+}
+#sidebar-right-1 a:hover {
+/*color: #FFF;*/
+}
+#sidebar-right-1 h2 {
+height: 49px;
+background:url(https://lh6.googleusercontent.com/-Rc5DOt5xnR8/T654_EJH-bI/AAAAAAAACWw/SoeHPTt3ShQ/s292/left-side-titleVIP.jpg) no-repeat left top;
+padding: 6px 0 0 12px;
+color: #777;
+width: 110%;
+text-shadow: 1px 1px 3px #EEE;
+font-family: 'EB Garamond', Times New Roman;
+font-size:24px;
+word-spacing: 1px;
+position: relative;
+left: -20px;
+}
+#sidebar-right-1 h2 span {
+background-position: -12px -499px;
+background-repeat: no-repeat;
+padding: 0 40px;
+background-image: url(https://lh5.googleusercontent.com/-H17X2E4wSTw/T9LGXvtYZ6I/AAAAAAAACmU/6SC6Y8qL5H0/s631/leftItems_nmbvgfd.png);
+}
+.Label ul {
+list-style: none;
+/*list-style-image:url(https://lh5.googleusercontent.com/-5Y8L1CFRWjc/T73SL7RY7-I/AAAAAAAACdM/m1tWvxvHiYg/s10/bullet.gif);*/
+padding: 0 0 0 5px;
+width:250px;
+font-size: 12px;
+}
+.Label ul li {
+background-image: url(https://lh5.googleusercontent.com/-H17X2E4wSTw/T9LGXvtYZ6I/AAAAAAAACmU/6SC6Y8qL5H0/s631/leftItems_nmbvgfd.png);
+background-repeat: no-repeat;
+background-position: -10px -542px ;
+padding: 0px 20px;
+text-transform: capitalize;
+/*  border-bottom: 1px solid #777; */
+}
+.Label ul li a {
+line-height: 20px;
+}
+.Label ul li a:hover {
+font-weight: bold;
+}
+#Label2 span a:hover {
+color: #3598F4;
+}
+.widget {
+margin: 10px 0;
+}
+.BlogArchive #ArchiveList ul ul ul li {
+max-height: 14px;
+overflow: hidden;
+border-bottom: 1px solid #999;
+margin:0px;
+}
+#LinkList1 ul {
+list-style-image:url(https://lh5.googleusercontent.com/-5Y8L1CFRWjc/T73SL7RY7-I/AAAAAAAACdM/m1tWvxvHiYg/s10/bullet.gif) no-repeat 0 6px;
+padding: 0 0 0 25px;
+}
+#LinkList1 ul li {
+border-bottom: 1px solid #777;
+line-height: 20px;
+width:200px;
+}
+.PopularPosts .item-thumbnail img, .bp_item_thumb img {
+width: 50px;
+height: 45px;
+border: 1px solid #666;
+padding: 3px;
+}
+.PopularPosts .item-thumbnail {
+float: left;
+margin: 3px 5px 0px 0;
+}
+.PopularPosts .item-title a, .PopularPosts .item-title a:visited {
+text-decoration: none;
+color: #3598F4;
+font-weight: bold;
+}
+.PopularPosts ul {
+padding: 0 0 0 10px;
+}
+.PopularPosts .widget-content ul li {
+padding: 5px 0;
+height:92px;
+border-top: 1px #AAA dotted;
+text-align: justify;
+}
+.PopularPosts .widget-content ul li:hover  {
+background: url(https://lh3.googleusercontent.com/-NsgiJovxgQk/T8Jwc-g1FrI/AAAAAAAACfw/_6ZwiG7gDF0/s45/bg-tab-menu-sidebar-hover2_e69b7d157412da4ab05a6e28816b6db7.png) repeat-x left -6px;
+}
+.PopularPosts .widget-content ul li:hover  .item-thumbnail img{
+padding: 0px;
+width: 56px;
+height: 51px;
+}
+/* POST
+--------------------------------- */
+.post-body .scode {
+padding: 8px;
+border: 1px dashed #555;
+color: black;
+background-color: #EEE;
+line-height: 1.4em;
+font-family: Courier New,Courier,mono;
+font-size: 12px;
+width: 540px;
+margin: 8px auto;
+overflow: auto;
+}
+#post-title-cont {
+background: url(https://lh5.googleusercontent.com/-H17X2E4wSTw/T9LGXvtYZ6I/AAAAAAAACmU/6SC6Y8qL5H0/s631/leftItems_nmbvgfd.png) no-repeat -10px -280px;
+height:65px;
+position:relative;
+left:-10px;
+}
+.post-title {
+padding: 0 0 10px 40px;
+height:24px;
+overflow:hidden;
+}
+.main a, .main a:visited,.post-title {
+color:#3598F4;
+}
+.main a:hover {
+color: #A884E0;
+}
+a {
+text-decoration:none;
+}
+#post-title-cont h2 {
+font-family: 'EB Garamond', Times New Roman;
+font-size:25px;
+text-shadow: 1px 1px 3px #7BF;
+word-spacing: 1px;
+}
+.jump-link {
+padding-top: 5px;
+text-align: right;
+}
+.jump-link a {
+margin-right:20px;
+}
+.post-body{
+text-align: justify;
+}
+.post-body, .jump-link {
+margin: 0 0 0 20px;
+width:625px;
+}
+.post-body ul, .post-body ol {
+margin-left: 55px;
+}
+#post-template {
+max-height:190px;
+overflow:hidden;
+}
+#share-cont {
+margin-top: 0px;
+}
+.post-outer {
+background-color:#F9F9F9;
+margin-bottom: 20px;
+border: 1px solid #E2E2F2;
+}
+/*
+.post-outer:hover{
+background-color:#F4F4F4;
+-moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}*/
+/* COMMENTS
+----------------------------------*/
+.avatar-image-container {
+background: url(https://lh5.googleusercontent.com/-JzHAHxuTdQg/T7v_D3dmDbI/AAAAAAAACaI/eSg8MDXA-yE/s37/no-avatar.jpg);
+}
+.comment-new {
+background-color: #E8E8E8;
+border: 1px dashed #CCC;
+-moz-border-radius: 6px;
+moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+margin: 10px 0 0 20px;
+padding: 5px 10px 7px 10px;
+word-spacing: 1px;
+color: #999;
+}
+#comments {
+width: 595px;
+-moz-border-radius: 6px;
+moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+margin: 10px 0 0 20px;
+padding: 5px 10px 7px 10px;
+word-spacing: 1px;
+color: #999;
+}
+#related-posts {
+width: 595px;
+}
+.comment-form {
+max-width: 590px;
+}
+.comments iframe {
+height:250px;
+}
+#comment-post-message {
+text-align: center;
+}
+.comment-form p {
+padding: 5px 15px 0 15px;
+color: #FFA677;
+}
+.comment-form #hidden-comment {
+display: none;
+}
+#example-show {
+color: white;
+}
+.comment-footer {
+margin:  0 0 0 0;
+}
+#comment-border {
+border: 1px dotted;
+margin: 5px 0 20px -50px;
+padding: 5px 10px 5px 50px;
+background-color: #EEE;
+}
+span#adminCMT {
+display: inline-block;
+background: url(https://lh3.googleusercontent.com/-t8Eblk0WDGY/T3tDV8jUT8I/AAAAAAAAB7w/PIn9sAN0V10/s44/user_admin%255B1%255D.gif) no-repeat;
+width: 45px;
+height: 20px;
+position: absolute;
+left: -50px;
+top: 18px;
+}
+.comment-stamp {
+font-size: 10px;
+}
+.comment-author {
+font-size: 12px;
+}
+.comment-body {
+margin: 5px 5px;
+}
+/*emoti*/
+.way2bloggingcsmly {
+background: none repeat scroll 0 0 #FFF !important;
+border: 1px dashed green !important;
+font-size: small !important;
+padding: 5px !important;
+text-align: left !important;
+margin-right: 18px;
+}
+.way2bloggingcsmly div {
+width: auto;
+padding: 1px;
+margin:1px 0;
+background: none repeat 0 0#F9F9F9;
+display: inline-block;
+}
+img.w2bsmly {
+vertical-align: middle !important;
+border:0px !important;
+}
+/* HORIZONTAL
+--------------------------------- */
+#horizontal-cont {
+padding: 0px 30px;
+height:10px;
+}
+#music-cont {
+background:url(https://lh4.googleusercontent.com/-aG8b1gqhRZY/TpBvTfjq0EI/AAAAAAAABZY/JEboP3sb1ak/s471/musicbg2.jpg) no-repeat left top;
+height:155px;
+margin-left:100px;
+padding: 30px 0 0 85px;
+}
+.player {
+border: 1px solid #BBB;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+moz-box-shadow: 0 0px 5px #ebebeb;
+-webkit-box-shadow: 0 0px 5px #ebebeb;
+-ms-box-shadow: 0 0px 5px #ebebeb;
+-o-box-shadow: 0 0px 5px #ebebeb;
+box-shadow: 0 0px 5px #ebebeb;
+padding: 4px 4px 0px;
+clear: both;
+margin: 10px auto;
+text-align: center;
+width: 450px;
+display: block;
+}
+#player {
+width:450px;
+height:74px;
+}
+/* --------------------------
+PANEL of FOOTER */
+.footer-panel {
+background:url(https://lh5.googleusercontent.com/-esMSm2mBZIU/T4kGXXtuTLI/AAAAAAAACEI/6-rAL-5zJ6M/s207/bg-footer-panel.png) no-repeat right top;
+width: 35%;
+height: 100%;
+float: left;
+padding-top: 5px;
+}
+.footer-panel-right {
+width: 30%;
+height: 100%;
+float: left;
+padding-top: 5px;
+}
+.salip h2 {
+font-family: 'EB Garamond', Times New Roman;
+margin-bottom:15px;
+}
+#copyright-cont {
+text-align: center;
+width: 360px;
+}
+.left-copyright {
+float: left;
+}
+.right-copyright {
+float: right;
+}
+#copyright-cont span, #sitenote-cont span, #copyright-cont a:link, #copyright-cont a:visited {
+text-shadow: 1px 1px 8px #3598F4;
+color: #666;
+}
+#copyright-cont span:hover, #copyright-cont a:hover {
+color: #999;
+}
+/* ---------------------
+MORE PANEL   */
+#more-bg {
+height: 100%;
+background: url(https://lh3.googleusercontent.com/-Of15JBU9ERg/UIZKzXj7hyI/AAAAAAAAC8s/k3TP6RdovmI/s1500/bg-footerpage2.0.jpg) repeat-y center top;
+}
+.f-div {
+height: 55px;
+float: left;
+margin: 16px 0 0 0;
+padding: 8px 0 0 0;
+}
+/* Mobile
+----------------------------------------------- */
+body.mobile{background-size:$(mobile.background.size)}.mobile .body-fauxcolumn-outer{background:$(mobile.background.overlay)}.mobile .body-fauxcolumn-outer .cap-top{background-size:100% auto}.mobile .content-outer{-webkit-box-shadow:0 0 3px rgba(0,0,0,.15);box-shadow:0 0 3px rgba(0,0,0,.15);padding:0 $(content.shadow.spread)}body.mobile .AdSense{margin:0 -$(content.shadow.spread)}.mobile .tabs-inner .widget ul{margin-left:0;margin-right:0}.mobile .post{margin:0}.mobile .main-inner .column-center-inner .section{margin:0}.mobile .date-header span{padding:0.1em 10px;margin:0 -10px}.mobile h3.post-title{margin:0}.mobile .blog-pager{background:transparent none no-repeat scroll top center}.mobile .footer-outer{border-top:none}.mobile .main-inner,.mobile .footer-inner{background-color:$(content.background.color)}.mobile-index-contents{color:$(body.text.color)}.mobile-link-button{background-color:$(link.color)}.mobile-link-button a:link,.mobile-link-button a:visited{color:$(mobile.button.color)}.mobile .tabs-inner .section:first-child{border-top:none}.mobile .tabs-inner .PageList .widget-content{background-color:$(tabs.selected.background.color);color:$(tabs.selected.text.color);border-top:$(tabs.border.width) solid $(tabs.border.color);border-bottom:$(tabs.border.width) solid $(tabs.border.color)}.mobile .tabs-inner .PageList .widget-content .pagelist-arrow{border-$startSide:1px solid $(tabs.border.color)}
+/* PAGING
+--------------------------------------*/
+.blog-pager,#blog-pager{
+font-family:"Arial", Times, serif;
+font-weight:normal;
+font-size:12px;
+width:100%;
+height:30px;
+padding-top:5px;
+}
+.showpageNum a,.showpage a, #btn-slideshow span {
+background:transparent url('https://lh5.googleusercontent.com/-7I7l5i_y3dE/TpBXwAskNAI/AAAAAAAABY8/QLla8Akti14/s256/gbtn-bg.png') repeat-x;
+border:1px solid #97a7af;
+margin:0px 1px 0 1px;padding:3px 8px;
+text-decoration:none;
+color:#333;line-height:14px;cursor:pointer;white-space:nowrap;
+-webkit-border-radius:3px;-moz-border-radius:3px;
+}
+.showpageNum a:hover,.showpage a:hover, #btn-slideshow span:hover , #btn-slideshow span.current{
+background-image:url('https://lh5.googleusercontent.com/-61uAl9EDLXo/TpBYMEXM4qI/AAAAAAAABZI/Hal-Lk4xxx0/s256/gbtn-bg-sel.png');
+border:1px solid #A884E0;color:#A884E0;text-decoration:none;
+}
+.showpageOf{
+margin:0 8px 0 0;
+}
+.showpagePoint {
+background:transparent url('https://lh5.googleusercontent.com/-61uAl9EDLXo/TpBYMEXM4qI/AAAAAAAABZI/Hal-Lk4xxx0/s256/gbtn-bg-sel.png') repeat-x;
+margin:0 3px 0 3px;padding:3px 8px;
+line-height:14px;cursor:pointer;white-space:nowrap;
+-webkit-border-radius:3px;-moz-border-radius:3px;
+border:1px solid #e4905a;color:#333;text-decoration:none;font-weight:bold;
+}
+/* POST
+------------------------------------------*/
+.post-body img {
+max-width:550px;
+}
+.post-body .img {
+padding: 6px;
+border : 1px solid #999;
+background-color:#E8E8E8;
+margin: 10px;
+}
+.post-avatar {
+width:180px;
+height:116px;
+float:left;
+margin: 0 20px 10px 10px;
+padding: 6px;
+border : 1px solid #999;
+background-color:#E8E8E8;
+background-image: url("https://lh5.googleusercontent.com/-SbNceSoLJAY/T4kGY5DUapI/AAAAAAAACEg/nymlhUc5Nn0/s200/no-image.jpeg");
+}
+.post-body .note {
+border : 1px solid #999;
+padding: 10px;
+width: 540px;
+margin: 10px 0 10px 30px;
+text-indent: 120px;
+background:url('https://lh3.googleusercontent.com/-17kiJ5YZbwk/TfZI7S-LdoI/AAAAAAAABCc/kjhsIEi18pU/s215/bg_note.png') #FFF185 no-repeat 0px 0px;
+}
+.post-body .single-audio {
+border : 1px solid #999;
+width: 402px;
+height: 85px;
+padding-left: 2px;
+margin: 10px auto;
+background-color: black;
+}
+.post-body .single-video {
+border: 1px solid #BBB;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+moz-box-shadow: 0 0px 5px #ebebeb;
+-webkit-box-shadow: 0 0px 5px #ebebeb;
+-ms-box-shadow: 0 0px 5px #ebebeb;
+-o-box-shadow: 0 0px 5px #ebebeb;
+box-shadow: 0 0px 5px #ebebeb;
+padding: 10px 4px 0px;
+clear: both;
+margin: 10px auto;
+text-align: center;
+width: 602px;
+display: block;
+}
+.post-body .bullet1 {
+background:url('https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png') no-repeat -10px -37px;
+display: inline-block;
+width: 15px;
+height:8px;
+}
+.post-body .downs {
+background:url('https://lh6.googleusercontent.com/-g8twUhx0dxQ/TwOvJyprocI/AAAAAAAABt0/MfjzMVW4JKo/s20/down.png') no-repeat left top;
+display: inline-block;
+width: 20px;
+height:14px;
+}
+.post-body .bullet2 {
+background:url('https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png') no-repeat -14px -128px;
+display: inline-block;
+width: 15px;
+height:13px;
+}
+.post-body .bullet0 {
+background:url('https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png') no-repeat -10px -60px;
+display: inline-block;
+width: 15px;
+height:13px;
+}
+.post-body .tag {
+background:url('https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png') no-repeat -10px -90px;
+display: inline-block;
+width: 20px;
+height:17px;
+}
+.post-body .link {
+background:url('https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png') no-repeat -10px -163px;
+display: inline-block;
+width: 15px;
+height:11px;
+}
+.post-body .download {
+background:url('https://lh6.googleusercontent.com/-xbX3fWw4ZRA/TpnKvx9B0XI/AAAAAAAABac/HO-Q0QP5GCg/s191/download.png') no-repeat left 6px;
+display: inline-block;
+width: 187px;
+height:62px;
+}
+.post-body .nguon {
+background:url('https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png') no-repeat -10px -6px;
+display: inline-block;
+width: 20px;
+height:12px;
+}
+.post-body .download span
+{
+margin: 42px 0 0 18px;
+display: block;
+font-size: 11px;
+}
+.post-body .key {
+background-image: url(https://lh5.googleusercontent.com/-H17X2E4wSTw/T9LGXvtYZ6I/AAAAAAAACmU/6SC6Y8qL5H0/s631/leftItems_nmbvgfd.png);
+background-position: -10px -7px;
+display: inline-block;
+width: 16px;
+height:16px;
+}
+.post-body .download:hover {
+background:url('https://lh6.googleusercontent.com/-xbX3fWw4ZRA/TpnKvx9B0XI/AAAAAAAABac/HO-Q0QP5GCg/s191/download.png') no-repeat left -54px;
+}
+.syntaxhighlighter .container {
+padding-bottom: 10px;
+}
+.breadcrumbs {
+padding: 5px 10px;
+background-color: #F9F9F9;
+margin-bottom: 10px;
+border: 1px solid #E2E2F2;
+font-weight: bold;
+}
+#div-toTop {
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;padding: 5px ;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;position:fixed; /* không thay đổi dòng này */
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;bottom:-2px; /* vị trí của div-toTop */
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;right:10px;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;cursor:pointer;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;display:none;&#160; /* không thay đổi dòng này */
+}
+span#img-back-top {
+height:48px;
+width:48px;
+background: url(https://lh6.googleusercontent.com/-fd_LX_0IvtU/T8UKq5H93TI/AAAAAAAACis/h145Yu9lYMA/s678/items_44ae74c264.png) no-repeat -10px -270px;
+display:block;
+}
+.shareblog {
+float: right;
+position: relative;
+top: 222px;
+z-index:22;
+}
+#HTML2, #Stats1 {
+margin: 0px 0;
+}
+.post-body .demo
+{
+border-bottom: 1px dotted #3598F4;
+}
+.post-body .emoticon
+{
+width:18px;
+}
+.PageList .submenu { position: absolute; overflow: initial;}
+.submenu li {float:left; position:relative;}
+/** * SyntaxHighlighter * http://alexgorbatchev.com/SyntaxHighlighter */.syntaxhighlighter{background-color:white !important;background:url(https://lh3.googleusercontent.com/-NfSPoUr5v2o/T3m4vKuh8II/AAAAAAAAB68/E_sPep_q5PM/s78/codeview.png) no-repeat right top;border:1px solid #999;width:560px;margin:10px 30px;font-size:12px;position:relative;height:auto;height:expression( this.scrollHeight > 510 ? "510px":"auto" );max-height:510px !important;overflow:auto}
+.syntaxhighlighter .line{white-space:pre !important}
+.syntaxhighlighter .line.alt1{height:18px}
+.syntaxhighlighter .line.alt2{height:18px}
+.syntaxhighlighter .line.highlighted.alt1,.syntaxhighlighter .line.highlighted.alt2{background-color:#e0e0e0 !important}
+.syntaxhighlighter .line.highlighted.number{color:black !important}
+.syntaxhighlighter table{max-width:560px;margin:5px 0}
+.syntaxhighlighter table caption{color:black !important}
+.syntaxhighlighter .gutter{color:#afafaf !important;padding-right:10px;vertical-align:text-top}
+.syntaxhighlighter .container{/*width:510px;overflow:auto;*/}
+.syntaxhighlighter table td.code .container textarea{box-sizing:border-box !important;left:5% !important;top:0% !important;position:absolute;width:530px !important;height:100% !important;border:none !important;background:#FFF !important;padding-left:1em !important;overflow:hidden !important;white-space:pre !important}
+.syntaxhighlighter .gutter .line{border-right:3px solid #6ce26c !important;padding:0 5px 0 5px}
+.syntaxhighlighter .gutter .line.highlighted{background-color:#6ce26c !important;color:white !important}
+.syntaxhighlighter.printing .line .content{border:none !important}
+.syntaxhighlighter.collapsed{overflow:visible !important}
+.syntaxhighlighter.collapsed .toolbar{display:none}
+.syntaxhighlighter.collapsed .toolbar a{color:blue !important}
+.syntaxhighlighter.collapsed .toolbar a:hover{color:red !important}
+.syntaxhighlighter .toolbar{display:none}
+.syntaxhighlighter .toolbar a{color:white !important}
+.syntaxhighlighter .toolbar a:hover{color:black !important}
+.syntaxhighlighter .plain,.syntaxhighlighter .plain a{color:black !important}
+.syntaxhighlighter .comments,.syntaxhighlighter .comments a{color:#008200 !important}
+.syntaxhighlighter .string,.syntaxhighlighter .string a{color:blue !important}
+.syntaxhighlighter .keyword{color:#069 !important}
+.syntaxhighlighter .preprocessor{color:gray !important}
+.syntaxhighlighter .variable{color:#a70 !important}
+.syntaxhighlighter .value{color:#090 !important}
+.syntaxhighlighter .functions{color:#ff1493 !important}
+.syntaxhighlighter .constants{color:#06c !important}
+.syntaxhighlighter .script{font-weight:bold !important;color:#069 !important;background-color:none !important}
+.syntaxhighlighter .color1,.syntaxhighlighter .color1 a{color:gray !important}
+.syntaxhighlighter .color2,.syntaxhighlighter .color2 a{color:#ff1493 !important}
+.syntaxhighlighter .color3,.syntaxhighlighter .color3 a{color:red !important}
+.syntaxhighlighter .keyword{font-weight:bold !important}
+/* TOP MENU
+------------------------------*/
+.top-blog-hor-menu {
+height:35px;
+background-color: #222;
+position: fixed;
+width: 100%;
+z-index: 9999;
+border-bottom: 1px solid #333;
+-moz-box-shadow: 0px 3px 10px rgba(0,0,0,0.5);
+-webkit-box-shadow: 0px 3px 10px rgba(0,0,0,0.5);
+}
+#HTML1 h2 {
+display: none;
+}
+#HTML1{
+margin: 0px;
+}
+#myCrosscol {
+margin:0px;
+float : right;
+}
+/*  PROCESS BAR
+----------------------------------
+*/
+#overlay-popup {
+background-color: black;
+opacity: 0.6;
+position: fixed;
+top: 0px;
+left: 0px;
+z-index: 332;
+width: 100%;
+height: 100%;
+}
+#bar_window {
+background: rgba(255, 255, 255, 0.24);
+border-radius: 5px;
+-moz-border-radius: 5px;
+padding: 5px;
+z-index:345;
+width:350px;
+height:80px;
+}
+#content-cont {
+height: 100%;
+width: 100%;
+background-color: rgba(255, 255, 255, 0.8);
+}
+#bar {
+background: url('https://lh6.googleusercontent.com/-zPYpBKC__zU/T8UKqeDrL4I/AAAAAAAACio/rtkb-JWWRog/s302/bg-progress-bar_16015f9f.jpeg') blue no-repeat top left;
+}
+.error-page h3 {
+font-family: sans-serif, times new roman;
+font-size: 14px;
+}
+.error-page ul {
+list-style: none;
+}
+.error-page .other-things {
+margin-bottom:10px;
+}
+/* +++++++++++ RATING ++++++++++++ */
+.sologan {
+margin: 5px 15px;
+float: right;
+font-style: italic;
+font-size: 11px;
+}
+
+--></style>
+<!-- ++++++++++ Hidden Footer in Static-page +++++++++ -->
+<script type='text/javascript'>
+SyntaxHighlighter.all();
+</script>
+<script type="text/javascript">var a=navigator,b="userAgent",c="indexOf",f="&m=1",g="(^|&)m=",h="?",k="?m=1";function l(){var d=window.location.href,e=d.split(h);switch(e.length){case 1:return d+k;case 2:return 0<=e[1].search(g)?null:d+f;default:return null}}if(-1!=a[b][c]("Mobile")&&-1!=a[b][c]("WebKit")&&-1==a[b][c]("iPad")||-1!=a[b][c]("Opera Mini")||-1!=a[b][c]("IEMobile")){var m=l();m&&window.location.replace(m)};
+</script><script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script></head>
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+<body class='loading'>
+<div class='navbar section' id='navbar'><div class='widget Navbar' id='Navbar1'><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<div id="navbar-iframe-container"></div>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript">
+        gapi.load("iframes-styles-bubble", function() {
+          if (window.iframes && iframes.open) {
+            iframes.open(
+                '//www.blogger.com/navbar.g?targetBlogID\0752532426431791695497\46blogName\75BlogIT.info\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75http://www.blogit.info/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://www.blogit.info/\46vt\0751177689755836337750',
+                {
+                  container: "navbar-iframe-container",
+                  id: "navbar-iframe"
+                },
+                {
+                });
+          }
+        });
+      </script><script type="text/javascript">
+(function() {
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/google_top_exp.js';
+var head = document.getElementsByTagName('head')[0];
+if (head) {
+head.appendChild(script);
+}})();
+</script>
+</div></div>
+<!-- @CHECK ERROR PAGE 404 -->
+<div class='error-page' style='padding: 10px 20px;width: 788px; border:1px solid #ccc; border-width: 0 1px 1px 1px 1px; margin:60px auto 0 auto;background: #FFF url(https://lh6.googleusercontent.com/-kcDLrGiFspo/T4UxyN9wy6I/AAAAAAAACA0/y1suKnXc9J8/s238/not-found.jpg) no-repeat right 10px;height:150px'><h1>Page Not Found</h1><br/>
+<p>Trang được yêu cầu không tồn tại, vui lòng trở về  <b><a href='http://www.blogit.info/'>TRANG CHỦ</a></b></p><br/>
+<script type='text/javascript'>var GOOG_FIXURL_LANG = 'en'; var GOOG_FIXURL_SITE = 'Your-Site-Url'</script>
+<script src='http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js' type='text/javascript'></script></div>
+<SCRIPT LANGUAGE='JavaScript'>
+    jQuery(document).ready(function($){
+     var myframe = $('#Gadget2 iframe').attr('id');
+
+myframe = '#'+myframe;
+// alert(myframe);
+     var x = $(myframe).contents().find('html body').html() ;
+var x2 = $(myframe).attr('name') ;
+ $('#copyright-cont').html(x2);
+     });
+        
+</SCRIPT>
+<!-- ++++++++++++ @SALIPRO: JQuery for MENU ++++++++++++++ -->
+<script type='text/javascript'>
+    var dur = 200; // Duration Of Animation in Milli Seconds
+    $(document).ready(function() {
+        $('#Label1 ul li a').hover(function() {
+            $(this).stop().animate({
+                paddingLeft: '15px',
+               fontSize:"14px"
+            }, dur);
+        }, function() {
+            $(this).stop().animate({
+                paddingLeft: 0,
+                fontSize:"12px"
+            }, dur);
+        });
+ });
+</script>
+<!-- **************************** DEMO POSISION JS **************************** -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++SALIPRO: Define jCarousel Lite & Easing effect-->
+<script defer='defer' src='http://saliprofile.googlecode.com/files/jcarousellite_easing.js' type='text/javascript'></script>
+<!-- +++++++++++++++++++++++++++++++++++++++++++SALIPRO: Vertical Scrolling jCarousel Lite -->
+<script type='text/javascript'>
+$(function() {
+	$(".newsticker-jcarousellite").jCarouselLite({
+		vertical: true,
+		hoverPause:true,
+		visible: 3,
+		auto:5000,
+		speed:1000
+	});
+});
+</script>
+<!-- +++++++++++++++++++++++++++++++++++++++++++@SALIPRO: FadeSlide on home +++++++++++++++ -->
+<!-- ///@SALIPRO: FadeSlide on home +++++++++++++++ -->
+<!-- **************************** //DEMO POSISION JS **************************** -->
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+</script><script type="text/javascript" src="//www.blogger.com/static/v1/widgets/3934819169-widgets.js"></script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type='text/javascript'>
+if (typeof(BLOG_attachCsiOnload) != 'undefined' && BLOG_attachCsiOnload != null) { window['blogger_templates_experiment_id'] = "templatesV2";window['blogger_blog_id'] = '2532426431791695497';BLOG_attachCsiOnload('error_page_'); }_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d2532426431791695497','//www.blogit.info//2012/07/img/no-image.jpeg','2532426431791695497');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '2532426431791695497', 'bloggerUrl': 'http://www.blogger.com', 'title': 'BlogIT.info', 'pageType': 'error_page', 'url': 'http://www.blogit.info//2012/07/img/no-image.jpeg', 'canonicalUrl': 'http://www.blogit.info//2012/07/img/no-image.jpeg', 'canonicalHomepageUrl': 'http://www.blogit.info/', 'homepageUrl': 'http://www.blogit.info/', 'blogspotFaviconUrl': 'http://www.blogit.info/favicon.ico', 'enabledCommentProfileImages': true, 'adultContent': false, 'disableAdSenseWidget': true, 'analyticsAccountNumber': 'UA-27198959-1', 'searchLabel': '', 'searchQuery': '', 'pageName': '', 'pageTitle': 'BlogIT.info', 'metaDescription': 'Life is the sharing - Chia sẻ đam mê, trao đổi kinh nghiệm, mở rộng hiểu biết, lưu giữ kiến thức IT', 'encoding': 'UTF-8', 'locale': 'en', 'localeLanguage': 'en', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'languageDirection': 'ltr', 'feedLinks': '\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42BlogIT.info - Atom\42 href\75\42http://www.blogit.info/feeds/posts/default\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/rss+xml\42 title\75\42BlogIT.info - RSS\42 href\75\42http://www.blogit.info/feeds/posts/default?alt\75rss\42 /\76\n\74link rel\75\42service.post\42 type\75\42application/atom+xml\42 title\75\42BlogIT.info - Atom\42 href\75\42http://www.blogger.com/feeds/2532426431791695497/posts/default\42 /\76\n\74link rel\75\42EditURI\42 type\75\42application/rsd+xml\42 title\75\42RSD\42 href\75\42http://www.blogger.com/rsd.g?blogID\0752532426431791695497\42 /\076', 'meTag': '', 'openIdOpTag': '', 'imageSrcTag': '', 'latencyHeadScript': '\74script type\75\42text/javascript\42\76(function() { var b\75window,e\75\42jstiming\42,g\75\42tick\42;(function(){function d(a){this.t\75{};this.tick\75function(a,d,c){c\75void 0!\75c?c:(new Date).getTime();this.t[a]\75[c,d]};this[g](\42start\42,null,a)}var a\75new d;b.jstiming\75{Timer:d,load:a};if(b.performance\46\46b.performance.timing){var a\75b.performance.timing,c\75b[e].load,f\75a.navigationStart,a\75a.responseStart;0\74f\46\46a\76\75f\46\46(c[g](\42_wtsrt\42,void 0,f),c[g](\42wtsrt_\42,\42_wtsrt\42,a),c[g](\42tbsd_\42,\42wtsrt_\42))}try{a\75null,b.chrome\46\46b.chrome.csi\46\46(a\75Math.floor(b.chrome.csi().pageT),c\46\0460\74f\46\46(c[g](\42_tbnd\42,void 0,b.chrome.csi().startE),\nc[g](\42tbnd_\42,\42_tbnd\42,f))),null\75\75a\46\46b.gtbExternal\46\46(a\75b.gtbExternal.pageT()),null\75\75a\46\46b.external\46\46(a\75b.external.pageT,c\46\0460\74f\46\46(c[g](\42_tbnd\42,void 0,b.external.startE),c[g](\42tbnd_\42,\42_tbnd\42,f))),a\46\46(b[e].pt\75a)}catch(l){}})();b.tickAboveFold\75function(d){var a\0750;if(d.offsetParent){do a+\75d.offsetTop;while(d\75d.offsetParent)}d\75a;750\76\75d\46\46b[e].load[g](\42aft\42)};var h\75!1;function k(){h||(h\75!0,b[e].load[g](\42firstScrollTime\42))}b.addEventListener?b.addEventListener(\42scroll\42,k,!1):b.attachEvent(\42onscroll\42,k);\n })();\74/script\076', 'mobileHeadScript': '', 'ieCssRetrofitLinks': '\74!--[if IE]\76\74script type\75\42text/javascript\42 src\75\42//www.blogger.com/static/v1/jsbin/943085292-ieretrofit.js\42\76\74/script\76\n\74![endif]--\076', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/2ad9a09a40260f49', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sf': 'n'}}, {'name': 'skin', 'data': {'vars': {}, 'override': ''}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '/?view\75classic'}, 'flipcard': {'name': 'flipcard', 'url': '/?view\75flipcard'}, 'magazine': {'name': 'magazine', 'url': '/?view\75magazine'}, 'mosaic': {'name': 'mosaic', 'url': '/?view\75mosaic'}, 'sidebar': {'name': 'sidebar', 'url': '/?view\75sidebar'}, 'snapshot': {'name': 'snapshot', 'url': '/?view\75snapshot'}, 'timeslide': {'name': 'timeslide', 'url': '/?view\75timeslide'}}}]);
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main-article', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'navMessage': 'Sorry, the page you were looking for in this blog does not exist.', 'lightboxEnabled': true, 'lightboxModuleUrl': '//www.blogger.com/static/v1/jsbin/2941532444-lbx.js', 'lightboxCssUrl': '//www.blogger.com/static/v1/v-css/228702327-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML8', 'right-featured-cont', null, document.getElementById('HTML8'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML11', 'right-featured-cont', null, document.getElementById('HTML11'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML12', 'right-featured-cont', null, document.getElementById('HTML12'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML7', 'about', null, document.getElementById('HTML7'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PopularPostsView', new _WidgetInfo('PopularPosts1', 'sl-tab1', null, document.getElementById('PopularPosts1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML5', 'sl-tab2', null, document.getElementById('HTML5'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML9', 'left-featured-cont', null, document.getElementById('HTML9'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML10', 'left-featured-cont', null, document.getElementById('HTML10'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML13', 'left-featured-cont', null, document.getElementById('HTML13'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML6', 'sl-tab3', null, document.getElementById('HTML6'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'myCrosscol', null, document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label1', 'sidebar-right-1', null, document.getElementById('Label1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label2', 'sidebar-right-1', null, document.getElementById('Label2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML4', 'sidebar-right-1', null, document.getElementById('HTML4'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML3', 'bottom1-2', null, document.getElementById('HTML3'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'bottom1-3', null, document.getElementById('HTML2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_StatsView', new _WidgetInfo('Stats1', 'bottom1-3', null, document.getElementById('Stats1'), {'title': '', 'showGraphicalCounter': true, 'showAnimatedCounter': true, 'showSparkline': false, 'statsUrl': '//www.blogit.info/b/stats?style\75WHITE_TRANSPARENT\46timeRange\75ALL_TIME\46token\75yM2G4j0BAAA.CcY_W4YIX4glv74j8ulOS6tBnF08_PUWunrlqxc1A84.zj6WQyCssu931AsRg_chVw'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_NavbarView', new _WidgetInfo('Navbar1', 'navbar', null, document.getElementById('Navbar1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PageListView', new _WidgetInfo('PageList1', 'null', null, document.getElementById('PageList1'), {'title': 'Pages', 'links': [{'href': 'http://www.blogit.info/', 'title': 'Trang chủ', 'isCurrentPage': false}, {'href': 'http://www.blogit.info/p/trang.html', 'title': 'Site map', 'isCurrentPage': false}, {'href': 'http://www.blogit.info/p/lien-he.html', 'title': 'Liên hệ', 'isCurrentPage': false}, {'href': 'http://www.blogit.info/p/css-optimizer.html', 'title': 'CSS Optimizer', 'isCurrentPage': false}, {'href': 'http://www.blogit.info/p/javascript-compressor.html', 'title': 'JS compressor', 'isCurrentPage': false}, {'href': 'http://www.blogit.info/p/js-beautify.html', 'title': 'JS beautify', 'isCurrentPage': false}, {'href': 'http://www.blogit.info/p/encodedecode-text.html', 'title': 'Encode/Decode text', 'isCurrentPage': false}, {'href': 'http://www.blogit.info/p/text-to-html-converter.html', 'title': 'Text to HTML Converter', 'isCurrentPage': false}, {'href': 'http://www.blogit.info/p/redirect.html', 'title': 'Redirect', 'isCurrentPage': false}], 'mobile': false}, 'displayModeFull'));
+</script>
+</body>
+<!-- EEEEEEEEEEEEEEENNNNNNNNNNNNNNNNNNNDDDDDDDDDDDDDDDDDDD -->
+</html>
