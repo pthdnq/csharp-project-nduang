@@ -51,11 +51,11 @@ namespace HN36Pho
 
             if (condition == "")
             {
-                sqlQuery = "select * from account";
+                sqlQuery = @"select * from account";
             }
             else
             {
-                sqlQuery = "select * from account where Username=N'" + condition + "'";
+                sqlQuery = @"select * from account where Username=N'" + condition + "'";
             }
 
             showData(sqlQuery, dGViewUser);

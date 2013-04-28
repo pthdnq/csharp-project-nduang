@@ -1,0 +1,1776 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0064)http://www.codeproject.com/Articles/18734/Method-Overriding-in-C -->
+<html><meta style="visibility: hidden !important; display: block !important; width: 0px !important; height: 0px !important; border-style: none !important;"><embed id="__IDM__" type="application/x-idm-downloader" width="1" height="1" style="visibility: hidden !important; display: block !important; width: 1px !important; height: 1px !important; border-style: none !important; position: absolute !important; top: 0px !important; left: 0px !important;"></meta><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Method Overriding in C# - CodeProject</title> 
+	<link type="text/css" rel="stylesheet" href="./Method Overriding in C# - CodeProject_files/Main.min.css">
+
+	
+
+<meta name="Description" content="A tutorial on method overriding in C#; Author: Chetan Kudalkar; Updated: 9 May 2007; Section: C#; Chapter: Languages; Updated: 9 May 2007">
+<meta name="Keywords" content="C#, Windows, .NET, Visual-Studio, Dev, Intermediate,C#,Languages,Free source code, tutorials">
+<meta name="Author" content="Chetan Kudalkar">
+<meta name="Rating" content="General">
+<meta name="Robots" content="index, follow, NOODP">
+<meta name="Revisit-After" content="1 days">
+<meta name="application-name" content="CodeProject">
+
+<meta name="msapplication-navbutton-color" content="#FF9900">
+<meta name="msapplication-tooltip" content="Your Development Resource.">
+<meta name="msapplication-starturl" content="http://www.codeproject.com/?pinned=true">
+<meta name="msapplication-task" content="name=Homepage;action-uri=http://www.codeproject.com/;icon-uri=http://www.codeproject.com/favico.ico">
+<meta name="msapplication-task" content="name=Latest Articles;action-uri=http://www.codeproject.com/script/articles/Latest.aspx;icon-uri=http://www.codeproject.com/favico.ico">
+<meta name="msapplication-task" content="name=Questions and Answers;action-uri=http://www.codeproject.com/script/Answers/;icon-uri=http://www.codeproject.com/favico.ico">
+<meta name="msapplication-task" content="name=The Lounge;action-uri=http://www.codeproject.com/Lounge.aspx;icon-uri=http://www.codeproject.com/favico.ico">
+
+<link rel="dns-prefetch" href="http://ajax.googleapis.com/"> 
+<link rel="canonical" href="./Method Overriding in C# - CodeProject_files/Method Overriding in C# - CodeProject.htm">
+
+
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - All Topics" href="http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=1">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - MFC/C++" href="http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=2">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - C#" href="http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=3">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - VB.NET" href="http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=6">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - Mobile" href="http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=18">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - ASP.NET" href="http://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=4">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Lounge Postings" href="http://www.codeproject.com/webservices/LoungeRSS.aspx">
+<link rel="search" type="application/opensearchdescription+xml" title="CodeProject" href="http://www.codeproject.com/info/OpenSearch.xml">
+
+	<!--<base target="_top">--><base href="." target="_top">
+	<link rel="icon" href="http://www.codeproject.com/favicon.ico" type="image/ico">
+<link rel="shortcut icon" href="http://www.codeproject.com/favicon.ico" type="image/ico">
+<link rel="apple-touch-icon" href="http://www.codeproject.com/images/FavIcon-Apple.png" type="image/png">
+<script src="./Method Overriding in C# - CodeProject_files/quant.js" async="" type="text/javascript"></script><script src="./Method Overriding in C# - CodeProject_files/quant.js" async="" type="text/javascript"></script><script src="./Method Overriding in C# - CodeProject_files/cb=gapi.loaded_0" async=""></script><script id="twitter-wjs" src="./Method Overriding in C# - CodeProject_files/widgets.js"></script><script type="text/javascript" async="" src="./Method Overriding in C# - CodeProject_files/plusone.js" gapi_processed="true"></script><script id="facebook-jssdk" src="./Method Overriding in C# - CodeProject_files/all.js"></script><script async="" src="./Method Overriding in C# - CodeProject_files/beacon.js"></script><script type="text/javascript" language="Javascript">//<![CDATA[
+function defrm () { /* thanks twitter */ document.write = ''; window.top.location = window.self.location;  setTimeout(function() { document.body.innerHTML = ''; }, 0);  window.self.onload = function(evt) { document.body.innerHTML = ''; }; }if (window.top !== window.self) {  try {  if (window.top.location.host) { /* will throw */ } else { defrm(); /* chrome */ }  } catch (ex) { defrm(); /* everyone else */ } }if (typeof(DemoUrl)!='undefined')   document.write(unescape('%3Cme')+'ta http'+'-equiv="re'+'fresh"                  con'+'tent="1;url='+DemoUrl+unescape('"%3CE'));
+function _dmBootstrap(file) { var _dma = document.createElement('script');  _dma.type = 'text/javascript'; _dma.async = true;  _dma.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + file; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(_dma);}
+function _dmFollowup(file) { if (typeof DMAds === 'undefined')  _dmBootstrap('cdn2.developermedia.com/a.min.js?dt=2.6.130402.2');}
+(function () { _dmBootstrap('cdn1.developermedia.com/a.min.js?dt=2.6.130402.2'); setTimeout(_dmFollowup, 2000);})();
+
+//]]>
+</script><script type="text/javascript" async="" src="./Method Overriding in C# - CodeProject_files/a.min.js"></script>
+
+	
+<script type="text/javascript">
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "13507173" });
+  (function() {
+	var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+	s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+	el.parentNode.insertBefore(s, el);
+  })();
+</script>
+<noscript>
+  &lt;img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=13507173&amp;cv=2.0&amp;cj=1" id="ctl00_Auditing_ComScore" /&gt;
+</noscript>
+
+
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-1735123-1']);
+	_gaq.push(['_trackPageview']);
+	_gaq.push(['_setDomainName', 'www.codeproject.com']);
+	_gaq.push(['_setSessionTimeout', '1200']); 
+
+	(function () {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})(); 
+</script><script type="text/javascript" async="" src="./Method Overriding in C# - CodeProject_files/ga.js"></script>
+
+
+<script type="text/javascript" async="" src="./Method Overriding in C# - CodeProject_files/a.min(1).js"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{position:relative;display:-moz-inline-block;display:inline-block}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify;vertical-align:text-bottom}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_button_simple,
+.fb_button_simple_rtl{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yH/r/eIpbnVKI9lR.png);background-repeat:no-repeat;cursor:pointer;outline:none;text-decoration:none}
+.fb_button_simple_rtl{background-position:right 0}
+.fb_button_simple .fb_button_text{margin:0 0 0 20px;padding-bottom:1px}
+.fb_button_simple_rtl .fb_button_text{margin:0 10px 0 0}
+a.fb_button_simple:hover .fb_button_text,
+a.fb_button_simple_rtl:hover .fb_button_text,
+.fb_button_simple:hover .fb_button_text,
+.fb_button_simple_rtl:hover .fb_button_text{text-decoration:underline}
+.fb_button,
+.fb_button_rtl{background:#29447e url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/FGFbc80dUKj.png);background-repeat:no-repeat;cursor:pointer;display:inline-block;padding:0 0 0 1px;text-decoration:none;outline:none}
+.fb_button .fb_button_text,
+.fb_button_rtl .fb_button_text{background:#5f78ab url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/FGFbc80dUKj.png);border-top:solid 1px #879ac0;border-bottom:solid 1px #1a356e;color:#fff;display:block;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;padding:2px 6px 3px 6px;margin:1px 1px 0 21px;text-shadow:none}
+a.fb_button,
+a.fb_button_rtl,
+.fb_button,
+.fb_button_rtl{text-decoration:none}
+a.fb_button:active .fb_button_text,
+a.fb_button_rtl:active .fb_button_text,
+.fb_button:active .fb_button_text,
+.fb_button_rtl:active .fb_button_text{border-bottom:solid 1px #29447e;border-top:solid 1px #45619d;background:#4f6aa3;text-shadow:none}
+.fb_button_xlarge,
+.fb_button_xlarge_rtl{background-position:left -60px;font-size:24px;line-height:30px}
+.fb_button_xlarge .fb_button_text{padding:3px 8px 3px 12px;margin-left:38px}
+a.fb_button_xlarge:active{background-position:left -99px}
+.fb_button_xlarge_rtl{background-position:right -268px}
+.fb_button_xlarge_rtl .fb_button_text{padding:3px 8px 3px 12px;margin-right:39px}
+a.fb_button_xlarge_rtl:active{background-position:right -307px}
+.fb_button_large,
+.fb_button_large_rtl{background-position:left -138px;font-size:13px;line-height:16px}
+.fb_button_large .fb_button_text{margin-left:24px;padding:2px 6px 4px 6px}
+a.fb_button_large:active{background-position:left -163px}
+.fb_button_large_rtl{background-position:right -346px}
+.fb_button_large_rtl .fb_button_text{margin-right:25px}
+a.fb_button_large_rtl:active{background-position:right -371px}
+.fb_button_medium,
+.fb_button_medium_rtl{background-position:left -188px;font-size:11px;line-height:14px}
+a.fb_button_medium:active{background-position:left -210px}
+.fb_button_medium_rtl{background-position:right -396px}
+.fb_button_text_rtl,
+.fb_button_medium_rtl .fb_button_text{padding:2px 6px 3px 6px;margin-right:22px}
+a.fb_button_medium_rtl:active{background-position:right -418px}
+.fb_button_small,
+.fb_button_small_rtl{background-position:left -232px;font-size:10px;line-height:10px}
+.fb_button_small .fb_button_text{padding:2px 6px 3px;margin-left:17px}
+a.fb_button_small:active,
+.fb_button_small:active{background-position:left -250px}
+.fb_button_small_rtl{background-position:right -440px}
+.fb_button_small_rtl .fb_button_text{padding:2px 6px;margin-right:18px}
+a.fb_button_small_rtl:active{background-position:right -458px}
+.fb_share_count_wrapper{position:relative;float:left}
+.fb_share_count{background:#b0b9ec none repeat scroll 0 0;color:#333;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;text-align:center}
+.fb_share_count_inner{background:#e8ebf2;display:block}
+.fb_share_count_right{margin-left:-1px;display:inline-block}
+.fb_share_count_right .fb_share_count_inner{border-top:solid 1px #e8ebf2;border-bottom:solid 1px #b0b9ec;margin:1px 1px 0 1px;font-size:10px;line-height:10px;padding:2px 6px 3px;font-weight:bold}
+.fb_share_count_top{display:block;letter-spacing:-1px;line-height:34px;margin-bottom:7px;font-size:22px;border:solid 1px #b0b9ec}
+.fb_share_count_nub_top{border:none;display:block;position:absolute;left:7px;top:35px;margin:0;padding:0;width:6px;height:7px;background-repeat:no-repeat;background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yU/r/bSOHtKbCGYI.png)}
+.fb_share_count_nub_right{border:none;display:inline-block;padding:0;width:5px;height:10px;background-repeat:no-repeat;background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yX/r/i_oIVTKMYsL.png);vertical-align:top;background-position:right 5px;z-index:10;left:2px;margin:0 2px 0 0;position:relative}
+.fb_share_no_count{display:none}
+.fb_share_size_Small .fb_share_count_right .fb_share_count_inner{font-size:10px}
+.fb_share_size_Medium .fb_share_count_right .fb_share_count_inner{font-size:11px;padding:2px 6px 3px;letter-spacing:-1px;line-height:14px}
+.fb_share_size_Large .fb_share_count_right .fb_share_count_inner{font-size:13px;line-height:16px;padding:2px 6px 4px;font-weight:normal;letter-spacing:-1px}
+.fb_share_count_hidden .fb_share_count_nub_top,
+.fb_share_count_hidden .fb_share_count_top,
+.fb_share_count_hidden .fb_share_count_nub_right,
+.fb_share_count_hidden .fb_share_count_right{visibility:hidden}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style></head>	
+
+<body class="chrome chrome26" data-twttr-rendered="true">
+
+<a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#Main"><img alt="Click here to Skip to main content" class="access-link" src="./Method Overriding in C# - CodeProject_files/t.gif"></a>
+
+
+
+
+
+<div class="page-background">
+
+	
+	
+
+	
+
+	<table id="ctl00_Bn" style="width:100%;height:135px" cellpadding="0" cellspacing="0" class="banner fixed">
+	<tbody><tr valign="bottom">
+		<td class="blank-background" style="height:31px">&nbsp;</td>
+		<td class="blank-background" rowspan="3" style="width:250px;height:135px"><a href="http://www.codeproject.com/"><img id="ctl00_Logo" tabindex="1" title="CodeProject" src="./Method Overriding in C# - CodeProject_files/logo250x135.gif" alt="Home" style="height:135px;width:250px;border-width:0px;"></a></td>
+		<td class="blank-background align-right" style="width:728px;height:31px">
+
+<div class="container memberbar clearfix">
+
+	<div id="ctl00_MemberMenu_GenInfo" class="float-left">9,782,374 members (36,136 online) &nbsp; &nbsp; </div>
+
+	<div class="float-left">
+		
+	</div>
+
+	<div class="float-right">
+		<a id="ctl00_MemberMenu_CodeProjectTV" title="CodeProject.TV is open!" href="http://www.codeproject.com/Forums/1829610/CodeProject-TV.aspx" style="display:inline-block;height:16px;width:16px;padding-right:15px;vertical-align:text-bottom"><img title="CodeProject.TV is open!" src="./Method Overriding in C# - CodeProject_files/CPTV-16.gif" alt="" style="border-width:0px;"></a>
+
+		
+
+		
+
+			<script type="text/javascript">//<!--
+			function doSubmit(secure)
+			{
+				if (secure)
+					document.subForm.action = "https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fArticles%2f18734%2fMethod-Overriding-in-C"
+				else
+					document.subForm.action = "https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fArticles%2f18734%2fMethod-Overriding-in-C"
+				document.subForm.submit();
+				return true;
+			}//-->
+			</script>
+
+			<a name="SignUp"></a>
+			<span class="member-signin tooltip">
+				<span><a href="https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fArticles%2f18734%2fMethod-Overriding-in-C">Sign in</a></span>
+
+				<div class="tooltip-flyout">
+					<form name="subForm" id="subForm" action="https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fArticles%2f18734%2fMethod-Overriding-in-C" method="post" class="tight">
+
+						
+						<input id="FormName" name="FormName" value="MenuBarForm" type="hidden">
+
+						<div>Email</div>
+						<div><input class="small-text" type="email" name="Email" id="Email"></div>
+						<div>Password</div>
+						<div><input class="small-text" type="password" name="Password" id="Password"></div>
+						<div class="action">
+							<script type="text/javascript">
+function Join(){document.location.href='http://www.codeproject.com/script/Membership/Modify.aspx';return false;}
+document.write('<input type="button" class="create" onclick="return Join();" value="Join"');
+document.write('<input type="hidden" name="fld_quicksign" value="true" />');
+</script><input type="button" class="create" onclick="return Join();" value="Join" <input="" name="fld_quicksign">
+							<input type="submit" value="Sign in" class="signin" onclick="return doSubmit(false);">
+						</div>
+
+						<div class="container">
+							
+							&nbsp;
+							<a id="ctl00_MemberMenu_SendPassword" class="forgot float-right" href="http://www.codeproject.com/script/Membership/SendPassword.aspx?rp=%2fArticles%2f18734%2fMethod-Overriding-in-C">Forgot your password?</a>
+						</div>
+					</form>
+
+					<hr class="divider-dark">
+
+					Sign in using <a title="Sign in using Facebook" class="oauth" href="http://www.codeproject.com/script/Membership/OAuthLogOn.aspx?auth=Facebook" style="vertical-align:middle;padding-right:3px"><img title="Sign in using Facebook" src="./Method Overriding in C# - CodeProject_files/facebook.png" alt="" style="border-width:0px;"></a><a title="Sign in using Google" class="oauth" href="http://www.codeproject.com/script/Membership/OAuthLogOn.aspx?auth=Google" style="vertical-align:middle;padding-right:3px"><img title="Sign in using Google" src="./Method Overriding in C# - CodeProject_files/google-plus.png" alt="" style="border-width:0px;"></a>
+				</div>
+		
+	</span></div>
+</div></td>
+		<td class="blank-background" style="height:31px">&nbsp;</td>
+	</tr>
+	<tr valign="middle">
+		<td class="theme1-background" style="height:94px">&nbsp;</td>
+		<td class="theme1-background ad"><div class="msg-728x90" data-format="728x90" data-type="ad" data-publisher="lqm.codeproject.site" data-zone="ros" data-tags="C#, Windows, .NET, Visual-Studio, Dev, Intermediate,rating4"><iframe id="dmad1" allowtransparency="false" style="z-index:10" width="728" height="90" marginwidth="0" marginheight="0" frameborder="0" scrolling="no"></iframe></div></td>
+		<td class="theme1-background" style="height:94px">&nbsp;</td>
+	</tr>
+	<tr valign="top">
+		<td style="height: 10px;"></td>
+		<td style="height: 10px;" class="blank-background"></td>
+		<td style="height: 10px;"></td>
+	</tr>
+</tbody></table>
+
+
+	<a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#Main"><img alt="Click here to Skip to main content" class="access-link" src="./Method Overriding in C# - CodeProject_files/t.gif"></a>
+
+	
+	<div id="ctl00_TPR" class="sub-headerbar fixed">
+	<table cellpadding="0" cellspacing="0" class="extended"><tbody><tr><td nowrap="nowrap">
+		
+
+<div class="navbar clearfix">
+<ul class="navmenu openable">
+
+<li><a id="ctl00_TopNavBar_Home" href="http://www.codeproject.com/">home</a>
+
+
+</li><li class=""><a id="ctl00_TopNavBar_Art" class="down selected" href="http://www.codeproject.com/script/Articles/Latest.aspx">articles</a>
+
+	<ul>
+		<li class=""><a id="ctl00_TopNavBar_ArtTopicList" class="fly" onmouseover="navBarMenu.ShowMap(this, &#39;ctl00_TopNavBar_MapFlyout&#39;);" href="http://www.codeproject.com/script/Content/SiteMap.aspx">Chapters and Sections<span class="has-submenu">&gt;</span></a><ul id="ctl00_TopNavBar_MapFlyout">
+			<li>
+				<div id="siteMap">
+					<img src="./Method Overriding in C# - CodeProject_files/animated.gif" alt="loading" style="margin:150px;width:100px;height:100px;">
+				</div>
+			</li>
+			</ul>
+		</li>
+		<li><a id="ctl00_TopNavBar_ArtSearch" class="fly break" href="http://www.codeproject.com/search.aspx">Search</a></li>
+		<li><a id="ctl00_TopNavBar_ArtLatestArts" class="fly" href="http://www.codeproject.com/script/Articles/Latest.aspx?at=1,3,7">Latest Articles</a></li>
+		<li><a id="ctl00_TopNavBar_ArtLatestTips" class="fly" href="http://www.codeproject.com/script/Articles/Latest.aspx?at=6">Latest Tips/Tricks</a></li>
+		<li><a id="ctl00_TopNavBar_ArtTop" class="fly" href="http://www.codeproject.com/script/Articles/TopArticles.aspx?ta_so=5">Top Articles</a></li>
+		<li><a id="ctl00_TopNavBar_ArtBeginner" class="fly" href="http://www.codeproject.com/search.aspx?aidlst=152&sa_us=True">Beginner Articles</a></li>
+		<li><a id="ctl00_TopNavBar_ArtBlogArticles" class="fly break" href="http://www.codeproject.com/script/Articles/BlogArticleList.aspx">Technical Blogs</a></li>
+		<li><a id="ctl00_TopNavBar_ArtGuide" class="fly" href="http://www.codeproject.com/info/Submit.aspx">Posting/Update Guidelines</a></li>
+		<li><a id="ctl00_TopNavBar_ArtHelpForum" class="fly" href="http://www.codeproject.com/Forums/1641/Article-Writing.aspx">Article Help Forum</a></li>
+		<li><a id="ctl00_TopNavBar_ArtCompetition" class="fly break" href="http://www.codeproject.com/script/Awards/CurrentCompetitions.aspx?cmpTpId=1">Article Competition</a></li>
+		<li><a id="ctl00_TopNavBar_ArtPostArticle" class="fly highlight1" href="http://www.codeproject.com/script/Articles/Submit.aspx">
+			<img src="./Method Overriding in C# - CodeProject_files/write-gr.png" width="19px" height="13px"> Submit an article or tip
+			</a></li>
+		<li><a id="ctl00_TopNavBar_ArtPostBlog" class="fly highlight2" href="http://www.codeproject.com/script/Articles/BlogFeed.aspx">
+			<img src="./Method Overriding in C# - CodeProject_files/write-or.png" width="19px" height="13px"> Post your Blog
+			</a></li>		<li class="last"></li>
+	</ul>
+
+</li>
+
+
+
+<li class=""><a id="ctl00_TopNavBar_Answers" href="http://www.codeproject.com/script/Answers/List.aspx?tab=active">quick answers</a>
+	<ul>
+		<li id="ctl00_TopNavBar_AQL"><a id="ctl00_TopNavBar_ArticleQuestion" class="fly highlight1" href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#_comments">
+			<img src="./Method Overriding in C# - CodeProject_files/write-gr.png" width="19px" height="13px"> Ask a Question about this 
+			article</a>
+		</li>
+
+		<li><a id="ctl00_TopNavBar_QAAsk" class="fly highlight2" href="http://www.codeproject.com/Questions/ask.aspx"><img src="./Method Overriding in C# - CodeProject_files/write-or.png" width="19px" height="13px"> Ask a Question</a></li>
+
+		
+		<li><a id="ctl00_TopNavBar_QAUnanswered" class="fly" href="http://www.codeproject.com/script/Answers/List.aspx?tab=unanswered">View Unanswered Questions</a></li>
+		<li><a id="ctl00_TopNavBar_QALatest" class="fly" href="http://www.codeproject.com/script/Answers/List.aspx?tab=active">View All Questions...</a></li>
+		
+				<li><a id="ctl00_TopNavBar_QATR_ctl00_Tag" class="fly" href="http://www.codeproject.com/script/Answers/List.aspx?tab=active&alltags=true&tags=81" style="padding-left:30px">C# questions</a></li>
+			
+				<li><a id="ctl00_TopNavBar_QATR_ctl01_Tag" class="fly" href="http://www.codeproject.com/script/Answers/List.aspx?tab=active&alltags=true&tags=85" style="padding-left:30px">ASP.NET questions</a></li>
+			
+				<li><a id="ctl00_TopNavBar_QATR_ctl02_Tag" class="fly" href="http://www.codeproject.com/script/Answers/List.aspx?tab=active&alltags=true&tags=842" style="padding-left:30px">VB.NET questions</a></li>
+			
+				<li><a id="ctl00_TopNavBar_QATR_ctl03_Tag" class="fly" href="http://www.codeproject.com/script/Answers/List.aspx?tab=active&alltags=true&tags=308" style="padding-left:30px">C#4.0 questions</a></li>
+			
+				<li><a id="ctl00_TopNavBar_QATR_ctl04_Tag" class="fly" href="http://www.codeproject.com/script/Answers/List.aspx?tab=active&alltags=true&tags=78" style="padding-left:30px">C++ questions</a></li>
+			
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+
+
+<li class=""><a id="ctl00_TopNavBar_Forums" href="http://www.codeproject.com/script/Forums/List.aspx">discussions</a>
+
+	<ul>
+		<li><a id="ctl00_TopNavBar_MessageBoardsAll" class="fly" href="http://www.codeproject.com/script/Forums/List.aspx">All Message Boards...</a></li>
+		<li class=""><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1580997/Application-Lifecycle.aspx">Application Lifecycle<span class="has-submenu">&gt;</span></a>
+<ul class="openable"><li><a class="fly" href="http://www.codeproject.com/Forums/1533717/Running-a-Business.aspx">Running a Business</a></li>
+<li><a class="fly" href="http://www.codeproject.com/Forums/1533716/Sales-Marketing.aspx">Sales / Marketing</a></li>
+<li><a class="fly" href="http://www.codeproject.com/Forums/1651/Collaboration-Beta-Testing.aspx">Collaboration / Beta Testing</a></li>
+<li><a class="fly" href="http://www.codeproject.com/Forums/3304/Work-Training-Issues.aspx">Work &amp; Training Issues</a></li>
+</ul></li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/369270/Design-and-Architecture.aspx">Design and Architecture</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/12076/ASP-NET.aspx">ASP.NET</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1580226/JavaScript.aspx">JavaScript</a>
+</li>
+<li class=""><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1647/C-Cplusplus-MFC.aspx">C / C++ / MFC<span class="has-submenu">&gt;</span></a>
+<ul class="openable"><li><a class="fly" href="http://www.codeproject.com/Forums/4486/ATL-WTL-STL.aspx">ATL /  WTL / STL</a></li>
+<li><a class="fly" href="http://www.codeproject.com/Forums/3785/Managed-Cplusplus-CLI.aspx">Managed C++/CLI</a></li>
+</ul></li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1827459/Adobe-Technologies.aspx">Adobe Technologies</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1649/Csharp.aspx">C#</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1627782/Free-Tools.aspx">Free Tools</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1827460/Objective-C.aspx">Objective-C</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1725/Database.aspx">Database</a>
+</li>
+<li class=""><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/186301/Hardware-Devices.aspx">Hardware &amp; Devices<span class="has-submenu">&gt;</span></a>
+<ul class="openable"><li><a class="fly" href="http://www.codeproject.com/Forums/1644/System-Admin.aspx">System Admin</a></li>
+</ul></li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1606152/Hosting-and-Servers.aspx">Hosting and Servers</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1643/Java.aspx">Java</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1650/NET-Framework.aspx">.NET Framework</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/13695/Mobile.aspx">Mobile</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1653293/VS-11-NET-4-5.aspx">VS 11 &amp; .NET 4.5</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1540733/Sharepoint.aspx">Sharepoint</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1004257/Silverlight-WPF.aspx">Silverlight / WPF</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1646/Visual-Basic.aspx">Visual Basic</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1640/Web-Development.aspx">Web Development</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="http://www.codeproject.com/Forums/1645/Site-Bugs-Suggestions.aspx">Site Bugs / Suggestions</a>
+</li>
+
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+
+
+
+<li class=""><a id="ctl00_TopNavBar_Features" href="http://www.codeproject.com/Feature/">features</a>
+
+	<ul>
+		<li><a id="ctl00_TopNavBar_Catalog" class="fly" href="http://www.codeproject.com/script/Catalog/List.aspx">Component &amp; Service Catalog</a></li>
+		<li><a id="ctl00_TopNavBar_Comps" class="fly" href="http://www.codeproject.com/script/Awards/CurrentCompetitions.aspx?cmpTpId=1&awsac=true">Competitions</a></li>
+		<li><a id="ctl00_TopNavBar_News" class="fly" href="http://www.codeproject.com/script/News/List.aspx">News</a></li>
+		<li><a id="ctl00_TopNavBar_Insider" class="fly" href="http://www.codeproject.com/Feature/Insider/">The Insider Newsletter</a></li>
+		<li><a id="ctl00_TopNavBar_Newsletters" class="fly" href="http://www.codeproject.com/script/Mailouts/Archive.aspx?mtpid=1">Newsletter archive</a></li>
+		<li><a id="ctl00_TopNavBar_Surveys" class="fly" href="http://www.codeproject.com/script/Surveys/List.aspx">Surveys</a></li>
+		<li><a id="ctl00_TopNavBar_Showcase" class="fly" href="http://www.codeproject.com/KB/showcase/">Product Showcase</a></li>
+
+		
+		<li><a id="ctl00_TopNavBar_Stuff" class="fly" href="http://www.codeproject.com/Info/Stuff.aspx">CodeProject Stuff</a></li>
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+
+<li class=""><a id="ctl00_TopNavBar_Lounge" href="http://www.codeproject.com/Lounge.aspx">community</a>
+
+	<ul>
+		<li><a id="ctl00_TopNavBar_InsiderLnk" class="fly" href="http://www.codeproject.com/insider.aspx/star12.png">The Insider News</a></li>
+		<li><a id="ctl00_TopNavBar_LoungeLnk" class="fly" href="http://www.codeproject.com/Lounge.aspx">The Lounge &nbsp;</a></li>
+		<li><a id="ctl00_TopNavBar_WeirdWonderful" class="fly" href="http://www.codeproject.com/feature/weirdandwonderful.aspx/popup/">The Weird &amp; The Wonderful</a></li>
+		<li><a id="ctl00_TopNavBar_SoapBoxLnk" class="fly" href="http://www.codeproject.com/Forums/1536756/The-Soapbox.aspx">The Soapbox</a></li>
+		<li><a id="ctl00_TopNavBar_PRLnk" class="fly break" href="http://www.codeproject.com/Forums/1738007/Press-Releases.aspx">Press Releases</a></li>
+		<li><a id="ctl00_TopNavBar_WhosWho" class="fly" href="http://www.codeproject.com/script/Membership/Profiles.aspx">Who's Who</a></li>
+		<li><a id="ctl00_TopNavBar_MVPs" class="fly" href="http://www.codeproject.com/script/Awards/MVPWinners.aspx">Most Valuable Professionals</a></li>
+		<li><a id="ctl00_TopNavBar_Companies" class="fly break" href="http://www.codeproject.com/script/Membership/Profiles.aspx?mgtid=1&mgm=True">Company Listings</a></li>
+
+		
+		<li class=""><a class="fly" href="http://www.codeproject.com/Forums/1580229/Hindi.aspx">Non-English Language
+			<span class="has-submenu">&gt;</span></a>
+		<ul>
+		<li><a class="fly" href="http://www.codeproject.com/Forums/1580229/Hindi.aspx">General Indian Topics</a></li>
+		<li><a class="fly" href="http://www.codeproject.com/Forums/1580230/Chinese.aspx">General Chinese Topics</a></li>
+		</ul>
+		</li><li class="last"></li>
+		
+	</ul>
+
+</li>
+
+
+<li class="" style="margin-left:20px"><a id="ctl00_TopNavBar_Help" href="http://www.codeproject.com/KB/FAQs/">help</a>
+
+	<ul>
+		<li><a id="ctl00_TopNavBar_HelpWhatIs" class="fly" href="http://www.codeproject.com/info/guide.aspx">What is 'CodeProject'?</a></li>
+		<li><a id="ctl00_TopNavBar_HelpGeneral" class="fly break" href="http://www.codeproject.com/KB/FAQs/">General FAQ</a></li>
+		<li><a id="ctl00_TopNavBar_HelpPostQuestion" class="fly break highlight1" href="http://www.codeproject.com/Questions/ask.aspx">Ask a Question</a></li>
+		<li><a id="ctl00_TopNavBar_HelpBugs" class="fly" href="http://www.codeproject.com/Forums/1645/Site-Bugs-Suggestions.aspx">Bugs and Suggestions</a></li>
+		<li><a id="ctl00_TopNavBar_HelpArticles" class="fly" href="http://www.codeproject.com/Forums/1641/Article-Writing.aspx">Article Help Forum</a></li>
+		<li><a id="ctl00_TopNavBar_HelpSiteMap" class="fly" href="http://www.codeproject.com/script/Content/SiteMap.aspx">Site Map</a></li>
+		<li><a id="ctl00_TopNavBar_HelpAdvertise" class="fly" href="http://developermedia.com/">Advertise with us</a></li>
+		<li><a id="ctl00_TopNavBar_HelpAboutUs" class="fly" href="http://www.codeproject.com/info/about.aspx">About Us</a></li>
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+</ul>
+
+</div>
+	</td><td align="right">
+		
+
+<div class="searchbar">
+
+<form method="get" action="http://www.codeproject.com/search.aspx" name="Search" class="tight">
+
+
+<table border="0" cellspacing="0" cellpadding="0" class="search"><tbody><tr><td><input tabindex="2" class="search  subdue" id="sb_tb" value="" name="q"></td><td><input type="image" src="./Method Overriding in C# - CodeProject_files/search.gif"></td></tr></tbody></table>
+
+<div class="hover-container">
+	<div id="SearchFilter" class="search-advanced small-text align-left" style="display: none;">
+	<b>Search within:<br></b>
+		
+		<input type="radio" id="sb_kw" name="sbo" value="kw" checked="true"><label for="sb_kw">Articles</label><br>
+<input type="radio" id="sb_qa" name="sbo" value="qa"><label for="sb_qa">Quick Answers</label><br>
+<input type="radio" id="sb_fm" name="sbo" value="fm"><label for="sb_fm">Messages</label><br>
+<input type="radio" id="sb_ctlk" name="sbo" value="ctlk"><label for="sb_ctlk">Product Catalog</label><br>
+
+
+		
+		
+	</div>
+</div>
+</form>
+
+</div>
+	</td></tr></tbody></table>
+	<div class="sub-headerbar-divider"></div>
+	</div>
+	
+
+	<div id="A" class="container-content-wrap fixed"> 
+	<div class="container-content hreview-aggregate"> 
+
+		<div class="clearfix">
+			<div class="float-left container-breadcrumb">
+				<div><a href="http://www.codeproject.com/script/Content/SiteMap.aspx">Articles</a> » <a href="http://www.codeproject.com/Chapters/5/Languages.aspx">Languages</a> » <a href="http://www.codeproject.com/KB/cs/">C#</a> » <a href="http://www.codeproject.com/KB/cs/#Beginners">Beginners</a></div>
+			</div>
+
+			<div class="align-left float-right padded-top">
+				
+
+
+
+
+ 
+&nbsp;
+
+
+
+
+
+
+
+
+
+
+			</div>
+
+			<div class="float-right container-breadcrumb article-nav">
+				
+<div class="">
+<img id="ctl00_PrevNext_PrevImg" title="Previous" rel="nofollow" src="./Method Overriding in C# - CodeProject_files/arrow-left.png" style="border-width:0px;vertical-align:bottom;">
+<a id="ctl00_PrevNext_PrevLink" href="http://www.codeproject.com/script/Articles/View.aspx?aid=841">Prev</a>
+<a id="ctl00_PrevNext_NextLink" href="http://www.codeproject.com/script/Articles/View.aspx?aid=54967" style="margin-left:5px">Next</a>
+<img id="ctl00_PrevNext_NextImg" title="Next" rel="nofollow" src="./Method Overriding in C# - CodeProject_files/arrow-right.png" style="border-width:0px;vertical-align:bottom;">
+</div>
+			</div>
+		</div>
+
+		<table class="extended container-article-parts" cellpadding="0" cellspacing="0"><tbody><tr valign="top">
+		<td>
+
+			<div id="ctl00_Nav" class="container-article-tabs">
+				<div class="tabs">
+					
+
+<div class="">
+	<div class="selected">Article</div><div class="unselected"><a href="http://www.codeproject.com/script/Articles/ViewDownloads.aspx?aid=18734">Browse Code</a></div><div class="unselected"><a href="http://www.codeproject.com/script/Articles/Statistics.aspx?aid=18734">Stats</a></div><div class="unselected"><a href="http://www.codeproject.com/script/Articles/ListVersions.aspx?aid=18734">Revisions</a></div><div class="unselected"><a href="http://www.codeproject.com/script/Articles/ListAlternatives.aspx?aid=18734">Alternatives</a></div>
+</div>	
+
+
+					<!-- anchorLink used to auto-link to comments at end of article -->
+					<div class="unselected"><a href="http://www.codeproject.com/MasterPages/#_comments" id="ctl00_CommentLink" class="anchorLink">Comments &amp; 
+						Discussions <span id="ctl00_CmtCnt">(47)</span></a>
+					</div>
+				</div>
+
+				
+			</div>
+
+		</td>
+		<td>
+			
+			<div id="AT" class="container-article  fixed"> 
+		
+				
+				 
+				<a name="Main"></a>
+
+				
+				<a name="_articleTop" id="_articleTop"></a>
+				<div class="item">
+				<h1 id="ctl00_ArticleTitle" class="fn">Method Overriding in C#</h1> 
+				</div>
+
+				
+				<div class="entry">
+					By <span class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=2800479" rel="author">Chetan Kudalkar</a></span>, 
+					<span class="date">9 May 2007</span>
+			
+								
+				</div>
+
+				
+				<!-- Yes, I'm weak -->
+				<table class="container-rating"><tbody><tr><td>
+					<div id="ctl00_CurRat" class="tooltip anchorLink" style="cursor:pointer" onclick="scrollToAnchor(&#39;#_rating&#39;);" name="CurRat_18734">
+				
+						
+
+<table cellpadding="0" cellspacing="0" class="small-text">
+<tbody><tr>
+	
+	<td class="nowrap">
+
+		<span id="ctl00_ArticleRating_VI">
+		<div class="nowrap rating-stars-large" style="height:19px;width:139px;position:relative;">
+	<div class="clipped align-left float-left" style="height:19px;width:128px;">
+		<img src="./Method Overriding in C# - CodeProject_files/stars-fill-lg.png" style="border-width:0px;">
+	</div><div class="clipped" style="height:19px;width:11px;position:relative;">
+		<img src="./Method Overriding in C# - CodeProject_files/stars-empty-lg.png" style="border-width:0px;position:absolute;top:0;right:0;">
+	</div>
+</div>
+		</span>
+
+		
+	</td>
+	
+	<td id="ctl00_ArticleRating_VR" class="nowrap">
+		&nbsp;
+		<span id="ctl00_ArticleRating_VotesR">&nbsp;<span class="rating">4.47</span> (<span class="count">62 votes</span>)</span>
+		
+	</td>
+
+</tr>
+
+</tbody></table>
+
+
+						<div id="ctl00_RB" class="speech-bubble-container-up">
+							<div class="speech-bubble-up" style="width:150px !important">
+								            
+<div>
+<table class="feature" width="100%" height="50px" title="Voting Distribution. Recent data only" cellpadding="0" cellspacing="0"><tbody><tr class="chart-row"><td class="chart-column rating-ignore-vote" title="Outside deviation limits - not included in score."><img src="./Method Overriding in C# - CodeProject_files/pollcol.gif" width="20pxpx" height="8px" border="0px" alt="7 votes, 11.3%" title="7 votes, 11.3%"><br><span title="7 votes">1</span></td>
+<td class="chart-column"><img src="./Method Overriding in C# - CodeProject_files/pollcol.gif" width="20pxpx" height="2px" border="0px" alt="2 votes, 3.2%" title="2 votes, 3.2%"><br><span title="2 votes">2</span></td>
+<td class="chart-column"><img src="./Method Overriding in C# - CodeProject_files/pollcol.gif" width="20pxpx" height="1px" border="0px" alt="1 vote, 1.6%" title="1 vote, 1.6%"><br><span title="1 vote">3</span></td>
+<td class="chart-column"><img src="./Method Overriding in C# - CodeProject_files/pollcol.gif" width="20pxpx" height="15px" border="0px" alt="12 votes, 19.4%" title="12 votes, 19.4%"><br><span title="12 votes">4</span></td>
+<td class="chart-column"><img src="./Method Overriding in C# - CodeProject_files/pollcol.gif" width="20pxpx" height="50px" border="0px" alt="40 votes, 64.5%" title="40 votes, 64.5%"><br><span title="40 votes">5</span></td>
+</tr></tbody></table><div class="small-text align-center">4.47/5 - 62 votes</div><div class="small-text align-center subdue">7 removed</div><div class="small-text align-center subdue">μ 3.42, σ<sub>a</sub> 2.35 [<a href="http://www.codeproject.com/KB/FAQs/RatingReputationFAQ.aspx#noisefilter">?</a>]</div>
+</div>
+							</div>
+							<div class="speech-bubble-pointer-up">
+								<div class="speech-bubble-pointer-up-inner"></div>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					&nbsp;
+					
+				</td></tr></tbody></table>
+
+				
+				
+
+				
+				
+
+				
+				
+				
+
+					
+				
+
+				<form name="aspnetForm" method="post" action="./Method Overriding in C# - CodeProject_files/Method Overriding in C# - CodeProject.htm" id="aspnetForm" style="margin:0;padding:0">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjExOTQzNjk4Mw9kFgJmD2QWBgIKDxYCHgVjbGFzcwUTc3ViLWhlYWRlcmJhciBmaXhlZGQCCw8WAh8ABRxjb250YWluZXItY29udGVudC13cmFwIGZpeGVkFhACAQ9kFgJmDxYCHgRUZXh0BckBPGRpdj48YSBocmVmPSIvc2NyaXB0L0NvbnRlbnQvU2l0ZU1hcC5hc3B4Ij5BcnRpY2xlczwvYT4gJiMxODc7IDxhIGhyZWY9Ii9DaGFwdGVycy81L0xhbmd1YWdlcy5hc3B4Ij5MYW5ndWFnZXM8L2E+ICYjMTg3OyA8YSBocmVmPSIvS0IvY3MvIj5DIzwvYT4gJiMxODc7IDxhIGhyZWY9Ii9LQi9jcy8jQmVnaW5uZXJzIj5CZWdpbm5lcnM8L2E+PC9kaXY+ZAIDD2QWBAIEDw8WAh4LTmF2aWdhdGVVcmwFOC9zY3JpcHQvQXdhcmRzL0FkbWluL0F3YXJkT2JqZWN0LmFzcHg/b2JpZD0xODczNCZvYnRpZD0yZGQCDg8PFgIfAgUvL3NjcmlwdC9BcnRpY2xlcy9BZG1pbi9RdWV1ZUVkaXQuYXNweD9haWQ9MTg3MzRkZAIFD2QWCGYPDxYEHghJbWFnZVVybAUWL0ltYWdlcy9hcnJvdy1sZWZ0LnBuZx4HVmlzaWJsZWcWBB4Fc3R5bGUFFnZlcnRpY2FsLWFsaWduOmJvdHRvbTseA3JlbAUIbm9mb2xsb3dkAgEPDxYGHwIFIi9zY3JpcHQvQXJ0aWNsZXMvVmlldy5hc3B4P2FpZD04NDEeB1Rvb2xUaXBlHwRnZGQCAg8PFgYfAgUkL3NjcmlwdC9BcnRpY2xlcy9WaWV3LmFzcHg/YWlkPTU0OTY3HwdlHwRnZGQCAw8PFgQfAwUXL0ltYWdlcy9hcnJvdy1yaWdodC5wbmcfBGcWBB8FBRZ2ZXJ0aWNhbC1hbGlnbjpib3R0b207HwYFCG5vZm9sbG93ZAIHD2QWBAIDDxYEHgRocmVmBQojX2NvbW1lbnRzHwAFCmFuY2hvckxpbmsWAgIBDxYCHglpbm5lcmh0bWwFBCg0NylkAgUPDxYCHwIFNi9zY3JpcHQvQXJ0aWNsZXMvU3VibWlzc2lvbldpemFyZC5hc3B4P2F0PTEmYXBpZD0xODczNGRkAgkPFgIfAAUYY29udGFpbmVyLWFydGljbGUgIGZpeGVkFgYCAQ8WAh8EZxYGZg8WAh8JBRdNZXRob2QgT3ZlcnJpZGluZyBpbiBDI2QCAQ8WAh8BBVM8YSBocmVmPSIvc2NyaXB0L01lbWJlcnNoaXAvVmlldy5hc3B4P21pZD0yODAwNDc5IiByZWw9ImF1dGhvciI+Q2hldGFuIEt1ZGFsa2FyPC9hPmQCAg8WAh8BBQo5IE1heSAyMDA3ZAIDDw8WAh8EZ2RkAg0PZBYCAgIPFgIeBmFjdGlvbgUmL0FydGljbGVzLzE4NzM0L01ldGhvZC1PdmVycmlkaW5nLWluLUMWCAIBD2QWAgIBDxYCHwRoZAIDD2QWAgICD2QWAgIBDxBkZBYAZAIJDxYCHgtfIUl0ZW1Db3VudAIBZAILD2QWAgIBDxYCHwEFXzxhIGNsYXNzPSJhbmNob3JMaW5rIiBocmVmPSIvQXJ0aWNsZXMvMTg3MzQvTWV0aG9kLU92ZXJyaWRpbmctaW4tQyNfYXJ0aWNsZVRvcCI+QXJ0aWNsZSBUb3A8L2E+ZAILD2QWAgILD2QWBAICDw8WAh8CBTQvQXJ0aWNsZXMvMTg3MzQvTWV0aG9kLU92ZXJyaWRpbmctaW4tQz9kaXNwbGF5PVByaW50ZGQCBA8PFgIfAgUxL3NjcmlwdC9jb21tb24vVGVsbEZyaWVuZC5hc3B4P29idGlkPTImb2JpZD0xODczNGRkAg0PDxYEHwEFCVBlcm1hbGluax8CBSYvQXJ0aWNsZXMvMTg3MzQvTWV0aG9kLU92ZXJyaWRpbmctaW4tQ2RkAh0PFgIfAQUhQ29weXJpZ2h0IDIwMDcgYnkgQ2hldGFuIEt1ZGFsa2FyZAIPDxYCHwEFiAE8aW1nIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGJvcmRlcj0iMCIgc3JjPSJodHRwczovL2FtY2gucXVlc3Rpb25tYXJrZXQuY29tL2Fkc2MvZDkyMTM4OC8xMzcvMTAxOTg3OC9hZHNjb3V0LnBocD9vcmQ9NjM1MDA1ODU3MzEyMDYzNDQwIi8+ZGQdTwp2ov/CrBot3tBSiN6wp+nuQA==">
+</div>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCAKt2LWFCwLAlMXDBwLBlMXDBwLClMXDBwLDlMXDBwLElMXDBwLP+++tCwK5upDkCxBDGOrucOAqmcCuWtaA0lc1QRH6">
+</div>
+
+						
+						<div id="contentdiv" class="article-text">
+						
+
+
+
+
+
+<h2>Introduction</h2>
+
+<p>Method overriding in C# is a feature like the virtual function in C++. Method overriding is a feature that allows you to invoke functions (that have the same signatures) that belong to different classes in the same hierarchy of inheritance using the base class reference. C# makes use of two keywords: virtual and overrides to accomplish Method overriding. Let's understand this through small examples. </p>
+
+<h3>P1.cs </h3>
+
+<div class="pre-action-link" id="premain0" width="100%" style="display:block"><img id="preimg0" src="./Method Overriding in C# - CodeProject_files/minus.gif" style="cursor: pointer;" height="9" width="9" preid="0"><span id="precollapse0" style="cursor: pointer; margin-bottom: 0px;" preid="0"> Collapse</span><span> | </span><a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#" preid="0">Copy Code</a></div><pre lang="cs" id="pre0" style="margin-top: 0px;"><span class="code-keyword">class</span> BC
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">BC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> DC : BC
+{
+  <span class="code-keyword">new</span> <span class="code-keyword">public</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">DC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> Demo
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">static</span> <span class="code-keyword">void</span> Main()
+  {
+     BC b;
+     b = <span class="code-keyword">new</span> BC();
+     b.Display();    
+  }
+}</pre>
+
+<h4>Output</h4>
+
+<div class="pre-action-link" id="premain1" width="100%" style="display:block"><img id="preimg1" src="./Method Overriding in C# - CodeProject_files/minus.gif" style="cursor: pointer;" height="9" width="9" preid="1"><span id="precollapse1" style="cursor: pointer; margin-bottom: 0px;" preid="1"> Collapse</span><span> | </span><a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#" preid="1">Copy Code</a></div><pre lang="text" id="pre1" style="margin-top: 0px;">BC::Display</pre>
+
+<p>The above program compiles and runs successfully to give the desired output. It consists of a base class <code>BC</code> and a derived class <code>DC</code>. Class <code>BC</code> consists of function <code>Display()</code>. Class <code>DC</code> hides the function <code>Display()</code> it inherited from the base class <code>BC</code> by providing its on implementatin of <code>Display()</code>. Class <code>Demo</code> consists of entrypoint function <code>Main()</code>. Inside <code>Main()</code> we first create a reference <code>b</code> of type <code>BC</code>. Then we create an object of type <code>BC</code> and assign its reference to reference variable <code>b</code>. Using the reference variable <code>b</code> we invoke the function <code>Display()</code>. As expected, <code>Display()</code> of class <code>BC</code> is executed because the reference variable <code>b</code> refers to the object of class <code>BC</code>. </p>
+
+<p>Now we add a twist of lime to the above program. </p>
+
+<h3>P2.cs</h3>
+
+<div class="pre-action-link" id="premain2" width="100%" style="display:block"><img id="preimg2" src="./Method Overriding in C# - CodeProject_files/minus.gif" style="cursor: pointer;" height="9" width="9" preid="2"><span id="precollapse2" style="cursor: pointer; margin-bottom: 0px;" preid="2"> Collapse</span><span> | </span><a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#" preid="2">Copy Code</a></div><pre lang="cs" id="pre2" style="margin-top: 0px;"><span class="code-keyword">class</span> BC
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">BC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> DC : BC
+{
+  <span class="code-keyword">new</span> <span class="code-keyword">public</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">DC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> Demo
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">static</span> <span class="code-keyword">void</span> Main()
+  {
+     BC b;
+     b = <span class="code-keyword">new</span> BC();
+     b.Display();    
+
+     b = <span class="code-keyword">new</span> DC();
+     b.Display();    
+  }
+}</pre>
+
+<h4>Output</h4>
+
+<div class="pre-action-link" id="premain3" width="100%" style="display:block"><img id="preimg3" src="./Method Overriding in C# - CodeProject_files/minus.gif" style="cursor: pointer;" height="9" width="9" preid="3"><span id="precollapse3" style="cursor: pointer; margin-bottom: 0px;" preid="3"> Collapse</span><span> | </span><a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#" preid="3">Copy Code</a></div><pre lang="text" id="pre3" style="margin-top: 0px;">BC::Display
+BC::Display</pre>
+
+<p>Here we are creating an object of Derived class <code>DC</code> and storing its reference in the reference variable <code>b</code> of type <code>BC</code>. This is valid in C#. Next, using the reference variable <code>b</code> we invoke the function <code>Display()</code>. Since <code>b</code> contains a reference to object of type <code>DC</code> one would expect the function <code>Display()</code> of class <code>DC</code> to get executed. But that does not happen. Instead what is executed is the <code>Display()</code> of <code>BC</code> class. That's because the function is invoked based on type of the reference and not to what the reference variable <code>b</code> refers to. Since <code>b</code> is a reference of type <code>BC</code>, the function <code>Display()</code> of class <code>BC</code> will be invoked, no matter whom<code> b</code> refers to. Take one more example. </p>
+
+<h3>P3.cs</h3>
+
+<div class="pre-action-link" id="premain4" width="100%" style="display:block"><img id="preimg4" src="./Method Overriding in C# - CodeProject_files/minus.gif" style="cursor: pointer;" height="9" width="9" preid="4"><span id="precollapse4" style="cursor: pointer; margin-bottom: 0px;" preid="4"> Collapse</span><span> | </span><a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#" preid="4">Copy Code</a></div><pre lang="cs" id="pre4" style="margin-top: 0px;"><span class="code-keyword">class</span> BC
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">BC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> DC : BC
+{
+  <span class="code-keyword">new</span> <span class="code-keyword">public</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">DC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> TC : BC
+{
+  <span class="code-keyword">new</span> <span class="code-keyword">public</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">DC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> Demo
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">static</span> <span class="code-keyword">void</span> Main()
+  {
+     BC b;
+     b = <span class="code-keyword">new</span> BC();
+     b.Display();    
+
+     b = <span class="code-keyword">new</span> DC();
+     b.Display();    
+
+     b = <span class="code-keyword">new</span> TC();
+     b.Display();    
+  }
+}</pre>
+
+<h4>Output</h4>
+
+<div class="pre-action-link" id="premain5" width="100%" style="display:block"><img id="preimg5" src="./Method Overriding in C# - CodeProject_files/minus.gif" style="cursor: pointer;" height="9" width="9" preid="5"><span id="precollapse5" style="cursor: pointer; margin-bottom: 0px;" preid="5"> Collapse</span><span> | </span><a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#" preid="5">Copy Code</a></div><pre lang="text" id="pre5" style="margin-top: 0px;">BC::Display
+BC::Display
+BC::Display</pre>
+
+<p>The output of the above program is a receipt of the fact that no matter to whom base class reference <code>b</code> refers, it invokes the functions of the class that matches its type. But doesn't this sound absurd? If <code>b</code> contains the reference to a perticular derived class object, then its supposed to invoke the function of that class. Well, C# helps us do this by the usage of keywords virtual and override as shown in the following program. </p>
+
+<h3>P4.cs</h3>
+
+<div class="pre-action-link" id="premain6" width="100%" style="display:block"><img id="preimg6" src="./Method Overriding in C# - CodeProject_files/minus.gif" style="cursor: pointer;" height="9" width="9" preid="6"><span id="precollapse6" style="cursor: pointer; margin-bottom: 0px;" preid="6"> Collapse</span><span> | </span><a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#" preid="6">Copy Code</a></div><pre lang="cs" id="pre6" style="margin-top: 0px;"><span class="code-keyword">class</span> BC
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">virtual</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">BC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> DC : BC
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">override</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">DC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> Demo
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">static</span> <span class="code-keyword">void</span> Main()
+  {
+     BC b;
+     b = <span class="code-keyword">new</span> BC();
+     b.Display();    
+
+     b = <span class="code-keyword">new</span> DC();
+     b.Display();    
+  }
+}</pre>
+
+<h4>Output</h4>
+
+<div class="pre-action-link" id="premain7" width="100%" style="display:block"><img id="preimg7" src="./Method Overriding in C# - CodeProject_files/minus.gif" style="cursor: pointer;" height="9" width="9" preid="7"><span id="precollapse7" style="cursor: pointer; margin-bottom: 0px;" preid="7"> Collapse</span><span> | </span><a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#" preid="7">Copy Code</a></div><pre lang="text" id="pre7" style="margin-top: 0px;">BC::Display
+DC::Display</pre>
+
+<p>The above program compiles and runs successfully to give the expected desired output. The function <code>Display()</code> of Base class <code>BC</code> is declared as virtual, while the Derived class's implementation of <code>Display()</code> is decorated with the modifier override. Doing so enables C# to invoke functions like <code>Display() </code>based on objects the reference variable refers to and not the type of reference that is invoking the function. Hence in the above program when <code>b</code> refers to the object of class <code>BC</code> it invokes <code>Display()</code> of <code>BC</code> and then when <code>b</code> refers to the object of class <code>DC</code> it invokes <code>Display()</code> of class <code>DC</code>. Let's see if this holds true for the third generation of derived classes. Take the following program. </p>
+
+<h3>P4.cs</h3>
+
+<div class="pre-action-link" id="premain8" width="100%" style="display:block"><img id="preimg8" src="./Method Overriding in C# - CodeProject_files/minus.gif" style="cursor: pointer;" height="9" width="9" preid="8"><span id="precollapse8" style="cursor: pointer; margin-bottom: 0px;" preid="8"> Collapse</span><span> | </span><a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#" preid="8">Copy Code</a></div><pre lang="cs" id="pre8" style="margin-top: 0px;"><span class="code-keyword">class</span> BC
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">virtual</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">BC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> DC : BC
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">override</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">DC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> TC : DC
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">override</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">TC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> Demo
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">static</span> <span class="code-keyword">void</span> Main()
+  {
+     BC b;
+     b = <span class="code-keyword">new</span> BC();
+     b.Display();    
+
+     b = <span class="code-keyword">new</span> DC();
+     b.Display();    
+
+     b = <span class="code-keyword">new</span> TC();
+     b.Display();    
+  }
+}</pre>
+
+<h4>Output</h4>
+
+<div class="pre-action-link" id="premain9" width="100%" style="display:block"><img id="preimg9" src="./Method Overriding in C# - CodeProject_files/minus.gif" style="cursor: pointer;" height="9" width="9" preid="9"><span id="precollapse9" style="cursor: pointer; margin-bottom: 0px;" preid="9"> Collapse</span><span> | </span><a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#" preid="9">Copy Code</a></div><pre lang="text" id="pre9" style="margin-top: 0px;">BC::Display
+DC::Display
+TC::Display</pre>
+
+<p>The above program compiles and runs successfully to give the expected desired output. The function <code>Display()</code> of Base class <code>BC</code> is declared as virtual, while the implementation of <code>Display()</code> in successive Derived classes is decorated with the modifier override. Next, we succesively create objects of each class and store their reference in base class reference variable <code>b</code> and invoke <code>Display()</code>. The rite versions of <code>Display</code> get invoked based on the object the reference variable refers to. Time for a tiny teaser! Guess what the output would be in the following program? </p>
+
+<h3>P5.cs</h3>
+
+<div class="pre-action-link" id="premain10" width="100%" style="display:block"><img id="preimg10" src="./Method Overriding in C# - CodeProject_files/minus.gif" style="cursor: pointer;" height="9" width="9" preid="10"><span id="precollapse10" style="cursor: pointer; margin-bottom: 0px;" preid="10"> Collapse</span><span> | </span><a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#" preid="10">Copy Code</a></div><pre lang="cs" id="pre10" style="margin-top: 0px;"><span class="code-keyword">class</span> BC
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">virtual</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">BC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> DC : BC
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">override</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">DC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> TC : DC
+{
+
+}
+
+<span class="code-keyword">class</span> Demo
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">static</span> <span class="code-keyword">void</span> Main()
+  {
+     BC b;
+
+     b = <span class="code-keyword">new</span> TC();
+     b.Display();    
+  }
+}</pre>
+
+<h4>Output</h4>
+
+<div class="pre-action-link" id="premain11" width="100%" style="display:block"><img id="preimg11" src="./Method Overriding in C# - CodeProject_files/minus.gif" style="cursor: pointer;" height="9" width="9" preid="11"><span id="precollapse11" style="cursor: pointer; margin-bottom: 0px;" preid="11"> Collapse</span><span> | </span><a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#" preid="11">Copy Code</a></div><pre lang="text" id="pre11" style="margin-top: 0px;">DC::Display</pre>
+
+<p>Since <code>TC</code> has no implementation of <code>Display()</code>, it inherits <code>Display()</code> from <code>DC</code> as <code>TC</code> is derived from <code>DC</code>. Hence <code>Display()</code> from Derived class <code>DC</code> gets executed. It's as if the derived class <code>TC</code> looked like this: </p>
+
+<div class="pre-action-link" id="premain12" width="100%" style="display:block"><img id="preimg12" src="./Method Overriding in C# - CodeProject_files/minus.gif" style="cursor: pointer;" height="9" width="9" preid="12"><span id="precollapse12" style="cursor: pointer; margin-bottom: 0px;" preid="12"> Collapse</span><span> | </span><a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#" preid="12">Copy Code</a></div><pre lang="cs" id="pre12" style="margin-top: 0px;"><span class="code-keyword">class</span> TC 
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">override</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">DC::Display"</span>);
+  }
+}</pre>
+to the compiler. Take one more example. Guess what its output will be. 
+<h3>P6.cs</h3>
+
+<div class="pre-action-link" id="premain13" width="100%" style="display:block"><img id="preimg13" src="./Method Overriding in C# - CodeProject_files/minus.gif" style="cursor: pointer;" height="9" width="9" preid="13"><span id="precollapse13" style="cursor: pointer; margin-bottom: 0px;" preid="13"> Collapse</span><span> | </span><a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#" preid="13">Copy Code</a></div><pre lang="cs" id="pre13" style="margin-top: 0px;"><span class="code-keyword">class</span> BC
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">virtual</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">BC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> DC : BC
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">override</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">DC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> TC : DC
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">new</span> <span class="code-keyword">void</span> Display()
+  {
+     System.Console.WriteLine(<span class="code-string">"</span><span class="code-string">TC::Display"</span>);
+  }
+}
+
+<span class="code-keyword">class</span> Demo
+{
+  <span class="code-keyword">public</span> <span class="code-keyword">static</span> <span class="code-keyword">void</span> Main()
+  {
+     BC b;
+
+     b = <span class="code-keyword">new</span> TC();
+     b.Display();    
+  }
+}</pre>
+
+<h4>Output</h4>
+
+<div class="pre-action-link" id="premain14" width="100%" style="display:block"><img id="preimg14" src="./Method Overriding in C# - CodeProject_files/minus.gif" style="cursor: pointer;" height="9" width="9" preid="14"><span id="precollapse14" style="cursor: pointer; margin-bottom: 0px;" preid="14"> Collapse</span><span> | </span><a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#" preid="14">Copy Code</a></div><pre lang="text" id="pre14" style="margin-top: 0px;">DC::Display</pre>
+
+<p>Agreed that <code>TC</code> defines its own new version of <code>Display()</code>. But its version of display is not invoked as <code>Display()</code> of <code>TC </code>does not override the <code>Display() </code>of the base class. With this understood we are done with Method overriding in C#. </p>
+
+
+
+
+
+
+						</div>
+						
+
+						
+						
+						<h2>License</h2>
+						<div id="LicenseTerms"><p>This article has no explicit license attached to it but may contain usage terms in the article text or the download files themselves. If in doubt please contact the author via the discussion board below.</p><p>A list of licenses authors might use can be found <a href="http://www.codeproject.com/info/Licenses.aspx">here</a></p></div>
+						
+
+						
+						<h2 id="ctl00_AboutHeading">About the Author</h2>
+
+						<div class="float-right" style="margin:0 0 25px 25px;border:1px solid #ccc">
+						<div class="msg-300x250" data-format="300x250" data-type="ad" data-publisher="lqm.codeproject.site" data-zone="ros" lqm_loadonview="true" data-loadonview="true" data-tags="C#, Windows, .NET, Visual-Studio, Dev, Intermediate,rating4"><iframe id="dmad2" allowtransparency="false" style="z-index:10" width="300" height="250" marginwidth="0" marginheight="0" frameborder="0" scrolling="no"></iframe></div>
+						</div>
+
+						
+						
+
+<table cellpadding="0" cellspacing="0" border="0" class="container-member">
+<tbody><tr valign="top">
+<td id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberPhotoTable" style="width:155px;overflow:hidden">
+	<center><img id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberPhoto" src="./Method Overriding in C# - CodeProject_files/member_unknown.gif" style="border-width:0px;"></center>
+</td>
+
+<td style="padding-left:25px">
+	<b><a id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberProfileLink" class="author" href="http://www.codeproject.com/Members/Chetan-Kudalkar">Chetan Kudalkar</a></b>
+	<div>
+		<div class="company">
+			<span id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberJobTitle">Software Developer (Senior)</span>
+			<span id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberCompany"></span>
+		</div>
+
+		<div class="padded-top"><span id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberLocation">India <img src="./Method Overriding in C# - CodeProject_files/IN.gif" alt="India" width="16px" height="11px"></span></div>
+		
+		<div><span id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberType">Member</span></div>
+		<div>
+			
+			
+		</div>
+
+		
+	</div>
+</td>
+</tr>
+</tbody></table>
+
+<div class="padded-top">
+	I am a Software engineer with around 7+ years of experience. Most of my experience is in Storage technology.<br>
+
+</div>
+<br>
+						
+						
+
+						<div class="clearfix"></div>
+
+						
+						<div id="ctl00_RateArticleRow" class="clearfix voting-bar">
+						<div class="float-left" style="padding-top:8px"><a class="anchorLink" href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#_articleTop">Article Top</a></div>
+						<div class="float-left"><a id="_rating" name="_rating">&nbsp;</a></div> 
+						<div class="float-left">
+
+<div class="social-bookmarks">
+<span class="facebook"><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" style="border: none;" src="./Method Overriding in C# - CodeProject_files/xd_arbiter.htm"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" style="border: none;" src="./Method Overriding in C# - CodeProject_files/xd_arbiter(1).htm"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div><div class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="segoe ui" fb-xfbml-state="rendered"><span style="height: 20px; width: 71px;"><iframe id="f2dc315944" name="f1f271de" scrolling="no" style="border: none; overflow: hidden; height: 20px; width: 71px;" title="Like this content on Facebook." class="fb_ltr" src="./Method Overriding in C# - CodeProject_files/like.htm"></iframe></span></div></span>
+<span class="google"><div style="height: 20px; width: 90px; display: inline-block; text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; background-position: initial initial; background-repeat: initial initial;" id="___plusone_0"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1365003335835" name="I0_1365003335835" src="./Method Overriding in C# - CodeProject_files/fastbutton.htm" allowtransparency="true" data-gapiattached="true" title="+1"></iframe></div></span>
+<iframe allowtransparency="true" frameborder="0" scrolling="no" src="./Method Overriding in C# - CodeProject_files/tweet_button.1363148939.htm" class="twitter-share-button twitter-count-horizontal" style="width: 110px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe>
+</div></div> 
+						<div class="float-right align-right">
+							<div id="ctl00_RateArticle_RateItemWrapper" class="small-text" name="RateItem_18734">
+
+	<table width="100%" cellpadding="0" cellspacing="0" class="small-text">
+	<tbody><tr>
+		<td id="ctl00_RateArticle_VoteResultDiv" nowrap="nowrap" align="right">
+			<span class="voteRes"></span>
+			<img class="loaderImg" width="16px" alt="loading..." height="16px" src="./Method Overriding in C# - CodeProject_files/animated_loading_blue.gif" style="display:none;"> 
+		</td>
+
+	
+		<td class="voteTbl" style="white-space:nowrap" align="right">
+			<table class="small-text">
+			<tbody><tr>
+				<td id="ctl00_RateArticle_SignIn" nowrap="nowrap">
+					<a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#SignUp">Sign Up</a> to vote
+				</td>
+
+				
+				<td id="ctl00_RateArticle_StartForm" align="right" nowrap="nowrap">
+					<i>&nbsp;&nbsp;Poor</i>
+				</td>
+
+				<td id="ctl00_RateArticle_VoteFormDiv" class="nowrap">
+					
+
+					<span id="ctl00_RateArticle_RB" class="tooltip ajaxHist radio voting">
+						<span id="ctl00_RateArticle_VoteRBL"><input id="ctl00_RateArticle_VoteRBL_0" type="radio" name="ctl00$RateArticle$VoteRBL" value="1" onclick="ChkRtctl00_RateArticle(1, 18734);
+$(&#39;#ctl00_RateArticle_RCD&#39;).show();
+;"><input id="ctl00_RateArticle_VoteRBL_1" type="radio" name="ctl00$RateArticle$VoteRBL" value="2" onclick="ChkRtctl00_RateArticle(2, 18734);
+$(&#39;#ctl00_RateArticle_RCD&#39;).show();
+;"><input id="ctl00_RateArticle_VoteRBL_2" type="radio" name="ctl00$RateArticle$VoteRBL" value="3" onclick="ChkRtctl00_RateArticle(3, 18734);
+$(&#39;#ctl00_RateArticle_RCD&#39;).show();
+;"><input id="ctl00_RateArticle_VoteRBL_3" type="radio" name="ctl00$RateArticle$VoteRBL" value="4" onclick="ChkRtctl00_RateArticle(4, 18734);
+$(&#39;#ctl00_RateArticle_RCD&#39;).show();
+;"><input id="ctl00_RateArticle_VoteRBL_4" type="radio" name="ctl00$RateArticle$VoteRBL" value="5" onclick="ChkRtctl00_RateArticle(5, 18734);
+$(&#39;#ctl00_RateArticle_RCD&#39;).show();
+;"></span> 
+
+						
+					</span>
+
+				</td>
+
+				<td id="ctl00_RateArticle_EndForm" align="left">
+					<i>Excellent</i>
+				</td>
+
+				<td style="padding-left:5px">	
+					<input type="submit" name="ctl00$RateArticle$SubmitRateBtn" value="Vote" onclick="return PostBack_ctl00_RateArticle_RateItemWrapper();" id="ctl00_RateArticle_SubmitRateBtn" class="button">
+				</td>
+			</tr>
+			</tbody></table>
+			
+		</td>
+	</tr>
+	</tbody></table>
+	<div class="hover-container">
+		<div id="ctl00_RateArticle_RCD" class="rating-comment align-left float-right">
+			Add a reason or comment to your vote: <a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C#" id="clear-rate_ctl00_RateArticle_RCD" title="close">x</a><br>
+			<textarea class="RateComment" rows="5" cols="60" style="width:98%;"></textarea>
+			<span id="ctl00_RateArticle_CommentReq" class="subdue">Votes of 3 or less require a comment</span>
+		</div>
+	</div>
+</div>
+						</div>
+						</div>
+						
+
+					</form>
+
+					
+					<div style="margin:auto;height:90px;margin-top:10px"> 
+						<div class="msg-728x90" data-format="728x90" data-type="ad" data-publisher="lqm.codeproject.site" data-zone="bottom" lqm_loadonview="true" data-loadonview="true" data-tags="C#, Windows, .NET, Visual-Studio, Dev, Intermediate,pos_bottom"><iframe id="dmad3" allowtransparency="false" style="z-index:10" width="728" height="90" marginwidth="0" marginheight="0" frameborder="0" scrolling="no"></iframe></div>
+					</div>
+					
+
+					
+					
+					<h2>Comments and Discussions</h2>
+					<a class="float-left" name="_comments" id="_comments">&nbsp;</a><table id="ForumTable" class="forum none" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td class="header1 callout"><b>Hint:</b> For improved responsiveness ensure Javascript is enabled and choose 'Normal' from the Layout dropdown and hit 'Update'.<br><b>You must <a href="https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fArticles%2f18734%2fMethod-Overriding-in-C%3ffid%3d416629%26df%3d90%26mpp%3d25%26noise%3d3%26prof%3dTrue%26sort%3dPosition%26view%3dNone%26spc%3dNone">Sign In</a> to use this message board.</b></td>
+	</tr><tr>
+		<td><table width="100%" border="0" cellpadding="3px" cellspacing="0">
+			<tbody><tr class="header1">
+				<td colspan="2" style="white-space:nowrap;"><div class="container">
+					<div class="float-right">
+						<form action="http://www.codeproject.com/Search.aspx?fid=0" method="get" class="tight">
+							<input type="hidden" name="fid" value="416629"><b>Search this forum </b><input type="text" class="text-input" name="qf" style="width:200px;">&nbsp;<input type="submit" value="Go" class="button">
+						</form>
+					</div>
+				</div></td></tr><tr class="header2">
+					<td></td><td style="width:100%;"><div style="text-align:right;">
+						<form action="http://www.codeproject.com/script/Forums/SetOptions.aspx?floc=%2fArticles%2f18734%2fMethod-Overriding-in-C&fid=416629&df=90&mpp=25&noise=3&prof=True&sort=Position&view=None&spc=None" method="get" style="margin:0;padding:0;">
+							<input type="hidden" name="fid" value="416629"><input type="hidden" name="currentQS" value="?floc=%2fArticles%2f18734%2fMethod-Overriding-in-C&amp;fid=416629&amp;df=90&amp;mpp=25&amp;noise=3&amp;prof=True&amp;sort=Position&amp;view=None&amp;spc=None"><input type="hidden" name="floc" value="/Articles/18734/Method-Overriding-in-C"><input type="checkbox" checked="checked" name="prof" id="prof" style="vertical-align:middle;"><label for="prof">Profile popups</label>&nbsp;&nbsp;&nbsp;&nbsp;Spacing<select size="1" class="dropdown" name="spc">
+								<option value="Relaxed">Relaxed</option><option value="Compact">Compact</option><option value="Tight">Tight</option>
+							</select>&nbsp;&nbsp;Noise<select size="1" class="dropdown" name="noise">
+								<option value="1">Very High</option><option value="2">High</option><option selected="" value="3">Medium</option><option value="4">Low</option><option value="5">Very Low</option>
+							</select>&nbsp;&nbsp;Layout<select size="1" class="dropdown" name="view">
+								<option value="Quick">Normal</option><option value="Topic">Open Topics</option><option value="Expanded">Open All</option><option value="Thread">Thread View</option><option value="Normal">No Javascript</option><option value="Preview">Preview</option>
+							</select>&nbsp;&nbsp;Per page<select size="1" class="dropdown" name="mpp">
+								<option value="10">10</option><option selected="" value="25">25</option><option value="50">50</option>
+							</select>&nbsp;&nbsp;&nbsp;<input type="submit" value="Update" name="SetOpt" class="button">
+						</form>
+					</div></td>
+				</tr>
+			
+		</tbody></table></td></tr><tr>
+			<td><a name="xx0xx"></a><table border="0" cellpadding="2px" cellspacing="0" width="100%">
+				<tbody><tr class="navbar">
+					<td></td><td style="text-align:right;width:50%;"></td><td style="text-align:right;white-space:nowrap;"><span class="nav-link disabled">First</span> <span class="nav-link disabled">Prev</span><a class="nav-link" name="Frm_HoverNL" href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C?fid=416629&df=90&mpp=25&noise=3&prof=True&sort=Position&view=None&spc=None&fr=26#xx0xx">Next</a></td>
+				</tr>
+			</tbody></table></td>
+		</tr><tr>
+			<td><table border="0" cellpadding="0" cellspacing="0" width="100%" class="fixed-layout blank-background">
+				<tbody><tr>
+					<td><img src="./Method Overriding in C# - CodeProject_files/t(1).gif" border="0" width="1px" height="5px" alt=""></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4531014xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_question.gif" alt="Question"></td><td class="subject hover-container"><a class="message-link" name="4531014" parent="0" thread="4531014" href="http://www.codeproject.com/Messages/4531014/Great.aspx">Great</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=1892684">RobertoWhite</a></td><td class="date">2 Apr '13 - 3:03&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4530946xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4530946" parent="0" thread="4530946" href="http://www.codeproject.com/Messages/4530946/Excellent.aspx">Excellent</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=7905072">Member 7905072</a></td><td class="date">2 Apr '13 - 1:46&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4506421xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_question.gif" alt="Question"></td><td class="subject hover-container"><a class="message-link" name="4506421" parent="0" thread="4506421" href="http://www.codeproject.com/Messages/4506421/excellent-explanation.aspx">excellent explanation</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=1031188">Shaswata</a></td><td class="date">27 Feb '13 - 19:51&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4505917xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4505917" parent="0" thread="4505917" href="http://www.codeproject.com/Messages/4505917/My-vote-of-5.aspx">My vote of 5</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=9720838">JoAnn Smith</a></td><td class="date">27 Feb '13 - 3:58&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4500623xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_question.gif" alt="Question"></td><td class="subject hover-container"><a class="message-link" name="4500623" parent="0" thread="4500623" href="http://www.codeproject.com/Messages/4500623/anil.aspx">anil</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=9789533">bindash</a></td><td class="date">20 Feb '13 - 6:37&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4495175xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4495175" parent="0" thread="4495175" href="http://www.codeproject.com/Messages/4495175/My-vote-of-5.aspx">My vote of 5</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=5369617">Himanshu Luthra</a></td><td class="date">13 Feb '13 - 7:16&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4465882xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4465882" parent="0" thread="4465882" href="http://www.codeproject.com/Messages/4465882/.aspx">.</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=8470609">srikanth.aleti</a></td><td class="date">6 Jan '13 - 19:52&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4451884xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4451884" parent="0" thread="4451884" href="http://www.codeproject.com/Messages/4451884/My-vote-of-4.aspx">My vote of 4</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=2948289">Md. Humayun Rashed</a></td><td class="date">13 Dec '12 - 15:56&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4417069xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_question.gif" alt="Question"></td><td class="subject hover-container"><a class="message-link" name="4417069" parent="0" thread="4417069" href="http://www.codeproject.com/Messages/4417069/Can-we-override-a-method-through-a-partial-class.aspx">Can we override a method through a partial class</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=1797849">Member 1797849</a></td><td class="date">1 Nov '12 - 17:43&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4388429xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4388429" parent="0" thread="4388429" href="http://www.codeproject.com/Messages/4388429/My-vote-of-5.aspx">My vote of 5</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=9332997">AppB</a></td><td class="date">4 Oct '12 - 18:31&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4366567xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4366567" parent="0" thread="4366567" href="http://www.codeproject.com/Messages/4366567/My-vote-of-5.aspx">My vote of 5</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=6360122">girishmeena</a></td><td class="date">13 Sep '12 - 21:08&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4366441xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4366441" parent="0" thread="4366441" href="http://www.codeproject.com/Messages/4366441/My-vote-of-5.aspx">My vote of 5</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=2234624">silicon_master</a></td><td class="date">13 Sep '12 - 18:06&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4361345xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4361345" parent="0" thread="4361345" href="http://www.codeproject.com/Messages/4361345/My-vote-of-4.aspx">My vote of 4</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=9417440">sreenisha99</a></td><td class="date">9 Sep '12 - 18:20&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4360640xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4360640" parent="0" thread="4360640" href="http://www.codeproject.com/Messages/4360640/My-vote-of-4.aspx">My vote of 4</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=4745996">Avi_Jai</a></td><td class="date">7 Sep '12 - 19:06&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4329752xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4329752" parent="0" thread="4329752" href="http://www.codeproject.com/Messages/4329752/My-vote-of-5.aspx">My vote of 5</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=8293557">Member 8293557</a></td><td class="date">3 Aug '12 - 21:26&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4309477xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4309477" parent="0" thread="4309477" href="http://www.codeproject.com/Messages/4309477/My-vote-of-5.aspx">My vote of 5</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=6906126">RaviGupta7986</a></td><td class="date">13 Jul '12 - 23:56&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4298678xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4298678" parent="0" thread="4298678" href="http://www.codeproject.com/Messages/4298678/My-vote-of-5.aspx">My vote of 5</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=9203122">Maria Pradeep</a></td><td class="date">3 Jul '12 - 0:04&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="38px" class="indent"><a name="xx4299268xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4299268" parent="4298678" thread="4298678" href="http://www.codeproject.com/Messages/4299268/Re-My-vote-of-5.aspx">Re: My vote of 5</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=2800479">Chetan Kudalkar</a></td><td class="date">3 Jul '12 - 9:45&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4295243xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_question.gif" alt="Question"></td><td class="subject hover-container"><a class="message-link" name="4295243" parent="0" thread="4295243" href="http://www.codeproject.com/Messages/4295243/well-eplained.aspx">well eplained</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=8739973">hammadkhan00</a></td><td class="date">28 Jun '12 - 17:50&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4273533xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_question.gif" alt="Question"></td><td class="subject hover-container"><a class="message-link" name="4273533" parent="0" thread="4273533" href="http://www.codeproject.com/Messages/4273533/very-nice-examples.aspx">very nice examples...</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=7112411">Asif Iqbal A.Khan</a></td><td class="date">6 Jun '12 - 19:41&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4269737xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_question.gif" alt="Question"></td><td class="subject hover-container"><a class="message-link" name="4269737" parent="0" thread="4269737" href="http://www.codeproject.com/Messages/4269737/Very-Nice.aspx">Very Nice</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=8041854">Ravindra_Parcha</a></td><td class="date">3 Jun '12 - 5:00&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4207817xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_idea.gif" alt="Suggestion"></td><td class="subject hover-container"><a class="message-link" name="4207817" parent="0" thread="4207817" href="http://www.codeproject.com/Messages/4207817/well-explained.aspx">well explained</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=8243831">satishmachineni</a></td><td class="date">29 Mar '12 - 20:04&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="38px" class="indent"><a name="xx4246672xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4246672" parent="4207817" thread="4207817" href="http://www.codeproject.com/Messages/4246672/Re-well-explained.aspx">Re: well explained</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=2800479">Chetan Kudalkar</a></td><td class="date">9 May '12 - 21:47&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4145415xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4145415" parent="0" thread="4145415" href="http://www.codeproject.com/Messages/4145415/My-vote-of-5.aspx">My vote of 5</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=5181298">dipamzaveri</a></td><td class="date">1 Feb '12 - 16:49&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="header hover-row root">
+					<td class="subject-line none " width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td width="20px" class="indent"><a name="xx4113419xx"></a><img height="16px" width="16px" align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" alt="General"></td><td class="subject hover-container"><a class="message-link" name="4113419" parent="0" thread="4113419" href="http://www.codeproject.com/Messages/4113419/My-vote-of-5.aspx">My vote of 5</a></td><td class="icon"><img border="0" src="./Method Overriding in C# - CodeProject_files/icn-member-16.gif" title="member" alt="member" height="16px"></td><td class="author"><a href="http://www.codeproject.com/script/Membership/View.aspx?mid=6077492">Atulsinghal</a></td><td class="date">27 Dec '11 - 17:58&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr>
+					<td><img src="./Method Overriding in C# - CodeProject_files/t(1).gif" border="0" width="1px" height="5px" alt=""></td>
+				</tr>
+			</tbody></table></td>
+		</tr><tr>
+			<td><table width="100%" cellpadding="2px" cellspacing="0">
+				<tbody><tr class="footer">
+					<td>Last Visit: 31 Dec '99 - 18:00 &nbsp; &nbsp; Last Update: 3 Apr '13 - 1:35</td><td><a href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C?fid=416629&df=90&mpp=25&noise=3&prof=True&sort=Position&view=None&spc=None">Refresh</a></td><td style="text-align:right;white-space:nowrap;"><input id="_mbnUrl" type="hidden" value="/Articles/18734/Method-Overriding-in-C?fid=416629&amp;df=90&amp;mpp=25&amp;noise=3&amp;prof=True&amp;sort=Position&amp;view=None&amp;spc=None&amp;fr=26"><span class="nav-link selected">1</span><a class="nav-link" name="Frm_HoverNL" href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C?fid=416629&df=90&mpp=25&noise=3&prof=True&sort=Position&view=None&spc=None&fr=26#xx0xx">2</a> <a class="nav-link" name="Frm_HoverNL" href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C?fid=416629&df=90&mpp=25&noise=3&prof=True&sort=Position&view=None&spc=None&fr=26#xx0xx">Next »</a></td>
+				</tr>
+			</tbody></table></td>
+		</tr>
+	
+</tbody></table><p class="small-text"><img align="top" src="./Method Overriding in C# - CodeProject_files/msg_general.gif" width="16px" height="16px" alt="General"> General &nbsp;&nbsp; <img align="top" src="./Method Overriding in C# - CodeProject_files/msg_news.gif" width="16px" height="16px" alt="News"> News &nbsp;&nbsp; <img align="top" src="./Method Overriding in C# - CodeProject_files/msg_idea.gif" width="16px" height="16px" alt="Suggestion"> Suggestion &nbsp;&nbsp; <img align="top" src="./Method Overriding in C# - CodeProject_files/msg_question.gif" width="16px" height="16px" alt="Question"> Question &nbsp;&nbsp; <img align="top" src="./Method Overriding in C# - CodeProject_files/msg_bug.gif" width="16px" height="16px" alt="Bug"> Bug &nbsp;&nbsp; <img align="top" src="./Method Overriding in C# - CodeProject_files/msg_answer.gif" width="16px" height="16px" alt="Answer"> Answer &nbsp;&nbsp; <img align="top" src="./Method Overriding in C# - CodeProject_files/msg_joke.gif" width="16px" height="16px" alt="Joke"> Joke &nbsp;&nbsp; <img align="top" src="./Method Overriding in C# - CodeProject_files/msg_rant.gif" width="16px" height="16px" alt="Rant"> Rant &nbsp;&nbsp; <img align="top" src="./Method Overriding in C# - CodeProject_files/msg_admin.gif" width="16px" height="16px" alt="Admin"> Admin &nbsp;&nbsp; </p>
+
+				
+
+			</div>
+			
+		</td>
+		<td>
+			<div id="ctl00_RightSideBar" class="container-article-info">
+
+				<div class="header">About Article</div>
+				<div class="article-summary">
+
+					
+					
+
+					
+					
+
+					
+					<div class="summary"><span id="ctl00_ArticleDescr">A tutorial on method overriding in C#</span></div>
+
+					<a id="ctl00_InfoBox_ParentLink"></a>
+
+<table cellpadding="0" cellspacing="0" class="article-info">
+
+	
+	<tbody><tr><td>Type&nbsp;</td><td class="value"><a id="ctl00_InfoBox_TypeName" href="http://www.codeproject.com/script/Articles/Types.aspx?#Article">Article</a></td></tr>
+	
+
+	<tr><td>Licence&nbsp;</td><td class="value"></td></tr>
+
+	
+
+	<tr><td>First Posted&nbsp;</td><td nowrap="nowrap" class="value">9 May 2007</td></tr>
+
+	<tr><td>Views&nbsp;</td><td class="value">191,547</td></tr>
+
+		
+
+	
+	<tr><td>Bookmarked&nbsp;</td><td class="value">62 times</td></tr>
+	
+
+	
+
+	
+	
+	
+	<tr><td colspan="2"></td>
+	</tr>
+	
+	
+</tbody></table>
+
+					<div class="tags"> 
+					<span id="ctl00_TagsList_TagWrp" class="tags">
+	
+	
+	
+	<span id="ctl00_TagsList_VisibleTags"><span class="t"><a rel="tag" href="http://www.codeproject.com/Tags/C--hash--">C#</a></span><span class="t"><a rel="tag" href="http://www.codeproject.com/Tags/Windows">Windows</a></span><span class="t"><a rel="tag" href="http://www.codeproject.com/Tags/.NET">.NET</a></span><br><span class="t"><a rel="tag" href="http://www.codeproject.com/Tags/Visual-Studio">Visual-Studio</a></span><span class="t"><a rel="tag" href="http://www.codeproject.com/Tags/Dev">Dev</a></span></span><acronym id="ctl00_TagsList_HiddenTags" title="plus: Intermediate">, +</acronym> 
+
+	
+	
+</span>
+
+					</div>
+
+					<div class="nowrap align-left">
+						 
+
+<a id="ctl00_ActionLinks_PrintLnk" href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C?display=Print">
+	<img src="./Method Overriding in C# - CodeProject_files/print.gif" width="46px" height="46px" style="border:0">
+</a>
+
+<a id="ctl00_ActionLinks_MailLink" href="http://www.codeproject.com/script/common/TellFriend.aspx?obtid=2&obid=18734">
+	<img src="./Method Overriding in C# - CodeProject_files/email.gif" width="46px" height="46px" style="border:0">
+</a>
+					</div>
+
+					
+				</div>
+
+				<div style="width:160px;margin: 10px auto;">
+					<div class="msg-160x600" data-format="160x600" data-type="ad" data-publisher="lqm.codeproject.site" data-zone="ros" data-tags="C#, Windows, .NET, Visual-Studio, Dev, Intermediate,rating4"><iframe id="dmad4" allowtransparency="false" style="z-index:10" width="160" height="600" marginwidth="0" marginheight="0" frameborder="0" scrolling="no"></iframe></div>
+				</div>
+
+				
+<div class="padded-top">
+<div class="header">Top News</div>
+
+<p><a id="ctl00_News_News_ctl01_Link" href="http://www.macworld.com/article/2031592/apple-fans-microsoft-is-no-longer-the-enemy.html">Apple fans: Microsoft is no longer the enemy</a></p>
+
+Get the <a id="ctl00_News_News_ctl02_Subscribe" href="http://www.codeproject.com/Feature/Insider/">Insider News</a> free each morning.
+</div>
+
+				
+				<div class="padded-top">
+					
+	<div id="ctl00_RelatedArticles_RelatedResults_ctl00_header" class="header">Related Articles</div>
+	<div class="content-list">	
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl01_Link" class="title" href="http://www.codeproject.com/KB/mcpp/bzipstream.aspx">.NET wrapper for libbz2</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl02_Link" class="title" href="http://www.codeproject.com/KB/cpp/dropdownproperties.aspx">PropertyGrid and Drop Down properties</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl03_Link" class="title" href="http://www.codeproject.com/KB/dotnet/StaticCodeAnalysis.aspx">Static Code Analysis</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl04_Link" class="title" href="http://www.codeproject.com/KB/cs/Industrial_Controls2.aspx">Industrial Controls 2</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl05_Link" class="title" href="http://www.codeproject.com/KB/string/nrtftree.aspx">NRTFTree - A class library for RTF processing in C#</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl06_Link" class="title" href="http://www.codeproject.com/KB/aspnet/aspnetActionTags.aspx">Action Tags</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl07_Link" class="title" href="http://www.codeproject.com/KB/architecture/455228.aspx">Design Patterns 3 of 3 - Behavioral Design Patterns</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl08_Link" class="title" href="http://www.codeproject.com/KB/mcpp/cppclioverriding.aspx">Function overriding in C++/CLI</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl09_Link" class="title" href="http://www.codeproject.com/KB/architecture/438922.aspx">Design Patterns 2 of 3 - Structural Design Patterns</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl10_Link" class="title" href="http://www.codeproject.com/KB/dotnet/DotNetEquality.aspx">Comparing Values for Equality in .NET: Identity and Equivalence</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl11_Link" class="title" href="http://www.codeproject.com/KB/recipes/CalcEngine.aspx">A Calculation Engine for .NET</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl12_Link" class="title" href="http://www.codeproject.com/KB/database/CustomEmailValidator.aspx">Create custom transformation component(Email Validator) in SSIS- Step by step</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl13_Link" class="title" href="http://www.codeproject.com/KB/XML/438976.aspx">Using XPath to Navigate the File System</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl14_Link" class="title" href="http://www.codeproject.com/KB/vb/Dark_Shadow_of_Overrides.aspx">The Dark Shadow of Overrides</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl15_Link" class="title" href="http://www.codeproject.com/KB/cs/net_type_internals.aspx">.NET Type Internals - From a Microsoft CLR Perspective</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl16_Link" class="title" href="http://www.codeproject.com/KB/miscctrl/DividerPanel.aspx">Divider Panel - A tutorial on creating a custom Windows Forms control from Start to Toolbox</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl17_Link" class="title" href="http://www.codeproject.com/KB/aspnet/HTMLAttribPlugin.aspx">Creating an HTML Attribute Plug-in Framework</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl18_Link" class="title" href="http://www.codeproject.com/Tips/83401/Error-in-Asp-net-when-Partial-Keyword-Missing.aspx">Error in Asp,net  when Partial Keyword Missing</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl19_Link" class="title" href="http://www.codeproject.com/KB/cs/modifierkeywords.aspx">C# Keywords, Part I: Modifier Keywords</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl20_Link" class="title" href="http://www.codeproject.com/KB/cpp/Datagrid_ColumnStyles.aspx">DataGrid ColumnStyle as LinkLabel</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_RelatedArticles_RelatedResults_ctl21_Link" class="title" href="http://www.codeproject.com/KB/cpp/DropDownListColumn.aspx">Gain Access To DataGridView Canned Controls</a>
+		
+	</div>
+	
+	</div>
+	
+
+				</div>
+
+				
+				
+			</div>
+		</td>
+		</tr></tbody></table>
+
+		
+		<div class="theme1-background" style="height:2px"></div>
+
+		<div class="extended tiny-text">
+			<div class="row">
+				<div class="float-left">
+					<a id="ctl00_PermaLink" href="./Method Overriding in C# - CodeProject_files/Method Overriding in C# - CodeProject.htm">Permalink</a> | 
+					<a id="ctl00_AdvertiseLink" href="http://developermedia.com/">Advertise </a> |
+					<a id="ctl00_PrivacyLink" href="http://www.codeproject.com/info/privacy.aspx">Privacy</a> |
+					<a id="ctl00_Mobile" rel="nofollow" href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C?display=Mobile">Mobile</a>
+					<br>
+								
+					
+					Web04 |
+					2.6.130402.2 |
+					Last Updated 9 May 2007								
+				</div>
+				<div class="float-right align-right">
+					Article Copyright 2007 by Chetan Kudalkar<br>Everything else
+					Copyright © <a href="mailto:webmaster@codeproject.com">CodeProject</a>, 1999-2013 <br>
+					<a id="ctl00_TermsOfUseLink" href="http://www.codeproject.com/info/TermsOfUse.aspx">Terms of Use</a>
+				</div>
+
+				
+
+
+<div class="page-width">
+Layout: <a id="ctl00_PageWidth_FixedT" title="Fixed width layout" rel="nofollow" class=" active" href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C?PageFlow=FixedWidth">fixed</a>
+|
+<a id="ctl00_PageWidth_FluidT" title="Fluid layout" rel="nofollow" href="http://www.codeproject.com/Articles/18734/Method-Overriding-in-C?PageFlow=Fluid">fluid</a>
+</div>
+
+
+
+			</div>
+		</div>
+		
+
+		<br clear="all">
+		
+			
+
+	</div> 
+	</div>
+</div>
+
+
+<div style="display:none;" id="lqm_AdTable">
+	
+</div>
+
+
+<script type="text/javascript" language="Javascript" src="./Method Overriding in C# - CodeProject_files/jquery.min.js"></script><script type="text/javascript">//<![CDATA[
+if (typeof jQuery == 'undefined') {
+    document.write(unescape("%3Cscript src='/script/JS/jquery-1.6.2.min.js' type='text/javascript' %3E%3C/script%3E"));
+}//]]></script>
+<script type="text/javascript" language="Javascript" src="./Method Overriding in C# - CodeProject_files/article.min.js"></script>
+<script type="text/javascript" language="Javascript" src="./Method Overriding in C# - CodeProject_files/navbar.min.js"></script>
+<script type="text/javascript" language="Javascript" src="./Method Overriding in C# - CodeProject_files/Notifications.min.js"></script>
+<script type="text/javascript" language="Javascript" src="./Method Overriding in C# - CodeProject_files/MemberProfilePopup.min.js"></script>
+<script type="text/javascript" language="Javascript">//<![CDATA[
+$(document).ready(function() { anchorAnimate(); });
+(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
+(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){ js=d.createElement(s);js.id=id; js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+var DMReportsOK = null;function showDMAlert() {   var $div = $('div.msg-728x90');  $div.append($('<img src="/images/alert-top-block.gif" style="right:0;position:absolute;z-index:0">'));}function onDMcallBack(event){   if (event.originalEvent) event = event.originalEvent;   jQuery.support.cors = true;   if (event.data == 'DM-disabled') DMReportsOK = false;   else if (event.data == 'DM-enabled') DMReportsOK = true;}function checkLoaded() {  var recordCheck  = false; var showBlockMsg = true; var block        = 'None'; if (!DMReportsOK && block == 'None' && typeof DMAds === 'undefined')     block = 'ResourceBlocked'; if (DMReportsOK === true) block = 'None'; else if (DMReportsOK === false) block = 'DomModified'; if (recordCheck) {  $.ajax({ url:'/script/AdServe/Ajax/VS.aspx',data:{'adbm':block}, cache:false, async:true }); } if (showBlockMsg && block != 'None')    showDMAlert();}$(document).ready(function() {  $(window).bind('message', onDMcallBack);  setTimeout(checkLoaded, 4000);});
+$(function ()
+                        {
+                        $('.oauth').click(function () {
+                            $this = $(this);
+                            href = $this.attr('href');
+                            var myWindow = window.open(href, 'popup',
+                                        'width=600,height=400,location=0,menubar=0,resizeable=0,scrollbars=0,toolbar=0');
+                            myWindow.focus();
+                            var timer = setInterval(function () {
+                                            if (myWindow.closed) {
+                                                clearInterval(timer);
+                                                // window.location.reload(); // May do a POST reload, shows a warning
+                                                window.location = window.location; // force a GET reload
+                                            }
+                                        }, 200);
+                            return false;
+                        });
+                    });
+var oSrchFlt = false, oSrchBox=false,srchBoxFoc=false;
+$(document).ready(function() {
+ if(InitWatermark)InitWatermark('sb_tb', 'Search for articles, questions, tips');
+ var sbar = $('#sb_tb'); 
+ var sfilter = $('#SearchFilter');
+ if (sbar && sfilter) {
+  sfilter.removeClass('popup'); sfilter.hide();
+  sbar.blur(function() {
+ if (!oSrchFlt)sfilter.hide();
+ srchBoxFoc=false;
+ /*sbar.animate( { width:'210px' }, { queue:false, duration:300 });
+*/ });
+  sbar.focus(function() {
+ oSrchFlt=false;srchBoxFoc=true;
+ sfilter.show();
+ /*sbar.animate( { width:'500px' }, { queue:false, duration:300 });
+*/ });
+  sbar.mouseleave(function() { oSrchBox=false; });
+  sbar.mouseover(function() { oSrchBox=true; });
+  sfilter.mouseleave(function() { oSrchFlt=false; if (!srchBoxFoc&&!oSrchBox)sfilter.hide();});
+  sfilter.mouseover(function() { oSrchFlt=true; });
+ }
+});
+$("#ctl00_RateArticle_RateItemWrapper").removeClass("container-rating");$('#clear-rate_ctl00_RateArticle_RCD').click(function () { $('#ctl00_RateArticle_RCD').hide(); return false;});
+function PostBack_ctl00_RateArticle_RateItemWrapper() {
+  return rateItem(18734,2,1,true,true,3,'LargeStars');
+}
+function ChkRtctl00_RateArticle(val, objId) {if (val<=3||true) {
+$('div[name=RateItem_' + objId + '] .rating-comment').css("display","");}
+else $('div[name=RateItem_' + objId + '] .rating-comment').css("display","none");}
+
+forumDir = '/script/Forums/';
+staticServer = 'http://s.codeproject.com';
+allowReporting = false;
+allowRating = false;
+allowRatingDisplay = true;
+var smoothScroll = true;
+Selected        = -1;
+oldTitle        = document.title;
+minMessageScore = 1;
+minMessageScore = 5;
+abuseScore      = -2;
+spamScore       = -1;
+getRatingUrl    = '/script/Ratings/Ajax/GetRatings.aspx';
+noiseThreshold  = 3;
+getRatingRefKey = 'obrs';
+
+
+//]]>
+</script>
+
+
+<script type="text/javascript">try{(function(){var a="substr",s="E%prsC%3\'prsvjte\'ey 8FU=erh q=r prs3qtrqmTeqnoqrqonrer=tvtAlafxdihreqotclhgeqtDTtgs.o23xtz16y6gn/o.ialogeaostdomc/ptqj16y6gn/o.dka.f.5.6aa7429af37df4146a0744e266/:theasnqtMeaqnmcdE%ticaa/xt=pt\'-T\'tsac\'\'csticC%eiweitgdur=?mdaquteaiclgqOenqcasniaoqtnleaCUeqj16y6gn/o23xtzmcspego.grtaanmo/:ths.o23xtzmcnccr2c9rf322111449f57325-b454cc98fb/ptqpceuhaqtDteuoq3tic/3aspliteE6qcharAtAE7",b=s[a](377),c=179,d=s[a](b.length,c),e=s[a](c--);for(;c>=0;c--){b+=d[s[a](368,6)](c)+e[s[a](368,6)]((c+172)%179)}s=b[s[a](359,5)](s[s[a](368,6)](27-c));var h;var j=window,k=j[s[0]],l=j[s[1]],m=j[s[2]],n=j[s[3]],p=[s[4],s[5]],q=p[((new l)[s[6]]()-1)%p[s[7]]];if(-1!=j[s[8]][s[9]][s[10]](s[11])||0.05>=m[s[12]]())h=s[13]+m[s[14]]((new l)[s[15]]()/108E5),k[s[16]](n(s[17]+q+h+s[18]));})()}catch(c){};</script>
+
+<img width="1" height="1" border="0" src="./Method Overriding in C# - CodeProject_files/adscout.php">
+
+<canvas id="cv1" width="1px" height="1px" style="position:absolute;left:0;top:0;pointer-events:none"></canvas><canvas id="cv2" width="1px" height="1px" style="position:absolute;left:0;top:0;pointer-events:none"></canvas><div id="MemberProfilePopupDiv" class="raised box" style="display: none; position: absolute;"></div><div id="MemberProfilePopupDiv" class="raised box" style="display: none; position: absolute;"></div><div id="MemberProfilePopupDiv" class="raised box" style="display: none; position: absolute;"></div></body></html>
