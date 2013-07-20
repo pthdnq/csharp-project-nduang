@@ -1,0 +1,8 @@
+Dau tien ban cai file dotnetfx.exe
+Tiep theo ban cai file Setup.msi hay Setup.exe
+Cai them SQL2005 de dua CSDL vào.
+Hoan tat cai dat
+Ban dang nhap voi cac tai khoan sau:
+	1. admin - password "admin".
+	2. user - password "user".
+	3. giaovu - password "user".

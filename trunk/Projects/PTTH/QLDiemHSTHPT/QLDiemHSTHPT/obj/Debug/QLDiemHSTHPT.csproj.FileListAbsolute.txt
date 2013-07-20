@@ -1,0 +1,103 @@
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\ResolveAssemblyReference.cache
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.Component.frmConnection.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.Component.frmDangNhap.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.Component.frmDoiMatKhau.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.Component.frmFlash.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.Component.frmQuyDinh.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.Component.Thaydoichuot.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmAbout.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frptDanhSachLop.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmDanToc.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmGiaoVien.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmHanhKiem.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmHocKy.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmHocLuc.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmHocSinh.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmKetQua.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmKhoiLop.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmLoaiDiem.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmLoaiNguoiDung.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmLop.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmMain.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmMonHoc.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmNamHoc.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmNgheNghiep.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmNguoiDung.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmNhapDiemChung.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmNhapDiemRieng.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmPhanCong.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmPhanLop.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmTimKiemGV.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmTimKiemHS.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmTonGiao.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmXemDiem.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frptDanhSachGiaoVien.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frptDanhSachHocSinh.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frptKetQuaCaNam_TongHop.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frptKetQuaCaNam_MonHoc.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frptKetQuaHocKy_TongHop.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frptKetQuaHocKy_MonHoc.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.Properties.Resources.resources
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\ResGen.read.1.tlog
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\ResGen.write.1.tlog
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.exe.licenses
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\bin\Debug\QLDiemHSTHPT.exe
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\bin\Debug\QLDiemHSTHPT.pdb
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\bin\Debug\DevComponents.DotNetBar2.dll
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\RdlCompile.cache
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\RdlCompile.compiled
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.exe
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.pdb
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.exe
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.pdb
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\bin\Debug\QLDiemHSTHPT.exe
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\bin\Debug\QLDiemHSTHPT.pdb
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\ResolveAssemblyReference.cache
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.Component.frmConnection.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.Component.frmDangNhap.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.Component.frmDoiMatKhau.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.Component.frmFlash.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.Component.frmQuyDinh.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.Component.Thaydoichuot.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmAbout.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frptDanhSachLop.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmDanToc.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmGiaoVien.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmHanhKiem.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmHocKy.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmHocLuc.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmHocSinh.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmKetQua.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmKhoiLop.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmLoaiDiem.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmLoaiNguoiDung.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmLop.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmMain.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmMonHoc.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmNamHoc.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmNgheNghiep.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmNguoiDung.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmNhapDiemChung.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmNhapDiemRieng.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmPhanCong.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmPhanLop.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmTimKiemGV.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmTimKiemHS.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmTonGiao.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frmXemDiem.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frptDanhSachGiaoVien.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frptDanhSachHocSinh.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frptKetQuaCaNam_TongHop.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frptKetQuaCaNam_MonHoc.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frptKetQuaHocKy_TongHop.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.frptKetQuaHocKy_MonHoc.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.Properties.Resources.resources
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\ResGen.read.1.tlog
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\ResGen.write.1.tlog
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.exe.licenses
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\RdlCompile.cache
+E:\learn\Projects\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\RdlCompile.compiled
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\GenerateResource.read.1.tlog
+E:\learn\Projects\Projects\New folder (2)\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\GenerateResource.write.1.tlog
+E:\Projects C#\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.exe
+E:\Projects C#\Projects\PTTH\QLDiemHSTHPT\QLDiemHSTHPT\obj\Debug\QLDiemHSTHPT.pdb

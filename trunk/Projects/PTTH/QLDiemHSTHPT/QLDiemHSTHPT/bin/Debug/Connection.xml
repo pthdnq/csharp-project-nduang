@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config>
+  <costatus>true</costatus>
+  <servname>MINH_THIEN\SQLEXPRESS</servname>
+  <username />
+  <password />
+  <database>QuanLyDiem2</database>
+</config>
