@@ -16,7 +16,7 @@ namespace QLDiemHSTHPT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           //Application.Run(new frmMain());
+            Application.Run(new frmMain());
          //  Application.Run(new frmLoaiDiem());
 //             foreach (var f in new DirectoryInfo(@"E:\Projects C#\Projects\PTTH\QLDiemHSTHPT").GetFiles("*.cs", SearchOption.AllDirectories))
 //             {

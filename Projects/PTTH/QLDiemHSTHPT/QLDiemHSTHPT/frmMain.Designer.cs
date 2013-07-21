@@ -1868,7 +1868,6 @@ namespace QLDiemHSTHPT
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonTCGV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonTCGV.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.buttonTCGV.Location = new System.Drawing.Point(24, 86);
             this.buttonTCGV.Name = "buttonTCGV";
             this.buttonTCGV.Size = new System.Drawing.Size(142, 27);
@@ -1884,7 +1883,6 @@ namespace QLDiemHSTHPT
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonTCHS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonTCHS.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.buttonTCHS.Location = new System.Drawing.Point(22, 42);
             this.buttonTCHS.Name = "buttonTCHS";
             this.buttonTCHS.Size = new System.Drawing.Size(144, 27);
@@ -1929,7 +1927,7 @@ namespace QLDiemHSTHPT
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonGV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonGV.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
+            this.buttonGV.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonGV.Location = new System.Drawing.Point(22, 77);
             this.buttonGV.Name = "buttonGV";
             this.buttonGV.Size = new System.Drawing.Size(144, 30);
@@ -1945,7 +1943,7 @@ namespace QLDiemHSTHPT
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonHocSinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonHocSinh.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
+            this.buttonHocSinh.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonHocSinh.Location = new System.Drawing.Point(22, 41);
             this.buttonHocSinh.Name = "buttonHocSinh";
             this.buttonHocSinh.Size = new System.Drawing.Size(144, 30);
@@ -1957,7 +1955,7 @@ namespace QLDiemHSTHPT
             // buttonPCong
             // 
             this.buttonPCong.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonPCong.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
+            this.buttonPCong.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonPCong.Location = new System.Drawing.Point(22, 112);
             this.buttonPCong.Name = "buttonPCong";
             this.buttonPCong.Size = new System.Drawing.Size(144, 30);
@@ -1969,7 +1967,7 @@ namespace QLDiemHSTHPT
             // buttonPLop
             // 
             this.buttonPLop.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonPLop.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
+            this.buttonPLop.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonPLop.Location = new System.Drawing.Point(22, 148);
             this.buttonPLop.Name = "buttonPLop";
             this.buttonPLop.Size = new System.Drawing.Size(144, 30);
@@ -2013,7 +2011,6 @@ namespace QLDiemHSTHPT
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonthoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonthoat.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.buttonthoat.Image = global::QLDiemHSTHPT.Properties.Resources.exit;
             this.buttonthoat.Location = new System.Drawing.Point(24, 111);
             this.buttonthoat.Name = "buttonthoat";
@@ -2026,7 +2023,6 @@ namespace QLDiemHSTHPT
             // buttondangnhap
             // 
             this.buttondangnhap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttondangnhap.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.buttondangnhap.Image = global::QLDiemHSTHPT.Properties.Resources.dangnhapcontext;
             this.buttondangnhap.Location = new System.Drawing.Point(24, 39);
             this.buttondangnhap.Name = "buttondangnhap";
@@ -2039,7 +2035,6 @@ namespace QLDiemHSTHPT
             // buttondangxuat
             // 
             this.buttondangxuat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttondangxuat.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.buttondangxuat.Image = global::QLDiemHSTHPT.Properties.Resources.dangxuatcontext;
             this.buttondangxuat.Location = new System.Drawing.Point(24, 75);
             this.buttondangxuat.Name = "buttondangxuat";
@@ -2199,6 +2194,7 @@ namespace QLDiemHSTHPT
             this.Controls.Add(this.tabStrip);
             this.Controls.Add(this.bottomBar);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
