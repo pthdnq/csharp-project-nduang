@@ -62,7 +62,7 @@ namespace QLDiemHSTHPT
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frptDanhSachGiaoVien";
-            this.Text = "Danh Sách Giáo Viên";
+            this.Text = "Danh Sï¿½ch Giï¿½o Viï¿½n";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frptDanhSachGiaoVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bdDanhSachGiaoVien)).EndInit();

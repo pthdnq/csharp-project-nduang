@@ -23,7 +23,7 @@ namespace QLDiemHSTHPT.Controller
             cmbComlumn.DisplayMember = "TenTonGiao";
             cmbComlumn.ValueMember = "MaTonGiao";
             cmbComlumn.DataPropertyName = "MaTonGiao";
-            cmbComlumn.HeaderText = "Tôn Giáo";
+            cmbComlumn.HeaderText = "Tï¿½n Giï¿½o";
         }
         public void HienThi(DataGridViewX dgv, BindingNavigator bn)
         {
