@@ -30,6 +30,7 @@ namespace QLDiemHSTHPT.Component
         private void btnHuybo_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
 
         private void btnDongy_Click(object sender, EventArgs e)
@@ -53,11 +54,11 @@ namespace QLDiemHSTHPT.Component
                 {
                     m_QuyDinhCtrl.CapNhatQuyDinhDoTuoi(itiDoTuoiCanDuoi.Value, itiDoTuoiCanTren.Value);
                     MessageBoxEx.Show("Cập nhật thành công quy định về độ tuổi!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                   // m_QuyDinhCtrl.HienThi(itiSStoithieu, itiSStoida, itiDoTuoiCanDuoi, itiDoTuoiCanTren, checkTD10, checkTD100);
+
+                    // m_QuyDinhCtrl.HienThi(itiSStoithieu, itiSStoida, itiDoTuoiCanDuoi, itiDoTuoiCanTren, checkTD10, checkTD100);
                 }
             }
-            
+
             else if (tabControlPanelThangdiem.CanSelect)
             {
                 if (checkTD10.Checked == true)
@@ -70,9 +71,13 @@ namespace QLDiemHSTHPT.Component
                 {
                     m_QuyDinhCtrl.CapNhatQuyDinhThangDiem(100);
                     MessageBoxEx.Show("Cập nhật thành công quy định về thang điểm!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                   m_QuyDinhCtrl.HienThi(itiSStoithieu, itiSStoida, itiDoTuoiCanDuoi, itiDoTuoiCanTren, checkTD10, checkTD100);
+                    m_QuyDinhCtrl.HienThi(itiSStoithieu, itiSStoida, itiDoTuoiCanDuoi, itiDoTuoiCanTren, checkTD10, checkTD100);
                 }
             }
         }
+        public void setCurrentTab(TabItem tabItem)
+        {
+            this.tabControl1.SelectedTab = tabItem;
         }
     }
+}

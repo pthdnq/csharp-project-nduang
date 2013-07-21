@@ -451,11 +451,53 @@ namespace QLDiemHSTHPT
             {
                 m_QuyDinh = new frmQuyDinh();
                 m_QuyDinh.MdiParent = frmMain.ActiveForm;
+                m_QuyDinh.setCurrentTab(m_QuyDinh.tabDotuoi);
                 m_QuyDinh.Show();
+
             }
-            else m_QuyDinh.Activate();
+            else
+            {
+                m_QuyDinh.setCurrentTab(m_QuyDinh.tabDotuoi);
+                m_QuyDinh.Activate();
+            }
+        }
+        private void toolStripMenuItem79_Click(object sender, EventArgs e)
+        {
+            if (m_QuyDinh == null || m_QuyDinh.IsDisposed)
+            {
+                m_QuyDinh = new frmQuyDinh();
+                m_QuyDinh.MdiParent = frmMain.ActiveForm;
+                m_QuyDinh.setCurrentTab(m_QuyDinh.tabthangdiem);
+                m_QuyDinh.Show();
+
+            }
+            else
+            {
+                m_QuyDinh.setCurrentTab(m_QuyDinh.tabthangdiem);
+                m_QuyDinh.Activate();
+            }
         }
 
+        private void toolStripMenuItem80_Click(object sender, EventArgs e)
+        {
+            if (m_QuyDinh == null || m_QuyDinh.IsDisposed)
+            {
+                m_QuyDinh = new frmQuyDinh();
+                m_QuyDinh.MdiParent = frmMain.ActiveForm;
+                m_QuyDinh.setCurrentTab(m_QuyDinh.tabSiSo);
+                m_QuyDinh.Show();
+                //m_QuyDinh.tabDotuoi
+                //m_QuyDinh.tabDotuoi.Name.
+                //m_QuyDinh.Focus();
+                //m_QuyDinh.tabDotuoi.IsSelected = true;
+
+            }
+            else
+            {
+                m_QuyDinh.setCurrentTab(m_QuyDinh.tabSiSo);
+                m_QuyDinh.Activate();
+            }
+        }
         frmHocSinh m_HocSinh = null;
         private void toolStripMenuItem56_Click(object sender, EventArgs e)
         {

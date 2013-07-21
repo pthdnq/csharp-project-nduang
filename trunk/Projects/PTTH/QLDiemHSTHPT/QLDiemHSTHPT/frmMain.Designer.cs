@@ -1263,7 +1263,7 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem79.Name = "toolStripMenuItem79";
             this.toolStripMenuItem79.Size = new System.Drawing.Size(202, 22);
             this.toolStripMenuItem79.Text = "Quy định về thang điểm";
-            this.toolStripMenuItem79.Click += new System.EventHandler(this.toolStripMenuItem78_Click);
+            this.toolStripMenuItem79.Click += new System.EventHandler(this.toolStripMenuItem79_Click);
             // 
             // toolStripMenuItem80
             // 
@@ -1271,7 +1271,7 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem80.Name = "toolStripMenuItem80";
             this.toolStripMenuItem80.Size = new System.Drawing.Size(202, 22);
             this.toolStripMenuItem80.Text = "Quy định về sỉ số";
-            this.toolStripMenuItem80.Click += new System.EventHandler(this.toolStripMenuItem78_Click);
+            this.toolStripMenuItem80.Click += new System.EventHandler(this.toolStripMenuItem80_Click);
             // 
             // toolStripMenuItem81
             // 
