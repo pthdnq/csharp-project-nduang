@@ -12,8 +12,29 @@ namespace QLDiemHSTHPT.DataLayer
 
         public DataTable LayDsQuyDinh()
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM QUYDINH");
-            m_QuyDinhData.Load(cmd);
+            SqlCommand cmdSelect = new SqlCommand("SELECT * FROM QUYDINH");
+            m_QuyDinhData.Load(cmdSelect);
+            if(m_QuyDinhData.Rows.Count==0)
+            {
+                int siSoCanDuoi=10;
+                int siSoCanTren = 30;
+                int tuoiCanDuoi = 10;
+                int tuoiCanTren = 50;
+                int thangDiem = 10;
+                SqlCommand cmd = new SqlCommand(@"INSERT INTO QUYDINH VALUES(" +
+                    "@tuoiCanDuoi, " +
+                    "@tuoiCanTren," +
+                    "@siSoCanDuoi," +
+                    "@siSoCanTren," +
+                    "@thangDiem)");
+                cmd.Parameters.Add("siSoCanDuoi", SqlDbType.Int).Value = siSoCanDuoi;
+                cmd.Parameters.Add("siSoCanTren", SqlDbType.Int).Value = siSoCanTren;
+                cmd.Parameters.Add("tuoiCanDuoi", SqlDbType.Int).Value = tuoiCanDuoi;
+                cmd.Parameters.Add("tuoiCanTren", SqlDbType.Int).Value = tuoiCanTren;
+                cmd.Parameters.Add("thangDiem", SqlDbType.Int).Value = thangDiem;
+                int i=m_QuyDinhData.ExecuteNoneQuery(cmd);
+                m_QuyDinhData.Load(cmdSelect);
+            }
             return m_QuyDinhData;
         }
 
