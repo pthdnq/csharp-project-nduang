@@ -174,10 +174,19 @@ namespace QLDiemHSTHPT.Component
         public Boolean KiemTraDoTuoi(DateTime ngaySinh)
         {
             DataService dS = new DataService();
+            int doTuoiMin;
+            int doTuoiMax;
             dS.Load(new SqlCommand("SELECT TuoiCanDuoi, TuoiCanTren FROM QUYDINH"));
+            try
+            {
+                doTuoiMin = Convert.ToInt32(dS.Rows[0]["TuoiCanDuoi"]);
+                doTuoiMax = Convert.ToInt32(dS.Rows[0]["TuoiCanTren"]);
+            }
+            catch (System.Exception ex)
+            {
+                return false;
+            }
 
-            int doTuoiMin = Convert.ToInt32(dS.Rows[0]["TuoiCanDuoi"]);
-            int doTuoiMax = Convert.ToInt32(dS.Rows[0]["TuoiCanTren"]);
 
             int doTuoi = DateTime.Today.Year - ngaySinh.Year;
 

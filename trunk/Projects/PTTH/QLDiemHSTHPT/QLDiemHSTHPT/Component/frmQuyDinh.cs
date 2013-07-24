@@ -37,7 +37,7 @@ namespace QLDiemHSTHPT.Component
         {
             if (tabControlPanelSiSo.CanSelect)
             {
-                if (itiSStoithieu.Value <= 10 || itiSStoida.Value >= 60)
+                if (itiSStoithieu.Value < 10 || itiSStoida.Value > 60)
                     MessageBoxEx.Show("Sỉ số phải nằm trong khoảng giới hạn 10 - 60!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
@@ -48,14 +48,14 @@ namespace QLDiemHSTHPT.Component
             }
             else if (tabControlPanelDoTuoi.CanSelect)
             {
-                if (itiDoTuoiCanDuoi.Value <= 10 || itiDoTuoiCanTren.Value >= 50)
+                if (itiDoTuoiCanDuoi.Value < 10 || itiDoTuoiCanTren.Value > 50)
                     MessageBoxEx.Show("Độ tuổi phải nằm trong khoảng giới hạn 10 - 50!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     m_QuyDinhCtrl.CapNhatQuyDinhDoTuoi(itiDoTuoiCanDuoi.Value, itiDoTuoiCanTren.Value);
                     MessageBoxEx.Show("Cập nhật thành công quy định về độ tuổi!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // m_QuyDinhCtrl.HienThi(itiSStoithieu, itiSStoida, itiDoTuoiCanDuoi, itiDoTuoiCanTren, checkTD10, checkTD100);
+                     m_QuyDinhCtrl.HienThi(itiSStoithieu, itiSStoida, itiDoTuoiCanDuoi, itiDoTuoiCanTren, checkTD10, checkTD100);
                 }
             }
 

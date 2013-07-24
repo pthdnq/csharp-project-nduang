@@ -23,7 +23,16 @@ namespace QLDiemHSTHPT.Controller
             bS.DataSource = m_QuyDinhData.LayDsQuyDinh();
 
             DataTable DT = m_QuyDinhData.LayDsQuyDinh();
-            int thangDiem = Convert.ToInt32(DT.Rows[0]["ThangDiem"]);
+            int thangDiem =10;
+            try
+            {
+                thangDiem = Convert.ToInt32(DT.Rows[0]["ThangDiem"]);
+            }
+            catch (System.Exception ex)
+            {
+                thangDiem = 10;
+            }
+             
 
             if (thangDiem == 10)
                 ckbThang10.Checked = true;

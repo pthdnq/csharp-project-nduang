@@ -273,7 +273,7 @@
                       </Style>
                       <ZIndex>1</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value />
+                      <Value>=Fields!HanhKiem.Value.TenHanhKiem</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
