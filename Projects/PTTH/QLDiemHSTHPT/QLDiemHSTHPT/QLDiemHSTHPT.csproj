@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -10,13 +9,6 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QLDiemHSTHPT</RootNamespace>
     <AssemblyName>QLDiemHSTHPT</AssemblyName>
-    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <OldToolsVersion>2.0</OldToolsVersion>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -26,7 +18,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,22 +26,23 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=7.5.0.1, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\ReportViewer\Microsoft.ReportViewer.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\ReportViewer\Microsoft.ReportViewer.WebForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\ReportViewer\Microsoft.ReportViewer.WinForms.dll</HintPath>
-    </Reference>
+    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Nevron.Chart, Version=8.2.14.12, Culture=neutral, PublicKeyToken=2961c51bb98125d2" />
+    <Reference Include="Nevron.Chart.WinForm, Version=8.2.14.12, Culture=neutral, PublicKeyToken=c9bd8998e981e4ee" />
+    <Reference Include="Nevron.Diagram, Version=8.2.14.12, Culture=neutral, PublicKeyToken=58d0c39aedb7cb73" />
+    <Reference Include="Nevron.Diagram.Layout, Version=8.2.14.12, Culture=neutral, PublicKeyToken=1c8a2ba0c3015f7b" />
+    <Reference Include="Nevron.Diagram.Shapes, Version=8.2.14.12, Culture=neutral, PublicKeyToken=532a56b211affb14" />
+    <Reference Include="Nevron.Diagram.Templates, Version=8.2.14.12, Culture=neutral, PublicKeyToken=07832fe1e4f1af1f" />
+    <Reference Include="Nevron.Diagram.WinForm, Version=8.2.14.12, Culture=neutral, PublicKeyToken=8232c9976c3abc48" />
+    <Reference Include="Nevron.Diagram.WinForm.Components, Version=8.2.14.12, Culture=neutral, PublicKeyToken=42ddba3af5d51672" />
+    <Reference Include="Nevron.GraphicsGL, Version=8.2.14.12, Culture=neutral, PublicKeyToken=2f17c6a71f852d32" />
+    <Reference Include="Nevron.Presentation, Version=8.2.14.12, Culture=neutral, PublicKeyToken=6656c5d1103e75cc" />
+    <Reference Include="Nevron.System, Version=8.2.14.12, Culture=neutral, PublicKeyToken=6a987feae5e496fd" />
+    <Reference Include="Nevron.UI.WinForm.Docking, Version=8.2.14.12, Culture=neutral, PublicKeyToken=446d8963349a628a" />
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
@@ -530,7 +522,6 @@
     <EmbeddedResource Include="rptDSLop.rdlc" />
     <EmbeddedResource Include="rptDSHS.rdlc" />
     <EmbeddedResource Include="rptDSGV.rdlc" />
-    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
