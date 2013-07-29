@@ -60,6 +60,13 @@ namespace QLDiemHSTHPT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap _2272010102832278 {
+            get {
+                object obj = ResourceManager.GetObject("2272010102832278", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap _5196225935_de5b6556cc_z {
             get {
                 object obj = ResourceManager.GetObject("5196225935_de5b6556cc_z", resourceCulture);
@@ -84,6 +91,13 @@ namespace QLDiemHSTHPT.Properties {
         internal static System.Drawing.Bitmap AGU1 {
             get {
                 object obj = ResourceManager.GetObject("AGU1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Capture {
+            get {
+                object obj = ResourceManager.GetObject("Capture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

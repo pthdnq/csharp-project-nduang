@@ -28,32 +28,18 @@ namespace QLDiemHSTHPT
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::QLDiemHSTHPT.Properties.Resources.muscule_car_256;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.ForeColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(231, 296);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panelEx1
             // 
@@ -62,7 +48,7 @@ namespace QLDiemHSTHPT
             this.panelEx1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelEx1.Location = new System.Drawing.Point(0, 0);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(368, 40);
+            this.panelEx1.Size = new System.Drawing.Size(420, 40);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -82,7 +68,7 @@ namespace QLDiemHSTHPT
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(217, 23);
             this.labelX1.TabIndex = 1;
-            this.labelX1.Text = "GV hướng dẫn: Nguyễn Thái Dư";
+            this.labelX1.Text = "GV hướng dẫn:";
             // 
             // labelX2
             // 
@@ -104,25 +90,14 @@ namespace QLDiemHSTHPT
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(179, 23);
             this.labelX3.TabIndex = 3;
-            this.labelX3.Text = "Hồ Minh Thiện - DTH051171";
-            // 
-            // labelX4
-            // 
-            this.labelX4.BackColor = System.Drawing.Color.Transparent;
-            this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelX4.Location = new System.Drawing.Point(35, 133);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(179, 23);
-            this.labelX4.TabIndex = 4;
-            this.labelX4.Text = "Phạm Thị Bích Vi - DTH051188";
+            this.labelX3.Text = "Nghiêm Thị Huệ";
             // 
             // labelX5
             // 
             this.labelX5.BackColor = System.Drawing.Color.Transparent;
             this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.labelX5.Location = new System.Drawing.Point(16, 162);
+            this.labelX5.Location = new System.Drawing.Point(16, 133);
             this.labelX5.Name = "labelX5";
             this.labelX5.Size = new System.Drawing.Size(80, 23);
             this.labelX5.TabIndex = 5;
@@ -132,23 +107,12 @@ namespace QLDiemHSTHPT
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(32, 188);
+            this.linkLabel1.Location = new System.Drawing.Point(32, 159);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(168, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(178, 16);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "minhthien2908@gmail.com";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.Location = new System.Drawing.Point(32, 213);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(154, 16);
-            this.linkLabel2.TabIndex = 7;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "ptbichvi6th2@gmail.com";
+            this.linkLabel1.Text = "nghiemhue2013@gmail.com";
             // 
             // panelEx2
             // 
@@ -157,7 +121,7 @@ namespace QLDiemHSTHPT
             this.panelEx2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelEx2.Location = new System.Drawing.Point(0, 248);
             this.panelEx2.Name = "panelEx2";
-            this.panelEx2.Size = new System.Drawing.Size(368, 42);
+            this.panelEx2.Size = new System.Drawing.Size(420, 42);
             this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx2.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -166,14 +130,14 @@ namespace QLDiemHSTHPT
             this.panelEx2.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx2.Style.GradientAngle = 90;
             this.panelEx2.TabIndex = 8;
-            this.panelEx2.Text = "Lớp DH6TH2 - Khoa KT - CN - MT - Trường ĐHAG";
+            this.panelEx2.Text = "Lớp  ???? - Khoa ĐTVT - Trường HVBCVT";
             // 
             // buttonX1
             // 
             this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.buttonX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX1.Location = new System.Drawing.Point(211, 213);
+            this.buttonX1.Location = new System.Drawing.Point(211, 184);
             this.buttonX1.Name = "buttonX1";
             this.buttonX1.Size = new System.Drawing.Size(53, 23);
             this.buttonX1.TabIndex = 0;
@@ -186,18 +150,16 @@ namespace QLDiemHSTHPT
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel1.Controls.Add(this.buttonX1);
             this.groupPanel1.Controls.Add(this.panelEx2);
-            this.groupPanel1.Controls.Add(this.linkLabel2);
             this.groupPanel1.Controls.Add(this.linkLabel1);
             this.groupPanel1.Controls.Add(this.labelX5);
-            this.groupPanel1.Controls.Add(this.labelX4);
             this.groupPanel1.Controls.Add(this.labelX3);
             this.groupPanel1.Controls.Add(this.labelX2);
             this.groupPanel1.Controls.Add(this.labelX1);
             this.groupPanel1.Controls.Add(this.panelEx1);
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupPanel1.Location = new System.Drawing.Point(231, 0);
+            this.groupPanel1.Location = new System.Drawing.Point(179, 0);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(374, 296);
+            this.groupPanel1.Size = new System.Drawing.Size(426, 296);
             // 
             // 
             // 
@@ -220,6 +182,18 @@ namespace QLDiemHSTHPT
             this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             this.groupPanel1.TabIndex = 1;
             this.groupPanel1.Click += new System.EventHandler(this.groupPanel1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::QLDiemHSTHPT.Properties.Resources.Capture;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.ForeColor = System.Drawing.Color.Transparent;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(179, 296);
+            this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // frmAbout
             // 
@@ -250,10 +224,8 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX3;
-        private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX labelX5;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
         private DevComponents.DotNetBar.PanelEx panelEx2;
         private DevComponents.DotNetBar.ButtonX buttonX1;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
