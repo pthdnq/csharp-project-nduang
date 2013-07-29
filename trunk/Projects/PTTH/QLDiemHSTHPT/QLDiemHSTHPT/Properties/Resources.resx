@@ -133,6 +133,9 @@
   <data name="KQHKMH" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KQHKMH.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="TCGV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TCGV.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="TTPM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TTPM.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,8 +145,8 @@
   <data name="dangxuat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dangxuat.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pdf.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hocsinh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hocsinh1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Export" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Export.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,14 +166,11 @@
   <data name="saoluu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\saoluu.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WVista Home Premium4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WVista Home Premium.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="QDthangdiem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\QDthangdiem.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KQHKLop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KQHKLop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pdf.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Class3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Class3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,20 +178,17 @@
   <data name="exit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SugarwareZ-150" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SugarwareZ-150.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="muscule_car_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\muscule_car_256.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="excel8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\excel8.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="khoilop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\khoilop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QDdotuoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\QDdotuoi.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="xemdiem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xemdiem.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\save.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,11 +214,14 @@
   <data name="KQCNMH" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KQCNMH.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="nguoidung" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nguoidung.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AGU1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AGU1.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hocsinh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hocsinh1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WVista Home Premium4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WVista Home Premium.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TCHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TCHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,17 +229,20 @@
   <data name="phuchoidulieu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\phuchoidulieu.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="monhoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\monhoc.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="delete2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quanlynguoidung" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quanlynguoidung.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="KQHKLop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KQHKLop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DN.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="chuyen lop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chuyen lop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SugarwareZ-150" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SugarwareZ-150.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hocky" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hocky.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,14 +259,17 @@
   <data name="doimatkhau" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doimatkhau.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nguoidung" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nguoidung.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DSHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DSHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="xemdiem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xemdiem.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DSHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DSHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="chuyen lop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chuyen lop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="diem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diem.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,11 +277,8 @@
   <data name="phancong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\phancong.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="muscule_car_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\muscule_car_256.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="monhoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\monhoc.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="quanlynguoidung" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quanlynguoidung.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AGU" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AGU.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -301,8 +304,8 @@
   <data name="giaovien" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\giaovien.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TCGV" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TCGV.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dangnhap" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dangnhap.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,7 +316,7 @@
   <data name="tongiao" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tongiao.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="excel8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\excel8.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="5196225935_de5b6556cc_z" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5196225935_de5b6556cc_z.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
