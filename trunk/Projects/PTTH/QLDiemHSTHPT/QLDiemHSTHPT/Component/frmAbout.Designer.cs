@@ -64,7 +64,7 @@ namespace QLDiemHSTHPT
             this.labelX1.BackColor = System.Drawing.Color.Transparent;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX1.ForeColor = System.Drawing.Color.Red;
-            this.labelX1.Location = new System.Drawing.Point(56, 46);
+            this.labelX1.Location = new System.Drawing.Point(16, 46);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(217, 23);
             this.labelX1.TabIndex = 1;
