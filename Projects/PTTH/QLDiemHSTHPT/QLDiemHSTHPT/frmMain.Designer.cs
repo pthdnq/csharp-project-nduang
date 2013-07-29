@@ -2187,7 +2187,7 @@ namespace QLDiemHSTHPT
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
-            this.BackgroundImage = global::QLDiemHSTHPT.Properties.Resources.Class3;
+            this.BackgroundImage = global::QLDiemHSTHPT.Properties.Resources._5196225935_de5b6556cc_z;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(933, 721);
             this.Controls.Add(this.panelTacvu);

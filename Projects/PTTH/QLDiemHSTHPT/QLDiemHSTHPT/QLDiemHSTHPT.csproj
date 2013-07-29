@@ -101,20 +101,11 @@
     <Compile Include="Component\frmDoiMatKhau.Designer.cs">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="Component\frmFlash.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Component\frmFlash.Designer.cs">
-      <DependentUpon>frmFlash.cs</DependentUpon>
-    </Compile>
     <Compile Include="Component\frmQuyDinh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Component\frmQuyDinh.Designer.cs">
       <DependentUpon>frmQuyDinh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Component\Thaydoichuot.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controller\DiemCtrl.cs" />
     <Compile Include="Controller\KQCNMonHocCtrl.cs" />
@@ -369,17 +360,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Component\frmFlash.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>frmFlash.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Component\frmQuyDinh.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmQuyDinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Component\Thaydoichuot.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Thaydoichuot.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Component\frmAbout.resx">
       <SubType>Designer</SubType>
@@ -744,6 +727,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\excel8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5196225935_de5b6556cc_z.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2272010102832278.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
