@@ -39,7 +39,7 @@ namespace QLDiemHSTHPT
             m_NgheNghiepChaCtrl.HienThiDataGridViewComboBoxColumnNNCha(MaNgheNghiepCha);
             m_NgheNghiepMeCtrl.HienThiDataGridViewComboBoxColumnNNMe(MaNgheNghiepMe);
 
-            m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2,dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1);
+            m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2, dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1);
         }
 
         private void bngThemmoi_Click(object sender, EventArgs e)
@@ -74,8 +74,10 @@ namespace QLDiemHSTHPT
 
         public Boolean KiemTraTruocKhiLuu(String cellString)
         {
+            int i = 0;
             foreach (DataGridViewRow row in dgvhocsinh.Rows)
             {
+                i++;
                 if (row.Cells[cellString].Value != null)
                 {
                     String str = row.Cells[cellString].Value.ToString();
@@ -108,6 +110,9 @@ namespace QLDiemHSTHPT
         }
         private void bngluu_Click(object sender, EventArgs e)
         {
+            //Fixbug - 2013/07/30 - NTHUE - BEGIN
+            dgvhocsinh.EndEdit();
+            //Fixbug - 2013/07/30 - NTHUE - END
             if (KiemTraTruocKhiLuu("MaHocSinh") == true &&
                 KiemTraTruocKhiLuu("HoTen") == true &&
                 KiemTraTruocKhiLuu("NoiSinh") == true &&
@@ -123,9 +128,9 @@ namespace QLDiemHSTHPT
                     bindingNavigatorPositionItem.Focus();
                     m_HocSinhCtrl.LuuHocSinh();
                 }
-               
+
             }
-                       
+
         }
 
         private void bngthoat_Click(object sender, EventArgs e)
@@ -135,7 +140,7 @@ namespace QLDiemHSTHPT
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2,dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1);
+            m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2, dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1);
         }
 
         private void dgvhocsinh_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -278,11 +283,11 @@ namespace QLDiemHSTHPT
 
         private void btnIPExcel_Click(object sender, EventArgs e)
         {
-                    }
+        }
 
-       
-       
-    } 
 
-        
+
     }
+
+
+}

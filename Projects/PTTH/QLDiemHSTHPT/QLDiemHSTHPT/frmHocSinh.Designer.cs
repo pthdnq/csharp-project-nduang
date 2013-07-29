@@ -31,6 +31,7 @@ namespace QLDiemHSTHPT
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHocSinh));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,20 +43,8 @@ namespace QLDiemHSTHPT
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHocSinh));
             this.groupBoxDshs = new System.Windows.Forms.GroupBox();
             this.dgvhocsinh = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.MaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.NoiSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaDanToc = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.MaTonGiao = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.HoTenCha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNgheNghiepCha = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.HoTenMe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNgheNghiepMe = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bdgHocSinh = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -150,6 +139,17 @@ namespace QLDiemHSTHPT
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
             this.lblMaHocSinh1 = new DevComponents.DotNetBar.LabelX();
             this.buttonItemnhaptt = new DevComponents.DotNetBar.ButtonItem();
+            this.MaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.NoiSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaDanToc = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.MaTonGiao = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.HoTenCha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNgheNghiepCha = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.HoTenMe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNgheNghiepMe = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.groupBoxDshs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvhocsinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgHocSinh)).BeginInit();
@@ -211,106 +211,6 @@ namespace QLDiemHSTHPT
             this.dgvhocsinh.TabIndex = 8;
             this.dgvhocsinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvhocsinh_CellClick);
             this.dgvhocsinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvhocsinh_CellContentClick);
-            // 
-            // MaHocSinh
-            // 
-            this.MaHocSinh.DataPropertyName = "MaHocSinh";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaHocSinh.DefaultCellStyle = dataGridViewCellStyle2;
-            this.MaHocSinh.HeaderText = "Mã học sinh";
-            this.MaHocSinh.MaxInputLength = 6;
-            this.MaHocSinh.Name = "MaHocSinh";
-            this.MaHocSinh.Width = 80;
-            // 
-            // HoTen
-            // 
-            this.HoTen.DataPropertyName = "HoTen";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HoTen.DefaultCellStyle = dataGridViewCellStyle3;
-            this.HoTen.HeaderText = "Họ và tên";
-            this.HoTen.MaxInputLength = 30;
-            this.HoTen.Name = "HoTen";
-            this.HoTen.Width = 150;
-            // 
-            // GioiTinh
-            // 
-            this.GioiTinh.DataPropertyName = "GioiTinh";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.NullValue = false;
-            this.GioiTinh.DefaultCellStyle = dataGridViewCellStyle4;
-            this.GioiTinh.HeaderText = "Giới tính nữ";
-            this.GioiTinh.Name = "GioiTinh";
-            // 
-            // NoiSinh
-            // 
-            this.NoiSinh.DataPropertyName = "NoiSinh";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NoiSinh.DefaultCellStyle = dataGridViewCellStyle5;
-            this.NoiSinh.HeaderText = "Nơi sinh";
-            this.NoiSinh.MaxInputLength = 50;
-            this.NoiSinh.Name = "NoiSinh";
-            this.NoiSinh.Width = 150;
-            // 
-            // NgaySinh
-            // 
-            this.NgaySinh.DataPropertyName = "NgaySinh";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NgaySinh.DefaultCellStyle = dataGridViewCellStyle6;
-            this.NgaySinh.HeaderText = "Ngày Sinh";
-            this.NgaySinh.Name = "NgaySinh";
-            // 
-            // MaDanToc
-            // 
-            this.MaDanToc.DataPropertyName = "MaDanToc";
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaDanToc.DefaultCellStyle = dataGridViewCellStyle7;
-            this.MaDanToc.HeaderText = "Dân tộc";
-            this.MaDanToc.Name = "MaDanToc";
-            // 
-            // MaTonGiao
-            // 
-            this.MaTonGiao.DataPropertyName = "MaTonGiao";
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaTonGiao.DefaultCellStyle = dataGridViewCellStyle8;
-            this.MaTonGiao.HeaderText = "Tôn giáo";
-            this.MaTonGiao.Name = "MaTonGiao";
-            // 
-            // HoTenCha
-            // 
-            this.HoTenCha.DataPropertyName = "HoTenCha";
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HoTenCha.DefaultCellStyle = dataGridViewCellStyle9;
-            this.HoTenCha.HeaderText = "Họ tên cha";
-            this.HoTenCha.MaxInputLength = 30;
-            this.HoTenCha.Name = "HoTenCha";
-            this.HoTenCha.Width = 150;
-            // 
-            // MaNgheNghiepCha
-            // 
-            this.MaNgheNghiepCha.DataPropertyName = "MaNNghiepCha";
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaNgheNghiepCha.DefaultCellStyle = dataGridViewCellStyle10;
-            this.MaNgheNghiepCha.HeaderText = "Nghề nghiệp cha";
-            this.MaNgheNghiepCha.Name = "MaNgheNghiepCha";
-            // 
-            // HoTenMe
-            // 
-            this.HoTenMe.DataPropertyName = "HoTenMe";
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HoTenMe.DefaultCellStyle = dataGridViewCellStyle11;
-            this.HoTenMe.HeaderText = "Họ tên mẹ";
-            this.HoTenMe.MaxInputLength = 30;
-            this.HoTenMe.Name = "HoTenMe";
-            this.HoTenMe.Width = 150;
-            // 
-            // MaNgheNghiepMe
-            // 
-            this.MaNgheNghiepMe.DataPropertyName = "MaNNghiepMe";
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaNgheNghiepMe.DefaultCellStyle = dataGridViewCellStyle12;
-            this.MaNgheNghiepMe.HeaderText = "Nghề nghiệp mẹ";
-            this.MaNgheNghiepMe.Name = "MaNgheNghiepMe";
             // 
             // bdgHocSinh
             // 
@@ -867,6 +767,7 @@ namespace QLDiemHSTHPT
             this.datNgaySinh.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
             this.datNgaySinh.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
             this.datNgaySinh.MonthCalendar.DisplayMonth = new System.DateTime(2009, 3, 1, 0, 0, 0, 0);
+            this.datNgaySinh.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
             this.datNgaySinh.MonthCalendar.MarkedDates = new System.DateTime[0];
             this.datNgaySinh.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
             // 
@@ -1348,6 +1249,7 @@ namespace QLDiemHSTHPT
             this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
             this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
             this.dateTimeInput1.MonthCalendar.DisplayMonth = new System.DateTime(2009, 3, 1, 0, 0, 0, 0);
+            this.dateTimeInput1.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
             this.dateTimeInput1.MonthCalendar.MarkedDates = new System.DateTime[0];
             this.dateTimeInput1.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
             // 
@@ -1456,6 +1358,106 @@ namespace QLDiemHSTHPT
             this.buttonItemnhaptt.OptionGroup = "navBar";
             this.buttonItemnhaptt.Text = "Nhập thông tin";
             // 
+            // MaHocSinh
+            // 
+            this.MaHocSinh.DataPropertyName = "MaHocSinh";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaHocSinh.DefaultCellStyle = dataGridViewCellStyle2;
+            this.MaHocSinh.HeaderText = "Mã học sinh";
+            this.MaHocSinh.MaxInputLength = 6;
+            this.MaHocSinh.Name = "MaHocSinh";
+            this.MaHocSinh.Width = 80;
+            // 
+            // HoTen
+            // 
+            this.HoTen.DataPropertyName = "HoTen";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoTen.DefaultCellStyle = dataGridViewCellStyle3;
+            this.HoTen.HeaderText = "Họ và tên";
+            this.HoTen.MaxInputLength = 30;
+            this.HoTen.Name = "HoTen";
+            this.HoTen.Width = 150;
+            // 
+            // GioiTinh
+            // 
+            this.GioiTinh.DataPropertyName = "GioiTinh";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.NullValue = false;
+            this.GioiTinh.DefaultCellStyle = dataGridViewCellStyle4;
+            this.GioiTinh.HeaderText = "Giới tính nữ";
+            this.GioiTinh.Name = "GioiTinh";
+            // 
+            // NoiSinh
+            // 
+            this.NoiSinh.DataPropertyName = "NoiSinh";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NoiSinh.DefaultCellStyle = dataGridViewCellStyle5;
+            this.NoiSinh.HeaderText = "Nơi sinh";
+            this.NoiSinh.MaxInputLength = 50;
+            this.NoiSinh.Name = "NoiSinh";
+            this.NoiSinh.Width = 150;
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NgaySinh.DefaultCellStyle = dataGridViewCellStyle6;
+            this.NgaySinh.HeaderText = "Ngày Sinh";
+            this.NgaySinh.Name = "NgaySinh";
+            // 
+            // MaDanToc
+            // 
+            this.MaDanToc.DataPropertyName = "MaDanToc";
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaDanToc.DefaultCellStyle = dataGridViewCellStyle7;
+            this.MaDanToc.HeaderText = "Dân tộc";
+            this.MaDanToc.Name = "MaDanToc";
+            // 
+            // MaTonGiao
+            // 
+            this.MaTonGiao.DataPropertyName = "MaTonGiao";
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaTonGiao.DefaultCellStyle = dataGridViewCellStyle8;
+            this.MaTonGiao.HeaderText = "Tôn giáo";
+            this.MaTonGiao.Name = "MaTonGiao";
+            // 
+            // HoTenCha
+            // 
+            this.HoTenCha.DataPropertyName = "HoTenCha";
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoTenCha.DefaultCellStyle = dataGridViewCellStyle9;
+            this.HoTenCha.HeaderText = "Họ tên cha";
+            this.HoTenCha.MaxInputLength = 30;
+            this.HoTenCha.Name = "HoTenCha";
+            this.HoTenCha.Width = 150;
+            // 
+            // MaNgheNghiepCha
+            // 
+            this.MaNgheNghiepCha.DataPropertyName = "MaNNghiepCha";
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaNgheNghiepCha.DefaultCellStyle = dataGridViewCellStyle10;
+            this.MaNgheNghiepCha.HeaderText = "Nghề nghiệp cha";
+            this.MaNgheNghiepCha.Name = "MaNgheNghiepCha";
+            // 
+            // HoTenMe
+            // 
+            this.HoTenMe.DataPropertyName = "HoTenMe";
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoTenMe.DefaultCellStyle = dataGridViewCellStyle11;
+            this.HoTenMe.HeaderText = "Họ tên mẹ";
+            this.HoTenMe.MaxInputLength = 30;
+            this.HoTenMe.Name = "HoTenMe";
+            this.HoTenMe.Width = 150;
+            // 
+            // MaNgheNghiepMe
+            // 
+            this.MaNgheNghiepMe.DataPropertyName = "MaNNghiepMe";
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaNgheNghiepMe.DefaultCellStyle = dataGridViewCellStyle12;
+            this.MaNgheNghiepMe.HeaderText = "Nghề nghiệp mẹ";
+            this.MaNgheNghiepMe.Name = "MaNgheNghiepMe";
+            // 
             // frmHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1463,6 +1465,7 @@ namespace QLDiemHSTHPT
             this.ClientSize = new System.Drawing.Size(994, 453);
             this.Controls.Add(this.groupBoxDshs);
             this.Controls.Add(this.nvgPanelHocSinh);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmHocSinh";
