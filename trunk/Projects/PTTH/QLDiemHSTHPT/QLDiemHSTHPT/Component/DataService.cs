@@ -48,7 +48,7 @@ namespace QLDiemHSTHPT.Component
         {
             string conn = "";
             string strAppStart = Application.StartupPath;
-            conn = @"Data Source=.\SQLEXPRESS;AttachDbFilename=" + strAppStart + @"\Database\QLDiemHSTHPT.mdf;Integrated Security=True;Connect Timeout=5;User Instance=True";
+            conn = @"Data Source=.\SQLEXPRESS;AttachDbFilename=" + strAppStart + @"\Database\QLDiemHSTHPT.mdf;Integrated Security=True;Connect Timeout=10;User Instance=True";
             m_ConnectString = conn;
         }
 
