@@ -20,30 +20,6 @@ namespace QLDiemHSTHPT.Component
         
 
         }
-        /*public static void ConnectionString()
-        {
-            XmlDocument xmlRed = XML.XMLReader("Connection.xml");
-            XmlElement xmlEle = xmlRed.DocumentElement;
-
-            try
-            {
-                if (xmlEle.SelectSingleNode("costatus").InnerText == "true")
-                {
-                    m_ConnectString = "Data Source=" + xmlEle.SelectSingleNode("servname").InnerText + ";Initial Catalog=" + xmlEle.SelectSingleNode("database").InnerText + ";Integrated Security=True;";
-                }
-                else
-                {
-                    m_ConnectString = "Data Source=" + xmlEle.SelectSingleNode("servname").InnerText + ";Initial Catalog=" + xmlEle.SelectSingleNode("database").InnerText + ";User Id=" + xmlEle.SelectSingleNode("username").InnerText + ";Password=" + xmlEle.SelectSingleNode("password").InnerText + ";";
-                }
-
-                Utilities.DatabaseName = xmlEle.SelectSingleNode("database").InnerText;
-            }
-            catch
-            {
-                MessageBoxEx.Show("Lỗi kết nối đến cơ sở dữ liệu! Vui lòng thiết lập lại kết nối!!!", "ERROR", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
-            }
-        }*/
-        // connection SQL dynamic(kết nối tới SQL động)
         public static void  ConnectionString()
         {
             string conn = "";

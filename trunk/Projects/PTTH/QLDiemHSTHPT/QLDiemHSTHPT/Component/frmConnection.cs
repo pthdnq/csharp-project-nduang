@@ -29,10 +29,10 @@ namespace QLDiemHSTHPT.Component
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            if (cmbAuthentication.SelectedIndex == 0)
-                XML.XMLWriter("Connection.xml", txtserver.Text, cmbdatabase.Text, "true");
-            else
-                XML.XMLWriter("Connection.xml", txtserver.Text, txtusername.Text, txtmatkhau.Text, cmbdatabase.Text, "false");
+//             if (cmbAuthentication.SelectedIndex == 0)
+//                 XML.XMLWriter("Connection.xml", txtserver.Text, cmbdatabase.Text, "true");
+//             else
+//                 XML.XMLWriter("Connection.xml", txtserver.Text, txtusername.Text, txtmatkhau.Text, cmbdatabase.Text, "false");
 
             this.DialogResult = DialogResult.OK;
         }
