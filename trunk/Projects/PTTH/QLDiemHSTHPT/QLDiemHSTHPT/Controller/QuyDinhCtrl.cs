@@ -28,7 +28,7 @@ namespace QLDiemHSTHPT.Controller
             {
                 thangDiem = Convert.ToInt32(DT.Rows[0]["ThangDiem"]);
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 thangDiem = 10;
             }
