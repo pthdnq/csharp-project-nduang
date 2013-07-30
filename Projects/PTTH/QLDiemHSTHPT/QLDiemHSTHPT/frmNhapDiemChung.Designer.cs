@@ -169,6 +169,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbLopCN.DisplayMember = "Text";
             this.cmbLopCN.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbLopCN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLopCN.FormattingEnabled = true;
             this.cmbLopCN.ItemHeight = 15;
             this.cmbLopCN.Location = new System.Drawing.Point(26, 91);
@@ -189,6 +190,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbHockyCN.DisplayMember = "Text";
             this.cmbHockyCN.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbHockyCN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHockyCN.FormattingEnabled = true;
             this.cmbHockyCN.ItemHeight = 15;
             this.cmbHockyCN.Location = new System.Drawing.Point(26, 137);
@@ -208,6 +210,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbMonhocCN.DisplayMember = "Text";
             this.cmbMonhocCN.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbMonhocCN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMonhocCN.FormattingEnabled = true;
             this.cmbMonhocCN.ItemHeight = 15;
             this.cmbMonhocCN.Location = new System.Drawing.Point(26, 182);
@@ -238,6 +241,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbNanhocCN.DisplayMember = "Text";
             this.cmbNanhocCN.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbNanhocCN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNanhocCN.FormattingEnabled = true;
             this.cmbNanhocCN.ItemHeight = 15;
             this.cmbNanhocCN.Location = new System.Drawing.Point(26, 40);
@@ -501,8 +505,8 @@ namespace QLDiemHSTHPT
             this.dgvNhapdiemchung.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvNhapdiemchung.Size = new System.Drawing.Size(804, 404);
             this.dgvNhapdiemchung.TabIndex = 6;
-            this.dgvNhapdiemchung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhapdiemchung_CellContentClick);
             this.dgvNhapdiemchung.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvNhapdiemchung_DataError);
+            this.dgvNhapdiemchung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhapdiemchung_CellContentClick);
             // 
             // MaHocSinh
             // 
@@ -710,6 +714,7 @@ namespace QLDiemHSTHPT
             this.ClientSize = new System.Drawing.Size(1002, 448);
             this.Controls.Add(this.groupBoxDsgv);
             this.Controls.Add(this.nvgPanelGiaoVien);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNhapDiemChung";
