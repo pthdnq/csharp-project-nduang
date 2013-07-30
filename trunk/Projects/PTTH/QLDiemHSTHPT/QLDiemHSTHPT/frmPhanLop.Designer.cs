@@ -51,8 +51,8 @@ namespace QLDiemHSTHPT
             this.colMaHSCu = new System.Windows.Forms.ColumnHeader();
             this.colHoTenCu = new System.Windows.Forms.ColumnHeader();
             this.groupPanelTTLopcu = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.btnTimKiemMa = new DevComponents.DotNetBar.ButtonX();
+            this.btnTimKiemTen = new DevComponents.DotNetBar.ButtonX();
             this.txtTimkiem = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.cmbLopcu = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.lblLopcu = new DevComponents.DotNetBar.LabelX();
