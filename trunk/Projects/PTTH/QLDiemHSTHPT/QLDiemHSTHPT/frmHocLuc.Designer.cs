@@ -31,21 +31,15 @@ namespace QLDiemHSTHPT
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHocLuc));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHocLuc));
             this.groupBoxDshocluc = new System.Windows.Forms.GroupBox();
             this.dgvhocluc = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.MaHocLuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenHocLuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemCanDuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemCanTren = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemKhongChe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bdgHocluc = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -60,6 +54,11 @@ namespace QLDiemHSTHPT
             this.bngXoa = new System.Windows.Forms.ToolStripButton();
             this.bngluu = new System.Windows.Forms.ToolStripButton();
             this.bngthoat = new System.Windows.Forms.ToolStripButton();
+            this.MaHocLuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenHocLuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemCanDuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemCanTren = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemKhongChe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxDshocluc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvhocluc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgHocluc)).BeginInit();
@@ -84,14 +83,6 @@ namespace QLDiemHSTHPT
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvhocluc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvhocluc.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvhocluc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvhocluc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvhocluc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaHocLuc,
@@ -99,14 +90,14 @@ namespace QLDiemHSTHPT
             this.DiemCanDuoi,
             this.DiemCanTren,
             this.DiemKhongChe});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvhocluc.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvhocluc.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvhocluc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvhocluc.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvhocluc.Location = new System.Drawing.Point(3, 41);
@@ -114,51 +105,6 @@ namespace QLDiemHSTHPT
             this.dgvhocluc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvhocluc.Size = new System.Drawing.Size(693, 418);
             this.dgvhocluc.TabIndex = 1;
-            // 
-            // MaHocLuc
-            // 
-            this.MaHocLuc.DataPropertyName = "MaHocLuc";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaHocLuc.DefaultCellStyle = dataGridViewCellStyle3;
-            this.MaHocLuc.HeaderText = "Mã Học Lực";
-            this.MaHocLuc.Name = "MaHocLuc";
-            this.MaHocLuc.Width = 130;
-            // 
-            // TenHocLuc
-            // 
-            this.TenHocLuc.DataPropertyName = "TenHocLuc";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenHocLuc.DefaultCellStyle = dataGridViewCellStyle4;
-            this.TenHocLuc.HeaderText = "Tên Học Lực";
-            this.TenHocLuc.Name = "TenHocLuc";
-            this.TenHocLuc.Width = 130;
-            // 
-            // DiemCanDuoi
-            // 
-            this.DiemCanDuoi.DataPropertyName = "DiemCanDuoi";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiemCanDuoi.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DiemCanDuoi.HeaderText = "Điểm Cận Dưới";
-            this.DiemCanDuoi.Name = "DiemCanDuoi";
-            this.DiemCanDuoi.Width = 130;
-            // 
-            // DiemCanTren
-            // 
-            this.DiemCanTren.DataPropertyName = "DiemCanTren";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiemCanTren.DefaultCellStyle = dataGridViewCellStyle6;
-            this.DiemCanTren.HeaderText = "Điểm Cận Trên";
-            this.DiemCanTren.Name = "DiemCanTren";
-            this.DiemCanTren.Width = 130;
-            // 
-            // DiemKhongChe
-            // 
-            this.DiemKhongChe.DataPropertyName = "DiemKhongChe";
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiemKhongChe.DefaultCellStyle = dataGridViewCellStyle7;
-            this.DiemKhongChe.HeaderText = "Điểm Khống";
-            this.DiemKhongChe.Name = "DiemKhongChe";
-            this.DiemKhongChe.Width = 130;
             // 
             // bdgHocluc
             // 
@@ -299,12 +245,58 @@ namespace QLDiemHSTHPT
             this.bngthoat.Text = "Thoát";
             this.bngthoat.Click += new System.EventHandler(this.bngthoat_Click);
             // 
+            // MaHocLuc
+            // 
+            this.MaHocLuc.DataPropertyName = "MaHocLuc";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaHocLuc.DefaultCellStyle = dataGridViewCellStyle2;
+            this.MaHocLuc.HeaderText = "Mã Học Lực";
+            this.MaHocLuc.Name = "MaHocLuc";
+            this.MaHocLuc.Width = 130;
+            // 
+            // TenHocLuc
+            // 
+            this.TenHocLuc.DataPropertyName = "TenHocLuc";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenHocLuc.DefaultCellStyle = dataGridViewCellStyle3;
+            this.TenHocLuc.HeaderText = "Tên Học Lực";
+            this.TenHocLuc.Name = "TenHocLuc";
+            this.TenHocLuc.Width = 130;
+            // 
+            // DiemCanDuoi
+            // 
+            this.DiemCanDuoi.DataPropertyName = "DiemCanDuoi";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiemCanDuoi.DefaultCellStyle = dataGridViewCellStyle4;
+            this.DiemCanDuoi.HeaderText = "Điểm Cận Dưới";
+            this.DiemCanDuoi.Name = "DiemCanDuoi";
+            this.DiemCanDuoi.Width = 130;
+            // 
+            // DiemCanTren
+            // 
+            this.DiemCanTren.DataPropertyName = "DiemCanTren";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiemCanTren.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DiemCanTren.HeaderText = "Điểm Cận Trên";
+            this.DiemCanTren.Name = "DiemCanTren";
+            this.DiemCanTren.Width = 130;
+            // 
+            // DiemKhongChe
+            // 
+            this.DiemKhongChe.DataPropertyName = "DiemKhongChe";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiemKhongChe.DefaultCellStyle = dataGridViewCellStyle6;
+            this.DiemKhongChe.HeaderText = "Điểm Khống Chế";
+            this.DiemKhongChe.Name = "DiemKhongChe";
+            this.DiemKhongChe.Width = 130;
+            // 
             // frmHocLuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 462);
             this.Controls.Add(this.groupBoxDshocluc);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
