@@ -125,12 +125,18 @@ namespace QLDiemHSTHPT
         {
             this.Close();
         }
-
+        //HTQuang begin 30/07/2013
         private void cmbNamhoccu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmbKhoilopcu.DataBindings.Clear();
-            cmbLopcu.DataBindings.Clear();
+            if (cmbNamhoccu.SelectedValue != null)
+            {
+                m_NamHocMoiCtrl.HienThiComboBox(cmbNamhoccu.SelectedValue.ToString(), cmbnamhocmoi);
+                cmbKhoilopcu.DataBindings.Clear();
+                cmbLopcu.DataBindings.Clear();
+                HocSinhCtrl.TimTheoTen(lvLopCu, txtTimkiem.Text);
+            }
         }
+        //HTQuang end 30/07/2013
 
         private void cmbnamhocmoi_SelectedIndexChanged(object sender, EventArgs e)
         {
