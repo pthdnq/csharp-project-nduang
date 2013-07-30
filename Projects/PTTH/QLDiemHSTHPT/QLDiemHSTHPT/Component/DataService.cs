@@ -1,5 +1,4 @@
 using System;
-using System.Xml;
 using System.Data;
 using System.Data.SqlClient;
 using DevComponents.DotNetBar;
@@ -17,10 +16,10 @@ namespace QLDiemHSTHPT.Component
 
         public DataService()
         {
-        
+
 
         }
-        public static void  ConnectionString()
+        public static void ConnectionString()
         {
             string conn = "";
             string strAppStart = Application.StartupPath;
@@ -69,7 +68,7 @@ namespace QLDiemHSTHPT.Component
         {
             m_Connection.Close();
         }
-        
+
 
         public int ExecuteNoneQuery()
         {
@@ -121,7 +120,7 @@ namespace QLDiemHSTHPT.Component
             }
             return result;
         }
-        
+
         public object ExecuteScalar(SqlCommand m_Sql)
         {
             object result = null;
@@ -158,7 +157,8 @@ namespace QLDiemHSTHPT.Component
 
             if (m_ConnectString == "")
                 ConnectionString();
-            if (m_Connection == null || m_Connection.State == ConnectionState.Closed)            {
+            if (m_Connection == null || m_Connection.State == ConnectionState.Closed)
+            {
                 m_Connection = new SqlConnection(m_ConnectString);
                 m_Connection.Open();
             }
@@ -179,8 +179,8 @@ namespace QLDiemHSTHPT.Component
                 MessageBoxEx.Show("Không thể thực thi câu lệnh SQL này!\nLỗi: " + e.Message, "ERROR", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
             }
         }
-    
-        }
-       
+
     }
+
+}
 
