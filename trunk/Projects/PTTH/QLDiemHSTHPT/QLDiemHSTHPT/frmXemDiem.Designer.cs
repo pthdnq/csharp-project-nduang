@@ -46,12 +46,12 @@ namespace QLDiemHSTHPT
             this.btnNhapdiemchung = new DevComponents.DotNetBar.ButtonItem();
             this.groupBoxDsgv = new System.Windows.Forms.GroupBox();
             this.lvdiem = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.colSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colMaHocSinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colTenHS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colMonhoc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colLoaiDiem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colDiem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colSTT = new System.Windows.Forms.ColumnHeader();
+            this.colMaHocSinh = new System.Windows.Forms.ColumnHeader();
+            this.colTenHS = new System.Windows.Forms.ColumnHeader();
+            this.colMonhoc = new System.Windows.Forms.ColumnHeader();
+            this.colLoaiDiem = new System.Windows.Forms.ColumnHeader();
+            this.colDiem = new System.Windows.Forms.ColumnHeader();
             this.bdgNhapdiemrieng = new System.Windows.Forms.BindingNavigator(this.components);
             this.btnxoa = new System.Windows.Forms.ToolStripButton();
             this.bngthoat = new System.Windows.Forms.ToolStripButton();
@@ -143,6 +143,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbHocsinh.DisplayMember = "Text";
             this.cmbHocsinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbHocsinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHocsinh.FormattingEnabled = true;
             this.cmbHocsinh.ItemHeight = 14;
             this.cmbHocsinh.Location = new System.Drawing.Point(19, 216);
@@ -162,6 +163,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmblop.DisplayMember = "Text";
             this.cmblop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmblop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmblop.FormattingEnabled = true;
             this.cmblop.ItemHeight = 14;
             this.cmblop.Location = new System.Drawing.Point(19, 81);
@@ -181,6 +183,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbHocky.DisplayMember = "Text";
             this.cmbHocky.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbHocky.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHocky.FormattingEnabled = true;
             this.cmbHocky.ItemHeight = 14;
             this.cmbHocky.Location = new System.Drawing.Point(19, 126);
@@ -200,6 +203,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbMonhoc.DisplayMember = "Text";
             this.cmbMonhoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbMonhoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMonhoc.FormattingEnabled = true;
             this.cmbMonhoc.ItemHeight = 14;
             this.cmbMonhoc.Location = new System.Drawing.Point(19, 171);
@@ -219,6 +223,7 @@ namespace QLDiemHSTHPT
             // 
             this.cbmnamhoc.DisplayMember = "Text";
             this.cbmnamhoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbmnamhoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmnamhoc.FormattingEnabled = true;
             this.cbmnamhoc.ItemHeight = 14;
             this.cbmnamhoc.Location = new System.Drawing.Point(19, 36);
@@ -354,6 +359,7 @@ namespace QLDiemHSTHPT
             this.ClientSize = new System.Drawing.Size(908, 397);
             this.Controls.Add(this.groupBoxDsgv);
             this.Controls.Add(this.nvgPanelGiaoVien);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmXemDiem";

@@ -101,6 +101,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbLop.DisplayMember = "Text";
             this.cmbLop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLop.FormattingEnabled = true;
             this.cmbLop.ItemHeight = 14;
@@ -124,6 +125,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbMonHoc.DisplayMember = "Text";
             this.cmbMonHoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMonHoc.FormattingEnabled = true;
             this.cmbMonHoc.ItemHeight = 14;
@@ -146,6 +148,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbNamHoc.DisplayMember = "Text";
             this.cmbNamHoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbNamHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNamHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNamHoc.FormattingEnabled = true;
             this.cmbNamHoc.ItemHeight = 14;
