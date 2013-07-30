@@ -46,7 +46,7 @@ namespace QLDiemHSTHPT
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
-            if (MessageBoxEx.Show("Bạn có muốn xóa dòng này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes);
+            if (MessageBoxEx.Show("Bạn có muốn xóa dòng này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 IEnumerator ie = lvdiem.SelectedItems.GetEnumerator();
                 while (ie.MoveNext())
