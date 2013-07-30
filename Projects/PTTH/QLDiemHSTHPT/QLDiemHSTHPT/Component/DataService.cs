@@ -13,12 +13,6 @@ namespace QLDiemHSTHPT.Component
         public static String m_ConnectString = "";
         private SqlCommand m_Command;
         private SqlDataAdapter m_DataAdapter;
-
-        public DataService()
-        {
-
-
-        }
         public static void ConnectionString()
         {
             string conn = "";
