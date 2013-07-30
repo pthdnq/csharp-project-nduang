@@ -31,6 +31,7 @@ namespace QLDiemHSTHPT
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frptKetQuaHocKy_MonHoc));
+            this.bdKQHKMH = new System.Windows.Forms.BindingSource(this.components);
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.cmbLop = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -42,10 +43,13 @@ namespace QLDiemHSTHPT
             this.cmbNamHoc = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.reportViewerKQHKMH = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.bdKQHKMH = new System.Windows.Forms.BindingSource(this.components);
-            this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdKQHKMH)).BeginInit();
+            this.groupPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // bdKQHKMH
+            // 
+            this.bdKQHKMH.DataSource = typeof(QLDiemHSTHPT.Bussiness.KQHKMonHocInfo);
             // 
             // groupPanel1
             // 
@@ -101,6 +105,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbLop.DisplayMember = "Text";
             this.cmbLop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLop.FormattingEnabled = true;
             this.cmbLop.ItemHeight = 14;
@@ -124,6 +129,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbMonHoc.DisplayMember = "Text";
             this.cmbMonHoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMonHoc.FormattingEnabled = true;
             this.cmbMonHoc.ItemHeight = 14;
@@ -147,6 +153,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbHocKy.DisplayMember = "Text";
             this.cmbHocKy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbHocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHocKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbHocKy.FormattingEnabled = true;
             this.cmbHocKy.ItemHeight = 14;
@@ -169,6 +176,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbNamHoc.DisplayMember = "Text";
             this.cmbNamHoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbNamHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNamHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNamHoc.FormattingEnabled = true;
             this.cmbNamHoc.ItemHeight = 14;
@@ -200,10 +208,6 @@ namespace QLDiemHSTHPT
             this.reportViewerKQHKMH.Size = new System.Drawing.Size(746, 419);
             this.reportViewerKQHKMH.TabIndex = 2;
             // 
-            // bdKQHKMH
-            // 
-            this.bdKQHKMH.DataSource = typeof(QLDiemHSTHPT.Bussiness.KQHKMonHocInfo);
-            // 
             // frptKetQuaHocKy_MonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,8 +222,8 @@ namespace QLDiemHSTHPT
             this.Text = "Kết quả học kỳ môn học";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frptKetQuaHocKy_MonHoc_Load);
-            this.groupPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bdKQHKMH)).EndInit();
+            this.groupPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
