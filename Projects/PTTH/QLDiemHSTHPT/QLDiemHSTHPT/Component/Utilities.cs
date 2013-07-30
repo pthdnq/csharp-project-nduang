@@ -16,90 +16,6 @@ namespace QLDiemHSTHPT.Component
         public static NguoiDungInfo NguoiDung;
         public static String DatabaseName;
     }
-    //các hàm xử lí tập tin XML
-    public class XML
-    {
-        public static XmlDocument XMLReader(String filename)
-        {
-            XmlDocument xmlR = new XmlDocument();
-            try
-            {
-                xmlR.Load(filename);
-            }
-            catch
-            {
-                MessageBoxEx.Show("Không đọc được hoặc không tồn tại tập tin cấu hình " + filename, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            return xmlR;
-        }
-        public static void XMLWriter(String filename, String servname, String database, String costatus)
-        {
-            XmlTextWriter xmlW = new XmlTextWriter(filename, null);
-            xmlW.Formatting = Formatting.Indented;
-
-            xmlW.WriteStartDocument();
-            xmlW.WriteStartElement("config");
-
-            xmlW.WriteStartElement("costatus");
-            xmlW.WriteString(costatus);
-            xmlW.WriteEndElement();
-
-            xmlW.WriteStartElement("servname");
-            xmlW.WriteString(servname);
-            xmlW.WriteEndElement();
-
-            xmlW.WriteStartElement("username");
-            xmlW.WriteString("");
-            xmlW.WriteEndElement();
-
-            xmlW.WriteStartElement("password");
-            xmlW.WriteString("");
-            xmlW.WriteEndElement();
-
-            xmlW.WriteStartElement("database");
-            xmlW.WriteString(database);
-            xmlW.WriteEndElement();
-
-            xmlW.WriteEndElement();
-            xmlW.WriteEndDocument();
-
-            xmlW.Close();
-        }
-        public static void XMLWriter(String filename, String servname, String username, String password, String database, String costatus)
-        {
-            XmlTextWriter xmlW = new XmlTextWriter(filename, null);
-            xmlW.Formatting = Formatting.Indented;
-
-            xmlW.WriteStartDocument();
-            xmlW.WriteStartElement("config");
-
-            xmlW.WriteStartElement("costatus");
-            xmlW.WriteString(costatus);
-            xmlW.WriteEndElement();
-
-            xmlW.WriteStartElement("servname");
-            xmlW.WriteString(servname);
-            xmlW.WriteEndElement();
-
-            xmlW.WriteStartElement("username");
-            xmlW.WriteString(username);
-            xmlW.WriteEndElement();
-
-            xmlW.WriteStartElement("password");
-            xmlW.WriteString(password);
-            xmlW.WriteEndElement();
-
-            xmlW.WriteStartElement("database");
-            xmlW.WriteString(database);
-            xmlW.WriteEndElement();
-
-            xmlW.WriteEndElement();
-            xmlW.WriteEndDocument();
-
-            xmlW.Close();
-        }
-    }
     public class QuyDinh
     {
         
@@ -182,7 +98,7 @@ namespace QLDiemHSTHPT.Component
                 doTuoiMin = Convert.ToInt32(dS.Rows[0]["TuoiCanDuoi"]);
                 doTuoiMax = Convert.ToInt32(dS.Rows[0]["TuoiCanTren"]);
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
                 return false;
             }
