@@ -182,7 +182,7 @@ namespace QLDiemHSTHPT
                 m_HocSinhCtrl.HienThiDsHocSinhTheoLop(cmbnamhocmoi.SelectedValue.ToString(), cmbKhoilopMoi.SelectedValue.ToString(), cmbLopmoi.SelectedValue.ToString(), lvLopMoi);
         }
 
-        private void buttonX1_Click(object sender, EventArgs e)
+        private void btnTimKiemTen_Click(object sender, EventArgs e)
         {
             {
                 if (txtTimkiem.Text == "")
@@ -193,7 +193,7 @@ namespace QLDiemHSTHPT
 
         
 
-        private void buttonX2_Click(object sender, EventArgs e)
+        private void btnTimKiemMa_Click(object sender, EventArgs e)
         {
             {
                 if (txtTimkiem.Text == "")

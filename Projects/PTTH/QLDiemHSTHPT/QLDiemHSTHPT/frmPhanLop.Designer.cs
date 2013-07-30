@@ -320,8 +320,8 @@ namespace QLDiemHSTHPT
             // 
             this.groupPanelTTLopcu.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanelTTLopcu.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanelTTLopcu.Controls.Add(this.buttonX2);
-            this.groupPanelTTLopcu.Controls.Add(this.buttonX1);
+            this.groupPanelTTLopcu.Controls.Add(this.btnTimKiemMa);
+            this.groupPanelTTLopcu.Controls.Add(this.btnTimKiemTen);
             this.groupPanelTTLopcu.Controls.Add(this.txtTimkiem);
             this.groupPanelTTLopcu.Controls.Add(this.cmbLopcu);
             this.groupPanelTTLopcu.Controls.Add(this.lblLopcu);
@@ -356,29 +356,29 @@ namespace QLDiemHSTHPT
             this.groupPanelTTLopcu.TabIndex = 0;
             this.groupPanelTTLopcu.Text = "Thông tin lớp cũ";
             // 
-            // buttonX2
+            // btnTimKiemMa
             // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
-            this.buttonX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX2.Location = new System.Drawing.Point(220, 49);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(157, 23);
-            this.buttonX2.TabIndex = 8;
-            this.buttonX2.Text = "Tìm kiếm theo mã học sinh";
-            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
+            this.btnTimKiemMa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTimKiemMa.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
+            this.btnTimKiemMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemMa.Location = new System.Drawing.Point(220, 49);
+            this.btnTimKiemMa.Name = "btnTimKiemMa";
+            this.btnTimKiemMa.Size = new System.Drawing.Size(157, 23);
+            this.btnTimKiemMa.TabIndex = 8;
+            this.btnTimKiemMa.Text = "Tìm kiếm theo mã học sinh";
+            this.btnTimKiemMa.Click += new System.EventHandler(this.btnTimKiemMa_Click);
             // 
-            // buttonX1
+            // btnTimKiemTen
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
-            this.buttonX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX1.Location = new System.Drawing.Point(220, 20);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(157, 23);
-            this.buttonX1.TabIndex = 7;
-            this.buttonX1.Text = "Tìm kiếm theo tên  học sinh ";
-            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
+            this.btnTimKiemTen.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTimKiemTen.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
+            this.btnTimKiemTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemTen.Location = new System.Drawing.Point(220, 20);
+            this.btnTimKiemTen.Name = "btnTimKiemTen";
+            this.btnTimKiemTen.Size = new System.Drawing.Size(157, 23);
+            this.btnTimKiemTen.TabIndex = 7;
+            this.btnTimKiemTen.Text = "Tìm kiếm theo tên  học sinh ";
+            this.btnTimKiemTen.Click += new System.EventHandler(this.btnTimKiemTen_Click);
             // 
             // txtTimkiem
             // 
@@ -516,8 +516,8 @@ namespace QLDiemHSTHPT
         private System.Windows.Forms.ColumnHeader colMaHSCu;
         private System.Windows.Forms.ColumnHeader colHoTenCu;
         private DevComponents.DotNetBar.Controls.TextBoxX txtTimkiem;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
+        private DevComponents.DotNetBar.ButtonX btnTimKiemTen;
+        private DevComponents.DotNetBar.ButtonX btnTimKiemMa;
 
     }
 }
