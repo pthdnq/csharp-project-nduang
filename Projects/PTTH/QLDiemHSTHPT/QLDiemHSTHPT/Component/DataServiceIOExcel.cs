@@ -5,8 +5,9 @@ using System.Data;
 using System.Diagnostics;
 using System.ServiceProcess;
 using System.Text;
-using System.Data.Odbc;
+//using System.Data.Odbc;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 
 namespace QLDiemHSTHPT.Component
@@ -18,25 +19,25 @@ namespace QLDiemHSTHPT.Component
 
         }
 
-        private OdbcConnection m_Connection;
+        private OleDbConnection m_Connection;
 
-        public OdbcConnection Connection
+        public OleDbConnection Connection
         {
             get { return m_Connection; }
             set { m_Connection = value; }
         }
 
-        private OdbcDataAdapter m_DataAdapter;
+        private OleDbDataAdapter m_DataAdapter;
 
-        public OdbcDataAdapter DataAdapter
+        public OleDbDataAdapter DataAdapter
         {
             get { return m_DataAdapter; }
             set { m_DataAdapter = value; }
         }
 
-        private OdbcCommand m_Command;
+        private OleDbCommand m_Command;
 
-        public OdbcCommand Command
+        public OleDbCommand Command
         {
             get { return m_Command; }
             set { m_Command = value; }
@@ -46,9 +47,27 @@ namespace QLDiemHSTHPT.Component
         {
             if (m_Connection == null || m_Connection.State == ConnectionState.Closed)
             {
+                //Create connection string to Excel work book
+                string extension = "";
+                string excelConnectionString = "";
+                if(path.Contains(".xls"))
+                {
+                    extension = ".xls";
+                }
+                if (extension == ".xls")
+                {
+                    excelConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path +
+                                                          ";Extended Properties=Excel 8.0;Persist Security Info=False";
+                }
+                else
+                {
+                    excelConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path +
+                                                         ";Extended Properties=Excel 12.0;Persist Security Info=False";
+                }
+
                 try
                 {
-                    m_Connection = new OdbcConnection("Driver={Microsoft Excel Driver (*.xls)}; DBQ=" + path);
+                    m_Connection = new OleDbConnection(excelConnectionString);
                     m_Connection.Open();
                 }
                 catch (Exception)
@@ -58,14 +77,14 @@ namespace QLDiemHSTHPT.Component
             }
         }
 
-        public DataTable Load(OdbcCommand command, string path)
+        public DataTable Load(OleDbCommand command, string path)
         {
             this.Connect(path);
 
             m_Command = command;
             m_Command.Connection = m_Connection;
 
-            m_DataAdapter = new OdbcDataAdapter(m_Command);
+            m_DataAdapter = new OleDbDataAdapter(m_Command);
 
 
             DataSet dataSet = new DataSet();
