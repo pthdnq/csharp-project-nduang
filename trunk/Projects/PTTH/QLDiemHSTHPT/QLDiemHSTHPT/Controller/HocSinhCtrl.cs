@@ -138,6 +138,11 @@ namespace QLDiemHSTHPT.Controller
            return m_HocSinhData.LayDsHocSinhTheoNamHoc(namHoc);
        }
 
+       public DataTable HienThiDsHocSinhTheoLop(String lop)
+       {
+           return m_HocSinhData.LayDsHocSinhTheoLop(lop);
+       }
+
        public void XoaHSKhoiBangPhanLop(String lopCu)
        {
            m_HocSinhData.XoaHSKhoiBangPhanLop(lopCu);
