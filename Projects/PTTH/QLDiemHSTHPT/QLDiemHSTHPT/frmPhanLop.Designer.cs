@@ -215,6 +215,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbLopmoi.DisplayMember = "Text";
             this.cmbLopmoi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbLopmoi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLopmoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLopmoi.FormattingEnabled = true;
             this.cmbLopmoi.ItemHeight = 14;
@@ -237,6 +238,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbKhoilopMoi.DisplayMember = "Text";
             this.cmbKhoilopMoi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbKhoilopMoi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKhoilopMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbKhoilopMoi.FormattingEnabled = true;
             this.cmbKhoilopMoi.ItemHeight = 14;
@@ -259,6 +261,7 @@ namespace QLDiemHSTHPT
             // 
             this.cmbnamhocmoi.DisplayMember = "Text";
             this.cmbnamhocmoi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbnamhocmoi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbnamhocmoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbnamhocmoi.FormattingEnabled = true;
             this.cmbnamhocmoi.ItemHeight = 14;
@@ -429,6 +432,7 @@ namespace QLDiemHSTHPT
             this.cmbKhoilopcu.Size = new System.Drawing.Size(121, 20);
             this.cmbKhoilopcu.TabIndex = 3;
             this.cmbKhoilopcu.SelectedIndexChanged += new System.EventHandler(this.cmbKhoilopcu_SelectedIndexChanged);
+            this.cmbKhoilopcu.Click += new System.EventHandler(this.cmbKhoilopcu_Click);
             // 
             // lblKhoiLopcu
             // 
@@ -452,6 +456,7 @@ namespace QLDiemHSTHPT
             this.cmbNamhoccu.Size = new System.Drawing.Size(121, 20);
             this.cmbNamhoccu.TabIndex = 1;
             this.cmbNamhoccu.SelectedIndexChanged += new System.EventHandler(this.cmbNamhoccu_SelectedIndexChanged);
+            this.cmbNamhoccu.Click += new System.EventHandler(this.cmbNamhoccu_Click);
             // 
             // lblNamhoccu
             // 
