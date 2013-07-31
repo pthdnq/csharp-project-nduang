@@ -408,7 +408,7 @@ namespace QLDiemHSTHPT
             this.cmbLopcu.Name = "cmbLopcu";
             this.cmbLopcu.Size = new System.Drawing.Size(121, 20);
             this.cmbLopcu.TabIndex = 5;
-            this.cmbLopcu.SelectedIndexChanged += new System.EventHandler(this.cmbLopcu_SelectedIndexChanged);
+            this.cmbLopcu.Click += new System.EventHandler(this.cmbLopcu_Click);
             // 
             // lblLopcu
             // 
