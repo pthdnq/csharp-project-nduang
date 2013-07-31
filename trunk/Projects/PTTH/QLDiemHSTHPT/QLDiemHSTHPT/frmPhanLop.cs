@@ -59,24 +59,28 @@ namespace QLDiemHSTHPT
                 }
 
                 DataTable dT = new DataTable();
-                if (cmbnamhocmoi.SelectedValue != null && cmbKhoilopMoi.SelectedValue != null)
+                if (cmbnamhocmoi.SelectedValue != null && cmbKhoilopMoi.SelectedValue != null && cmbLopmoi.SelectedValue != null)
                 {
                     dT = m_HocSinhCtrl.HienThiDsHocSinhTheoLop(cmbLopmoi.SelectedValue.ToString());
+                   
                 }
 
                 foreach (DataRow row in dT.Rows)
                 {
+                    System.Console.Write("\n gia tri olditem la: " + olditem.SubItems[0]);
+                    System.Console.Write("\n gia tri row la: " + row["MaHocSinh"]);
                     if (olditem.SubItems[0].Text.ToString() == row["MaHocSinh"].ToString())
                     {
                         MessageBoxEx.Show("Học sinh " + row["HoTen"].ToString() + " hiện đang học trong lớp " + row["TenLop"].ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         state = true;
                         goto Cont;
+
                     }
+                    
                 }
 
                 newitem.SubItems.Add(olditem.SubItems[1].Text);
                 newitem.Tag = olditem.Tag;
-
                 lvLopMoi.Items.Add(newitem);
                 lvLopMoi.Items[lvLopMoi.Items.IndexOf(newitem)].Text = olditem.SubItems[0].Text;
                 lvLopCu.Items.Remove(olditem);
@@ -143,6 +147,16 @@ namespace QLDiemHSTHPT
         {
             cmbKhoilopMoi.DataBindings.Clear();
             cmbLopmoi.DataBindings.Clear();
+            if (cmbLopmoi.SelectedValue != null
+                && cmbnamhocmoi.SelectedValue != null
+                && cmbKhoilopMoi.SelectedValue != null)
+            {
+                m_HocSinhCtrl.HienThiDsHocSinhTheoLop(
+                    cmbnamhocmoi.SelectedValue.ToString(),
+                    cmbKhoilopMoi.SelectedValue.ToString(),
+                    cmbLopmoi.SelectedValue.ToString(),
+                    lvLopMoi);
+            }
         }
 
         private void cmbKhoilopcu_SelectedIndexChanged(object sender, EventArgs e)
@@ -165,18 +179,31 @@ namespace QLDiemHSTHPT
                 //cmbLopmoi.DataBindings.Clear();
                 //lvLopMoi.Items.Clear();
             }
+            if (cmbLopmoi.SelectedValue != null
+                    && cmbnamhocmoi.SelectedValue != null
+                    && cmbKhoilopMoi.SelectedValue != null)
+            {
+                m_HocSinhCtrl.HienThiDsHocSinhTheoLop(
+                    cmbnamhocmoi.SelectedValue.ToString(),
+                    cmbKhoilopMoi.SelectedValue.ToString(),
+                    cmbLopmoi.SelectedValue.ToString(),
+                    lvLopMoi);
+            }
         }
 
-        private void cmbLopcu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-        }
 
         private void cmbLopmoi_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbLopmoi.SelectedValue != null && cmbnamhocmoi.SelectedValue != null && cmbKhoilopMoi.SelectedValue != null)
-                m_HocSinhCtrl.HienThiDsHocSinhTheoLop(cmbnamhocmoi.SelectedValue.ToString(), cmbKhoilopMoi.SelectedValue.ToString(), cmbLopmoi.SelectedValue.ToString(), lvLopMoi);
+            if (cmbLopmoi.SelectedValue != null
+                && cmbnamhocmoi.SelectedValue != null
+                && cmbKhoilopMoi.SelectedValue != null)
+            {
+                m_HocSinhCtrl.HienThiDsHocSinhTheoLop(
+                    cmbnamhocmoi.SelectedValue.ToString(), 
+                    cmbKhoilopMoi.SelectedValue.ToString(), 
+                    cmbLopmoi.SelectedValue.ToString(), 
+                    lvLopMoi);
+            }
         }
 
         private void btnTimKiemTen_Click(object sender, EventArgs e)
@@ -188,7 +215,6 @@ namespace QLDiemHSTHPT
             HocSinhCtrl.TimTheoTen(lvLopCu, txtTimkiem.Text);
             if (cmbLopcu.SelectedValue != null && cmbNamhoccu.SelectedValue != null && cmbKhoilopcu.SelectedValue != null)
             {
-
                 m_HocSinhCtrl.HienThiDsHocSinhTheoLop(cmbNamhoccu.SelectedValue.ToString(), cmbKhoilopcu.SelectedValue.ToString(), cmbLopcu.SelectedValue.ToString(), lvLopCu);
             }
 
@@ -216,6 +242,20 @@ namespace QLDiemHSTHPT
             if (cmbNamhoccu.SelectedValue != null)
             {
                 m_KhoiLopCuCtrl.HienThiComboBox(cmbKhoilopcu);
+            }
+        }
+
+        private void cmbLopcu_Click(object sender, EventArgs e)
+        {
+            if (cmbLopmoi.SelectedValue != null
+                    && cmbnamhocmoi.SelectedValue != null
+                    && cmbKhoilopMoi.SelectedValue != null)
+            {
+                m_HocSinhCtrl.HienThiDsHocSinhTheoLop(
+                    cmbnamhocmoi.SelectedValue.ToString(),
+                    cmbKhoilopMoi.SelectedValue.ToString(),
+                    cmbLopmoi.SelectedValue.ToString(),
+                    lvLopMoi);
             }
         }
 

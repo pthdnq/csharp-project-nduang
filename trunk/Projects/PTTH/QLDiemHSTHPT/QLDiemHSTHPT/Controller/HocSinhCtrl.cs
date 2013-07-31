@@ -120,7 +120,7 @@ namespace QLDiemHSTHPT.Controller
        public void HienThiDsHocSinhTheoLop(String namHoc, String khoiLop, String lop, ListViewEx lV)
        {
            DataTable m_DT = m_HocSinhData.LayDsHocSinhTheoLop(namHoc, khoiLop, lop);
-
+           int i = m_DT.Rows.Count;
            lV.Items.Clear();
            foreach (DataRow Row in m_DT.Rows)
            {
