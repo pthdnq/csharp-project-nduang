@@ -4,7 +4,7 @@ using System.Text;
 using QLDiemHSTHPT.Component;
 using System.Data;
 using System.Data.SqlClient;
-using System.Data.Odbc;
+using System.Data.OleDb;
 
 namespace QLDiemHSTHPT.DataLayer
 {
@@ -84,7 +84,7 @@ namespace QLDiemHSTHPT.DataLayer
 
        public DataTable LayDSHocSinhExcel(string path)
        {
-           OdbcCommand cmd = new OdbcCommand("select * from [Sheet1$]");
+           OleDbCommand cmd = new OleDbCommand("select * from [Sheet1$]");
            return dsIOExcel.Load(cmd, path);
        }
        

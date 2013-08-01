@@ -91,12 +91,15 @@ namespace QLDiemHSTHPT
 
         private void btnLuuDS_Click(object sender, EventArgs e)
         {
+            bool gioiTinh = false;
+            if (checkBoxX2.Checked == true)
+                gioiTinh = true;
             if (txtTenGV.Text != "" &&
                txtDiachi.Text != "" &&
                txtDThoai.Text != "" &&
                cbmChuyenmon.SelectedValue != null)
             {
-                m_GiaoVienCtrl.LuuGiaoVien(txtMaGV.Text, txtTenGV.Text, txtDiachi.Text, txtDThoai.Text, cbmChuyenmon.SelectedValue.ToString());
+                m_GiaoVienCtrl.LuuGiaoVien(txtMaGV.Text, txtTenGV.Text, txtDiachi.Text, txtDThoai.Text, cbmChuyenmon.SelectedValue.ToString(),gioiTinh);
                 m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien, txtMaGV, txtTenGV, txtDiachi, txtDThoai, cbmChuyenmon);
                 bdgGiaoVien.BindingSource.MoveLast();
             }

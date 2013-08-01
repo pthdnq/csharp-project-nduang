@@ -5,7 +5,7 @@ using DevComponents.DotNetBar.Controls;
 using System.Windows.Forms;
 using QLDiemHSTHPT.Bussiness;
 using QLDiemHSTHPT.DataLayer;
-using System.Data.Odbc;
+using System.Data.OleDb;
 
 using System.Data;
 
@@ -78,9 +78,9 @@ namespace QLDiemHSTHPT.Controller
            return m_GiaoVienData.LuuGiaoVien();
        }
 
-       public void LuuGiaoVien(String maGiaoVien, String tenGiaoVien, String diaChi, String dienThoai, String chuyenMon)
+       public void LuuGiaoVien(String maGiaoVien, String tenGiaoVien, String diaChi, String dienThoai, String chuyenMon,bool gioitinh)
        {
-           m_GiaoVienData.LuuGiaoVien(maGiaoVien, tenGiaoVien, diaChi, dienThoai, chuyenMon);
+           m_GiaoVienData.LuuGiaoVien(maGiaoVien, tenGiaoVien, diaChi, dienThoai, chuyenMon ,gioitinh);
        }
 
        public static IList<GiaoVienInfo> LayDsGiaoVien()
