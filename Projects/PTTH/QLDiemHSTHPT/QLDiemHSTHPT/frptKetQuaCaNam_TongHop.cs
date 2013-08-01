@@ -51,7 +51,8 @@ namespace QLDiemHSTHPT
             param.Add(new ReportParameter("NamHoc", cmbNamHoc.Text));
             param.Add(new ReportParameter("Lop", cmbLop.Text));
             this.reportViewerKQCNLop.LocalReport.SetParameters(param);
-           
+            if (cmbLop.SelectedValue == null)
+                return;
             IList<KQCNTongHopInfo> ketqua = KQCNTongHopCtrl.LayDsKQCaNamTongHop(cmbLop.SelectedValue.ToString(),
                                                                                       cmbNamHoc.SelectedValue.ToString());
             this.bdKQCNLop.DataSource = ketqua;
