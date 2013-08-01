@@ -73,7 +73,7 @@ namespace QLDiemHSTHPT.Component
                 m_SqlTran = m_Connection.BeginTransaction();
 
                 m_Command.Connection = m_Connection;
-                //m_Command.Transaction = m_SqlTran;
+                m_Command.Transaction = m_SqlTran;
 
                 m_DataAdapter = new SqlDataAdapter();
                 m_DataAdapter.SelectCommand = m_Command;
@@ -85,32 +85,32 @@ namespace QLDiemHSTHPT.Component
             }
             catch
             {
-                //if (m_SqlTran != null)
-                //    m_SqlTran.Rollback();
-                //throw;
+                if (m_SqlTran != null)
+                    m_SqlTran.Rollback();
+                throw;
             }
             return result;
         }
         public int ExecuteNoneQuery(SqlCommand m_Sql)
         {
             int result = 0;
-           // SqlTransaction m_SqlTran = null;
+            SqlTransaction m_SqlTran = null;
             try
             {
-               // m_SqlTran = m_Connection.BeginTransaction();
+                m_SqlTran = m_Connection.BeginTransaction();
 
                 m_Sql.Connection = m_Connection;
-                //m_Sql.Transaction = m_SqlTran;
+                m_Sql.Transaction = m_SqlTran;
                 result = m_Sql.ExecuteNonQuery();
 
                 this.AcceptChanges();
-               // m_SqlTran.Commit();
+                m_SqlTran.Commit();
             }
             catch
             {
-                //if (m_SqlTran != null)
-               //     m_SqlTran.Rollback();
-               // throw;
+                if (m_SqlTran != null)
+                    m_SqlTran.Rollback();
+                throw;
             }
             return result;
         }
@@ -121,13 +121,13 @@ namespace QLDiemHSTHPT.Component
             SqlTransaction m_SqlTran = null;
             try
             {
-               // m_SqlTran = m_Connection.BeginTransaction();
+                m_SqlTran = m_Connection.BeginTransaction();
                 m_Sql.Connection = m_Connection;
-               // m_Sql.Transaction = m_SqlTran;
+                m_Sql.Transaction = m_SqlTran;
                 result = m_Sql.ExecuteScalar();
 
                 this.AcceptChanges();
-              //  m_SqlTran.Commit();
+                m_SqlTran.Commit();
                 if (result == DBNull.Value)
                 {
                     result = null;
@@ -135,9 +135,9 @@ namespace QLDiemHSTHPT.Component
             }
             catch
             {
-               // if (m_SqlTran != null)
-                //    m_SqlTran.Rollback();
-                //throw;
+                if (m_SqlTran != null)
+                    m_SqlTran.Rollback();
+                throw;
             }
             return result;
         }

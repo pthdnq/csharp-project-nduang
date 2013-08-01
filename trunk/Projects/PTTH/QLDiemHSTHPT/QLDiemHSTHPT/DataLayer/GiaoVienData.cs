@@ -4,7 +4,7 @@ using System.Text;
 using QLDiemHSTHPT.Component;
 using System.Data;
 using System.Data.SqlClient;
-using System.Data.Odbc;
+using System.Data.OleDb;
 
 namespace QLDiemHSTHPT.DataLayer
 {
@@ -35,14 +35,15 @@ namespace QLDiemHSTHPT.DataLayer
            return m_GiaoVienData.ExecuteNoneQuery() > 0;
        }
 
-       public void LuuGiaoVien(String maGiaoVien, String tenGiaoVien, String diaChi, String dienThoai, String chuyenMon)
+       public void LuuGiaoVien(String maGiaoVien, String tenGiaoVien, String diaChi, String dienThoai, String chuyenMon,bool gioiTinh)
        {
-           SqlCommand cmd = new SqlCommand("INSERT INTO GIAOVIEN VALUES(@maGiaoVien, @tenGiaoVien, @diaChi, @dienThoai, @chuyenMon)");
+           SqlCommand cmd = new SqlCommand("INSERT INTO GIAOVIEN VALUES(@maGiaoVien, @tenGiaoVien, @diaChi, @dienThoai, @chuyenMon, @gioitinh)");
            cmd.Parameters.Add("maGiaoVien", SqlDbType.VarChar).Value = maGiaoVien;
            cmd.Parameters.Add("tenGiaoVien", SqlDbType.NVarChar).Value = tenGiaoVien;
            cmd.Parameters.Add("diaChi", SqlDbType.NVarChar).Value = diaChi;
            cmd.Parameters.Add("dienThoai", SqlDbType.VarChar).Value = dienThoai;
            cmd.Parameters.Add("chuyenMon", SqlDbType.VarChar).Value = chuyenMon;
+           cmd.Parameters.Add("gioiTinh", SqlDbType.Bit).Value = gioiTinh;
            m_GiaoVienData.Load(cmd);
        }
 
@@ -76,7 +77,7 @@ namespace QLDiemHSTHPT.DataLayer
 
        public DataTable LayDSGiaoVienExcel(string path)
        {
-           OdbcCommand cmd = new OdbcCommand("select * from [Sheet1$]");
+           OleDbCommand cmd = new OleDbCommand("select * from [Sheet1$]");
            return dsIOExcel.Load(cmd, path);
        }
 
