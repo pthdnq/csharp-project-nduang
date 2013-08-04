@@ -20,10 +20,19 @@ namespace QLDiemHSTHPT.DataLayer
        //hien thi form diem 
        public DataTable LayDsMonHoc(String namHoc, String lop)
        {
-           SqlCommand cmd = new SqlCommand("SELECT MH.MaMonHoc, MH.TenMonHoc, MH.HeSo FROM MONHOC MH, PHANCONG PC WHERE MH.MaMonHoc = PC.MaMonHoc AND PC.MaNamHoc = @namHoc AND PC.MaLop = @lop");
-           cmd.Parameters.Add("namHoc", SqlDbType.VarChar).Value = namHoc;
-           cmd.Parameters.Add("lop", SqlDbType.VarChar).Value = lop;
+           //SqlCommand cmd = new SqlCommand("SELECT MH.MaMonHoc, MH.TenMonHoc, MH.HeSo FROM MONHOC MH, PHANCONG PC WHERE MH.MaMonHoc = PC.MaMonHoc AND PC.MaNamHoc = @namHoc AND PC.MaLop = @lop ");
+           //cmd.Parameters.Add("namHoc", SqlDbType.VarChar).Value = namHoc;
+           //cmd.Parameters.Add("lop", SqlDbType.VarChar).Value = lop;
 
+           SqlCommand cmd = new SqlCommand("SELECT MH.MaMonHoc, MH.TenMonHoc, MH.HeSo FROM MONHOC MH");
+
+           //SqlCommand cmd = new SqlCommand("SELECT PL.MaHocSinh, HS.HoTen, L.TenLop " +
+           //                               "FROM HOCSINH HS INNER JOIN PHANLOP PL ON HS.MaHocSinh = PL.MaHocSinh " +
+           //                               "INNER JOIN LOP L ON L.MaLop = PL.MaLop " +
+           //                               "WHERE PL.MaLop = @lop AND PC.MaNamHoc = @namHoc");
+           //cmd.Parameters.Add("namHoc", SqlDbType.VarChar).Value = namHoc;
+           //cmd.Parameters.Add("lop", SqlDbType.VarChar).Value = lop;
+           
            m_MonHocData.Load(cmd);
            return m_MonHocData;
        }

@@ -34,6 +34,19 @@ namespace QLDiemHSTHPT.DataLayer
            return m_HocSinhData;
        }
 
+       public DataTable LayDsHocSinhTheoMa(String namHoc, String lop,String maHS)
+       {
+           SqlCommand cmd = new SqlCommand("SELECT PL.MaHocSinh, HS.HoTen " +
+                                           "FROM HOCSINH HS INNER JOIN PHANLOP PL ON HS.MaHocSinh = PL.MaHocSinh " +
+                                           "INNER JOIN LOP L ON L.MaLop = PL.MaLop " +
+                                           "WHERE PL.MaLop = @lop AND PL.MaNamHoc = @namHoc AND HS.MaHocSinh=@maHS");
+           cmd.Parameters.Add("lop", SqlDbType.VarChar).Value = lop;
+           cmd.Parameters.Add("namHoc", SqlDbType.VarChar).Value = namHoc;
+           cmd.Parameters.Add("maHS", SqlDbType.VarChar).Value = maHS;
+           m_HocSinhData.Load(cmd);
+           return m_HocSinhData;
+       }
+
        //nhap diem
        public DataTable LayDsHocSinhTheoLop(String namHoc, String khoiLop, String lop)
        {

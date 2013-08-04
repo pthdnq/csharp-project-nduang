@@ -25,6 +25,7 @@ namespace QLDiemHSTHPT
         KQHKTongHopCtrl  m_KQHocKyTongHopCtrl    = new KQHKTongHopCtrl();
         KQCNMonHocCtrl   m_KQCaNamMonHocCtrl     = new KQCNMonHocCtrl();
         KQCNTongHopCtrl m_KQCaNamTongHopCtrl    = new KQCNTongHopCtrl();
+        //MonHocCtrl m_MonHocCtrl = new MonHocCtrl();
 
         DiemData m_DiemData = new DiemData();
         QuyDinh quyDinh = new QuyDinh();
@@ -52,8 +53,14 @@ namespace QLDiemHSTHPT
             if (cmbNanhocCN.SelectedValue != null)
                 m_LopCtrl.HienThiComboBox(cmbNanhocCN.SelectedValue.ToString(), cmbLopCN);
 
-            if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null)
-                m_MonHocCtrl.HienThiComboBox(cmbNanhocCN.SelectedValue.ToString(), cmbLopCN.SelectedValue.ToString(), cmbMonhocCN);
+            //m_MonHocCtrl.HienThiDataGridViewComboBoxColumn(MaMonHoc);
+
+            //if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null)
+            //    m_MonHocCtrl.HienThiComboBox(cmbNanhocCN.SelectedValue.ToString(), cmbLopCN.SelectedValue.ToString(), cmbMonhocCN);
+
+            //if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null)
+                m_MonHocCtrl.HienThiComboBox("", "", cmbMonhocCN);
+            cmbMonhocCN.DataBindings.Clear();
         }
 
         //kiem tra diem truoc khi luu
@@ -623,14 +630,28 @@ namespace QLDiemHSTHPT
 
         private void cmbLopCN_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null)
-                m_MonHocCtrl.HienThiComboBox(cmbNanhocCN.SelectedValue.ToString(), cmbLopCN.SelectedValue.ToString(), cmbMonhocCN);
+            //if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null)
+                //m_MonHocCtrl.HienThiComboBox(cmbNanhocCN.SelectedValue.ToString(), cmbLopCN.SelectedValue.ToString(), cmbMonhocCN);
             cmbMonhocCN.DataBindings.Clear();
         }
 
         private void dgvNhapdiemchung_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void cmbMonhocCN_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null)
+            //    m_MonHocCtrl.HienThiComboBox("", "", cmbMonhocCN);
+            //cmbMonhocCN.DataBindings.Clear();
+        }
+
+        private void cmbMonhocCN_Click(object sender, EventArgs e)
+        {
+            if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null)
+                m_MonHocCtrl.HienThiComboBox(cmbNanhocCN.SelectedValue.ToString(), cmbLopCN.SelectedValue.ToString(), cmbMonhocCN);
+            cmbMonhocCN.DataBindings.Clear();
         }
 
 
