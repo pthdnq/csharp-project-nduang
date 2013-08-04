@@ -81,24 +81,6 @@
   <Width>13.25in</Width>
   <Body>
     <ReportItems>
-      <Textbox Name="textbox12">
-        <rd:DefaultName>textbox12</rd:DefaultName>
-        <Top>0.375in</Top>
-        <Width>1.375in</Width>
-        <Style>
-          <FontWeight>700</FontWeight>
-          <TextAlign>Center</TextAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>6</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Left>0.625in</Left>
-        <Height>0.25in</Height>
-        <Value>Tân An - Tân Châu </Value>
-      </Textbox>
       <Textbox Name="textbox9">
         <rd:DefaultName>textbox9</rd:DefaultName>
         <Top>0.125in</Top>
@@ -115,7 +97,7 @@
         <CanGrow>true</CanGrow>
         <Left>0.125in</Left>
         <Height>0.25in</Height>
-        <Value>Trường THPT Nguyễn Quang Diêu</Value>
+        <Value>Trường THPT Thiệu Yên</Value>
       </Textbox>
       <Textbox Name="textbox8">
         <rd:DefaultName>textbox8</rd:DefaultName>
@@ -131,7 +113,7 @@
         </Style>
         <ZIndex>4</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>0.875in</Left>
+        <Left>0.5in</Left>
         <Height>0.25in</Height>
         <Value>="Lớp : " &amp; Parameters!Lop.Value</Value>
       </Textbox>
@@ -149,7 +131,7 @@
         </Style>
         <ZIndex>3</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>0.875in</Left>
+        <Left>0.5in</Left>
         <Height>0.25in</Height>
         <Value>="Năm Học : " &amp; Parameters!NamHoc.Value</Value>
       </Textbox>

@@ -274,6 +274,7 @@ namespace QLDiemHSTHPT.Controller
            {
                ListViewItem item = new ListViewItem(row["MAHOCSINH"].ToString());
                item.SubItems.Add(row["HOTEN"].ToString());
+               //item.SubItems.Add(row["LOP"].ToString());
                lvw.Items.Add(item);
            }
 

@@ -317,7 +317,7 @@ namespace QLDiemHSTHPT
             // colHoTenCu
             // 
             this.colHoTenCu.Text = "Họ và tên";
-            this.colHoTenCu.Width = 267;
+            this.colHoTenCu.Width = 269;
             // 
             // groupPanelTTLopcu
             // 
