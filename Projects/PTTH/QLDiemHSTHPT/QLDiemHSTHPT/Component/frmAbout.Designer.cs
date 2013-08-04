@@ -38,6 +38,7 @@ namespace QLDiemHSTHPT
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +76,7 @@ namespace QLDiemHSTHPT
             this.labelX2.BackColor = System.Drawing.Color.Transparent;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX2.ForeColor = System.Drawing.Color.Blue;
-            this.labelX2.Location = new System.Drawing.Point(16, 75);
+            this.labelX2.Location = new System.Drawing.Point(16, 89);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(95, 23);
             this.labelX2.TabIndex = 2;
@@ -86,7 +87,7 @@ namespace QLDiemHSTHPT
             this.labelX3.BackColor = System.Drawing.Color.Transparent;
             this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelX3.Location = new System.Drawing.Point(35, 104);
+            this.labelX3.Location = new System.Drawing.Point(117, 106);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(179, 23);
             this.labelX3.TabIndex = 3;
@@ -148,6 +149,7 @@ namespace QLDiemHSTHPT
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.labelX4);
             this.groupPanel1.Controls.Add(this.buttonX1);
             this.groupPanel1.Controls.Add(this.panelEx2);
             this.groupPanel1.Controls.Add(this.linkLabel1);
@@ -195,6 +197,17 @@ namespace QLDiemHSTHPT
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // labelX4
+            // 
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
+            this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelX4.Location = new System.Drawing.Point(117, 65);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(179, 23);
+            this.labelX4.TabIndex = 9;
+            this.labelX4.Text = "Trần Đình Quế ";
+            // 
             // frmAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,5 +242,6 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.PanelEx panelEx2;
         private DevComponents.DotNetBar.ButtonX buttonX1;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
+        private DevComponents.DotNetBar.LabelX labelX4;
     }
 }

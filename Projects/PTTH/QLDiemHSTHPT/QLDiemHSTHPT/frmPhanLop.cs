@@ -165,9 +165,10 @@ namespace QLDiemHSTHPT
             {
                 m_LopCuCtrl.HienThiComboBox(cmbKhoilopcu.SelectedValue.ToString(), cmbNamhoccu.SelectedValue.ToString(), cmbLopcu);
                 m_KhoiLopMoiCtrl.HienThiComboBox(cmbKhoilopcu.SelectedValue.ToString(), cmbKhoilopMoi);
-                //cmbLopcu.DataBindings.Clear();
-                //lvLopCu.Items.Clear();
+                cmbLopcu.DataBindings.Clear();
+                lvLopCu.Items.Clear();
             }
+
         }
 
         private void cmbKhoilopMoi_SelectedIndexChanged(object sender, EventArgs e)

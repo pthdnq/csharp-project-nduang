@@ -136,25 +136,6 @@
   <Width>7.75in</Width>
   <Body>
     <ReportItems>
-      <Textbox Name="textbox12">
-        <rd:DefaultName>textbox12</rd:DefaultName>
-        <Top>0.375in</Top>
-        <Width>1.375in</Width>
-        <Style>
-          <Color>#c000c0</Color>
-          <FontWeight>700</FontWeight>
-          <TextAlign>Center</TextAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>7</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Left>0.5in</Left>
-        <Height>0.25in</Height>
-        <Value>Tân An - Tân Châu </Value>
-      </Textbox>
       <Textbox Name="textbox13">
         <Top>0.125in</Top>
         <Width>2.75in</Width>
@@ -170,7 +151,7 @@
         <ZIndex>6</ZIndex>
         <CanGrow>true</CanGrow>
         <Height>0.25in</Height>
-        <Value>Trường THPT Nguyễn Quang Diêu</Value>
+        <Value>Trường THPT Thiệu Yên</Value>
       </Textbox>
       <Textbox Name="textbox9">
         <rd:DefaultName>textbox9</rd:DefaultName>
@@ -185,7 +166,7 @@
         </Style>
         <ZIndex>5</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>1.75in</Left>
+        <Left>2.125in</Left>
         <Height>0.25in</Height>
         <Value>="Năm Học : " &amp; Parameters!NamHoc.Value</Value>
       </Textbox>
@@ -202,14 +183,14 @@
         </Style>
         <ZIndex>4</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>3.625in</Left>
+        <Left>4.125in</Left>
         <Height>0.25in</Height>
         <Value>="Học Kỳ : " &amp; Parameters!HocKy.Value</Value>
       </Textbox>
       <Textbox Name="textbox10">
         <rd:DefaultName>textbox10</rd:DefaultName>
         <Top>0.75in</Top>
-        <Width>1.375in</Width>
+        <Width>1.5in</Width>
         <Style>
           <FontWeight>700</FontWeight>
           <PaddingLeft>2pt</PaddingLeft>
@@ -219,7 +200,7 @@
         </Style>
         <ZIndex>3</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>5.5in</Left>
+        <Left>6.125in</Left>
         <Height>0.25in</Height>
         <Value>="Lớp : " &amp; Parameters!Lop.Value</Value>
       </Textbox>
@@ -237,7 +218,7 @@
         </Style>
         <ZIndex>2</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>5.25in</Left>
+        <Left>5.75in</Left>
         <Height>0.25in</Height>
         <Value>="Ngày Lập : " &amp; Parameters!NgayLap.Value</Value>
       </Textbox>
@@ -325,7 +306,7 @@
                       </Style>
                       <ZIndex>1</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value />
+                      <Value>=Fields!HanhKiem.Value.TenHanhKiem</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
