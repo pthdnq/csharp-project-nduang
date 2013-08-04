@@ -50,7 +50,7 @@ namespace QLDiemHSTHPT
             param.Add(new ReportParameter("NamHoc", cmbNamHoc.Text));
             param.Add(new ReportParameter("Lop", cmbLop.Text));
             this.reportViewerKQHKMH.LocalReport.SetParameters(param);
-            if (cmbLop.SelectedValue == null)
+            if (cmbLop.SelectedValue == null || cmbMonHoc.SelectedValue ==null)
                 return;
             IList<KQHKMonHocInfo> ketqua = KQHKMonHocCtrl.LayDsKQHocKyMonHoc(cmbLop.SelectedValue.ToString(),
                                                                             cmbMonHoc.SelectedValue.ToString(),
