@@ -75,5 +75,11 @@ namespace QLDiemHSTHPT
         {
 
         }
+
+        private void cmbNamHoc_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cmbNamHoc.SelectedValue != null)
+                m_LopCtrl.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop);
+        }
         }
     }

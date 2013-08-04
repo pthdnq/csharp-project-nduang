@@ -109,7 +109,7 @@ namespace QLDiemHSTHPT
             this.cmbLop.Name = "cmbLop";
             this.cmbLop.Size = new System.Drawing.Size(96, 20);
             this.cmbLop.TabIndex = 7;
-            this.cmbLop.SelectedIndexChanged += new System.EventHandler(this.cmbLop_SelectedIndexChanged);
+            //this.cmbLop.SelectedIndexChanged += new System.EventHandler(this.cmbLop_SelectedIndexChanged);
             // 
             // labelX4
             // 

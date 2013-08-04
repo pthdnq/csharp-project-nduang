@@ -149,6 +149,7 @@ namespace QLDiemHSTHPT
             this.cmbNamHoc.Name = "cmbNamHoc";
             this.cmbNamHoc.Size = new System.Drawing.Size(110, 20);
             this.cmbNamHoc.TabIndex = 1;
+            this.cmbNamHoc.SelectedIndexChanged += new System.EventHandler(this.cmbNamHoc_SelectedIndexChanged_1);
             // 
             // labelX0
             // 
@@ -174,7 +175,7 @@ namespace QLDiemHSTHPT
             this.reportViewerKQHKLop.Size = new System.Drawing.Size(680, 371);
             this.reportViewerKQHKLop.TabIndex = 6;
             // 
-            // frptKetQuaHocKy_Lop
+            // frptKetQuaHocKy_TongHop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -184,7 +185,7 @@ namespace QLDiemHSTHPT
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frptKetQuaHocKy_Lop";
+            this.Name = "frptKetQuaHocKy_TongHop";
             this.Text = "Kết quả học kỳ tổng hợp";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frptKetQuaHocKy_Lop_Load);

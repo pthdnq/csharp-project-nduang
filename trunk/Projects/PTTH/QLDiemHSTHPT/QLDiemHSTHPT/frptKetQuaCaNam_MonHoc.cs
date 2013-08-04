@@ -37,15 +37,18 @@ namespace QLDiemHSTHPT
         {
             if (cmbNamHoc.SelectedValue != null)
                 m_LopCtrl.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop);
+            if (cmbNamHoc.SelectedValue != null && cmbLop.SelectedValue != null)
+                m_MonHocCtrl.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop.SelectedValue.ToString(), cmbMonHoc);
+                cmbMonHoc.DataBindings.Clear();
             cmbLop.DataBindings.Clear();
         }
 
-        private void cmbLop_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbNamHoc.SelectedValue != null && cmbLop.SelectedValue != null)
-                m_MonHocCtrl.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop.SelectedValue.ToString(), cmbMonHoc);
-            cmbMonHoc.DataBindings.Clear();
-        }
+        //private void cmbLop_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (cmbNamHoc.SelectedValue != null && cmbLop.SelectedValue != null)
+        //        m_MonHocCtrl.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop.SelectedValue.ToString(), cmbMonHoc);
+        //    cmbMonHoc.DataBindings.Clear();
+        //}
 
         private void buttonX1_Click(object sender, EventArgs e)
         {
