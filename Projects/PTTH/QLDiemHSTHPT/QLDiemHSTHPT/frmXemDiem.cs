@@ -28,15 +28,15 @@ namespace QLDiemHSTHPT
 
         private void frmXemDiem_Load(object sender, EventArgs e)
         {
-            m_NamHocCtrl.HienThiComboBox(cbmnamhoc);
-            m_HocKyCtrl.HienThiComboBox(cmbHocky);
-            if (cbmnamhoc.SelectedValue != null)
-                m_LopCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop);
-            if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null)
-            {
-                m_MonHocCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMonhoc);
-                m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbHocsinh);
-            }
+            //m_NamHocCtrl.HienThiComboBox(cbmnamhoc);
+            //m_HocKyCtrl.HienThiComboBox(cmbHocky);
+            //if (cbmnamhoc.SelectedValue != null)
+            //    m_LopCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop);
+            //if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null)
+            //{
+            //    m_MonHocCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMonhoc);
+            //    m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbHocsinh);
+            //}
         }
 
         private void nvgPanelGiaoVien_Load(object sender, EventArgs e)
@@ -73,6 +73,18 @@ namespace QLDiemHSTHPT
                                              cbmnamhoc.SelectedValue.ToString(),
                                              cmblop.SelectedValue.ToString());
         }
+
+        //private void cbmnamhoc_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+
+        //    if (cbmnamhoc.SelectedValue != null)
+        //    {
+        //        m_NamHocCtrl.HienThiComboBox(cmbNamhoc.SelectedValue.ToString(), cmbnamhocmoi);
+        //        //cmbKhoilopcu.DataBindings.Clear();
+        //        //cmbLopcu.DataBindings.Clear();
+        //        //HocSinhCtrl.TimTheoTen(lvLopCu, txtTimkiem.Text);
+        //    }
+        //}
 
        
     }

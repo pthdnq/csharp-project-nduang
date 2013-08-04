@@ -229,6 +229,7 @@ namespace QLDiemHSTHPT
             this.buttonItem24 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem25 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem26 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnXemDiem = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.bottomBar)).BeginInit();
             this.bottomBar.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -1838,12 +1839,13 @@ namespace QLDiemHSTHPT
             // 
             this.expelTracuu.CanvasColor = System.Drawing.SystemColors.Control;
             this.expelTracuu.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.expelTracuu.Controls.Add(this.btnXemDiem);
             this.expelTracuu.Controls.Add(this.buttonTCGV);
             this.expelTracuu.Controls.Add(this.buttonTCHS);
             this.expelTracuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.expelTracuu.Location = new System.Drawing.Point(14, 397);
             this.expelTracuu.Name = "expelTracuu";
-            this.expelTracuu.Size = new System.Drawing.Size(192, 133);
+            this.expelTracuu.Size = new System.Drawing.Size(192, 180);
             this.expelTracuu.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.expelTracuu.Style.BackColor1.Color = System.Drawing.Color.White;
             this.expelTracuu.Style.BackColor2.Color = System.Drawing.SystemColors.ActiveCaption;
@@ -1851,6 +1853,16 @@ namespace QLDiemHSTHPT
             this.expelTracuu.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
             this.expelTracuu.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
             this.expelTracuu.Style.GradientAngle = 90;
+            this.expelTracuu.StyleMouseDown.Alignment = System.Drawing.StringAlignment.Center;
+            this.expelTracuu.StyleMouseDown.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBackground;
+            this.expelTracuu.StyleMouseDown.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBackground2;
+            this.expelTracuu.StyleMouseDown.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBorder;
+            this.expelTracuu.StyleMouseDown.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedText;
+            this.expelTracuu.StyleMouseOver.Alignment = System.Drawing.StringAlignment.Center;
+            this.expelTracuu.StyleMouseOver.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemHotBackground;
+            this.expelTracuu.StyleMouseOver.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemHotBackground2;
+            this.expelTracuu.StyleMouseOver.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemHotBorder;
+            this.expelTracuu.StyleMouseOver.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemHotText;
             this.expelTracuu.TabIndex = 2;
             this.expelTracuu.TitleStyle.Alignment = System.Drawing.StringAlignment.Center;
             this.expelTracuu.TitleStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1870,7 +1882,7 @@ namespace QLDiemHSTHPT
             this.buttonTCGV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.buttonTCGV.Location = new System.Drawing.Point(24, 86);
             this.buttonTCGV.Name = "buttonTCGV";
-            this.buttonTCGV.Size = new System.Drawing.Size(142, 27);
+            this.buttonTCGV.Size = new System.Drawing.Size(142, 38);
             this.buttonTCGV.TabIndex = 13;
             this.buttonTCGV.Text = "Tra Cứu GV";
             this.buttonTCGV.Tooltip = "Tra Cứu GV";
@@ -1885,7 +1897,7 @@ namespace QLDiemHSTHPT
             this.buttonTCHS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.buttonTCHS.Location = new System.Drawing.Point(22, 42);
             this.buttonTCHS.Name = "buttonTCHS";
-            this.buttonTCHS.Size = new System.Drawing.Size(144, 27);
+            this.buttonTCHS.Size = new System.Drawing.Size(142, 38);
             this.buttonTCHS.TabIndex = 12;
             this.buttonTCHS.Text = "Tra Cứu HS";
             this.buttonTCHS.Tooltip = "Tra Cứu HS";
@@ -2183,6 +2195,21 @@ namespace QLDiemHSTHPT
             this.buttonItem26.Text = "Thoát";
             this.buttonItem26.Tooltip = "Thoát";
             // 
+            // btnXemDiem
+            // 
+            this.btnXemDiem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnXemDiem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXemDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnXemDiem.Location = new System.Drawing.Point(24, 130);
+            this.btnXemDiem.Name = "btnXemDiem";
+            this.btnXemDiem.Size = new System.Drawing.Size(142, 38);
+            this.btnXemDiem.TabIndex = 14;
+            this.btnXemDiem.Text = "Tra Cứu Điểm";
+            this.btnXemDiem.Tooltip = "Tra Cứu Điểm";
+            this.btnXemDiem.Click += new System.EventHandler(this.btnXemDiem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -2356,9 +2383,6 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.ButtonX buttonPLop;
         private DevComponents.DotNetBar.ButtonX buttonGV;
         private DevComponents.DotNetBar.ButtonX buttonHocSinh;
-        private DevComponents.DotNetBar.ExpandablePanel expelTracuu;
-        private DevComponents.DotNetBar.ButtonX buttonTCGV;
-        private DevComponents.DotNetBar.ButtonX buttonTCHS;
         private ToolStripSeparator toolStripSeparator5;
         private ToolStripSeparator toolStripSeparator6;
         private ToolStripButton btnTTTruong;
@@ -2418,6 +2442,10 @@ namespace QLDiemHSTHPT
         private ToolStripMenuItem toolStripMenuItem83;
         private ToolStripMenuItem toolStripMenuItem84;
         private ToolStripMenuItem toolStripMenuItem1;
+        private DevComponents.DotNetBar.ExpandablePanel expelTracuu;
+        private DevComponents.DotNetBar.ButtonX buttonTCGV;
+        private DevComponents.DotNetBar.ButtonX buttonTCHS;
+        private DevComponents.DotNetBar.ButtonX btnXemDiem;
 
 
     }
