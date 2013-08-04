@@ -475,7 +475,7 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.ButtonItem btnNhapdiemchung;
         private System.Windows.Forms.GroupBox groupBoxDsgv;
         private System.Windows.Forms.BindingNavigator bdgNhapdiemrieng;
-        private System.Windows.Forms.ToolStripButton btnxoa;
+        public System.Windows.Forms.ToolStripButton btnxoa;
         private System.Windows.Forms.ToolStripButton bngthoat;
         private DevComponents.DotNetBar.Controls.ListViewEx lvdiem;
         private System.Windows.Forms.ColumnHeader colSTT;

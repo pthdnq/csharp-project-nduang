@@ -538,6 +538,15 @@ namespace QLDiemHSTHPT
                 m_XD.Show();
             }
             else m_XD.Activate();
+            String m_per = Utilities.NguoiDung.LoaiND.MaLoaiND;
+            if (m_per == "LND004")
+            {
+                m_XD.setEnableControl(false);
+            }
+            else
+            {
+                m_XD.setEnableControl(true);
+            }
 
         }
 
@@ -654,10 +663,12 @@ namespace QLDiemHSTHPT
                 m_MonHocCtrl.HienThiComboBox(cmbNanhocCN.SelectedValue.ToString(), cmbLopCN.SelectedValue.ToString(), cmbMonhocCN);
             cmbMonhocCN.DataBindings.Clear();
         }
+        public void setEnableControl(bool status)
+        {
+            bngluu.Enabled = status;
 
-
-
-
+   
+        }
 
     }
 }

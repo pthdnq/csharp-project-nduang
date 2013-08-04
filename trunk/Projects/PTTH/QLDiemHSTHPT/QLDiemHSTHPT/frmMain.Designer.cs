@@ -205,7 +205,8 @@ namespace QLDiemHSTHPT
             this.tabStrip = new DevComponents.DotNetBar.TabStrip();
             this.panelTacvu = new DevComponents.DotNetBar.PanelEx();
             this.expelTracuu = new DevComponents.DotNetBar.ExpandablePanel();
-            this.btnXemDiem = new DevComponents.DotNetBar.ButtonX();
+            this.btnXemDiemChung = new DevComponents.DotNetBar.ButtonX();
+            this.btnXemDiemRieng = new DevComponents.DotNetBar.ButtonX();
             this.buttonTCGV = new DevComponents.DotNetBar.ButtonX();
             this.buttonTCHS = new DevComponents.DotNetBar.ButtonX();
             this.expelquanly = new DevComponents.DotNetBar.ExpandablePanel();
@@ -230,7 +231,8 @@ namespace QLDiemHSTHPT
             this.buttonItem24 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem25 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem26 = new DevComponents.DotNetBar.ButtonItem();
-            this.btnXemDiemChung = new DevComponents.DotNetBar.ButtonX();
+            this.btnLoaiNguoiDung = new DevComponents.DotNetBar.ButtonItem();
+            this.btnPhanQuyen = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.bottomBar)).BeginInit();
             this.bottomBar.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -517,6 +519,9 @@ namespace QLDiemHSTHPT
             this.buttonItem30.Image = global::QLDiemHSTHPT.Properties.Resources.quanlynguoidung;
             this.buttonItem30.ImagePaddingHorizontal = 8;
             this.buttonItem30.Name = "buttonItem30";
+            this.buttonItem30.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnLoaiNguoiDung,
+            this.btnPhanQuyen});
             this.buttonItem30.Text = "Quản lý người dùng";
             this.buttonItem30.Tooltip = "Quản lý người dùng";
             this.buttonItem30.Click += new System.EventHandler(this.buttonItem30_Click);
@@ -1841,7 +1846,7 @@ namespace QLDiemHSTHPT
             this.expelTracuu.CanvasColor = System.Drawing.SystemColors.Control;
             this.expelTracuu.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.expelTracuu.Controls.Add(this.btnXemDiemChung);
-            this.expelTracuu.Controls.Add(this.btnXemDiem);
+            this.expelTracuu.Controls.Add(this.btnXemDiemRieng);
             this.expelTracuu.Controls.Add(this.buttonTCGV);
             this.expelTracuu.Controls.Add(this.buttonTCHS);
             this.expelTracuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1875,20 +1880,35 @@ namespace QLDiemHSTHPT
             this.expelTracuu.TitleStyle.GradientAngle = 90;
             this.expelTracuu.TitleText = "Tra Cứu";
             // 
-            // btnXemDiem
+            // btnXemDiemChung
             // 
-            this.btnXemDiem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnXemDiem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.btnXemDiemChung.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnXemDiemChung.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXemDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnXemDiem.Location = new System.Drawing.Point(24, 110);
-            this.btnXemDiem.Name = "btnXemDiem";
-            this.btnXemDiem.Size = new System.Drawing.Size(131, 28);
-            this.btnXemDiem.TabIndex = 14;
-            this.btnXemDiem.Text = "Tra Cứu Điểm Riêng";
-            this.btnXemDiem.Tooltip = "Tra Cứu Điểm Riêng";
-            this.btnXemDiem.Click += new System.EventHandler(this.btnXemDiem_Click);
+            this.btnXemDiemChung.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnXemDiemChung.Location = new System.Drawing.Point(24, 144);
+            this.btnXemDiemChung.Name = "btnXemDiemChung";
+            this.btnXemDiemChung.Size = new System.Drawing.Size(131, 28);
+            this.btnXemDiemChung.TabIndex = 15;
+            this.btnXemDiemChung.Text = "Tra Cứu Điểm Chung";
+            this.btnXemDiemChung.Tooltip = "Tra Cứu Điểm Chung";
+            this.btnXemDiemChung.Click += new System.EventHandler(this.btnXemDiemChung_Click);
+            // 
+            // btnXemDiemRieng
+            // 
+            this.btnXemDiemRieng.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnXemDiemRieng.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXemDiemRieng.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnXemDiemRieng.Location = new System.Drawing.Point(24, 110);
+            this.btnXemDiemRieng.Name = "btnXemDiemRieng";
+            this.btnXemDiemRieng.Size = new System.Drawing.Size(131, 28);
+            this.btnXemDiemRieng.TabIndex = 14;
+            this.btnXemDiemRieng.Text = "Tra Cứu Điểm Riêng";
+            this.btnXemDiemRieng.Tooltip = "Tra Cứu Điểm Riêng";
+            this.btnXemDiemRieng.Click += new System.EventHandler(this.btnXemDiem_Click);
             // 
             // buttonTCGV
             // 
@@ -2212,20 +2232,19 @@ namespace QLDiemHSTHPT
             this.buttonItem26.Text = "Thoát";
             this.buttonItem26.Tooltip = "Thoát";
             // 
-            // btnXemDiemChung
+            // btnLoaiNguoiDung
             // 
-            this.btnXemDiemChung.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnXemDiemChung.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXemDiemChung.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnXemDiemChung.Location = new System.Drawing.Point(24, 144);
-            this.btnXemDiemChung.Name = "btnXemDiemChung";
-            this.btnXemDiemChung.Size = new System.Drawing.Size(131, 28);
-            this.btnXemDiemChung.TabIndex = 15;
-            this.btnXemDiemChung.Text = "Tra Cứu Điểm Chung";
-            this.btnXemDiemChung.Tooltip = "Tra Cứu Điểm Chung";
-            this.btnXemDiemChung.Click += new System.EventHandler(this.btnXemDiemChung_Click);
+            this.btnLoaiNguoiDung.ImagePaddingHorizontal = 8;
+            this.btnLoaiNguoiDung.Name = "btnLoaiNguoiDung";
+            this.btnLoaiNguoiDung.Text = "Loại người dùng";
+            this.btnLoaiNguoiDung.Click += new System.EventHandler(this.btnLoaiNguoiDung_Click);
+            // 
+            // btnPhanQuyen
+            // 
+            this.btnPhanQuyen.ImagePaddingHorizontal = 8;
+            this.btnPhanQuyen.Name = "btnPhanQuyen";
+            this.btnPhanQuyen.Text = "Phân Quyền";
+            this.btnPhanQuyen.Click += new System.EventHandler(this.btnPhanQuyen_Click);
             // 
             // frmMain
             // 
@@ -2462,8 +2481,10 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.ExpandablePanel expelTracuu;
         private DevComponents.DotNetBar.ButtonX buttonTCGV;
         private DevComponents.DotNetBar.ButtonX buttonTCHS;
-        private DevComponents.DotNetBar.ButtonX btnXemDiem;
+        private DevComponents.DotNetBar.ButtonX btnXemDiemRieng;
         private DevComponents.DotNetBar.ButtonX btnXemDiemChung;
+        private DevComponents.DotNetBar.ButtonItem btnLoaiNguoiDung;
+        private DevComponents.DotNetBar.ButtonItem btnPhanQuyen;
 
 
     }
