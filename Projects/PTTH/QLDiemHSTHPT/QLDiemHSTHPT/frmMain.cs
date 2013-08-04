@@ -26,6 +26,7 @@ namespace QLDiemHSTHPT
         frmNgheNghiep m_NgheNghiep = null;
         frmMonHoc m_MonHoc = null;
         frmNguoiDung m_NguoiDung = null;
+        frmLoaiNguoiDung m_LoaiNguoiDung = null;
         frmDangNhap m_FormDangNhap = null;
         frmDoiMatKhau m_FormDoiMatKhau = null;
 
@@ -375,13 +376,7 @@ namespace QLDiemHSTHPT
         }
         private void buttonItem30_Click(object sender, EventArgs e)
         {
-            if (m_NguoiDung == null || m_NguoiDung.IsDisposed)
-            {
-                m_NguoiDung = new frmNguoiDung();
-                m_NguoiDung.MdiParent = frmMain.ActiveForm;
-                m_NguoiDung.Show();
-            }
-            else m_NguoiDung.Activate();
+            
         }
 
         private void buttonItem31_Click(object sender, EventArgs e)
@@ -555,15 +550,17 @@ namespace QLDiemHSTHPT
             else m_PhanCong.Activate();
         }*/
 
-        public void Permissions(String m_Per)
+        public String Permissions(String m_Per)
         {
             switch (m_Per)
             {
                 case "LND001": BGH(); break;
                 case "LND002": GiaoVien(); break;
                 case "LND003": GiaoVu(); break;
+                case "LND004": HS(); break;
                 default: MacDinh(); break;
             }
+            return m_Per;
         }
         //giao dien mac dinh
         public void MacDinh()
@@ -591,6 +588,9 @@ namespace QLDiemHSTHPT
             toolStripMenuItem46.Enabled = false;
             toolStripMenuItem63.Enabled = false;
             toolStripMenuItem77.Enabled = false;
+
+            btnXemDiemRieng.Enabled = false;
+            btnXemDiemChung.Enabled = false;
         }
 
         public void BGH()
@@ -615,6 +615,9 @@ namespace QLDiemHSTHPT
             toolStripMenuItem46.Enabled = true;
             toolStripMenuItem63.Enabled = true;
             toolStripMenuItem77.Enabled = true;
+
+            btnXemDiemRieng.Enabled = true;
+            btnXemDiemChung.Enabled = true;
         }
 
         public void GiaoVien()
@@ -631,6 +634,8 @@ namespace QLDiemHSTHPT
             toolStripMenuItem81.Enabled = true;
             buttonTCHS.Enabled = true;
             buttonTCGV.Enabled = true;
+            btnXemDiemRieng.Enabled = true;
+            btnXemDiemChung.Enabled = true;
 
             //False
             buttondangnhap.Enabled = false;
@@ -677,6 +682,8 @@ namespace QLDiemHSTHPT
             toolStripMenuItem63.Enabled = true;
             toolStripMenuItem81.Enabled = true;
             toolStripMenuItem46.Enabled = true;
+            btnXemDiemRieng.Enabled = true;
+            btnXemDiemChung.Enabled = true;
 
             //False
             buttondangnhap.Enabled = false;
@@ -687,6 +694,38 @@ namespace QLDiemHSTHPT
             buttonPCong.Enabled = false;
            
         }
+
+        public void HS()
+        {
+                 buttondangnhap.Enabled = true;
+            buttonthoat.Enabled = true;
+            buttonItem33.Enabled = true;
+            toolStripMenuItem84.Enabled = true;
+            toolStripMenuItem83.Enabled = true;
+           
+
+
+            buttondangxuat.Enabled = false;
+            buttonItem29.Enabled = false;
+            buttonItem30.Enabled = false;
+            buttonItem31.Enabled = false;
+            buttonItem32.Enabled = false;
+
+            buttonHocSinh.Enabled = false;
+            buttonGV.Enabled = false;
+            buttonPCong.Enabled = false;
+            buttonPLop.Enabled = false;
+            buttonTCHS.Enabled = false;
+            buttonTCGV.Enabled = false;
+            toolStripMenuItem46.Enabled = false;
+            toolStripMenuItem63.Enabled = false;
+            toolStripMenuItem77.Enabled = false;
+            
+            btnXemDiemRieng.Enabled = true;
+            btnXemDiemChung.Enabled = true;
+
+        }
+
         frmPhanLop m_PhanLop = null;
         private void buttonPLop_Click(object sender, EventArgs e)
         {
@@ -880,8 +919,16 @@ namespace QLDiemHSTHPT
                 m_XD.Show();
             }
             else m_XD.Activate();
+            String m_per = Utilities.NguoiDung.LoaiND.MaLoaiND;
+            if (m_per == "LND004") 
+            {
+                m_XD.setEnableControl(false);
+            }
+            else
+            {
+                m_XD.setEnableControl(true);
+            }
         }
-
         private void btnXemDiemChung_Click(object sender, EventArgs e)
         {
             if (m_DiemChung == null || m_DiemChung.IsDisposed)
@@ -891,6 +938,37 @@ namespace QLDiemHSTHPT
                 m_DiemChung.Show();
             }
             else m_DiemChung.Activate();
+            String m_per = Utilities.NguoiDung.LoaiND.MaLoaiND;
+            if (m_per == "LND004")
+            {
+                m_DiemChung.setEnableControl(false);
+            }
+            else
+            {
+                m_DiemChung.setEnableControl(true);
+            }
+        }
+
+        private void btnPhanQuyen_Click(object sender, EventArgs e)
+        {
+            if (m_NguoiDung == null || m_NguoiDung.IsDisposed)
+            {
+                m_NguoiDung = new frmNguoiDung();
+                m_NguoiDung.MdiParent = frmMain.ActiveForm;
+                m_NguoiDung.Show();
+            }
+            else m_NguoiDung.Activate();
+        }
+
+        private void btnLoaiNguoiDung_Click(object sender, EventArgs e)
+        {
+            if (m_LoaiNguoiDung == null || m_LoaiNguoiDung.IsDisposed)
+            {
+                m_LoaiNguoiDung = new frmLoaiNguoiDung();
+                m_LoaiNguoiDung.MdiParent = frmMain.ActiveForm;
+                m_LoaiNguoiDung.Show();
+            }
+            else m_LoaiNguoiDung.Activate();
         }
     }
 }

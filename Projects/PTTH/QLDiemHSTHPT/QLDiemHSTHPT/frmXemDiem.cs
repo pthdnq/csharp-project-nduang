@@ -83,12 +83,19 @@ namespace QLDiemHSTHPT
         private void buttonX1_Click(object sender, EventArgs e)
         {
             lvdiem.Items.Clear();
-            m_DiemCtrl.HienThiDanhSachXemDiem(lvdiem,
+            try 
+            {
+                m_DiemCtrl.HienThiDanhSachXemDiem(lvdiem,
                                              cmbHocsinh.SelectedValue.ToString(),
                                              cmbMonhoc.SelectedValue.ToString(),
                                              cmbHocky.SelectedValue.ToString(),
                                              cbmnamhoc.SelectedValue.ToString(),
                                              cmblop.SelectedValue.ToString());
+            }
+            catch(Exception)
+            {
+            
+            }
         }
 
         private void cbmnamhoc_SelectedIndexChanged(object sender, EventArgs e)
@@ -114,6 +121,10 @@ namespace QLDiemHSTHPT
                     ,cmbMaHS.SelectedValue.ToString(),cmbHocsinh);
         }
 
-       
+        public void setEnableControl(bool status)
+        {
+            btnxoa.Enabled = status;
+
+        }
     }
 }
