@@ -870,5 +870,16 @@ namespace QLDiemHSTHPT
             }
             else m_KN.Activate();
         }
+        frmXemDiem m_XD = null;
+        private void btnXemDiem_Click(object sender, EventArgs e)
+        {
+            if (m_XD == null || m_XD.IsDisposed)
+            {
+                m_XD = new frmXemDiem();
+                m_XD.MdiParent = frmMain.ActiveForm;
+                m_XD.Show();
+            }
+            else m_XD.Activate();
+        }
     }
 }

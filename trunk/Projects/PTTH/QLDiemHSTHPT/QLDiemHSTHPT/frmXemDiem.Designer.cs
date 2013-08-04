@@ -230,6 +230,7 @@ namespace QLDiemHSTHPT
             this.cbmnamhoc.Name = "cbmnamhoc";
             this.cbmnamhoc.Size = new System.Drawing.Size(149, 20);
             this.cbmnamhoc.TabIndex = 20;
+            //this.cbmnamhoc.SelectedIndexChanged += new System.EventHandler(this.cbmnamhoc_SelectedIndexChanged);
             // 
             // lblnamHoc
             // 
