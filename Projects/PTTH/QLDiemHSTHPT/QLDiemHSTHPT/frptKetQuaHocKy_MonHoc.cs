@@ -64,6 +64,8 @@ namespace QLDiemHSTHPT
         {
             if (cmbNamHoc.SelectedValue != null)
                 m_LopCtrl.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop);
+            if (cmbNamHoc.SelectedValue != null && cmbLop.SelectedValue != null)
+                m_MonHocCtrl.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop.SelectedValue.ToString(), cmbMonHoc);
             cmbLop.DataBindings.Clear();
         }
 
