@@ -881,5 +881,16 @@ namespace QLDiemHSTHPT
             }
             else m_XD.Activate();
         }
+
+        private void btnXemDiemChung_Click(object sender, EventArgs e)
+        {
+            if (m_DiemChung == null || m_DiemChung.IsDisposed)
+            {
+                m_DiemChung = new frmNhapDiemChung();
+                m_DiemChung.MdiParent = frmMain.ActiveForm;
+                m_DiemChung.Show();
+            }
+            else m_DiemChung.Activate();
+        }
     }
 }

@@ -44,6 +44,10 @@ namespace QLDiemHSTHPT
             this.cbmnamhoc = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.lblnamHoc = new DevComponents.DotNetBar.LabelX();
             this.btnNhapdiemchung = new DevComponents.DotNetBar.ButtonItem();
+            this.navigationPanePanel2 = new DevComponents.DotNetBar.NavigationPanePanel();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.navigationPanePanel3 = new DevComponents.DotNetBar.NavigationPanePanel();
+            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.groupBoxDsgv = new System.Windows.Forms.GroupBox();
             this.lvdiem = new DevComponents.DotNetBar.Controls.ListViewEx();
             this.colSTT = new System.Windows.Forms.ColumnHeader();
@@ -55,6 +59,8 @@ namespace QLDiemHSTHPT
             this.bdgNhapdiemrieng = new System.Windows.Forms.BindingNavigator(this.components);
             this.btnxoa = new System.Windows.Forms.ToolStripButton();
             this.bngthoat = new System.Windows.Forms.ToolStripButton();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.cmbMaHS = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.nvgPanelGiaoVien.SuspendLayout();
             this.navigationPanePanel1.SuspendLayout();
             this.groupBoxDsgv.SuspendLayout();
@@ -66,17 +72,21 @@ namespace QLDiemHSTHPT
             // 
             this.nvgPanelGiaoVien.CanCollapse = true;
             this.nvgPanelGiaoVien.Controls.Add(this.navigationPanePanel1);
+            this.nvgPanelGiaoVien.Controls.Add(this.navigationPanePanel2);
+            this.nvgPanelGiaoVien.Controls.Add(this.navigationPanePanel3);
             this.nvgPanelGiaoVien.Dock = System.Windows.Forms.DockStyle.Left;
             this.nvgPanelGiaoVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nvgPanelGiaoVien.ItemPaddingBottom = 2;
             this.nvgPanelGiaoVien.ItemPaddingTop = 2;
             this.nvgPanelGiaoVien.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnNhapdiemchung});
+            this.btnNhapdiemchung,
+            this.buttonItem1,
+            this.buttonItem2});
             this.nvgPanelGiaoVien.Location = new System.Drawing.Point(0, 0);
             this.nvgPanelGiaoVien.Name = "nvgPanelGiaoVien";
             this.nvgPanelGiaoVien.NavigationBarHeight = 67;
             this.nvgPanelGiaoVien.Padding = new System.Windows.Forms.Padding(1);
-            this.nvgPanelGiaoVien.Size = new System.Drawing.Size(210, 397);
+            this.nvgPanelGiaoVien.Size = new System.Drawing.Size(210, 443);
             this.nvgPanelGiaoVien.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.nvgPanelGiaoVien.TabIndex = 10;
             // 
@@ -103,6 +113,8 @@ namespace QLDiemHSTHPT
             // navigationPanePanel1
             // 
             this.navigationPanePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.navigationPanePanel1.Controls.Add(this.cmbMaHS);
+            this.navigationPanePanel1.Controls.Add(this.labelX4);
             this.navigationPanePanel1.Controls.Add(this.buttonX1);
             this.navigationPanePanel1.Controls.Add(this.cmbHocsinh);
             this.navigationPanePanel1.Controls.Add(this.lblHocsinh);
@@ -119,7 +131,7 @@ namespace QLDiemHSTHPT
             this.navigationPanePanel1.Location = new System.Drawing.Point(1, 25);
             this.navigationPanePanel1.Name = "navigationPanePanel1";
             this.navigationPanePanel1.ParentItem = this.btnNhapdiemchung;
-            this.navigationPanePanel1.Size = new System.Drawing.Size(208, 304);
+            this.navigationPanePanel1.Size = new System.Drawing.Size(208, 350);
             this.navigationPanePanel1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navigationPanePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navigationPanePanel1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -132,7 +144,7 @@ namespace QLDiemHSTHPT
             // 
             this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
-            this.buttonX1.Location = new System.Drawing.Point(28, 256);
+            this.buttonX1.Location = new System.Drawing.Point(28, 314);
             this.buttonX1.Name = "buttonX1";
             this.buttonX1.Size = new System.Drawing.Size(140, 23);
             this.buttonX1.TabIndex = 35;
@@ -146,14 +158,14 @@ namespace QLDiemHSTHPT
             this.cmbHocsinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHocsinh.FormattingEnabled = true;
             this.cmbHocsinh.ItemHeight = 14;
-            this.cmbHocsinh.Location = new System.Drawing.Point(19, 216);
+            this.cmbHocsinh.Location = new System.Drawing.Point(19, 275);
             this.cmbHocsinh.Name = "cmbHocsinh";
             this.cmbHocsinh.Size = new System.Drawing.Size(149, 20);
             this.cmbHocsinh.TabIndex = 34;
             // 
             // lblHocsinh
             // 
-            this.lblHocsinh.Location = new System.Drawing.Point(19, 197);
+            this.lblHocsinh.Location = new System.Drawing.Point(19, 246);
             this.lblHocsinh.Name = "lblHocsinh";
             this.lblHocsinh.Size = new System.Drawing.Size(75, 23);
             this.lblHocsinh.TabIndex = 33;
@@ -230,7 +242,7 @@ namespace QLDiemHSTHPT
             this.cbmnamhoc.Name = "cbmnamhoc";
             this.cbmnamhoc.Size = new System.Drawing.Size(149, 20);
             this.cbmnamhoc.TabIndex = 20;
-            //this.cbmnamhoc.SelectedIndexChanged += new System.EventHandler(this.cbmnamhoc_SelectedIndexChanged);
+            this.cbmnamhoc.SelectedIndexChanged += new System.EventHandler(this.cbmnamhoc_SelectedIndexChanged);
             // 
             // lblnamHoc
             // 
@@ -251,6 +263,56 @@ namespace QLDiemHSTHPT
             this.btnNhapdiemchung.OptionGroup = "navBar";
             this.btnNhapdiemchung.Text = "Nhập thông tin điểm";
             // 
+            // navigationPanePanel2
+            // 
+            this.navigationPanePanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.navigationPanePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigationPanePanel2.Location = new System.Drawing.Point(1, 1);
+            this.navigationPanePanel2.Name = "navigationPanePanel2";
+            this.navigationPanePanel2.ParentItem = this.buttonItem1;
+            this.navigationPanePanel2.Size = new System.Drawing.Size(208, 374);
+            this.navigationPanePanel2.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.navigationPanePanel2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.navigationPanePanel2.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.navigationPanePanel2.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.navigationPanePanel2.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
+            this.navigationPanePanel2.Style.GradientAngle = 90;
+            this.navigationPanePanel2.TabIndex = 3;
+            // 
+            // buttonItem1
+            // 
+            this.buttonItem1.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem1.Image")));
+            this.buttonItem1.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.buttonItem1.ImagePaddingHorizontal = 8;
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.OptionGroup = "navBar";
+            this.buttonItem1.Text = "buttonItem1";
+            // 
+            // navigationPanePanel3
+            // 
+            this.navigationPanePanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.navigationPanePanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigationPanePanel3.Location = new System.Drawing.Point(1, 1);
+            this.navigationPanePanel3.Name = "navigationPanePanel3";
+            this.navigationPanePanel3.ParentItem = this.buttonItem2;
+            this.navigationPanePanel3.Size = new System.Drawing.Size(208, 374);
+            this.navigationPanePanel3.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.navigationPanePanel3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.navigationPanePanel3.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.navigationPanePanel3.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.navigationPanePanel3.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
+            this.navigationPanePanel3.Style.GradientAngle = 90;
+            this.navigationPanePanel3.TabIndex = 4;
+            // 
+            // buttonItem2
+            // 
+            this.buttonItem2.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem2.Image")));
+            this.buttonItem2.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.buttonItem2.ImagePaddingHorizontal = 8;
+            this.buttonItem2.Name = "buttonItem2";
+            this.buttonItem2.OptionGroup = "navBar";
+            this.buttonItem2.Text = "buttonItem2";
+            // 
             // groupBoxDsgv
             // 
             this.groupBoxDsgv.Controls.Add(this.lvdiem);
@@ -258,7 +320,7 @@ namespace QLDiemHSTHPT
             this.groupBoxDsgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxDsgv.Location = new System.Drawing.Point(210, 0);
             this.groupBoxDsgv.Name = "groupBoxDsgv";
-            this.groupBoxDsgv.Size = new System.Drawing.Size(698, 397);
+            this.groupBoxDsgv.Size = new System.Drawing.Size(719, 443);
             this.groupBoxDsgv.TabIndex = 11;
             this.groupBoxDsgv.TabStop = false;
             this.groupBoxDsgv.Text = "Danh Sách Hiển Thị";
@@ -281,7 +343,7 @@ namespace QLDiemHSTHPT
             this.lvdiem.FullRowSelect = true;
             this.lvdiem.Location = new System.Drawing.Point(3, 41);
             this.lvdiem.Name = "lvdiem";
-            this.lvdiem.Size = new System.Drawing.Size(692, 353);
+            this.lvdiem.Size = new System.Drawing.Size(713, 399);
             this.lvdiem.TabIndex = 12;
             this.lvdiem.UseCompatibleStateImageBehavior = false;
             this.lvdiem.View = System.Windows.Forms.View.Details;
@@ -289,22 +351,22 @@ namespace QLDiemHSTHPT
             // colSTT
             // 
             this.colSTT.Text = "STT";
-            this.colSTT.Width = 50;
+            this.colSTT.Width = 0;
             // 
             // colMaHocSinh
             // 
             this.colMaHocSinh.Text = "Mã học sinh";
-            this.colMaHocSinh.Width = 150;
+            this.colMaHocSinh.Width = 0;
             // 
             // colTenHS
             // 
             this.colTenHS.Text = "Tên Học Sinh";
-            this.colTenHS.Width = 100;
+            this.colTenHS.Width = 0;
             // 
             // colMonhoc
             // 
             this.colMonhoc.Text = "Môn học";
-            this.colMonhoc.Width = 100;
+            this.colMonhoc.Width = 0;
             // 
             // colLoaiDiem
             // 
@@ -332,7 +394,7 @@ namespace QLDiemHSTHPT
             this.bdgNhapdiemrieng.MovePreviousItem = null;
             this.bdgNhapdiemrieng.Name = "bdgNhapdiemrieng";
             this.bdgNhapdiemrieng.PositionItem = null;
-            this.bdgNhapdiemrieng.Size = new System.Drawing.Size(692, 25);
+            this.bdgNhapdiemrieng.Size = new System.Drawing.Size(713, 25);
             this.bdgNhapdiemrieng.TabIndex = 0;
             // 
             // btnxoa
@@ -353,11 +415,32 @@ namespace QLDiemHSTHPT
             this.bngthoat.Text = "Thoát";
             this.bngthoat.Click += new System.EventHandler(this.bngthoat_Click);
             // 
+            // labelX4
+            // 
+            this.labelX4.Location = new System.Drawing.Point(19, 197);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(75, 23);
+            this.labelX4.TabIndex = 36;
+            this.labelX4.Text = "Mã HS:";
+            // 
+            // cmbMaHS
+            // 
+            this.cmbMaHS.DisplayMember = "Text";
+            this.cmbMaHS.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbMaHS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMaHS.FormattingEnabled = true;
+            this.cmbMaHS.ItemHeight = 14;
+            this.cmbMaHS.Location = new System.Drawing.Point(19, 226);
+            this.cmbMaHS.Name = "cmbMaHS";
+            this.cmbMaHS.Size = new System.Drawing.Size(149, 20);
+            this.cmbMaHS.TabIndex = 37;
+            this.cmbMaHS.SelectedIndexChanged += new System.EventHandler(this.cmbMaHS_SelectedIndexChanged);
+            // 
             // frmXemDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 397);
+            this.ClientSize = new System.Drawing.Size(929, 443);
             this.Controls.Add(this.groupBoxDsgv);
             this.Controls.Add(this.nvgPanelGiaoVien);
             this.DoubleBuffered = true;
@@ -404,5 +487,11 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmbHocsinh;
         private DevComponents.DotNetBar.LabelX lblHocsinh;
         private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.NavigationPanePanel navigationPanePanel2;
+        private DevComponents.DotNetBar.ButtonItem buttonItem1;
+        private DevComponents.DotNetBar.NavigationPanePanel navigationPanePanel3;
+        private DevComponents.DotNetBar.ButtonItem buttonItem2;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbMaHS;
+        private DevComponents.DotNetBar.LabelX labelX4;
     }
 }

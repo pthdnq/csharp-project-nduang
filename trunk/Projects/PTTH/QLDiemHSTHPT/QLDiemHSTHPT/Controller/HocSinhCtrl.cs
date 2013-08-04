@@ -31,6 +31,22 @@ namespace QLDiemHSTHPT.Controller
            comboBox.ValueMember = "MaHocSinh";
        }
 
+       public void HienThiComboBox(String namHoc, String lop,String maHS, ComboBoxEx comboBox)
+       {
+           HocSinhData m_HSData = new HocSinhData();
+           comboBox.DataSource = m_HSData.LayDsHocSinhTheoMa(namHoc, lop,maHS);
+           comboBox.DisplayMember = "HoTen";
+           comboBox.ValueMember = "MaHocSinh";
+       }
+
+       public void HienThiComboBoxMaHS(String namHoc, String lop, ComboBoxEx comboBox)
+       {
+           HocSinhData m_HSData = new HocSinhData();
+           comboBox.DataSource = m_HSData.LayDsHocSinhTheoLop(namHoc, lop);
+           comboBox.DisplayMember = "MaHocSinh";
+           comboBox.ValueMember = "MaHocSinh";
+       }
+
        public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
        {
            cmbColumn.DataSource = m_HocSinhData.LayDsHocSinh();

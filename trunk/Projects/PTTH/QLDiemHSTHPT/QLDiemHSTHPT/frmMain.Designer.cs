@@ -205,6 +205,7 @@ namespace QLDiemHSTHPT
             this.tabStrip = new DevComponents.DotNetBar.TabStrip();
             this.panelTacvu = new DevComponents.DotNetBar.PanelEx();
             this.expelTracuu = new DevComponents.DotNetBar.ExpandablePanel();
+            this.btnXemDiem = new DevComponents.DotNetBar.ButtonX();
             this.buttonTCGV = new DevComponents.DotNetBar.ButtonX();
             this.buttonTCHS = new DevComponents.DotNetBar.ButtonX();
             this.expelquanly = new DevComponents.DotNetBar.ExpandablePanel();
@@ -229,7 +230,7 @@ namespace QLDiemHSTHPT
             this.buttonItem24 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem25 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem26 = new DevComponents.DotNetBar.ButtonItem();
-            this.btnXemDiem = new DevComponents.DotNetBar.ButtonX();
+            this.btnXemDiemChung = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.bottomBar)).BeginInit();
             this.bottomBar.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -1839,6 +1840,7 @@ namespace QLDiemHSTHPT
             // 
             this.expelTracuu.CanvasColor = System.Drawing.SystemColors.Control;
             this.expelTracuu.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.expelTracuu.Controls.Add(this.btnXemDiemChung);
             this.expelTracuu.Controls.Add(this.btnXemDiem);
             this.expelTracuu.Controls.Add(this.buttonTCGV);
             this.expelTracuu.Controls.Add(this.buttonTCHS);
@@ -1873,6 +1875,21 @@ namespace QLDiemHSTHPT
             this.expelTracuu.TitleStyle.GradientAngle = 90;
             this.expelTracuu.TitleText = "Tra Cứu";
             // 
+            // btnXemDiem
+            // 
+            this.btnXemDiem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnXemDiem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXemDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnXemDiem.Location = new System.Drawing.Point(24, 110);
+            this.btnXemDiem.Name = "btnXemDiem";
+            this.btnXemDiem.Size = new System.Drawing.Size(131, 28);
+            this.btnXemDiem.TabIndex = 14;
+            this.btnXemDiem.Text = "Tra Cứu Điểm Riêng";
+            this.btnXemDiem.Tooltip = "Tra Cứu Điểm Riêng";
+            this.btnXemDiem.Click += new System.EventHandler(this.btnXemDiem_Click);
+            // 
             // buttonTCGV
             // 
             this.buttonTCGV.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -1880,9 +1897,9 @@ namespace QLDiemHSTHPT
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonTCGV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonTCGV.Location = new System.Drawing.Point(24, 86);
+            this.buttonTCGV.Location = new System.Drawing.Point(24, 76);
             this.buttonTCGV.Name = "buttonTCGV";
-            this.buttonTCGV.Size = new System.Drawing.Size(142, 38);
+            this.buttonTCGV.Size = new System.Drawing.Size(131, 28);
             this.buttonTCGV.TabIndex = 13;
             this.buttonTCGV.Text = "Tra Cứu GV";
             this.buttonTCGV.Tooltip = "Tra Cứu GV";
@@ -1897,7 +1914,7 @@ namespace QLDiemHSTHPT
             this.buttonTCHS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.buttonTCHS.Location = new System.Drawing.Point(22, 42);
             this.buttonTCHS.Name = "buttonTCHS";
-            this.buttonTCHS.Size = new System.Drawing.Size(142, 38);
+            this.buttonTCHS.Size = new System.Drawing.Size(131, 28);
             this.buttonTCHS.TabIndex = 12;
             this.buttonTCHS.Text = "Tra Cứu HS";
             this.buttonTCHS.Tooltip = "Tra Cứu HS";
@@ -2195,20 +2212,20 @@ namespace QLDiemHSTHPT
             this.buttonItem26.Text = "Thoát";
             this.buttonItem26.Tooltip = "Thoát";
             // 
-            // btnXemDiem
+            // btnXemDiemChung
             // 
-            this.btnXemDiem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnXemDiem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.btnXemDiemChung.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnXemDiemChung.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXemDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnXemDiem.Location = new System.Drawing.Point(24, 130);
-            this.btnXemDiem.Name = "btnXemDiem";
-            this.btnXemDiem.Size = new System.Drawing.Size(142, 38);
-            this.btnXemDiem.TabIndex = 14;
-            this.btnXemDiem.Text = "Tra Cứu Điểm";
-            this.btnXemDiem.Tooltip = "Tra Cứu Điểm";
-            this.btnXemDiem.Click += new System.EventHandler(this.btnXemDiem_Click);
+            this.btnXemDiemChung.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnXemDiemChung.Location = new System.Drawing.Point(24, 144);
+            this.btnXemDiemChung.Name = "btnXemDiemChung";
+            this.btnXemDiemChung.Size = new System.Drawing.Size(131, 28);
+            this.btnXemDiemChung.TabIndex = 15;
+            this.btnXemDiemChung.Text = "Tra Cứu Điểm Chung";
+            this.btnXemDiemChung.Tooltip = "Tra Cứu Điểm Chung";
+            this.btnXemDiemChung.Click += new System.EventHandler(this.btnXemDiemChung_Click);
             // 
             // frmMain
             // 
@@ -2446,6 +2463,7 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.ButtonX buttonTCGV;
         private DevComponents.DotNetBar.ButtonX buttonTCHS;
         private DevComponents.DotNetBar.ButtonX btnXemDiem;
+        private DevComponents.DotNetBar.ButtonX btnXemDiemChung;
 
 
     }

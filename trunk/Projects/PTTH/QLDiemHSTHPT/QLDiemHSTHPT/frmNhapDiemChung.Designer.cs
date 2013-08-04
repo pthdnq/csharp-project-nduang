@@ -217,6 +217,8 @@ namespace QLDiemHSTHPT
             this.cmbMonhocCN.Name = "cmbMonhocCN";
             this.cmbMonhocCN.Size = new System.Drawing.Size(121, 21);
             this.cmbMonhocCN.TabIndex = 37;
+            this.cmbMonhocCN.SelectedIndexChanged += new System.EventHandler(this.cmbMonhocCN_SelectedIndexChanged);
+            this.cmbMonhocCN.Click += new System.EventHandler(this.cmbMonhocCN_Click);
             // 
             // labelX6
             // 
@@ -234,7 +236,7 @@ namespace QLDiemHSTHPT
             this.buttonX7.Name = "buttonX7";
             this.buttonX7.Size = new System.Drawing.Size(140, 23);
             this.buttonX7.TabIndex = 35;
-            this.buttonX7.Text = "Cập nhật điểm";
+            this.buttonX7.Text = "Hiển thị danh sách";
             this.buttonX7.Click += new System.EventHandler(this.buttonX7_Click);
             // 
             // cmbNanhocCN

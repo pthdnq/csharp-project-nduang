@@ -28,15 +28,31 @@ namespace QLDiemHSTHPT
 
         private void frmXemDiem_Load(object sender, EventArgs e)
         {
-            //m_NamHocCtrl.HienThiComboBox(cbmnamhoc);
-            //m_HocKyCtrl.HienThiComboBox(cmbHocky);
+            //m_namhocctrl.hienthicombobox(cbmnamhoc);
+            m_NamHocCtrl.HienThiComboBox(cbmnamhoc);
+            //m_hockyctrl.hienthicombobox(cmbhocky);
+            m_HocKyCtrl.HienThiComboBox(cmbHocky);
+            
+            if (cbmnamhoc.SelectedValue != null)
+                m_LopCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop);
+
             //if (cbmnamhoc.SelectedValue != null)
             //    m_LopCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop);
-            //if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null)
-            //{
-            //    m_MonHocCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMonhoc);
-            //    m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbHocsinh);
-            //}
+            
+            //m_MonHocCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMonhoc);
+            if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null)
+            {
+                m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbHocsinh);
+                m_HocSinhCtrl.HienThiComboBoxMaHS(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMaHS);
+            }
+            m_MonHocCtrl.HienThiComboBox("", "", cmbMonhoc);
+            
+
+            if (cmbMaHS.SelectedValue != null)
+                m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString()
+                    , cmblop.SelectedValue.ToString()
+                    , cmbMaHS.SelectedValue.ToString(), cmbHocsinh);
+            cmbMonhoc.DataBindings.Clear();
         }
 
         private void nvgPanelGiaoVien_Load(object sender, EventArgs e)
@@ -66,6 +82,7 @@ namespace QLDiemHSTHPT
 
         private void buttonX1_Click(object sender, EventArgs e)
         {
+            lvdiem.Items.Clear();
             m_DiemCtrl.HienThiDanhSachXemDiem(lvdiem,
                                              cmbHocsinh.SelectedValue.ToString(),
                                              cmbMonhoc.SelectedValue.ToString(),
@@ -74,17 +91,28 @@ namespace QLDiemHSTHPT
                                              cmblop.SelectedValue.ToString());
         }
 
-        //private void cbmnamhoc_SelectedIndexChanged(object sender, EventArgs e)
-        //{
+        private void cbmnamhoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbmnamhoc.SelectedValue != null)
+                m_LopCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop);
+            if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null)
+            {
+                m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbHocsinh);
+                m_HocSinhCtrl.HienThiComboBoxMaHS(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMaHS);
+            }
+            if (cmbMaHS.SelectedValue != null)
+                m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString()
+                    , cmblop.SelectedValue.ToString()
+                    , cmbMaHS.SelectedValue.ToString(), cmbHocsinh);
+        }
 
-        //    if (cbmnamhoc.SelectedValue != null)
-        //    {
-        //        m_NamHocCtrl.HienThiComboBox(cmbNamhoc.SelectedValue.ToString(), cmbnamhocmoi);
-        //        //cmbKhoilopcu.DataBindings.Clear();
-        //        //cmbLopcu.DataBindings.Clear();
-        //        //HocSinhCtrl.TimTheoTen(lvLopCu, txtTimkiem.Text);
-        //    }
-        //}
+        private void cmbMaHS_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbMaHS.SelectedValue != null)
+                m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString()
+                    , cmblop.SelectedValue.ToString()
+                    ,cmbMaHS.SelectedValue.ToString(),cmbHocsinh);
+        }
 
        
     }
