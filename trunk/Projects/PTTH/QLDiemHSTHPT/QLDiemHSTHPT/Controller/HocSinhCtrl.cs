@@ -147,7 +147,23 @@ namespace QLDiemHSTHPT.Controller
                lV.Items.Add(item);
            }
        }
-       
+
+       public void HienThiDsHocSinhChuaPL(ListViewEx lV)
+       {
+           DataTable m_DT = m_HocSinhData.TimHSChuaPL();
+           int i = m_DT.Rows.Count;
+           
+           lV.Items.Clear();
+           foreach (DataRow Row in m_DT.Rows)
+           {
+               ListViewItem item = new ListViewItem();
+               item.Text = Row["MaHocSinh"].ToString();
+               item.SubItems.Add(Row["HoTen"].ToString());
+
+               lV.Items.Add(item);
+           }
+       }
+
        //phan lop
        public DataTable HienThiDsHocSinhTheoNamHoc(String namHoc)
        {

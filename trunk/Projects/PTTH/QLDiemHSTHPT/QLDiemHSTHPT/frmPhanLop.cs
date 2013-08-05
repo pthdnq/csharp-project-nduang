@@ -260,5 +260,10 @@ namespace QLDiemHSTHPT
             }
         }
 
+        private void btnChoPhanLop_Click(object sender, EventArgs e)
+        {
+            m_HocSinhCtrl.HienThiDsHocSinhChuaPL(lvLopCu);
+        }
+
     }
 }
