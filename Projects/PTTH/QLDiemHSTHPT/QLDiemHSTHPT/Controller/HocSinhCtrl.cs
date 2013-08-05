@@ -132,37 +132,9 @@ namespace QLDiemHSTHPT.Controller
            dGV.DataSource = bS;
        }
 
-       //hien thi ds trong phan lop
-       public void HienThiDsHocSinhTheoLop(String namHoc, String khoiLop, String lop, ListViewEx lV)
-       {
-           DataTable m_DT = m_HocSinhData.LayDsHocSinhTheoLop(namHoc, khoiLop, lop);
-           int i = m_DT.Rows.Count;
-           lV.Items.Clear();
-           foreach (DataRow Row in m_DT.Rows)
-           {
-               ListViewItem item = new ListViewItem();
-               item.Text = Row["MaHocSinh"].ToString();
-               item.SubItems.Add(Row["HoTen"].ToString());
 
-               lV.Items.Add(item);
-           }
-       }
 
-       public void HienThiDsHocSinhChuaPL(ListViewEx lV)
-       {
-           DataTable m_DT = m_HocSinhData.TimHSChuaPL();
-           int i = m_DT.Rows.Count;
-           
-           lV.Items.Clear();
-           foreach (DataRow Row in m_DT.Rows)
-           {
-               ListViewItem item = new ListViewItem();
-               item.Text = Row["MaHocSinh"].ToString();
-               item.SubItems.Add(Row["HoTen"].ToString());
 
-               lV.Items.Add(item);
-           }
-       }
 
        //phan lop
        public DataTable HienThiDsHocSinhTheoNamHoc(String namHoc)
@@ -277,6 +249,38 @@ namespace QLDiemHSTHPT.Controller
                ListViewItem item = new ListViewItem(row["MAHOCSINH"].ToString());
                item.SubItems.Add(row["HOTEN"].ToString());
                lvw.Items.Add(item);
+           }
+
+       }
+
+       //hien thi ds trong phan lop
+       public static void HienThiDsHocSinhTheoLop(String namHoc, String khoiLop, String lop, ListViewEx lV)
+       {
+           HocSinhData data = new HocSinhData();
+           DataTable m_DT = data.LayDsHocSinhTheoLop(namHoc, khoiLop, lop);
+           int i = m_DT.Rows.Count;
+           lV.Items.Clear();
+           foreach (DataRow Row in m_DT.Rows)
+           {
+               ListViewItem item = new ListViewItem();
+               item.Text = Row["MaHocSinh"].ToString();
+               item.SubItems.Add(Row["HoTen"].ToString());
+
+               lV.Items.Add(item);
+           }
+       }
+
+       public static void HienThiDsHocSinhChuaPL(ListViewEx lV)
+       {
+           HocSinhData data = new HocSinhData();
+           DataTable m_DT = data.TimHSChuaPL();
+           lV.Items.Clear();
+           foreach (DataRow Row in m_DT.Rows)
+           {
+               ListViewItem item = new ListViewItem(Row["MAHOCSINH"].ToString());
+               item.SubItems.Add(Row["HOTEN"].ToString());
+
+               lV.Items.Add(item);
            }
 
        }
