@@ -151,7 +151,7 @@ namespace QLDiemHSTHPT
                 && cmbnamhocmoi.SelectedValue != null
                 && cmbKhoilopMoi.SelectedValue != null)
             {
-                m_HocSinhCtrl.HienThiDsHocSinhTheoLop(
+                HocSinhCtrl.HienThiDsHocSinhTheoLop(
                     cmbnamhocmoi.SelectedValue.ToString(),
                     cmbKhoilopMoi.SelectedValue.ToString(),
                     cmbLopmoi.SelectedValue.ToString(),
@@ -177,14 +177,14 @@ namespace QLDiemHSTHPT
             {
                 m_LopMoiCtrl.HienThiComboBox(cmbKhoilopMoi.SelectedValue.ToString(), cmbnamhocmoi.SelectedValue.ToString(), cmbLopmoi);
 
-                //cmbLopmoi.DataBindings.Clear();
-                //lvLopMoi.Items.Clear();
+                cmbLopmoi.DataBindings.Clear();
+                lvLopMoi.Items.Clear();
             }
             if (cmbLopmoi.SelectedValue != null
                     && cmbnamhocmoi.SelectedValue != null
                     && cmbKhoilopMoi.SelectedValue != null)
             {
-                m_HocSinhCtrl.HienThiDsHocSinhTheoLop(
+                HocSinhCtrl.HienThiDsHocSinhTheoLop(
                     cmbnamhocmoi.SelectedValue.ToString(),
                     cmbKhoilopMoi.SelectedValue.ToString(),
                     cmbLopmoi.SelectedValue.ToString(),
@@ -199,7 +199,7 @@ namespace QLDiemHSTHPT
                 && cmbnamhocmoi.SelectedValue != null
                 && cmbKhoilopMoi.SelectedValue != null)
             {
-                m_HocSinhCtrl.HienThiDsHocSinhTheoLop(
+                HocSinhCtrl.HienThiDsHocSinhTheoLop(
                     cmbnamhocmoi.SelectedValue.ToString(), 
                     cmbKhoilopMoi.SelectedValue.ToString(), 
                     cmbLopmoi.SelectedValue.ToString(), 
@@ -213,10 +213,10 @@ namespace QLDiemHSTHPT
                 //if (txtTimkiem.Text == "")
                 //    MessageBoxEx.Show("Chưa nhập nội dung cần tìm kiếm vào khung!", "LỖI TÌM KIẾM", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            HocSinhCtrl.TimTheoTen(lvLopCu, txtTimkiem.Text);
+//            HocSinhCtrl.TimTheoTen(lvLopCu, txtTimkiem.Text);
             if (cmbLopcu.SelectedValue != null && cmbNamhoccu.SelectedValue != null && cmbKhoilopcu.SelectedValue != null)
             {
-                m_HocSinhCtrl.HienThiDsHocSinhTheoLop(cmbNamhoccu.SelectedValue.ToString(), cmbKhoilopcu.SelectedValue.ToString(), cmbLopcu.SelectedValue.ToString(), lvLopCu);
+                HocSinhCtrl.HienThiDsHocSinhTheoLop(cmbNamhoccu.SelectedValue.ToString(), cmbKhoilopcu.SelectedValue.ToString(), cmbLopcu.SelectedValue.ToString(), lvLopCu);
             }
 
         }
@@ -230,6 +230,7 @@ namespace QLDiemHSTHPT
                 //    MessageBoxEx.Show("Chưa nhập nội dung cần tìm kiếm vào khung!", "LỖI TÌM KIẾM", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             HocSinhCtrl.TimTheoMa(lvLopCu, txtTimkiem.Text);
+            //m_HocSinhCtrl.HienThiDsHocSinhChuaPL(lvLopCu);
         }
 
         private void cmbNamhoccu_Click(object sender, EventArgs e)
@@ -252,7 +253,7 @@ namespace QLDiemHSTHPT
                     && cmbnamhocmoi.SelectedValue != null
                     && cmbKhoilopMoi.SelectedValue != null)
             {
-                m_HocSinhCtrl.HienThiDsHocSinhTheoLop(
+                HocSinhCtrl.HienThiDsHocSinhTheoLop(
                     cmbnamhocmoi.SelectedValue.ToString(),
                     cmbKhoilopMoi.SelectedValue.ToString(),
                     cmbLopmoi.SelectedValue.ToString(),
@@ -262,7 +263,8 @@ namespace QLDiemHSTHPT
 
         private void btnChoPhanLop_Click(object sender, EventArgs e)
         {
-            m_HocSinhCtrl.HienThiDsHocSinhChuaPL(lvLopCu);
+            //m_HocSinhCtrl.HienThiDsHocSinhChuaPL(lvLopCu);
+            HocSinhCtrl.HienThiDsHocSinhChuaPL(lvLopCu);
         }
 
     }
