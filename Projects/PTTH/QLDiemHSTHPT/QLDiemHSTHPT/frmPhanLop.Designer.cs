@@ -60,6 +60,7 @@ namespace QLDiemHSTHPT
             this.lblKhoiLopcu = new DevComponents.DotNetBar.LabelX();
             this.cmbNamhoccu = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.lblNamhoccu = new DevComponents.DotNetBar.LabelX();
+            this.btnChoPhanLop = new DevComponents.DotNetBar.ButtonX();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -157,9 +158,9 @@ namespace QLDiemHSTHPT
             this.lvLopMoi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvLopMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvLopMoi.FullRowSelect = true;
-            this.lvLopMoi.Location = new System.Drawing.Point(0, 131);
+            this.lvLopMoi.Location = new System.Drawing.Point(0, 167);
             this.lvLopMoi.Name = "lvLopMoi";
-            this.lvLopMoi.Size = new System.Drawing.Size(416, 389);
+            this.lvLopMoi.Size = new System.Drawing.Size(416, 353);
             this.lvLopMoi.TabIndex = 6;
             this.lvLopMoi.UseCompatibleStateImageBehavior = false;
             this.lvLopMoi.View = System.Windows.Forms.View.Details;
@@ -187,7 +188,7 @@ namespace QLDiemHSTHPT
             this.groupPanelTTLopmoi.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPanelTTLopmoi.Location = new System.Drawing.Point(0, 0);
             this.groupPanelTTLopmoi.Name = "groupPanelTTLopmoi";
-            this.groupPanelTTLopmoi.Size = new System.Drawing.Size(416, 131);
+            this.groupPanelTTLopmoi.Size = new System.Drawing.Size(416, 167);
             // 
             // 
             // 
@@ -302,9 +303,9 @@ namespace QLDiemHSTHPT
             this.lvLopCu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvLopCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvLopCu.FullRowSelect = true;
-            this.lvLopCu.Location = new System.Drawing.Point(0, 131);
+            this.lvLopCu.Location = new System.Drawing.Point(0, 167);
             this.lvLopCu.Name = "lvLopCu";
-            this.lvLopCu.Size = new System.Drawing.Size(406, 389);
+            this.lvLopCu.Size = new System.Drawing.Size(406, 353);
             this.lvLopCu.TabIndex = 3;
             this.lvLopCu.UseCompatibleStateImageBehavior = false;
             this.lvLopCu.View = System.Windows.Forms.View.Details;
@@ -323,6 +324,7 @@ namespace QLDiemHSTHPT
             // 
             this.groupPanelTTLopcu.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanelTTLopcu.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanelTTLopcu.Controls.Add(this.btnChoPhanLop);
             this.groupPanelTTLopcu.Controls.Add(this.btnTimKiemMa);
             this.groupPanelTTLopcu.Controls.Add(this.btnTimKiemTen);
             this.groupPanelTTLopcu.Controls.Add(this.txtTimkiem);
@@ -335,7 +337,7 @@ namespace QLDiemHSTHPT
             this.groupPanelTTLopcu.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPanelTTLopcu.Location = new System.Drawing.Point(0, 0);
             this.groupPanelTTLopcu.Name = "groupPanelTTLopcu";
-            this.groupPanelTTLopcu.Size = new System.Drawing.Size(406, 131);
+            this.groupPanelTTLopcu.Size = new System.Drawing.Size(406, 167);
             // 
             // 
             // 
@@ -364,7 +366,7 @@ namespace QLDiemHSTHPT
             this.btnTimKiemMa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnTimKiemMa.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.btnTimKiemMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiemMa.Location = new System.Drawing.Point(220, 49);
+            this.btnTimKiemMa.Location = new System.Drawing.Point(220, 78);
             this.btnTimKiemMa.Name = "btnTimKiemMa";
             this.btnTimKiemMa.Size = new System.Drawing.Size(157, 23);
             this.btnTimKiemMa.TabIndex = 8;
@@ -376,7 +378,7 @@ namespace QLDiemHSTHPT
             this.btnTimKiemTen.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnTimKiemTen.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.btnTimKiemTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiemTen.Location = new System.Drawing.Point(220, 20);
+            this.btnTimKiemTen.Location = new System.Drawing.Point(220, 49);
             this.btnTimKiemTen.Name = "btnTimKiemTen";
             this.btnTimKiemTen.Size = new System.Drawing.Size(157, 23);
             this.btnTimKiemTen.TabIndex = 7;
@@ -390,7 +392,7 @@ namespace QLDiemHSTHPT
             // 
             this.txtTimkiem.Border.Class = "TextBoxBorder";
             this.txtTimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimkiem.Location = new System.Drawing.Point(220, 78);
+            this.txtTimkiem.Location = new System.Drawing.Point(220, 113);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(170, 20);
             this.txtTimkiem.TabIndex = 6;
@@ -467,6 +469,18 @@ namespace QLDiemHSTHPT
             this.lblNamhoccu.TabIndex = 0;
             this.lblNamhoccu.Text = "Năm học:";
             // 
+            // btnChoPhanLop
+            // 
+            this.btnChoPhanLop.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnChoPhanLop.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
+            this.btnChoPhanLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChoPhanLop.Location = new System.Drawing.Point(220, 20);
+            this.btnChoPhanLop.Name = "btnChoPhanLop";
+            this.btnChoPhanLop.Size = new System.Drawing.Size(157, 23);
+            this.btnChoPhanLop.TabIndex = 9;
+            this.btnChoPhanLop.Text = "Chờ phân lớp";
+            this.btnChoPhanLop.Click += new System.EventHandler(this.btnChoPhanLop_Click);
+            // 
             // frmPhanLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,6 +537,7 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.Controls.TextBoxX txtTimkiem;
         private DevComponents.DotNetBar.ButtonX btnTimKiemTen;
         private DevComponents.DotNetBar.ButtonX btnTimKiemMa;
+        private DevComponents.DotNetBar.ButtonX btnChoPhanLop;
 
     }
 }

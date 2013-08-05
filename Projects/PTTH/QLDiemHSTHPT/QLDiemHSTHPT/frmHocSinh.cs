@@ -45,7 +45,16 @@ namespace QLDiemHSTHPT
         private void bngThemmoi_Click(object sender, EventArgs e)
         {
             DataRow m_Row = m_HocSinhCtrl.ThemDongMoi();
-            m_Row["MaHocSinh"] = "HS" + quyDinh.LaySTT(dgvhocsinh.Rows.Count + 1);
+            int iLastRow = dgvhocsinh.Rows.Count - 1;
+            int iMaHSLast = 1;
+            if (iLastRow >= 0)
+            {
+                string strMaHSLast = dgvhocsinh.Rows[iLastRow].Cells["MaHocSinh"].Value.ToString();
+                string MaHSLast = strMaHSLast.Replace("HS", "");
+                iMaHSLast = int.Parse(MaHSLast) + 1;
+            }
+            m_Row["MaHocSinh"] = "HS" + quyDinh.LaySTT(iMaHSLast);
+
             m_Row["HoTen"] = "";
             m_Row["GioiTinh"] = false;
             m_Row["NgaySinh"] = DateTime.Today;

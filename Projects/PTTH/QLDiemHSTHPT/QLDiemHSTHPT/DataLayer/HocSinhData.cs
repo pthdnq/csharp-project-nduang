@@ -159,6 +159,16 @@ namespace QLDiemHSTHPT.DataLayer
            return m_HocSinhData;
        }
 
+       public DataTable TimHSChuaPL()
+       {
+           SqlCommand cmd = new SqlCommand(@"SELECT * "+
+                                               "FROM HOCSINH "+
+                                               "WHERE NOT EXISTS(SELECT PHANLOP.MaHocSinh FROM PHANLOP"+
+                                                                " WHERE PHANLOP.MaHocSinh=HOCSINH.MaHocSinh)");
+           m_HocSinhData.Load(cmd);
+           return m_HocSinhData;
+       }
+
        public DataTable TimTheoTen(String ten)
        {
            SqlCommand cmd = new SqlCommand("SELECT * FROM HOCSINH WHERE HoTen LIKE '%' + @ten + '%'");
