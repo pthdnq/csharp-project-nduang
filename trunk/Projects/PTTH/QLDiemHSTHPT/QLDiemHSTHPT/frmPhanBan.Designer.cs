@@ -1,7 +1,7 @@
 using System.Windows.Forms;
 namespace QLDiemHSTHPT
 {
-    partial class frmDanToc
+    partial class frmPhanBan
     {
         /// <summary>
         /// Required designer variable.
@@ -33,12 +33,15 @@ namespace QLDiemHSTHPT
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDanToc));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.groupBoxDsdantoc = new System.Windows.Forms.GroupBox();
-            this.dgvDantoc = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.bdgDantoc = new System.Windows.Forms.BindingNavigator(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhanBan));
+            this.groupBoxDsban = new System.Windows.Forms.GroupBox();
+            this.dgvPhanBan = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.MaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdgPhanBan = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -52,32 +55,30 @@ namespace QLDiemHSTHPT
             this.bngXoa = new System.Windows.Forms.ToolStripButton();
             this.bngluu = new System.Windows.Forms.ToolStripButton();
             this.bngthoat = new System.Windows.Forms.ToolStripButton();
-            this.MaDanToc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDanToc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBoxDsdantoc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDantoc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgDantoc)).BeginInit();
-            this.bdgDantoc.SuspendLayout();
+            this.groupBoxDsban.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhanBan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgPhanBan)).BeginInit();
+            this.bdgPhanBan.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBoxDsdantoc
+            // groupBoxDsban
             // 
-            this.groupBoxDsdantoc.Controls.Add(this.dgvDantoc);
-            this.groupBoxDsdantoc.Controls.Add(this.bdgDantoc);
-            this.groupBoxDsdantoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxDsdantoc.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxDsdantoc.Name = "groupBoxDsdantoc";
-            this.groupBoxDsdantoc.Size = new System.Drawing.Size(348, 296);
-            this.groupBoxDsdantoc.TabIndex = 0;
-            this.groupBoxDsdantoc.TabStop = false;
-            this.groupBoxDsdantoc.Text = "Danh Sách Dân Tộc";
+            this.groupBoxDsban.Controls.Add(this.dgvPhanBan);
+            this.groupBoxDsban.Controls.Add(this.bdgPhanBan);
+            this.groupBoxDsban.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxDsban.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxDsban.Name = "groupBoxDsban";
+            this.groupBoxDsban.Size = new System.Drawing.Size(348, 296);
+            this.groupBoxDsban.TabIndex = 0;
+            this.groupBoxDsban.TabStop = false;
+            this.groupBoxDsban.Text = "Danh Sách Ban";
             // 
-            // dgvDantoc
+            // dgvPhanBan
             // 
-            this.dgvDantoc.AllowUserToAddRows = false;
+            this.dgvPhanBan.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvDantoc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvDantoc.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.dgvPhanBan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPhanBan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -85,11 +86,11 @@ namespace QLDiemHSTHPT
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDantoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDantoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDantoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaDanToc,
-            this.TenDanToc});
+            this.dgvPhanBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvPhanBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhanBan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaBan,
+            this.TenBan});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -97,22 +98,48 @@ namespace QLDiemHSTHPT
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDantoc.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvDantoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDantoc.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvDantoc.Location = new System.Drawing.Point(3, 41);
-            this.dgvDantoc.Name = "dgvDantoc";
-            this.dgvDantoc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvDantoc.Size = new System.Drawing.Size(342, 252);
-            this.dgvDantoc.TabIndex = 1;
+            this.dgvPhanBan.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvPhanBan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPhanBan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgvPhanBan.Location = new System.Drawing.Point(3, 41);
+            this.dgvPhanBan.Name = "dgvPhanBan";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPhanBan.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvPhanBan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvPhanBan.Size = new System.Drawing.Size(342, 252);
+            this.dgvPhanBan.TabIndex = 3;
             // 
-            // bdgDantoc
+            // MaBan
             // 
-            this.bdgDantoc.AddNewItem = null;
-            this.bdgDantoc.CountItem = this.bindingNavigatorCountItem;
-            this.bdgDantoc.CountItemFormat = "của {0}";
-            this.bdgDantoc.DeleteItem = null;
-            this.bdgDantoc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MaBan.DataPropertyName = "MaBan";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaBan.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MaBan.HeaderText = "Mã Ban";
+            this.MaBan.Name = "MaBan";
+            this.MaBan.Width = 150;
+            // 
+            // TenBan
+            // 
+            this.TenBan.DataPropertyName = "TenBan";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenBan.DefaultCellStyle = dataGridViewCellStyle4;
+            this.TenBan.HeaderText = "Tên Ban";
+            this.TenBan.Name = "TenBan";
+            this.TenBan.Width = 150;
+            // 
+            // bdgPhanBan
+            // 
+            this.bdgPhanBan.AddNewItem = null;
+            this.bdgPhanBan.CountItem = this.bindingNavigatorCountItem;
+            this.bdgPhanBan.CountItemFormat = "của {0}";
+            this.bdgPhanBan.DeleteItem = null;
+            this.bdgPhanBan.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -126,15 +153,15 @@ namespace QLDiemHSTHPT
             this.bngXoa,
             this.bngluu,
             this.bngthoat});
-            this.bdgDantoc.Location = new System.Drawing.Point(3, 16);
-            this.bdgDantoc.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bdgDantoc.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bdgDantoc.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bdgDantoc.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bdgDantoc.Name = "bdgDantoc";
-            this.bdgDantoc.PositionItem = this.bindingNavigatorPositionItem;
-            this.bdgDantoc.Size = new System.Drawing.Size(342, 25);
-            this.bdgDantoc.TabIndex = 0;
+            this.bdgPhanBan.Location = new System.Drawing.Point(3, 16);
+            this.bdgPhanBan.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bdgPhanBan.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bdgPhanBan.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bdgPhanBan.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bdgPhanBan.Name = "bdgPhanBan";
+            this.bdgPhanBan.PositionItem = this.bindingNavigatorPositionItem;
+            this.bdgPhanBan.Size = new System.Drawing.Size(342, 25);
+            this.bdgPhanBan.TabIndex = 2;
             // 
             // bindingNavigatorCountItem
             // 
@@ -221,7 +248,7 @@ namespace QLDiemHSTHPT
             this.bngXoa.Name = "bngXoa";
             this.bngXoa.Size = new System.Drawing.Size(23, 22);
             this.bngXoa.Text = "Xóa";
-            this.bngXoa.Click += new System.EventHandler(this.bngXoa_Click_1);
+            this.bngXoa.Click += new System.EventHandler(this.bngXoa_Click);
             // 
             // bngluu
             // 
@@ -243,67 +270,49 @@ namespace QLDiemHSTHPT
             this.bngthoat.Text = "Thoát";
             this.bngthoat.Click += new System.EventHandler(this.bngthoat_Click);
             // 
-            // MaDanToc
-            // 
-            this.MaDanToc.DataPropertyName = "MaDanToc";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaDanToc.DefaultCellStyle = dataGridViewCellStyle3;
-            this.MaDanToc.HeaderText = "Mã Dân Tộc";
-            this.MaDanToc.Name = "MaDanToc";
-            this.MaDanToc.Width = 150;
-            // 
-            // TenDanToc
-            // 
-            this.TenDanToc.DataPropertyName = "TenDanToc";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenDanToc.DefaultCellStyle = dataGridViewCellStyle4;
-            this.TenDanToc.HeaderText = "Tên Dân Tộc";
-            this.TenDanToc.Name = "TenDanToc";
-            this.TenDanToc.Width = 150;
-            // 
-            // frmDanToc
+            // frmPhanBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 296);
-            this.Controls.Add(this.groupBoxDsdantoc);
+            this.Controls.Add(this.groupBoxDsban);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmDanToc";
-            this.Text = "Dân Tộc ";
+            this.Name = "frmPhanBan";
+            this.Text = "Phân Ban";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmDanToc_Load);
-            this.groupBoxDsdantoc.ResumeLayout(false);
-            this.groupBoxDsdantoc.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDantoc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgDantoc)).EndInit();
-            this.bdgDantoc.ResumeLayout(false);
-            this.bdgDantoc.PerformLayout();
+            this.Load += new System.EventHandler(this.frmPhanBan_Load);
+            this.groupBoxDsban.ResumeLayout(false);
+            this.groupBoxDsban.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhanBan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgPhanBan)).EndInit();
+            this.bdgPhanBan.ResumeLayout(false);
+            this.bdgPhanBan.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBoxDsdantoc;
-        private System.Windows.Forms.BindingNavigator bdgDantoc;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton bngluu;
-        private System.Windows.Forms.ToolStripButton bngthoat;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dgvDantoc;
-        private System.Windows.Forms.ToolStripButton bngThemmoi;
-        private System.Windows.Forms.ToolStripButton bngXoa;
-        private DataGridViewTextBoxColumn MaDanToc;
-        private DataGridViewTextBoxColumn TenDanToc;
+        private System.Windows.Forms.GroupBox groupBoxDsban;
+        private BindingNavigator bdgPhanBan;
+        private ToolStripLabel bindingNavigatorCountItem;
+        private ToolStripButton bindingNavigatorMoveFirstItem;
+        private ToolStripButton bindingNavigatorMovePreviousItem;
+        private ToolStripSeparator bindingNavigatorSeparator;
+        private ToolStripTextBox bindingNavigatorPositionItem;
+        private ToolStripSeparator bindingNavigatorSeparator1;
+        private ToolStripButton bindingNavigatorMoveNextItem;
+        private ToolStripButton bindingNavigatorMoveLastItem;
+        private ToolStripSeparator bindingNavigatorSeparator2;
+        private ToolStripButton bngThemmoi;
+        private ToolStripButton bngXoa;
+        private ToolStripButton bngluu;
+        private ToolStripButton bngthoat;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvPhanBan;
+        private DataGridViewTextBoxColumn MaBan;
+        private DataGridViewTextBoxColumn TenBan;
     }
 }

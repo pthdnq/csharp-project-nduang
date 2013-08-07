@@ -56,6 +56,8 @@ namespace QLDiemHSTHPT
             this.itemContainer11 = new DevComponents.DotNetBar.ItemContainer();
             this.buttonItem29 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem30 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnLoaiNguoiDung = new DevComponents.DotNetBar.ButtonItem();
+            this.btnPhanQuyen = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem31 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem32 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem33 = new DevComponents.DotNetBar.ButtonItem();
@@ -231,8 +233,7 @@ namespace QLDiemHSTHPT
             this.buttonItem24 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem25 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem26 = new DevComponents.DotNetBar.ButtonItem();
-            this.btnLoaiNguoiDung = new DevComponents.DotNetBar.ButtonItem();
-            this.btnPhanQuyen = new DevComponents.DotNetBar.ButtonItem();
+            this.phânBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.bottomBar)).BeginInit();
             this.bottomBar.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -525,6 +526,20 @@ namespace QLDiemHSTHPT
             this.buttonItem30.Text = "Quản lý người dùng";
             this.buttonItem30.Tooltip = "Quản lý người dùng";
             this.buttonItem30.Click += new System.EventHandler(this.buttonItem30_Click);
+            // 
+            // btnLoaiNguoiDung
+            // 
+            this.btnLoaiNguoiDung.ImagePaddingHorizontal = 8;
+            this.btnLoaiNguoiDung.Name = "btnLoaiNguoiDung";
+            this.btnLoaiNguoiDung.Text = "Loại người dùng";
+            this.btnLoaiNguoiDung.Click += new System.EventHandler(this.btnLoaiNguoiDung_Click);
+            // 
+            // btnPhanQuyen
+            // 
+            this.btnPhanQuyen.ImagePaddingHorizontal = 8;
+            this.btnPhanQuyen.Name = "btnPhanQuyen";
+            this.btnPhanQuyen.Text = "Phân Quyền";
+            this.btnPhanQuyen.Click += new System.EventHandler(this.btnPhanQuyen_Click);
             // 
             // buttonItem31
             // 
@@ -1042,7 +1057,8 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem55,
             this.toolStripMenuItem58,
             this.toolStripMenuItem59,
-            this.toolStripMenuItem60});
+            this.toolStripMenuItem60,
+            this.phânBanToolStripMenuItem});
             this.toolStripMenuItem46.Name = "toolStripMenuItem46";
             this.toolStripMenuItem46.Size = new System.Drawing.Size(63, 20);
             this.toolStripMenuItem46.Text = "Quản Lý";
@@ -2232,19 +2248,13 @@ namespace QLDiemHSTHPT
             this.buttonItem26.Text = "Thoát";
             this.buttonItem26.Tooltip = "Thoát";
             // 
-            // btnLoaiNguoiDung
+            // phânBanToolStripMenuItem
             // 
-            this.btnLoaiNguoiDung.ImagePaddingHorizontal = 8;
-            this.btnLoaiNguoiDung.Name = "btnLoaiNguoiDung";
-            this.btnLoaiNguoiDung.Text = "Loại người dùng";
-            this.btnLoaiNguoiDung.Click += new System.EventHandler(this.btnLoaiNguoiDung_Click);
-            // 
-            // btnPhanQuyen
-            // 
-            this.btnPhanQuyen.ImagePaddingHorizontal = 8;
-            this.btnPhanQuyen.Name = "btnPhanQuyen";
-            this.btnPhanQuyen.Text = "Phân Quyền";
-            this.btnPhanQuyen.Click += new System.EventHandler(this.btnPhanQuyen_Click);
+            this.phânBanToolStripMenuItem.Image = global::QLDiemHSTHPT.Properties.Resources.saoluu;
+            this.phânBanToolStripMenuItem.Name = "phânBanToolStripMenuItem";
+            this.phânBanToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.phânBanToolStripMenuItem.Text = "Phân Ban";
+            this.phânBanToolStripMenuItem.Click += new System.EventHandler(this.phânBanToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -2485,6 +2495,7 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.ButtonX btnXemDiemChung;
         private DevComponents.DotNetBar.ButtonItem btnLoaiNguoiDung;
         private DevComponents.DotNetBar.ButtonItem btnPhanQuyen;
+        private ToolStripMenuItem phânBanToolStripMenuItem;
 
 
     }
