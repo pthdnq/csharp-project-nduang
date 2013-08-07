@@ -16,6 +16,7 @@ namespace QLDiemHSTHPT
         NguoiDungCtrl m_NguoiDungCtrl = new NguoiDungCtrl();
         frmTonGiao m_TonGiao = null;
         frmDanToc m_DanToc = null;
+        frmPhanBan m_PhanBan = null;
         frmConnection m_Connection = null;
         frmHanhKiem m_HanhKiem = null;
         frmHocLuc m_HocLuc = null;
@@ -969,6 +970,17 @@ namespace QLDiemHSTHPT
                 m_LoaiNguoiDung.Show();
             }
             else m_LoaiNguoiDung.Activate();
+        }
+
+        private void phânBanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (m_PhanBan == null || m_PhanBan.IsDisposed)
+            {
+                m_PhanBan = new frmPhanBan();
+                m_PhanBan.MdiParent = frmMain.ActiveForm;
+                m_PhanBan.Show();
+            }
+            else m_PhanBan.Activate();
         }
     }
 }
