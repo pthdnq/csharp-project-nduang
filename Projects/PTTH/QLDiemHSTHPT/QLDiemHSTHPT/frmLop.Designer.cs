@@ -65,12 +65,6 @@ namespace QLDiemHSTHPT
             this.btnNhapTT = new DevComponents.DotNetBar.ButtonItem();
             this.groupBoxDsgv = new System.Windows.Forms.GroupBox();
             this.dgvLop = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKhoiLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.MaNamHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.SiSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaGiaoVien = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bdgLop = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -86,6 +80,13 @@ namespace QLDiemHSTHPT
             this.bngluu = new System.Windows.Forms.ToolStripButton();
             this.bngthoat = new System.Windows.Forms.ToolStripButton();
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
+            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKhoiLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.MaNamHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.SiSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaGiaoVien = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Ban = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.nvgPanelLop.SuspendLayout();
             this.ngvPanelTimKiem.SuspendLayout();
             this.navigationPanePanel1.SuspendLayout();
@@ -99,8 +100,8 @@ namespace QLDiemHSTHPT
             // nvgPanelLop
             // 
             this.nvgPanelLop.CanCollapse = true;
-            this.nvgPanelLop.Controls.Add(this.ngvPanelTimKiem);
             this.nvgPanelLop.Controls.Add(this.navigationPanePanel1);
+            this.nvgPanelLop.Controls.Add(this.ngvPanelTimKiem);
             this.nvgPanelLop.Dock = System.Windows.Forms.DockStyle.Left;
             this.nvgPanelLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nvgPanelLop.ItemPaddingBottom = 2;
@@ -133,7 +134,7 @@ namespace QLDiemHSTHPT
             this.nvgPanelLop.TitlePanel.Style.GradientAngle = 90;
             this.nvgPanelLop.TitlePanel.Style.MarginLeft = 4;
             this.nvgPanelLop.TitlePanel.TabIndex = 0;
-            this.nvgPanelLop.TitlePanel.Text = "Tìm kiếm giáo viên";
+            this.nvgPanelLop.TitlePanel.Text = "Nhập thông tin";
             // 
             // ngvPanelTimKiem
             // 
@@ -144,10 +145,10 @@ namespace QLDiemHSTHPT
             this.ngvPanelTimKiem.Controls.Add(this.txtTimKiemGV);
             this.ngvPanelTimKiem.Controls.Add(this.lblTimKiem);
             this.ngvPanelTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ngvPanelTimKiem.Location = new System.Drawing.Point(1, 25);
+            this.ngvPanelTimKiem.Location = new System.Drawing.Point(1, 1);
             this.ngvPanelTimKiem.Name = "ngvPanelTimKiem";
             this.ngvPanelTimKiem.ParentItem = this.btnTimKiemGV;
-            this.ngvPanelTimKiem.Size = new System.Drawing.Size(190, 363);
+            this.ngvPanelTimKiem.Size = new System.Drawing.Size(190, 489);
             this.ngvPanelTimKiem.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.ngvPanelTimKiem.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.ngvPanelTimKiem.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -213,7 +214,6 @@ namespace QLDiemHSTHPT
             // btnTimKiemGV
             // 
             this.btnTimKiemGV.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnTimKiemGV.Checked = true;
             this.btnTimKiemGV.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.btnTimKiemGV.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiemGV.Image")));
             this.btnTimKiemGV.ImagePaddingHorizontal = 8;
@@ -242,10 +242,10 @@ namespace QLDiemHSTHPT
             this.navigationPanePanel1.Controls.Add(this.lblMaLop);
             this.navigationPanePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navigationPanePanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.navigationPanePanel1.Location = new System.Drawing.Point(1, 1);
+            this.navigationPanePanel1.Location = new System.Drawing.Point(1, 25);
             this.navigationPanePanel1.Name = "navigationPanePanel1";
             this.navigationPanePanel1.ParentItem = this.btnNhapTT;
-            this.navigationPanePanel1.Size = new System.Drawing.Size(190, 387);
+            this.navigationPanePanel1.Size = new System.Drawing.Size(190, 363);
             this.navigationPanePanel1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navigationPanePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navigationPanePanel1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -421,6 +421,7 @@ namespace QLDiemHSTHPT
             // btnNhapTT
             // 
             this.btnNhapTT.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnNhapTT.Checked = true;
             this.btnNhapTT.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.btnNhapTT.Image = ((System.Drawing.Image)(resources.GetObject("btnNhapTT.Image")));
             this.btnNhapTT.ImagePaddingHorizontal = 8;
@@ -451,7 +452,8 @@ namespace QLDiemHSTHPT
             this.MaKhoiLop,
             this.MaNamHoc,
             this.SiSo,
-            this.MaGiaoVien});
+            this.MaGiaoVien,
+            this.Ban});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -467,64 +469,6 @@ namespace QLDiemHSTHPT
             this.dgvLop.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvLop.Size = new System.Drawing.Size(722, 447);
             this.dgvLop.TabIndex = 6;
-            // 
-            // MaLop
-            // 
-            this.MaLop.DataPropertyName = "MaLop";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaLop.DefaultCellStyle = dataGridViewCellStyle1;
-            this.MaLop.HeaderText = "Mã Lớp";
-            this.MaLop.Name = "MaLop";
-            // 
-            // TenLop
-            // 
-            this.TenLop.DataPropertyName = "TenLop";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenLop.DefaultCellStyle = dataGridViewCellStyle2;
-            this.TenLop.HeaderText = "Tên Lớp";
-            this.TenLop.Name = "TenLop";
-            this.TenLop.Width = 150;
-            // 
-            // MaKhoiLop
-            // 
-            this.MaKhoiLop.DataPropertyName = "MaKhoiLop";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaKhoiLop.DefaultCellStyle = dataGridViewCellStyle3;
-            this.MaKhoiLop.HeaderText = "Khối Lớp";
-            this.MaKhoiLop.Name = "MaKhoiLop";
-            this.MaKhoiLop.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaKhoiLop.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // MaNamHoc
-            // 
-            this.MaNamHoc.DataPropertyName = "MaNamHoc";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaNamHoc.DefaultCellStyle = dataGridViewCellStyle4;
-            this.MaNamHoc.HeaderText = "Năm Học";
-            this.MaNamHoc.Name = "MaNamHoc";
-            this.MaNamHoc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaNamHoc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // SiSo
-            // 
-            this.SiSo.DataPropertyName = "SiSo";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SiSo.DefaultCellStyle = dataGridViewCellStyle5;
-            this.SiSo.HeaderText = "Sỉ Số";
-            this.SiSo.Name = "SiSo";
-            this.SiSo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.SiSo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // MaGiaoVien
-            // 
-            this.MaGiaoVien.DataPropertyName = "MaGiaoVien";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaGiaoVien.DefaultCellStyle = dataGridViewCellStyle6;
-            this.MaGiaoVien.HeaderText = "Giáo Viên Chủ Nhiệm";
-            this.MaGiaoVien.Name = "MaGiaoVien";
-            this.MaGiaoVien.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaGiaoVien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.MaGiaoVien.Width = 200;
             // 
             // bdgLop
             // 
@@ -674,6 +618,69 @@ namespace QLDiemHSTHPT
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // MaLop
+            // 
+            this.MaLop.DataPropertyName = "MaLop";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaLop.DefaultCellStyle = dataGridViewCellStyle1;
+            this.MaLop.HeaderText = "Mã Lớp";
+            this.MaLop.Name = "MaLop";
+            // 
+            // TenLop
+            // 
+            this.TenLop.DataPropertyName = "TenLop";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenLop.DefaultCellStyle = dataGridViewCellStyle2;
+            this.TenLop.HeaderText = "Tên Lớp";
+            this.TenLop.Name = "TenLop";
+            this.TenLop.Width = 150;
+            // 
+            // MaKhoiLop
+            // 
+            this.MaKhoiLop.DataPropertyName = "MaKhoiLop";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaKhoiLop.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MaKhoiLop.HeaderText = "Khối Lớp";
+            this.MaKhoiLop.Name = "MaKhoiLop";
+            this.MaKhoiLop.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaKhoiLop.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // MaNamHoc
+            // 
+            this.MaNamHoc.DataPropertyName = "MaNamHoc";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaNamHoc.DefaultCellStyle = dataGridViewCellStyle4;
+            this.MaNamHoc.HeaderText = "Năm Học";
+            this.MaNamHoc.Name = "MaNamHoc";
+            this.MaNamHoc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaNamHoc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // SiSo
+            // 
+            this.SiSo.DataPropertyName = "SiSo";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SiSo.DefaultCellStyle = dataGridViewCellStyle5;
+            this.SiSo.HeaderText = "Sỉ Số";
+            this.SiSo.Name = "SiSo";
+            this.SiSo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SiSo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // MaGiaoVien
+            // 
+            this.MaGiaoVien.DataPropertyName = "MaGiaoVien";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaGiaoVien.DefaultCellStyle = dataGridViewCellStyle6;
+            this.MaGiaoVien.HeaderText = "Giáo Viên Chủ Nhiệm";
+            this.MaGiaoVien.Name = "MaGiaoVien";
+            this.MaGiaoVien.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaGiaoVien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.MaGiaoVien.Width = 200;
+            // 
+            // Ban
+            // 
+            this.Ban.HeaderText = "Ban";
+            this.Ban.Name = "Ban";
+            // 
             // frmLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -681,6 +688,7 @@ namespace QLDiemHSTHPT
             this.ClientSize = new System.Drawing.Size(920, 491);
             this.Controls.Add(this.groupBoxDsgv);
             this.Controls.Add(this.nvgPanelLop);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -746,12 +754,13 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmbGiaovien;
         private DevComponents.DotNetBar.ButtonX btnGiaovien;
         private DevComponents.DotNetBar.LabelX lblgiaovien;
+        private DevComponents.Editors.IntegerInput itiSiso;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
         private System.Windows.Forms.DataGridViewComboBoxColumn MaKhoiLop;
         private System.Windows.Forms.DataGridViewComboBoxColumn MaNamHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn SiSo;
         private System.Windows.Forms.DataGridViewComboBoxColumn MaGiaoVien;
-        private DevComponents.Editors.IntegerInput itiSiso;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Ban;
     }
 }

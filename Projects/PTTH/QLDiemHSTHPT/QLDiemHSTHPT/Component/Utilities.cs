@@ -15,11 +15,11 @@ namespace QLDiemHSTHPT.Component
     {
         public static NguoiDungInfo NguoiDung;
         public static String DatabaseName;
+        
     }
     public class QuyDinh
     {
         
-
         ////Nhap diem
         public String ArrayToString(String[] array, int n)
         {
@@ -80,7 +80,6 @@ namespace QLDiemHSTHPT.Component
 
             int siSoMin = Convert.ToInt32(dS.Rows[0]["SiSoCanDuoi"]);
             int siSoMax = Convert.ToInt32(dS.Rows[0]["SiSoCanTren"]);
-
             if (siSo >= siSoMin && siSo <= siSoMax)
                 return true;
             else
@@ -129,6 +128,24 @@ namespace QLDiemHSTHPT.Component
             else
                 return "";
         }
-    }
+        public int getSiSoMin()
+        {
+            DataService dS = new DataService();
+            dS.Load(new SqlCommand("SELECT SiSoCanDuoi FROM QUYDINH"));
 
+            int siSoMin = Convert.ToInt32(dS.Rows[0]["SiSoCanDuoi"]);
+            //int siSoMax = Convert.ToInt32(dS.Rows[0]["SiSoCanTren"]);
+            return siSoMin;
+        }
+        public int getSiSoMax()
+        {
+            DataService dS = new DataService();
+            dS.Load(new SqlCommand("SELECT SiSoCanTren FROM QUYDINH"));
+
+            //int siSoMin = Convert.ToInt32(dS.Rows[0]["SiSoCanDuoi"]);
+            int siSoMax = Convert.ToInt32(dS.Rows[0]["SiSoCanTren"]);
+            return siSoMax;
+        }
+    }
+        
 }

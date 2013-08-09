@@ -103,6 +103,7 @@ namespace QLDiemHSTHPT.Controller
 
             cmbGiaoVien.DataBindings.Clear();
             cmbGiaoVien.DataBindings.Add("SelectedValue", bS, "MaGiaoVien");
+
         }
 
 
