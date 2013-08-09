@@ -112,8 +112,8 @@ namespace QLDiemHSTHPT.Controller
                diemTBTungMon = m_DiemCtrl.DiemTrungBinhMonHocKy(maHocSinh, row["MaMonHoc"].ToString(), maHocKy, maNamHoc, maLop);
                arrayDiemTBTungMon[soMonHoc++] = diemTBTungMon;
 
-               tongDiemCacMon += diemTBTungMon * Convert.ToInt32(row["HeSo"].ToString());
-               tongHeSoCacMon += Convert.ToInt32(row["HeSo"].ToString());
+               tongDiemCacMon += diemTBTungMon * Convert.ToInt32(row["HeSoBanCoBan"].ToString());
+               tongHeSoCacMon += Convert.ToInt32(row["HeSoBanCoBan"].ToString());
            }
            if (tongHeSoCacMon > 0)
                tongDiem = tongDiemCacMon / tongHeSoCacMon;
@@ -140,8 +140,8 @@ namespace QLDiemHSTHPT.Controller
                diemTBTungMon = m_DiemCtrl.DiemTrungBinhMonCaNam(maHocSinh, row["MaMonHoc"].ToString(), maNamHoc, maLop);
                arrayDiemTBTungMon[soMonHoc++] = diemTBTungMon;
 
-               tongDiemCacMon += diemTBTungMon * Convert.ToInt32(row["HeSo"].ToString());
-               tongHeSoCacMon += Convert.ToInt32(row["HeSo"].ToString());
+               tongDiemCacMon += diemTBTungMon * Convert.ToInt32(row["HeSoBanCoBan"].ToString());
+               tongHeSoCacMon += Convert.ToInt32(row["HeSoBanCoBan"].ToString());
            }
            if (tongHeSoCacMon > 0)
                tongDiem = tongDiemCacMon / tongHeSoCacMon;

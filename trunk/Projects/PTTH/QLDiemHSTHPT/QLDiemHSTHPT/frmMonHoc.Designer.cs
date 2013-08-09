@@ -32,17 +32,13 @@ namespace QLDiemHSTHPT
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMonHoc));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMonHoc));
             this.groupBoxDshocluc = new System.Windows.Forms.GroupBox();
             this.dgvMonHoc = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.MaMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoTiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HeSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bdgMonHoc = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -57,6 +53,12 @@ namespace QLDiemHSTHPT
             this.bngXoa = new System.Windows.Forms.ToolStripButton();
             this.bngluu = new System.Windows.Forms.ToolStripButton();
             this.bngthoat = new System.Windows.Forms.ToolStripButton();
+            this.MaMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HeSoBanCoBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HeSoBanKHTN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HeSoBanKHXHNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxDshocluc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgMonHoc)).BeginInit();
@@ -94,7 +96,9 @@ namespace QLDiemHSTHPT
             this.MaMonHoc,
             this.TenMonHoc,
             this.SoTiet,
-            this.HeSo});
+            this.HeSoBanCoBan,
+            this.HeSoBanKHTN,
+            this.HeSoBanKHXHNV});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -110,40 +114,6 @@ namespace QLDiemHSTHPT
             this.dgvMonHoc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvMonHoc.Size = new System.Drawing.Size(503, 378);
             this.dgvMonHoc.TabIndex = 1;
-            // 
-            // MaMonHoc
-            // 
-            this.MaMonHoc.DataPropertyName = "MaMonHoc";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaMonHoc.DefaultCellStyle = dataGridViewCellStyle3;
-            this.MaMonHoc.HeaderText = "Mã Môn Học";
-            this.MaMonHoc.Name = "MaMonHoc";
-            this.MaMonHoc.Width = 130;
-            // 
-            // TenMonHoc
-            // 
-            this.TenMonHoc.DataPropertyName = "TenMonHoc";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenMonHoc.DefaultCellStyle = dataGridViewCellStyle4;
-            this.TenMonHoc.HeaderText = "Tên Môn Học";
-            this.TenMonHoc.Name = "TenMonHoc";
-            this.TenMonHoc.Width = 130;
-            // 
-            // SoTiet
-            // 
-            this.SoTiet.DataPropertyName = "SoTiet";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SoTiet.DefaultCellStyle = dataGridViewCellStyle5;
-            this.SoTiet.HeaderText = "Số Tiết";
-            this.SoTiet.Name = "SoTiet";
-            // 
-            // HeSo
-            // 
-            this.HeSo.DataPropertyName = "HeSo";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HeSo.DefaultCellStyle = dataGridViewCellStyle6;
-            this.HeSo.HeaderText = "Hệ Số";
-            this.HeSo.Name = "HeSo";
             // 
             // bdgMonHoc
             // 
@@ -282,12 +252,59 @@ namespace QLDiemHSTHPT
             this.bngthoat.Text = "Thoát";
             this.bngthoat.Click += new System.EventHandler(this.bngthoat_Click);
             // 
+            // MaMonHoc
+            // 
+            this.MaMonHoc.DataPropertyName = "MaMonHoc";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaMonHoc.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MaMonHoc.HeaderText = "Mã Môn Học";
+            this.MaMonHoc.Name = "MaMonHoc";
+            this.MaMonHoc.Width = 130;
+            // 
+            // TenMonHoc
+            // 
+            this.TenMonHoc.DataPropertyName = "TenMonHoc";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenMonHoc.DefaultCellStyle = dataGridViewCellStyle4;
+            this.TenMonHoc.HeaderText = "Tên Môn Học";
+            this.TenMonHoc.Name = "TenMonHoc";
+            this.TenMonHoc.Width = 130;
+            // 
+            // SoTiet
+            // 
+            this.SoTiet.DataPropertyName = "SoTiet";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoTiet.DefaultCellStyle = dataGridViewCellStyle5;
+            this.SoTiet.HeaderText = "Số Tiết";
+            this.SoTiet.Name = "SoTiet";
+            // 
+            // HeSoBanCoBan
+            // 
+            this.HeSoBanCoBan.DataPropertyName = "HeSoBanCoBan";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeSoBanCoBan.DefaultCellStyle = dataGridViewCellStyle6;
+            this.HeSoBanCoBan.HeaderText = "Hệ Số Ban Cơ Bản";
+            this.HeSoBanCoBan.Name = "HeSoBanCoBan";
+            // 
+            // HeSoBanKHTN
+            // 
+            this.HeSoBanKHTN.DataPropertyName = "HeSoBanKHTN";
+            this.HeSoBanKHTN.HeaderText = "Hệ Số Ban KHTN";
+            this.HeSoBanKHTN.Name = "HeSoBanKHTN";
+            // 
+            // HeSoBanKHXHNV
+            // 
+            this.HeSoBanKHXHNV.DataPropertyName = "HeSoBanKHXHNV";
+            this.HeSoBanKHXHNV.HeaderText = "Hệ Số Ban KHXHNV";
+            this.HeSoBanKHXHNV.Name = "HeSoBanKHXHNV";
+            // 
             // frmMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(509, 422);
             this.Controls.Add(this.groupBoxDshocluc);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -326,6 +343,8 @@ namespace QLDiemHSTHPT
         private System.Windows.Forms.DataGridViewTextBoxColumn MaMonHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenMonHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoTiet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HeSo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HeSoBanCoBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HeSoBanKHTN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HeSoBanKHXHNV;
     }
 }

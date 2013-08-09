@@ -100,15 +100,18 @@ namespace QLDiemHSTHPT.DataLayer
            OleDbCommand cmd = new OleDbCommand("select * from [Sheet1$]");
            return dsIOExcel.Load(cmd, path);
        }
-       
 
-       public void XoaHSKhoiBangPhanLop(String maLop)
+       public void XoaHSKhoiBangPhanLop(String maNamHoc, String maKhoiLop, String maLop, String maHS)
        {
-           SqlCommand cmd = new SqlCommand("DELETE FROM PHANLOP WHERE MaLop = @maLop");
+           SqlCommand cmd = new SqlCommand("DELETE FROM PHANLOP WHERE MaNamHoc = @maNamHoc AND MaKhoiLop = @maKhoiLop AND MaLop = @maLop AND MaHocSinh = @maHS");
+           cmd.Parameters.Add("maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
+           cmd.Parameters.Add("maKhoiLop", SqlDbType.VarChar).Value = maKhoiLop;
            cmd.Parameters.Add("maLop", SqlDbType.VarChar).Value = maLop;
+           cmd.Parameters.Add("maHS", SqlDbType.VarChar).Value = maHS;
+
            m_HocSinhData.Load(cmd);
        }
-
+        
 
        public DataTable LayDsHocSinhForReport()
        {

@@ -32,6 +32,8 @@ namespace QLDiemHSTHPT
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmXemDiem));
             this.nvgPanelGiaoVien = new DevComponents.DotNetBar.NavigationPane();
             this.navigationPanePanel1 = new DevComponents.DotNetBar.NavigationPanePanel();
+            this.cmbMaHS = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.cmbHocsinh = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.lblHocsinh = new DevComponents.DotNetBar.LabelX();
@@ -59,8 +61,6 @@ namespace QLDiemHSTHPT
             this.bdgNhapdiemrieng = new System.Windows.Forms.BindingNavigator(this.components);
             this.btnxoa = new System.Windows.Forms.ToolStripButton();
             this.bngthoat = new System.Windows.Forms.ToolStripButton();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.cmbMaHS = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.nvgPanelGiaoVien.SuspendLayout();
             this.navigationPanePanel1.SuspendLayout();
             this.groupBoxDsgv.SuspendLayout();
@@ -140,6 +140,27 @@ namespace QLDiemHSTHPT
             this.navigationPanePanel1.Style.GradientAngle = 90;
             this.navigationPanePanel1.TabIndex = 2;
             // 
+            // cmbMaHS
+            // 
+            this.cmbMaHS.DisplayMember = "Text";
+            this.cmbMaHS.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbMaHS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMaHS.FormattingEnabled = true;
+            this.cmbMaHS.ItemHeight = 14;
+            this.cmbMaHS.Location = new System.Drawing.Point(19, 226);
+            this.cmbMaHS.Name = "cmbMaHS";
+            this.cmbMaHS.Size = new System.Drawing.Size(149, 20);
+            this.cmbMaHS.TabIndex = 37;
+            this.cmbMaHS.SelectedIndexChanged += new System.EventHandler(this.cmbMaHS_SelectedIndexChanged);
+            // 
+            // labelX4
+            // 
+            this.labelX4.Location = new System.Drawing.Point(19, 197);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(75, 23);
+            this.labelX4.TabIndex = 36;
+            this.labelX4.Text = "Mã HS:";
+            // 
             // buttonX1
             // 
             this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -182,6 +203,7 @@ namespace QLDiemHSTHPT
             this.cmblop.Name = "cmblop";
             this.cmblop.Size = new System.Drawing.Size(149, 20);
             this.cmblop.TabIndex = 30;
+            this.cmblop.SelectedIndexChanged += new System.EventHandler(this.cmblop_SelectedIndexChanged);
             // 
             // labelX3
             // 
@@ -414,27 +436,6 @@ namespace QLDiemHSTHPT
             this.bngthoat.Size = new System.Drawing.Size(58, 22);
             this.bngthoat.Text = "Thoát";
             this.bngthoat.Click += new System.EventHandler(this.bngthoat_Click);
-            // 
-            // labelX4
-            // 
-            this.labelX4.Location = new System.Drawing.Point(19, 197);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(75, 23);
-            this.labelX4.TabIndex = 36;
-            this.labelX4.Text = "Mã HS:";
-            // 
-            // cmbMaHS
-            // 
-            this.cmbMaHS.DisplayMember = "Text";
-            this.cmbMaHS.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbMaHS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMaHS.FormattingEnabled = true;
-            this.cmbMaHS.ItemHeight = 14;
-            this.cmbMaHS.Location = new System.Drawing.Point(19, 226);
-            this.cmbMaHS.Name = "cmbMaHS";
-            this.cmbMaHS.Size = new System.Drawing.Size(149, 20);
-            this.cmbMaHS.TabIndex = 37;
-            this.cmbMaHS.SelectedIndexChanged += new System.EventHandler(this.cmbMaHS_SelectedIndexChanged);
             // 
             // frmXemDiem
             // 
