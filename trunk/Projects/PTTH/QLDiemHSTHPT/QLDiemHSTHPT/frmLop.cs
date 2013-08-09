@@ -18,7 +18,9 @@ namespace QLDiemHSTHPT
         KhoiLopCtrl m_KhoiLopCtrl = new KhoiLopCtrl();
         NamHocCtrl m_NamHocCtrl = new NamHocCtrl();
         GiaoVienCtrl m_GiaoVienCtrl = new GiaoVienCtrl();
+        PhanBanCtrl m_PhanBanCtrl = new PhanBanCtrl();
         QuyDinh quyDinh = new QuyDinh();
+
         public frmLop()
         {
             InitializeComponent();
@@ -33,6 +35,8 @@ namespace QLDiemHSTHPT
             m_KhoiLopCtrl.HienThiDataGridViewComboBoxColumn(MaKhoiLop);
             m_NamHocCtrl.HienThiDataGridViewComboBoxColumn(MaNamHoc);
             m_GiaoVienCtrl.HienThiDataGridViewComboBoxColumn(MaGiaoVien);
+
+            m_PhanBanCtrl.HienThiDataGridViewComboBoxColumn(Ban);
 
             m_LopCtrl.HienThi(dgvLop, bdgLop, txtMaLop, txtTenLop, cmbKhoilop, cmbNamhoc, itiSiso, cmbGiaovien);
         }
@@ -85,16 +89,23 @@ namespace QLDiemHSTHPT
                 {
                     try
                     {
-                        int siSo = Convert.ToInt32(row.Cells[siSoColumn].Value.ToString());
+                        int siSo = Convert.ToInt32(row.Cells[siSoColumn].Value.ToString().Trim());
                         if (quyDinh.KiemTraSiSo(siSo) == false)
                         {
-                            MessageBoxEx.Show("Sỉ số không đúng quy định!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            int siSoMax = quyDinh.getSiSoMax();
+                            int siSoMin = quyDinh.getSiSoMin();
+                            String strError = "Sĩ số " + siSo.ToString() + "\nSỉ số phải nằm trong khoảng " +
+                                siSoMin + " đến " + siSoMax;
+                            MessageBoxEx.Show(strError, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return false;
                         }
                     }
                     catch
                     {
-                        MessageBoxEx.Show("Sỉ số phải là một số nguyên!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        int siSoMax = quyDinh.getSiSoMax();
+                        int siSoMin = quyDinh.getSiSoMin();
+                        MessageBoxEx.Show("Sỉ số phải nằm trong khoảng "+siSoMin+" đến "+siSoMax, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        
                         return false;
                     }
                 }
@@ -103,6 +114,7 @@ namespace QLDiemHSTHPT
         }
         private void bngluu_Click(object sender, EventArgs e)
         {
+            dgvLop.EndEdit();
             if (KiemTraTruocKhiLuu("MaLop") == true &&
                 KiemTraTruocKhiLuu("TenLop") == true &&
                 KiemTraTruocKhiLuu("MaKhoiLop") == true &&
