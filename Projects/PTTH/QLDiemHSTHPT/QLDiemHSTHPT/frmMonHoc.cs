@@ -33,7 +33,9 @@ namespace QLDiemHSTHPT
             m_Row["MaMonHoc"] = "MH" + quyDinh.LaySTT(dgvMonHoc.Rows.Count + 1);
             m_Row["TenMonHoc"] = "";
             m_Row["SoTiet"] = 0;
-            m_Row["HeSo"] = 0;
+            m_Row["HeSoBanCoBan"] = 0;
+            m_Row["HeSoBanKHTN"] = 0;
+            m_Row["HeSoBanKHXHNV"] = 0;
             m_MonHocCtrl.ThemMonHoc(m_Row);
             bdgMonHoc.BindingSource.MoveLast();
         }

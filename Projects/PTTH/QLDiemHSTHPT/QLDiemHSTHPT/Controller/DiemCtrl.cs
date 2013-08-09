@@ -101,8 +101,8 @@ namespace QLDiemHSTHPT.Controller
            foreach (DataRow row in m_DT.Rows)
            {
                diemTBTungMon = DiemTrungBinhMonHocKy(maHocSinh, row["MaMonHoc"].ToString(), maHocKy, maNamHoc, maLop);
-               tongDiemCacMon += diemTBTungMon * Convert.ToInt32(row["HeSo"].ToString());
-               tongHeSoCacMon += Convert.ToInt32(row["HeSo"].ToString());
+               tongDiemCacMon += diemTBTungMon * Convert.ToInt32(row["HeSoBanCoBan"].ToString());
+               tongHeSoCacMon += Convert.ToInt32(row["HeSoBanCoBan"].ToString());
            }
            if (tongHeSoCacMon > 0)
                return tongDiemCacMon / tongHeSoCacMon;
@@ -121,8 +121,8 @@ namespace QLDiemHSTHPT.Controller
            foreach (DataRow row in m_DT.Rows)
            {
                diemTBTungMon = DiemTrungBinhMonCaNam(maHocSinh, row["MaMonHoc"].ToString(), maNamHoc, maLop);
-               tongDiemCacMon += diemTBTungMon * Convert.ToInt32(row["HeSo"].ToString());
-               tongHeSoCacMon += Convert.ToInt32(row["HeSo"].ToString());
+               tongDiemCacMon += diemTBTungMon * Convert.ToInt32(row["HeSoBanCoBan"].ToString());
+               tongHeSoCacMon += Convert.ToInt32(row["HeSoBanCoBan"].ToString());
            }
            if (tongHeSoCacMon > 0)
                return tongDiemCacMon / tongHeSoCacMon;

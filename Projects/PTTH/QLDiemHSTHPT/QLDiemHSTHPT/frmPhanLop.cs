@@ -67,8 +67,6 @@ namespace QLDiemHSTHPT
 
                 foreach (DataRow row in dT.Rows)
                 {
-                    System.Console.Write("\n gia tri olditem la: " + olditem.SubItems[0]);
-                    System.Console.Write("\n gia tri row la: " + row["MaHocSinh"]);
                     if (olditem.SubItems[0].Text.ToString() == row["MaHocSinh"].ToString())
                     {
                         MessageBoxEx.Show("Học sinh " + row["HoTen"].ToString() + " hiện đang học trong lớp " + row["TenLop"].ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -81,9 +79,11 @@ namespace QLDiemHSTHPT
 
                 newitem.SubItems.Add(olditem.SubItems[1].Text);
                 newitem.Tag = olditem.Tag;
+
                 lvLopMoi.Items.Add(newitem);
                 lvLopMoi.Items[lvLopMoi.Items.IndexOf(newitem)].Text = olditem.SubItems[0].Text;
                 lvLopCu.Items.Remove(olditem);
+               
 
             Cont:
                 if (state == true)
@@ -113,7 +113,11 @@ namespace QLDiemHSTHPT
                 cmbKhoilopMoi.SelectedValue != null &&
                 cmbLopmoi.SelectedValue != null)
             {
-                m_HocSinhCtrl.XoaHSKhoiBangPhanLop(cmbLopcu.SelectedValue.ToString());
+                //m_HocSinhCtrl.XoaHSKhoiBangPhanLop(cmbLopcu.SelectedValue.ToString());
+                m_HocSinhCtrl.XoaHSKhoiBangPhanLop(cmbNamhoccu.SelectedValue.ToString(),
+                                   cmbKhoilopcu.SelectedValue.ToString(),
+                                   cmbLopcu.SelectedValue.ToString(),
+                                   lvLopMoi);
                 m_HocSinhCtrl.LuuHSVaoBangPhanLop(cmbnamhocmoi.SelectedValue.ToString(),
                           cmbKhoilopMoi.SelectedValue.ToString(),
                           cmbLopmoi.SelectedValue.ToString(),

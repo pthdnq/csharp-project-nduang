@@ -147,10 +147,12 @@ namespace QLDiemHSTHPT.Controller
            return m_HocSinhData.LayDsHocSinhTheoLop(lop);
        }
 
-       public void XoaHSKhoiBangPhanLop(String lopCu)
+       public void XoaHSKhoiBangPhanLop(String namHocCu, String khoiLopCu, String lopCu, ListViewEx hocSinh)
        {
-           m_HocSinhData.XoaHSKhoiBangPhanLop(lopCu);
-           
+           foreach (ListViewItem item in hocSinh.Items)
+           {
+               m_HocSinhData.XoaHSKhoiBangPhanLop(namHocCu, khoiLopCu, lopCu, item.SubItems[0].Text.ToString());
+           }
        }
 
        public void LuuHSVaoBangPhanLop(String namHocMoi, String khoiLopMoi, String lopMoi, ListViewEx hocSinh)

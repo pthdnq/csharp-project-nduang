@@ -126,5 +126,18 @@ namespace QLDiemHSTHPT
             btnxoa.Enabled = status;
 
         }
+
+        private void cmblop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null)
+            {
+                m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbHocsinh);
+                m_HocSinhCtrl.HienThiComboBoxMaHS(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMaHS);
+            }
+            if (cmbMaHS.SelectedValue != null)
+                m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString()
+                    , cmblop.SelectedValue.ToString()
+                    , cmbMaHS.SelectedValue.ToString(), cmbHocsinh);
+        }
     }
 }
