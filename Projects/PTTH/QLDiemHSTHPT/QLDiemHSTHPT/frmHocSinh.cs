@@ -304,7 +304,26 @@ namespace QLDiemHSTHPT
         {
         }
 
+        private void cmbKhoiLop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //if (cmbNamHoc.SelectedValue != null && cmbKhoiLop.SelectedValue != null)
+            //{
+            //    m_LopCtrl.HienThiComboBox(cmbKhoiLop.SelectedValue.ToString(), cmbNamHoc.SelectedValue.ToString(), cmbLop);
+            //    //m_KhoiLopMoiCtrl.HienThiComboBox(cmbKhoilopcu.SelectedValue.ToString(), cmbKhoilopMoi);
+            //    cmbLop.DataBindings.Clear();
+            //    //lvLopCu.Items.Clear();
+            //}
+        }
 
+        private void cmbKhoiLop_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cmbNamHoc.SelectedValue != null && cmbKhoiLop.SelectedValue != null)
+            {
+                m_LopCtrl.HienThiComboBox(cmbKhoiLop.SelectedValue.ToString(), cmbNamHoc.SelectedValue.ToString(), cmbLop);
+                cmbLop.DataBindings.Clear();
+                //lvLopCu.Items.Clear();
+            }
+        }
 
     }
 
