@@ -56,6 +56,9 @@ namespace QLDiemHSTHPT
             this.MaNgheNghiepCha = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.HoTenMe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNgheNghiepMe = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.MaNamHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.MaKhoiLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.MaLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bdgHocSinh = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -194,7 +197,10 @@ namespace QLDiemHSTHPT
             this.HoTenCha,
             this.MaNgheNghiepCha,
             this.HoTenMe,
-            this.MaNgheNghiepMe});
+            this.MaNgheNghiepMe,
+            this.MaNamHoc,
+            this.MaKhoiLop,
+            this.MaLop});
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -311,6 +317,24 @@ namespace QLDiemHSTHPT
             this.MaNgheNghiepMe.DefaultCellStyle = dataGridViewCellStyle12;
             this.MaNgheNghiepMe.HeaderText = "Nghề nghiệp mẹ";
             this.MaNgheNghiepMe.Name = "MaNgheNghiepMe";
+            // 
+            // MaNamHoc
+            // 
+            this.MaNamHoc.DataPropertyName = "MaNamHoc";
+            this.MaNamHoc.HeaderText = "Năm Học";
+            this.MaNamHoc.Name = "MaNamHoc";
+            // 
+            // MaKhoiLop
+            // 
+            this.MaKhoiLop.DataPropertyName = "MaKhoiLop";
+            this.MaKhoiLop.HeaderText = "Khối Lớp";
+            this.MaKhoiLop.Name = "MaKhoiLop";
+            // 
+            // MaLop
+            // 
+            this.MaLop.DataPropertyName = "MaLop";
+            this.MaLop.HeaderText = "Lớp";
+            this.MaLop.Name = "MaLop";
             // 
             // bdgHocSinh
             // 
@@ -475,10 +499,10 @@ namespace QLDiemHSTHPT
             // 
             this.nvgPanelHocSinh.AutoScroll = true;
             this.nvgPanelHocSinh.CanCollapse = true;
-            this.nvgPanelHocSinh.Controls.Add(this.navigationPanePanel4);
+            this.nvgPanelHocSinh.Controls.Add(this.navigationPanePanel2);
             this.nvgPanelHocSinh.Controls.Add(this.navigationPanePanel1);
             this.nvgPanelHocSinh.Controls.Add(this.ngvPanelTimKiem);
-            this.nvgPanelHocSinh.Controls.Add(this.navigationPanePanel2);
+            this.nvgPanelHocSinh.Controls.Add(this.navigationPanePanel4);
             this.nvgPanelHocSinh.Dock = System.Windows.Forms.DockStyle.Left;
             this.nvgPanelHocSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nvgPanelHocSinh.ItemPaddingBottom = 2;
@@ -522,10 +546,10 @@ namespace QLDiemHSTHPT
             this.navigationPanePanel4.Controls.Add(this.textBoxX7);
             this.navigationPanePanel4.Controls.Add(this.labelX13);
             this.navigationPanePanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationPanePanel4.Location = new System.Drawing.Point(1, 25);
+            this.navigationPanePanel4.Location = new System.Drawing.Point(1, 1);
             this.navigationPanePanel4.Name = "navigationPanePanel4";
             this.navigationPanePanel4.ParentItem = this.buttonItemtimkiem;
-            this.navigationPanePanel4.Size = new System.Drawing.Size(206, 325);
+            this.navigationPanePanel4.Size = new System.Drawing.Size(206, 451);
             this.navigationPanePanel4.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navigationPanePanel4.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navigationPanePanel4.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -591,7 +615,6 @@ namespace QLDiemHSTHPT
             // buttonItemtimkiem
             // 
             this.buttonItemtimkiem.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItemtimkiem.Checked = true;
             this.buttonItemtimkiem.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.buttonItemtimkiem.Image = ((System.Drawing.Image)(resources.GetObject("buttonItemtimkiem.Image")));
             this.buttonItemtimkiem.ImagePaddingHorizontal = 8;
@@ -1061,10 +1084,10 @@ namespace QLDiemHSTHPT
             this.navigationPanePanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.navigationPanePanel2.Controls.Add(this.navigationPanePanel3);
             this.navigationPanePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationPanePanel2.Location = new System.Drawing.Point(1, 1);
+            this.navigationPanePanel2.Location = new System.Drawing.Point(1, 25);
             this.navigationPanePanel2.Name = "navigationPanePanel2";
             this.navigationPanePanel2.ParentItem = this.buttonItemnhaptt;
-            this.navigationPanePanel2.Size = new System.Drawing.Size(206, 349);
+            this.navigationPanePanel2.Size = new System.Drawing.Size(206, 325);
             this.navigationPanePanel2.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navigationPanePanel2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navigationPanePanel2.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -1111,7 +1134,7 @@ namespace QLDiemHSTHPT
             this.navigationPanePanel3.Location = new System.Drawing.Point(0, 0);
             this.navigationPanePanel3.Name = "navigationPanePanel3";
             this.navigationPanePanel3.ParentItem = this.btnNhapTT;
-            this.navigationPanePanel3.Size = new System.Drawing.Size(206, 349);
+            this.navigationPanePanel3.Size = new System.Drawing.Size(206, 325);
             this.navigationPanePanel3.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navigationPanePanel3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.navigationPanePanel3.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -1451,6 +1474,7 @@ namespace QLDiemHSTHPT
             // buttonItemnhaptt
             // 
             this.buttonItemnhaptt.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItemnhaptt.Checked = true;
             this.buttonItemnhaptt.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.buttonItemnhaptt.Image = ((System.Drawing.Image)(resources.GetObject("buttonItemnhaptt.Image")));
             this.buttonItemnhaptt.ImagePaddingHorizontal = 8;
@@ -1599,5 +1623,8 @@ namespace QLDiemHSTHPT
         private System.Windows.Forms.DataGridViewComboBoxColumn MaNgheNghiepCha;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTenMe;
         private System.Windows.Forms.DataGridViewComboBoxColumn MaNgheNghiepMe;
+        private System.Windows.Forms.DataGridViewComboBoxColumn MaNamHoc;
+        private System.Windows.Forms.DataGridViewComboBoxColumn MaKhoiLop;
+        private System.Windows.Forms.DataGridViewComboBoxColumn MaLop;
     }
 }
