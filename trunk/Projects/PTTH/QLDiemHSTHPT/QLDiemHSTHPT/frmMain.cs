@@ -54,7 +54,7 @@ namespace QLDiemHSTHPT
             else
             {
                 MacDinh();
-                ReConnection();
+                //ReConnection();
             }
         }
         private void btnThoat_Click(object sender, EventArgs e)
@@ -557,7 +557,7 @@ namespace QLDiemHSTHPT
             {
                 case "LND001": BGH(); break;
                 case "LND002": GiaoVien(); break;
-                case "LND003": GiaoVu(); break;
+                case "LND003": QuanTriVien(); break;
                 case "LND004": HS(); break;
                 default: MacDinh(); break;
             }
@@ -598,12 +598,13 @@ namespace QLDiemHSTHPT
         {
             //False
             buttondangnhap.Enabled = false;
+            buttonItem30.Enabled = false;
+
             //True
             buttondangxuat.Enabled = true;
             buttonItem29.Enabled = true;
             buttonthoat.Enabled = true;
             buttonItem33.Enabled = true;
-            buttonItem30.Enabled = true;
             buttonItem31.Enabled = true;
             buttonItem32.Enabled = true;
             
@@ -640,7 +641,7 @@ namespace QLDiemHSTHPT
 
             //False
             buttondangnhap.Enabled = false;
-            buttonItem30.Enabled = true;
+            buttonItem30.Enabled = false;
             buttonItem31.Enabled = true;
             buttonItem32.Enabled = true;
             buttonHocSinh.Enabled = false;
@@ -661,52 +662,49 @@ namespace QLDiemHSTHPT
             toolStripMenuItem77.Enabled = false;
         }
 
-        public void GiaoVu()
+        public void QuanTriVien()
         {
-            ////True
+
             buttondangxuat.Enabled = true;
-            buttonthoat.Enabled = true;
-            buttonItem33.Enabled = true;
-        
-
-            toolStripMenuItem47.Enabled = true;
-            toolStripMenuItem48.Enabled = true;
-            toolStripMenuItem49.Enabled = true;
-            toolStripMenuItem50.Enabled = true;
-            toolStripMenuItem1.Enabled = true;
-            toolStripMenuItem53.Enabled = true;
-            toolStripMenuItem54.Enabled = true;
-            toolStripMenuItem55.Enabled = true;
-            toolStripMenuItem58.Enabled = true;
-            toolStripMenuItem59.Enabled = true;
-            toolStripMenuItem60.Enabled = true;
-            toolStripMenuItem63.Enabled = true;
-            toolStripMenuItem81.Enabled = true;
-            toolStripMenuItem46.Enabled = true;
-            btnXemDiemRieng.Enabled = true;
-            btnXemDiemChung.Enabled = true;
-
-            //False
-            buttondangnhap.Enabled = false;
-            buttonItem30.Enabled = false;
-            buttonItem31.Enabled = false;
-            buttonItem32.Enabled = false;
-            buttonGV.Enabled = false;
-            buttonPCong.Enabled = false;
-           
-        }
-
-        public void HS()
-        {
-                 buttondangnhap.Enabled = true;
             buttonthoat.Enabled = true;
             buttonItem33.Enabled = true;
             toolStripMenuItem84.Enabled = true;
             toolStripMenuItem83.Enabled = true;
-           
+            buttonItem29.Enabled = true;
+            buttonItem30.Enabled = true;
 
+            //false
+            //buttonItem29.Enabled = false;
+            //buttonItem30.Enabled = false;
+            //buttonItem31.Enabled = false;
+            //buttonItem32.Enabled = false;
 
-            buttondangxuat.Enabled = false;
+            buttonHocSinh.Enabled = false;
+            buttonGV.Enabled = false;
+            buttonPCong.Enabled = false;
+            buttonPLop.Enabled = false;
+            buttonTCHS.Enabled = false;
+            buttonTCGV.Enabled = false;
+            toolStripMenuItem46.Enabled = false;
+            toolStripMenuItem63.Enabled = false;
+            toolStripMenuItem77.Enabled = false;
+            buttondangnhap.Enabled = false;
+            btnXemDiemRieng.Enabled = false;
+            btnXemDiemChung.Enabled = false;
+
+        }
+
+        public void HS()
+        {
+            buttondangxuat.Enabled = true;
+            buttonthoat.Enabled = true;
+            buttonItem33.Enabled = true;
+            toolStripMenuItem84.Enabled = true;
+            toolStripMenuItem83.Enabled = true;
+            btnXemDiemRieng.Enabled = true;
+            btnXemDiemChung.Enabled = true;
+
+            //false
             buttonItem29.Enabled = false;
             buttonItem30.Enabled = false;
             buttonItem31.Enabled = false;
@@ -721,10 +719,7 @@ namespace QLDiemHSTHPT
             toolStripMenuItem46.Enabled = false;
             toolStripMenuItem63.Enabled = false;
             toolStripMenuItem77.Enabled = false;
-            
-            btnXemDiemRieng.Enabled = true;
-            btnXemDiemChung.Enabled = true;
-
+            buttondangnhap.Enabled = false;
         }
 
         frmPhanLop m_PhanLop = null;
