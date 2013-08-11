@@ -113,7 +113,6 @@ namespace QLDiemHSTHPT
                 cmbKhoilopMoi.SelectedValue != null &&
                 cmbLopmoi.SelectedValue != null)
             {
-                //m_HocSinhCtrl.XoaHSKhoiBangPhanLop(cmbLopcu.SelectedValue.ToString());
                 m_HocSinhCtrl.XoaHSKhoiBangPhanLop(cmbNamhoccu.SelectedValue.ToString(),
                                    cmbKhoilopcu.SelectedValue.ToString(),
                                    cmbLopcu.SelectedValue.ToString(),
