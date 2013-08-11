@@ -30,7 +30,7 @@ namespace QLDiemHSTHPT.Controller
             comboBox.DisplayMember = "TenLop";
             comboBox.ValueMember = "MaLop";
         }
-
+   
         //hien thi DSLop theo khoilop namhoc trong bang phan lop
         public void HienThiComboBox(String khoiLop, String namHoc, ComboBox comboBox)
         {

@@ -18,6 +18,9 @@ namespace QLDiemHSTHPT
         HocSinhCtrl m_HocSinhCtrl = new HocSinhCtrl();
         DanTocCtrl m_DanTocCtrl = new DanTocCtrl();
         TonGiaoCtrl m_TonGiaoCtrl = new TonGiaoCtrl();
+        NamHocCtrl m_NamHocCtrl = new NamHocCtrl();
+        LopCtrl m_LopCtrl = new LopCtrl();
+        KhoiLopCtrl m_KhoiLopCtrl = new KhoiLopCtrl();
         NgheNghiepCtrl m_NgheNghiepChaCtrl = new NgheNghiepCtrl();
         NgheNghiepCtrl m_NgheNghiepMeCtrl = new NgheNghiepCtrl();
         QuyDinh quyDinh = new QuyDinh();
@@ -38,6 +41,9 @@ namespace QLDiemHSTHPT
             m_TonGiaoCtrl.HienThiDataGridViewComboBoxColumn(MaTonGiao);
             m_NgheNghiepChaCtrl.HienThiDataGridViewComboBoxColumnNNCha(MaNgheNghiepCha);
             m_NgheNghiepMeCtrl.HienThiDataGridViewComboBoxColumnNNMe(MaNgheNghiepMe);
+            m_NamHocCtrl.HienThiDataGridViewComboBoxColumn(MaNamHoc);
+            m_KhoiLopCtrl.HienThiDataGridViewComboBoxColumn(MaKhoiLop);
+            m_LopCtrl.HienThiDataGridViewComboBoxColumn(MaLop);
 
             m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2, dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1);
         }
@@ -65,6 +71,9 @@ namespace QLDiemHSTHPT
             m_Row["MaNgheNghiepCha"] = "";
             m_Row["HoTenMe"] = "";
             m_Row["MaNgheNghiepMe"] = "";
+            m_Row["MaNamHoc"] = "";
+            m_Row["MaKhoiLop"] = "";
+            m_Row["MaLop"] = "";
             m_HocSinhCtrl.ThemHocSinh(m_Row);
 
             bdgHocSinh.BindingSource.MoveLast();
@@ -158,6 +167,7 @@ namespace QLDiemHSTHPT
                 checkBoxX2.Checked = true;
             else
                 checkBoxX1.Checked = true;
+
         }
 
         private void buttonX4_Click(object sender, EventArgs e)
