@@ -449,6 +449,7 @@ namespace QLDiemHSTHPT
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmXemDiem";
             this.Text = "Xem Điểm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmXemDiem_Load);
             this.nvgPanelGiaoVien.ResumeLayout(false);
             this.navigationPanePanel1.ResumeLayout(false);
