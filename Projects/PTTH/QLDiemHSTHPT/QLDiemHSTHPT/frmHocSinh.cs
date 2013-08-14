@@ -36,6 +36,8 @@ namespace QLDiemHSTHPT
             m_TonGiaoCtrl.HienThiComboBox(comboBoxEx3);
             m_NgheNghiepChaCtrl.HienThiComboBox(comboBoxEx2);
             m_NgheNghiepMeCtrl.HienThiComboBox(comboBoxEx1);
+            
+
 
             m_DanTocCtrl.HienThiDataGridViewComboBoxColumn(MaDanToc);
             m_TonGiaoCtrl.HienThiDataGridViewComboBoxColumn(MaTonGiao);
@@ -189,7 +191,7 @@ namespace QLDiemHSTHPT
             {
                 if (quyDinh.KiemTraDoTuoi(dateTimeInput1.Value) == true)
                 {
-                    m_HocSinhCtrl.LuuHocSinh(txtMaHS.Text, textBoxTenhs.Text, gioiTinh, dateTimeInput1.Value, textBoxX4.Text, comboBoxEx4.SelectedValue.ToString(), comboBoxEx3.SelectedValue.ToString(), textBoxX3.Text, comboBoxEx2.SelectedValue.ToString(), textBoxX5.Text, comboBoxEx1.SelectedValue.ToString());
+                    m_HocSinhCtrl.LuuHocSinh(txtMaHS.Text, textBoxTenhs.Text, gioiTinh, dateTimeInput1.Value, textBoxX4.Text, comboBoxEx4.SelectedValue.ToString(), comboBoxEx3.SelectedValue.ToString(), textBoxX3.Text, comboBoxEx2.SelectedValue.ToString(), textBoxX5.Text, comboBoxEx1.SelectedValue.ToString(), cmbNamHoc.SelectedValue.ToString(), cmbKhoiLop.SelectedValue.ToString(), cmbLop.SelectedValue.ToString());
                     m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2, dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1);
 
                     bdgHocSinh.BindingSource.MoveLast();
@@ -295,34 +297,24 @@ namespace QLDiemHSTHPT
             }
         }
 
-        private void dgvhocsinh_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void cmbNamHoc_Click(object sender, EventArgs e)
         {
-
+            m_NamHocCtrl.HienThiComboBox(cmbNamHoc);
         }
 
-        private void btnIPExcel_Click(object sender, EventArgs e)
+        private void cmbKhoiLop_Click(object sender, EventArgs e)
         {
+            if(cmbNamHoc.SelectedValue.ToString()!=null)
+                m_KhoiLopCtrl.HienThiComboBox(cmbKhoiLop);
         }
 
         private void cmbKhoiLop_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (cmbNamHoc.SelectedValue != null && cmbKhoiLop.SelectedValue != null)
-            //{
-            //    m_LopCtrl.HienThiComboBox(cmbKhoiLop.SelectedValue.ToString(), cmbNamHoc.SelectedValue.ToString(), cmbLop);
-            //    //m_KhoiLopMoiCtrl.HienThiComboBox(cmbKhoilopcu.SelectedValue.ToString(), cmbKhoilopMoi);
-            //    cmbLop.DataBindings.Clear();
-            //    //lvLopCu.Items.Clear();
-            //}
-        }
-
-        private void cmbKhoiLop_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
             if (cmbNamHoc.SelectedValue != null && cmbKhoiLop.SelectedValue != null)
             {
                 m_LopCtrl.HienThiComboBox(cmbKhoiLop.SelectedValue.ToString(), cmbNamHoc.SelectedValue.ToString(), cmbLop);
-                cmbLop.DataBindings.Clear();
-                //lvLopCu.Items.Clear();
             }
+
         }
 
     }

@@ -219,9 +219,9 @@ namespace QLDiemHSTHPT.Controller
            return m_HocSinhData.LuuHocSinh();
        }
 
-       public void LuuHocSinh(String maHocSinh, String hoTen, bool gioiTinh, DateTime ngaySinh, String noiSinh, String maDanToc, String maTonGiao, String hoTenCha, String maNgheCha, String hoTenMe, String maNgheMe)
+       public void LuuHocSinh(String maHocSinh, String hoTen, bool gioiTinh, DateTime ngaySinh, String noiSinh, String maDanToc, String maTonGiao, String hoTenCha, String maNgheCha, String hoTenMe, String maNgheMe,String maNamHoc,String maKhoiLop,String maLop)
        {
-           m_HocSinhData.LuuHocSinh(maHocSinh, hoTen, gioiTinh, ngaySinh, noiSinh, maDanToc, maTonGiao, hoTenCha, maNgheCha, hoTenMe, maNgheMe);
+           m_HocSinhData.LuuHocSinh(maHocSinh, hoTen, gioiTinh, ngaySinh, noiSinh, maDanToc, maTonGiao, hoTenCha, maNgheCha, hoTenMe, maNgheMe, maNamHoc, maKhoiLop, maLop);
        }
 
       

@@ -135,9 +135,9 @@ namespace QLDiemHSTHPT.DataLayer
            return m_HocSinhData.ExecuteNoneQuery() > 0;
        }
 
-       public void LuuHocSinh(String maHocSinh, String hoTen, bool gioiTinh, DateTime ngaySinh, String noiSinh, String maDanToc, String maTonGiao, String hoTenCha, String maNgheCha, String hoTenMe, String maNgheMe)
+       public void LuuHocSinh(String maHocSinh, String hoTen, bool gioiTinh, DateTime ngaySinh, String noiSinh, String maDanToc, String maTonGiao, String hoTenCha, String maNgheCha, String hoTenMe, String maNgheMe,String maNamHoc , String maKhoiLop , String malop)
        {
-           SqlCommand cmd = new SqlCommand("INSERT INTO HOCSINH VALUES(@maHocSinh, @hoTen, @gioiTinh, @ngaySinh, @noiSinh, @maDanToc, @maTonGiao, @hoTenCha, @maNgheCha, @hoTenMe, @maNgheMe)");
+           SqlCommand cmd = new SqlCommand("INSERT INTO HOCSINH VALUES(@maHocSinh, @hoTen, @gioiTinh, @ngaySinh, @noiSinh, @maDanToc, @maTonGiao, @hoTenCha, @maNgheCha, @hoTenMe, @maNgheMe,@maNamHoc ,@maKhoiLop,@maLop)");
            cmd.Parameters.Add("maHocSinh", SqlDbType.VarChar).Value = maHocSinh;
            cmd.Parameters.Add("hoTen", SqlDbType.NVarChar).Value = hoTen;
            cmd.Parameters.Add("gioiTinh", SqlDbType.Bit).Value = gioiTinh;
@@ -149,6 +149,9 @@ namespace QLDiemHSTHPT.DataLayer
            cmd.Parameters.Add("maNgheCha", SqlDbType.VarChar).Value = maNgheCha;
            cmd.Parameters.Add("hoTenMe", SqlDbType.NVarChar).Value = hoTenMe;
            cmd.Parameters.Add("maNgheMe", SqlDbType.VarChar).Value = maNgheMe;
+           cmd.Parameters.Add("maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
+           cmd.Parameters.Add("maKhoiLop", SqlDbType.VarChar).Value = maKhoiLop;
+           cmd.Parameters.Add("maLop", SqlDbType.VarChar).Value = malop;
 
            m_HocSinhData.Load(cmd);
        }
