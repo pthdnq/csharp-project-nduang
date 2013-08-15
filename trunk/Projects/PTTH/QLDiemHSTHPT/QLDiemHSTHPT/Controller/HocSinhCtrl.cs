@@ -72,7 +72,10 @@ namespace QLDiemHSTHPT.Controller
                             TextBoxX txtHoTenCha,
                             ComboBoxEx cmbNgheNghiepCha,
                             TextBoxX txtHoTenMe,
-                            ComboBoxEx cmbNgheNghiepMe)
+                            ComboBoxEx cmbNgheNghiepMe, 
+                            ComboBoxEx cmbNamHoc,
+                            ComboBoxEx cmbKhoiLop,
+                            ComboBoxEx cmbLop)
        {
            BindingSource bS = new BindingSource();
            bS.DataSource = m_HocSinhData.LayDsHocSinh();
@@ -117,6 +120,15 @@ namespace QLDiemHSTHPT.Controller
 
            cmbNgheNghiepMe.DataBindings.Clear();
            cmbNgheNghiepMe.DataBindings.Add("SelectedValue", bS, "MaNgheNghiepMe");
+
+           cmbNamHoc.DataBindings.Clear();
+           cmbNamHoc.DataBindings.Add("SelectedValue", bS, "MaNamHoc");
+
+           cmbKhoiLop.DataBindings.Clear();
+           cmbKhoiLop.DataBindings.Add("SelectedValue", bS, "MaKhoiLop");
+
+           cmbLop.DataBindings.Clear();
+           cmbLop.DataBindings.Add("SelectedValue", bS, "MaLop");
 
            bN.BindingSource = bS;
            dGV.DataSource = bS;
