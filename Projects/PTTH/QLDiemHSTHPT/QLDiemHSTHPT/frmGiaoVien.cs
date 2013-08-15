@@ -15,6 +15,7 @@ namespace QLDiemHSTHPT
     {
         MonHocCtrl m_MonHocCtrl = new MonHocCtrl();
         GiaoVienCtrl m_GiaoVienCtrl = new GiaoVienCtrl();
+        
         QuyDinh quyDinh = new QuyDinh();
         public frmGiaoVien()
         {
@@ -25,7 +26,8 @@ namespace QLDiemHSTHPT
         {
             m_MonHocCtrl.HienThiComboBox(cbmChuyenmon);
             m_MonHocCtrl.HienThiDataGridViewComboBoxColumnGiaoVien(MaMonHoc);
-            m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien, txtMaGV, txtTenGV, txtDiachi, txtDThoai, cbmChuyenmon);
+            m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien, txtMaGV, txtTenGV, txtDiachi, txtDThoai, cbmChuyenmon, textBoxX2,checkBoxX1, checkBoxX2);
+
         }
 
         private void bngThemmoi_Click(object sender, EventArgs e)
@@ -36,6 +38,7 @@ namespace QLDiemHSTHPT
             m_Row["DiaChi"] = "";
             m_Row["DienThoai"] = "";
             m_Row["MaMonHoc"] = "";
+            m_Row["GioiTinh"] = false;
             m_GiaoVienCtrl.ThemGiaoVien(m_Row);
             bdgGiaoVien.BindingSource.MoveLast();
         }
@@ -86,7 +89,7 @@ namespace QLDiemHSTHPT
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien, txtMaGV, txtTenGV, txtDiachi, txtDThoai, cbmChuyenmon);
+            m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien, txtMaGV, txtTenGV, txtDiachi, txtDThoai, cbmChuyenmon, textBoxX2, checkBoxX1, checkBoxX2);
         }
 
         private void btnLuuDS_Click(object sender, EventArgs e)
@@ -100,7 +103,7 @@ namespace QLDiemHSTHPT
                cbmChuyenmon.SelectedValue != null)
             {
                 m_GiaoVienCtrl.LuuGiaoVien(txtMaGV.Text, txtTenGV.Text, txtDiachi.Text, txtDThoai.Text, cbmChuyenmon.SelectedValue.ToString(),gioiTinh);
-                m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien, txtMaGV, txtTenGV, txtDiachi, txtDThoai, cbmChuyenmon);
+                m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien, txtMaGV, txtTenGV, txtDiachi, txtDThoai, cbmChuyenmon, textBoxX2, checkBoxX1, checkBoxX2);
                 bdgGiaoVien.BindingSource.MoveLast();
             }
             else
@@ -168,6 +171,14 @@ namespace QLDiemHSTHPT
                 string path = fileName.Replace("\\", "\\\\");
                 m_GiaoVienCtrl.Import(path, dgvGiaoVien);
             }
+        }
+
+        private void dgvGiaoVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (textBoxX2.Text == "True")
+                checkBoxX2.Checked = true;
+            else
+                checkBoxX1.Checked = true;
         }
     }
 }

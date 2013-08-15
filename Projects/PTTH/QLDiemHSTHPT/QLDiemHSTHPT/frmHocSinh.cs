@@ -274,11 +274,6 @@ namespace QLDiemHSTHPT
             m_NgheNghiepMeCtrl.HienThiDataGridViewComboBoxColumnNNMe(MaNgheNghiepMe);
         }
 
-        private void textBoxX7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnNhapExcel_Click(object sender, EventArgs e)
         {
             OpenFileDialog openDlg = new OpenFileDialog();
@@ -318,6 +313,5 @@ namespace QLDiemHSTHPT
         }
 
     }
-
 
 }
