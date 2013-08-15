@@ -38,10 +38,21 @@ namespace QLDiemHSTHPT.Controller
                             TextBoxX txtTenGiaoVien,
                             TextBoxX txtDiaChi,
                             TextBoxX txtDienThoai,
-                            ComboBoxEx cmbMonHoc)
+                            ComboBoxEx cmbMonHoc, 
+                            TextBoxX txtGioiTinh,
+                            CheckBoxX ckbGTinhNam,
+                            CheckBoxX ckbGTinhNu)
        {
            BindingSource bS = new BindingSource();
            bS.DataSource = m_GiaoVienData.LayDsGiaoVien();
+
+           DataTable dT = m_GiaoVienData.LayDsGiaoVien();
+           bool gioiTinh = Convert.ToBoolean(dT.Rows[0]["GioiTinh"]);
+
+           if (gioiTinh)
+               ckbGTinhNu.Checked = true;
+           else
+               ckbGTinhNam.Checked = true;
 
            txtMaGiaoVien.DataBindings.Clear();
            txtMaGiaoVien.DataBindings.Add("Text", bS, "MaGiaoVien");
@@ -57,6 +68,9 @@ namespace QLDiemHSTHPT.Controller
 
            cmbMonHoc.DataBindings.Clear();
            cmbMonHoc.DataBindings.Add("SelectedValue", bS, "MaMonHoc");
+
+           txtGioiTinh.DataBindings.Clear();
+           txtGioiTinh.DataBindings.Add("Text", bS, "GioiTinh");
 
            bN.BindingSource = bS;
            dGV.DataSource = bS;
