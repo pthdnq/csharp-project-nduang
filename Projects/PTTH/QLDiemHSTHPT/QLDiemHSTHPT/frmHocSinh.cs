@@ -36,7 +36,9 @@ namespace QLDiemHSTHPT
             m_TonGiaoCtrl.HienThiComboBox(comboBoxEx3);
             m_NgheNghiepChaCtrl.HienThiComboBox(comboBoxEx2);
             m_NgheNghiepMeCtrl.HienThiComboBox(comboBoxEx1);
-            
+            m_NamHocCtrl.HienThiComboBox(cmbNamHoc);
+            m_KhoiLopCtrl.HienThiComboBox(cmbKhoiLop);
+            m_LopCtrl.HienThiComboBox(cmbLop);
 
 
             m_DanTocCtrl.HienThiDataGridViewComboBoxColumn(MaDanToc);
@@ -47,7 +49,7 @@ namespace QLDiemHSTHPT
             m_KhoiLopCtrl.HienThiDataGridViewComboBoxColumn(MaKhoiLop);
             m_LopCtrl.HienThiDataGridViewComboBoxColumn(MaLop);
 
-            m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2, dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1);
+            m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2, dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1,cmbNamHoc,cmbKhoiLop,cmbLop);
         }
 
         private void bngThemmoi_Click(object sender, EventArgs e)
@@ -141,7 +143,10 @@ namespace QLDiemHSTHPT
                 KiemTraTruocKhiLuu("HoTenCha") == true &&
                 KiemTraTruocKhiLuu("MaNgheNghiepCha") == true &&
                 KiemTraTruocKhiLuu("HoTenMe") == true &&
-                KiemTraTruocKhiLuu("MaNgheNghiepMe") == true)
+                KiemTraTruocKhiLuu("MaNgheNghiepMe") == true && 
+                KiemTraTruocKhiLuu("MaNamHoc") == true &&
+                KiemTraTruocKhiLuu("MaKhoiLop") == true &&
+                KiemTraTruocKhiLuu("MaLop") == true)
             {
                 if (KiemTraDoTuoiTruocKhiLuu("NgaySinh") == true)
                 {
@@ -160,7 +165,7 @@ namespace QLDiemHSTHPT
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2, dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1);
+            m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2, dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1,cmbNamHoc,cmbKhoiLop,cmbLop);
         }
 
         private void dgvhocsinh_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -192,7 +197,7 @@ namespace QLDiemHSTHPT
                 if (quyDinh.KiemTraDoTuoi(dateTimeInput1.Value) == true)
                 {
                     m_HocSinhCtrl.LuuHocSinh(txtMaHS.Text, textBoxTenhs.Text, gioiTinh, dateTimeInput1.Value, textBoxX4.Text, comboBoxEx4.SelectedValue.ToString(), comboBoxEx3.SelectedValue.ToString(), textBoxX3.Text, comboBoxEx2.SelectedValue.ToString(), textBoxX5.Text, comboBoxEx1.SelectedValue.ToString(), cmbNamHoc.SelectedValue.ToString(), cmbKhoiLop.SelectedValue.ToString(), cmbLop.SelectedValue.ToString());
-                    m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2, dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1);
+                    m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2, dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1,cmbNamHoc,cmbKhoiLop,cmbLop);
 
                     bdgHocSinh.BindingSource.MoveLast();
                 }
