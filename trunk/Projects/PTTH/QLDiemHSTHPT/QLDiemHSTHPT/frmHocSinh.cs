@@ -317,6 +317,39 @@ namespace QLDiemHSTHPT
 
         }
 
+        private void buttonX4_Click_1(object sender, EventArgs e)
+        {
+            //Fixbug - 2013/07/30 - NTHUE - BEGIN
+            dgvhocsinh.EndEdit();
+            //Fixbug - 2013/07/30 - NTHUE - END
+            if (KiemTraTruocKhiLuu("MaHocSinh") == true &&
+                KiemTraTruocKhiLuu("HoTen") == true &&
+                KiemTraTruocKhiLuu("NoiSinh") == true &&
+                KiemTraTruocKhiLuu("MaDanToc") == true &&
+                KiemTraTruocKhiLuu("MaTonGiao") == true &&
+                KiemTraTruocKhiLuu("HoTenCha") == true &&
+                KiemTraTruocKhiLuu("MaNgheNghiepCha") == true &&
+                KiemTraTruocKhiLuu("HoTenMe") == true &&
+                KiemTraTruocKhiLuu("MaNgheNghiepMe") == true &&
+                KiemTraTruocKhiLuu("MaNamHoc") == true &&
+                KiemTraTruocKhiLuu("MaKhoiLop") == true &&
+                KiemTraTruocKhiLuu("MaLop") == true)
+            {
+                if (KiemTraDoTuoiTruocKhiLuu("NgaySinh") == true)
+                {
+                    bindingNavigatorPositionItem.Focus();
+                    m_HocSinhCtrl.LuuHocSinh();
+                }
+
+            }
+        }
+
+        private void dgvhocsinh_ColumnDisplayIndexChanged(object sender, DataGridViewColumnEventArgs e)
+        {
+            Console.WriteLine("ádasdasd");
+
+        }
+
     }
 
 }

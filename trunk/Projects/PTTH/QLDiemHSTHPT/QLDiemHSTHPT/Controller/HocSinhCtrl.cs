@@ -132,6 +132,7 @@ namespace QLDiemHSTHPT.Controller
 
            bN.BindingSource = bS;
            dGV.DataSource = bS;
+           
        }
 
        //nhap diem
