@@ -221,6 +221,7 @@ namespace QLDiemHSTHPT
             this.dgvhocsinh.Name = "dgvhocsinh";
             this.dgvhocsinh.Size = new System.Drawing.Size(804, 703);
             this.dgvhocsinh.TabIndex = 8;
+            this.dgvhocsinh.ColumnDisplayIndexChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dgvhocsinh_ColumnDisplayIndexChanged);
             this.dgvhocsinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvhocsinh_CellClick);
             // 
             // MaHocSinh
@@ -926,6 +927,7 @@ namespace QLDiemHSTHPT
             this.buttonX4.Size = new System.Drawing.Size(140, 23);
             this.buttonX4.TabIndex = 22;
             this.buttonX4.Text = "Lưu vào danh sách";
+            this.buttonX4.Click += new System.EventHandler(this.buttonX4_Click_1);
             // 
             // buttonX5
             // 
