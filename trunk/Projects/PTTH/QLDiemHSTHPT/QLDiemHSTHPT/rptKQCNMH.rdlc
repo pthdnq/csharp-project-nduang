@@ -91,7 +91,7 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
-  <Width>7.875in</Width>
+  <Width>9.875in</Width>
   <Body>
     <ReportItems>
       <Textbox Name="textbox10">
@@ -187,7 +187,7 @@
         <ZIndex>1</ZIndex>
         <DataSetName>QLDiemHSTHPT_Bussiness_KQCNMonHocInfo</DataSetName>
         <Top>1.625in</Top>
-        <Width>5.375in</Width>
+        <Width>6.5in</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -205,9 +205,29 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>3</ZIndex>
+                      <ZIndex>4</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=RowNumber(Nothing)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox13">
+                      <rd:DefaultName>textbox13</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!HocSinh.Value.MaHocSinh</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -299,9 +319,31 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>7</ZIndex>
+                      <ZIndex>9</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>STT</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox12">
+                      <rd:DefaultName>textbox12</rd:DefaultName>
+                      <Style>
+                        <Color>Blue</Color>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>8</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>MÃ HỌC SINH</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -321,7 +363,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>6</ZIndex>
+                      <ZIndex>7</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>HỌ TÊN HỌC SINH</Value>
                     </Textbox>
@@ -343,7 +385,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>5</ZIndex>
+                      <ZIndex>6</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>ĐIỂM TB CẢ NĂM</Value>
                     </Textbox>
@@ -365,7 +407,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>4</ZIndex>
+                      <ZIndex>5</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>ĐIỂM THI LẠI</Value>
                     </Textbox>
@@ -379,6 +421,9 @@
         <TableColumns>
           <TableColumn>
             <Width>0.375in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.125in</Width>
           </TableColumn>
           <TableColumn>
             <Width>2.375in</Width>
