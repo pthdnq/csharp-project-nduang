@@ -175,7 +175,7 @@ namespace QLDiemHSTHPT
         }
         private void updateSTT_Diem()
         {
-            STT = new int[60, 20];
+            STT = new int[60, 200];
             //if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null && cmbHockyCN.SelectedValue != null && cmbMonhocCN.SelectedValue != null)
             //    m_HocSinhCtrl.HienThiDsHocSinhTheoLop(dgvNhapdiemchung, bdgNhapdiemchung, cmbNanhocCN.SelectedValue.ToString(), cmbLopCN.SelectedValue.ToString());
             dgvNhapdiemchung.EndEdit();
