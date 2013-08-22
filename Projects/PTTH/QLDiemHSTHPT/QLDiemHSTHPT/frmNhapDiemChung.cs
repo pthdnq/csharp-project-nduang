@@ -112,7 +112,11 @@ namespace QLDiemHSTHPT
 
         private void buttonX7_Click(object sender, EventArgs e)
         {
-            STT = new int[60, 20];
+            HienThiDSDiemChung();
+        }
+        private void HienThiDSDiemChung()
+        {
+            updateSTT_Diem();
             if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null && cmbHockyCN.SelectedValue != null && cmbMonhocCN.SelectedValue != null)
                 m_HocSinhCtrl.HienThiDsHocSinhTheoLop(dgvNhapdiemchung, bdgNhapdiemchung, cmbNanhocCN.SelectedValue.ToString(), cmbLopCN.SelectedValue.ToString());
 
@@ -143,7 +147,7 @@ namespace QLDiemHSTHPT
                 {
                     countRowDiem++;
 
-                    STT[countRowHocSinh, countRowDiem] = int.Parse(rowDiem["STT"].ToString());
+                    //STT[countRowHocSinh, countRowDiem] = int.Parse(rowDiem["STT"].ToString());
 
                     if (rowDiem["MaLoaiDiem"].ToString() == "LD0001")
                         diemMieng[soDiemMieng++] = rowDiem["Diem"].ToString();
@@ -167,11 +171,36 @@ namespace QLDiemHSTHPT
                 rowHocSinh.Cells["DiemThi"].Value = diemThi;
                 rowHocSinh.Cells["DiemThiLai"].Value = diemTL;
             }
+            STT = null;
         }
+        private void updateSTT_Diem()
+        {
+            STT = new int[60, 20];
+            //if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null && cmbHockyCN.SelectedValue != null && cmbMonhocCN.SelectedValue != null)
+            //    m_HocSinhCtrl.HienThiDsHocSinhTheoLop(dgvNhapdiemchung, bdgNhapdiemchung, cmbNanhocCN.SelectedValue.ToString(), cmbLopCN.SelectedValue.ToString());
+            dgvNhapdiemchung.EndEdit();
+            int countRowHocSinh = 0;
+            foreach (DataGridViewRow rowHocSinh in dgvNhapdiemchung.Rows)
+            {
+                countRowHocSinh++;
+                DataTable m_DT = m_DiemData.LayDsDiem(rowHocSinh.Cells["MaHocSinh"].Value.ToString(),
+                                                      cmbMonhocCN.SelectedValue.ToString(),
+                                                      cmbHockyCN.SelectedValue.ToString(),
+                                                      cmbNanhocCN.SelectedValue.ToString(),
+                                                      cmbLopCN.SelectedValue.ToString());
 
+                int countRowDiem = 0;
+                foreach (DataRow rowDiem in m_DT.Rows)
+                {
+                    countRowDiem++;
+
+                    STT[countRowHocSinh, countRowDiem] = int.Parse(rowDiem["STT"].ToString());
+                }
+            }
+        }
         private void bngluu_Click_1(object sender, EventArgs e)
         {
-            dgvNhapdiemchung.EndEdit();
+            updateSTT_Diem();
             if (KiemTraDiemTruocKhiLuu("DiemMieng") == true &&
                KiemTraDiemTruocKhiLuu("Diem15phut") == true &&
                KiemTraDiemTruocKhiLuu("Diem1tiet") == true &&
@@ -519,10 +548,13 @@ namespace QLDiemHSTHPT
                                     else
                                         break;
                                 }
+                            STT = null;
                         }
 
                     }
+                    
                     MessageBoxEx.Show("Cập nhật thành công!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    HienThiDSDiemChung();
                 }
             }
         }
@@ -668,6 +700,11 @@ namespace QLDiemHSTHPT
             bngluu.Enabled = status;
 
    
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            HienThiDSDiemChung();
         }
 
     }
