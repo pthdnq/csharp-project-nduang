@@ -59,29 +59,30 @@ namespace QLDiemHSTHPT.Controller
 
 
        public void HienThi(DataGridViewX dGV,
-                            BindingNavigator bN,
-                            TextBoxX txtMaHocSinh,
-                            TextBoxX txtTenHocSinh,
-                            TextBoxX txtGioiTinh,
-                            CheckBoxX ckbGTinhNam,
-                            CheckBoxX ckbGTinhNu,
-                            DateTimeInput dtpNgaySinh,
-                            TextBoxX txtNoiSinh,
-                            ComboBoxEx cmbDanToc,
-                            ComboBoxEx cmbTonGiao,
-                            TextBoxX txtHoTenCha,
-                            ComboBoxEx cmbNgheNghiepCha,
-                            TextBoxX txtHoTenMe,
-                            ComboBoxEx cmbNgheNghiepMe, 
-                            ComboBoxEx cmbNamHoc,
-                            ComboBoxEx cmbKhoiLop,
-                            ComboBoxEx cmbLop)
+                            BindingNavigator bN//,
+                            //TextBoxX txtMaHocSinh,
+                            //TextBoxX txtTenHocSinh,
+                            //TextBoxX txtGioiTinh,
+                            //CheckBoxX ckbGTinhNam,
+                            //CheckBoxX ckbGTinhNu,
+                            //DateTimeInput dtpNgaySinh,
+                            //TextBoxX txtNoiSinh,
+                            //ComboBoxEx cmbDanToc,
+                            //ComboBoxEx cmbTonGiao,
+                            //TextBoxX txtHoTenCha,
+                            //ComboBoxEx cmbNgheNghiepCha,
+                            //TextBoxX txtHoTenMe,
+                            //ComboBoxEx cmbNgheNghiepMe, 
+                            //ComboBoxEx cmbNamHoc,
+                            //ComboBoxEx cmbKhoiLop,
+                            //ComboBoxEx cmbLop
+           )
        {
            BindingSource bS = new BindingSource();
            bS.DataSource = m_HocSinhData.LayDsHocSinh();
 
            DataTable dT = m_HocSinhData.LayDsHocSinh();
-           bool gioiTinh = Convert.ToBoolean(dT.Rows[0]["GioiTinh"]);
+           /*bool gioiTinh = Convert.ToBoolean(dT.Rows[0]["GioiTinh"]);
 
            if (gioiTinh)
                ckbGTinhNu.Checked = true;
@@ -103,8 +104,11 @@ namespace QLDiemHSTHPT.Controller
            txtNoiSinh.DataBindings.Clear();
            txtNoiSinh.DataBindings.Add("Text", bS, "NoiSinh");
 
-           cmbDanToc.DataBindings.Clear();
-           cmbDanToc.DataBindings.Add("SelectedValue", bS, "MaDanToc");
+           txtNoiSinh.DataBindings.Clear();
+           txtNoiSinh.DataBindings.Add("Text", bS, "MaDanToc");
+
+           //cmbDanToc.DataBindings.Clear();
+           //cmbDanToc.DataBindings.Add("SelectedValue", bS, "MaDanToc");
 
            cmbTonGiao.DataBindings.Clear();
            cmbTonGiao.DataBindings.Add("SelectedValue", bS, "MaTonGiao");
@@ -129,7 +133,7 @@ namespace QLDiemHSTHPT.Controller
 
            cmbLop.DataBindings.Clear();
            cmbLop.DataBindings.Add("SelectedValue", bS, "MaLop");
-
+           */
            bN.BindingSource = bS;
            dGV.DataSource = bS;
            
@@ -348,28 +352,34 @@ namespace QLDiemHSTHPT.Controller
                }
                if (t)
                {
-                   DataRow rowthem = HocSinhTable.NewRow();
-                   rowthem[0] = dtbHocSinhExcel.Rows[i][0].ToString();
-                   rowthem[1] = dtbHocSinhExcel.Rows[i][1].ToString();
-                   if (dtbHocSinhExcel.Rows[i][2].ToString().Trim() == "TRUE")
+                   try
+                   {
+                       DataRow rowthem = HocSinhTable.NewRow();
+                       rowthem[0] = dtbHocSinhExcel.Rows[i][0].ToString();
+                       rowthem[1] = dtbHocSinhExcel.Rows[i][1].ToString();
+                       if (dtbHocSinhExcel.Rows[i][2].ToString().Trim() == "TRUE")
 
-                       rowthem[2] = Convert.ToBoolean(dtbHocSinhExcel.Rows[i][2]);
-                             else
-                      rowthem[2] = Convert.ToBoolean(dtbHocSinhExcel.Rows[i][2]);
+                           rowthem[2] = Convert.ToBoolean(dtbHocSinhExcel.Rows[i][2]);
+                       else
+                           rowthem[2] = Convert.ToBoolean(dtbHocSinhExcel.Rows[i][2]);
 
-                   //rowthem[2] = dtbHocSinhExcel.Rows[i][2].ToString();
-                   rowthem[3] = dtbHocSinhExcel.Rows[i][3].ToString();
-                   rowthem[4] = dtbHocSinhExcel.Rows[i][4].ToString();
-                   rowthem[5] = dtbHocSinhExcel.Rows[i][5].ToString();
-                   rowthem[6] = dtbHocSinhExcel.Rows[i][6].ToString();
-                   rowthem[7] = dtbHocSinhExcel.Rows[i][7].ToString();
-                   rowthem[8] = dtbHocSinhExcel.Rows[i][8].ToString();
-                   rowthem[9] = dtbHocSinhExcel.Rows[i][9].ToString();
-                   rowthem[10] = dtbHocSinhExcel.Rows[i][10].ToString(); 
+                       //rowthem[2] = dtbHocSinhExcel.Rows[i][2].ToString();
+                       rowthem[3] = dtbHocSinhExcel.Rows[i][3].ToString();
+                       rowthem[4] = dtbHocSinhExcel.Rows[i][4].ToString();
+                       rowthem[5] = dtbHocSinhExcel.Rows[i][5].ToString();
+                       rowthem[6] = dtbHocSinhExcel.Rows[i][6].ToString();
+                       rowthem[7] = dtbHocSinhExcel.Rows[i][7].ToString();
+                       rowthem[8] = dtbHocSinhExcel.Rows[i][8].ToString();
+                       rowthem[9] = dtbHocSinhExcel.Rows[i][9].ToString();
+                       rowthem[10] = dtbHocSinhExcel.Rows[i][10].ToString();
 
-                   HocSinhTable.Rows.Add(rowthem);
+                       HocSinhTable.Rows.Add(rowthem);
 
-                   rowSuccess++;
+                       rowSuccess++;
+                   }
+                   catch(Exception)
+                   {
+                   }
                }
            }
            MessageBox.Show("Số dòng đã được thêm: " + rowSuccess.ToString() + " dòng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -30,14 +30,12 @@ namespace QLDiemHSTHPT
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGiaoVien));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnMenuGiaoVien = new DevComponents.DotNetBar.ButtonItem();
             this.btnAdd = new DevComponents.DotNetBar.ButtonItem();
             this.btnDelete = new DevComponents.DotNetBar.ButtonItem();
@@ -45,23 +43,6 @@ namespace QLDiemHSTHPT
             this.btnClose = new DevComponents.DotNetBar.ButtonItem();
             this.btnRefreshMN = new DevComponents.DotNetBar.ButtonItem();
             this.nvgPanelGiaoVien = new DevComponents.DotNetBar.NavigationPane();
-            this.navigationPanePanel1 = new DevComponents.DotNetBar.NavigationPanePanel();
-            this.checkBoxX1 = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.checkBoxX2 = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.labelX10 = new DevComponents.DotNetBar.LabelX();
-            this.txtMaGV = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtDThoai = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.btnLuuDS = new DevComponents.DotNetBar.ButtonX();
-            this.btnMHoc = new DevComponents.DotNetBar.ButtonX();
-            this.cbmChuyenmon = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.lblChuyenMon = new DevComponents.DotNetBar.LabelX();
-            this.txtDiachi = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.lblDiaChi = new DevComponents.DotNetBar.LabelX();
-            this.lblDienThoai = new DevComponents.DotNetBar.LabelX();
-            this.txtTenGV = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.lblTenGV = new DevComponents.DotNetBar.LabelX();
-            this.lblMaGV = new DevComponents.DotNetBar.LabelX();
-            this.btnNhapTT = new DevComponents.DotNetBar.ButtonItem();
             this.ngvPanelTimKiem = new DevComponents.DotNetBar.NavigationPanePanel();
             this.buttonTKGV = new DevComponents.DotNetBar.ButtonX();
             this.ckboxtheoten = new DevComponents.DotNetBar.Controls.CheckBoxX();
@@ -71,12 +52,6 @@ namespace QLDiemHSTHPT
             this.btnTimKiemGV = new DevComponents.DotNetBar.ButtonItem();
             this.groupBoxDsgv = new System.Windows.Forms.GroupBox();
             this.dgvGiaoVien = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.MaGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaMonHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Gioitinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bdgGiaoVien = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -93,9 +68,13 @@ namespace QLDiemHSTHPT
             this.bngthoat = new System.Windows.Forms.ToolStripButton();
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.btnIPExcel = new System.Windows.Forms.ToolStripButton();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.MaGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaMonHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Gioitinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.nvgPanelGiaoVien.SuspendLayout();
-            this.navigationPanePanel1.SuspendLayout();
             this.ngvPanelTimKiem.SuspendLayout();
             this.groupBoxDsgv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoVien)).BeginInit();
@@ -165,18 +144,16 @@ namespace QLDiemHSTHPT
             // nvgPanelGiaoVien
             // 
             this.nvgPanelGiaoVien.CanCollapse = true;
-            this.nvgPanelGiaoVien.Controls.Add(this.navigationPanePanel1);
             this.nvgPanelGiaoVien.Controls.Add(this.ngvPanelTimKiem);
             this.nvgPanelGiaoVien.Dock = System.Windows.Forms.DockStyle.Left;
             this.nvgPanelGiaoVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nvgPanelGiaoVien.ItemPaddingBottom = 2;
             this.nvgPanelGiaoVien.ItemPaddingTop = 2;
             this.nvgPanelGiaoVien.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnNhapTT,
             this.btnTimKiemGV});
             this.nvgPanelGiaoVien.Location = new System.Drawing.Point(0, 0);
             this.nvgPanelGiaoVien.Name = "nvgPanelGiaoVien";
-            this.nvgPanelGiaoVien.NavigationBarHeight = 102;
+            this.nvgPanelGiaoVien.NavigationBarHeight = 67;
             this.nvgPanelGiaoVien.Padding = new System.Windows.Forms.Padding(1);
             this.nvgPanelGiaoVien.Size = new System.Drawing.Size(192, 510);
             this.nvgPanelGiaoVien.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
@@ -199,198 +176,7 @@ namespace QLDiemHSTHPT
             this.nvgPanelGiaoVien.TitlePanel.Style.GradientAngle = 90;
             this.nvgPanelGiaoVien.TitlePanel.Style.MarginLeft = 4;
             this.nvgPanelGiaoVien.TitlePanel.TabIndex = 0;
-            this.nvgPanelGiaoVien.TitlePanel.Text = "Nhập thông tin";
-            // 
-            // navigationPanePanel1
-            // 
-            this.navigationPanePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.navigationPanePanel1.Controls.Add(this.textBoxX2);
-            this.navigationPanePanel1.Controls.Add(this.checkBoxX1);
-            this.navigationPanePanel1.Controls.Add(this.checkBoxX2);
-            this.navigationPanePanel1.Controls.Add(this.labelX10);
-            this.navigationPanePanel1.Controls.Add(this.txtMaGV);
-            this.navigationPanePanel1.Controls.Add(this.txtDThoai);
-            this.navigationPanePanel1.Controls.Add(this.btnLuuDS);
-            this.navigationPanePanel1.Controls.Add(this.btnMHoc);
-            this.navigationPanePanel1.Controls.Add(this.cbmChuyenmon);
-            this.navigationPanePanel1.Controls.Add(this.lblChuyenMon);
-            this.navigationPanePanel1.Controls.Add(this.txtDiachi);
-            this.navigationPanePanel1.Controls.Add(this.lblDiaChi);
-            this.navigationPanePanel1.Controls.Add(this.lblDienThoai);
-            this.navigationPanePanel1.Controls.Add(this.txtTenGV);
-            this.navigationPanePanel1.Controls.Add(this.lblTenGV);
-            this.navigationPanePanel1.Controls.Add(this.lblMaGV);
-            this.navigationPanePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationPanePanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.navigationPanePanel1.Location = new System.Drawing.Point(1, 25);
-            this.navigationPanePanel1.Name = "navigationPanePanel1";
-            this.navigationPanePanel1.ParentItem = this.btnNhapTT;
-            this.navigationPanePanel1.Size = new System.Drawing.Size(190, 382);
-            this.navigationPanePanel1.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.navigationPanePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.navigationPanePanel1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.navigationPanePanel1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.navigationPanePanel1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
-            this.navigationPanePanel1.Style.GradientAngle = 90;
-            this.navigationPanePanel1.TabIndex = 2;
-            // 
-            // checkBoxX1
-            // 
-            this.checkBoxX1.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.checkBoxX1.Location = new System.Drawing.Point(17, 294);
-            this.checkBoxX1.Name = "checkBoxX1";
-            this.checkBoxX1.Size = new System.Drawing.Size(60, 18);
-            this.checkBoxX1.TabIndex = 25;
-            this.checkBoxX1.Text = "Nam";
-            // 
-            // checkBoxX2
-            // 
-            this.checkBoxX2.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.checkBoxX2.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.checkBoxX2.Location = new System.Drawing.Point(87, 294);
-            this.checkBoxX2.Name = "checkBoxX2";
-            this.checkBoxX2.Size = new System.Drawing.Size(60, 18);
-            this.checkBoxX2.TabIndex = 26;
-            this.checkBoxX2.Text = "Nữ";
-            // 
-            // labelX10
-            // 
-            this.labelX10.Location = new System.Drawing.Point(18, 270);
-            this.labelX10.Name = "labelX10";
-            this.labelX10.Size = new System.Drawing.Size(75, 18);
-            this.labelX10.TabIndex = 27;
-            this.labelX10.Text = "Giới tính:";
-            // 
-            // txtMaGV
-            // 
-            // 
-            // 
-            // 
-            this.txtMaGV.Border.Class = "TextBoxBorder";
-            this.txtMaGV.Location = new System.Drawing.Point(17, 42);
-            this.txtMaGV.Name = "txtMaGV";
-            this.txtMaGV.ReadOnly = true;
-            this.txtMaGV.Size = new System.Drawing.Size(120, 20);
-            this.txtMaGV.TabIndex = 24;
-            // 
-            // txtDThoai
-            // 
-            // 
-            // 
-            // 
-            this.txtDThoai.Border.Class = "TextBoxBorder";
-            this.txtDThoai.Location = new System.Drawing.Point(18, 143);
-            this.txtDThoai.Name = "txtDThoai";
-            this.txtDThoai.Size = new System.Drawing.Size(121, 20);
-            this.txtDThoai.TabIndex = 23;
-            // 
-            // btnLuuDS
-            // 
-            this.btnLuuDS.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnLuuDS.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
-            this.btnLuuDS.Location = new System.Drawing.Point(19, 339);
-            this.btnLuuDS.Name = "btnLuuDS";
-            this.btnLuuDS.Size = new System.Drawing.Size(140, 23);
-            this.btnLuuDS.TabIndex = 22;
-            this.btnLuuDS.Text = "Lưu vào danh sách";
-            this.btnLuuDS.Click += new System.EventHandler(this.btnLuuDS_Click);
-            // 
-            // btnMHoc
-            // 
-            this.btnMHoc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnMHoc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnMHoc.Image = global::QLDiemHSTHPT.Properties.Resources.add;
-            this.btnMHoc.Location = new System.Drawing.Point(145, 244);
-            this.btnMHoc.Name = "btnMHoc";
-            this.btnMHoc.Size = new System.Drawing.Size(20, 20);
-            this.btnMHoc.TabIndex = 21;
-            this.btnMHoc.Tooltip = "Thêm mới môn học";
-            this.btnMHoc.Click += new System.EventHandler(this.btnMHoc_Click);
-            // 
-            // cbmChuyenmon
-            // 
-            this.cbmChuyenmon.DisplayMember = "Text";
-            this.cbmChuyenmon.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbmChuyenmon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbmChuyenmon.FormattingEnabled = true;
-            this.cbmChuyenmon.ItemHeight = 14;
-            this.cbmChuyenmon.Location = new System.Drawing.Point(18, 244);
-            this.cbmChuyenmon.Name = "cbmChuyenmon";
-            this.cbmChuyenmon.Size = new System.Drawing.Size(121, 20);
-            this.cbmChuyenmon.TabIndex = 20;
-            // 
-            // lblChuyenMon
-            // 
-            this.lblChuyenMon.Location = new System.Drawing.Point(18, 225);
-            this.lblChuyenMon.Name = "lblChuyenMon";
-            this.lblChuyenMon.Size = new System.Drawing.Size(75, 23);
-            this.lblChuyenMon.TabIndex = 19;
-            this.lblChuyenMon.Text = "Chuyên Môn:";
-            // 
-            // txtDiachi
-            // 
-            // 
-            // 
-            // 
-            this.txtDiachi.Border.Class = "TextBoxBorder";
-            this.txtDiachi.Location = new System.Drawing.Point(18, 189);
-            this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(153, 20);
-            this.txtDiachi.TabIndex = 18;
-            // 
-            // lblDiaChi
-            // 
-            this.lblDiaChi.Location = new System.Drawing.Point(19, 169);
-            this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(75, 23);
-            this.lblDiaChi.TabIndex = 17;
-            this.lblDiaChi.Text = "Địa Chỉ:";
-            // 
-            // lblDienThoai
-            // 
-            this.lblDienThoai.Location = new System.Drawing.Point(19, 118);
-            this.lblDienThoai.Name = "lblDienThoai";
-            this.lblDienThoai.Size = new System.Drawing.Size(75, 26);
-            this.lblDienThoai.TabIndex = 15;
-            this.lblDienThoai.Text = "Điện Thoại:";
-            // 
-            // txtTenGV
-            // 
-            // 
-            // 
-            // 
-            this.txtTenGV.Border.Class = "TextBoxBorder";
-            this.txtTenGV.Location = new System.Drawing.Point(18, 92);
-            this.txtTenGV.Name = "txtTenGV";
-            this.txtTenGV.Size = new System.Drawing.Size(153, 20);
-            this.txtTenGV.TabIndex = 14;
-            // 
-            // lblTenGV
-            // 
-            this.lblTenGV.Location = new System.Drawing.Point(18, 68);
-            this.lblTenGV.Name = "lblTenGV";
-            this.lblTenGV.Size = new System.Drawing.Size(90, 23);
-            this.lblTenGV.TabIndex = 13;
-            this.lblTenGV.Text = "Tên giáo viên:";
-            // 
-            // lblMaGV
-            // 
-            this.lblMaGV.Location = new System.Drawing.Point(18, 17);
-            this.lblMaGV.Name = "lblMaGV";
-            this.lblMaGV.Size = new System.Drawing.Size(75, 23);
-            this.lblMaGV.TabIndex = 11;
-            this.lblMaGV.Text = "Mã giáo viên:";
-            // 
-            // btnNhapTT
-            // 
-            this.btnNhapTT.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnNhapTT.Checked = true;
-            this.btnNhapTT.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
-            this.btnNhapTT.Image = ((System.Drawing.Image)(resources.GetObject("btnNhapTT.Image")));
-            this.btnNhapTT.ImagePaddingHorizontal = 8;
-            this.btnNhapTT.Name = "btnNhapTT";
-            this.btnNhapTT.OptionGroup = "navBar";
-            this.btnNhapTT.Text = "Nhập thông tin";
+            this.nvgPanelGiaoVien.TitlePanel.Text = "Tìm kiếm giáo viên";
             // 
             // ngvPanelTimKiem
             // 
@@ -401,10 +187,10 @@ namespace QLDiemHSTHPT
             this.ngvPanelTimKiem.Controls.Add(this.txtTimKiemGV);
             this.ngvPanelTimKiem.Controls.Add(this.lblTimKiem);
             this.ngvPanelTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ngvPanelTimKiem.Location = new System.Drawing.Point(1, 1);
+            this.ngvPanelTimKiem.Location = new System.Drawing.Point(1, 25);
             this.ngvPanelTimKiem.Name = "ngvPanelTimKiem";
             this.ngvPanelTimKiem.ParentItem = this.btnTimKiemGV;
-            this.ngvPanelTimKiem.Size = new System.Drawing.Size(190, 406);
+            this.ngvPanelTimKiem.Size = new System.Drawing.Size(190, 417);
             this.ngvPanelTimKiem.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.ngvPanelTimKiem.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.ngvPanelTimKiem.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -467,6 +253,7 @@ namespace QLDiemHSTHPT
             // btnTimKiemGV
             // 
             this.btnTimKiemGV.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnTimKiemGV.Checked = true;
             this.btnTimKiemGV.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.btnTimKiemGV.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiemGV.Image")));
             this.btnTimKiemGV.ImagePaddingHorizontal = 8;
@@ -490,14 +277,6 @@ namespace QLDiemHSTHPT
             // 
             this.dgvGiaoVien.AllowUserToAddRows = false;
             this.dgvGiaoVien.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGiaoVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvGiaoVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvGiaoVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaGiaoVien,
@@ -506,85 +285,22 @@ namespace QLDiemHSTHPT
             this.DienThoai,
             this.MaMonHoc,
             this.Gioitinh});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvGiaoVien.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGiaoVien.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvGiaoVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvGiaoVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvGiaoVien.Location = new System.Drawing.Point(3, 41);
             this.dgvGiaoVien.Name = "dgvGiaoVien";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGiaoVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvGiaoVien.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvGiaoVien.Size = new System.Drawing.Size(705, 466);
             this.dgvGiaoVien.TabIndex = 6;
             this.dgvGiaoVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaoVien_CellClick);
-            // 
-            // MaGiaoVien
-            // 
-            this.MaGiaoVien.DataPropertyName = "MaGiaoVien";
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaGiaoVien.DefaultCellStyle = dataGridViewCellStyle10;
-            this.MaGiaoVien.HeaderText = "Mã Giáo Viên";
-            this.MaGiaoVien.Name = "MaGiaoVien";
-            this.MaGiaoVien.ReadOnly = true;
-            this.MaGiaoVien.Width = 130;
-            // 
-            // TenGiaoVien
-            // 
-            this.TenGiaoVien.DataPropertyName = "TenGiaoVien";
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenGiaoVien.DefaultCellStyle = dataGridViewCellStyle11;
-            this.TenGiaoVien.HeaderText = "Tên Giáo Viên";
-            this.TenGiaoVien.Name = "TenGiaoVien";
-            this.TenGiaoVien.ReadOnly = true;
-            this.TenGiaoVien.Width = 150;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiaChi.DefaultCellStyle = dataGridViewCellStyle12;
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
-            this.DiaChi.Width = 200;
-            // 
-            // DienThoai
-            // 
-            this.DienThoai.DataPropertyName = "DienThoai";
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DienThoai.DefaultCellStyle = dataGridViewCellStyle13;
-            this.DienThoai.HeaderText = "Điện Thoại";
-            this.DienThoai.Name = "DienThoai";
-            this.DienThoai.ReadOnly = true;
-            // 
-            // MaMonHoc
-            // 
-            this.MaMonHoc.DataPropertyName = "MaMonHoc";
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaMonHoc.DefaultCellStyle = dataGridViewCellStyle14;
-            this.MaMonHoc.HeaderText = "Chuyên môn";
-            this.MaMonHoc.Name = "MaMonHoc";
-            this.MaMonHoc.ReadOnly = true;
-            // 
-            // Gioitinh
-            // 
-            this.Gioitinh.DataPropertyName = "Gioitinh";
-            this.Gioitinh.HeaderText = "Giới Tính Nữ";
-            this.Gioitinh.Name = "Gioitinh";
-            this.Gioitinh.ReadOnly = true;
             // 
             // bdgGiaoVien
             // 
@@ -745,17 +461,56 @@ namespace QLDiemHSTHPT
             this.btnIPExcel.Text = "Import Excel ";
             this.btnIPExcel.Click += new System.EventHandler(this.btnIPExcel_Click);
             // 
-            // textBoxX2
+            // MaGiaoVien
             // 
+            this.MaGiaoVien.DataPropertyName = "MaGiaoVien";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaGiaoVien.DefaultCellStyle = dataGridViewCellStyle1;
+            this.MaGiaoVien.HeaderText = "Mã Giáo Viên";
+            this.MaGiaoVien.Name = "MaGiaoVien";
+            this.MaGiaoVien.ReadOnly = true;
+            this.MaGiaoVien.Width = 130;
             // 
+            // TenGiaoVien
             // 
+            this.TenGiaoVien.DataPropertyName = "TenGiaoVien";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenGiaoVien.DefaultCellStyle = dataGridViewCellStyle2;
+            this.TenGiaoVien.HeaderText = "Tên Giáo Viên";
+            this.TenGiaoVien.Name = "TenGiaoVien";
+            this.TenGiaoVien.Width = 150;
             // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Location = new System.Drawing.Point(40, 42);
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.ReadOnly = true;
-            this.textBoxX2.Size = new System.Drawing.Size(0, 20);
-            this.textBoxX2.TabIndex = 45;
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiaChi.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DiaChi.HeaderText = "Địa Chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.Width = 200;
+            // 
+            // DienThoai
+            // 
+            this.DienThoai.DataPropertyName = "DienThoai";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DienThoai.DefaultCellStyle = dataGridViewCellStyle4;
+            this.DienThoai.HeaderText = "Điện Thoại";
+            this.DienThoai.Name = "DienThoai";
+            // 
+            // MaMonHoc
+            // 
+            this.MaMonHoc.DataPropertyName = "MaMonHoc";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaMonHoc.DefaultCellStyle = dataGridViewCellStyle5;
+            this.MaMonHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaMonHoc.HeaderText = "Chuyên môn";
+            this.MaMonHoc.Name = "MaMonHoc";
+            // 
+            // Gioitinh
+            // 
+            this.Gioitinh.DataPropertyName = "Gioitinh";
+            this.Gioitinh.HeaderText = "Giới Tính Nữ";
+            this.Gioitinh.Name = "Gioitinh";
             // 
             // frmGiaoVien
             // 
@@ -773,7 +528,6 @@ namespace QLDiemHSTHPT
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmGiaoVien_Load);
             this.nvgPanelGiaoVien.ResumeLayout(false);
-            this.navigationPanePanel1.ResumeLayout(false);
             this.ngvPanelTimKiem.ResumeLayout(false);
             this.groupBoxDsgv.ResumeLayout(false);
             this.groupBoxDsgv.PerformLayout();
@@ -794,20 +548,6 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.ButtonItem btnClose;
         private DevComponents.DotNetBar.ButtonItem btnRefreshMN;
         private DevComponents.DotNetBar.NavigationPane nvgPanelGiaoVien;
-        private DevComponents.DotNetBar.NavigationPanePanel navigationPanePanel1;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtMaGV;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtDThoai;
-        private DevComponents.DotNetBar.ButtonX btnLuuDS;
-        private DevComponents.DotNetBar.ButtonX btnMHoc;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cbmChuyenmon;
-        private DevComponents.DotNetBar.LabelX lblChuyenMon;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtDiachi;
-        private DevComponents.DotNetBar.LabelX lblDiaChi;
-        private DevComponents.DotNetBar.LabelX lblDienThoai;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtTenGV;
-        private DevComponents.DotNetBar.LabelX lblTenGV;
-        private DevComponents.DotNetBar.LabelX lblMaGV;
-        private DevComponents.DotNetBar.ButtonItem btnNhapTT;
         private DevComponents.DotNetBar.NavigationPanePanel ngvPanelTimKiem;
         private DevComponents.DotNetBar.ButtonX buttonTKGV;
         private DevComponents.DotNetBar.Controls.CheckBoxX ckboxtheoten;
@@ -833,9 +573,6 @@ namespace QLDiemHSTHPT
         private System.Windows.Forms.ToolStripButton bngthoat;
         private System.Windows.Forms.ToolStripButton btnRefresh;
         private System.Windows.Forms.ToolStripButton btnIPExcel;
-        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX1;
-        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX2;
-        private DevComponents.DotNetBar.LabelX labelX10;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxGioiTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaGiaoVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenGiaoVien;
@@ -843,6 +580,5 @@ namespace QLDiemHSTHPT
         private System.Windows.Forms.DataGridViewTextBoxColumn DienThoai;
         private System.Windows.Forms.DataGridViewComboBoxColumn MaMonHoc;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Gioitinh;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
     }
 }

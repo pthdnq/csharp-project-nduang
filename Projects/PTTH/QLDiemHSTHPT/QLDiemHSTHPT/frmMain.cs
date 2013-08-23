@@ -14,9 +14,8 @@ namespace QLDiemHSTHPT
     public partial class frmMain : Office2007Form
     {
         NguoiDungCtrl m_NguoiDungCtrl = new NguoiDungCtrl();
-        frmTonGiao m_TonGiao = null;
-        frmDanToc m_DanToc = null;
         frmPhanBan m_PhanBan = null;
+        frmPhanCong m_PhanCong = null;
         frmConnection m_Connection = null;
         frmHanhKiem m_HanhKiem = null;
         frmHocLuc m_HocLuc = null;
@@ -24,7 +23,6 @@ namespace QLDiemHSTHPT
         frmKetQua m_KetQua = null;
         frmKhoiLop m_KhoiLop = null;
         frmNamHoc m_NamHoc = null;
-        frmNgheNghiep m_NgheNghiep = null;
         frmMonHoc m_MonHoc = null;
         frmNguoiDung m_NguoiDung = null;
         frmLoaiNguoiDung m_LoaiNguoiDung = null;
@@ -85,37 +83,16 @@ namespace QLDiemHSTHPT
 
         private void bntdantoc_Click_1(object sender, EventArgs e)
         {
-            if (m_DanToc == null || m_DanToc.IsDisposed)
-            {
-                m_DanToc = new frmDanToc();
-                m_DanToc.MdiParent = frmMain.ActiveForm;
-                m_DanToc.Show();
-            }
-            else m_DanToc.Activate();
         }
 
        
 
         private void dânTộcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (m_DanToc == null || m_DanToc.IsDisposed)
-            {
-                m_DanToc = new frmDanToc();
-                m_DanToc.MdiParent = frmMain.ActiveForm;
-                m_DanToc.Show();
-            }
-            else m_DanToc.Activate();
         }
 
         private void tônGiáoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (m_TonGiao == null || m_TonGiao.IsDisposed)
-            {
-                m_TonGiao = new frmTonGiao();
-                m_TonGiao.MdiParent = frmMain.ActiveForm;
-                m_TonGiao.Show();
-            }
-            else m_TonGiao.Activate();
         }
 
         private void hạnhKiểmToolStripMenuItem_Click(object sender, EventArgs e)
@@ -208,13 +185,6 @@ namespace QLDiemHSTHPT
 
         private void nghềNghiệpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (m_NgheNghiep == null || m_NgheNghiep.IsDisposed)
-            {
-                m_NgheNghiep = new frmNgheNghiep();
-                m_NgheNghiep.MdiParent = frmMain.ActiveForm;
-                m_NgheNghiep.Show();
-            }
-            else m_NgheNghiep.Activate();
         }
 
         private void mônHọcToolStripMenuItem_Click(object sender, EventArgs e)
@@ -440,59 +410,17 @@ namespace QLDiemHSTHPT
             else m_Lop.Activate();
         }
 
-        frmQuyDinh m_QuyDinh = null;
         private void toolStripMenuItem78_Click(object sender, EventArgs e)
         {
-            if (m_QuyDinh == null || m_QuyDinh.IsDisposed)
-            {
-                m_QuyDinh = new frmQuyDinh();
-                m_QuyDinh.MdiParent = frmMain.ActiveForm;
-                m_QuyDinh.setCurrentTab(m_QuyDinh.tabDotuoi);
-                m_QuyDinh.Show();
 
-            }
-            else
-            {
-                m_QuyDinh.setCurrentTab(m_QuyDinh.tabDotuoi);
-                m_QuyDinh.Activate();
-            }
         }
         private void toolStripMenuItem79_Click(object sender, EventArgs e)
         {
-            if (m_QuyDinh == null || m_QuyDinh.IsDisposed)
-            {
-                m_QuyDinh = new frmQuyDinh();
-                m_QuyDinh.MdiParent = frmMain.ActiveForm;
-                m_QuyDinh.setCurrentTab(m_QuyDinh.tabthangdiem);
-                m_QuyDinh.Show();
-
-            }
-            else
-            {
-                m_QuyDinh.setCurrentTab(m_QuyDinh.tabthangdiem);
-                m_QuyDinh.Activate();
-            }
         }
 
         private void toolStripMenuItem80_Click(object sender, EventArgs e)
         {
-            if (m_QuyDinh == null || m_QuyDinh.IsDisposed)
-            {
-                m_QuyDinh = new frmQuyDinh();
-                m_QuyDinh.MdiParent = frmMain.ActiveForm;
-                m_QuyDinh.setCurrentTab(m_QuyDinh.tabSiSo);
-                m_QuyDinh.Show();
-                //m_QuyDinh.tabDotuoi
-                //m_QuyDinh.tabDotuoi.Name.
-                //m_QuyDinh.Focus();
-                //m_QuyDinh.tabDotuoi.IsSelected = true;
 
-            }
-            else
-            {
-                m_QuyDinh.setCurrentTab(m_QuyDinh.tabSiSo);
-                m_QuyDinh.Activate();
-            }
         }
         frmHocSinh m_HocSinh = null;
         private void toolStripMenuItem56_Click(object sender, EventArgs e)
@@ -528,29 +456,9 @@ namespace QLDiemHSTHPT
                 m_GiaoVien.Activate();
         }
 
-        frmPhanCong m_PhanCong = null;
         private void buttonPCong_Click(object sender, EventArgs e)
         {
-            if (m_PhanCong == null || m_PhanCong.IsDisposed)
-            {
-                m_PhanCong = new frmPhanCong();
-                m_PhanCong.MdiParent = frmPhanCong.ActiveForm;
-                m_PhanCong.Show();
-            }
-            else
-                m_PhanCong.Activate();
         }
-        /*private void toolStripMenuItem62_Click(object sender, EventArgs e)
-        {
-            if (m_PhanCong == null || m_PhanCong.IsDisposed)
-            {
-                m_PhanCong = new frmPhanCong();
-                m_PhanCong.MdiParent = frmMain.ActiveForm;
-                m_PhanCong.Show();
-            }
-            else m_PhanCong.Activate();
-        }*/
-
         public String Permissions(String m_Per)
         {
             switch (m_Per)
@@ -582,8 +490,8 @@ namespace QLDiemHSTHPT
 
             buttonHocSinh.Enabled = false;
             buttonGV.Enabled = false;
-            buttonPCong.Enabled = false;
-            buttonPLop.Enabled = false;
+
+            
             buttonTCHS.Enabled = false;
             buttonTCGV.Enabled = false;
             toolStripMenuItem46.Enabled = false;
@@ -610,8 +518,8 @@ namespace QLDiemHSTHPT
             
             buttonHocSinh.Enabled = true;
             buttonGV.Enabled = true;
-            buttonPCong.Enabled = true;
-            buttonPLop.Enabled = true;
+            
+            
             buttonTCHS.Enabled = true;
             buttonTCGV.Enabled = true;
             toolStripMenuItem46.Enabled = true;
@@ -646,8 +554,8 @@ namespace QLDiemHSTHPT
             buttonItem32.Enabled = true;
             buttonHocSinh.Enabled = false;
             buttonGV.Enabled = false;
-            buttonPCong.Enabled = false;
-            buttonPLop.Enabled = false;
+
+            
             toolStripMenuItem47.Enabled = false;
             toolStripMenuItem48.Enabled = false;
             toolStripMenuItem49.Enabled = false;
@@ -681,8 +589,8 @@ namespace QLDiemHSTHPT
 
             buttonHocSinh.Enabled = false;
             buttonGV.Enabled = false;
-            buttonPCong.Enabled = false;
-            buttonPLop.Enabled = false;
+
+            
             buttonTCHS.Enabled = false;
             buttonTCGV.Enabled = false;
             toolStripMenuItem46.Enabled = false;
@@ -712,8 +620,8 @@ namespace QLDiemHSTHPT
 
             buttonHocSinh.Enabled = false;
             buttonGV.Enabled = false;
-            buttonPCong.Enabled = false;
-            buttonPLop.Enabled = false;
+
+            
             buttonTCHS.Enabled = false;
             buttonTCGV.Enabled = false;
             toolStripMenuItem46.Enabled = false;
@@ -722,17 +630,17 @@ namespace QLDiemHSTHPT
             buttondangnhap.Enabled = false;
         }
 
-        frmPhanLop m_PhanLop = null;
+        //frmPhanLop m_PhanLop = null;
         private void buttonPLop_Click(object sender, EventArgs e)
         {
-            if (m_PhanLop == null || m_PhanLop.IsDisposed)
-            {
-                m_PhanLop = new frmPhanLop();
-                m_PhanLop.MdiParent = frmPhanLop.ActiveForm;
-                m_PhanLop.Show();
-            }
-            else
-                m_PhanLop.Activate();
+            //if (m_PhanLop == null || m_PhanLop.IsDisposed)
+            //{
+            //    m_PhanLop = new frmPhanLop();
+            //    m_PhanLop.MdiParent = frmPhanLop.ActiveForm;
+            //    m_PhanLop.Show();
+            //}
+            //else
+            //    m_PhanLop.Activate();
         }
         /*private void toolStripMenuItem57_Click(object sender, EventArgs e)
         {
@@ -976,6 +884,17 @@ namespace QLDiemHSTHPT
                 m_PhanBan.Show();
             }
             else m_PhanBan.Activate();
+        }
+
+        private void btnPhanCongGV_Click(object sender, EventArgs e)
+        {
+            if (m_PhanCong == null || m_PhanCong.IsDisposed)
+            {
+                m_PhanCong = new frmPhanCong();
+                m_PhanCong.MdiParent = frmMain.ActiveForm;
+                m_PhanCong.Show();
+            }
+            else m_PhanCong.Activate();
         }
     }
 }

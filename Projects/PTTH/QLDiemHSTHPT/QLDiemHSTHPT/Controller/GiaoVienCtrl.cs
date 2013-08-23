@@ -33,7 +33,7 @@ namespace QLDiemHSTHPT.Controller
 
       
        public void HienThi(DataGridViewX dGV,
-                            BindingNavigator bN,
+                            BindingNavigator bN /*,
                             TextBoxX txtMaGiaoVien,
                             TextBoxX txtTenGiaoVien,
                             TextBoxX txtDiaChi,
@@ -41,12 +41,12 @@ namespace QLDiemHSTHPT.Controller
                             ComboBoxEx cmbMonHoc, 
                             TextBoxX txtGioiTinh,
                             CheckBoxX ckbGTinhNam,
-                            CheckBoxX ckbGTinhNu)
+                            CheckBoxX ckbGTinhNu*/)
        {
            BindingSource bS = new BindingSource();
            bS.DataSource = m_GiaoVienData.LayDsGiaoVien();
 
-           DataTable dT = m_GiaoVienData.LayDsGiaoVien();
+           /*DataTable dT = m_GiaoVienData.LayDsGiaoVien();
            bool gioiTinh = Convert.ToBoolean(dT.Rows[0]["GioiTinh"]);
 
            if (gioiTinh)
@@ -70,7 +70,7 @@ namespace QLDiemHSTHPT.Controller
            cmbMonHoc.DataBindings.Add("SelectedValue", bS, "MaMonHoc");
 
            txtGioiTinh.DataBindings.Clear();
-           txtGioiTinh.DataBindings.Add("Text", bS, "GioiTinh");
+           txtGioiTinh.DataBindings.Add("Text", bS, "GioiTinh");*/
 
            bN.BindingSource = bS;
            dGV.DataSource = bS;

@@ -13,8 +13,6 @@ namespace QLDiemHSTHPT
 {
     public partial class frmTimKiemHS : Office2007Form
     {
-        DanTocCtrl m_DanTocCtrl = new DanTocCtrl();
-        TonGiaoCtrl m_TonGiaoCtrl = new TonGiaoCtrl();
         HocSinhCtrl m_HocSinhCtrl = new HocSinhCtrl();
         public frmTimKiemHS()
         {
@@ -24,8 +22,6 @@ namespace QLDiemHSTHPT
 
         private void frmTimKiemHS_Load(object sender, EventArgs e)
         {
-            m_DanTocCtrl.HienThiComboBox(cmbdantoc);
-            m_TonGiaoCtrl.HienThiComboBox(cmbtongiao);
         }
 
  
