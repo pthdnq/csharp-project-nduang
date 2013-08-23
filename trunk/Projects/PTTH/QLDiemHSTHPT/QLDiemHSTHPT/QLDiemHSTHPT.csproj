@@ -96,19 +96,12 @@
     <Compile Include="Component\frmDoiMatKhau.Designer.cs">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="Component\frmQuyDinh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Component\frmQuyDinh.Designer.cs">
-      <DependentUpon>frmQuyDinh.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controller\DiemCtrl.cs" />
     <Compile Include="Controller\KQCNMonHocCtrl.cs" />
     <Compile Include="Controller\KQCNTongHopCtrl.cs" />
     <Compile Include="Controller\KQHKMonHocCtrl.cs" />
     <Compile Include="Controller\KQHKTongHopCtrl.cs" />
     <Compile Include="Component\Utilities.cs" />
-    <Compile Include="Controller\DanTocCtrl.cs" />
     <Compile Include="Controller\GiaoVienCtrl.cs" />
     <Compile Include="Controller\HanhKiemCtrl.cs" />
     <Compile Include="Controller\HocKyCtrl.cs" />
@@ -121,12 +114,10 @@
     <Compile Include="Controller\LopCtrl.cs" />
     <Compile Include="Controller\MonHocCtrl.cs" />
     <Compile Include="Controller\NamHocCtrl.cs" />
-    <Compile Include="Controller\NgheNghiepCtrl.cs" />
     <Compile Include="Controller\NguoiDungCtrl.cs" />
     <Compile Include="Controller\PhanBanCtrl.cs" />
     <Compile Include="Controller\PhanCongCtrl.cs" />
     <Compile Include="Controller\QuyDinhCtrl.cs" />
-    <Compile Include="Controller\TonGiaoCtrl.cs" />
     <Compile Include="DataLayer\PhanBanData.cs" />
     <Compile Include="frmPhanBan.cs">
       <SubType>Form</SubType>
@@ -134,7 +125,6 @@
     <Compile Include="frmPhanBan.Designer.cs">
       <DependentUpon>frmPhanBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\DanTocData.cs" />
     <Compile Include="DataLayer\DiemData.cs" />
     <Compile Include="DataLayer\GiaoVienData.cs" />
     <Compile Include="DataLayer\HanhKiemData.cs" />
@@ -152,16 +142,20 @@
     <Compile Include="DataLayer\LopData.cs" />
     <Compile Include="DataLayer\MonHocData.cs" />
     <Compile Include="DataLayer\NamHocData.cs" />
-    <Compile Include="DataLayer\NgheNghiepData.cs" />
     <Compile Include="DataLayer\NguoiDungData.cs" />
     <Compile Include="DataLayer\PhanCongData.cs" />
     <Compile Include="DataLayer\QuyDinhData.cs" />
-    <Compile Include="DataLayer\TonGiaoData.cs" />
     <Compile Include="Component\frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Component\frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhanCong.Designer.cs">
+      <DependentUpon>frmPhanCong.cs</DependentUpon>
     </Compile>
     <Compile Include="frptKetQuaHocKy_TongHop.cs">
       <SubType>Form</SubType>
@@ -174,12 +168,6 @@
     </Compile>
     <Compile Include="frptDanhSachLop.Designer.cs">
       <DependentUpon>frptDanhSachLop.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDanToc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDanToc.Designer.cs">
-      <DependentUpon>frmDanToc.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGiaoVien.cs">
       <SubType>Form</SubType>
@@ -259,12 +247,6 @@
     <Compile Include="frmNamHoc.Designer.cs">
       <DependentUpon>frmNamHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNgheNghiep.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmNgheNghiep.Designer.cs">
-      <DependentUpon>frmNgheNghiep.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,18 +265,6 @@
     <Compile Include="frmNhapDiemRieng.Designer.cs">
       <DependentUpon>frmNhapDiemRieng.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPhanCong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPhanCong.Designer.cs">
-      <DependentUpon>frmPhanCong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPhanLop.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPhanLop.Designer.cs">
-      <DependentUpon>frmPhanLop.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmTimKiemGV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,12 +276,6 @@
     </Compile>
     <Compile Include="frmTimKiemHS.Designer.cs">
       <DependentUpon>frmTimKiemHS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTonGiao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTonGiao.Designer.cs">
-      <DependentUpon>frmTonGiao.cs</DependentUpon>
     </Compile>
     <Compile Include="frmXemDiem.cs">
       <SubType>Form</SubType>
@@ -363,10 +327,6 @@
       <SubType>Designer</SubType>
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Component\frmQuyDinh.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>frmQuyDinh.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Component\frmAbout.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmAbout.cs</DependentUpon>
@@ -375,13 +335,13 @@
       <DependentUpon>frmPhanBan.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPhanCong.resx">
+      <DependentUpon>frmPhanCong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="frptDanhSachLop.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frptDanhSachLop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDanToc.resx">
-      <DependentUpon>frmDanToc.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGiaoVien.resx">
       <SubType>Designer</SubType>
@@ -435,10 +395,6 @@
       <SubType>Designer</SubType>
       <DependentUpon>frmNamHoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNgheNghiep.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>frmNgheNghiep.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmNguoiDung.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmNguoiDung.cs</DependentUpon>
@@ -451,14 +407,6 @@
       <SubType>Designer</SubType>
       <DependentUpon>frmNhapDiemRieng.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPhanCong.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>frmPhanCong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPhanLop.resx">
-      <DependentUpon>frmPhanLop.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmTimKiemGV.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmTimKiemGV.cs</DependentUpon>
@@ -466,10 +414,6 @@
     <EmbeddedResource Include="frmTimKiemHS.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmTimKiemHS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTonGiao.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>frmTonGiao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmXemDiem.resx">
       <SubType>Designer</SubType>

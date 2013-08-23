@@ -24,9 +24,9 @@ namespace QLDiemHSTHPT
 
         private void frmGiaoVien_Load(object sender, EventArgs e)
         {
-            m_MonHocCtrl.HienThiComboBox(cbmChuyenmon);
+            //m_MonHocCtrl.HienThiComboBox(cbmChuyenmon);
             m_MonHocCtrl.HienThiDataGridViewComboBoxColumnGiaoVien(MaMonHoc);
-            m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien, txtMaGV, txtTenGV, txtDiachi, txtDThoai, cbmChuyenmon, textBoxX2,checkBoxX1, checkBoxX2);
+            m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien /*, txtMaGV, txtTenGV, txtDiachi, txtDThoai, cbmChuyenmon, textBoxX2,checkBoxX1, checkBoxX2*/);
 
         }
 
@@ -89,25 +89,26 @@ namespace QLDiemHSTHPT
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien, txtMaGV, txtTenGV, txtDiachi, txtDThoai, cbmChuyenmon, textBoxX2, checkBoxX1, checkBoxX2);
+            m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien /*, txtMaGV, txtTenGV, txtDiachi, txtDThoai, cbmChuyenmon, textBoxX2, checkBoxX1, checkBoxX2*/);
         }
 
         private void btnLuuDS_Click(object sender, EventArgs e)
         {
-            bool gioiTinh = false;
-            if (checkBoxX2.Checked == true)
-                gioiTinh = true;
-            if (txtTenGV.Text != "" &&
-               txtDiachi.Text != "" &&
-               txtDThoai.Text != "" &&
-               cbmChuyenmon.SelectedValue != null)
-            {
-                m_GiaoVienCtrl.LuuGiaoVien(txtMaGV.Text, txtTenGV.Text, txtDiachi.Text, txtDThoai.Text, cbmChuyenmon.SelectedValue.ToString(),gioiTinh);
-                m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien, txtMaGV, txtTenGV, txtDiachi, txtDThoai, cbmChuyenmon, textBoxX2, checkBoxX1, checkBoxX2);
-                bdgGiaoVien.BindingSource.MoveLast();
-            }
-            else
-                MessageBoxEx.Show("Giá trị của các ô không được rỗng!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //bool gioiTinh = false;
+            //if (checkBoxX2.Checked == true)
+            //    gioiTinh = true;
+            //if (txtTenGV.Text != "" &&
+            //   txtDiachi.Text != "" &&
+            //   txtDThoai.Text != "" &&
+            //   cbmChuyenmon.SelectedValue != null)
+            //{
+            //    m_GiaoVienCtrl.LuuGiaoVien(txtMaGV.Text, txtTenGV.Text, txtDiachi.Text, txtDThoai.Text, cbmChuyenmon.SelectedValue.ToString(),gioiTinh);
+            //    m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien /*, txtMaGV, txtTenGV, txtDiachi, txtDThoai, cbmChuyenmon, textBoxX2, checkBoxX1, checkBoxX2*/);
+            //    bdgGiaoVien.BindingSource.MoveLast();
+            //}
+            //else
+            //    MessageBoxEx.Show("Giá trị của các ô không được rỗng!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
         }
 
         void TimKiemGiaoVien()
@@ -175,10 +176,10 @@ namespace QLDiemHSTHPT
 
         private void dgvGiaoVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (textBoxX2.Text == "True")
-                checkBoxX2.Checked = true;
-            else
-                checkBoxX1.Checked = true;
+            //if (textBoxX2.Text == "True")
+            //    checkBoxX2.Checked = true;
+            //else
+            //    checkBoxX1.Checked = true;
         }
     }
 }

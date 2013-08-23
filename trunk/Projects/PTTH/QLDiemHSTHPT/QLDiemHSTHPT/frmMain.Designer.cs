@@ -122,6 +122,7 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem58 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem59 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem60 = new System.Windows.Forms.ToolStripMenuItem();
+            this.phânBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem63 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem64 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem65 = new System.Windows.Forms.ToolStripMenuItem();
@@ -214,8 +215,6 @@ namespace QLDiemHSTHPT
             this.expelquanly = new DevComponents.DotNetBar.ExpandablePanel();
             this.buttonGV = new DevComponents.DotNetBar.ButtonX();
             this.buttonHocSinh = new DevComponents.DotNetBar.ButtonX();
-            this.buttonPCong = new DevComponents.DotNetBar.ButtonX();
-            this.buttonPLop = new DevComponents.DotNetBar.ButtonX();
             this.expanelHethong = new DevComponents.DotNetBar.ExpandablePanel();
             this.buttonthoat = new DevComponents.DotNetBar.ButtonX();
             this.buttondangnhap = new DevComponents.DotNetBar.ButtonX();
@@ -233,7 +232,7 @@ namespace QLDiemHSTHPT
             this.buttonItem24 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem25 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem26 = new DevComponents.DotNetBar.ButtonItem();
-            this.phânBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnPhanCongGV = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.bottomBar)).BeginInit();
             this.bottomBar.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -1168,6 +1167,14 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem60.Text = "Nghề Nghiệp";
             this.toolStripMenuItem60.Click += new System.EventHandler(this.nghềNghiệpToolStripMenuItem_Click);
             // 
+            // phânBanToolStripMenuItem
+            // 
+            this.phânBanToolStripMenuItem.Image = global::QLDiemHSTHPT.Properties.Resources.saoluu;
+            this.phânBanToolStripMenuItem.Name = "phânBanToolStripMenuItem";
+            this.phânBanToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.phânBanToolStripMenuItem.Text = "Phân Ban";
+            this.phânBanToolStripMenuItem.Click += new System.EventHandler(this.phânBanToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem63
             // 
             this.toolStripMenuItem63.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1960,10 +1967,9 @@ namespace QLDiemHSTHPT
             // 
             this.expelquanly.CanvasColor = System.Drawing.SystemColors.Control;
             this.expelquanly.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.expelquanly.Controls.Add(this.btnPhanCongGV);
             this.expelquanly.Controls.Add(this.buttonGV);
             this.expelquanly.Controls.Add(this.buttonHocSinh);
-            this.expelquanly.Controls.Add(this.buttonPCong);
-            this.expelquanly.Controls.Add(this.buttonPLop);
             this.expelquanly.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.expelquanly.Location = new System.Drawing.Point(12, 183);
             this.expelquanly.Name = "expelquanly";
@@ -2016,30 +2022,6 @@ namespace QLDiemHSTHPT
             this.buttonHocSinh.Text = "Học Sinh";
             this.buttonHocSinh.Tooltip = "Học Sinh";
             this.buttonHocSinh.Click += new System.EventHandler(this.buttonHocSinh_Click);
-            // 
-            // buttonPCong
-            // 
-            this.buttonPCong.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonPCong.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonPCong.Location = new System.Drawing.Point(22, 112);
-            this.buttonPCong.Name = "buttonPCong";
-            this.buttonPCong.Size = new System.Drawing.Size(144, 30);
-            this.buttonPCong.TabIndex = 5;
-            this.buttonPCong.Text = "Phân Công";
-            this.buttonPCong.Tooltip = "Phân Công";
-            this.buttonPCong.Click += new System.EventHandler(this.buttonPCong_Click);
-            // 
-            // buttonPLop
-            // 
-            this.buttonPLop.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonPLop.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonPLop.Location = new System.Drawing.Point(22, 148);
-            this.buttonPLop.Name = "buttonPLop";
-            this.buttonPLop.Size = new System.Drawing.Size(144, 30);
-            this.buttonPLop.TabIndex = 4;
-            this.buttonPLop.Text = "Phân Lớp";
-            this.buttonPLop.Tooltip = "Phân Lớp";
-            this.buttonPLop.Click += new System.EventHandler(this.buttonPLop_Click);
             // 
             // expanelHethong
             // 
@@ -2248,13 +2230,21 @@ namespace QLDiemHSTHPT
             this.buttonItem26.Text = "Thoát";
             this.buttonItem26.Tooltip = "Thoát";
             // 
-            // phânBanToolStripMenuItem
+            // btnPhanCongGV
             // 
-            this.phânBanToolStripMenuItem.Image = global::QLDiemHSTHPT.Properties.Resources.saoluu;
-            this.phânBanToolStripMenuItem.Name = "phânBanToolStripMenuItem";
-            this.phânBanToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.phânBanToolStripMenuItem.Text = "Phân Ban";
-            this.phânBanToolStripMenuItem.Click += new System.EventHandler(this.phânBanToolStripMenuItem_Click);
+            this.btnPhanCongGV.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnPhanCongGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPhanCongGV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPhanCongGV.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnPhanCongGV.Location = new System.Drawing.Point(22, 113);
+            this.btnPhanCongGV.Name = "btnPhanCongGV";
+            this.btnPhanCongGV.Size = new System.Drawing.Size(144, 30);
+            this.btnPhanCongGV.TabIndex = 10;
+            this.btnPhanCongGV.Text = "Phân Công";
+            this.btnPhanCongGV.Tooltip = "Phân Công";
+            this.btnPhanCongGV.Click += new System.EventHandler(this.btnPhanCongGV_Click);
             // 
             // frmMain
             // 
@@ -2425,8 +2415,6 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.ButtonX buttondangxuat;
         private DevComponents.DotNetBar.ButtonX buttonthoat;
         private DevComponents.DotNetBar.ButtonX buttondangnhap;
-        private DevComponents.DotNetBar.ButtonX buttonPCong;
-        private DevComponents.DotNetBar.ButtonX buttonPLop;
         private DevComponents.DotNetBar.ButtonX buttonGV;
         private DevComponents.DotNetBar.ButtonX buttonHocSinh;
         private ToolStripSeparator toolStripSeparator5;
@@ -2496,6 +2484,7 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.ButtonItem btnLoaiNguoiDung;
         private DevComponents.DotNetBar.ButtonItem btnPhanQuyen;
         private ToolStripMenuItem phânBanToolStripMenuItem;
+        private DevComponents.DotNetBar.ButtonX btnPhanCongGV;
 
 
     }
