@@ -150,22 +150,10 @@ namespace QLDiemHSTHPT.Controller
        
        public float DiemTrungBinhChungCacMonCaNam(String maHocSinh, String maLop, String maNamHoc)
        {
-           float tongDiemCacMon = 0;
-           float diemTBTungMon = 0;
-           int tongHeSoCacMon = 0;
-
-           DataTable m_DT = m_MonHocData.LayDsMonHoc(maNamHoc, maLop);
-
-           foreach (DataRow row in m_DT.Rows)
-           {
-               diemTBTungMon = DiemTrungBinhMonCaNam(maHocSinh, row["MaMonHoc"].ToString(), maNamHoc, maLop);
-               tongDiemCacMon += diemTBTungMon * Convert.ToInt32(row["HeSoBanCoBan"].ToString());
-               tongHeSoCacMon += Convert.ToInt32(row["HeSoBanCoBan"].ToString());
-           }
-           if (tongHeSoCacMon > 0)
-               return tongDiemCacMon / tongHeSoCacMon;
-           else
-               return 0;
+           float TBCMHK1 = DiemTrungBinhChungCacMonHocKy(maHocSinh, maLop, "HK1", maNamHoc);
+           float TBCMHK2 = DiemTrungBinhChungCacMonHocKy(maHocSinh, maLop, "HK2", maNamHoc);
+           float TBCMCN = (TBCMHK1 + 2 * TBCMHK2) / 3;
+           return TBCMCN;
        }
        public float DiemThiLai(String maHocSinh, String maMonHoc, String maNamHoc, String maLop)
        {
