@@ -14,6 +14,7 @@ namespace QLDiemHSTHPT.Controller
         DiemData m_DiemData = new DiemData();
         HocKyData m_HocKyData = new HocKyData();
         MonHocData m_MonHocData = new MonHocData();
+        LopData m_LopData = new LopData();
 
        public void LuuDiem(String maHocSinh, String maMonHoc, String maHocKy, String maNamHoc, String maLop, String maLoaiDiem, float diemSo)
        {
@@ -68,41 +69,78 @@ namespace QLDiemHSTHPT.Controller
            else
                return 0;
        }
-       
+       //OK
        public float DiemTrungBinhMonHocKy(String maHocSinh, String maMonHoc, String maHocKy, String maNamHoc, String maLop)
        {
            DataTable m_DT = m_DiemData.LayDsDiemHocSinh(maHocSinh, maMonHoc, maHocKy, maNamHoc, maLop);
-
+           float tongDiemHS1 = 0;
+           float tongDiemHS2 = 0;
+           float DiemHS3 = 0;
+           int soDiemHS1 = 0;
+           int soDiemHS2 = 0;
+           //int soDiemHS3 = 0;
            float tongDiem = 0;
            int tongHeSo = 0;
 
            foreach (DataRow row in m_DT.Rows)
            {
-               if (row["MaLoaiDiem"].ToString() != "LD0005")
+               //diem he so 1
+               if (row["MaLoaiDiem"].ToString() == "LD0001" || row["MaLoaiDiem"].ToString() == "LD0002" )
                {
-                   tongDiem += Convert.ToSingle(row["Diem"].ToString()) * Convert.ToInt32(row["HeSo"].ToString());
-                   tongHeSo += Convert.ToInt32(row["HeSo"].ToString());
+                   tongDiemHS1 += Convert.ToSingle(row["Diem"].ToString());
+                   soDiemHS1++;
+               }
+                   //diem he so 2
+               else if (row["MaLoaiDiem"].ToString() == "LD0003")
+               {
+                   tongDiemHS2 += Convert.ToSingle(row["Diem"].ToString());
+                   soDiemHS2++;
+               }
+                   //diem he so 3
+               else if (row["MaLoaiDiem"].ToString() == "LD0004")
+               {
+                   DiemHS3 = Convert.ToSingle(row["Diem"].ToString());
+                   //soDiemHS3++;
                }
            }
-           if (tongHeSo > 0)
-               return tongDiem / tongHeSo;
-           else
-               return 0;
-       }
 
+           float TBMHK = (tongDiemHS1 + 2 * tongDiemHS2 + 3 * DiemHS3) / (soDiemHS1 + soDiemHS2 + 3);
+           return TBMHK;
+       }
+       //OK
        public float DiemTrungBinhChungCacMonHocKy(String maHocSinh, String maLop, String maHocKy, String maNamHoc)
        {
            float tongDiemCacMon = 0;
            float diemTBTungMon = 0;
            int tongHeSoCacMon = 0;
+           string strBan = "CHUA_PHAN_BAN";
+           DataTable m_DT_BAN = m_LopData.TimTheoMa(maLop);
 
            DataTable m_DT = m_MonHocData.LayDsMonHoc(maNamHoc, maLop);
+           foreach (DataRow row in m_DT_BAN.Rows)
+           {
+               strBan = row["MaBan"].ToString().Trim();
+               break;
+           }
 
            foreach (DataRow row in m_DT.Rows)
            {
                diemTBTungMon = DiemTrungBinhMonHocKy(maHocSinh, row["MaMonHoc"].ToString(), maHocKy, maNamHoc, maLop);
-               tongDiemCacMon += diemTBTungMon * Convert.ToInt32(row["HeSoBanCoBan"].ToString());
-               tongHeSoCacMon += Convert.ToInt32(row["HeSoBanCoBan"].ToString());
+               if (strBan == "B0001")//ban KHTN
+               {
+                   tongDiemCacMon += diemTBTungMon * Convert.ToInt32(row["HeSoBanKHTN"].ToString());
+                   tongHeSoCacMon += Convert.ToInt32(row["HeSoBanKHTN"].ToString());
+               }
+               else if (strBan == "B0002")//Ban XHNV
+               {
+                   tongDiemCacMon += diemTBTungMon * Convert.ToInt32(row["HeSoBanKHXHNV"].ToString());
+                   tongHeSoCacMon += Convert.ToInt32(row["HeSoBanKHXHNV"].ToString());
+               }
+               else//ban CB
+               {
+                   tongDiemCacMon += diemTBTungMon * Convert.ToInt32(row["HeSoBanCoBan"].ToString());
+                   tongHeSoCacMon += Convert.ToInt32(row["HeSoBanCoBan"].ToString());
+               }
            }
            if (tongHeSoCacMon > 0)
                return tongDiemCacMon / tongHeSoCacMon;
@@ -150,7 +188,7 @@ namespace QLDiemHSTHPT.Controller
                return 0;
        }
    
-
+       //OK
        public float DiemTrungBinhMonCaNam(String maHocSinh, String maMonHoc, String maNamHoc, String maLop)
        {
            DataTable m_DT = new DataTable();

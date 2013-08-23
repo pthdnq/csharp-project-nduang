@@ -18,6 +18,7 @@ namespace QLDiemHSTHPT
             Application.SetCompatibleTextRenderingDefault(false);
            // Application.Run(new frmGiaoVien());
             Application.Run(new frmMain());
+            //Application.Run(new frmLoaiDiem());
             //Application.Run(new frmPhanLop());
          //  Application.Run(new frmLoaiDiem());
 //             foreach (var f in new DirectoryInfo(@"E:\Projects C#\Projects\PTTH\QLDiemHSTHPT").GetFiles("*.cs", SearchOption.AllDirectories))
