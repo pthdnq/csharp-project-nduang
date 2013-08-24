@@ -41,11 +41,11 @@ namespace QLDiemHSTHPT.Controller
             public DataTable LayDsKQHocKyMonHocForReport(String maLop, String maMonHoc, String maHocKy, String maNamHoc)
             {
                 SqlCommand cmd = new SqlCommand("SELECT * " +
-                                                "FROM HOCSINH HS INNER JOIN KQ_HOC_KY_MON_HOC KQ ON KQ.MaHocSinh = HS.MaHocSinh " +
-                                                "INNER JOIN LOP L ON KQ.MaLop = L.MaLop " +
-                                                "INNER JOIN MONHOC MH ON KQ.MaMonHoc = MH.MaMonHoc " +
-                                                "INNER JOIN HOCKY HK ON KQ.MaHocKy = HK.MaHocKy " +
-                                                "INNER JOIN NAMHOC NH ON KQ.MaNamHoc = NH.MaNamHoc " +
+                                                "FROM HOCSINH HS FULL JOIN KQ_HOC_KY_MON_HOC KQ ON KQ.MaHocSinh = HS.MaHocSinh " +
+                                                "FULL JOIN LOP L ON KQ.MaLop = L.MaLop " +
+                                                "FULL JOIN MONHOC MH ON KQ.MaMonHoc = MH.MaMonHoc " +
+                                                "FULL JOIN HOCKY HK ON KQ.MaHocKy = HK.MaHocKy " +
+                                                "FULL JOIN NAMHOC NH ON KQ.MaNamHoc = NH.MaNamHoc " +
                                                 "WHERE KQ.MaLop = @maLop AND " +
                                                 "KQ.MaMonHoc = @maMonHoc AND " +
                                                 "KQ.MaHocKy = @maHocKy AND " +

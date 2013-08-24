@@ -196,7 +196,7 @@
         <ZIndex>1</ZIndex>
         <DataSetName>QLDiemHSTHPT_Bussiness_KQHKMonHocInfo</DataSetName>
         <Top>1.375in</Top>
-        <Width>6.25in</Width>
+        <Width>5.125in</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -215,7 +215,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>4</ZIndex>
+                      <ZIndex>3</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=RowNumber(Nothing)</Value>
                     </Textbox>
@@ -235,7 +235,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>3</ZIndex>
+                      <ZIndex>2</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!HocSinh.Value.MaHocSinh</Value>
                     </Textbox>
@@ -254,29 +254,9 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>2</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!HocSinh.Value.HoTen</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="DTBKiemTra">
-                      <rd:DefaultName>DTBKiemTra</rd:DefaultName>
-                      <Style>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
                       <ZIndex>1</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!DTBKiemTra.Value</Value>
+                      <Value>=Fields!HocSinh.Value.HoTen</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -329,7 +309,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>9</ZIndex>
+                      <ZIndex>7</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>STT</Value>
                     </Textbox>
@@ -351,7 +331,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>8</ZIndex>
+                      <ZIndex>6</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>MÃ HỌC SINH</Value>
                     </Textbox>
@@ -373,31 +353,9 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>7</ZIndex>
+                      <ZIndex>5</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>HỌ TÊN HỌC SINH</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox4">
-                      <rd:DefaultName>textbox4</rd:DefaultName>
-                      <Style>
-                        <Color>Blue</Color>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>6</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>ĐIỂM TB TRA</Value>
+                      <Value>HỌ TÊN </Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -417,7 +375,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>5</ZIndex>
+                      <ZIndex>4</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>ĐIỂM TB MÔN HỌC KỲ</Value>
                     </Textbox>
@@ -437,9 +395,6 @@
           </TableColumn>
           <TableColumn>
             <Width>2in</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>1.125in</Width>
           </TableColumn>
           <TableColumn>
             <Width>1.625in</Width>

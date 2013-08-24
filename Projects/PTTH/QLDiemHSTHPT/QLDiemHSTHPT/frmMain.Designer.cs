@@ -1159,16 +1159,16 @@ namespace QLDiemHSTHPT
             // 
             this.toolStripMenuItem65.Image = global::QLDiemHSTHPT.Properties.Resources.KQHKMH;
             this.toolStripMenuItem65.Name = "toolStripMenuItem65";
-            this.toolStripMenuItem65.Size = new System.Drawing.Size(230, 22);
-            this.toolStripMenuItem65.Text = "Kết quả học kỳ theo môn học";
+            this.toolStripMenuItem65.Size = new System.Drawing.Size(220, 22);
+            this.toolStripMenuItem65.Text = "Trung bình môn học kỳ";
             this.toolStripMenuItem65.Click += new System.EventHandler(this.toolStripMenuItem65_Click);
             // 
             // toolStripMenuItem66
             // 
             this.toolStripMenuItem66.Image = global::QLDiemHSTHPT.Properties.Resources.KQHKLop;
             this.toolStripMenuItem66.Name = "toolStripMenuItem66";
-            this.toolStripMenuItem66.Size = new System.Drawing.Size(230, 22);
-            this.toolStripMenuItem66.Text = "Kết quả học kỳ theo lớp học";
+            this.toolStripMenuItem66.Size = new System.Drawing.Size(220, 22);
+            this.toolStripMenuItem66.Text = "Trung bình các môn học kỳ";
             this.toolStripMenuItem66.Click += new System.EventHandler(this.toolStripMenuItem66_Click);
             // 
             // toolStripMenuItem67
@@ -1185,16 +1185,16 @@ namespace QLDiemHSTHPT
             // 
             this.toolStripMenuItem68.Image = global::QLDiemHSTHPT.Properties.Resources.KQCNMH;
             this.toolStripMenuItem68.Name = "toolStripMenuItem68";
-            this.toolStripMenuItem68.Size = new System.Drawing.Size(234, 22);
-            this.toolStripMenuItem68.Text = "Kết quả cả năm theo môn học";
+            this.toolStripMenuItem68.Size = new System.Drawing.Size(224, 22);
+            this.toolStripMenuItem68.Text = "Trung bình môn cả năm";
             this.toolStripMenuItem68.Click += new System.EventHandler(this.toolStripMenuItem68_Click);
             // 
             // toolStripMenuItem69
             // 
             this.toolStripMenuItem69.Image = global::QLDiemHSTHPT.Properties.Resources.KQCNLop;
             this.toolStripMenuItem69.Name = "toolStripMenuItem69";
-            this.toolStripMenuItem69.Size = new System.Drawing.Size(234, 22);
-            this.toolStripMenuItem69.Text = "Kết quả cả năm theo lớp học";
+            this.toolStripMenuItem69.Size = new System.Drawing.Size(224, 22);
+            this.toolStripMenuItem69.Text = "Trung bình các môn cả năm";
             this.toolStripMenuItem69.Click += new System.EventHandler(this.toolStripMenuItem69_Click);
             // 
             // toolStripMenuItem70
