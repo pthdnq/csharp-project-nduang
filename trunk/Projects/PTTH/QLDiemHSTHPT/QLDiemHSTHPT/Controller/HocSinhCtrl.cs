@@ -63,7 +63,7 @@ namespace QLDiemHSTHPT.Controller
            BindingSource bS = new BindingSource();
            bS.DataSource = m_HocSinhData.LayDsHocSinh();
 
-           DataTable dT = m_HocSinhData.LayDsHocSinh();
+           //DataTable dT = m_HocSinhData.LayDsHocSinh();
            bN.BindingSource = bS;
            dGV.DataSource = bS;
            
@@ -93,23 +93,6 @@ namespace QLDiemHSTHPT.Controller
        {
            return m_HocSinhData.LayDsHocSinhTheoLop(lop);
        }
-
-       public void XoaHSKhoiBangPhanLop(String namHocCu, String khoiLopCu, String lopCu, ListViewEx hocSinh)
-       {
-           foreach (ListViewItem item in hocSinh.Items)
-           {
-               m_HocSinhData.XoaHSKhoiBangPhanLop(namHocCu, khoiLopCu, lopCu, item.SubItems[0].Text.ToString());
-           }
-       }
-
-       public void LuuHSVaoBangPhanLop(String namHocMoi, String khoiLopMoi, String lopMoi, ListViewEx hocSinh)
-       {
-           foreach (ListViewItem item in hocSinh.Items)
-           {
-               m_HocSinhData.LuuHSVaoBangPhanLop(namHocMoi, khoiLopMoi, lopMoi, item.SubItems[0].Text.ToString());
-           }
-       }
-
        //report
        public static IList<HocSinhInfo> LayDsHocSinh()
        {

@@ -564,9 +564,9 @@ namespace QLDiemHSTHPT
             toolStripMenuItem53.Enabled = false;
             toolStripMenuItem54.Enabled = false;
             toolStripMenuItem55.Enabled = false;
-            toolStripMenuItem58.Enabled = false;
-            toolStripMenuItem59.Enabled = false;
-            toolStripMenuItem60.Enabled = false;
+            ////toolStripMenuItem58.Enabled = false;
+            ////toolStripMenuItem59.Enabled = false;
+            //toolStripMenuItem60.Enabled = false;
             //toolStripMenuItem77.Enabled = false;
         }
 

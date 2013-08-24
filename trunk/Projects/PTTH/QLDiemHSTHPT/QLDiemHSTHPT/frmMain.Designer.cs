@@ -119,9 +119,6 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem53 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem54 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem55 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem58 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem59 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem60 = new System.Windows.Forms.ToolStripMenuItem();
             this.phânBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem63 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem64 = new System.Windows.Forms.ToolStripMenuItem();
@@ -203,8 +200,8 @@ namespace QLDiemHSTHPT
             this.tbtnhocsinh = new System.Windows.Forms.ToolStripButton();
             this.tabStrip = new DevComponents.DotNetBar.TabStrip();
             this.panelTacvu = new DevComponents.DotNetBar.PanelEx();
-            this.expelTracuu = new DevComponents.DotNetBar.ExpandablePanel();
             this.expelquanly = new DevComponents.DotNetBar.ExpandablePanel();
+            this.btnDiem = new DevComponents.DotNetBar.ButtonX();
             this.btnPhanCongGV = new DevComponents.DotNetBar.ButtonX();
             this.buttonGV = new DevComponents.DotNetBar.ButtonX();
             this.buttonHocSinh = new DevComponents.DotNetBar.ButtonX();
@@ -225,7 +222,6 @@ namespace QLDiemHSTHPT
             this.buttonItem24 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem25 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem26 = new DevComponents.DotNetBar.ButtonItem();
-            this.btnDiem = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.bottomBar)).BeginInit();
             this.bottomBar.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -1045,9 +1041,6 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem53,
             this.toolStripMenuItem54,
             this.toolStripMenuItem55,
-            this.toolStripMenuItem58,
-            this.toolStripMenuItem59,
-            this.toolStripMenuItem60,
             this.phânBanToolStripMenuItem});
             this.toolStripMenuItem46.Name = "toolStripMenuItem46";
             this.toolStripMenuItem46.Size = new System.Drawing.Size(63, 20);
@@ -1134,30 +1127,6 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem55.Text = "Hạnh Kiểm";
             this.toolStripMenuItem55.Click += new System.EventHandler(this.hạnhKiểmToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem58
-            // 
-            this.toolStripMenuItem58.Image = global::QLDiemHSTHPT.Properties.Resources.dantoc1;
-            this.toolStripMenuItem58.Name = "toolStripMenuItem58";
-            this.toolStripMenuItem58.Size = new System.Drawing.Size(170, 22);
-            this.toolStripMenuItem58.Text = "Dân Tộc";
-            this.toolStripMenuItem58.Click += new System.EventHandler(this.dânTộcToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem59
-            // 
-            this.toolStripMenuItem59.Image = global::QLDiemHSTHPT.Properties.Resources.tongiao;
-            this.toolStripMenuItem59.Name = "toolStripMenuItem59";
-            this.toolStripMenuItem59.Size = new System.Drawing.Size(170, 22);
-            this.toolStripMenuItem59.Text = "Tôn Giáo";
-            this.toolStripMenuItem59.Click += new System.EventHandler(this.tônGiáoToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem60
-            // 
-            this.toolStripMenuItem60.Image = global::QLDiemHSTHPT.Properties.Resources.nghenghiep;
-            this.toolStripMenuItem60.Name = "toolStripMenuItem60";
-            this.toolStripMenuItem60.Size = new System.Drawing.Size(170, 22);
-            this.toolStripMenuItem60.Text = "Nghề Nghiệp";
-            this.toolStripMenuItem60.Click += new System.EventHandler(this.nghềNghiệpToolStripMenuItem_Click);
-            // 
             // phânBanToolStripMenuItem
             // 
             this.phânBanToolStripMenuItem.Image = global::QLDiemHSTHPT.Properties.Resources.saoluu;
@@ -1181,6 +1150,7 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem64.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem65,
             this.toolStripMenuItem66});
+            this.toolStripMenuItem64.Image = global::QLDiemHSTHPT.Properties.Resources.hocky;
             this.toolStripMenuItem64.Name = "toolStripMenuItem64";
             this.toolStripMenuItem64.Size = new System.Drawing.Size(156, 22);
             this.toolStripMenuItem64.Text = "Kết quả học kỳ";
@@ -1206,6 +1176,7 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem67.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem68,
             this.toolStripMenuItem69});
+            this.toolStripMenuItem67.Image = global::QLDiemHSTHPT.Properties.Resources.ketqua;
             this.toolStripMenuItem67.Name = "toolStripMenuItem67";
             this.toolStripMenuItem67.Size = new System.Drawing.Size(156, 22);
             this.toolStripMenuItem67.Text = "Kết quả cả năm";
@@ -1232,6 +1203,7 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem71,
             this.toolStripMenuItem72,
             this.toolStripMenuItem73});
+            this.toolStripMenuItem70.Image = global::QLDiemHSTHPT.Properties.Resources.KQCNLop;
             this.toolStripMenuItem70.Name = "toolStripMenuItem70";
             this.toolStripMenuItem70.Size = new System.Drawing.Size(156, 22);
             this.toolStripMenuItem70.Text = "Xuất danh sách";
@@ -1795,7 +1767,6 @@ namespace QLDiemHSTHPT
             // 
             this.panelTacvu.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelTacvu.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.panelTacvu.Controls.Add(this.expelTracuu);
             this.panelTacvu.Controls.Add(this.expelquanly);
             this.panelTacvu.Controls.Add(this.expanelHethong);
             this.panelTacvu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -1820,41 +1791,6 @@ namespace QLDiemHSTHPT
             this.panelTacvu.StyleMouseOver.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.panelTacvu.StyleMouseOver.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemHotText;
             this.panelTacvu.TabIndex = 23;
-            // 
-            // expelTracuu
-            // 
-            this.expelTracuu.CanvasColor = System.Drawing.SystemColors.Control;
-            this.expelTracuu.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.expelTracuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expelTracuu.Location = new System.Drawing.Point(14, 397);
-            this.expelTracuu.Name = "expelTracuu";
-            this.expelTracuu.Size = new System.Drawing.Size(192, 180);
-            this.expelTracuu.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.expelTracuu.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.expelTracuu.Style.BackColor2.Color = System.Drawing.SystemColors.ActiveCaption;
-            this.expelTracuu.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.expelTracuu.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.expelTracuu.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
-            this.expelTracuu.Style.GradientAngle = 90;
-            this.expelTracuu.StyleMouseDown.Alignment = System.Drawing.StringAlignment.Center;
-            this.expelTracuu.StyleMouseDown.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBackground;
-            this.expelTracuu.StyleMouseDown.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBackground2;
-            this.expelTracuu.StyleMouseDown.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBorder;
-            this.expelTracuu.StyleMouseDown.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedText;
-            this.expelTracuu.StyleMouseOver.Alignment = System.Drawing.StringAlignment.Center;
-            this.expelTracuu.StyleMouseOver.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemHotBackground;
-            this.expelTracuu.StyleMouseOver.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemHotBackground2;
-            this.expelTracuu.StyleMouseOver.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemHotBorder;
-            this.expelTracuu.StyleMouseOver.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemHotText;
-            this.expelTracuu.TabIndex = 2;
-            this.expelTracuu.TitleStyle.Alignment = System.Drawing.StringAlignment.Center;
-            this.expelTracuu.TitleStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.expelTracuu.TitleStyle.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.expelTracuu.TitleStyle.Border = DevComponents.DotNetBar.eBorderType.RaisedInner;
-            this.expelTracuu.TitleStyle.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.expelTracuu.TitleStyle.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.expelTracuu.TitleStyle.GradientAngle = 90;
-            this.expelTracuu.TitleText = "Tra Cứu";
             // 
             // expelquanly
             // 
@@ -1884,6 +1820,21 @@ namespace QLDiemHSTHPT
             this.expelquanly.TitleStyle.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.expelquanly.TitleStyle.GradientAngle = 90;
             this.expelquanly.TitleText = "Quản Lý";
+            // 
+            // btnDiem
+            // 
+            this.btnDiem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnDiem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDiem.Location = new System.Drawing.Point(22, 149);
+            this.btnDiem.Name = "btnDiem";
+            this.btnDiem.Size = new System.Drawing.Size(144, 33);
+            this.btnDiem.TabIndex = 16;
+            this.btnDiem.Text = "Điểm";
+            this.btnDiem.Tooltip = "Tra Cứu Điểm Chung";
+            this.btnDiem.Click += new System.EventHandler(this.btnDiem_Click);
             // 
             // btnPhanCongGV
             // 
@@ -2140,21 +2091,6 @@ namespace QLDiemHSTHPT
             this.buttonItem26.Text = "Thoát";
             this.buttonItem26.Tooltip = "Thoát";
             // 
-            // btnDiem
-            // 
-            this.btnDiem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDiem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDiem.Location = new System.Drawing.Point(22, 149);
-            this.btnDiem.Name = "btnDiem";
-            this.btnDiem.Size = new System.Drawing.Size(144, 33);
-            this.btnDiem.TabIndex = 16;
-            this.btnDiem.Text = "Điểm";
-            this.btnDiem.Tooltip = "Tra Cứu Điểm Chung";
-            this.btnDiem.Click += new System.EventHandler(this.btnDiem_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -2362,9 +2298,6 @@ namespace QLDiemHSTHPT
         private ToolStripMenuItem toolStripMenuItem53;
         private ToolStripMenuItem toolStripMenuItem54;
         private ToolStripMenuItem toolStripMenuItem55;
-        private ToolStripMenuItem toolStripMenuItem58;
-        private ToolStripMenuItem toolStripMenuItem59;
-        private ToolStripMenuItem toolStripMenuItem60;
         private ToolStripMenuItem toolStripMenuItem63;
         private ToolStripMenuItem toolStripMenuItem64;
         private ToolStripMenuItem toolStripMenuItem65;
@@ -2380,7 +2313,6 @@ namespace QLDiemHSTHPT
         private ToolStripMenuItem toolStripMenuItem83;
         private ToolStripMenuItem toolStripMenuItem84;
         private ToolStripMenuItem toolStripMenuItem1;
-        private DevComponents.DotNetBar.ExpandablePanel expelTracuu;
         private DevComponents.DotNetBar.ButtonItem btnLoaiNguoiDung;
         private DevComponents.DotNetBar.ButtonItem btnPhanQuyen;
         private ToolStripMenuItem phânBanToolStripMenuItem;
