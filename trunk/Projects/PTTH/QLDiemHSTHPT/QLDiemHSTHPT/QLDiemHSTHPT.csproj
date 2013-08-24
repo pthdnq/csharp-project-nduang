@@ -50,7 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bussiness\DanTocInfo.cs" />
     <Compile Include="Bussiness\DiemInfo.cs" />
     <Compile Include="Bussiness\GiaoVienInfo.cs" />
     <Compile Include="Bussiness\HanhKiemInfo.cs" />
@@ -72,8 +71,6 @@
     <Compile Include="Bussiness\NguoiDungInfo.cs" />
     <Compile Include="Bussiness\PhanCongInfo.cs" />
     <Compile Include="Bussiness\PhanLopInfo.cs" />
-    <Compile Include="Bussiness\QuyDinhInfo.cs" />
-    <Compile Include="Bussiness\TonGiaoInfo.cs" />
     <Compile Include="Component\DataService.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -117,7 +114,6 @@
     <Compile Include="Controller\NguoiDungCtrl.cs" />
     <Compile Include="Controller\PhanBanCtrl.cs" />
     <Compile Include="Controller\PhanCongCtrl.cs" />
-    <Compile Include="Controller\QuyDinhCtrl.cs" />
     <Compile Include="DataLayer\PhanBanData.cs" />
     <Compile Include="frmPhanBan.cs">
       <SubType>Form</SubType>

@@ -39,13 +39,13 @@ namespace QLDiemHSTHPT
         private void frmNhapDiemChung_Load(object sender, EventArgs e)
         {
             //nhap diem
-            m_NamHocCtrl.HienThiComboBox(cbmnamhoc);
-            m_HocKyCtrl.HienThiComboBox(cmbHocky);
-            if (cbmnamhoc.SelectedValue != null)
-                m_LopCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop);
+            //m_NamHocCtrl.HienThiComboBox(cbmnamhoc);
+            //m_HocKyCtrl.HienThiComboBox(cmbHocky);
+            //if (cbmnamhoc.SelectedValue != null)
+            //    m_LopCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop);
 
-            if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null)
-                m_MonHocCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMonhoc);
+            //if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null)
+             //   m_MonHocCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMonhoc);
 
             //sua diem
             m_NamHocCtrl.HienThiComboBox(cmbNanhocCN);
@@ -106,8 +106,8 @@ namespace QLDiemHSTHPT
 
         private void btnHienthiDS_Click_1(object sender, EventArgs e)
         {
-            if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null && cmbHocky.SelectedValue != null && cmbMonhoc.SelectedValue != null)
-                m_HocSinhCtrl.HienThiDsHocSinhTheoLop(dgvNhapdiemchung, bdgNhapdiemchung, cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString());
+            //if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null && cmbHocky.SelectedValue != null && cmbMonhoc.SelectedValue != null)
+            //    m_HocSinhCtrl.HienThiDsHocSinhTheoLop(dgvNhapdiemchung, bdgNhapdiemchung, cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString());
         }
 
         private void buttonX7_Click(object sender, EventArgs e)
@@ -207,7 +207,7 @@ namespace QLDiemHSTHPT
                KiemTraDiemTruocKhiLuu("DiemThi") == true &&
                KiemTraDiemTruocKhiLuu("DiemThiLai") == true)
             {
-                //nhap diem
+               /* //nhap diem
                 if (btnNhapdiemchung.Checked == true && STT == null)
                 {
                     int rowcount = 0;
@@ -373,6 +373,7 @@ namespace QLDiemHSTHPT
                     }
                     MessageBoxEx.Show("Đã lưu thành công vào bảng điểm!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                * */
                 //Chỉnh sửa diểm
                 if (btnCNdiem.Checked == true || STT != null)
                 {
@@ -602,7 +603,7 @@ namespace QLDiemHSTHPT
                 m_NamHoc.Show();
             }
             else m_NamHoc.Activate();
-            m_NamHocCtrl.HienThiComboBox(cbmnamhoc);
+           // m_NamHocCtrl.HienThiComboBox(cbmnamhoc);
         }
 
         private void btnLop_Click(object sender, EventArgs e)
@@ -615,7 +616,7 @@ namespace QLDiemHSTHPT
                 m_Lop.Show();
             }
             else m_Lop.Activate();
-            m_LopCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop);
+            //m_LopCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop);
         }
 
         private void btnHocKy_Click(object sender, EventArgs e)
@@ -628,7 +629,7 @@ namespace QLDiemHSTHPT
                 m_HK.Show();
             }
             else m_HK.Activate();
-            m_HocKyCtrl.HienThiComboBox(cmbHocky);
+           // m_HocKyCtrl.HienThiComboBox(cmbHocky);
         }
 
         private void btnMonhoc_Click(object sender, EventArgs e)
@@ -641,7 +642,7 @@ namespace QLDiemHSTHPT
                 m_MonHoc.Show();
             }
             else m_MonHoc.Activate();
-            m_MonHocCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMonhoc);
+            //m_MonHocCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMonhoc);
         }
 
         private void btnCNdiem_Click(object sender, EventArgs e)
@@ -651,16 +652,16 @@ namespace QLDiemHSTHPT
 
         private void cbmnamhoc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbmnamhoc.SelectedValue != null)
-                m_LopCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop);
-            cmblop.DataBindings.Clear();
+            //if (cbmnamhoc.SelectedValue != null)
+             //   m_LopCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop);
+            //cmblop.DataBindings.Clear();
         }
 
         private void cmblop_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null)
-                m_MonHocCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMonhoc);
-            cmbMonhoc.DataBindings.Clear();
+           // if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null)
+           //     m_MonHocCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMonhoc);
+            ///cmbMonhoc.DataBindings.Clear();
         }
 
         private void cmbNanhocCN_SelectedIndexChanged(object sender, EventArgs e)
