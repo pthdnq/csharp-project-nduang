@@ -51,7 +51,7 @@ namespace QLDiemHSTHPT
             //tao ma hoc sinh tu dong - end
             m_Row["HoTen"] = "";
             m_Row["GioiTinh"] = false;
-            m_Row["NgaySinh"] = DateTime.Today;
+            //m_Row["NgaySinh"] = DateTime.Today;
             //m_Row["NoiSinh"] = "";
             m_Row["DanToc"] = "";
             //m_Row["TonGiao"] = "";
@@ -197,7 +197,13 @@ namespace QLDiemHSTHPT
         }
         private void btnTimKiemHS1_Click(object sender, EventArgs e)
         {
-            TimKiemHocSinh();
+            try
+            {
+                TimKiemHocSinh();
+            }
+            catch (Exception)
+            {
+            }
         }
         private void buttonX4_Click_1(object sender, EventArgs e)
         {
