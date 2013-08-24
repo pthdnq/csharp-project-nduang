@@ -16,13 +16,9 @@ namespace QLDiemHSTHPT
     public partial class frmHocSinh : Office2007Form
     {
         HocSinhCtrl m_HocSinhCtrl = new HocSinhCtrl();
-       // DanTocCtrl m_DanTocCtrl = new DanTocCtrl();
-        //TonGiaoCtrl m_TonGiaoCtrl = new TonGiaoCtrl();
         NamHocCtrl m_NamHocCtrl = new NamHocCtrl();
         LopCtrl m_LopCtrl = new LopCtrl();
         KhoiLopCtrl m_KhoiLopCtrl = new KhoiLopCtrl();
-       // NgheNghiepCtrl m_NgheNghiepChaCtrl = new NgheNghiepCtrl();
-        //NgheNghiepCtrl m_NgheNghiepMeCtrl = new NgheNghiepCtrl();
         QuyDinh quyDinh = new QuyDinh();
         public frmHocSinh()
         {
@@ -32,29 +28,17 @@ namespace QLDiemHSTHPT
 
         private void frmHocSinh_Load(object sender, EventArgs e)
         {
-            //m_DanTocCtrl.HienThiComboBox(comboBoxEx4);
-            //m_TonGiaoCtrl.HienThiComboBox(comboBoxEx3);
-            //m_NgheNghiepChaCtrl.HienThiComboBox(comboBoxEx2);
-            //m_NgheNghiepMeCtrl.HienThiComboBox(comboBoxEx1);
-            //m_NamHocCtrl.HienThiComboBox(cmbNamHoc);
-            //m_KhoiLopCtrl.HienThiComboBox(cmbKhoiLop);
-            //m_LopCtrl.HienThiComboBox(cmbLop);
-
-
-            //m_DanTocCtrl.HienThiDataGridViewComboBoxColumn(MaDanToc);
-            //m_TonGiaoCtrl.HienThiDataGridViewComboBoxColumn(MaTonGiao);
-            //m_NgheNghiepChaCtrl.HienThiDataGridViewComboBoxColumnNNCha(MaNgheNghiepCha);
-            //m_NgheNghiepMeCtrl.HienThiDataGridViewComboBoxColumnNNMe(MaNgheNghiepMe);
             m_NamHocCtrl.HienThiDataGridViewComboBoxColumn(MaNamHoc);
             m_KhoiLopCtrl.HienThiDataGridViewComboBoxColumn(MaKhoiLop);
             m_LopCtrl.HienThiDataGridViewComboBoxColumn(MaLop);
 
-            m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh/*, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2, dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1,cmbNamHoc,cmbKhoiLop,cmbLop*/);
+            m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh);
         }
 
         private void bngThemmoi_Click(object sender, EventArgs e)
         {
             DataRow m_Row = m_HocSinhCtrl.ThemDongMoi();
+            //tao ma hoc sinh tu dong - begin
             int iLastRow = dgvhocsinh.Rows.Count - 1;
             int iMaHSLast = 1;
             if (iLastRow >= 0)
@@ -64,17 +48,17 @@ namespace QLDiemHSTHPT
                 iMaHSLast = int.Parse(MaHSLast) + 1;
             }
             m_Row["MaHocSinh"] = "HS" + quyDinh.LaySTT(iMaHSLast);
-
+            //tao ma hoc sinh tu dong - end
             m_Row["HoTen"] = "";
             m_Row["GioiTinh"] = false;
             m_Row["NgaySinh"] = DateTime.Today;
             m_Row["NoiSinh"] = "";
-            m_Row["MaDanToc"] = "";
-            m_Row["MaTonGiao"] = "";
+            m_Row["DanToc"] = "";
+            m_Row["TonGiao"] = "";
             m_Row["HoTenCha"] = "";
-            m_Row["MaNgheNghiepCha"] = "";
+            m_Row["NgheNghiepCha"] = "";
             m_Row["HoTenMe"] = "";
-            m_Row["MaNgheNghiepMe"] = "";
+            m_Row["NgheNghiepMe"] = "";
             m_Row["MaNamHoc"] = "";
             m_Row["MaKhoiLop"] = "";
             m_Row["MaLop"] = "";
@@ -168,10 +152,6 @@ namespace QLDiemHSTHPT
             m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh/*, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2, dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1,cmbNamHoc,cmbKhoiLop,cmbLop*/);
         }
 
-        private void dgvhocsinh_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
         private void buttonX4_Click(object sender, EventArgs e)
         {
             //bool gioiTinh = false;
@@ -208,74 +188,17 @@ namespace QLDiemHSTHPT
         {
             if (checkBoxX4.Checked == true)
             {
-                m_HocSinhCtrl.TimTheoMa(textBoxX7.Text);
+                m_HocSinhCtrl.TimTheoMa(txtTimKiemHS.Text.Trim());
             }
             else
             {
-                m_HocSinhCtrl.TimTheoTen(textBoxX7.Text);
+                m_HocSinhCtrl.TimTheoTen(txtTimKiemHS.Text.Trim());
             }
         }
-        private void buttonX6_Click(object sender, EventArgs e)
+        private void btnTimKiemHS1_Click(object sender, EventArgs e)
         {
-            if (textBoxX7.Text == "")
-                MessageBoxEx.Show("Chưa nhập nội dung cần tìm kiếm vào khung!", "LỖI TÌM KIẾM", MessageBoxButtons.OK, MessageBoxIcon.Error);
             TimKiemHocSinh();
         }
-
-        private void buttonX5_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void buttonX3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void buttonX2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void buttonX1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnNhapExcel_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openDlg = new OpenFileDialog();
-            openDlg.Title = "Chon mot file Excel";
-            openDlg.RestoreDirectory = true;
-            openDlg.Multiselect = false;
-            openDlg.Filter = "Excel files (*.xls)|*.xls";
-
-            if (openDlg.ShowDialog() == DialogResult.OK)
-            {
-                string fileName = openDlg.FileName;
-                int viTriBatDau = fileName.LastIndexOf('\\') + 1;
-                string tenFile = fileName.Substring(viTriBatDau);
-                string path = fileName.Replace("\\", "\\\\");
-                m_HocSinhCtrl.Import(path, dgvhocsinh);
-            }
-        }
-
-        private void cmbNamHoc_Click(object sender, EventArgs e)
-        {
-            //m_NamHocCtrl.HienThiComboBox(cmbNamHoc);
-        }
-
-        private void cmbKhoiLop_Click(object sender, EventArgs e)
-        {
-            //if(cmbNamHoc.SelectedValue.ToString()!=null)
-            //    m_KhoiLopCtrl.HienThiComboBox(cmbKhoiLop);
-        }
-
-        private void cmbKhoiLop_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //if (cmbNamHoc.SelectedValue != null && cmbKhoiLop.SelectedValue != null)
-            //{
-            //    m_LopCtrl.HienThiComboBox(cmbKhoiLop.SelectedValue.ToString(), cmbNamHoc.SelectedValue.ToString(), cmbLop);
-            //}
-
-        }
-
         private void buttonX4_Click_1(object sender, EventArgs e)
         {
             //Fixbug - 2013/07/30 - NTHUE - BEGIN
@@ -301,12 +224,6 @@ namespace QLDiemHSTHPT
                 }
 
             }
-        }
-
-        private void dgvhocsinh_ColumnDisplayIndexChanged(object sender, DataGridViewColumnEventArgs e)
-        {
-            Console.WriteLine("ádasdasd");
-
         }
 
     }

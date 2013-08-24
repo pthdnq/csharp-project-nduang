@@ -52,6 +52,12 @@ namespace QLDiemHSTHPT
             this.btnTimKiemGV = new DevComponents.DotNetBar.ButtonItem();
             this.groupBoxDsgv = new System.Windows.Forms.GroupBox();
             this.dgvGiaoVien = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.MaGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaMonHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Gioitinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bdgGiaoVien = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -67,13 +73,6 @@ namespace QLDiemHSTHPT
             this.bngluu = new System.Windows.Forms.ToolStripButton();
             this.bngthoat = new System.Windows.Forms.ToolStripButton();
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
-            this.btnIPExcel = new System.Windows.Forms.ToolStripButton();
-            this.MaGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaMonHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Gioitinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.nvgPanelGiaoVien.SuspendLayout();
             this.ngvPanelTimKiem.SuspendLayout();
             this.groupBoxDsgv.SuspendLayout();
@@ -302,6 +301,57 @@ namespace QLDiemHSTHPT
             this.dgvGiaoVien.TabIndex = 6;
             this.dgvGiaoVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaoVien_CellClick);
             // 
+            // MaGiaoVien
+            // 
+            this.MaGiaoVien.DataPropertyName = "MaGiaoVien";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaGiaoVien.DefaultCellStyle = dataGridViewCellStyle1;
+            this.MaGiaoVien.HeaderText = "Mã Giáo Viên";
+            this.MaGiaoVien.Name = "MaGiaoVien";
+            this.MaGiaoVien.ReadOnly = true;
+            this.MaGiaoVien.Width = 130;
+            // 
+            // TenGiaoVien
+            // 
+            this.TenGiaoVien.DataPropertyName = "TenGiaoVien";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenGiaoVien.DefaultCellStyle = dataGridViewCellStyle2;
+            this.TenGiaoVien.HeaderText = "Tên Giáo Viên";
+            this.TenGiaoVien.Name = "TenGiaoVien";
+            this.TenGiaoVien.Width = 150;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiaChi.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DiaChi.HeaderText = "Địa Chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.Width = 200;
+            // 
+            // DienThoai
+            // 
+            this.DienThoai.DataPropertyName = "DienThoai";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DienThoai.DefaultCellStyle = dataGridViewCellStyle4;
+            this.DienThoai.HeaderText = "Điện Thoại";
+            this.DienThoai.Name = "DienThoai";
+            // 
+            // MaMonHoc
+            // 
+            this.MaMonHoc.DataPropertyName = "MaMonHoc";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaMonHoc.DefaultCellStyle = dataGridViewCellStyle5;
+            this.MaMonHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaMonHoc.HeaderText = "Chuyên môn";
+            this.MaMonHoc.Name = "MaMonHoc";
+            // 
+            // Gioitinh
+            // 
+            this.Gioitinh.DataPropertyName = "Gioitinh";
+            this.Gioitinh.HeaderText = "Giới Tính Nữ";
+            this.Gioitinh.Name = "Gioitinh";
+            // 
             // bdgGiaoVien
             // 
             this.bdgGiaoVien.AddNewItem = null;
@@ -322,8 +372,7 @@ namespace QLDiemHSTHPT
             this.bngXoa,
             this.bngluu,
             this.bngthoat,
-            this.btnRefresh,
-            this.btnIPExcel});
+            this.btnRefresh});
             this.bdgGiaoVien.Location = new System.Drawing.Point(3, 16);
             this.bdgGiaoVien.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bdgGiaoVien.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -451,67 +500,6 @@ namespace QLDiemHSTHPT
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // btnIPExcel
-            // 
-            this.btnIPExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnIPExcel.Image = global::QLDiemHSTHPT.Properties.Resources.excel8;
-            this.btnIPExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnIPExcel.Name = "btnIPExcel";
-            this.btnIPExcel.Size = new System.Drawing.Size(23, 22);
-            this.btnIPExcel.Text = "Import Excel ";
-            this.btnIPExcel.Click += new System.EventHandler(this.btnIPExcel_Click);
-            // 
-            // MaGiaoVien
-            // 
-            this.MaGiaoVien.DataPropertyName = "MaGiaoVien";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaGiaoVien.DefaultCellStyle = dataGridViewCellStyle1;
-            this.MaGiaoVien.HeaderText = "Mã Giáo Viên";
-            this.MaGiaoVien.Name = "MaGiaoVien";
-            this.MaGiaoVien.ReadOnly = true;
-            this.MaGiaoVien.Width = 130;
-            // 
-            // TenGiaoVien
-            // 
-            this.TenGiaoVien.DataPropertyName = "TenGiaoVien";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenGiaoVien.DefaultCellStyle = dataGridViewCellStyle2;
-            this.TenGiaoVien.HeaderText = "Tên Giáo Viên";
-            this.TenGiaoVien.Name = "TenGiaoVien";
-            this.TenGiaoVien.Width = 150;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiaChi.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.Width = 200;
-            // 
-            // DienThoai
-            // 
-            this.DienThoai.DataPropertyName = "DienThoai";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DienThoai.DefaultCellStyle = dataGridViewCellStyle4;
-            this.DienThoai.HeaderText = "Điện Thoại";
-            this.DienThoai.Name = "DienThoai";
-            // 
-            // MaMonHoc
-            // 
-            this.MaMonHoc.DataPropertyName = "MaMonHoc";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaMonHoc.DefaultCellStyle = dataGridViewCellStyle5;
-            this.MaMonHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MaMonHoc.HeaderText = "Chuyên môn";
-            this.MaMonHoc.Name = "MaMonHoc";
-            // 
-            // Gioitinh
-            // 
-            this.Gioitinh.DataPropertyName = "Gioitinh";
-            this.Gioitinh.HeaderText = "Giới Tính Nữ";
-            this.Gioitinh.Name = "Gioitinh";
-            // 
             // frmGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -572,7 +560,6 @@ namespace QLDiemHSTHPT
         private System.Windows.Forms.ToolStripButton bngluu;
         private System.Windows.Forms.ToolStripButton bngthoat;
         private System.Windows.Forms.ToolStripButton btnRefresh;
-        private System.Windows.Forms.ToolStripButton btnIPExcel;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxGioiTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaGiaoVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenGiaoVien;

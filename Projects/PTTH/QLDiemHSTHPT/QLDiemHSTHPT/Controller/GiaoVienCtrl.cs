@@ -111,7 +111,7 @@ namespace QLDiemHSTHPT.Controller
                mh.MaMonHoc = Convert.ToString(Row["MaMonHoc"]);
                mh.TenMonHoc = Convert.ToString(Row["TenMonHoc"]);
                mh.SoTiet = Convert.ToInt32(Row["SoTiet"]);
-               mh.HeSo = Convert.ToInt32(Row["HeSo"]);
+               //mh.HeSo = Convert.ToInt32(Row["HeSo"]);
 
                GiaoVienInfo gv = new GiaoVienInfo();
                gv.MaGiaoVien = Convert.ToString(Row["MaGiaoVien"]);

@@ -95,24 +95,6 @@
   <Width>11in</Width>
   <Body>
     <ReportItems>
-      <Textbox Name="textbox12">
-        <rd:DefaultName>textbox12</rd:DefaultName>
-        <Top>0.375in</Top>
-        <Width>1.375in</Width>
-        <Style>
-          <FontWeight>700</FontWeight>
-          <TextAlign>Center</TextAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>4</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Left>0.75in</Left>
-        <Height>0.25in</Height>
-        <Value>Tân An - Tân Châu </Value>
-      </Textbox>
       <Textbox Name="textbox9">
         <rd:DefaultName>textbox9</rd:DefaultName>
         <Top>0.125in</Top>
@@ -129,7 +111,7 @@
         <CanGrow>true</CanGrow>
         <Left>0.25in</Left>
         <Height>0.25in</Height>
-        <Value>Trường THPT Nguyễn Quang Diêu</Value>
+        <Value>Trường THPT Thiệu Yên</Value>
       </Textbox>
       <Textbox Name="textbox6">
         <rd:DefaultName>textbox6</rd:DefaultName>
@@ -268,7 +250,7 @@
                       </Style>
                       <ZIndex>3</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!DanToc.Value.TenDanToc</Value>
+                      <Value>=Fields!DanToc.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -287,7 +269,7 @@
                       </Style>
                       <ZIndex>2</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!TonGiao.Value.TenTonGiao</Value>
+                      <Value>=Fields!TonGiao.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>

@@ -33,6 +33,17 @@ namespace QLDiemHSTHPT
             this.reportViewerDSGV.RefreshReport();
         }
 
+        private void reportViewerDSGV_Load(object sender, EventArgs e)
+        {
+            //IList<ReportParameter> param = new List<ReportParameter>();
+            //param.Add(new ReportParameter("NgayLap", DateTime.Today.Day + "/" + DateTime.Today.Month + "/" + DateTime.Today.Year));
+            //this.reportViewerDSGV.LocalReport.SetParameters(param);
+            //IList<GiaoVienInfo> GV = GiaoVienCtrl.LayDsGiaoVien();
+            //this.bdDanhSachGiaoVien.DataSource = GV;
+
+            //this.reportViewerDSGV.RefreshReport();
+        }
+
        
     }
 }

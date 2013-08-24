@@ -496,7 +496,7 @@ namespace QLDiemHSTHPT
             buttonTCGV.Enabled = false;
             toolStripMenuItem46.Enabled = false;
             toolStripMenuItem63.Enabled = false;
-            toolStripMenuItem77.Enabled = false;
+            //toolStripMenuItem77.Enabled = false;
 
             btnXemDiemRieng.Enabled = false;
             btnXemDiemChung.Enabled = false;
@@ -524,7 +524,7 @@ namespace QLDiemHSTHPT
             buttonTCGV.Enabled = true;
             toolStripMenuItem46.Enabled = true;
             toolStripMenuItem63.Enabled = true;
-            toolStripMenuItem77.Enabled = true;
+            //toolStripMenuItem77.Enabled = true;
 
             btnXemDiemRieng.Enabled = true;
             btnXemDiemChung.Enabled = true;
@@ -567,7 +567,7 @@ namespace QLDiemHSTHPT
             toolStripMenuItem58.Enabled = false;
             toolStripMenuItem59.Enabled = false;
             toolStripMenuItem60.Enabled = false;
-            toolStripMenuItem77.Enabled = false;
+            //toolStripMenuItem77.Enabled = false;
         }
 
         public void QuanTriVien()
@@ -595,7 +595,7 @@ namespace QLDiemHSTHPT
             buttonTCGV.Enabled = false;
             toolStripMenuItem46.Enabled = false;
             toolStripMenuItem63.Enabled = false;
-            toolStripMenuItem77.Enabled = false;
+            //toolStripMenuItem77.Enabled = false;
             buttondangnhap.Enabled = false;
             btnXemDiemRieng.Enabled = false;
             btnXemDiemChung.Enabled = false;
@@ -626,7 +626,7 @@ namespace QLDiemHSTHPT
             buttonTCGV.Enabled = false;
             toolStripMenuItem46.Enabled = false;
             toolStripMenuItem63.Enabled = false;
-            toolStripMenuItem77.Enabled = false;
+            //toolStripMenuItem77.Enabled = false;
             buttondangnhap.Enabled = false;
         }
 
