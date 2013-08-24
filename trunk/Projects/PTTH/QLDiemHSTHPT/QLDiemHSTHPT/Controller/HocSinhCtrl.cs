@@ -14,6 +14,39 @@ namespace QLDiemHSTHPT.Controller
    public class HocSinhCtrl
     {
        HocSinhData m_HocSinhData = new HocSinhData();
+
+       public void HienThiComboBox(ComboBoxEx comboBox)
+       {
+           comboBox.DataSource = m_HocSinhData.LayDsHocSinh();
+           comboBox.DisplayMember = "HoTen";
+           comboBox.ValueMember = "MaHocSinh";
+       }
+
+       //nhap diem
+       public void HienThiComboBox(String namHoc, String lop, ComboBoxEx comboBox)
+       {
+           HocSinhData m_HSData = new HocSinhData();
+           comboBox.DataSource = m_HSData.LayDsHocSinhTheoLop(namHoc, lop);
+           comboBox.DisplayMember = "HoTen";
+           comboBox.ValueMember = "MaHocSinh";
+       }
+
+       public void HienThiComboBox(String namHoc, String lop,String maHS, ComboBoxEx comboBox)
+       {
+           HocSinhData m_HSData = new HocSinhData();
+           comboBox.DataSource = m_HSData.LayDsHocSinhTheoMa(namHoc, lop,maHS);
+           comboBox.DisplayMember = "HoTen";
+           comboBox.ValueMember = "MaHocSinh";
+       }
+
+       public void HienThiComboBoxMaHS(String namHoc, String lop, ComboBoxEx comboBox)
+       {
+           HocSinhData m_HSData = new HocSinhData();
+           comboBox.DataSource = m_HSData.LayDsHocSinhTheoLop(namHoc, lop);
+           comboBox.DisplayMember = "MaHocSinh";
+           comboBox.ValueMember = "MaHocSinh";
+       }
+
        public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
        {
            cmbColumn.DataSource = m_HocSinhData.LayDsHocSinh();
