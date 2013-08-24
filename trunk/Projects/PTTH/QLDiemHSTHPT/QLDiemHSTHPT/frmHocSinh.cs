@@ -52,13 +52,13 @@ namespace QLDiemHSTHPT
             m_Row["HoTen"] = "";
             m_Row["GioiTinh"] = false;
             m_Row["NgaySinh"] = DateTime.Today;
-            m_Row["NoiSinh"] = "";
+            //m_Row["NoiSinh"] = "";
             m_Row["DanToc"] = "";
-            m_Row["TonGiao"] = "";
-            m_Row["HoTenCha"] = "";
-            m_Row["NgheNghiepCha"] = "";
-            m_Row["HoTenMe"] = "";
-            m_Row["NgheNghiepMe"] = "";
+            //m_Row["TonGiao"] = "";
+            //m_Row["HoTenCha"] = "";
+            //m_Row["NgheNghiepCha"] = "";
+            //m_Row["HoTenMe"] = "";
+            //m_Row["NgheNghiepMe"] = "";
             m_Row["MaNamHoc"] = "";
             m_Row["MaKhoiLop"] = "";
             m_Row["MaLop"] = "";
@@ -121,22 +121,22 @@ namespace QLDiemHSTHPT
             //Fixbug - 2013/07/30 - NTHUE - END
             if (KiemTraTruocKhiLuu("MaHocSinh") == true &&
                 KiemTraTruocKhiLuu("HoTen") == true &&
-                KiemTraTruocKhiLuu("NoiSinh") == true &&
+                //KiemTraTruocKhiLuu("NoiSinh") == true &&
                 //KiemTraTruocKhiLuu("MaDanToc") == true &&
                 //KiemTraTruocKhiLuu("MaTonGiao") == true &&
-                KiemTraTruocKhiLuu("HoTenCha") == true &&
+                //KiemTraTruocKhiLuu("HoTenCha") == true &&
                 //KiemTraTruocKhiLuu("MaNgheNghiepCha") == true &&
-                KiemTraTruocKhiLuu("HoTenMe") == true &&
+                //KiemTraTruocKhiLuu("HoTenMe") == true &&
                // KiemTraTruocKhiLuu("MaNgheNghiepMe") == true && 
                 KiemTraTruocKhiLuu("MaNamHoc") == true &&
                 KiemTraTruocKhiLuu("MaKhoiLop") == true &&
                 KiemTraTruocKhiLuu("MaLop") == true)
             {
-                if (KiemTraDoTuoiTruocKhiLuu("NgaySinh") == true)
-                {
+               // if (KiemTraDoTuoiTruocKhiLuu("NgaySinh") == true)
+               // {
                     bindingNavigatorPositionItem.Focus();
                     m_HocSinhCtrl.LuuHocSinh();
-                }
+               // }
 
             }
 

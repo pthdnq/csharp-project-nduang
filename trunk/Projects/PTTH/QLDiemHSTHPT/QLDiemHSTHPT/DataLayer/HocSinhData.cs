@@ -15,7 +15,7 @@ namespace QLDiemHSTHPT.DataLayer
 
        public DataTable LayDsHocSinh()
        {
-           SqlCommand cmd = new SqlCommand("SELECT * FROM HOCSINH");
+           SqlCommand cmd = new SqlCommand("SELECT MaHocSinh ,HoTen , DanToc, GioiTinh, MaNamHoc, MaKhoiLop, MaLop FROM HOCSINH");
            m_HocSinhData.Load(cmd);
            return m_HocSinhData;
        }
