@@ -79,24 +79,6 @@
   <Width>8.125in</Width>
   <Body>
     <ReportItems>
-      <Textbox Name="textbox12">
-        <rd:DefaultName>textbox12</rd:DefaultName>
-        <Top>0.375in</Top>
-        <Width>1.375in</Width>
-        <Style>
-          <FontWeight>700</FontWeight>
-          <TextAlign>Center</TextAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>4</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Left>0.625in</Left>
-        <Height>0.25in</Height>
-        <Value>Tân An - Tân Châu </Value>
-      </Textbox>
       <Textbox Name="textbox4">
         <Top>0.125in</Top>
         <Width>2.75in</Width>
@@ -112,7 +94,7 @@
         <CanGrow>true</CanGrow>
         <Left>0.125in</Left>
         <Height>0.25in</Height>
-        <Value>Trường THPT Nguyễn Quang Diêu</Value>
+        <Value>Trường THPT Thiệu Yên</Value>
       </Textbox>
       <Textbox Name="textbox3">
         <rd:DefaultName>textbox3</rd:DefaultName>
@@ -154,7 +136,7 @@
       <Table Name="tblGiaoVien">
         <DataSetName>QLDiemHSTHPT_Bussiness_GiaoVienInfo</DataSetName>
         <Top>2.53968cm</Top>
-        <Width>6.86732in</Width>
+        <Width>6.24232in</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -173,7 +155,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>5</ZIndex>
+                      <ZIndex>4</ZIndex>
                       <Value>=RowNumber(Nothing)</Value>
                     </Textbox>
                   </ReportItems>
@@ -193,7 +175,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>4</ZIndex>
+                      <ZIndex>3</ZIndex>
                       <Value>=Fields!TenGiaoVien.Value</Value>
                     </Textbox>
                   </ReportItems>
@@ -213,7 +195,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>3</ZIndex>
+                      <ZIndex>2</ZIndex>
                       <Value>=Fields!DiaChi.Value</Value>
                     </Textbox>
                   </ReportItems>
@@ -233,7 +215,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>2</ZIndex>
+                      <ZIndex>1</ZIndex>
                       <Value>=Fields!DienThoai.Value</Value>
                     </Textbox>
                   </ReportItems>
@@ -253,28 +235,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>1</ZIndex>
                       <Value>=Fields!MonHoc.Value.TenMonHoc</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="HeSo">
-                      <rd:DefaultName>HeSo</rd:DefaultName>
-                      <Style>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <TextAlign>Center</TextAlign>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>3pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!MonHoc.Value.HeSo</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -309,7 +270,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>11</ZIndex>
+                      <ZIndex>9</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>STT</Value>
                     </Textbox>
@@ -331,7 +292,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>10</ZIndex>
+                      <ZIndex>8</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>HỌ VÀ TÊN</Value>
                     </Textbox>
@@ -353,7 +314,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>9</ZIndex>
+                      <ZIndex>7</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>ĐỊA CHỈ</Value>
                     </Textbox>
@@ -375,7 +336,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>8</ZIndex>
+                      <ZIndex>6</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>ĐIỆN THOẠI</Value>
                     </Textbox>
@@ -397,32 +358,9 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>7</ZIndex>
+                      <ZIndex>5</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>CHUYÊN MÔN</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox2">
-                      <rd:DefaultName>textbox2</rd:DefaultName>
-                      <Style>
-                        <Color>Blue</Color>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>3pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>6</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>Hệ Số</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -447,9 +385,6 @@
           </TableColumn>
           <TableColumn>
             <Width>2.85714cm</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>1.5873cm</Width>
           </TableColumn>
         </TableColumns>
         <Height>0.50006in</Height>

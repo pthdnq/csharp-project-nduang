@@ -26,40 +26,6 @@ namespace QLDiemHSTHPT
             DataService.OpenConnection();
         }
 
-        private void frmXemDiem_Load(object sender, EventArgs e)
-        {
-            //m_namhocctrl.hienthicombobox(cbmnamhoc);
-            m_NamHocCtrl.HienThiComboBox(cbmnamhoc);
-            //m_hockyctrl.hienthicombobox(cmbhocky);
-            m_HocKyCtrl.HienThiComboBox(cmbHocky);
-            
-            if (cbmnamhoc.SelectedValue != null)
-                m_LopCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop);
-
-            //if (cbmnamhoc.SelectedValue != null)
-            //    m_LopCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop);
-            
-            //m_MonHocCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMonhoc);
-            if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null)
-            {
-                m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbHocsinh);
-                m_HocSinhCtrl.HienThiComboBoxMaHS(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMaHS);
-            }
-            m_MonHocCtrl.HienThiComboBox("", "", cmbMonhoc);
-            
-
-            if (cmbMaHS.SelectedValue != null)
-                m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString()
-                    , cmblop.SelectedValue.ToString()
-                    , cmbMaHS.SelectedValue.ToString(), cmbHocsinh);
-            cmbMonhoc.DataBindings.Clear();
-        }
-
-        private void nvgPanelGiaoVien_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnxoa_Click(object sender, EventArgs e)
         {
             if (MessageBoxEx.Show("Bạn có muốn xóa dòng này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -97,47 +63,10 @@ namespace QLDiemHSTHPT
             
             }
         }
-
-        private void cbmnamhoc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbmnamhoc.SelectedValue != null)
-                m_LopCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop);
-            if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null)
-            {
-                m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbHocsinh);
-                m_HocSinhCtrl.HienThiComboBoxMaHS(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMaHS);
-            }
-            if (cmbMaHS.SelectedValue != null)
-                m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString()
-                    , cmblop.SelectedValue.ToString()
-                    , cmbMaHS.SelectedValue.ToString(), cmbHocsinh);
-        }
-
-        private void cmbMaHS_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(cmbMaHS.SelectedValue != null)
-                m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString()
-                    , cmblop.SelectedValue.ToString()
-                    ,cmbMaHS.SelectedValue.ToString(),cmbHocsinh);
-        }
-
         public void setEnableControl(bool status)
         {
             btnxoa.Enabled = status;
 
-        }
-
-        private void cmblop_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null)
-            {
-                m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbHocsinh);
-                m_HocSinhCtrl.HienThiComboBoxMaHS(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMaHS);
-            }
-            if (cmbMaHS.SelectedValue != null)
-                m_HocSinhCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString()
-                    , cmblop.SelectedValue.ToString()
-                    , cmbMaHS.SelectedValue.ToString(), cmbHocsinh);
         }
     }
 }

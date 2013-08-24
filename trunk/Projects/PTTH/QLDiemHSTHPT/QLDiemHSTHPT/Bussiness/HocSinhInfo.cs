@@ -41,15 +41,15 @@ namespace QLDiemHSTHPT.Bussiness
             set { m_NoiSinh = value; }
         }
 
-        private DanTocInfo m_DanToc;
-        public DanTocInfo DanToc
+       private String m_DanToc;
+       public String DanToc
         {
             get { return m_DanToc; }
             set { m_DanToc = value; }
         }
 
-        private TonGiaoInfo m_TonGiao;
-        public TonGiaoInfo TonGiao
+       private String m_TonGiao;
+       public String TonGiao
         {
             get { return m_TonGiao; }
             set { m_TonGiao = value; }
@@ -62,8 +62,8 @@ namespace QLDiemHSTHPT.Bussiness
             set { m_HoTenCha = value; }
         }
 
-        private NgheNghiepInfo m_NgheNghiepCha;
-        public NgheNghiepInfo NgheNghiepCha
+       private String m_NgheNghiepCha;
+       public String NgheNghiepCha
         {
             get { return m_NgheNghiepCha; }
             set { m_NgheNghiepCha = value; }
@@ -76,8 +76,8 @@ namespace QLDiemHSTHPT.Bussiness
             set { m_HoTenMe = value; }
         }
 
-        private NgheNghiepInfo m_NgheNghiepMe;
-        public NgheNghiepInfo NgheNghiepMe
+       private String m_NgheNghiepMe;
+       public String NgheNghiepMe
         {
             get { return m_NgheNghiepMe; }
             set { m_NgheNghiepMe = value; }

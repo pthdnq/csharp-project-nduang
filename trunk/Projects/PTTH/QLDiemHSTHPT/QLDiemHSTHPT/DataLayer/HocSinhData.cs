@@ -115,7 +115,7 @@ namespace QLDiemHSTHPT.DataLayer
 
        public DataTable LayDsHocSinhForReport()
        {
-           SqlCommand cmd = new SqlCommand("SELECT * FROM NGHENGHIEP NNC, NGHENGHIEP NNM, HOCSINH HS, DANTOC DT, TONGIAO TG WHERE HS.MaNgheNghiepCha = NNC.MaNgheNghiep AND HS.MaNgheNghiepMe = NNM.MaNgheNghiep AND HS.MaDanToc = DT.MaDanToc AND HS.MaTonGiao = TG.MaTonGiao");
+           SqlCommand cmd = new SqlCommand("SELECT * FROM HOCSINH");
            m_HocSinhData.Load(cmd);
            return m_HocSinhData;
        }
@@ -192,7 +192,7 @@ namespace QLDiemHSTHPT.DataLayer
 
        public String TruyVanChung()
        {
-           return "SELECT HS.MaHocSinh, HS.HoTen, HS.GioiTinh, HS.NgaySinh, HS.NoiSinh, DT.TenDanToc, TG.TenTonGiao FROM HOCSINH HS INNER JOIN DANTOC DT ON HS.MaDanToc = DT.MaDanToc INNER JOIN TONGIAO TG ON HS.MaTonGiao = TG.MaTonGiao";
+           return "SELECT HS.MaHocSinh, HS.HoTen, HS.GioiTinh, HS.NgaySinh, HS.NoiSinh, HS.DanToc, HS.TonGiao FROM HOCSINH HS ";
        }
 
        public DataTable TimKiemHocSinh(String hoTen)
@@ -220,13 +220,13 @@ namespace QLDiemHSTHPT.DataLayer
 
            if (theoDToc != "NONE")
            {
-               sql += theoDToc + " DT.TenDanToc = @danToc ";
+               sql += theoDToc + " HS.DanToc LIKE '%' + @danToc + '%' ";
                cmd.Parameters.Add("danToc", SqlDbType.NVarChar).Value = danToc;
            }
 
            if (theoTGiao != "NONE")
            {
-               sql += theoTGiao + " TG.TenTonGiao = @tonGiao";
+               sql += theoTGiao + " HS.TonGiao LIKE '%' + @tonGiao + '%' ";
                cmd.Parameters.Add("tonGiao", SqlDbType.NVarChar).Value = tonGiao;
            }
 

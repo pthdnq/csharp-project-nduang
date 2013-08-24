@@ -31,14 +31,10 @@ namespace QLDiemHSTHPT
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frptDanhSachGiaoVien));
-            this.bdDanhSachGiaoVien = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewerDSGV = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.bdDanhSachGiaoVien = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bdDanhSachGiaoVien)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bdDanhSachGiaoVien
-            // 
-            this.bdDanhSachGiaoVien.DataSource = typeof(QLDiemHSTHPT.Bussiness.GiaoVienInfo);
             // 
             // reportViewerDSGV
             // 
@@ -51,6 +47,11 @@ namespace QLDiemHSTHPT
             this.reportViewerDSGV.Name = "reportViewerDSGV";
             this.reportViewerDSGV.Size = new System.Drawing.Size(626, 442);
             this.reportViewerDSGV.TabIndex = 0;
+            this.reportViewerDSGV.Load += new System.EventHandler(this.reportViewerDSGV_Load);
+            // 
+            // bdDanhSachGiaoVien
+            // 
+            this.bdDanhSachGiaoVien.DataSource = typeof(QLDiemHSTHPT.Bussiness.GiaoVienInfo);
             // 
             // frptDanhSachGiaoVien
             // 

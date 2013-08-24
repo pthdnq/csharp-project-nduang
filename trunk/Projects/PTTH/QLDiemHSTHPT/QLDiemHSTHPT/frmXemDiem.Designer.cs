@@ -108,7 +108,6 @@ namespace QLDiemHSTHPT
             this.nvgPanelGiaoVien.TitlePanel.Style.MarginLeft = 4;
             this.nvgPanelGiaoVien.TitlePanel.TabIndex = 0;
             this.nvgPanelGiaoVien.TitlePanel.Text = "Nhập thông tin điểm";
-            this.nvgPanelGiaoVien.Load += new System.EventHandler(this.nvgPanelGiaoVien_Load);
             // 
             // navigationPanePanel1
             // 
@@ -140,18 +139,6 @@ namespace QLDiemHSTHPT
             this.navigationPanePanel1.Style.GradientAngle = 90;
             this.navigationPanePanel1.TabIndex = 2;
             // 
-            // cmbMaHS
-            // 
-            this.cmbMaHS.DisplayMember = "Text";
-            this.cmbMaHS.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbMaHS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMaHS.FormattingEnabled = true;
-            this.cmbMaHS.ItemHeight = 14;
-            this.cmbMaHS.Location = new System.Drawing.Point(19, 226);
-            this.cmbMaHS.Name = "cmbMaHS";
-            this.cmbMaHS.Size = new System.Drawing.Size(149, 20);
-            this.cmbMaHS.TabIndex = 37;
-            this.cmbMaHS.SelectedIndexChanged += new System.EventHandler(this.cmbMaHS_SelectedIndexChanged);
             // 
             // labelX4
             // 
@@ -192,18 +179,7 @@ namespace QLDiemHSTHPT
             this.lblHocsinh.TabIndex = 33;
             this.lblHocsinh.Text = "Học sinh:";
             // 
-            // cmblop
-            // 
-            this.cmblop.DisplayMember = "Text";
-            this.cmblop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmblop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmblop.FormattingEnabled = true;
-            this.cmblop.ItemHeight = 14;
-            this.cmblop.Location = new System.Drawing.Point(19, 81);
-            this.cmblop.Name = "cmblop";
-            this.cmblop.Size = new System.Drawing.Size(149, 20);
-            this.cmblop.TabIndex = 30;
-            this.cmblop.SelectedIndexChanged += new System.EventHandler(this.cmblop_SelectedIndexChanged);
+
             // 
             // labelX3
             // 
@@ -264,7 +240,6 @@ namespace QLDiemHSTHPT
             this.cbmnamhoc.Name = "cbmnamhoc";
             this.cbmnamhoc.Size = new System.Drawing.Size(149, 20);
             this.cbmnamhoc.TabIndex = 20;
-            this.cbmnamhoc.SelectedIndexChanged += new System.EventHandler(this.cbmnamhoc_SelectedIndexChanged);
             // 
             // lblnamHoc
             // 
@@ -450,7 +425,6 @@ namespace QLDiemHSTHPT
             this.Name = "frmXemDiem";
             this.Text = "Xem Điểm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmXemDiem_Load);
             this.nvgPanelGiaoVien.ResumeLayout(false);
             this.navigationPanePanel1.ResumeLayout(false);
             this.groupBoxDsgv.ResumeLayout(false);
