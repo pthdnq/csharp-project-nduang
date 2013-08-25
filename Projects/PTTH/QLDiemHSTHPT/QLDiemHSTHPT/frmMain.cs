@@ -22,7 +22,7 @@ namespace QLDiemHSTHPT
         frmHocKy m_HocKy = null;
         frmKetQua m_KetQua = null;
         frmKhoiLop m_KhoiLop = null;
-        frmNamHoc m_NamHoc = null;
+        frmKhoaHoc m_NamHoc = null;
         frmMonHoc m_MonHoc = null;
         frmNguoiDung m_NguoiDung = null;
         frmLoaiNguoiDung m_LoaiNguoiDung = null;
@@ -177,7 +177,7 @@ namespace QLDiemHSTHPT
         {
             if (m_NamHoc == null || m_NamHoc.IsDisposed)
             {
-                m_NamHoc = new frmNamHoc();
+                m_NamHoc = new frmKhoaHoc();
                 m_NamHoc.MdiParent = frmMain.ActiveForm;
                 m_NamHoc.Show();
             }

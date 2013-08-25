@@ -187,10 +187,10 @@ namespace QLDiemHSTHPT
 
         private void btnNamhoc_Click(object sender, EventArgs e)
         {
-            frmNamHoc m_NamHoc = null;
+            frmKhoaHoc m_NamHoc = null;
             if (m_NamHoc == null || m_NamHoc.IsDisposed)
             {
-                m_NamHoc = new frmNamHoc();
+                m_NamHoc = new frmKhoaHoc();
                 m_NamHoc.MdiParent = frmMain.ActiveForm;
                 m_NamHoc.Show();
             }

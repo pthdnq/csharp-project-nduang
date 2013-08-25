@@ -237,11 +237,11 @@
     <Compile Include="frmMonHoc.Designer.cs">
       <DependentUpon>frmMonHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNamHoc.cs">
+    <Compile Include="frmKhoaHoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNamHoc.Designer.cs">
-      <DependentUpon>frmNamHoc.cs</DependentUpon>
+    <Compile Include="frmKhoaHoc.Designer.cs">
+      <DependentUpon>frmKhoaHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNguoiDung.cs">
       <SubType>Form</SubType>
@@ -387,9 +387,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>frmMonHoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNamHoc.resx">
+    <EmbeddedResource Include="frmKhoaHoc.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>frmNamHoc.cs</DependentUpon>
+      <DependentUpon>frmKhoaHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNguoiDung.resx">
       <SubType>Designer</SubType>

@@ -241,7 +241,7 @@ namespace QLDiemHSTHPT
             this.labelX7.Name = "labelX7";
             this.labelX7.Size = new System.Drawing.Size(75, 23);
             this.labelX7.TabIndex = 32;
-            this.labelX7.Text = "Năm học:";
+            this.labelX7.Text = "Khóa Học:";
             // 
             // btnCNdiem
             // 

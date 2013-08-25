@@ -158,7 +158,7 @@ namespace QLDiemHSTHPT
             this.labelX0.Name = "labelX0";
             this.labelX0.Size = new System.Drawing.Size(55, 20);
             this.labelX0.TabIndex = 0;
-            this.labelX0.Text = "Năm học:";
+            this.labelX0.Text = "Khóa Học:";
             // 
             // reportViewerKQHKLop
             // 

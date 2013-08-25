@@ -288,7 +288,7 @@ namespace QLDiemHSTHPT
             this.lblnamHoc.Name = "lblnamHoc";
             this.lblnamHoc.Size = new System.Drawing.Size(75, 23);
             this.lblnamHoc.TabIndex = 19;
-            this.lblnamHoc.Text = "Năm học:";
+            this.lblnamHoc.Text = "Khóa Học:";
             // 
             // btnNhapdiemchung
             // 

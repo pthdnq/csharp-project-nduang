@@ -21,11 +21,7 @@ namespace QLDiemHSTHPT.Controller
        }
        public void LuuKetQua(String maHocSinh, String maLop, String maMonHoc, String maHocKy, String maNamHoc, float diemTBMonHK)
        {
-           float diemTBKT = (float)Math.Round(m_DiemCtrl.DiemTrungBinhKiemTra(maHocSinh, maMonHoc, maHocKy, maNamHoc, maLop), 2);
-           //float diemTBMonHK = (float)Math.Round(m_DiemCtrl.DiemTrungBinhMonHocKy(maHocSinh, maMonHoc, maHocKy, maNamHoc, maLop), 2);
-
-           m_KQHocKyMonHocData.XoaKetQua(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc);
-           m_KQHocKyMonHocData.LuuKetQua(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc, diemTBKT, diemTBMonHK);
+           m_KQHocKyMonHocData.LuuKetQua(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc, diemTBMonHK);
        }
 
        public static IList<KQHKMonHocInfo> LayDsKQHocKyMonHoc(String maLop, String maMonHoc, String maHocKy, String maNamHoc)

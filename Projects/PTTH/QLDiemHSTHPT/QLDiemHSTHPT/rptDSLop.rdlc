@@ -116,7 +116,7 @@
         <CanGrow>true</CanGrow>
         <Left>0.75in</Left>
         <Height>0.25in</Height>
-        <Value>="Năm học : " &amp; Parameters!NamHoc.Value</Value>
+        <Value>="Khóa Học : " &amp; Parameters!NamHoc.Value</Value>
       </Textbox>
       <Textbox Name="textbox6">
         <rd:DefaultName>textbox6</rd:DefaultName>
@@ -401,7 +401,7 @@
                       </Style>
                       <ZIndex>6</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>NĂM HỌC</Value>
+                      <Value>Khóa Học</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
