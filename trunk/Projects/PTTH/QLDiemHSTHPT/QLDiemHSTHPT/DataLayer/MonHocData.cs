@@ -25,14 +25,6 @@ namespace QLDiemHSTHPT.DataLayer
            //cmd.Parameters.Add("lop", SqlDbType.VarChar).Value = lop;
 
            SqlCommand cmd = new SqlCommand("SELECT MH.MaMonHoc, MH.TenMonHoc, MH.HeSoBanCoBan, MH.HeSoBanKHTN, MH.HeSoBanKHXHNV FROM MONHOC MH");
-
-           //SqlCommand cmd = new SqlCommand("SELECT PL.MaHocSinh, HS.HoTen, L.TenLop " +
-           //                               "FROM HOCSINH HS INNER JOIN PHANLOP PL ON HS.MaHocSinh = PL.MaHocSinh " +
-           //                               "INNER JOIN LOP L ON L.MaLop = PL.MaLop " +
-           //                               "WHERE PL.MaLop = @lop AND PC.MaNamHoc = @namHoc");
-           //cmd.Parameters.Add("namHoc", SqlDbType.VarChar).Value = namHoc;
-           //cmd.Parameters.Add("lop", SqlDbType.VarChar).Value = lop;
-           
            m_MonHocData.Load(cmd);
            return m_MonHocData;
        }

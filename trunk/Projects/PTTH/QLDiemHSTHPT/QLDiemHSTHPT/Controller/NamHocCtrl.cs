@@ -19,16 +19,7 @@ namespace QLDiemHSTHPT.Controller
             comboBox.DisplayMember = "TenNamHoc";
             comboBox.ValueMember = "MaNamHoc";
         }
-       //HTQuang begin 30/07/2013
-       //hien thi nam hoc phu thuoc vao nam hoc cu
-       public void HienThiComboBox(String NamHocCu, ComboBoxEx cmbNamHocMoi)
-       {
-           NamHocData m_NHData = new NamHocData();
-           cmbNamHocMoi.DataSource = m_NHData.LayDSNamHoc(NamHocCu);
-           cmbNamHocMoi.DisplayMember = "TenNamHoc";
-           cmbNamHocMoi.ValueMember = "MaNamHoc";
-       }
-       //HTQuang end 30/07/2013
+
         public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbComlumn)
         {
             cmbComlumn.DataSource = m_NamHocData.LayDSNamHoc();

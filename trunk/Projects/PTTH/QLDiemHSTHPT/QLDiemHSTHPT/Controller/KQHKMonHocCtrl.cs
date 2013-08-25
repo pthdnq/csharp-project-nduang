@@ -15,10 +15,14 @@ namespace QLDiemHSTHPT.Controller
         DiemCtrl       m_DiemCtrl =   new DiemCtrl();
         KQHKMonHocData m_KQHocKyMonHocData = new KQHKMonHocData();
 
-       public void LuuKetQua(String maHocSinh, String maLop, String maMonHoc, String maHocKy, String maNamHoc)
+       public DataTable LayDsKQHocKyMonHocForReport(String maLop, String maMonHoc, String maHocKy, String maNamHoc)
+       {
+           return m_KQHocKyMonHocData.LayDsKQHocKyMonHocForReport(maLop, maMonHoc, maHocKy, maNamHoc);
+       }
+       public void LuuKetQua(String maHocSinh, String maLop, String maMonHoc, String maHocKy, String maNamHoc, float diemTBMonHK)
        {
            float diemTBKT = (float)Math.Round(m_DiemCtrl.DiemTrungBinhKiemTra(maHocSinh, maMonHoc, maHocKy, maNamHoc, maLop), 2);
-           float diemTBMonHK = (float)Math.Round(m_DiemCtrl.DiemTrungBinhMonHocKy(maHocSinh, maMonHoc, maHocKy, maNamHoc, maLop), 2);
+           //float diemTBMonHK = (float)Math.Round(m_DiemCtrl.DiemTrungBinhMonHocKy(maHocSinh, maMonHoc, maHocKy, maNamHoc, maLop), 2);
 
            m_KQHocKyMonHocData.XoaKetQua(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc);
            m_KQHocKyMonHocData.LuuKetQua(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc, diemTBKT, diemTBMonHK);

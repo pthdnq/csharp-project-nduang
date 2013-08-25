@@ -12,29 +12,29 @@ namespace QLDiemHSTHPT.Controller
     {
         PhanBanData m_PhanBanData = new PhanBanData();
         public void HienThiComboBox(ComboBox combobox)
-        { 
-           combobox.DataSource = m_PhanBanData.LayDSBan();
-           combobox.DisplayMember = "TenBan";
-           combobox.ValueMember = "MaBan";
+        {
+            combobox.DataSource = m_PhanBanData.LayDSBan();
+            combobox.DisplayMember = "TenBan";
+            combobox.ValueMember = "MaBan";
         }
         public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbComlumn)
         {
-           cmbComlumn.DataSource = m_PhanBanData.LayDSBan();
-           cmbComlumn.DisplayMember = "TenBan";
-           cmbComlumn.ValueMember = "MaBan";
-           cmbComlumn.DataPropertyName = "MaBan";
-           cmbComlumn.HeaderText = "Tên Ban";
+            cmbComlumn.DataSource = m_PhanBanData.LayDSBan();
+            cmbComlumn.DisplayMember = "TenBan";
+            cmbComlumn.ValueMember = "MaBan";
+            cmbComlumn.DataPropertyName = "MaBan";
+            cmbComlumn.HeaderText = "Tên Ban";
         }
         public void HienThi(DataGridViewX dgv, BindingNavigator bn)
         {
-           BindingSource bs = new BindingSource();
-           bs.DataSource = m_PhanBanData.LayDSBan();
-           bn.BindingSource = bs;
-           dgv.DataSource = bs;
+            BindingSource bs = new BindingSource();
+            bs.DataSource = m_PhanBanData.LayDSBan();
+            bn.BindingSource = bs;
+            dgv.DataSource = bs;
         }
         public DataRow ThemDongMoi()
         {
-           return m_PhanBanData.ThemDongMoi();
+            return m_PhanBanData.ThemDongMoi();
         }
         public void ThemBanMoi(DataRow m_Row)
         {
@@ -46,5 +46,5 @@ namespace QLDiemHSTHPT.Controller
             return m_PhanBanData.LuuBan();
         }
 
-        }
+    }
 }
