@@ -979,7 +979,7 @@ namespace QLDiemHSTHPT
             this.ribbonTabQuanLy1.Checked = true;
             this.ribbonTabQuanLy1.ImagePaddingHorizontal = 8;
             this.ribbonTabQuanLy1.Name = "ribbonTabQuanLy1";
-            this.ribbonTabQuanLy1.Text = "Năm Học";
+            this.ribbonTabQuanLy1.Text = "Khóa Học";
             // 
             // galleryContainer4
             // 
@@ -1061,7 +1061,7 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem50.Image = global::QLDiemHSTHPT.Properties.Resources.namhoc;
             this.toolStripMenuItem50.Name = "toolStripMenuItem50";
             this.toolStripMenuItem50.Size = new System.Drawing.Size(170, 22);
-            this.toolStripMenuItem50.Text = "Năm Học";
+            this.toolStripMenuItem50.Text = "Khóa Học";
             this.toolStripMenuItem50.Click += new System.EventHandler(this.nămHọcToolStripMenuItem_Click);
             // 
             // toolStripMenuItem51
@@ -1276,7 +1276,7 @@ namespace QLDiemHSTHPT
             this.nămHọcToolStripMenuItem.Image = global::QLDiemHSTHPT.Properties.Resources.namhoc;
             this.nămHọcToolStripMenuItem.Name = "nămHọcToolStripMenuItem";
             this.nămHọcToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.nămHọcToolStripMenuItem.Text = "Năm Học";
+            this.nămHọcToolStripMenuItem.Text = "Khóa Học";
             this.nămHọcToolStripMenuItem.Click += new System.EventHandler(this.nămHọcToolStripMenuItem_Click);
             // 
             // mônHọcToolStripMenuItem
@@ -1580,7 +1580,7 @@ namespace QLDiemHSTHPT
             this.btnnamhoc.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnnamhoc.Name = "btnnamhoc";
             this.btnnamhoc.Size = new System.Drawing.Size(52, 52);
-            this.btnnamhoc.Text = "Năm Học";
+            this.btnnamhoc.Text = "Khóa Học";
             // 
             // btnhocky
             // 

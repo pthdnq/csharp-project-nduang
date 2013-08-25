@@ -145,7 +145,7 @@
         <CanGrow>true</CanGrow>
         <Left>4.125in</Left>
         <Height>0.25in</Height>
-        <Value>="Năm Học : " &amp; Parameters!NamHoc.Value</Value>
+        <Value>="Khóa Học : " &amp; Parameters!NamHoc.Value</Value>
       </Textbox>
       <Textbox Name="textbox7">
         <rd:DefaultName>textbox7</rd:DefaultName>

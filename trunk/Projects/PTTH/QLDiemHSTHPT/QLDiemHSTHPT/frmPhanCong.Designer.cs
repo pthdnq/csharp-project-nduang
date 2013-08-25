@@ -391,7 +391,7 @@ namespace QLDiemHSTHPT
             this.lblNamhoc.Name = "lblNamhoc";
             this.lblNamhoc.Size = new System.Drawing.Size(90, 23);
             this.lblNamhoc.TabIndex = 13;
-            this.lblNamhoc.Text = "Năm học:";
+            this.lblNamhoc.Text = "Khóa Học:";
             // 
             // lblSTT
             // 
@@ -630,7 +630,7 @@ namespace QLDiemHSTHPT
             this.MaNamHoc.DataPropertyName = "MaNamHoc";
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaNamHoc.DefaultCellStyle = dataGridViewCellStyle3;
-            this.MaNamHoc.HeaderText = "Năm Học";
+            this.MaNamHoc.HeaderText = "Khóa Học";
             this.MaNamHoc.Name = "MaNamHoc";
             this.MaNamHoc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.MaNamHoc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
