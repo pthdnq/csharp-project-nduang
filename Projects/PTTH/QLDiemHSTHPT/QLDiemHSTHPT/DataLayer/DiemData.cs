@@ -41,17 +41,17 @@ namespace QLDiemHSTHPT.DataLayer
        {
            DataService m_DData = new DataService();
 
-           SqlCommand cmd = new SqlCommand("SELECT * " +
-                                           "FROM DIEM D, HOCSINH S, MONHOC H, LOAIDIEM O, LOP L " +
-                                           "WHERE D.MaHocSinh = S.MaHocSinh AND " +
-                                           "D.MaMonHoc = H.MaMonHoc AND " +
-                                           "D.MaLoaiDiem = O.MaLoaiDiem AND " +
-                                           "D.MaLop = L.MaLop AND " +
-                                           "S.MaHocSinh = @maHocSinh AND " +
-                                           "H.MaMonHoc = @maMonHoc AND " +
-                                           "D.MaHocKy = @maHocKy AND " +
-                                           "D.MaNamHoc = @maNamHoc AND " +
-                                           "L.MaLop = @maLop");
+           SqlCommand cmd = new SqlCommand(@"SELECT *
+                                           FROM DIEM D, HOCSINH S, MONHOC H, LOAIDIEM O, LOP L 
+                                           WHERE D.MaHocSinh = S.MaHocSinh AND 
+                                           D.MaMonHoc = H.MaMonHoc AND 
+                                           D.MaLoaiDiem = O.MaLoaiDiem AND 
+                                           D.MaLop = L.MaLop AND 
+                                           S.MaHocSinh = @maHocSinh AND 
+                                           H.MaMonHoc = @maMonHoc AND 
+                                           D.MaHocKy = @maHocKy AND 
+                                           D.MaNamHoc = @maNamHoc AND
+                                           L.MaLop = @maLop");
            cmd.Parameters.Add("maHocSinh", SqlDbType.VarChar).Value = maHocSinh;
            cmd.Parameters.Add("maLop", SqlDbType.VarChar).Value = maLop;
            cmd.Parameters.Add("maMonHoc", SqlDbType.VarChar).Value = maMonHoc;
@@ -92,14 +92,9 @@ namespace QLDiemHSTHPT.DataLayer
        {
            DataService m_DData = new DataService();
 
-           SqlCommand cmd = new SqlCommand("SELECT * " +
-                                           "FROM DIEM D, LOAIDIEM L " +
-                                           "WHERE D.MaLoaiDiem = L.MaLoaiDiem AND " +
-                                           "D.MaHocSinh = @maHocSinh AND " +
-                                           "D.MaMonHoc = @maMonHoc AND " +
-                                           "D.MaHocKy = @maHocKy AND " +
-                                           "D.MaNamHoc = @maNamHoc AND " +
-                                           "D.MaLop = @maLop");
+           SqlCommand cmd = new SqlCommand();
+           cmd.CommandText = "sp_LayDsDiemHocSinh";
+           cmd.CommandType = CommandType.StoredProcedure;
            cmd.Parameters.Add("maHocSinh", SqlDbType.VarChar).Value = maHocSinh;
            cmd.Parameters.Add("maMonHoc", SqlDbType.VarChar).Value = maMonHoc;
            cmd.Parameters.Add("maHocKy", SqlDbType.VarChar).Value = maHocKy;

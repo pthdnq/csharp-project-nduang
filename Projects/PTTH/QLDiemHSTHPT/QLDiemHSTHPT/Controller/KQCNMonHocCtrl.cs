@@ -20,8 +20,9 @@ namespace QLDiemHSTHPT.Controller
             float diemTBMonCN = (float)Math.Round(m_DiemCtrl.DiemTrungBinhMonCaNam(maHocSinh, maMonHoc, maNamHoc, maLop), 2);
             float diemThiLai = (float)Math.Round(m_DiemCtrl.DiemThiLai(maHocSinh, maMonHoc, maNamHoc, maLop), 2); 
 
-            m_KQCaNamMonHocData.XoaKetQua(maHocSinh, maLop, maMonHoc, maNamHoc);
-            m_KQCaNamMonHocData.LuuKetQua(maHocSinh, maLop, maMonHoc, maNamHoc, diemThiLai, diemTBMonCN);
+           // m_KQCaNamMonHocData.XoaKetQua(maHocSinh, maLop, maMonHoc, maNamHoc);
+           // m_KQCaNamMonHocData.LuuKetQua(maHocSinh, maLop, maMonHoc, maNamHoc, diemThiLai, diemTBMonCN);
+            m_KQCaNamMonHocData.UpdateKetQua(maHocSinh, maLop, maMonHoc, maNamHoc, diemThiLai, diemTBMonCN);
         }
 
         public static IList<KQCNMonHocInfo> LayDsKQCaNamMonHoc(String maLop, String maMonHoc, String maNamHoc)

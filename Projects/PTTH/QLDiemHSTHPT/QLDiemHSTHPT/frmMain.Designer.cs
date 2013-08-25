@@ -209,8 +209,6 @@ namespace QLDiemHSTHPT
             this.buttonthoat = new DevComponents.DotNetBar.ButtonX();
             this.buttondangnhap = new DevComponents.DotNetBar.ButtonX();
             this.buttondangxuat = new DevComponents.DotNetBar.ButtonX();
-            this.backupDialog = new System.Windows.Forms.SaveFileDialog();
-            this.restoreDialog = new System.Windows.Forms.OpenFileDialog();
             this.office2007StartButton3 = new DevComponents.DotNetBar.Office2007StartButton();
             this.itemContainer8 = new DevComponents.DotNetBar.ItemContainer();
             this.itemContainer12 = new DevComponents.DotNetBar.ItemContainer();
@@ -222,6 +220,7 @@ namespace QLDiemHSTHPT
             this.buttonItem24 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem25 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem26 = new DevComponents.DotNetBar.ButtonItem();
+            this.mnLoaiDiem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.bottomBar)).BeginInit();
             this.bottomBar.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -512,7 +511,6 @@ namespace QLDiemHSTHPT
             this.btnPhanQuyen});
             this.buttonItem30.Text = "Quản lý người dùng";
             this.buttonItem30.Tooltip = "Quản lý người dùng";
-            this.buttonItem30.Click += new System.EventHandler(this.buttonItem30_Click);
             // 
             // btnLoaiNguoiDung
             // 
@@ -530,26 +528,13 @@ namespace QLDiemHSTHPT
             // 
             // buttonItem31
             // 
-            this.buttonItem31.BeginGroup = true;
-            this.buttonItem31.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem31.Image = global::QLDiemHSTHPT.Properties.Resources.saoluudulieu;
             this.buttonItem31.ImagePaddingHorizontal = 8;
             this.buttonItem31.Name = "buttonItem31";
-            this.buttonItem31.SubItemsExpandWidth = 24;
-            this.buttonItem31.Text = "Sao lưu dữ liệu";
-            this.buttonItem31.Tooltip = "Sao lưu dữ liệu";
-            this.buttonItem31.Click += new System.EventHandler(this.buttonItem31_Click);
             // 
             // buttonItem32
             // 
-            this.buttonItem32.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem32.Image = global::QLDiemHSTHPT.Properties.Resources.phuchoidulieu;
             this.buttonItem32.ImagePaddingHorizontal = 8;
             this.buttonItem32.Name = "buttonItem32";
-            this.buttonItem32.SubItemsExpandWidth = 24;
-            this.buttonItem32.Text = "Phục hồi dữ liệu";
-            this.buttonItem32.Tooltip = "Phục hồi dữ liệu";
-            this.buttonItem32.Click += new System.EventHandler(this.buttonItem32_Click);
             // 
             // buttonItem33
             // 
@@ -1041,11 +1026,11 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem53,
             this.toolStripMenuItem54,
             this.toolStripMenuItem55,
-            this.phânBanToolStripMenuItem});
+            this.phânBanToolStripMenuItem,
+            this.mnLoaiDiem});
             this.toolStripMenuItem46.Name = "toolStripMenuItem46";
             this.toolStripMenuItem46.Size = new System.Drawing.Size(63, 20);
             this.toolStripMenuItem46.Text = "Quản Lý";
-            this.toolStripMenuItem46.Click += new System.EventHandler(this.toolStripMenuItem46_Click);
             // 
             // toolStripMenuItem47
             // 
@@ -1101,7 +1086,6 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItem1.Text = "Nhập điểm riêng";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem53
             // 
@@ -1830,7 +1814,7 @@ namespace QLDiemHSTHPT
             this.btnDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDiem.Location = new System.Drawing.Point(22, 149);
             this.btnDiem.Name = "btnDiem";
-            this.btnDiem.Size = new System.Drawing.Size(144, 33);
+            this.btnDiem.Size = new System.Drawing.Size(144, 30);
             this.btnDiem.TabIndex = 16;
             this.btnDiem.Text = "Điểm";
             this.btnDiem.Tooltip = "Tra Cứu Điểm Chung";
@@ -1951,22 +1935,6 @@ namespace QLDiemHSTHPT
             this.buttondangxuat.Text = "Đăng Xuất";
             this.buttondangxuat.Tooltip = "Đăng Xuất";
             this.buttondangxuat.Click += new System.EventHandler(this.buttondangxuat_Click);
-            // 
-            // backupDialog
-            // 
-            this.backupDialog.DefaultExt = "*.BAK";
-            this.backupDialog.FileName = "QLDiemHSTHPT.BAK";
-            this.backupDialog.Filter = "Backup files (*.BAK)|*.BAK";
-            this.backupDialog.FilterIndex = 2;
-            this.backupDialog.Title = "Sao Lưu Dữ Liệu";
-            // 
-            // restoreDialog
-            // 
-            this.restoreDialog.DefaultExt = "*.BAK";
-            this.restoreDialog.FileName = "QLDiemHSTHPT.BAK";
-            this.restoreDialog.Filter = "Backup files (*.BAK)|*.BAK";
-            this.restoreDialog.FilterIndex = 2;
-            this.restoreDialog.Title = "PHỤC HỒI DỮ LIỆU";
             // 
             // office2007StartButton3
             // 
@@ -2090,6 +2058,14 @@ namespace QLDiemHSTHPT
             this.buttonItem26.SubItemsExpandWidth = 24;
             this.buttonItem26.Text = "Thoát";
             this.buttonItem26.Tooltip = "Thoát";
+            // 
+            // mnLoaiDiem
+            // 
+            this.mnLoaiDiem.Image = global::QLDiemHSTHPT.Properties.Resources.diem;
+            this.mnLoaiDiem.Name = "mnLoaiDiem";
+            this.mnLoaiDiem.Size = new System.Drawing.Size(170, 22);
+            this.mnLoaiDiem.Text = "Loại Điểm";
+            this.mnLoaiDiem.Click += new System.EventHandler(this.mnLoaiDiem_Click);
             // 
             // frmMain
             // 
@@ -2266,8 +2242,6 @@ namespace QLDiemHSTHPT
         private ToolStripButton btnTTTruong;
         private ToolStripButton btnTTPM;
         private DevComponents.DotNetBar.LabelX lblND;
-        private SaveFileDialog backupDialog;
-        private OpenFileDialog restoreDialog;
         private DevComponents.DotNetBar.Office2007StartButton office2007StartButton4;
         private DevComponents.DotNetBar.Office2007StartButton office2007StartButton3;
         private DevComponents.DotNetBar.ItemContainer itemContainer8;
@@ -2318,6 +2292,7 @@ namespace QLDiemHSTHPT
         private ToolStripMenuItem phânBanToolStripMenuItem;
         private DevComponents.DotNetBar.ButtonX btnPhanCongGV;
         private DevComponents.DotNetBar.ButtonX btnDiem;
+        private ToolStripMenuItem mnLoaiDiem;
 
 
     }

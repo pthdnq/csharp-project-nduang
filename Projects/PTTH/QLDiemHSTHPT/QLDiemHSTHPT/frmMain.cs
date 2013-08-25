@@ -28,6 +28,7 @@ namespace QLDiemHSTHPT
         frmLoaiNguoiDung m_LoaiNguoiDung = null;
         frmDangNhap m_FormDangNhap = null;
         frmDoiMatKhau m_FormDoiMatKhau = null;
+        frmLoaiDiem m_LoaiDiem = null;
 
         public frmMain()
         {
@@ -345,45 +346,10 @@ namespace QLDiemHSTHPT
         {
             this.Close();
         }
-        private void buttonItem30_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void buttonItem31_Click(object sender, EventArgs e)
-        {
-            if (backupDialog.ShowDialog() == DialogResult.OK)
-            {
-                System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand("BACKUP DATABASE " + Utilities.DatabaseName + " TO DISK = '" + backupDialog.FileName.ToString() + "'");
-                DataService data = new DataService();
-                data.Load(cmd);
-                MessageBoxEx.Show("Sao lưu dữ liệu thành công!", "BACKUP COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-                return;
-        }
-
-        private void buttonItem32_Click(object sender, EventArgs e)
-        {
-            if (restoreDialog.ShowDialog() == DialogResult.OK)
-            {
-                System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand("USE master RESTORE DATABASE " + Utilities.DatabaseName + " FROM DISK = '" + restoreDialog.FileName.ToString() + "'");
-                DataService data = new DataService();
-                data.Load(cmd);
-                MessageBoxEx.Show("Phục hồi dữ liệu thành công!", "RESTORE COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-                return;
-        }
 
         private void buttonItem33_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void toolStripMenuItem46_Click(object sender, EventArgs e)
-        {
-
         }
 
         frmGiaoVien m_GiaoVien = null;
@@ -410,18 +376,6 @@ namespace QLDiemHSTHPT
             else m_Lop.Activate();
         }
 
-        private void toolStripMenuItem78_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void toolStripMenuItem79_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void toolStripMenuItem80_Click(object sender, EventArgs e)
-        {
-
-        }
         frmHocSinh m_HocSinh = null;
         private void toolStripMenuItem56_Click(object sender, EventArgs e)
         {
@@ -630,65 +584,6 @@ namespace QLDiemHSTHPT
             buttondangnhap.Enabled = false;
         }
 
-        //frmPhanLop m_PhanLop = null;
-        private void buttonPLop_Click(object sender, EventArgs e)
-        {
-            //if (m_PhanLop == null || m_PhanLop.IsDisposed)
-            //{
-            //    m_PhanLop = new frmPhanLop();
-            //    m_PhanLop.MdiParent = frmPhanLop.ActiveForm;
-            //    m_PhanLop.Show();
-            //}
-            //else
-            //    m_PhanLop.Activate();
-        }
-        /*private void toolStripMenuItem57_Click(object sender, EventArgs e)
-        {
-            if (m_PhanLop == null || m_PhanLop.IsDisposed)
-            {
-                m_PhanLop = new frmPhanLop();
-                m_PhanLop.MdiParent = frmMain.ActiveForm;
-                m_PhanLop.Show();
-            }
-            else m_PhanLop.Activate();
-        }*/
-
-        frmNhapDiemRieng m_Rieng = null;
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            if (m_Rieng == null || m_Rieng.IsDisposed)
-            {
-                m_Rieng = new frmNhapDiemRieng();
-                m_Rieng.MdiParent = frmMain.ActiveForm;
-                m_Rieng.Show();
-            }
-            else m_Rieng.Activate();
-        }
-
-        //frmTimKiemGV TKGV = null;
-        //private void buttonTCGV_Click(object sender, EventArgs e)
-        //{
-        //    if (TKGV == null || TKGV.IsDisposed)
-        //    {
-        //        TKGV = new frmTimKiemGV();
-        //        TKGV.MdiParent = frmMain.ActiveForm;
-        //        TKGV.Show();
-        //    }
-        //    else
-        //        TKGV.Activate();
-        //}
-        //frmTimKiemHS TKHS = null;
-        //private void //buttonTCHS_Click(object sender, EventArgs e)
-        //{
-        //    if (TKHS == null || TKHS.IsDisposed)
-        //    {
-        //        TKHS = new frmTimKiemHS();
-        //        TKHS.MdiParent = frmMain.ActiveForm;
-        //        TKHS.Show();
-        //    }
-        //    else
-        //        TKHS.Activate();
-        //}
         frmNhapDiemChung m_DiemChung = null;
         private void toolStripMenuItem52_Click(object sender, EventArgs e)
         {
@@ -895,6 +790,17 @@ namespace QLDiemHSTHPT
             {
                 m_DiemChung.setEnableControl(true);
             }
+        }
+
+        private void mnLoaiDiem_Click(object sender, EventArgs e)
+        {
+            if (m_LoaiDiem == null || m_LoaiDiem.IsDisposed)
+            {
+                m_LoaiDiem = new frmLoaiDiem();
+                m_LoaiDiem.MdiParent = frmMain.ActiveForm;
+                m_LoaiDiem.Show();
+            }
+            else m_LoaiDiem.Activate();
         }
     }
 }
