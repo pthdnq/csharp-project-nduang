@@ -25,14 +25,6 @@ namespace QLDiemHSTHPT.Controller
             cmbComlumn.DataPropertyName = "MaKhoiLop";
             cmbComlumn.HeaderText = "Khối Lớp";
         }
-       //hien thi khoi lop phu thuoc vao lop cu
-       public void HienThiComboBox(String khoiLopCu, ComboBoxEx cmbKhoiLopMoi)
-       {
-           KhoiLopData m_KLData = new KhoiLopData();
-           cmbKhoiLopMoi.DataSource = m_KLData.LayDsKhoiLop(khoiLopCu);
-           cmbKhoiLopMoi.DisplayMember = "TenKhoiLop";
-           cmbKhoiLopMoi.ValueMember = "MaKhoiLop";
-       }
         public void HienThi(DataGridViewX dgv, BindingNavigator bn)
         {
             BindingSource bs = new BindingSource();
