@@ -44,7 +44,15 @@ namespace QLDiemHSTHPT
         private void bngThemmoi_Click(object sender, EventArgs e)
         {
             DataRow m_Row = m_LopCtrl.ThemDongMoi();
-            m_Row["MaLop"] = "";
+            int iLastRow = dgvLop.Rows.Count - 1;
+            int iMaLopLast = 1;
+            if (iLastRow >= 0)
+            {
+                string strMaHSLast = dgvLop.Rows[iLastRow].Cells["MaLop"].Value.ToString();
+                string MaHSLast = strMaHSLast.Replace("LOP", "");
+                iMaLopLast = int.Parse(MaHSLast) + 1;
+            }
+            m_Row["MaLop"] = "LOP" + quyDinh.LaySTT(iMaLopLast);
             m_Row["TenLop"] = "";
             m_Row["MaKhoiLop"] = "";
             m_Row["MaNamHoc"] = "";
@@ -119,8 +127,8 @@ namespace QLDiemHSTHPT
                 KiemTraTruocKhiLuu("TenLop") == true &&
                 KiemTraTruocKhiLuu("MaKhoiLop") == true &&
                 KiemTraTruocKhiLuu("MaNamHoc") == true &&
-                KiemTraTruocKhiLuu("MaGiaoVien") == true &&
-                KiemTraSiSoTruocKhiLuu("SiSo") == true)
+                KiemTraTruocKhiLuu("MaGiaoVien") == true //&&
+                /*KiemTraSiSoTruocKhiLuu("SiSo") == true*/)
             {
                 bindingNavigatorPositionItem.Focus();
                 m_LopCtrl.LuuLop();

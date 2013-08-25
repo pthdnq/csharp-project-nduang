@@ -205,43 +205,39 @@ namespace QLDiemHSTHPT
             // 
             // bngThemmoi
             // 
-            this.bngThemmoi.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bngThemmoi.Enabled = false;
             this.bngThemmoi.Image = global::QLDiemHSTHPT.Properties.Resources.add;
             this.bngThemmoi.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bngThemmoi.Name = "bngThemmoi";
-            this.bngThemmoi.Size = new System.Drawing.Size(23, 22);
+            this.bngThemmoi.Size = new System.Drawing.Size(61, 22);
             this.bngThemmoi.Text = "Thêm ";
             this.bngThemmoi.Click += new System.EventHandler(this.bngThemmoi_Click);
             // 
             // bngXoa
             // 
-            this.bngXoa.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bngXoa.Enabled = false;
             this.bngXoa.Image = global::QLDiemHSTHPT.Properties.Resources.delete;
             this.bngXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bngXoa.Name = "bngXoa";
-            this.bngXoa.Size = new System.Drawing.Size(23, 22);
+            this.bngXoa.Size = new System.Drawing.Size(47, 22);
             this.bngXoa.Text = "Xóa";
             this.bngXoa.Click += new System.EventHandler(this.bngXoa_Click);
             // 
             // bngluu
             // 
-            this.bngluu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bngluu.Image = global::QLDiemHSTHPT.Properties.Resources.save;
             this.bngluu.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bngluu.Name = "bngluu";
-            this.bngluu.Size = new System.Drawing.Size(23, 22);
+            this.bngluu.Size = new System.Drawing.Size(47, 22);
             this.bngluu.Text = "Lưu";
             this.bngluu.Click += new System.EventHandler(this.bngluu_Click);
             // 
             // bngthoat
             // 
-            this.bngthoat.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bngthoat.Image = global::QLDiemHSTHPT.Properties.Resources.exit;
             this.bngthoat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bngthoat.Name = "bngthoat";
-            this.bngthoat.Size = new System.Drawing.Size(23, 22);
+            this.bngthoat.Size = new System.Drawing.Size(58, 22);
             this.bngthoat.Text = "Thoát";
             this.bngthoat.Click += new System.EventHandler(this.bngthoat_Click);
             // 
@@ -252,6 +248,7 @@ namespace QLDiemHSTHPT
             this.MaHocLuc.DefaultCellStyle = dataGridViewCellStyle2;
             this.MaHocLuc.HeaderText = "Mã Học Lực";
             this.MaHocLuc.Name = "MaHocLuc";
+            this.MaHocLuc.ReadOnly = true;
             this.MaHocLuc.Width = 130;
             // 
             // TenHocLuc
@@ -261,6 +258,7 @@ namespace QLDiemHSTHPT
             this.TenHocLuc.DefaultCellStyle = dataGridViewCellStyle3;
             this.TenHocLuc.HeaderText = "Tên Học Lực";
             this.TenHocLuc.Name = "TenHocLuc";
+            this.TenHocLuc.ReadOnly = true;
             this.TenHocLuc.Width = 130;
             // 
             // DiemCanDuoi
