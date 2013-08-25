@@ -232,6 +232,11 @@ namespace QLDiemHSTHPT
             }
         }
 
+        private void dgvhocsinh_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
 
 }
