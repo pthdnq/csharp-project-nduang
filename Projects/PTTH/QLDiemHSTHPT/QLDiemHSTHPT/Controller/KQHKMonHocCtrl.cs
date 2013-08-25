@@ -60,7 +60,6 @@ namespace QLDiemHSTHPT.Controller
                ketqua.MonHoc = mh;
                ketqua.HocKy = hk;
                ketqua.NamHoc = nh;
-               ketqua.DTBKiemTra = Convert.ToSingle(Row["DTBKiemTra"]);
                ketqua.DTBMonHocKy = Convert.ToSingle(Row["DTBMonHocKy"]);
 
                dS.Add(ketqua);
