@@ -47,7 +47,7 @@ namespace QLDiemHSTHPT
             {
                // if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null && cmbHockyCN.SelectedValue != null && cmbMonhocCN.SelectedValue != null)
                 //    m_HocSinhCtrl.HienThiDsHocSinhTheoLop(dgvNhapdiemchung, bdgNhapdiemchung, cmbNanhocCN.SelectedValue.ToString(), cmbLopCN.SelectedValue.ToString(), txtMaHS_Or_hoTenHS.Text.Trim());
-                HienThiDSDiemChung();
+                //HienThiDSDiemChung();
             }
             catch (Exception)
             {
