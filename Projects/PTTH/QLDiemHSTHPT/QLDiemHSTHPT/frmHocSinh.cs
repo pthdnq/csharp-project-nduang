@@ -28,6 +28,10 @@ namespace QLDiemHSTHPT
 
         private void frmHocSinh_Load(object sender, EventArgs e)
         {
+            m_NamHocCtrl.HienThiComboBox(cmbKhoaHoc);
+            if (cmbKhoaHoc.SelectedValue != null)
+                m_LopCtrl.HienThiComboBox(cmbKhoaHoc.SelectedValue.ToString(), cmbLop);
+
             m_NamHocCtrl.HienThiDataGridViewComboBoxColumn(MaNamHoc);
             m_KhoiLopCtrl.HienThiDataGridViewComboBoxColumn(MaKhoiLop);
             m_LopCtrl.HienThiDataGridViewComboBoxColumn(MaLop);
@@ -186,14 +190,19 @@ namespace QLDiemHSTHPT
 
         void TimKiemHocSinh()
         {
-            if (checkBoxX4.Checked == true)
-            {
-                m_HocSinhCtrl.TimTheoMa(txtTimKiemHS.Text.Trim());
-            }
-            else
-            {
-                m_HocSinhCtrl.TimTheoTen(txtTimKiemHS.Text.Trim());
-            }
+            //if (checkBoxX4.Checked == true)
+            //{
+               // m_HocSinhCtrl.TimTheoMa(txtTimKiemHS.Text.Trim());
+            m_HocSinhCtrl.TimTheoMaHoTenLopNamHoc(
+                                                txtMaorHoTen.Text.Trim(),
+                                                cmbLop.SelectedValue.ToString(),
+                                                cmbKhoaHoc.SelectedValue.ToString()
+                                                );
+            //}
+            //else
+            //{
+                //m_HocSinhCtrl.TimTheoTen(txtTimKiemHS.Text.Trim());
+            //}
         }
         private void btnTimKiemHS1_Click(object sender, EventArgs e)
         {

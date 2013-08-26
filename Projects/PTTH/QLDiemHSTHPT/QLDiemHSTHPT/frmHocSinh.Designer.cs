@@ -31,6 +31,7 @@ namespace QLDiemHSTHPT
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHocSinh));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,16 +39,8 @@ namespace QLDiemHSTHPT
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHocSinh));
             this.groupBoxDshs = new System.Windows.Forms.GroupBox();
             this.dgvhocsinh = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.MaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.DanToc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNamHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.MaKhoiLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.MaLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bdgHocSinh = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -60,15 +53,17 @@ namespace QLDiemHSTHPT
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bngThemmoi = new System.Windows.Forms.ToolStripButton();
             this.bngXoa = new System.Windows.Forms.ToolStripButton();
+            this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.bngluu = new System.Windows.Forms.ToolStripButton();
             this.bngthoat = new System.Windows.Forms.ToolStripButton();
-            this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.nvgPanelHocSinh = new DevComponents.DotNetBar.NavigationPane();
             this.navigationPanePanel4 = new DevComponents.DotNetBar.NavigationPanePanel();
+            this.cmbLop = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.cmbKhoaHoc = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.btnTimKiemHS1 = new DevComponents.DotNetBar.ButtonX();
-            this.checkBoxX3 = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.checkBoxX4 = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.txtTimKiemHS = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtMaorHoTen = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX13 = new DevComponents.DotNetBar.LabelX();
             this.buttonItemtimkiem = new DevComponents.DotNetBar.ButtonItem();
             this.navigationPanePanel1 = new DevComponents.DotNetBar.NavigationPanePanel();
@@ -109,6 +104,13 @@ namespace QLDiemHSTHPT
             this.txtTimKiemGV = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lblTimKiem = new DevComponents.DotNetBar.LabelX();
             this.btnTimKiemHS = new DevComponents.DotNetBar.ButtonItem();
+            this.MaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.DanToc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNamHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.MaKhoiLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.MaLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.groupBoxDshs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvhocsinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgHocSinh)).BeginInit();
@@ -162,76 +164,6 @@ namespace QLDiemHSTHPT
             this.dgvhocsinh.Size = new System.Drawing.Size(804, 703);
             this.dgvhocsinh.TabIndex = 8;
             this.dgvhocsinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvhocsinh_CellContentClick);
-            // 
-            // MaHocSinh
-            // 
-            this.MaHocSinh.DataPropertyName = "MaHocSinh";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaHocSinh.DefaultCellStyle = dataGridViewCellStyle2;
-            this.MaHocSinh.HeaderText = "Mã học sinh";
-            this.MaHocSinh.MaxInputLength = 6;
-            this.MaHocSinh.Name = "MaHocSinh";
-            this.MaHocSinh.ReadOnly = true;
-            this.MaHocSinh.Width = 80;
-            // 
-            // HoTen
-            // 
-            this.HoTen.DataPropertyName = "HoTen";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HoTen.DefaultCellStyle = dataGridViewCellStyle3;
-            this.HoTen.HeaderText = "Họ và tên";
-            this.HoTen.MaxInputLength = 30;
-            this.HoTen.Name = "HoTen";
-            this.HoTen.Width = 150;
-            // 
-            // GioiTinh
-            // 
-            this.GioiTinh.DataPropertyName = "GioiTinh";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.NullValue = false;
-            this.GioiTinh.DefaultCellStyle = dataGridViewCellStyle4;
-            this.GioiTinh.HeaderText = "Giới tính nữ";
-            this.GioiTinh.Name = "GioiTinh";
-            // 
-            // DanToc
-            // 
-            this.DanToc.DataPropertyName = "DanToc";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanToc.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DanToc.HeaderText = "Dân tộc";
-            this.DanToc.Name = "DanToc";
-            this.DanToc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanToc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // MaNamHoc
-            // 
-            this.MaNamHoc.DataPropertyName = "MaNamHoc";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MaNamHoc.DefaultCellStyle = dataGridViewCellStyle6;
-            this.MaNamHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MaNamHoc.HeaderText = "Khóa học";
-            this.MaNamHoc.Name = "MaNamHoc";
-            // 
-            // MaKhoiLop
-            // 
-            this.MaKhoiLop.DataPropertyName = "MaKhoiLop";
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaKhoiLop.DefaultCellStyle = dataGridViewCellStyle7;
-            this.MaKhoiLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MaKhoiLop.HeaderText = "Khối Lớp";
-            this.MaKhoiLop.Name = "MaKhoiLop";
-            // 
-            // MaLop
-            // 
-            this.MaLop.DataPropertyName = "MaLop";
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaLop.DefaultCellStyle = dataGridViewCellStyle8;
-            this.MaLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MaLop.HeaderText = "Lớp";
-            this.MaLop.Name = "MaLop";
             // 
             // bdgHocSinh
             // 
@@ -349,6 +281,15 @@ namespace QLDiemHSTHPT
             this.bngXoa.Text = "Xóa";
             this.bngXoa.Click += new System.EventHandler(this.bngXoa_Click);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Image = global::QLDiemHSTHPT.Properties.Resources.re;
+            this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(66, 22);
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // bngluu
             // 
             this.bngluu.Image = global::QLDiemHSTHPT.Properties.Resources.save;
@@ -366,15 +307,6 @@ namespace QLDiemHSTHPT
             this.bngthoat.Size = new System.Drawing.Size(58, 22);
             this.bngthoat.Text = "Thoát";
             this.bngthoat.Click += new System.EventHandler(this.bngthoat_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Image = global::QLDiemHSTHPT.Properties.Resources.re;
-            this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(66, 22);
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // nvgPanelHocSinh
             // 
@@ -419,10 +351,12 @@ namespace QLDiemHSTHPT
             // navigationPanePanel4
             // 
             this.navigationPanePanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.navigationPanePanel4.Controls.Add(this.cmbLop);
+            this.navigationPanePanel4.Controls.Add(this.labelX4);
+            this.navigationPanePanel4.Controls.Add(this.cmbKhoaHoc);
+            this.navigationPanePanel4.Controls.Add(this.labelX7);
             this.navigationPanePanel4.Controls.Add(this.btnTimKiemHS1);
-            this.navigationPanePanel4.Controls.Add(this.checkBoxX3);
-            this.navigationPanePanel4.Controls.Add(this.checkBoxX4);
-            this.navigationPanePanel4.Controls.Add(this.txtTimKiemHS);
+            this.navigationPanePanel4.Controls.Add(this.txtMaorHoTen);
             this.navigationPanePanel4.Controls.Add(this.labelX13);
             this.navigationPanePanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navigationPanePanel4.Location = new System.Drawing.Point(1, 25);
@@ -437,54 +371,73 @@ namespace QLDiemHSTHPT
             this.navigationPanePanel4.Style.GradientAngle = 90;
             this.navigationPanePanel4.TabIndex = 5;
             // 
+            // cmbLop
+            // 
+            this.cmbLop.DisplayMember = "Text";
+            this.cmbLop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLop.FormattingEnabled = true;
+            this.cmbLop.ItemHeight = 15;
+            this.cmbLop.Location = new System.Drawing.Point(30, 85);
+            this.cmbLop.Name = "cmbLop";
+            this.cmbLop.Size = new System.Drawing.Size(121, 21);
+            this.cmbLop.TabIndex = 52;
+            // 
+            // labelX4
+            // 
+            this.labelX4.Location = new System.Drawing.Point(30, 61);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(75, 23);
+            this.labelX4.TabIndex = 51;
+            this.labelX4.Text = "Lớp:";
+            // 
+            // cmbKhoaHoc
+            // 
+            this.cmbKhoaHoc.DisplayMember = "Text";
+            this.cmbKhoaHoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbKhoaHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKhoaHoc.FormattingEnabled = true;
+            this.cmbKhoaHoc.ItemHeight = 15;
+            this.cmbKhoaHoc.Location = new System.Drawing.Point(30, 34);
+            this.cmbKhoaHoc.Name = "cmbKhoaHoc";
+            this.cmbKhoaHoc.Size = new System.Drawing.Size(121, 21);
+            this.cmbKhoaHoc.TabIndex = 45;
+            // 
+            // labelX7
+            // 
+            this.labelX7.Location = new System.Drawing.Point(30, 10);
+            this.labelX7.Name = "labelX7";
+            this.labelX7.Size = new System.Drawing.Size(75, 23);
+            this.labelX7.TabIndex = 44;
+            this.labelX7.Text = "Khóa Học:";
+            // 
             // btnTimKiemHS1
             // 
             this.btnTimKiemHS1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnTimKiemHS1.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
-            this.btnTimKiemHS1.Location = new System.Drawing.Point(31, 129);
+            this.btnTimKiemHS1.Location = new System.Drawing.Point(36, 183);
             this.btnTimKiemHS1.Name = "btnTimKiemHS1";
             this.btnTimKiemHS1.Size = new System.Drawing.Size(133, 23);
             this.btnTimKiemHS1.TabIndex = 9;
             this.btnTimKiemHS1.Text = "Tìm Kiếm";
             this.btnTimKiemHS1.Click += new System.EventHandler(this.btnTimKiemHS1_Click);
             // 
-            // checkBoxX3
-            // 
-            this.checkBoxX3.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.checkBoxX3.Location = new System.Drawing.Point(25, 100);
-            this.checkBoxX3.Name = "checkBoxX3";
-            this.checkBoxX3.Size = new System.Drawing.Size(157, 23);
-            this.checkBoxX3.TabIndex = 8;
-            this.checkBoxX3.Text = "Tìm theo tên học sinh";
-            // 
-            // checkBoxX4
-            // 
-            this.checkBoxX4.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.checkBoxX4.Checked = true;
-            this.checkBoxX4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxX4.CheckValue = "Y";
-            this.checkBoxX4.Location = new System.Drawing.Point(25, 74);
-            this.checkBoxX4.Name = "checkBoxX4";
-            this.checkBoxX4.Size = new System.Drawing.Size(157, 23);
-            this.checkBoxX4.TabIndex = 7;
-            this.checkBoxX4.Text = "Tìm theo mã học sinh";
-            // 
-            // txtTimKiemHS
+            // txtMaorHoTen
             // 
             // 
             // 
             // 
-            this.txtTimKiemHS.Border.Class = "TextBoxBorder";
-            this.txtTimKiemHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiemHS.Location = new System.Drawing.Point(22, 48);
-            this.txtTimKiemHS.Name = "txtTimKiemHS";
-            this.txtTimKiemHS.Size = new System.Drawing.Size(157, 20);
-            this.txtTimKiemHS.TabIndex = 6;
-            this.txtTimKiemHS.WatermarkText = "Nhập thông tin cần tìm";
+            this.txtMaorHoTen.Border.Class = "TextBoxBorder";
+            this.txtMaorHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaorHoTen.Location = new System.Drawing.Point(30, 138);
+            this.txtMaorHoTen.Name = "txtMaorHoTen";
+            this.txtMaorHoTen.Size = new System.Drawing.Size(131, 20);
+            this.txtMaorHoTen.TabIndex = 6;
+            this.txtMaorHoTen.WatermarkText = "Nhập thông tin cần tìm";
             // 
             // labelX13
             // 
-            this.labelX13.Location = new System.Drawing.Point(22, 23);
+            this.labelX13.Location = new System.Drawing.Point(30, 113);
             this.labelX13.Name = "labelX13";
             this.labelX13.Size = new System.Drawing.Size(152, 23);
             this.labelX13.TabIndex = 5;
@@ -958,6 +911,77 @@ namespace QLDiemHSTHPT
             this.btnTimKiemHS.OptionGroup = "navBar";
             this.btnTimKiemHS.Text = "Tìm kiếm học sinh";
             // 
+            // MaHocSinh
+            // 
+            this.MaHocSinh.DataPropertyName = "MaHocSinh";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaHocSinh.DefaultCellStyle = dataGridViewCellStyle2;
+            this.MaHocSinh.HeaderText = "Mã học sinh";
+            this.MaHocSinh.MaxInputLength = 6;
+            this.MaHocSinh.Name = "MaHocSinh";
+            this.MaHocSinh.ReadOnly = true;
+            this.MaHocSinh.Width = 80;
+            // 
+            // HoTen
+            // 
+            this.HoTen.DataPropertyName = "HoTen";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoTen.DefaultCellStyle = dataGridViewCellStyle3;
+            this.HoTen.HeaderText = "Họ và tên";
+            this.HoTen.MaxInputLength = 30;
+            this.HoTen.Name = "HoTen";
+            this.HoTen.Width = 150;
+            // 
+            // GioiTinh
+            // 
+            this.GioiTinh.DataPropertyName = "GioiTinh";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.NullValue = false;
+            this.GioiTinh.DefaultCellStyle = dataGridViewCellStyle4;
+            this.GioiTinh.HeaderText = "Giới tính nữ";
+            this.GioiTinh.Name = "GioiTinh";
+            // 
+            // DanToc
+            // 
+            this.DanToc.DataPropertyName = "DanToc";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanToc.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DanToc.HeaderText = "Dân tộc";
+            this.DanToc.Name = "DanToc";
+            this.DanToc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanToc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // MaNamHoc
+            // 
+            this.MaNamHoc.DataPropertyName = "MaNamHoc";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MaNamHoc.DefaultCellStyle = dataGridViewCellStyle6;
+            this.MaNamHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaNamHoc.HeaderText = "Khóa học";
+            this.MaNamHoc.Name = "MaNamHoc";
+            // 
+            // MaKhoiLop
+            // 
+            this.MaKhoiLop.DataPropertyName = "MaKhoiLop";
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaKhoiLop.DefaultCellStyle = dataGridViewCellStyle7;
+            this.MaKhoiLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaKhoiLop.HeaderText = "Khối Lớp";
+            this.MaKhoiLop.Name = "MaKhoiLop";
+            this.MaKhoiLop.Visible = false;
+            // 
+            // MaLop
+            // 
+            this.MaLop.DataPropertyName = "MaLop";
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaLop.DefaultCellStyle = dataGridViewCellStyle8;
+            this.MaLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaLop.HeaderText = "Lớp";
+            this.MaLop.Name = "MaLop";
+            // 
             // frmHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1047,11 +1071,13 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.NavigationPanePanel navigationPanePanel4;
         private DevComponents.DotNetBar.ButtonItem buttonItemtimkiem;
         private DevComponents.DotNetBar.ButtonX btnTimKiemHS1;
-        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX3;
-        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX4;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtTimKiemHS;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMaorHoTen;
         private DevComponents.DotNetBar.LabelX labelX13;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvhocsinh;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbLop;
+        private DevComponents.DotNetBar.LabelX labelX4;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbKhoaHoc;
+        private DevComponents.DotNetBar.LabelX labelX7;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHocSinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
         private System.Windows.Forms.DataGridViewCheckBoxColumn GioiTinh;

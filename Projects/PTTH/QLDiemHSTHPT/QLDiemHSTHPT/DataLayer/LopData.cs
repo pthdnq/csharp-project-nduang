@@ -19,8 +19,8 @@ namespace QLDiemHSTHPT.DataLayer
        //Phan cong
        public DataTable LayDsLop(String namHoc)
        {
-           SqlCommand cmd = new SqlCommand("SELECT * FROM LOP WHERE MaNamHoc = @namHoc");
-           cmd.Parameters.Add("namHoc", SqlDbType.VarChar).Value = namHoc;
+           SqlCommand cmd = new SqlCommand("SELECT * FROM LOP WHERE MaNamHoc = @khoaHoc");
+           cmd.Parameters.Add("khoaHoc", SqlDbType.VarChar).Value = namHoc;
            m_LopData.Load(cmd);
            return m_LopData;
        }
@@ -28,9 +28,9 @@ namespace QLDiemHSTHPT.DataLayer
        //phan lop
        public DataTable LayDsLop(String khoiLop, String namHoc)
        {
-           SqlCommand cmd = new SqlCommand("SELECT * FROM LOP WHERE MaKhoiLop = @khoiLop AND MaNamHoc = @namHoc");
+           SqlCommand cmd = new SqlCommand("SELECT * FROM LOP WHERE MaKhoiLop = @khoiLop AND MaNamHoc = @khoaHoc");
            cmd.Parameters.Add("khoiLop", SqlDbType.VarChar).Value = khoiLop;
-           cmd.Parameters.Add("namHoc", SqlDbType.VarChar).Value = namHoc;
+           cmd.Parameters.Add("khoaHoc", SqlDbType.VarChar).Value = namHoc;
 
            m_LopData.Load(cmd);
            return m_LopData;
@@ -45,8 +45,8 @@ namespace QLDiemHSTHPT.DataLayer
 
        public DataTable LayDsLopForReport(String namHoc)
        {
-           SqlCommand cmd = new SqlCommand("SELECT * FROM GIAOVIEN GV INNER JOIN LOP L ON L.MaGiaoVien = GV.MaGiaoVien INNER JOIN KHOILOP KL ON L.MaKhoiLop = KL.MaKhoiLop INNER JOIN NAMHOC NH ON L.MaNamHoc = NH.MaNamHoc WHERE L.MaNamHoc = @namHoc");
-           cmd.Parameters.Add("namHoc", SqlDbType.VarChar).Value = namHoc;
+           SqlCommand cmd = new SqlCommand("SELECT * FROM GIAOVIEN GV INNER JOIN LOP L ON L.MaGiaoVien = GV.MaGiaoVien INNER JOIN KHOILOP KL ON L.MaKhoiLop = KL.MaKhoiLop INNER JOIN NAMHOC NH ON L.MaNamHoc = NH.MaNamHoc WHERE L.MaNamHoc = @khoaHoc");
+           cmd.Parameters.Add("khoaHoc", SqlDbType.VarChar).Value = namHoc;
 
            m_LopData.Load(cmd);
            return m_LopData;
