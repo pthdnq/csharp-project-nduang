@@ -38,29 +38,22 @@ namespace QLDiemHSTHPT
 
         private void frmNhapDiemChung_Load(object sender, EventArgs e)
         {
-            //nhap diem
-            //m_NamHocCtrl.HienThiComboBox(cbmnamhoc);
-            //m_HocKyCtrl.HienThiComboBox(cmbHocky);
-            //if (cbmnamhoc.SelectedValue != null)
-            //    m_LopCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop);
-
-            //if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null)
-             //   m_MonHocCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMonhoc);
-
-            //sua diem
             m_NamHocCtrl.HienThiComboBox(cmbNanhocCN);
             m_HocKyCtrl.HienThiComboBox(cmbHockyCN);
             if (cmbNanhocCN.SelectedValue != null)
                 m_LopCtrl.HienThiComboBox(cmbNanhocCN.SelectedValue.ToString(), cmbLopCN);
-
-            //m_MonHocCtrl.HienThiDataGridViewComboBoxColumn(MaMonHoc);
-
-            //if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null)
-            //    m_MonHocCtrl.HienThiComboBox(cmbNanhocCN.SelectedValue.ToString(), cmbLopCN.SelectedValue.ToString(), cmbMonhocCN);
-
-            //if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null)
             m_MonHocCtrl.HienThiComboBox("", "", cmbMonhocCN);
-            cmbMonhocCN.DataBindings.Clear();
+            try
+            {
+               // if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null && cmbHockyCN.SelectedValue != null && cmbMonhocCN.SelectedValue != null)
+                //    m_HocSinhCtrl.HienThiDsHocSinhTheoLop(dgvNhapdiemchung, bdgNhapdiemchung, cmbNanhocCN.SelectedValue.ToString(), cmbLopCN.SelectedValue.ToString(), txtMaHS_Or_hoTenHS.Text.Trim());
+                HienThiDSDiemChung();
+            }
+            catch (Exception)
+            {
+            }
+            
+            //cmbMonhocCN.DataBindings.Clear();
         }
 
         //kiem tra diem truoc khi luu
@@ -104,10 +97,15 @@ namespace QLDiemHSTHPT
         }
 
 
-        private void btnHienthiDS_Click_1(object sender, EventArgs e)
+        private void btnHienthiDS_Click(object sender, EventArgs e)
         {
-            //if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null && cmbHocky.SelectedValue != null && cmbMonhoc.SelectedValue != null)
-            //    m_HocSinhCtrl.HienThiDsHocSinhTheoLop(dgvNhapdiemchung, bdgNhapdiemchung, cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString());
+            try
+            {
+                HienThiDSDiemChung();
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private void buttonX7_Click(object sender, EventArgs e)
@@ -124,7 +122,7 @@ namespace QLDiemHSTHPT
         {
             updateSTT_Diem();
             if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null && cmbHockyCN.SelectedValue != null && cmbMonhocCN.SelectedValue != null)
-                m_HocSinhCtrl.HienThiDsHocSinhTheoLop(dgvNhapdiemchung, bdgNhapdiemchung, cmbNanhocCN.SelectedValue.ToString(), cmbLopCN.SelectedValue.ToString());
+                m_HocSinhCtrl.HienThiDsHocSinhTheoLop(dgvNhapdiemchung, bdgNhapdiemchung, cmbNanhocCN.SelectedValue.ToString(), cmbLopCN.SelectedValue.ToString(),txtMaHS_Or_hoTenHS.Text.Trim());
 
             int countRowHocSinh = 0;
             foreach (DataGridViewRow rowHocSinh in dgvNhapdiemchung.Rows)
@@ -216,8 +214,6 @@ namespace QLDiemHSTHPT
         private void updateSTT_Diem()
         {
             STT = new int[60, 200];
-            //if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null && cmbHockyCN.SelectedValue != null && cmbMonhocCN.SelectedValue != null)
-            //    m_HocSinhCtrl.HienThiDsHocSinhTheoLop(dgvNhapdiemchung, bdgNhapdiemchung, cmbNanhocCN.SelectedValue.ToString(), cmbLopCN.SelectedValue.ToString());
             dgvNhapdiemchung.EndEdit();
             int countRowHocSinh = 0;
             foreach (DataGridViewRow rowHocSinh in dgvNhapdiemchung.Rows)
@@ -550,8 +546,8 @@ namespace QLDiemHSTHPT
 
         private void cmbLopCN_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (cmbNanhocCN.SelectedValue != null && cmbLopCN.SelectedValue != null)
-            //m_MonHocCtrl.HienThiComboBox(cmbNanhocCN.SelectedValue.ToString(), cmbLopCN.SelectedValue.ToString(), cmbMonhocCN);
+            //if (cmbKhoaHoc.SelectedValue != null && cmbLop.SelectedValue != null)
+            //m_MonHocCtrl.HienThiComboBox(cmbKhoaHoc.SelectedValue.ToString(), cmbLop.SelectedValue.ToString(), cmbMonhocCN);
             cmbMonhocCN.DataBindings.Clear();
         }
 

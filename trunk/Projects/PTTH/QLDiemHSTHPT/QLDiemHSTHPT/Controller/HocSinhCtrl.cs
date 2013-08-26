@@ -70,11 +70,13 @@ namespace QLDiemHSTHPT.Controller
        }
 
        //nhap diem
-       public void HienThiDsHocSinhTheoLop(DataGridViewX dGV, BindingNavigator bN, String namHoc, String lop)
+       public void HienThiDsHocSinhTheoLop(DataGridViewX dGV, BindingNavigator bN, String namHoc, String lop,String maHSOrhoTenHS)
        {
            BindingSource bS = new BindingSource();
-           bS.DataSource = m_HocSinhData.LayDsHocSinhTheoLop(namHoc, lop);
-
+           if (maHSOrhoTenHS == "")
+                bS.DataSource = m_HocSinhData.LayDsHocSinhTheoLop(namHoc, lop);
+           else
+                bS.DataSource = m_HocSinhData.LayDsHocSinhTheoMaOrHoTen(namHoc, lop, maHSOrhoTenHS);
            bN.BindingSource = bS;
            dGV.DataSource = bS;
        }
@@ -195,6 +197,10 @@ namespace QLDiemHSTHPT.Controller
        public void TimTheoTen(String m_TenHocSinh)
        {
            m_HocSinhData.TimTheoTen(m_TenHocSinh);
+       }
+       public void TimTheoMaHoTenLopNamHoc(String maOrTenHocSinh, String maLop, String maNamHoc)
+       {
+           m_HocSinhData.TimTheoMaHoTenLopNamHoc(maOrTenHocSinh, maLop, maNamHoc);
        }
 
     }

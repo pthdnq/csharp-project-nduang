@@ -20,8 +20,8 @@ namespace QLDiemHSTHPT.DataLayer
        //hien thi form diem 
        public DataTable LayDsMonHoc(String namHoc, String lop)
        {
-           //SqlCommand cmd = new SqlCommand("SELECT MH.MaMonHoc, MH.TenMonHoc, MH.HeSo FROM MONHOC MH, PHANCONG PC WHERE MH.MaMonHoc = PC.MaMonHoc AND PC.MaNamHoc = @namHoc AND PC.MaLop = @lop ");
-           //cmd.Parameters.Add("namHoc", SqlDbType.VarChar).Value = namHoc;
+           //SqlCommand cmd = new SqlCommand("SELECT MH.MaMonHoc, MH.TenMonHoc, MH.HeSo FROM MONHOC MH, PHANCONG PC WHERE MH.MaMonHoc = PC.MaMonHoc AND PC.MaNamHoc = @khoaHoc AND PC.MaLop = @lop ");
+           //cmd.Parameters.Add("khoaHoc", SqlDbType.VarChar).Value = khoaHoc;
            //cmd.Parameters.Add("lop", SqlDbType.VarChar).Value = lop;
 
            SqlCommand cmd = new SqlCommand("SELECT MH.MaMonHoc, MH.TenMonHoc, MH.HeSoBanCoBan, MH.HeSoBanKHTN, MH.HeSoBanKHXHNV FROM MONHOC MH");
