@@ -203,7 +203,6 @@ namespace QLDiemHSTHPT
             this.panelTacvu = new DevComponents.DotNetBar.PanelEx();
             this.expelquanly = new DevComponents.DotNetBar.ExpandablePanel();
             this.btnDiem = new DevComponents.DotNetBar.ButtonX();
-            this.btnPhanCongGV = new DevComponents.DotNetBar.ButtonX();
             this.buttonGV = new DevComponents.DotNetBar.ButtonX();
             this.buttonHocSinh = new DevComponents.DotNetBar.ButtonX();
             this.expanelHethong = new DevComponents.DotNetBar.ExpandablePanel();
@@ -1790,7 +1789,6 @@ namespace QLDiemHSTHPT
             this.expelquanly.CanvasColor = System.Drawing.SystemColors.Control;
             this.expelquanly.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.expelquanly.Controls.Add(this.btnDiem);
-            this.expelquanly.Controls.Add(this.btnPhanCongGV);
             this.expelquanly.Controls.Add(this.buttonGV);
             this.expelquanly.Controls.Add(this.buttonHocSinh);
             this.expelquanly.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1821,29 +1819,13 @@ namespace QLDiemHSTHPT
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDiem.Location = new System.Drawing.Point(22, 149);
+            this.btnDiem.Location = new System.Drawing.Point(24, 113);
             this.btnDiem.Name = "btnDiem";
             this.btnDiem.Size = new System.Drawing.Size(144, 30);
             this.btnDiem.TabIndex = 16;
             this.btnDiem.Text = "Điểm";
             this.btnDiem.Tooltip = "Tra Cứu Điểm Chung";
             this.btnDiem.Click += new System.EventHandler(this.btnDiem_Click);
-            // 
-            // btnPhanCongGV
-            // 
-            this.btnPhanCongGV.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnPhanCongGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPhanCongGV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnPhanCongGV.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnPhanCongGV.Location = new System.Drawing.Point(22, 113);
-            this.btnPhanCongGV.Name = "btnPhanCongGV";
-            this.btnPhanCongGV.Size = new System.Drawing.Size(144, 30);
-            this.btnPhanCongGV.TabIndex = 10;
-            this.btnPhanCongGV.Text = "Phân Công";
-            this.btnPhanCongGV.Tooltip = "Phân Công";
-            this.btnPhanCongGV.Click += new System.EventHandler(this.btnPhanCongGV_Click);
             // 
             // buttonGV
             // 
@@ -2291,7 +2273,6 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.ButtonItem btnLoaiNguoiDung;
         private DevComponents.DotNetBar.ButtonItem btnPhanQuyen;
         private ToolStripMenuItem phânBanToolStripMenuItem;
-        private DevComponents.DotNetBar.ButtonX btnPhanCongGV;
         private DevComponents.DotNetBar.ButtonX btnDiem;
         private ToolStripMenuItem mnLoaiDiem;
 
