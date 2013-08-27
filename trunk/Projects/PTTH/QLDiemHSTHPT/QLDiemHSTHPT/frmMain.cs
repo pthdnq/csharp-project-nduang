@@ -15,6 +15,7 @@ namespace QLDiemHSTHPT
     {
         NguoiDungCtrl m_NguoiDungCtrl = new NguoiDungCtrl();
         frmPhanBan m_PhanBan = null;
+        frmPhanCong m_PhanCong = null;
         frmConnection m_Connection = null;
         frmHanhKiem m_HanhKiem = null;
         frmHocLuc m_HocLuc = null;
@@ -759,6 +760,16 @@ namespace QLDiemHSTHPT
             else m_PhanBan.Activate();
         }
 
+        private void btnPhanCongGV_Click(object sender, EventArgs e)
+        {
+            if (m_PhanCong == null || m_PhanCong.IsDisposed)
+            {
+                m_PhanCong = new frmPhanCong();
+                m_PhanCong.MdiParent = frmMain.ActiveForm;
+                m_PhanCong.Show();
+            }
+            else m_PhanCong.Activate();
+        }
 
         private void btnDiem_Click(object sender, EventArgs e)
         {
@@ -789,20 +800,6 @@ namespace QLDiemHSTHPT
                 m_LoaiDiem.Show();
             }
             else m_LoaiDiem.Activate();
-        }
-
-        private void buttonItem29_Click(object sender, EventArgs e)
-        {
-            if (m_FormDoiMatKhau == null || m_FormDoiMatKhau.IsDisposed)
-                m_FormDoiMatKhau = new frmDoiMatKhau();
-
-            m_FormDoiMatKhau.txtMKcu.Text = "";
-            m_FormDoiMatKhau.txtmatkhaumoi.Text = "";
-            m_FormDoiMatKhau.txtxacnhan.Text = "";
-            m_FormDoiMatKhau.lblMKculoi.Text = "";
-            m_FormDoiMatKhau.lblMKmoiloi.Text = "";
-            m_FormDoiMatKhau.lblxacnhanMKloi.Text = "";
-            DoiMatKhau();
         }
     }
 }

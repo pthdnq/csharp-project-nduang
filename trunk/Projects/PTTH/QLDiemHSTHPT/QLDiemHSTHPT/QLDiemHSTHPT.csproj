@@ -146,6 +146,12 @@
     <Compile Include="Component\frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhanCong.Designer.cs">
+      <DependentUpon>frmPhanCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frptKetQuaHocKy_TongHop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +316,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhanBan.resx">
       <DependentUpon>frmPhanBan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhanCong.resx">
+      <DependentUpon>frmPhanCong.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frptDanhSachLop.resx">

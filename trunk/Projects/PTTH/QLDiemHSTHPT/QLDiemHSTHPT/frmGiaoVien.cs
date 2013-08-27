@@ -24,8 +24,9 @@ namespace QLDiemHSTHPT
 
         private void frmGiaoVien_Load(object sender, EventArgs e)
         {
+            //m_MonHocCtrl.HienThiComboBox(cbmChuyenmon);
             m_MonHocCtrl.HienThiDataGridViewComboBoxColumnGiaoVien(MaMonHoc);
-            m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien);
+            m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien /*, txtMaGV, txtTenGV, txtDiachi, txtDThoai, cbmChuyenmon, textBoxX2,checkBoxX1, checkBoxX2*/);
 
         }
 
@@ -115,8 +116,19 @@ namespace QLDiemHSTHPT
             else m_MonHoc.Activate();
             m_MonHocCtrl.HienThiDataGridViewComboBoxColumnGiaoVien(MaMonHoc);
         }
+
+        private void txtTimKiemGV_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                TimKiemGiaoVien();
+            }
+        }
+
         private void btnTimKiemGV_Click(object sender, EventArgs e)
         {
+            if (txtTimKiemGV.Text == "")
+                MessageBoxEx.Show("Chưa nhập nội dung cần tìm kiếm vào khung!", "LỖI TÌM KIẾM", MessageBoxButtons.OK, MessageBoxIcon.Error);
             TimKiemGiaoVien();
         }
     }
