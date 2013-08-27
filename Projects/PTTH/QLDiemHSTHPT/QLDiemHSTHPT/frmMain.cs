@@ -801,5 +801,19 @@ namespace QLDiemHSTHPT
             }
             else m_LoaiDiem.Activate();
         }
+
+        private void buttonItem29_Click(object sender, EventArgs e)
+        {
+            if (m_FormDoiMatKhau == null || m_FormDoiMatKhau.IsDisposed)
+                m_FormDoiMatKhau = new frmDoiMatKhau();
+
+            m_FormDoiMatKhau.txtMKcu.Text = "";
+            m_FormDoiMatKhau.txtmatkhaumoi.Text = "";
+            m_FormDoiMatKhau.txtxacnhan.Text = "";
+            m_FormDoiMatKhau.lblMKculoi.Text = "";
+            m_FormDoiMatKhau.lblMKmoiloi.Text = "";
+            m_FormDoiMatKhau.lblxacnhanMKloi.Text = "";
+            DoiMatKhau();
+        }
     }
 }
