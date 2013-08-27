@@ -89,37 +89,6 @@ namespace QLDiemHSTHPT
             }
             return true;
         }
-        public Boolean KiemTraSiSoTruocKhiLuu(String siSoColumn)
-        {
-            foreach (DataGridViewRow row in dgvLop.Rows)
-            {
-                if (row.Cells[siSoColumn].Value != null)
-                {
-                    try
-                    {
-                        int siSo = Convert.ToInt32(row.Cells[siSoColumn].Value.ToString().Trim());
-                        if (quyDinh.KiemTraSiSo(siSo) == false)
-                        {
-                            int siSoMax = quyDinh.getSiSoMax();
-                            int siSoMin = quyDinh.getSiSoMin();
-                            String strError = "Sĩ số " + siSo.ToString() + "\nSỉ số phải nằm trong khoảng " +
-                                siSoMin + " đến " + siSoMax;
-                            MessageBoxEx.Show(strError, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return false;
-                        }
-                    }
-                    catch
-                    {
-                        int siSoMax = quyDinh.getSiSoMax();
-                        int siSoMin = quyDinh.getSiSoMin();
-                        MessageBoxEx.Show("Sỉ số phải nằm trong khoảng "+siSoMin+" đến "+siSoMax, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }
         private void bngluu_Click(object sender, EventArgs e)
         {
             dgvLop.EndEdit();
@@ -151,8 +120,8 @@ namespace QLDiemHSTHPT
                 txtTenLop.Text != "" &&
                 cmbKhoilop.SelectedValue != null &&
                 cmbNamhoc.SelectedValue != null &&
-                cmbGiaovien.SelectedValue != null &&
-                quyDinh.KiemTraSiSo(itiSiso.Value) == true)
+                cmbGiaovien.SelectedValue != null 
+                )
             {
                 m_LopCtrl.LuuLop(txtMaLop.Text, txtTenLop.Text, cmbKhoilop.SelectedValue.ToString(), cmbNamhoc.SelectedValue.ToString(), itiSiso.Value, cmbGiaovien.SelectedValue.ToString());
                 m_LopCtrl.HienThi(dgvLop, bdgLop, txtMaLop, txtTenLop, cmbKhoilop, cmbNamhoc, itiSiso, cmbGiaovien);

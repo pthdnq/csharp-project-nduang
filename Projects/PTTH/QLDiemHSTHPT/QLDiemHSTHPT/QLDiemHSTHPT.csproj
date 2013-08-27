@@ -74,7 +74,6 @@
     <Compile Include="Component\DataService.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Component\DataServiceIOExcel.cs" />
     <Compile Include="Component\frmConnection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,29 +248,17 @@
     <Compile Include="frmNguoiDung.Designer.cs">
       <DependentUpon>frmNguoiDung.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNhapDiemChung.cs">
+    <Compile Include="frmNhapDiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNhapDiemChung.Designer.cs">
-      <DependentUpon>frmNhapDiemChung.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmNhapDiemRieng.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmNhapDiemRieng.Designer.cs">
-      <DependentUpon>frmNhapDiemRieng.cs</DependentUpon>
+    <Compile Include="frmNhapDiem.Designer.cs">
+      <DependentUpon>frmNhapDiem.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTimKiemGV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTimKiemGV.Designer.cs">
       <DependentUpon>frmTimKiemGV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTimKiemHS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTimKiemHS.Designer.cs">
-      <DependentUpon>frmTimKiemHS.cs</DependentUpon>
     </Compile>
     <Compile Include="frmXemDiem.cs">
       <SubType>Form</SubType>
@@ -395,21 +382,13 @@
       <SubType>Designer</SubType>
       <DependentUpon>frmNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNhapDiemChung.resx">
+    <EmbeddedResource Include="frmNhapDiem.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>frmNhapDiemChung.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmNhapDiemRieng.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>frmNhapDiemRieng.cs</DependentUpon>
+      <DependentUpon>frmNhapDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTimKiemGV.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmTimKiemGV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTimKiemHS.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>frmTimKiemHS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmXemDiem.resx">
       <SubType>Designer</SubType>

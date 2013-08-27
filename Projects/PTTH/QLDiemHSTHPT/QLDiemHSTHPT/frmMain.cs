@@ -217,10 +217,9 @@ namespace QLDiemHSTHPT
         Cont:
             if (m_FormDangNhap == null || m_FormDangNhap.IsDisposed)
                 m_FormDangNhap = new frmDangNhap();
-
             if (m_FormDangNhap.ShowDialog() == DialogResult.OK)
             {
-                if (m_FormDangNhap.txtdangnhap.Text == "")
+                if (m_FormDangNhap.txtDangNhap.Text == "")
                 {
                     m_FormDangNhap.lblMatKhauLoi.Text = "";
                     m_FormDangNhap.lblDangNhapLoi.Text = "Bạn chưa nhập tên!";
@@ -234,7 +233,7 @@ namespace QLDiemHSTHPT
                     goto Cont;
                 }
 
-                int ketQua = m_NguoiDungCtrl.DangNhap(m_FormDangNhap.txtdangnhap.Text, m_FormDangNhap.txtmatkhau.Text);
+                int ketQua = m_NguoiDungCtrl.DangNhap(m_FormDangNhap.txtDangNhap.Text, m_FormDangNhap.txtmatkhau.Text);
 
                 switch (ketQua)
                 {
@@ -247,7 +246,7 @@ namespace QLDiemHSTHPT
                         m_FormDangNhap.lblMatKhauLoi.Text = "Mật khẩu không hợp lệ!";
                         goto Cont;
                     case 2:
-                        lblND.Text = Utilities.NguoiDung.TenND;
+                        lblND.Text = Utilities.NguoiDung.TenND +" - Vai trò: " + Utilities.NguoiDung.LoaiND.TenLoaiND;
                         Permissions(Utilities.NguoiDung.LoaiND.MaLoaiND);
                         break;
                 }
@@ -286,7 +285,7 @@ namespace QLDiemHSTHPT
                     goto Cont;
                 }
 
-                String m_TenDN = m_FormDangNhap.txtdangnhap.Text;
+                String m_TenDN = m_FormDangNhap.txtDangNhap.Text;
                 String m_MatKhau = m_FormDangNhap.txtmatkhau.Text;
 
                 String m_MatKhauCu = m_FormDoiMatKhau.txtMKcu.Text;
@@ -323,7 +322,7 @@ namespace QLDiemHSTHPT
             if (m_FormDangNhap == null || m_FormDangNhap.IsDisposed)
                 m_FormDangNhap = new frmDangNhap();
 
-            m_FormDangNhap.txtdangnhap.Text = "";
+            m_FormDangNhap.txtDangNhap.Text = "";
             m_FormDangNhap.txtmatkhau.Text = "";
             m_FormDangNhap.lblDangNhapLoi.Text = "";
             m_FormDangNhap.lblMatKhauLoi.Text = "";
@@ -584,12 +583,12 @@ namespace QLDiemHSTHPT
             buttondangnhap.Enabled = false;
         }
 
-        frmNhapDiemChung m_DiemChung = null;
+        frmNhapDiem m_DiemChung = null;
         private void toolStripMenuItem52_Click(object sender, EventArgs e)
         {
             if (m_DiemChung == null || m_DiemChung.IsDisposed)
             {
-                m_DiemChung = new frmNhapDiemChung();
+                m_DiemChung = new frmNhapDiem();
                 m_DiemChung.MdiParent = frmMain.ActiveForm;
                 m_DiemChung.Show();
             }
@@ -776,7 +775,7 @@ namespace QLDiemHSTHPT
         {
             if (m_DiemChung == null || m_DiemChung.IsDisposed)
             {
-                m_DiemChung = new frmNhapDiemChung();
+                m_DiemChung = new frmNhapDiem();
                 m_DiemChung.MdiParent = frmMain.ActiveForm;
                 m_DiemChung.Show();
             }

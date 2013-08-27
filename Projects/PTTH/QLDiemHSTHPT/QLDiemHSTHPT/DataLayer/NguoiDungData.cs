@@ -13,13 +13,30 @@ namespace QLDiemHSTHPT.DataLayer
 
         public DataTable LayDsNguoiDung()
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM NGUOIDUNG");
+            SqlCommand cmd = new SqlCommand(@"SELECT MaND
+                                          ,NGUOIDUNG.MaLoaiND
+                                          ,TenND
+                                          ,TenDangNhap
+                                          ,MatKhau
+                                          ,TenLoaiND  
+                                            FROM  NGUOIDUNG 
+                                            INNER JOIN LOAINGUOIDUNG
+                                            ON NGUOIDUNG.MaLoaiND = LOAINGUOIDUNG.MaLoaiND");
             m_NguoiDungData.Load(cmd);
             return m_NguoiDungData;
         }
        public DataTable LayDsNguoiDung(String m_Username)
        {
-           SqlCommand cmd = new SqlCommand("SELECT * FROM NGUOIDUNG WHERE TenDangNhap = @ten");
+           SqlCommand cmd = new SqlCommand(@"SELECT MaND
+                                          ,NGUOIDUNG.MaLoaiND
+                                          ,TenND
+                                          ,TenDangNhap
+                                          ,MatKhau
+                                          ,TenLoaiND  
+                                            FROM  NGUOIDUNG 
+                                            INNER JOIN LOAINGUOIDUNG
+                                            ON NGUOIDUNG.MaLoaiND = LOAINGUOIDUNG.MaLoaiND
+                                            WHERE TenDangNhap = @ten");
            cmd.Parameters.Add("ten", SqlDbType.VarChar).Value = m_Username;
            m_NguoiDungData.Load(cmd);
            return m_NguoiDungData;

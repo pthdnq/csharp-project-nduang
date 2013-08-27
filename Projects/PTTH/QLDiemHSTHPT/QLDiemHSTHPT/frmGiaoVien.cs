@@ -156,23 +156,6 @@ namespace QLDiemHSTHPT
             TimKiemGiaoVien();
         }
 
-        private void btnIPExcel_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openDlg = new OpenFileDialog();
-            openDlg.Title = "Chon mot file Excel";
-            openDlg.RestoreDirectory = true;
-            openDlg.Multiselect = false;
-            openDlg.Filter = "Excel files (*.xls)|*.xls";
-
-            if (openDlg.ShowDialog() == DialogResult.OK)
-            {
-                string fileName = openDlg.FileName;
-                int viTriBatDau = fileName.LastIndexOf('\\') + 1;
-                string tenFile = fileName.Substring(viTriBatDau);
-                string path = fileName.Replace("\\", "\\\\");
-                m_GiaoVienCtrl.Import(path, dgvGiaoVien);
-            }
-        }
 
         private void dgvGiaoVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {

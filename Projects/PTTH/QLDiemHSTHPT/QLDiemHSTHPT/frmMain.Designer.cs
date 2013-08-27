@@ -120,6 +120,7 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem54 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem55 = new System.Windows.Forms.ToolStripMenuItem();
             this.phânBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnLoaiDiem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem63 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem64 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem65 = new System.Windows.Forms.ToolStripMenuItem();
@@ -220,7 +221,6 @@ namespace QLDiemHSTHPT
             this.buttonItem24 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem25 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem26 = new DevComponents.DotNetBar.ButtonItem();
-            this.mnLoaiDiem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.bottomBar)).BeginInit();
             this.bottomBar.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -410,7 +410,7 @@ namespace QLDiemHSTHPT
             this.lblND.Location = new System.Drawing.Point(199, 11);
             this.lblND.Name = "lblND";
             this.lblND.SingleLineColor = System.Drawing.Color.Empty;
-            this.lblND.Size = new System.Drawing.Size(144, 26);
+            this.lblND.Size = new System.Drawing.Size(232, 26);
             this.lblND.TabIndex = 2;
             // 
             // lbNguoidung
@@ -1118,6 +1118,14 @@ namespace QLDiemHSTHPT
             this.phânBanToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.phânBanToolStripMenuItem.Text = "Phân Ban";
             this.phânBanToolStripMenuItem.Click += new System.EventHandler(this.phânBanToolStripMenuItem_Click);
+            // 
+            // mnLoaiDiem
+            // 
+            this.mnLoaiDiem.Image = global::QLDiemHSTHPT.Properties.Resources.diem;
+            this.mnLoaiDiem.Name = "mnLoaiDiem";
+            this.mnLoaiDiem.Size = new System.Drawing.Size(170, 22);
+            this.mnLoaiDiem.Text = "Loại Điểm";
+            this.mnLoaiDiem.Click += new System.EventHandler(this.mnLoaiDiem_Click);
             // 
             // toolStripMenuItem63
             // 
@@ -2058,14 +2066,6 @@ namespace QLDiemHSTHPT
             this.buttonItem26.SubItemsExpandWidth = 24;
             this.buttonItem26.Text = "Thoát";
             this.buttonItem26.Tooltip = "Thoát";
-            // 
-            // mnLoaiDiem
-            // 
-            this.mnLoaiDiem.Image = global::QLDiemHSTHPT.Properties.Resources.diem;
-            this.mnLoaiDiem.Name = "mnLoaiDiem";
-            this.mnLoaiDiem.Size = new System.Drawing.Size(170, 22);
-            this.mnLoaiDiem.Text = "Loại Điểm";
-            this.mnLoaiDiem.Click += new System.EventHandler(this.mnLoaiDiem_Click);
             // 
             // frmMain
             // 

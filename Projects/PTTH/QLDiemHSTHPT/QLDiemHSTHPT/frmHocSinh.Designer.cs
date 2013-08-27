@@ -163,7 +163,7 @@ namespace QLDiemHSTHPT
             this.dgvhocsinh.Name = "dgvhocsinh";
             this.dgvhocsinh.Size = new System.Drawing.Size(804, 703);
             this.dgvhocsinh.TabIndex = 8;
-            this.dgvhocsinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvhocsinh_CellContentClick);
+            this.dgvhocsinh.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvhocsinh_CellBeginEdit);
             // 
             // bdgHocSinh
             // 
@@ -971,7 +971,6 @@ namespace QLDiemHSTHPT
             this.MaKhoiLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MaKhoiLop.HeaderText = "Khối Lớp";
             this.MaKhoiLop.Name = "MaKhoiLop";
-            this.MaKhoiLop.Visible = false;
             // 
             // MaLop
             // 
