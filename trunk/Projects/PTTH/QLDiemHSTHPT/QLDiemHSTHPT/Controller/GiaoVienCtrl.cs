@@ -33,45 +33,11 @@ namespace QLDiemHSTHPT.Controller
 
       
        public void HienThi(DataGridViewX dGV,
-                            BindingNavigator bN /*,
-                            TextBoxX txtMaGiaoVien,
-                            TextBoxX txtTenGiaoVien,
-                            TextBoxX txtDiaChi,
-                            TextBoxX txtDienThoai,
-                            ComboBoxEx cmbMonHoc, 
-                            TextBoxX txtGioiTinh,
-                            CheckBoxX ckbGTinhNam,
-                            CheckBoxX ckbGTinhNu*/)
+                            BindingNavigator bN
+                            )
        {
            BindingSource bS = new BindingSource();
            bS.DataSource = m_GiaoVienData.LayDsGiaoVien();
-
-           /*DataTable dT = m_GiaoVienData.LayDsGiaoVien();
-           bool gioiTinh = Convert.ToBoolean(dT.Rows[0]["GioiTinh"]);
-
-           if (gioiTinh)
-               ckbGTinhNu.Checked = true;
-           else
-               ckbGTinhNam.Checked = true;
-
-           txtMaGiaoVien.DataBindings.Clear();
-           txtMaGiaoVien.DataBindings.Add("Text", bS, "MaGiaoVien");
-
-           txtTenGiaoVien.DataBindings.Clear();
-           txtTenGiaoVien.DataBindings.Add("Text", bS, "TenGiaoVien");
-
-           txtDiaChi.DataBindings.Clear();
-           txtDiaChi.DataBindings.Add("Text", bS, "DiaChi");
-
-           txtDienThoai.DataBindings.Clear();
-           txtDienThoai.DataBindings.Add("Text", bS, "DienThoai");
-
-           cmbMonHoc.DataBindings.Clear();
-           cmbMonHoc.DataBindings.Add("SelectedValue", bS, "MaMonHoc");
-
-           txtGioiTinh.DataBindings.Clear();
-           txtGioiTinh.DataBindings.Add("Text", bS, "GioiTinh");*/
-
            bN.BindingSource = bS;
            dGV.DataSource = bS;
        }

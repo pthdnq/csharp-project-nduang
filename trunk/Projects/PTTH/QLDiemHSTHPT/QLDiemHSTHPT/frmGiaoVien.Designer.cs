@@ -299,7 +299,6 @@ namespace QLDiemHSTHPT
             this.dgvGiaoVien.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvGiaoVien.Size = new System.Drawing.Size(705, 466);
             this.dgvGiaoVien.TabIndex = 6;
-            this.dgvGiaoVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaoVien_CellClick);
             // 
             // MaGiaoVien
             // 
