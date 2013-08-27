@@ -89,37 +89,18 @@ namespace QLDiemHSTHPT
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien /*, txtMaGV, txtTenGV, txtDiachi, txtDThoai, cbmChuyenmon, textBoxX2, checkBoxX1, checkBoxX2*/);
-        }
-
-        private void btnLuuDS_Click(object sender, EventArgs e)
-        {
-            //bool gioiTinh = false;
-            //if (checkBoxX2.Checked == true)
-            //    gioiTinh = true;
-            //if (txtTenGV.Text != "" &&
-            //   txtDiachi.Text != "" &&
-            //   txtDThoai.Text != "" &&
-            //   cbmChuyenmon.SelectedValue != null)
-            //{
-            //    m_GiaoVienCtrl.LuuGiaoVien(txtMaGV.Text, txtTenGV.Text, txtDiachi.Text, txtDThoai.Text, cbmChuyenmon.SelectedValue.ToString(),gioiTinh);
-            //    m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien /*, txtMaGV, txtTenGV, txtDiachi, txtDThoai, cbmChuyenmon, textBoxX2, checkBoxX1, checkBoxX2*/);
-            //    bdgGiaoVien.BindingSource.MoveLast();
-            //}
-            //else
-            //    MessageBoxEx.Show("Giá trị của các ô không được rỗng!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
+            m_GiaoVienCtrl.HienThi(dgvGiaoVien, bdgGiaoVien);
         }
 
         void TimKiemGiaoVien()
         {
             if (ckboxtheoMa.Checked == true)
             {
-                m_GiaoVienCtrl.TimTheoMa(txtTimKiemGV.Text);
+                m_GiaoVienCtrl.TimTheoMa(txtTimKiemGV.Text.Trim());
             }
             else
             {
-                m_GiaoVienCtrl.TimTheoTen(txtTimKiemGV.Text);
+                m_GiaoVienCtrl.TimTheoTen(txtTimKiemGV.Text.Trim());
             }
         }
 
@@ -144,25 +125,11 @@ namespace QLDiemHSTHPT
             }
         }
 
-        private void lblTenGV_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnTimKiemGV_Click(object sender, EventArgs e)
         {
             if (txtTimKiemGV.Text == "")
                 MessageBoxEx.Show("Chưa nhập nội dung cần tìm kiếm vào khung!", "LỖI TÌM KIẾM", MessageBoxButtons.OK, MessageBoxIcon.Error);
             TimKiemGiaoVien();
-        }
-
-
-        private void dgvGiaoVien_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //if (textBoxX2.Text == "True")
-            //    checkBoxX2.Checked = true;
-            //else
-            //    checkBoxX1.Checked = true;
         }
     }
 }
