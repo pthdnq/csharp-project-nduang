@@ -147,44 +147,5 @@ namespace QLDiemHSTHPT.Controller
         {
             m_GiaoVienData.TimTheoTen(m_TenGiaoVien);
         }
-
-       public void Import(string path, DataGridView dgv)
-       {
-           DataTable dtbGiaoVienExcel = m_GiaoVienData.LayDSGiaoVienExcel(path);
-           DataTable GiaoVienTable = m_GiaoVienData.LayDsGiaoVien();
-
-           int rowSuccess = 0;
-           for (int i = 0; i < dtbGiaoVienExcel.Rows.Count; i++)
-           {
-               bool t = false;
-               for (int j = 0; j < GiaoVienTable.Rows.Count; j++)
-               {
-                   if (dtbGiaoVienExcel.Rows[i][0].ToString() != GiaoVienTable.Rows[j][0].ToString())
-                   {
-                       t = true;
-                   }
-                   else
-                   {
-                       t = false;
-                       j = GiaoVienTable.Rows.Count;
-                   }
-               }
-               if (t)
-               {
-                   DataRow rowthem = GiaoVienTable.NewRow();
-                   rowthem[0] = dtbGiaoVienExcel.Rows[i][0].ToString();
-                   rowthem[1] = dtbGiaoVienExcel.Rows[i][1].ToString();
-                   rowthem[2] = dtbGiaoVienExcel.Rows[i][2].ToString();
-                   rowthem[3] = dtbGiaoVienExcel.Rows[i][3].ToString();
-                   rowthem[4] = dtbGiaoVienExcel.Rows[i][4].ToString();
-                                      
-
-                   GiaoVienTable.Rows.Add(rowthem);
-
-                   rowSuccess++;
-               }
-           }
-           MessageBox.Show("Số dòng đã được thêm: " + rowSuccess.ToString() + " dòng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-       }
     }
 }

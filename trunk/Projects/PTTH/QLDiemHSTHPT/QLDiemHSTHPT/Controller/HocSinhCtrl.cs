@@ -14,7 +14,13 @@ namespace QLDiemHSTHPT.Controller
    public class HocSinhCtrl
     {
        HocSinhData m_HocSinhData = new HocSinhData();
-
+       public bool isLopVaKhoiLop(String khoiLop, String lop)
+       {
+           int i = m_HocSinhData.isLopVaKhoiLop(khoiLop, lop);
+           if (i <= 0)
+               return false;
+           return true;
+       }
        public void HienThiComboBox(ComboBoxEx comboBox)
        {
            comboBox.DataSource = m_HocSinhData.LayDsHocSinh();
@@ -138,66 +144,12 @@ namespace QLDiemHSTHPT.Controller
            return m_HocSinhData.LuuHocSinh();
        }
 
-       public void LuuHocSinh(String maHocSinh, String hoTen, bool gioiTinh, DateTime ngaySinh, String noiSinh, String maDanToc, String maTonGiao, String hoTenCha, String maNgheCha, String hoTenMe, String maNgheMe,String maNamHoc,String maKhoiLop,String maLop)
-       {
-           m_HocSinhData.LuuHocSinh(maHocSinh, hoTen, gioiTinh, ngaySinh, noiSinh, maDanToc, maTonGiao, hoTenCha, maNgheCha, hoTenMe, maNgheMe, maNamHoc, maKhoiLop, maLop);
-       }
-
-      
-       public void TimKiemHocSinh(TextBoxX txtHoTen,
-                                   ComboBoxEx cmbTheoNSinh,
-                                   TextBoxX txtNoiSinh,
-                                   ComboBoxEx cmbTheoDToc,
-                                   ComboBoxEx cmbDanToc,
-                                   ComboBoxEx cmbTheoTGiao,
-                                   ComboBoxEx cmbTonGiao,
-                                   DataGridViewX dGV,
-                                   BindingNavigator bN)
-       {
-           BindingSource bS = new BindingSource();
-           bS.DataSource = m_HocSinhData.TimKiemHocSinh(txtHoTen.Text, cmbTheoNSinh.Text, txtNoiSinh.Text, cmbTheoDToc.Text, cmbDanToc.Text, cmbTheoTGiao.Text, cmbTonGiao.Text);
-
-           bN.BindingSource = bS;
-           dGV.DataSource = bS;
-       }
-       public static void TimTheoMa(ListViewEx lvw, String m_MaHocSinh)
-       {
-           HocSinhData data = new HocSinhData();
-           DataTable table= data.TimTheoMa(m_MaHocSinh);
-           lvw.Items.Clear();
-           foreach (DataRow row in table.Rows)
-           {
-               ListViewItem item = new ListViewItem(row["MAHOCSINH"].ToString());
-               item.SubItems.Add(row["HOTEN"].ToString());
-               lvw.Items.Add(item);
-           }
-
-       }
-
-       public static void TimTheoTen(ListViewEx lvw, String m_TenHocSinh)
-       {
-          HocSinhData data = new HocSinhData();
-           DataTable table = data.TimTheoTen(m_TenHocSinh);
-           lvw.Items.Clear();
-           foreach (DataRow row in table.Rows)
-           {
-               ListViewItem item = new ListViewItem(row["MAHOCSINH"].ToString());
-               item.SubItems.Add(row["HOTEN"].ToString());
-               //item.SubItems.Add(row["LOP"].ToString());
-               lvw.Items.Add(item);
-           }
-
-       }
-
+     
        public void TimTheoMa(String m_MaHocSinh)
        {
            m_HocSinhData.TimTheoMa(m_MaHocSinh);
        }
 
-       public void TimTheoTen(String m_TenHocSinh)
-       {
-           m_HocSinhData.TimTheoTen(m_TenHocSinh);
-       }
        public void TimTheoMaHoTenLopNamHoc(String maOrTenHocSinh, String maLop, String maNamHoc)
        {
            m_HocSinhData.TimTheoMaHoTenLopNamHoc(maOrTenHocSinh, maLop, maNamHoc);

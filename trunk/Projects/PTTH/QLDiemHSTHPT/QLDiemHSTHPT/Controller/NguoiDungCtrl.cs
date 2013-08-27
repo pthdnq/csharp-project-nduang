@@ -64,6 +64,7 @@ namespace QLDiemHSTHPT.Controller
            {
                m_NguoiDungInfo.TenND = m_DT.Rows[0]["TenND"].ToString();
                m_LoaiNguoiDungInfo.MaLoaiND = m_DT.Rows[0]["MaLoaiND"].ToString();
+               m_LoaiNguoiDungInfo.TenLoaiND = m_DT.Rows[0]["TenLoaiND"].ToString();
                m_NguoiDungInfo.LoaiND = m_LoaiNguoiDungInfo;
                Utilities.NguoiDung = m_NguoiDungInfo;
                return 2;

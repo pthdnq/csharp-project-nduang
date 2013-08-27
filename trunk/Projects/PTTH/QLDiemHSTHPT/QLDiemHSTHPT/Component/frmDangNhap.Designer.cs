@@ -33,7 +33,7 @@ namespace QLDiemHSTHPT.Component
             this.reflectionImage1 = new DevComponents.DotNetBar.Controls.ReflectionImage();
             this.labelTenDN = new DevComponents.DotNetBar.LabelX();
             this.labelMK = new DevComponents.DotNetBar.LabelX();
-            this.txtdangnhap = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtDangNhap = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtmatkhau = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnhuybo = new DevComponents.DotNetBar.ButtonX();
             this.gpanelDangNhap = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -85,18 +85,18 @@ namespace QLDiemHSTHPT.Component
             this.labelMK.Text = "Mật Khẩu:";
             this.labelMK.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
-            // txtdangnhap
+            // txtDangNhap
             // 
             // 
             // 
             // 
-            this.txtdangnhap.Border.Class = "TextBoxBorder";
-            this.txtdangnhap.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdangnhap.Location = new System.Drawing.Point(190, 26);
-            this.txtdangnhap.Name = "txtdangnhap";
-            this.txtdangnhap.Size = new System.Drawing.Size(168, 22);
-            this.txtdangnhap.TabIndex = 3;
-            this.txtdangnhap.WatermarkText = "Tên đăng nhập";
+            this.txtDangNhap.Border.Class = "TextBoxBorder";
+            this.txtDangNhap.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDangNhap.Location = new System.Drawing.Point(190, 26);
+            this.txtDangNhap.Name = "txtDangNhap";
+            this.txtDangNhap.Size = new System.Drawing.Size(168, 22);
+            this.txtDangNhap.TabIndex = 3;
+            this.txtDangNhap.WatermarkText = "Tên đăng nhập";
             // 
             // txtmatkhau
             // 
@@ -134,7 +134,7 @@ namespace QLDiemHSTHPT.Component
             this.gpanelDangNhap.Controls.Add(this.lblDangNhapLoi);
             this.gpanelDangNhap.Controls.Add(this.btnhuybo);
             this.gpanelDangNhap.Controls.Add(this.txtmatkhau);
-            this.gpanelDangNhap.Controls.Add(this.txtdangnhap);
+            this.gpanelDangNhap.Controls.Add(this.txtDangNhap);
             this.gpanelDangNhap.Controls.Add(this.labelMK);
             this.gpanelDangNhap.Controls.Add(this.labelTenDN);
             this.gpanelDangNhap.Controls.Add(this.reflectionImage1);
@@ -214,7 +214,6 @@ namespace QLDiemHSTHPT.Component
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐĂNG NHẬP";
-            this.Load += new System.EventHandler(this.frmDangNhap_Load);
             this.gpanelDangNhap.ResumeLayout(false);
             this.gpanelDangNhap.PerformLayout();
             this.ResumeLayout(false);
@@ -227,7 +226,7 @@ namespace QLDiemHSTHPT.Component
         private DevComponents.DotNetBar.Controls.ReflectionImage reflectionImage1;
         private DevComponents.DotNetBar.LabelX labelTenDN;
         private DevComponents.DotNetBar.LabelX labelMK;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtdangnhap;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtDangNhap;
         public DevComponents.DotNetBar.Controls.TextBoxX txtmatkhau;
         private DevComponents.DotNetBar.ButtonX btnhuybo;
         private DevComponents.DotNetBar.Controls.GroupPanel gpanelDangNhap;

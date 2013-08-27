@@ -71,5 +71,10 @@ namespace QLDiemHSTHPT
                 m_KhoiLopCtrl.LuuKhoiLop();
             }
         }
+
+        private void bngthoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

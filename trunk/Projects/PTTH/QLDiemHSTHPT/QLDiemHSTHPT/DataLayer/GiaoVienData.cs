@@ -11,7 +11,6 @@ namespace QLDiemHSTHPT.DataLayer
    public class GiaoVienData
     {
        DataService m_GiaoVienData = new DataService();
-       DataServiceIOExcel dsIOExcel = new DataServiceIOExcel();
 
        public DataTable LayDsGiaoVien()
        {
@@ -73,12 +72,6 @@ namespace QLDiemHSTHPT.DataLayer
        public String TruyVanChung()
        {
            return "SELECT G.MaGiaoVien, G.TenGiaoVien, G.DiaChi, G.DienThoai, H.TenMonHoc FROM GIAOVIEN G INNER JOIN MONHOC H ON G.MaMonHoc = H.MaMonHoc";
-       }
-
-       public DataTable LayDSGiaoVienExcel(string path)
-       {
-           OleDbCommand cmd = new OleDbCommand("select * from [Sheet1$]");
-           return dsIOExcel.Load(cmd, path);
        }
 
        public DataTable TimKiemGiaoVien(String hoTen, String theoDChi, String diaChi, String theoCMon, String cMon)

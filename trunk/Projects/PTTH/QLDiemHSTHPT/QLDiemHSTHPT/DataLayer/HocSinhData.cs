@@ -11,8 +11,15 @@ namespace QLDiemHSTHPT.DataLayer
    public class HocSinhData
     {
        DataService m_HocSinhData = new DataService();
-       DataServiceIOExcel dsIOExcel = new DataServiceIOExcel();
-
+       public int isLopVaKhoiLop(String maKhoiLop, String malop)
+       {
+           SqlCommand cmd = new SqlCommand(@"SELECT * FROM  HOCSINH 
+                WHERE MaLop = @malop and makhoiLop = @makhoiLop");
+           cmd.Parameters.Add("malop", SqlDbType.VarChar).Value = malop;
+           cmd.Parameters.Add("maKhoiLop", SqlDbType.VarChar).Value = maKhoiLop;
+           m_HocSinhData.Load(cmd);
+           return m_HocSinhData.Rows.Count;
+       }
        public DataTable LayDsHocSinh()
        {
            SqlCommand cmd = new SqlCommand("SELECT MaHocSinh ,HoTen , DanToc, GioiTinh, MaNamHoc, MaKhoiLop, MaLop FROM HOCSINH");
@@ -106,24 +113,6 @@ namespace QLDiemHSTHPT.DataLayer
            m_HocSinhData.Load(cmd);
        }
 
-       public DataTable LayDSHocSinhExcel(string path)
-       {
-           OleDbCommand cmd = new OleDbCommand("select * from [Sheet1$]");
-           return dsIOExcel.Load(cmd, path);
-       }
-
-       public void XoaHSKhoiBangPhanLop(String maNamHoc, String maKhoiLop, String maLop, String maHS)
-       {
-           SqlCommand cmd = new SqlCommand("DELETE FROM PHANLOP WHERE MaNamHoc = @maNamHoc AND MaKhoiLop = @maKhoiLop AND MaLop = @maLop AND MaHocSinh = @maHS");
-           cmd.Parameters.Add("maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
-           cmd.Parameters.Add("maKhoiLop", SqlDbType.VarChar).Value = maKhoiLop;
-           cmd.Parameters.Add("maLop", SqlDbType.VarChar).Value = maLop;
-           cmd.Parameters.Add("maHS", SqlDbType.VarChar).Value = maHS;
-
-           m_HocSinhData.Load(cmd);
-       }
-        
-
        public DataTable LayDsHocSinhForReport()
        {
            SqlCommand cmd = new SqlCommand("SELECT * FROM HOCSINH");
@@ -146,26 +135,6 @@ namespace QLDiemHSTHPT.DataLayer
            return m_HocSinhData.ExecuteNoneQuery() > 0;
        }
 
-       public void LuuHocSinh(String maHocSinh, String hoTen, bool gioiTinh, DateTime ngaySinh, String noiSinh, String maDanToc, String maTonGiao, String hoTenCha, String maNgheCha, String hoTenMe, String maNgheMe,String maNamHoc , String maKhoiLop , String malop)
-       {
-           SqlCommand cmd = new SqlCommand("INSERT INTO HOCSINH VALUES(@maHocSinh, @hoTen, @gioiTinh, @ngaySinh, @noiSinh, @maDanToc, @maTonGiao, @hoTenCha, @maNgheCha, @hoTenMe, @maNgheMe,@maNamHoc ,@maKhoiLop,@maLop)");
-           cmd.Parameters.Add("maHocSinh", SqlDbType.VarChar).Value = maHocSinh;
-           cmd.Parameters.Add("hoTen", SqlDbType.NVarChar).Value = hoTen;
-           cmd.Parameters.Add("gioiTinh", SqlDbType.Bit).Value = gioiTinh;
-           cmd.Parameters.Add("ngaySinh", SqlDbType.DateTime).Value = ngaySinh;
-           cmd.Parameters.Add("noiSinh", SqlDbType.NVarChar).Value = noiSinh;
-           cmd.Parameters.Add("maDanToc", SqlDbType.VarChar).Value = maDanToc;
-           cmd.Parameters.Add("maTonGiao", SqlDbType.VarChar).Value = maTonGiao;
-           cmd.Parameters.Add("hoTenCha", SqlDbType.NVarChar).Value = hoTenCha;
-           cmd.Parameters.Add("maNgheCha", SqlDbType.VarChar).Value = maNgheCha;
-           cmd.Parameters.Add("hoTenMe", SqlDbType.NVarChar).Value = hoTenMe;
-           cmd.Parameters.Add("maNgheMe", SqlDbType.VarChar).Value = maNgheMe;
-           cmd.Parameters.Add("maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
-           cmd.Parameters.Add("maKhoiLop", SqlDbType.VarChar).Value = maKhoiLop;
-           cmd.Parameters.Add("maLop", SqlDbType.VarChar).Value = malop;
-
-           m_HocSinhData.Load(cmd);
-       }
 
        public DataTable TimTheoMa(String ma)
        {
@@ -182,15 +151,6 @@ namespace QLDiemHSTHPT.DataLayer
                                                "FROM HOCSINH "+
                                                "WHERE NOT EXISTS(SELECT PHANLOP.MaHocSinh FROM PHANLOP"+
                                                                 " WHERE PHANLOP.MaHocSinh=HOCSINH.MaHocSinh)");
-           m_HocSinhData.Load(cmd);
-           return m_HocSinhData;
-       }
-
-       public DataTable TimTheoTen(String ten)
-       {
-           SqlCommand cmd = new SqlCommand("SELECT * FROM HOCSINH WHERE HoTen LIKE '%' + @ten + '%'");
-           cmd.Parameters.Add("ten", SqlDbType.NVarChar).Value = ten;
-
            m_HocSinhData.Load(cmd);
            return m_HocSinhData;
        }

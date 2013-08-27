@@ -31,10 +31,9 @@ namespace QLDiemHSTHPT
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhoiLop));
             this.groupBoxDskhoilop = new System.Windows.Forms.GroupBox();
             this.dgvKhoilop = new DevComponents.DotNetBar.Controls.DataGridViewX();
@@ -78,26 +77,18 @@ namespace QLDiemHSTHPT
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvKhoilop.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvKhoilop.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKhoilop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvKhoilop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhoilop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaKhoiLop,
             this.TenKhoiLop});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvKhoilop.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvKhoilop.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvKhoilop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvKhoilop.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvKhoilop.Location = new System.Drawing.Point(3, 41);
@@ -109,17 +100,18 @@ namespace QLDiemHSTHPT
             // MaKhoiLop
             // 
             this.MaKhoiLop.DataPropertyName = "MaKhoiLop";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaKhoiLop.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaKhoiLop.DefaultCellStyle = dataGridViewCellStyle2;
             this.MaKhoiLop.HeaderText = "Mã Khối Lớp";
             this.MaKhoiLop.Name = "MaKhoiLop";
+            this.MaKhoiLop.ReadOnly = true;
             this.MaKhoiLop.Width = 150;
             // 
             // TenKhoiLop
             // 
             this.TenKhoiLop.DataPropertyName = "TenKhoiLop";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenKhoiLop.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenKhoiLop.DefaultCellStyle = dataGridViewCellStyle3;
             this.TenKhoiLop.HeaderText = "Tên Khối Lớp";
             this.TenKhoiLop.Name = "TenKhoiLop";
             this.TenKhoiLop.Width = 150;
@@ -259,6 +251,7 @@ namespace QLDiemHSTHPT
             this.bngthoat.Name = "bngthoat";
             this.bngthoat.Size = new System.Drawing.Size(23, 22);
             this.bngthoat.Text = "Thoát";
+            this.bngthoat.Click += new System.EventHandler(this.bngthoat_Click);
             // 
             // frmKhoiLop
             // 
@@ -266,6 +259,7 @@ namespace QLDiemHSTHPT
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 374);
             this.Controls.Add(this.groupBoxDskhoilop);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -301,7 +295,7 @@ namespace QLDiemHSTHPT
         private System.Windows.Forms.ToolStripButton bngXoa;
         private System.Windows.Forms.ToolStripButton bngluu;
         private System.Windows.Forms.ToolStripButton bngthoat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaKhoiLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhoiLop;
+        private DataGridViewTextBoxColumn MaKhoiLop;
+        private DataGridViewTextBoxColumn TenKhoiLop;
     }
 }

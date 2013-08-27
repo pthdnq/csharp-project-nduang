@@ -41,6 +41,7 @@ namespace QLDiemHSTHPT
 
         private void bngThemmoi_Click(object sender, EventArgs e)
         {
+            bngluu.Enabled = true;
             DataRow m_Row = m_HocSinhCtrl.ThemDongMoi();
             //tao ma hoc sinh tu dong - begin
             int iLastRow = dgvhocsinh.Rows.Count - 1;
@@ -55,14 +56,7 @@ namespace QLDiemHSTHPT
             //tao ma hoc sinh tu dong - end
             m_Row["HoTen"] = "";
             m_Row["GioiTinh"] = false;
-            //m_Row["NgaySinh"] = DateTime.Today;
-            //m_Row["NoiSinh"] = "";
             m_Row["DanToc"] = "";
-            //m_Row["TonGiao"] = "";
-            //m_Row["HoTenCha"] = "";
-            //m_Row["NgheNghiepCha"] = "";
-            //m_Row["HoTenMe"] = "";
-            //m_Row["NgheNghiepMe"] = "";
             m_Row["MaNamHoc"] = "";
             m_Row["MaKhoiLop"] = "";
             m_Row["MaLop"] = "";
@@ -73,6 +67,7 @@ namespace QLDiemHSTHPT
 
         private void bngXoa_Click(object sender, EventArgs e)
         {
+            bngluu.Enabled = true;
             if (dgvhocsinh.RowCount == 0)
                 bngXoa.Enabled = false;
 
@@ -82,6 +77,28 @@ namespace QLDiemHSTHPT
             }
         }
 
+        public Boolean isLopVaKhoiLop()
+        {
+            foreach (DataGridViewRow row in dgvhocsinh.Rows)
+            {
+                if (row.Cells["MaKhoiLop"].Value != null && row.Cells["MaLop"].Value != null)
+                {
+                    String maKhoiLop = row.Cells["MaKhoiLop"].Value.ToString();
+                    String maLop = row.Cells["MaLop"].Value.ToString();
+                    String strHoTen = row.Cells["HoTen"].Value.ToString();
+                    if (maKhoiLop != "" && maLop != "")
+                    {
+                        bool isTonTai = m_HocSinhCtrl.isLopVaKhoiLop(maKhoiLop, maLop);
+                        if (isTonTai == false)
+                        {
+                            MessageBoxEx.Show(@"Thông tin học sinh về" + strHoTen + " không hợp lệ!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                    }
+                }
+            }
+            return true;
+        }
         public Boolean KiemTraTruocKhiLuu(String cellString)
         {
             int i = 0;
@@ -93,7 +110,7 @@ namespace QLDiemHSTHPT
                     String str = row.Cells[cellString].Value.ToString();
                     if (str == "")
                     {
-                        MessageBoxEx.Show("Thông tin học sinh " + row.Cells["HoTen"].Value.ToString() + " không hợp lệ!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBoxEx.Show(@"Thông tin học sinh về" + row.Cells["HoTen"].Value.ToString() + " không hợp lệ!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -121,19 +138,20 @@ namespace QLDiemHSTHPT
         private void bngluu_Click(object sender, EventArgs e)
         {
             //Fixbug - 2013/07/30 - NTHUE - BEGIN
+            bngluu.Enabled = false;
             dgvhocsinh.EndEdit();
+            //bool isTonTai = isLopVaKhoiLop();
+            //if (isTonTai == false)
+            //{
+                //m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh/*, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2, dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1,cmbNamHoc,cmbKhoiLop,cmbLop*/);
+                return;
+           // }
             //Fixbug - 2013/07/30 - NTHUE - END
             if (KiemTraTruocKhiLuu("MaHocSinh") == true &&
                 KiemTraTruocKhiLuu("HoTen") == true &&
-                //KiemTraTruocKhiLuu("NoiSinh") == true &&
-                //KiemTraTruocKhiLuu("MaDanToc") == true &&
-                //KiemTraTruocKhiLuu("MaTonGiao") == true &&
-                //KiemTraTruocKhiLuu("HoTenCha") == true &&
-                //KiemTraTruocKhiLuu("MaNgheNghiepCha") == true &&
-                //KiemTraTruocKhiLuu("HoTenMe") == true &&
-               // KiemTraTruocKhiLuu("MaNgheNghiepMe") == true && 
                 KiemTraTruocKhiLuu("MaNamHoc") == true &&
                 KiemTraTruocKhiLuu("MaKhoiLop") == true &&
+               // isLopVaKhoiLop() == true &&
                 KiemTraTruocKhiLuu("MaLop") == true)
             {
                // if (KiemTraDoTuoiTruocKhiLuu("NgaySinh") == true)
@@ -156,53 +174,13 @@ namespace QLDiemHSTHPT
             m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh/*, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2, dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1,cmbNamHoc,cmbKhoiLop,cmbLop*/);
         }
 
-        private void buttonX4_Click(object sender, EventArgs e)
-        {
-            //bool gioiTinh = false;
-            //if (checkBoxX2.Checked == true)
-            //    gioiTinh = true;
-
-            //if (txtMaHS.Text != "" &&
-            //    textBoxTenhs.Text != "" &&
-            //    textBoxX4.Text != "" &&
-            //    textBoxX3.Text != "" &&
-            //    textBoxX5.Text != "" &&
-            //    dateTimeInput1.Value != null &&
-            //    comboBoxEx4.SelectedValue != null &&
-            //    comboBoxEx3.SelectedValue != null &&
-            //    comboBoxEx2.SelectedValue != null &&
-            //    comboBoxEx1.SelectedValue != null)
-            //{
-            //    if (quyDinh.KiemTraDoTuoi(dateTimeInput1.Value) == true)
-            //    {
-            //        m_HocSinhCtrl.LuuHocSinh(txtMaHS.Text, textBoxTenhs.Text, gioiTinh, dateTimeInput1.Value, textBoxX4.Text, comboBoxEx4.SelectedValue.ToString(), comboBoxEx3.SelectedValue.ToString(), textBoxX3.Text, comboBoxEx2.SelectedValue.ToString(), textBoxX5.Text, comboBoxEx1.SelectedValue.ToString(), cmbNamHoc.SelectedValue.ToString(), cmbKhoiLop.SelectedValue.ToString(), cmbLop.SelectedValue.ToString());
-            //        m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh/*, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2, dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1,cmbNamHoc,cmbKhoiLop,cmbLop*/);
-
-            //        bdgHocSinh.BindingSource.MoveLast();
-            //    }
-            //    else
-            //        MessageBoxEx.Show("Tuổi của học sinh " + textBoxTenhs.Text + " không hợp lệ!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //else
-            //    MessageBoxEx.Show("Giá trị của các ô không được rỗng!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-
         void TimKiemHocSinh()
         {
-            //if (checkBoxX4.Checked == true)
-            //{
-               // m_HocSinhCtrl.TimTheoMa(txtTimKiemHS.Text.Trim());
             m_HocSinhCtrl.TimTheoMaHoTenLopNamHoc(
                                                 txtMaorHoTen.Text.Trim(),
                                                 cmbLop.SelectedValue.ToString(),
                                                 cmbKhoaHoc.SelectedValue.ToString()
                                                 );
-            //}
-            //else
-            //{
-                //m_HocSinhCtrl.TimTheoTen(txtTimKiemHS.Text.Trim());
-            //}
         }
         private void btnTimKiemHS1_Click(object sender, EventArgs e)
         {
@@ -214,36 +192,10 @@ namespace QLDiemHSTHPT
             {
             }
         }
-        private void buttonX4_Click_1(object sender, EventArgs e)
+
+        private void dgvhocsinh_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
-            //Fixbug - 2013/07/30 - NTHUE - BEGIN
-            dgvhocsinh.EndEdit();
-            //Fixbug - 2013/07/30 - NTHUE - END
-            if (KiemTraTruocKhiLuu("MaHocSinh") == true &&
-                KiemTraTruocKhiLuu("HoTen") == true &&
-                KiemTraTruocKhiLuu("NoiSinh") == true &&
-                KiemTraTruocKhiLuu("MaDanToc") == true &&
-                KiemTraTruocKhiLuu("MaTonGiao") == true &&
-                KiemTraTruocKhiLuu("HoTenCha") == true &&
-                KiemTraTruocKhiLuu("MaNgheNghiepCha") == true &&
-                KiemTraTruocKhiLuu("HoTenMe") == true &&
-                KiemTraTruocKhiLuu("MaNgheNghiepMe") == true &&
-                KiemTraTruocKhiLuu("MaNamHoc") == true &&
-                KiemTraTruocKhiLuu("MaKhoiLop") == true &&
-                KiemTraTruocKhiLuu("MaLop") == true)
-            {
-                if (KiemTraDoTuoiTruocKhiLuu("NgaySinh") == true)
-                {
-                    bindingNavigatorPositionItem.Focus();
-                    m_HocSinhCtrl.LuuHocSinh();
-                }
-
-            }
-        }
-
-        private void dgvhocsinh_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            bngluu.Enabled = true;
         }
 
     }
