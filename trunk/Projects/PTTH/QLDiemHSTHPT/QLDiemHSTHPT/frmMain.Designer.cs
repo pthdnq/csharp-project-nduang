@@ -499,6 +499,7 @@ namespace QLDiemHSTHPT
             this.buttonItem29.SubItemsExpandWidth = 24;
             this.buttonItem29.Text = "Đổi mật khẩu";
             this.buttonItem29.Tooltip = "Đổi mật khẩu";
+            this.buttonItem29.Click += new System.EventHandler(this.buttonItem29_Click);
             // 
             // buttonItem30
             // 
