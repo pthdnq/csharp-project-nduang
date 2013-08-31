@@ -87,7 +87,7 @@ namespace QLDiemHSTHPT.Component
             {
                 if (m_SqlTran != null)
                     m_SqlTran.Rollback();
-                throw;
+                //throw;
             }
             return result;
         }

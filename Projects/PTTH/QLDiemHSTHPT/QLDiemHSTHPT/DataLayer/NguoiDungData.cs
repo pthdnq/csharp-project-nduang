@@ -13,15 +13,7 @@ namespace QLDiemHSTHPT.DataLayer
 
         public DataTable LayDsNguoiDung()
         {
-            SqlCommand cmd = new SqlCommand(@"SELECT MaND
-                                          ,NGUOIDUNG.MaLoaiND
-                                          ,TenND
-                                          ,TenDangNhap
-                                          ,MatKhau
-                                          ,TenLoaiND  
-                                            FROM  NGUOIDUNG 
-                                            INNER JOIN LOAINGUOIDUNG
-                                            ON NGUOIDUNG.MaLoaiND = LOAINGUOIDUNG.MaLoaiND");
+            SqlCommand cmd = new SqlCommand("SELECT * FROM NGUOIDUNG");
             m_NguoiDungData.Load(cmd);
             return m_NguoiDungData;
         }
