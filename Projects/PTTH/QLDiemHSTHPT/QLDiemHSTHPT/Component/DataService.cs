@@ -23,7 +23,6 @@ namespace QLDiemHSTHPT.Component
 
         public void Load(SqlCommand m_Sql)
         {
-            OpenConnection();
             m_Command = m_Sql;
             try
             {
@@ -39,7 +38,6 @@ namespace QLDiemHSTHPT.Component
             {
                 MessageBoxEx.Show("Không thể thực thi câu lệnh SQL này!\nLỗi: " + e.Message, "ERROR", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
             }
-            CloseConnection();
         }
 
         public static bool OpenConnection()
@@ -68,7 +66,6 @@ namespace QLDiemHSTHPT.Component
 
         public int ExecuteNoneQuery()
         {
-            OpenConnection();
             int result = 0;
             SqlTransaction m_SqlTran = null;
             try
@@ -92,12 +89,10 @@ namespace QLDiemHSTHPT.Component
                     m_SqlTran.Rollback();
                 throw;
             }
-            CloseConnection();
             return result;
         }
         public int ExecuteNoneQuery(SqlCommand m_Sql)
         {
-            OpenConnection();
             int result = 0;
             SqlTransaction m_SqlTran = null;
             try
@@ -117,14 +112,11 @@ namespace QLDiemHSTHPT.Component
                     m_SqlTran.Rollback();
                 throw;
             }
-            
-            CloseConnection();
             return result;
         }
 
         public object ExecuteScalar(SqlCommand m_Sql)
         {
-            OpenConnection();
             object result = null;
             SqlTransaction m_SqlTran = null;
             try
@@ -147,13 +139,11 @@ namespace QLDiemHSTHPT.Component
                     m_SqlTran.Rollback();
                 throw;
             }
-            CloseConnection();
             return result;
         }
 
         public void DoiMatKhau(String userName, String newPassword)
         {
-            OpenConnection();
             m_DataAdapter = new SqlDataAdapter();
             SqlCommand cmd = new SqlCommand("UPDATE NGUOIDUNG SET MatKhau = @matkhau WHERE TenDangNhap = @tendangnhap");
             cmd.Parameters.Add("tendangnhap", SqlDbType.VarChar).Value = userName;
@@ -177,11 +167,9 @@ namespace QLDiemHSTHPT.Component
                 m_DataAdapter.Fill(this);
                 SqlCommandBuilder buider = new SqlCommandBuilder(m_DataAdapter);
                 m_DataAdapter.Update(this);
-                CloseConnection();
             }
             catch (Exception e)
             {
-                CloseConnection();
                 MessageBoxEx.Show("Không thể thực thi câu lệnh SQL này!\nLỗi: " + e.Message, "ERROR", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
             }
         }

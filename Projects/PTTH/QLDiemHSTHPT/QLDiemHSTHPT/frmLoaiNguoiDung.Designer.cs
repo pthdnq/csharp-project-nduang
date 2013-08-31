@@ -30,15 +30,12 @@ namespace QLDiemHSTHPT
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoaiNguoiDung));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxDsdantoc = new System.Windows.Forms.GroupBox();
             this.dgvLND = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.MaLoaiND = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLoaiND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bdgLND = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -53,6 +50,8 @@ namespace QLDiemHSTHPT
             this.bngXoa = new System.Windows.Forms.ToolStripButton();
             this.bngluu = new System.Windows.Forms.ToolStripButton();
             this.bngthoat = new System.Windows.Forms.ToolStripButton();
+            this.MaLoaiND = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLoaiND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxDsdantoc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLND)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgLND)).BeginInit();
@@ -77,26 +76,18 @@ namespace QLDiemHSTHPT
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvLND.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLND.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLND.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvLND.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLND.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaLoaiND,
             this.TenLoaiND});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLND.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLND.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvLND.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLND.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvLND.Location = new System.Drawing.Point(3, 41);
@@ -104,24 +95,6 @@ namespace QLDiemHSTHPT
             this.dgvLND.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvLND.Size = new System.Drawing.Size(391, 294);
             this.dgvLND.TabIndex = 1;
-            // 
-            // MaLoaiND
-            // 
-            this.MaLoaiND.DataPropertyName = "MaLoaiND";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaLoaiND.DefaultCellStyle = dataGridViewCellStyle3;
-            this.MaLoaiND.HeaderText = "Mã Loại Người Dùng";
-            this.MaLoaiND.Name = "MaLoaiND";
-            this.MaLoaiND.Width = 150;
-            // 
-            // TenLoaiND
-            // 
-            this.TenLoaiND.DataPropertyName = "TenLoaiND";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenLoaiND.DefaultCellStyle = dataGridViewCellStyle4;
-            this.TenLoaiND.HeaderText = "Tên Loại Người Dùng";
-            this.TenLoaiND.Name = "TenLoaiND";
-            this.TenLoaiND.Width = 200;
             // 
             // bdgLND
             // 
@@ -223,6 +196,7 @@ namespace QLDiemHSTHPT
             // bngThemmoi
             // 
             this.bngThemmoi.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bngThemmoi.Enabled = false;
             this.bngThemmoi.Image = global::QLDiemHSTHPT.Properties.Resources.add;
             this.bngThemmoi.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bngThemmoi.Name = "bngThemmoi";
@@ -233,6 +207,7 @@ namespace QLDiemHSTHPT
             // bngXoa
             // 
             this.bngXoa.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bngXoa.Enabled = false;
             this.bngXoa.Image = global::QLDiemHSTHPT.Properties.Resources.delete;
             this.bngXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bngXoa.Name = "bngXoa";
@@ -243,6 +218,7 @@ namespace QLDiemHSTHPT
             // bngluu
             // 
             this.bngluu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bngluu.Enabled = false;
             this.bngluu.Image = global::QLDiemHSTHPT.Properties.Resources.save;
             this.bngluu.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bngluu.Name = "bngluu";
@@ -260,12 +236,33 @@ namespace QLDiemHSTHPT
             this.bngthoat.Text = "Thoát";
             this.bngthoat.Click += new System.EventHandler(this.bngthoat_Click);
             // 
+            // MaLoaiND
+            // 
+            this.MaLoaiND.DataPropertyName = "MaLoaiND";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaLoaiND.DefaultCellStyle = dataGridViewCellStyle2;
+            this.MaLoaiND.HeaderText = "Mã Loại Người Dùng";
+            this.MaLoaiND.Name = "MaLoaiND";
+            this.MaLoaiND.ReadOnly = true;
+            this.MaLoaiND.Width = 150;
+            // 
+            // TenLoaiND
+            // 
+            this.TenLoaiND.DataPropertyName = "TenLoaiND";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenLoaiND.DefaultCellStyle = dataGridViewCellStyle3;
+            this.TenLoaiND.HeaderText = "Tên Loại Người Dùng";
+            this.TenLoaiND.Name = "TenLoaiND";
+            this.TenLoaiND.ReadOnly = true;
+            this.TenLoaiND.Width = 200;
+            // 
             // frmLoaiNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 338);
             this.Controls.Add(this.groupBoxDsdantoc);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

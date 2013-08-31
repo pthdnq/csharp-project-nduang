@@ -14,6 +14,7 @@ namespace QLDiemHSTHPT
     {
         NguoiDungCtrl m_NguoiDungCtrl = new NguoiDungCtrl();
         LoaiNguoiDungCtrl m_LoaiNguoiDungCtrl = new LoaiNguoiDungCtrl();
+        QuyDinh m_QuyDinh = new QuyDinh();
       
         public frmNguoiDung()
         {
@@ -29,9 +30,16 @@ namespace QLDiemHSTHPT
 
         private void bngThemmoi_Click(object sender, EventArgs e)
         {
-            
+            int iLastRow = dgvND.Rows.Count - 1;
+            int iMaNDLast = 1;
+            if (iLastRow >= 0)
+            {
+                string strMaNDLast = dgvND.Rows[iLastRow].Cells["MaND"].Value.ToString();
+                string MaNDLast = strMaNDLast.Replace("ND", "");
+                iMaNDLast = int.Parse(MaNDLast) + 1;
+            }
             DataRow m_Row = m_NguoiDungCtrl.ThemDongMoi();
-            m_Row["MaND"] = "ND" ;
+            m_Row["MaND"] = "ND";/*+ m_QuyDinh.LaySTT(dgvND.Rows.Count + 1);*/
             m_Row["MaLoaiND"] = "";
             m_Row["TenND"] = "";
             m_Row["TenDangNhap"] = "";
@@ -68,6 +76,7 @@ namespace QLDiemHSTHPT
         }
         private void bngluu_Click(object sender, EventArgs e)
         {
+            dgvND.EndEdit();
             if (KiemTraTruocKhiLuu("MaND") == true &&
                 KiemTraTruocKhiLuu("MaLoaiND") == true &&
                 KiemTraTruocKhiLuu("TenND") == true &&

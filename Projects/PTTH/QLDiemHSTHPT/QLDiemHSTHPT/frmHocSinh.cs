@@ -118,35 +118,10 @@ namespace QLDiemHSTHPT
             return true;
         }
 
-        public Boolean KiemTraDoTuoiTruocKhiLuu(String doTuoiColumn)
-        {
-            foreach (DataGridViewRow row in dgvhocsinh.Rows)
-            {
-                if (row.Cells[doTuoiColumn].Value != null)
-                {
-                    DateTime ngaySinh = Convert.ToDateTime(row.Cells[doTuoiColumn].Value.ToString());
-
-                    if (quyDinh.KiemTraDoTuoi(ngaySinh) == false)
-                    {
-                        MessageBoxEx.Show("Tuổi học sinh " + row.Cells["HoTen"].Value.ToString() + " không đúng quy định!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }
         private void bngluu_Click(object sender, EventArgs e)
         {
-            //Fixbug - 2013/07/30 - NTHUE - BEGIN
             bngluu.Enabled = false;
             dgvhocsinh.EndEdit();
-            //bool isTonTai = isLopVaKhoiLop();
-            //if (isTonTai == false)
-            //{
-                //m_HocSinhCtrl.HienThi(dgvhocsinh, bdgHocSinh/*, txtMaHS, textBoxTenhs, textBoxX2, checkBoxX1, checkBoxX2, dateTimeInput1, textBoxX4, comboBoxEx4, comboBoxEx3, textBoxX3, comboBoxEx2, textBoxX5, comboBoxEx1,cmbNamHoc,cmbKhoiLop,cmbLop*/);
-                return;
-           // }
-            //Fixbug - 2013/07/30 - NTHUE - END
             if (KiemTraTruocKhiLuu("MaHocSinh") == true &&
                 KiemTraTruocKhiLuu("HoTen") == true &&
                 KiemTraTruocKhiLuu("MaNamHoc") == true &&
@@ -154,12 +129,8 @@ namespace QLDiemHSTHPT
                // isLopVaKhoiLop() == true &&
                 KiemTraTruocKhiLuu("MaLop") == true)
             {
-               // if (KiemTraDoTuoiTruocKhiLuu("NgaySinh") == true)
-               // {
                     bindingNavigatorPositionItem.Focus();
                     m_HocSinhCtrl.LuuHocSinh();
-               // }
-
             }
 
         }

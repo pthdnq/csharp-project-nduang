@@ -16,7 +16,7 @@ namespace QLDiemHSTHPT
         NguoiDungCtrl m_NguoiDungCtrl = new NguoiDungCtrl();
         frmPhanBan m_PhanBan = null;
         frmPhanCong m_PhanCong = null;
-        frmConnection m_Connection = null;
+        //frmConnection m_Connection = null;
         frmHanhKiem m_HanhKiem = null;
         frmHocLuc m_HocLuc = null;
         frmHocKy m_HocKy = null;
@@ -59,21 +59,6 @@ namespace QLDiemHSTHPT
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-        public void ReConnection()
-        {
-            MessageBoxEx.Show("Lỗi kết nối đến cơ sở dữ liệu! Xin vui lòng thiết lập lại kết nối...", "ERROR", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
-
-            if (m_Connection == null || m_Connection.IsDisposed)
-                m_Connection = new frmConnection();
-
-            if (m_Connection.ShowDialog() == DialogResult.OK)
-            {
-                MessageBoxEx.Show("Đã thiết lập kết nối cho lần chạy đầu tiên.\nHãy khởi động lại chương trình để thực thi kết nối!", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
-            else
-                return;
         }
          private void btnthoatkhoi_Click(object sender, EventArgs e)
         {
@@ -696,17 +681,7 @@ namespace QLDiemHSTHPT
             Help.ShowHelp(this, "QuanLy.chm", " ");
         }
 
-        frmConnection m_KN = null;
-        private void buttonX1_Click(object sender, EventArgs e)
-        {
-            if (m_KN == null || m_KN.IsDisposed)
-            {
-                m_KN = new frmConnection();
-                m_KN.MdiParent = frmMain.ActiveForm;
-                m_KN.Show();
-            }
-            else m_KN.Activate();
-        }
+        //frmConnection m_KN = null;
         frmXemDiem m_XD = null;
         private void btnXemDiem_Click(object sender, EventArgs e)
         {
@@ -800,6 +775,11 @@ namespace QLDiemHSTHPT
                 m_LoaiDiem.Show();
             }
             else m_LoaiDiem.Activate();
+        }
+
+        private void buttonItem29_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
