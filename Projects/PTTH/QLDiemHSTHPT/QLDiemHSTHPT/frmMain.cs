@@ -438,6 +438,7 @@ namespace QLDiemHSTHPT
 
             //btnXemDiemRieng.Enabled = false;
             btnDiem.Enabled = false;
+            btnPhanCongGV.Enabled = false;
         }
 
         public void BGH()
@@ -457,15 +458,10 @@ namespace QLDiemHSTHPT
             buttonHocSinh.Enabled = true;
             buttonGV.Enabled = true;
             
-            
-            //buttonTCHS.Enabled = true;
-            //buttonTCGV.Enabled = true;
             toolStripMenuItem46.Enabled = true;
             toolStripMenuItem63.Enabled = true;
-            //toolStripMenuItem77.Enabled = true;
-
-            //btnXemDiemRieng.Enabled = true;
             btnDiem.Enabled = true;
+            btnPhanCongGV.Enabled = true;
         }
 
         public void GiaoVien()
@@ -502,10 +498,7 @@ namespace QLDiemHSTHPT
             toolStripMenuItem53.Enabled = false;
             toolStripMenuItem54.Enabled = false;
             toolStripMenuItem55.Enabled = false;
-            ////toolStripMenuItem58.Enabled = false;
-            ////toolStripMenuItem59.Enabled = false;
-            //toolStripMenuItem60.Enabled = false;
-            //toolStripMenuItem77.Enabled = false;
+            btnPhanCongGV.Enabled = false;
         }
 
         public void QuanTriVien()
@@ -520,11 +513,6 @@ namespace QLDiemHSTHPT
             buttonItem30.Enabled = true;
 
             //false
-            //buttonItem29.Enabled = false;
-            //buttonItem30.Enabled = false;
-            //buttonItem31.Enabled = false;
-            //buttonItem32.Enabled = false;
-
             buttonHocSinh.Enabled = false;
             buttonGV.Enabled = false;
 
@@ -537,6 +525,7 @@ namespace QLDiemHSTHPT
             buttondangnhap.Enabled = false;
             //btnXemDiemRieng.Enabled = false;
             btnDiem.Enabled = false;
+            btnPhanCongGV.Enabled = false;
 
         }
 
@@ -556,7 +545,7 @@ namespace QLDiemHSTHPT
             buttonItem31.Enabled = false;
             buttonItem32.Enabled = false;
 
-            buttonHocSinh.Enabled = false;
+            buttonHocSinh.Enabled = true;
             buttonGV.Enabled = false;
 
             
@@ -566,6 +555,7 @@ namespace QLDiemHSTHPT
             toolStripMenuItem63.Enabled = false;
             //toolStripMenuItem77.Enabled = false;
             buttondangnhap.Enabled = false;
+            btnPhanCongGV.Enabled = false;
         }
 
         frmNhapDiem m_DiemChung = null;
@@ -779,7 +769,16 @@ namespace QLDiemHSTHPT
 
         private void buttonItem29_Click(object sender, EventArgs e)
         {
+            if (m_FormDoiMatKhau == null || m_FormDoiMatKhau.IsDisposed)
+                m_FormDoiMatKhau = new frmDoiMatKhau();
 
+            m_FormDoiMatKhau.txtMKcu.Text = "";
+            m_FormDoiMatKhau.txtmatkhaumoi.Text = "";
+            m_FormDoiMatKhau.txtxacnhan.Text = "";
+            m_FormDoiMatKhau.lblMKculoi.Text = "";
+            m_FormDoiMatKhau.lblMKmoiloi.Text = "";
+            m_FormDoiMatKhau.lblxacnhanMKloi.Text = "";
+            DoiMatKhau();
         }
     }
 }

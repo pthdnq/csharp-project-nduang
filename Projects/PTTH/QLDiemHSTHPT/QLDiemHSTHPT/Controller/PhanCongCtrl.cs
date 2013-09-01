@@ -80,6 +80,10 @@ namespace QLDiemHSTHPT.Controller
        {
            m_PhanCongData.TimTheoTenGV(m_TenGiaoVien);
        }
-
+       public bool isDuocPhepSuaDiem(String strMaGiaoVien, String strMaLop, String strMaMon, String strMaKhoaHoc)
+       {
+           bool kq = m_PhanCongData.isDuocPhepSuaDiem(strMaGiaoVien, strMaLop, strMaMon, strMaKhoaHoc);
+           return kq;
+       }
     }
 }

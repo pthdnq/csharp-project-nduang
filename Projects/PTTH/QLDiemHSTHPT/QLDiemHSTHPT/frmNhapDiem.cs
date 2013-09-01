@@ -25,6 +25,7 @@ namespace QLDiemHSTHPT
         KQHKTongHopCtrl m_KQHocKyTongHopCtrl = new KQHKTongHopCtrl();
         KQCNMonHocCtrl m_KQCaNamMonHocCtrl = new KQCNMonHocCtrl();
         KQCNTongHopCtrl m_KQCaNamTongHopCtrl = new KQCNTongHopCtrl();
+        PhanCongCtrl m_PhanCongCtrl = new PhanCongCtrl();
         //MonHocCtrl m_MonHocCtrl = new MonHocCtrl();
 
         DiemData m_DiemData = new DiemData();
@@ -43,6 +44,12 @@ namespace QLDiemHSTHPT
             if (cmbNanhocCN.SelectedValue != null)
                 m_LopCtrl.HienThiComboBox(cmbNanhocCN.SelectedValue.ToString(), cmbLopCN);
             m_MonHocCtrl.HienThiComboBox(cmbMonhocCN);
+            String strLoaiTaiKhoan = Utilities.NguoiDung.LoaiND.MaLoaiND.Trim();
+            //tai khoan hoc sinh thi an nut luu diem
+            if (strLoaiTaiKhoan == "LND004")
+            {
+                bngluu.Visible = false;
+            }
         }
 
         //kiem tra diem truoc khi luu
@@ -128,7 +135,6 @@ namespace QLDiemHSTHPT
                 int soDiemMieng = 0;
                 int soDiem15Phut = 0;
                 int soDiem1tiet = 0;
-                float DTBHKMonHoc =0;
 
                 DataTable m_DT = m_DiemData.LayDsDiemHocSinh(rowHocSinh.Cells["MaHocSinh"].Value.ToString(),
                                                       cmbMonhocCN.SelectedValue.ToString(),
@@ -225,6 +231,27 @@ namespace QLDiemHSTHPT
         }
         private void bngluu_Click_1(object sender, EventArgs e)
         {
+            String strTenDangNhap = Utilities.NguoiDung.TenDangNhap.Trim();
+            String strMaLop = cmbLopCN.SelectedValue.ToString().Trim();
+            String strTenLop = cmbLopCN.Text.Trim();
+            String strMaMonHoc = cmbMonhocCN.SelectedValue.ToString().Trim();
+            String strTenMonHoc = cmbMonhocCN.Text.Trim();
+            String strMaKhoaHoc = cmbNanhocCN.SelectedValue.ToString().Trim();
+            bool OK = m_PhanCongCtrl.isDuocPhepSuaDiem(strTenDangNhap,
+                                            strMaLop,
+                                            strMaMonHoc,
+                                            strMaKhoaHoc
+                                            );
+            if (OK == false)
+            {
+                MessageBoxEx.Show(@"Bạn không được phân công dạy lớp "
+                                    + strTenLop +
+                                    " môn " + strTenMonHoc +
+                                    " nên không có quyền cập nhật điểm"
+                    );
+                //thoat khoi ham
+                return;
+            }
             updateSTT_Diem();
             if (KiemTraDiemTruocKhiLuu("DiemMieng") == true &&
                KiemTraDiemTruocKhiLuu("Diem15phut") == true &&
@@ -568,6 +595,19 @@ namespace QLDiemHSTHPT
         private void dgvNhapdiemchung_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             bngluu.Enabled = true;
+            foreach (DataGridViewRow row in dgvNhapdiemchung.Rows)
+            {
+                String[] diemMieng = row.Cells["DiemMieng"].Value.ToString().Split(';');
+            }
+        }
+
+        private void dgvNhapdiemchung_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+           /* bngluu.Enabled = true;
+            foreach (DataGridViewRow row in dgvNhapdiemchung.Rows)
+            {
+                String[] diemMieng = row.Cells["DiemMieng"].Value.ToString().Split(';');
+            }*/
         }
 
     }

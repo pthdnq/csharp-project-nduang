@@ -28,6 +28,15 @@ namespace QLDiemHSTHPT
 
         private void frmHocSinh_Load(object sender, EventArgs e)
         {
+            //tai khoan hoc sinh thi an nut luu diem
+            String strLoaiTaiKhoan = Utilities.NguoiDung.LoaiND.MaLoaiND.Trim();
+            if (strLoaiTaiKhoan == "LND004")
+            {
+                bngluu.Visible = false;
+                bngXoa.Visible = false;
+                bngThemmoi.Visible = false;
+            }
+            
             m_NamHocCtrl.HienThiComboBox(cmbKhoaHoc);
             if (cmbKhoaHoc.SelectedValue != null)
                 m_LopCtrl.HienThiComboBox(cmbKhoaHoc.SelectedValue.ToString(), cmbLop);
