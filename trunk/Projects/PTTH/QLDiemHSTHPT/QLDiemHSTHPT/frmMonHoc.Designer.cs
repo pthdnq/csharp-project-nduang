@@ -260,7 +260,6 @@ namespace QLDiemHSTHPT
             this.TenMonHoc.DefaultCellStyle = dataGridViewCellStyle3;
             this.TenMonHoc.HeaderText = "Tên Môn Học";
             this.TenMonHoc.Name = "TenMonHoc";
-            this.TenMonHoc.ReadOnly = true;
             this.TenMonHoc.Width = 130;
             // 
             // SoTiet

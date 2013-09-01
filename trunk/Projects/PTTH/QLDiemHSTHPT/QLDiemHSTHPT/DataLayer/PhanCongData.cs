@@ -61,5 +61,26 @@ namespace QLDiemHSTHPT.DataLayer
             m_PhanCongData.Load(cmd);
             return m_PhanCongData;
         }
+       public bool isDuocPhepSuaDiem(String MaGiaoVien, String MaLop, String MaMonHoc, String MaKhoaHoc)
+       {
+           SqlCommand cmd = new SqlCommand(@"select *  from PHANCONG
+                                                inner join NGUOIDUNG
+                                                on PHANCONG.MaGiaoVien = NGUOIDUNG.TenDangNhap
+
+                                                where PHANCONG.MaLop = @MaLop
+                                                and PHANCONG.MaMonHoc = @MaMonHoc
+                                                and PHANCONG.MaGiaoVien = @MaGiaoVien
+                                                and PHANCONG.MaNamHoc = @MaNamHoc
+                                            ");
+           cmd.Parameters.Add("MaLop", SqlDbType.VarChar).Value = MaLop;
+           cmd.Parameters.Add("MaMonHoc", SqlDbType.VarChar).Value = MaMonHoc;
+           cmd.Parameters.Add("MaGiaoVien", SqlDbType.VarChar).Value = MaGiaoVien;
+           cmd.Parameters.Add("MaNamHoc", SqlDbType.VarChar).Value = MaKhoaHoc;
+           m_PhanCongData.Load(cmd);
+           if (m_PhanCongData.Rows.Count > 0)
+               return true;
+           else
+               return false;
+       }
     }
     }

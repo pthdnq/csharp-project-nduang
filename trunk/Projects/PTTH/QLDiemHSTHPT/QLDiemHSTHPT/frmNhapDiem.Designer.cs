@@ -78,7 +78,6 @@ namespace QLDiemHSTHPT
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bngluu = new System.Windows.Forms.ToolStripButton();
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
-            this.btnXemdiem = new System.Windows.Forms.ToolStripButton();
             this.bngthoat = new System.Windows.Forms.ToolStripButton();
             this.btnCapnhatdiem = new DevComponents.DotNetBar.ButtonItem();
             this.btnNhapdiem = new DevComponents.DotNetBar.ButtonItem();
@@ -340,6 +339,7 @@ namespace QLDiemHSTHPT
             this.dgvNhapdiemchung.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvNhapdiemchung.Size = new System.Drawing.Size(804, 404);
             this.dgvNhapdiemchung.TabIndex = 6;
+            this.dgvNhapdiemchung.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhapdiemchung_CellValueChanged);
             this.dgvNhapdiemchung.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvNhapdiemchung_CellBeginEdit);
             this.dgvNhapdiemchung.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvNhapdiemchung_DataError);
             this.dgvNhapdiemchung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhapdiemchung_CellContentClick);
@@ -438,7 +438,6 @@ namespace QLDiemHSTHPT
             this.bindingNavigatorSeparator2,
             this.bngluu,
             this.btnRefresh,
-            this.btnXemdiem,
             this.bngthoat});
             this.bdgNhapdiemchung.Location = new System.Drawing.Point(3, 16);
             this.bdgNhapdiemchung.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -535,15 +534,6 @@ namespace QLDiemHSTHPT
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // btnXemdiem
-            // 
-            this.btnXemdiem.Image = global::QLDiemHSTHPT.Properties.Resources.TCHS;
-            this.btnXemdiem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnXemdiem.Name = "btnXemdiem";
-            this.btnXemdiem.Size = new System.Drawing.Size(81, 22);
-            this.btnXemdiem.Text = "Xem điểm";
-            this.btnXemdiem.Click += new System.EventHandler(this.btnXemdiem_Click);
-            // 
             // bngthoat
             // 
             this.bngthoat.Image = global::QLDiemHSTHPT.Properties.Resources.exit;
@@ -574,7 +564,7 @@ namespace QLDiemHSTHPT
             this.btnNhapdiem.OptionGroup = "navBar";
             this.btnNhapdiem.Text = "Nhập điểm học sinh";
             // 
-            // frmNhapDiemChung
+            // frmNhapDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -584,8 +574,8 @@ namespace QLDiemHSTHPT
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmNhapDiemChung";
-            this.Text = "Nhập điểm chung";
+            this.Name = "frmNhapDiem";
+            this.Text = "Nhập điểm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmNhapDiemChung_Load);
             this.nvgPanelGiaoVien.ResumeLayout(false);
@@ -620,7 +610,6 @@ namespace QLDiemHSTHPT
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton bngluu;
-        private System.Windows.Forms.ToolStripButton btnXemdiem;
         private System.Windows.Forms.ToolStripButton bngthoat;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmbLopCN;
         private DevComponents.DotNetBar.LabelX labelX4;
