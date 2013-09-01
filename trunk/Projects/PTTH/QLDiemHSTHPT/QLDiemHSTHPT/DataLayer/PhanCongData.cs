@@ -63,15 +63,9 @@ namespace QLDiemHSTHPT.DataLayer
         }
        public bool isDuocPhepSuaDiem(String MaGiaoVien, String MaLop, String MaMonHoc, String MaKhoaHoc)
        {
-           SqlCommand cmd = new SqlCommand(@"select *  from PHANCONG
-                                                inner join NGUOIDUNG
-                                                on PHANCONG.MaGiaoVien = NGUOIDUNG.TenDangNhap
-
-                                                where PHANCONG.MaLop = @MaLop
-                                                and PHANCONG.MaMonHoc = @MaMonHoc
-                                                and PHANCONG.MaGiaoVien = @MaGiaoVien
-                                                and PHANCONG.MaNamHoc = @MaNamHoc
-                                            ");
+           SqlCommand cmd = new SqlCommand();
+           cmd.CommandText = "sp_IsDuocPhepSuaDiem";
+           cmd.CommandType = CommandType.StoredProcedure;
            cmd.Parameters.Add("MaLop", SqlDbType.VarChar).Value = MaLop;
            cmd.Parameters.Add("MaMonHoc", SqlDbType.VarChar).Value = MaMonHoc;
            cmd.Parameters.Add("MaGiaoVien", SqlDbType.VarChar).Value = MaGiaoVien;
