@@ -46,23 +46,6 @@ namespace QLDiemHSTHPT
             this.Close();
         }
 
-        private void buttonX1_Click(object sender, EventArgs e)
-        {
-            lvdiem.Items.Clear();
-            try 
-            {
-                m_DiemCtrl.HienThiDanhSachXemDiem(lvdiem,
-                                             cmbHocsinh.SelectedValue.ToString(),
-                                             cmbMonhoc.SelectedValue.ToString(),
-                                             cmbHocky.SelectedValue.ToString(),
-                                             cbmnamhoc.SelectedValue.ToString(),
-                                             cmblop.SelectedValue.ToString());
-            }
-            catch(Exception)
-            {
-            
-            }
-        }
         public void setEnableControl(bool status)
         {
             btnxoa.Enabled = status;

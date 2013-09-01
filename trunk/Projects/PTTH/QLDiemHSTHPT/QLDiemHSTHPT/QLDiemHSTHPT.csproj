@@ -133,7 +133,6 @@
     <Compile Include="DataLayer\NamHocData.cs" />
     <Compile Include="DataLayer\NguoiDungData.cs" />
     <Compile Include="DataLayer\PhanCongData.cs" />
-    <Compile Include="DataLayer\QuyDinhData.cs" />
     <Compile Include="Component\frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -157,7 +157,6 @@ namespace QLDiemHSTHPT
             this.buttonX1.Size = new System.Drawing.Size(140, 23);
             this.buttonX1.TabIndex = 35;
             this.buttonX1.Text = "Hiển thị danh sách";
-            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // cmbHocsinh
             // 

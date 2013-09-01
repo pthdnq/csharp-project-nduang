@@ -115,7 +115,6 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem50 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem51 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem52 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem53 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem54 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem55 = new System.Windows.Forms.ToolStripMenuItem();
@@ -1023,7 +1022,6 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem50,
             this.toolStripMenuItem51,
             this.toolStripMenuItem52,
-            this.toolStripMenuItem1,
             this.toolStripMenuItem53,
             this.toolStripMenuItem54,
             this.toolStripMenuItem55,
@@ -1080,13 +1078,6 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem52.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItem52.Text = "Nhập điểm chung";
             this.toolStripMenuItem52.Click += new System.EventHandler(this.toolStripMenuItem52_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Image = global::QLDiemHSTHPT.Properties.Resources.QDdotuoi;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(170, 22);
-            this.toolStripMenuItem1.Text = "Nhập điểm riêng";
             // 
             // toolStripMenuItem53
             // 
@@ -2287,7 +2278,6 @@ namespace QLDiemHSTHPT
         private ToolStripMenuItem toolStripMenuItem81;
         private ToolStripMenuItem toolStripMenuItem83;
         private ToolStripMenuItem toolStripMenuItem84;
-        private ToolStripMenuItem toolStripMenuItem1;
         private DevComponents.DotNetBar.ButtonItem btnLoaiNguoiDung;
         private DevComponents.DotNetBar.ButtonItem btnPhanQuyen;
         private ToolStripMenuItem phânBanToolStripMenuItem;
