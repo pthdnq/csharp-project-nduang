@@ -76,11 +76,13 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Component\frmDangNhap.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Component\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="Component\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Component\frmDoiMatKhau.Designer.cs">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
@@ -108,6 +110,7 @@
     <Compile Include="Controller\PhanCongCtrl.cs" />
     <Compile Include="DataLayer\PhanBanData.cs" />
     <Compile Include="frmPhanBan.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPhanBan.Designer.cs">
       <DependentUpon>frmPhanBan.cs</DependentUpon>
@@ -132,131 +135,157 @@
     <Compile Include="DataLayer\NguoiDungData.cs" />
     <Compile Include="DataLayer\PhanCongData.cs" />
     <Compile Include="Component\frmAbout.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Component\frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPhanCong.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPhanCong.Designer.cs">
       <DependentUpon>frmPhanCong.cs</DependentUpon>
     </Compile>
     <Compile Include="frptKetQuaHocKy_TongHop.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frptKetQuaHocKy_TongHop.Designer.cs">
       <DependentUpon>frptKetQuaHocKy_TongHop.cs</DependentUpon>
     </Compile>
     <Compile Include="frptDanhSachLop.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frptDanhSachLop.Designer.cs">
       <DependentUpon>frptDanhSachLop.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGiaoVien.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmGiaoVien.Designer.cs">
       <DependentUpon>frmGiaoVien.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHanhKiem.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmHanhKiem.Designer.cs">
       <DependentUpon>frmHanhKiem.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHocKy.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmHocKy.Designer.cs">
       <DependentUpon>frmHocKy.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHocLuc.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmHocLuc.Designer.cs">
       <DependentUpon>frmHocLuc.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHocSinh.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmHocSinh.Designer.cs">
       <DependentUpon>frmHocSinh.cs</DependentUpon>
     </Compile>
     <Compile Include="frmKetQua.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmKetQua.Designer.cs">
       <DependentUpon>frmKetQua.cs</DependentUpon>
     </Compile>
     <Compile Include="frmKhoiLop.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmKhoiLop.Designer.cs">
       <DependentUpon>frmKhoiLop.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLoaiDiem.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLoaiDiem.Designer.cs">
       <DependentUpon>frmLoaiDiem.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLoaiNguoiDung.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLoaiNguoiDung.Designer.cs">
       <DependentUpon>frmLoaiNguoiDung.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLop.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLop.Designer.cs">
       <DependentUpon>frmLop.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMonHoc.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMonHoc.Designer.cs">
       <DependentUpon>frmMonHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="frmKhoaHoc.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmKhoaHoc.Designer.cs">
       <DependentUpon>frmKhoaHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNguoiDung.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmNguoiDung.Designer.cs">
       <DependentUpon>frmNguoiDung.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNhapDiem.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmNhapDiem.Designer.cs">
       <DependentUpon>frmNhapDiem.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTimKiemGV.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTimKiemGV.Designer.cs">
       <DependentUpon>frmTimKiemGV.cs</DependentUpon>
     </Compile>
     <Compile Include="frmXemDiem.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmXemDiem.Designer.cs">
       <DependentUpon>frmXemDiem.cs</DependentUpon>
     </Compile>
     <Compile Include="frptDanhSachGiaoVien.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frptDanhSachGiaoVien.Designer.cs">
       <DependentUpon>frptDanhSachGiaoVien.cs</DependentUpon>
     </Compile>
     <Compile Include="frptDanhSachHocSinh.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frptDanhSachHocSinh.Designer.cs">
       <DependentUpon>frptDanhSachHocSinh.cs</DependentUpon>
     </Compile>
     <Compile Include="frptKetQuaHocKy_MonHoc.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frptKetQuaHocKy_MonHoc.Designer.cs">
       <DependentUpon>frptKetQuaHocKy_MonHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="frptKetQuaCaNam_MonHoc.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frptKetQuaCaNam_MonHoc.Designer.cs">
       <DependentUpon>frptKetQuaCaNam_MonHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="frptKetQuaCaNam_TongHop.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frptKetQuaCaNam_TongHop.Designer.cs">
       <DependentUpon>frptKetQuaCaNam_TongHop.cs</DependentUpon>
