@@ -668,27 +668,6 @@ namespace QLDiemHSTHPT
             Help.ShowHelp(this, "QuanLy.chm", " ");
         }
 
-        //frmConnection m_KN = null;
-        frmXemDiem m_XD = null;
-        private void btnXemDiem_Click(object sender, EventArgs e)
-        {
-            if (m_XD == null || m_XD.IsDisposed)
-            {
-                m_XD = new frmXemDiem();
-                m_XD.MdiParent = frmMain.ActiveForm;
-                m_XD.Show();
-            }
-            else m_XD.Activate();
-            String m_per = Utilities.NguoiDung.LoaiND.MaLoaiND;
-            if (m_per == "LND004") 
-            {
-                m_XD.setEnableControl(false);
-            }
-            else
-            {
-                m_XD.setEnableControl(true);
-            }
-        }
         private void btnPhanQuyen_Click(object sender, EventArgs e)
         {
             if (m_NguoiDung == null || m_NguoiDung.IsDisposed)
