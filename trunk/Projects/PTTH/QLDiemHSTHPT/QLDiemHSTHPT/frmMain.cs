@@ -473,12 +473,9 @@ namespace QLDiemHSTHPT
             buttonItem33.Enabled = true;
           
             toolStripMenuItem52.Enabled = true;
-            toolStripMenuItem1.Enabled = true;
+            //toolStripMenuItem1.Enabled = true;
             toolStripMenuItem63.Enabled = true;
             toolStripMenuItem81.Enabled = true;
-            //buttonTCHS.Enabled = true;
-            //buttonTCGV.Enabled = true;
-            //btnXemDiemRieng.Enabled = true;
             btnDiem.Enabled = true;
 
             //False
