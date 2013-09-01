@@ -65,6 +65,11 @@ namespace QLDiemHSTHPT
             this.btnNhapTT = new DevComponents.DotNetBar.ButtonItem();
             this.groupBoxDsgv = new System.Windows.Forms.GroupBox();
             this.dgvPhanCong = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNamHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.MaLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.MaMonHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.MaGiaoVien = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bdgPhanCong = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -80,11 +85,6 @@ namespace QLDiemHSTHPT
             this.bngluu = new System.Windows.Forms.ToolStripButton();
             this.bngthoat = new System.Windows.Forms.ToolStripButton();
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNamHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.MaLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.MaMonHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.MaGiaoVien = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.nvgPanelGiaoVien.SuspendLayout();
             this.ngvPanelTimKiem.SuspendLayout();
             this.navigationPanePanel1.SuspendLayout();
@@ -467,7 +467,60 @@ namespace QLDiemHSTHPT
             this.dgvPhanCong.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvPhanCong.Size = new System.Drawing.Size(544, 403);
             this.dgvPhanCong.TabIndex = 6;
+            this.dgvPhanCong.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvPhanCong_CellBeginEdit);
             this.dgvPhanCong.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvPhanCong_DataError);
+            // 
+            // STT
+            // 
+            this.STT.DataPropertyName = "STT";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STT.DefaultCellStyle = dataGridViewCellStyle2;
+            this.STT.HeaderText = "Mã Phân Công";
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            // 
+            // MaNamHoc
+            // 
+            this.MaNamHoc.DataPropertyName = "MaNamHoc";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaNamHoc.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MaNamHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaNamHoc.HeaderText = "Khóa Học";
+            this.MaNamHoc.Name = "MaNamHoc";
+            this.MaNamHoc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaNamHoc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // MaLop
+            // 
+            this.MaLop.DataPropertyName = "MaLop";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaLop.DefaultCellStyle = dataGridViewCellStyle4;
+            this.MaLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaLop.HeaderText = "Lớp Học";
+            this.MaLop.Name = "MaLop";
+            this.MaLop.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.MaLop.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // MaMonHoc
+            // 
+            this.MaMonHoc.DataPropertyName = "MaMonHoc";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaMonHoc.DefaultCellStyle = dataGridViewCellStyle5;
+            this.MaMonHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaMonHoc.HeaderText = "Môn Học";
+            this.MaMonHoc.Name = "MaMonHoc";
+            this.MaMonHoc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaMonHoc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // MaGiaoVien
+            // 
+            this.MaGiaoVien.DataPropertyName = "MaGiaoVien";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaGiaoVien.DefaultCellStyle = dataGridViewCellStyle6;
+            this.MaGiaoVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaGiaoVien.HeaderText = "Giáo Viên";
+            this.MaGiaoVien.Name = "MaGiaoVien";
+            this.MaGiaoVien.Width = 150;
             // 
             // bdgPhanCong
             // 
@@ -616,57 +669,6 @@ namespace QLDiemHSTHPT
             this.btnRefresh.Size = new System.Drawing.Size(23, 22);
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // STT
-            // 
-            this.STT.DataPropertyName = "STT";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STT.DefaultCellStyle = dataGridViewCellStyle2;
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            // 
-            // MaNamHoc
-            // 
-            this.MaNamHoc.DataPropertyName = "MaNamHoc";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaNamHoc.DefaultCellStyle = dataGridViewCellStyle3;
-            this.MaNamHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MaNamHoc.HeaderText = "Khóa Học";
-            this.MaNamHoc.Name = "MaNamHoc";
-            this.MaNamHoc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaNamHoc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // MaLop
-            // 
-            this.MaLop.DataPropertyName = "MaLop";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaLop.DefaultCellStyle = dataGridViewCellStyle4;
-            this.MaLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MaLop.HeaderText = "Lớp Học";
-            this.MaLop.Name = "MaLop";
-            this.MaLop.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.MaLop.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // MaMonHoc
-            // 
-            this.MaMonHoc.DataPropertyName = "MaMonHoc";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaMonHoc.DefaultCellStyle = dataGridViewCellStyle5;
-            this.MaMonHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MaMonHoc.HeaderText = "Môn Học";
-            this.MaMonHoc.Name = "MaMonHoc";
-            this.MaMonHoc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaMonHoc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // MaGiaoVien
-            // 
-            this.MaGiaoVien.DataPropertyName = "MaGiaoVien";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaGiaoVien.DefaultCellStyle = dataGridViewCellStyle6;
-            this.MaGiaoVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MaGiaoVien.HeaderText = "Giáo Viên";
-            this.MaGiaoVien.Name = "MaGiaoVien";
-            this.MaGiaoVien.Width = 150;
             // 
             // frmPhanCong
             // 

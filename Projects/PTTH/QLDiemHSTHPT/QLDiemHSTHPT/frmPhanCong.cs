@@ -17,6 +17,7 @@ namespace QLDiemHSTHPT
         LopCtrl m_LopCtrl = new LopCtrl();
         MonHocCtrl m_MonHocCtrl = new MonHocCtrl();
         GiaoVienCtrl m_GiaoVienCtrl = new GiaoVienCtrl();
+        QuyDinh quyDinh = new QuyDinh();
         public frmPhanCong()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace QLDiemHSTHPT
 
         private void frmPhanLop_Load(object sender, EventArgs e)
         {
+            bngluu.Enabled = false;
             m_NamHocCtrl.HienThiComboBox(cmbNamhoc);
             m_LopCtrl.HienThiComboBox(cmbLop);
             m_MonHocCtrl.HienThiComboBox(cmbMonhoc);
@@ -40,8 +42,19 @@ namespace QLDiemHSTHPT
 
         private void bngThemmoi_Click(object sender, EventArgs e)
         {
+            bngluu.Enabled = true;
             DataRow m_Row = m_PhanCongCtrl.ThemDongMoi();
-            m_Row["STT"] = dgvPhanCong.RowCount + 1;
+            //tao ma hoc sinh tu dong - begin
+            int iLastRow = dgvPhanCong.Rows.Count - 1;
+            int iMaPCLast = 1;
+            if (iLastRow >= 0)
+            {
+                string strMaPCLast = dgvPhanCong.Rows[iLastRow].Cells["STT"].Value.ToString();
+                string MaPCLast = strMaPCLast.Replace("PC", "");
+                iMaPCLast = int.Parse(MaPCLast) + 1;
+            }
+            
+            m_Row["STT"] = "PC" + quyDinh.LaySTT(iMaPCLast);
             m_Row["MaNamHoc"] = "";
             m_Row["MaLop"] = "";
             m_Row["MaMonHoc"] = "";
@@ -78,6 +91,7 @@ namespace QLDiemHSTHPT
         }
         private void bngluu_Click(object sender, EventArgs e)
         {
+            dgvPhanCong.EndEdit();
             if (KiemTraTruocKhiLuu("MaNamHoc") == true &&
                 KiemTraTruocKhiLuu("MaLop") == true &&
                 KiemTraTruocKhiLuu("MaMonHoc") == true &&
@@ -85,6 +99,7 @@ namespace QLDiemHSTHPT
             {
                 bindingNavigatorPositionItem.Focus();
                 m_PhanCongCtrl.LuuPhanCong();
+                bngluu.Enabled = false;
             }
         }
 
@@ -144,6 +159,11 @@ namespace QLDiemHSTHPT
             {
                 m_PhanCongCtrl.TimTheoTenGV(txtTimKiem.Text);
             }
+        }
+
+        private void dgvPhanCong_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            bngluu.Enabled = true;
         }
     }
 }

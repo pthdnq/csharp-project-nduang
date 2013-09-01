@@ -29,18 +29,19 @@ namespace QLDiemHSTHPT
 
         private void frmLop_Load(object sender, EventArgs e)
         {
-            m_KhoiLopCtrl.HienThiComboBox(cmbKhoilop);
-            m_NamHocCtrl.HienThiComboBox(cmbNamhoc);
-            m_GiaoVienCtrl.HienThiComboBox(cmbGiaovien);
+            HienThiDSLop();
+        }
+        public void HienThiDSLop()
+        {
             m_KhoiLopCtrl.HienThiDataGridViewComboBoxColumn(MaKhoiLop);
             m_NamHocCtrl.HienThiDataGridViewComboBoxColumn(MaNamHoc);
             m_GiaoVienCtrl.HienThiDataGridViewComboBoxColumn(MaGiaoVien);
 
             m_PhanBanCtrl.HienThiDataGridViewComboBoxColumn(Ban);
-
-            m_LopCtrl.HienThi(dgvLop, bdgLop, txtMaLop, txtTenLop, cmbKhoilop, cmbNamhoc, itiSiso, cmbGiaovien);
+            BindingSource bS = new BindingSource();
+            m_LopCtrl.HienThi(dgvLop, bdgLop);
+            bngluu.Enabled = false;
         }
-
         private void bngThemmoi_Click(object sender, EventArgs e)
         {
             DataRow m_Row = m_LopCtrl.ThemDongMoi();
@@ -64,12 +65,14 @@ namespace QLDiemHSTHPT
 
         private void bngXoa_Click(object sender, EventArgs e)
         {
+            
             if (dgvLop.RowCount == 0)
                 bngXoa.Enabled = false;
 
             else if (MessageBoxEx.Show("Bạn có chắc chắn xóa dòng này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 bdgLop.BindingSource.RemoveCurrent();
+                bngluu.Enabled = true;
             }
         }
 
@@ -96,11 +99,23 @@ namespace QLDiemHSTHPT
                 KiemTraTruocKhiLuu("TenLop") == true &&
                 KiemTraTruocKhiLuu("MaKhoiLop") == true &&
                 KiemTraTruocKhiLuu("MaNamHoc") == true &&
-                KiemTraTruocKhiLuu("MaGiaoVien") == true //&&
-                /*KiemTraSiSoTruocKhiLuu("SiSo") == true*/)
+                KiemTraTruocKhiLuu("MaGiaoVien") == true 
+                )
+
             {
                 bindingNavigatorPositionItem.Focus();
-                m_LopCtrl.LuuLop();
+                bool ok = m_LopCtrl.LuuLop();
+                if (ok == false)
+                {
+                    MessageBoxEx.Show("Lớp đang tồn tại học sinh nên không thể xóa !!!!");
+                    HienThiDSLop();
+
+                }
+                else
+                {
+                    //làm mờ nút lưu sau khi lưu thành công
+                    bngluu.Enabled = false;
+                }
             }
         }
 
@@ -111,25 +126,7 @@ namespace QLDiemHSTHPT
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            m_LopCtrl.HienThi(dgvLop, bdgLop, txtMaLop, txtTenLop, cmbKhoilop, cmbNamhoc, itiSiso, cmbGiaovien);
-        }
-
-        private void btnLuuDS_Click(object sender, EventArgs e)
-        {
-            if (txtMaLop.Text != "" &&
-                txtTenLop.Text != "" &&
-                cmbKhoilop.SelectedValue != null &&
-                cmbNamhoc.SelectedValue != null &&
-                cmbGiaovien.SelectedValue != null 
-                )
-            {
-                m_LopCtrl.LuuLop(txtMaLop.Text, txtTenLop.Text, cmbKhoilop.SelectedValue.ToString(), cmbNamhoc.SelectedValue.ToString(), itiSiso.Value, cmbGiaovien.SelectedValue.ToString());
-                m_LopCtrl.HienThi(dgvLop, bdgLop, txtMaLop, txtTenLop, cmbKhoilop, cmbNamhoc, itiSiso, cmbGiaovien);
-
-                bdgLop.BindingSource.MoveLast();
-            }
-            else
-                MessageBoxEx.Show("Giá trị của các ô không được rỗng và sỉ số phải theo quy định!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            HienThiDSLop();
         }
 
         void TimKiemLop()
@@ -186,6 +183,12 @@ namespace QLDiemHSTHPT
             }
             else m_GV.Activate();
             m_GiaoVienCtrl.HienThiDataGridViewComboBoxColumn(MaGiaoVien);
+        }
+
+        private void dgvLop_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            //khi dữ liệu có sự thay đổi thì nút lưu hiện lên
+            bngluu.Enabled = true;
         }
     }
 }
