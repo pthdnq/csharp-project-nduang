@@ -15,13 +15,10 @@ namespace QLDiemHSTHPT.Controller
         DiemCtrl m_DiemCtrl = new DiemCtrl();
         KQCNMonHocData m_KQCaNamMonHocData = new KQCNMonHocData();
 
-        public void LuuKetQua(String maHocSinh, String maLop, String maMonHoc, String maNamHoc)
+        public void LuuKetQuaCaNamMonHoc(String maHocSinh, String maLop, String maMonHoc, String maNamHoc)
         {
             float diemTBMonCN = (float)Math.Round(m_DiemCtrl.DiemTrungBinhMonCaNam(maHocSinh, maMonHoc, maNamHoc, maLop), 2);
             float diemThiLai = (float)Math.Round(m_DiemCtrl.DiemThiLai(maHocSinh, maMonHoc, maNamHoc, maLop), 2); 
-
-           // m_KQCaNamMonHocData.XoaKetQua(maHocSinh, maLop, maMonHoc, maNamHoc);
-           // m_KQCaNamMonHocData.LuuKetQua(maHocSinh, maLop, maMonHoc, maNamHoc, diemThiLai, diemTBMonCN);
             m_KQCaNamMonHocData.UpdateKetQua(maHocSinh, maLop, maMonHoc, maNamHoc, diemThiLai, diemTBMonCN);
         }
 

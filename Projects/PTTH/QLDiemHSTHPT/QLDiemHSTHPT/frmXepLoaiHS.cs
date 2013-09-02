@@ -27,6 +27,7 @@ namespace QLDiemHSTHPT
         KQCNTongHopCtrl m_KQCaNamTongHopCtrl = new KQCNTongHopCtrl();
         PhanCongCtrl m_PhanCongCtrl = new PhanCongCtrl();
         HanhKiemCtrl m_HanhKiemCtrl = new HanhKiemCtrl();
+        HocLucCtrl m_HocLucCtrl = new HocLucCtrl();
         DiemData m_DiemData = new DiemData();
         QuyDinh quyDinh = new QuyDinh();
         public frmXepLoaiHS()
@@ -38,6 +39,7 @@ namespace QLDiemHSTHPT
         private void frmNhapDiemChung_Load(object sender, EventArgs e)
         {
             m_HanhKiemCtrl.HienThiDataGridViewComboBoxColumn(MaHanhKiem);
+            m_HocLucCtrl.HienThiDataGridViewComboBoxColumn(MaHocLuc);
             m_NamHocCtrl.HienThiComboBox(cmbKhoaHoc);
             m_HocKyCtrl.HienThiComboBox(cmbHocky);
             if (cmbKhoaHoc.SelectedValue != null)

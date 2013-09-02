@@ -177,11 +177,18 @@ namespace QLDiemHSTHPT.Controller
             {
                 float diemTBHocKyTungMon = float.Parse(row_diemTBHKTungMon["DTBMonHocKy"].ToString());
                 
-                int countMonHoc = 0;
+                
                 if (diemTBHocKyTungMon < diemKhongChe)// có môn dưới điểm khống chế
                 {
                     return false;
                 }
+
+            }
+            int countMonHoc = 0;
+            foreach (DataRow row_diemTBHKTungMon in m_DiemTBHKMonHoc.Rows)
+            {
+
+                float diemTBHocKyTungMon = float.Parse(row_diemTBHKTungMon["DTBMonHocKy"].ToString());          
                 // Kiểm tra điểm trung bình học kỳ của các môn chuyên ban xem có thỏa mãn ko?
 
                 if (strPhanBan == "B0001" || strPhanBan == "B0002")//nếu là chuyên ban tự nhiên hoặc xã hội thì 

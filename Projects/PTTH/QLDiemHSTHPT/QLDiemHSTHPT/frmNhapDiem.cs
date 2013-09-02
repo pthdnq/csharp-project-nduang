@@ -400,32 +400,34 @@ namespace QLDiemHSTHPT
                                                            float.Parse(diemThi.ToString()));
                         }
                         //Lưu vào bảng kết quả
-                        if (rowcount <= dgvNhapdiemchung.Rows.Count)
-                        {
-                            float diemTBMonHK =0;
-                            if(row.Cells["DTBHKMonHoc"].Value != null)
-                                 diemTBMonHK = float.Parse(row.Cells["DTBHKMonHoc"].Value.ToString());
-                            diemTBMonHK = (float)Math.Round(diemTBMonHK, 2);
-                            m_KQHocKyMonHocCtrl.LuuKetQua(row.Cells["MaHocSinh"].Value.ToString(),
-                                                          cmbLopCN.SelectedValue.ToString(),
-                                                          cmbMonhocCN.SelectedValue.ToString(),
-                                                          cmbHockyCN.SelectedValue.ToString(),
-                                                          cmbNanhocCN.SelectedValue.ToString(),diemTBMonHK);
+                        //if (rowcount <= dgvNhapdiemchung.Rows.Count)
+                        //{
+                            
+                        //    float diemTBMonHK =0;
+                        //    if(row.Cells["DTBHKMonHoc"].Value != null)
+                        //         diemTBMonHK = float.Parse(row.Cells["DTBHKMonHoc"].Value.ToString());
+                        //    diemTBMonHK = (float)Math.Round(diemTBMonHK, 2);
+                        //    m_KQHocKyMonHocCtrl.LuuKetQua(row.Cells["MaHocSinh"].Value.ToString(),
+                        //                                  cmbLopCN.SelectedValue.ToString(),
+                        //                                  cmbMonhocCN.SelectedValue.ToString(),
+                        //                                  cmbHockyCN.SelectedValue.ToString(),
+                        //                                  cmbNanhocCN.SelectedValue.ToString(),diemTBMonHK);
 
-                            m_KQCaNamMonHocCtrl.LuuKetQua(row.Cells["MaHocSinh"].Value.ToString(),
-                                                          cmbLopCN.SelectedValue.ToString(),
-                                                          cmbMonhocCN.SelectedValue.ToString(),
-                                                          cmbNanhocCN.SelectedValue.ToString());
+                        //    m_KQCaNamMonHocCtrl.LuuKetQuaCaNamMonHoc(row.Cells["MaHocSinh"].Value.ToString(),
+                        //                                  cmbLopCN.SelectedValue.ToString(),
+                        //                                  cmbMonhocCN.SelectedValue.ToString(),
+                        //                                  cmbNanhocCN.SelectedValue.ToString());
 
-                            m_KQHocKyTongHopCtrl.LuuKetQua(row.Cells["MaHocSinh"].Value.ToString(),
-                                                           cmbLopCN.SelectedValue.ToString(),
-                                                           cmbHockyCN.SelectedValue.ToString(),
-                                                           cmbNanhocCN.SelectedValue.ToString());
+                        //    m_KQHocKyTongHopCtrl.LuuKetQua(row.Cells["MaHocSinh"].Value.ToString(),
+                        //                                   cmbLopCN.SelectedValue.ToString(),
+                        //                                   cmbHockyCN.SelectedValue.ToString(),
+                        //                                   cmbNanhocCN.SelectedValue.ToString());
 
-                            m_KQCaNamTongHopCtrl.LuuKetQua(row.Cells["MaHocSinh"].Value.ToString(),
-                                                           cmbLopCN.SelectedValue.ToString(),
-                                                           cmbNanhocCN.SelectedValue.ToString());
-                        }
+                        //    m_KQCaNamTongHopCtrl.LuuKetQua(row.Cells["MaHocSinh"].Value.ToString(),
+                        //                                   cmbLopCN.SelectedValue.ToString(),
+                        //                                   cmbNanhocCN.SelectedValue.ToString());
+                             
+                        //}
                         //Xóa các kết quả cũ
                         if (STT != null)
                         {

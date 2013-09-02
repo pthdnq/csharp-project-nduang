@@ -125,7 +125,7 @@ namespace QLDiemHSTHPT
                     String str = row.Cells[cellString].Value.ToString();
                     if (str == "")
                     {
-                        MessageBoxEx.Show(@"Thông tin học sinh về" + row.Cells["HoTen"].Value.ToString() + " không được rỗng!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBoxEx.Show(@"Thông tin học sinh: " + row.Cells["HoTen"].Value.ToString() + " không được rỗng!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
