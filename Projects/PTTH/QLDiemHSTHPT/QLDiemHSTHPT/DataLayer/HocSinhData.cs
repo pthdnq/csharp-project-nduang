@@ -152,7 +152,7 @@ namespace QLDiemHSTHPT.DataLayer
            SqlCommand cmd = new SqlCommand();
            cmd.CommandType = CommandType.StoredProcedure;
            cmd.CommandText = "sp_LayDsHocSinhTheoLopChoCapNhatHanhKiem";
-           cmd.Parameters.Add("maHSOrhoTenHS", SqlDbType.VarChar).Value = maHSOrhoTenHS;
+           cmd.Parameters.Add("maHSOrhoTenHS", SqlDbType.NVarChar).Value = maHSOrhoTenHS;
            cmd.Parameters.Add("malop", SqlDbType.VarChar).Value = malop;
            cmd.Parameters.Add("maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
            cmd.Parameters.Add("maHocKy", SqlDbType.VarChar).Value = maHocKy;
