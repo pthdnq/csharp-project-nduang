@@ -146,8 +146,22 @@ namespace QLDiemHSTHPT.Controller
        {
            return m_HocSinhData.LuuHocSinh();
        }
-
-       public void TimTheoMaHoTenLopNamHoc(String maOrTenHocSinh, String maLop, String maNamHoc)
+       public String MaHocSinhLonNhat()
+       {
+           HocSinhData HocSinhData = new HocSinhData();
+           DataTable dt = HocSinhData.LayDsHocSinh();
+           int dong = dt.Rows.Count;//lay ra số dòng trong bảng
+           if (dong == 0)
+               return "";//nếu ko có học sinh nào thì trả về rỗng.
+           else
+               return dt.Rows[dong -1 ]["MaHocSinh"].ToString();//dòng -1 là ví trí dòng trong bảng
+           //tính từ 0, MaHocSinh là cột mã học sinh ứng với dòng đó.
+           //Ở đây ta sẽ lấy ra mã học sinh tại dòng cuối cùng.
+       }
+       public void TimTheoMaHoTenLopNamHoc(
+                                           String maOrTenHocSinh, 
+                                           String maLop, 
+                                           String maNamHoc)
        {
            m_HocSinhData.TimTheoMaHoTenLopNamHoc(maOrTenHocSinh, maLop, maNamHoc);
        }

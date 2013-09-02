@@ -52,16 +52,20 @@ namespace QLDiemHSTHPT
         {
             bngluu.Enabled = true;
             DataRow m_Row = m_HocSinhCtrl.ThemDongMoi();
-            //tao ma hoc sinh tu dong - begin
-            int iLastRow = dgvhocsinh.Rows.Count - 1;
-            int iMaHSLast = 1;
-            if (iLastRow >= 0)
+            String maHocSinhLonNhat = m_HocSinhCtrl.MaHocSinhLonNhat();
+            //String maHocSinhLonNhat ==
+            if (maHocSinhLonNhat == "")//Không có học sinh nào cả
             {
-                string strMaHSLast = dgvhocsinh.Rows[iLastRow].Cells["MaHocSinh"].Value.ToString();
-                string MaHSLast = strMaHSLast.Replace("HS", "");
-                iMaHSLast = int.Parse(MaHSLast) + 1;
+                m_Row["MaHocSinh"] = "HS0001";//tạo mã học sinh đầu tiên
             }
-            m_Row["MaHocSinh"] = "HS" + quyDinh.LaySTT(iMaHSLast);
+            else//tạo mã học sinh tự động tiếp theo
+            {
+                string MaHSLast = maHocSinhLonNhat.Replace("HS", "");//Loại bỏ chữ HS.ví dụ HS0007 ==> 0007;
+
+                int iMaHSLast = int.Parse(MaHSLast) + 1;//chuyển kiểu dữ liệu từ chuỗi sang số.
+                m_Row["MaHocSinh"] = "HS" + quyDinh.LaySTT(iMaHSLast);//đưa vào hàng (row);
+            }
+            
             //tao ma hoc sinh tu dong - end
             m_Row["HoTen"] = "";
             m_Row["GioiTinh"] = false;
@@ -72,6 +76,7 @@ namespace QLDiemHSTHPT
             m_HocSinhCtrl.ThemHocSinh(m_Row);
 
             bdgHocSinh.BindingSource.MoveLast();
+           // dgvhocsinh.DataBindings.Clear();
         }
 
         private void bngXoa_Click(object sender, EventArgs e)
@@ -134,8 +139,7 @@ namespace QLDiemHSTHPT
             if (KiemTraTruocKhiLuu("MaHocSinh") == true &&
                 KiemTraTruocKhiLuu("HoTen") == true &&
                 KiemTraTruocKhiLuu("MaNamHoc") == true &&
-                KiemTraTruocKhiLuu("MaKhoiLop") == true &&
-               // isLopVaKhoiLop() == true &&
+                KiemTraTruocKhiLuu("MaKhoiLop") == true &
                 KiemTraTruocKhiLuu("MaLop") == true)
             {
                     bindingNavigatorPositionItem.Focus();
