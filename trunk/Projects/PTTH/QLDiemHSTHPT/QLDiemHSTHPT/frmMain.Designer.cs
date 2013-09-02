@@ -220,6 +220,7 @@ namespace QLDiemHSTHPT
             this.buttonItem24 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem25 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem26 = new DevComponents.DotNetBar.ButtonItem();
+            this.mnXepLoaiHS = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.bottomBar)).BeginInit();
             this.bottomBar.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -1026,7 +1027,8 @@ namespace QLDiemHSTHPT
             this.toolStripMenuItem54,
             this.toolStripMenuItem55,
             this.phânBanToolStripMenuItem,
-            this.mnLoaiDiem});
+            this.mnLoaiDiem,
+            this.mnXepLoaiHS});
             this.toolStripMenuItem46.Name = "toolStripMenuItem46";
             this.toolStripMenuItem46.Size = new System.Drawing.Size(63, 20);
             this.toolStripMenuItem46.Text = "Quản Lý";
@@ -2059,6 +2061,14 @@ namespace QLDiemHSTHPT
             this.buttonItem26.Text = "Thoát";
             this.buttonItem26.Tooltip = "Thoát";
             // 
+            // mnXepLoaiHS
+            // 
+            this.mnXepLoaiHS.Image = global::QLDiemHSTHPT.Properties.Resources.dantoc1;
+            this.mnXepLoaiHS.Name = "mnXepLoaiHS";
+            this.mnXepLoaiHS.Size = new System.Drawing.Size(170, 22);
+            this.mnXepLoaiHS.Text = "Xếp loại";
+            this.mnXepLoaiHS.Click += new System.EventHandler(this.mnXepLoaiHS_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -2284,6 +2294,7 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.ButtonX btnPhanCongGV;
         private DevComponents.DotNetBar.ButtonX btnDiem;
         private ToolStripMenuItem mnLoaiDiem;
+        private ToolStripMenuItem mnXepLoaiHS;
 
 
     }

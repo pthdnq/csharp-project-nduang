@@ -37,14 +37,6 @@ namespace QLDiemHSTHPT.Controller
            comboBox.ValueMember = "MaHocSinh";
        }
 
-       public void HienThiComboBox(String namHoc, String lop,String maHS, ComboBoxEx comboBox)
-       {
-           HocSinhData m_HSData = new HocSinhData();
-           comboBox.DataSource = m_HSData.LayDsHocSinhTheoMa(namHoc, lop,maHS);
-           comboBox.DisplayMember = "HoTen";
-           comboBox.ValueMember = "MaHocSinh";
-       }
-
        public void HienThiComboBoxMaHS(String namHoc, String lop, ComboBoxEx comboBox)
        {
            HocSinhData m_HSData = new HocSinhData();
@@ -61,15 +53,19 @@ namespace QLDiemHSTHPT.Controller
            cmbColumn.DataPropertyName = "MaHocSinh";
            cmbColumn.HeaderText = "Học sinh";
        }
-
-
+       public void HienThiDataGridViewComboBoxColumnTenHS(DataGridViewComboBoxColumn cmbColumn)
+       {
+           cmbColumn.DataSource = m_HocSinhData.LayDsHocSinhGomHoTenVaMaHS();
+           cmbColumn.DisplayMember = "HoTen";
+           cmbColumn.ValueMember = "MaHocSinh";
+           cmbColumn.DataPropertyName = "MaHocSinh";
+           cmbColumn.HeaderText = "Học sinh";
+       }
 
        public void HienThi(DataGridViewX dGV,BindingNavigator bN)
        {
            BindingSource bS = new BindingSource();
            bS.DataSource = m_HocSinhData.LayDsHocSinh();
-
-           //DataTable dT = m_HocSinhData.LayDsHocSinh();
            bN.BindingSource = bS;
            dGV.DataSource = bS;
            
@@ -86,20 +82,27 @@ namespace QLDiemHSTHPT.Controller
            bN.BindingSource = bS;
            dGV.DataSource = bS;
        }
-
-
-
-
-
-       //phan lop
-       public DataTable HienThiDsHocSinhTheoNamHoc(String namHoc)
+       public void LayDsHocSinhTheoLopChoCapNhatHanhKiem(
+           DataGridViewX dGV, 
+           BindingNavigator bN, 
+           String namHoc, 
+           String maLop, 
+           String maHocKy, 
+           String maHSOrhoTenHS
+           )
        {
-           return m_HocSinhData.LayDsHocSinhTheoNamHoc(namHoc);
-       }
-
-       public DataTable HienThiDsHocSinhTheoLop(String lop)
-       {
-           return m_HocSinhData.LayDsHocSinhTheoLop(lop);
+           BindingSource bS = new BindingSource();
+           if (maHSOrhoTenHS == "")
+               bS.DataSource = m_HocSinhData.LayDsHocSinhTheoLopChoCapNhatHanhKiem(
+                                                                                namHoc,
+                                                                                maLop, 
+                                                                                maHocKy
+                                                                                );
+           //else
+           //    bS.DataSource = m_HocSinhData.LayDsHocSinhTheoMaOrHoTen(namHoc, lop, maHSOrhoTenHS);
+           bN.BindingSource = bS;
+           dGV.DataSource = bS;
+       
        }
        //report
        public static IList<HocSinhInfo> LayDsHocSinh()
@@ -115,14 +118,14 @@ namespace QLDiemHSTHPT.Controller
                hs.MaHocSinh = Convert.ToString(Row["MaHocSinh"]);
                hs.HoTen = Convert.ToString(Row["HoTen"]);
                hs.GioiTinh = Convert.ToBoolean(Row["GioiTinh"]);
-               hs.NgaySinh = Convert.ToDateTime(Row["NgaySinh"]);
-               hs.NoiSinh = Convert.ToString(Row["NoiSinh"]);
+               //hs.NgaySinh = Convert.ToDateTime(Row["NgaySinh"]);
+              // hs.NoiSinh = Convert.ToString(Row["NoiSinh"]);
                hs.DanToc = Convert.ToString(Row["DanToc"]); ;
                hs.TonGiao = Convert.ToString(Row["TonGiao"]); 
-               hs.HoTenCha = Convert.ToString(Row["HoTenCha"]);
-               hs.NgheNghiepCha = Convert.ToString(Row["NgheNghiepCha"]);
-               hs.HoTenMe = Convert.ToString(Row["HoTenMe"]);
-               hs.NgheNghiepMe = Convert.ToString(Row["NgheNghiepMe"]); 
+              // hs.HoTenCha = Convert.ToString(Row["HoTenCha"]);
+              // hs.NgheNghiepCha = Convert.ToString(Row["NgheNghiepCha"]);
+              // hs.HoTenMe = Convert.ToString(Row["HoTenMe"]);
+              // hs.NgheNghiepMe = Convert.ToString(Row["NgheNghiepMe"]); 
 
                dS.Add(hs);
            }
@@ -142,12 +145,6 @@ namespace QLDiemHSTHPT.Controller
        public bool LuuHocSinh()
        {
            return m_HocSinhData.LuuHocSinh();
-       }
-
-     
-       public void TimTheoMa(String m_MaHocSinh)
-       {
-           m_HocSinhData.TimTheoMa(m_MaHocSinh);
        }
 
        public void TimTheoMaHoTenLopNamHoc(String maOrTenHocSinh, String maLop, String maNamHoc)

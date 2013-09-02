@@ -26,6 +26,12 @@ namespace QLDiemHSTHPT.DataLayer
            m_HocSinhData.Load(cmd);
            return m_HocSinhData;
        }
+       public DataTable LayDsHocSinhGomHoTenVaMaHS()
+       {
+           SqlCommand cmd = new SqlCommand("SELECT MaHocSinh ,HoTen  FROM HOCSINH");
+           m_HocSinhData.Load(cmd);
+           return m_HocSinhData;
+       }
 
        //nhap diem
        public DataTable LayDsHocSinhTheoLop(String khoaHoc, String lop)
@@ -41,18 +47,6 @@ namespace QLDiemHSTHPT.DataLayer
            return m_HocSinhData;
        }
 
-       public DataTable LayDsHocSinhTheoMa(String namHoc, String lop,String maHS)
-       {
-           SqlCommand cmd = new SqlCommand("SELECT HS.MaHocSinh, HS.HoTen " +
-                                           "FROM HOCSINH HS /*INNER JOIN PHANLOP PL ON HS.MaHocSinh = PL.MaHocSinh*/ " +
-                                           "/*INNER JOIN LOP L ON L.MaLop = PL.MaLop */" +
-                                           "WHERE HS.MaLop = @lop AND HS.MaNamHoc = @khoaHoc AND HS.MaHocSinh=@maHS");
-           cmd.Parameters.Add("lop", SqlDbType.VarChar).Value = lop;
-           cmd.Parameters.Add("khoaHoc", SqlDbType.VarChar).Value = namHoc;
-           cmd.Parameters.Add("maHS", SqlDbType.VarChar).Value = maHS;
-           m_HocSinhData.Load(cmd);
-           return m_HocSinhData;
-       }
        public DataTable LayDsHocSinhTheoMaOrHoTen(String namHoc, String lop, String maHSOrHoTen)
        {
            SqlCommand cmd = new SqlCommand("SELECT HS.MaHocSinh, HS.HoTen " +
@@ -80,38 +74,6 @@ namespace QLDiemHSTHPT.DataLayer
            m_HocSinhData.Load(cmd);
            return m_HocSinhData;
        }
-       public DataTable LayDsHocSinhTheoLop(String lop)
-       {
-           SqlCommand cmd = new SqlCommand("SELECT HS.MaHocSinh, HS.HoTen, L.TenLop " +
-                                           "FROM HOCSINH HS /* INNER JOIN PHANLOP PL ON HS.MaHocSinh = PL.MaHocSinh */" +
-                                           "INNER JOIN LOP L ON L.MaLop = HS.MaLop " +
-                                           "WHERE HS.MaLop = @lop");
-           cmd.Parameters.Add("lop", SqlDbType.VarChar).Value = lop;
-           return m_HocSinhData;
-       }
-       //nhap diem
-       public DataTable LayDsHocSinhTheoNamHoc(String namHoc)
-       {
-           SqlCommand cmd = new SqlCommand("SELECT HS.MaHocSinh, HS.HoTen, L.TenLop " +
-                                           "FROM HOCSINH HS /*INNER JOIN PHANLOP PL ON HS.MaHocSinh = PL.MaHocSinh */" +
-                                           "INNER JOIN LOP L ON L.MaLop = HS.MaLop " +
-                                           "WHERE HS.MaNamHoc = @khoaHoc");
-           cmd.Parameters.Add("khoaHoc", SqlDbType.VarChar).Value = namHoc;
-
-           m_HocSinhData.Load(cmd);
-           return m_HocSinhData;
-       }
-
-       public void LuuHSVaoBangPhanLop(String maNamHoc, String maKhoiLop, String maLop, String maHS)
-       {
-           SqlCommand cmd = new SqlCommand("INSERT INTO PHANLOP VALUES(@maNamHoc, @maKhoiLop, @maLop, @maHS)");
-           cmd.Parameters.Add("maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
-           cmd.Parameters.Add("maKhoiLop", SqlDbType.VarChar).Value = maKhoiLop;
-           cmd.Parameters.Add("maLop", SqlDbType.VarChar).Value = maLop;
-           cmd.Parameters.Add("maHS", SqlDbType.VarChar).Value = maHS;
-
-           m_HocSinhData.Load(cmd);
-       }
 
        public DataTable LayDsHocSinhForReport()
        {
@@ -135,26 +97,6 @@ namespace QLDiemHSTHPT.DataLayer
            return m_HocSinhData.ExecuteNoneQuery() > 0;
        }
 
-
-       public DataTable TimTheoMa(String ma)
-       {
-           SqlCommand cmd = new SqlCommand("SELECT * FROM HOCSINH WHERE MaHocSinh LIKE '%' + @ma + '%'");
-           cmd.Parameters.Add("ma", SqlDbType.VarChar).Value = ma;
-
-           m_HocSinhData.Load(cmd);
-           return m_HocSinhData;
-       }
-
-       public DataTable TimHSChuaPL()
-       {
-           SqlCommand cmd = new SqlCommand(@"SELECT * "+
-                                               "FROM HOCSINH "+
-                                               "WHERE NOT EXISTS(SELECT PHANLOP.MaHocSinh FROM PHANLOP"+
-                                                                " WHERE PHANLOP.MaHocSinh=HOCSINH.MaHocSinh)");
-           m_HocSinhData.Load(cmd);
-           return m_HocSinhData;
-       }
-
        public DataTable TimTheoMaHoTenLopNamHoc(String maOrTenHS, String maLop, String maNamHoc)
        {
            SqlCommand cmd = new SqlCommand(@"
@@ -172,25 +114,9 @@ namespace QLDiemHSTHPT.DataLayer
            return m_HocSinhData;
        }
 
-       public String TruyVan()
-       {
-           return "select MaHocSinh, HoTen from HOCSINH ";
-       }
-       
-
        public String TruyVanChung()
        {
            return "SELECT HS.MaHocSinh, HS.HoTen, HS.GioiTinh, HS.NgaySinh, HS.NoiSinh, HS.DanToc, HS.TonGiao FROM HOCSINH HS ";
-       }
-
-       public DataTable TimKiemHocSinh(String hoTen)
-       {
-           SqlCommand cmd = new SqlCommand();
-
-           String sql = TruyVanChung() + " WHERE HS.HoTen LIKE '%' + @hoTen + '%' ";
-           cmd.Parameters.Add("hoTen", SqlDbType.NVarChar).Value = hoTen;
-           m_HocSinhData.Load(cmd);
-           return m_HocSinhData;
        }
 
        public DataTable TimKiemHocSinh(String hoTen, String theoNSinh, String noiSinh, String theoDToc, String danToc, String theoTGiao, String tonGiao)
@@ -222,7 +148,18 @@ namespace QLDiemHSTHPT.DataLayer
            m_HocSinhData.Load(cmd);
            return m_HocSinhData;
        }
+       public DataTable LayDsHocSinhTheoLopChoCapNhatHanhKiem(String maNamHoc, String malop, String maHocKy)
+       {
+           SqlCommand cmd = new SqlCommand();
+           cmd.CommandType = CommandType.StoredProcedure;
+           cmd.CommandText = "sp_LayDsHocSinhTheoLopChoCapNhatHanhKiem";
+           cmd.Parameters.Add("malop", SqlDbType.VarChar).Value = malop;
+           cmd.Parameters.Add("maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
+           cmd.Parameters.Add("maHocKy", SqlDbType.VarChar).Value = maHocKy;
 
+           m_HocSinhData.Load(cmd);
+           return m_HocSinhData;
+       }
       
 
      
