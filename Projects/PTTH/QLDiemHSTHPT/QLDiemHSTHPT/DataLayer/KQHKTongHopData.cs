@@ -59,5 +59,25 @@ namespace QLDiemHSTHPT.DataLayer
             m_KQHocKyTongHopData.Load(cmd);
             return m_KQHocKyTongHopData;
         }
+       public void CapNhatHanhKiemHocKy(String maHocSinh, 
+                                       String maLop, 
+                                       String maHocKy, 
+                                       String maNamHoc, 
+                                       String maHanhKiem
+                                        )
+       {
+           DataService m_KQHKTHData = new DataService();
+
+           SqlCommand cmd = new SqlCommand();
+           cmd.CommandText = "sp_CapNhatHanhKiemHocKy";
+           cmd.CommandType = CommandType.StoredProcedure;
+           cmd.Parameters.Add("maHocSinh", SqlDbType.VarChar).Value = maHocSinh;
+           cmd.Parameters.Add("maLop", SqlDbType.VarChar).Value = maLop;
+           cmd.Parameters.Add("maHocKy", SqlDbType.VarChar).Value = maHocKy;
+           cmd.Parameters.Add("maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
+           cmd.Parameters.Add("maHanhKiem", SqlDbType.VarChar).Value = maHanhKiem;
+
+           m_KQHKTHData.Load(cmd);
+       }
     }
 }

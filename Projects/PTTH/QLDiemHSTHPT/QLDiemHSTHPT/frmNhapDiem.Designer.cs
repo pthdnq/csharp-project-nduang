@@ -166,7 +166,7 @@ namespace QLDiemHSTHPT
             this.txtMaHS_Or_hoTenHS.TabIndex = 44;
             this.txtMaHS_Or_hoTenHS.WatermarkText = "Nhập thông tin cần tìm";
             // 
-            // cmbLopCN
+            // cmbLop
             // 
             this.cmbLopCN.DisplayMember = "Text";
             this.cmbLopCN.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -174,7 +174,7 @@ namespace QLDiemHSTHPT
             this.cmbLopCN.FormattingEnabled = true;
             this.cmbLopCN.ItemHeight = 15;
             this.cmbLopCN.Location = new System.Drawing.Point(26, 86);
-            this.cmbLopCN.Name = "cmbLopCN";
+            this.cmbLopCN.Name = "cmbLop";
             this.cmbLopCN.Size = new System.Drawing.Size(121, 21);
             this.cmbLopCN.TabIndex = 43;
             this.cmbLopCN.SelectedIndexChanged += new System.EventHandler(this.cmbLopCN_SelectedIndexChanged);
@@ -292,7 +292,7 @@ namespace QLDiemHSTHPT
             this.groupBoxDsgv.TabStop = false;
             this.groupBoxDsgv.Text = "Danh Sách Nhập Điểm";
             // 
-            // dgvNhapdiemchung
+            // dgvXepLoaiHanhKiem
             // 
             this.dgvNhapdiemchung.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -327,7 +327,7 @@ namespace QLDiemHSTHPT
             this.dgvNhapdiemchung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvNhapdiemchung.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvNhapdiemchung.Location = new System.Drawing.Point(3, 41);
-            this.dgvNhapdiemchung.Name = "dgvNhapdiemchung";
+            this.dgvNhapdiemchung.Name = "dgvXepLoaiHanhKiem";
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -420,7 +420,7 @@ namespace QLDiemHSTHPT
             this.DTBHKMonHoc.Name = "DTBHKMonHoc";
             this.DTBHKMonHoc.ReadOnly = true;
             // 
-            // bdgNhapdiemchung
+            // bdgXepHanhKiemHS
             // 
             this.bdgNhapdiemchung.AddNewItem = null;
             this.bdgNhapdiemchung.CountItem = this.bindingNavigatorCountItem;
@@ -444,7 +444,7 @@ namespace QLDiemHSTHPT
             this.bdgNhapdiemchung.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bdgNhapdiemchung.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.bdgNhapdiemchung.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bdgNhapdiemchung.Name = "bdgNhapdiemchung";
+            this.bdgNhapdiemchung.Name = "bdgXepHanhKiemHS";
             this.bdgNhapdiemchung.PositionItem = this.bindingNavigatorPositionItem;
             this.bdgNhapdiemchung.Size = new System.Drawing.Size(804, 25);
             this.bdgNhapdiemchung.TabIndex = 0;

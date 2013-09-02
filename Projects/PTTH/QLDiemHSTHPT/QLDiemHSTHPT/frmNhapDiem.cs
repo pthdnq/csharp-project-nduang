@@ -581,7 +581,7 @@ namespace QLDiemHSTHPT
         private void dgvNhapdiemchung_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
            /* bngluu.Enabled = true;
-            foreach (DataGridViewRow row in dgvNhapdiemchung.Rows)
+            foreach (DataGridViewRow row in dgvXepLoaiHanhKiem.Rows)
             {
                 String[] diemMieng = row.Cells["DiemMieng"].Value.ToString().Split(';');
             }*/

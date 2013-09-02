@@ -146,45 +146,6 @@ namespace QLDiemHSTHPT
             TimKiemLop();
         }
 
-        private void btnKhoiLop_Click(object sender, EventArgs e)
-        {
-            frmKhoiLop m_KhoiLop = null;
-            if (m_KhoiLop == null || m_KhoiLop.IsDisposed)
-            {
-                m_KhoiLop = new frmKhoiLop();
-                m_KhoiLop.MdiParent = frmMain.ActiveForm;
-                m_KhoiLop.Show();
-            }
-            else m_KhoiLop.Activate();
-            m_KhoiLopCtrl.HienThiDataGridViewComboBoxColumn(MaKhoiLop);
-        }
-
-        private void btnNamhoc_Click(object sender, EventArgs e)
-        {
-            frmKhoaHoc m_NamHoc = null;
-            if (m_NamHoc == null || m_NamHoc.IsDisposed)
-            {
-                m_NamHoc = new frmKhoaHoc();
-                m_NamHoc.MdiParent = frmMain.ActiveForm;
-                m_NamHoc.Show();
-            }
-            else m_NamHoc.Activate();
-            m_NamHocCtrl.HienThiDataGridViewComboBoxColumn(MaNamHoc);
-        }
-
-        private void btnGiaovien_Click(object sender, EventArgs e)
-        {
-            frmGiaoVien m_GV = null;
-            if (m_GV == null || m_GV.IsDisposed)
-            {
-                m_GV = new frmGiaoVien();
-                m_GV.MdiParent = frmMain.ActiveForm;
-                m_GV.Show();
-            }
-            else m_GV.Activate();
-            m_GiaoVienCtrl.HienThiDataGridViewComboBoxColumn(MaGiaoVien);
-        }
-
         private void dgvLop_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             //khi dữ liệu có sự thay đổi thì nút lưu hiện lên

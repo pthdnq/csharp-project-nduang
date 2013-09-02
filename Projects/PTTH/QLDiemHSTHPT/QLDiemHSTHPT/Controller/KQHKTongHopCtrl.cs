@@ -71,5 +71,14 @@ namespace QLDiemHSTHPT.Controller
           }
           return dS;
       }
+      public void CapNhatHanhKiemHocKy(String maHocSinh,
+                                       String maLop,
+                                       String maHocKy,
+                                       String maNamHoc,
+                                       String maHanhKiem
+                                        )
+      {
+          m_KQHocKyTongHopData.CapNhatHanhKiemHocKy(maHocSinh, maLop, maHocKy, maNamHoc, maHanhKiem);
+      }
     }
 }
