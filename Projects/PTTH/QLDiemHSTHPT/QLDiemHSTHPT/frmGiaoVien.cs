@@ -16,7 +16,7 @@ namespace QLDiemHSTHPT
         MonHocCtrl m_MonHocCtrl = new MonHocCtrl();
         GiaoVienCtrl m_GiaoVienCtrl = new GiaoVienCtrl();
         
-        QuyDinh quyDinh = new QuyDinh();
+        Tool quyDinh = new Tool();
         public frmGiaoVien()
         {
             InitializeComponent();

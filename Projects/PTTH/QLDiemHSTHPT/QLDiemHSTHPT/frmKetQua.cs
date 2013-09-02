@@ -14,7 +14,7 @@ namespace QLDiemHSTHPT
     public partial class frmKetQua : Office2007Form
     {
         KetQuaCtrl m_KetQuaCtrl = new KetQuaCtrl();
-        QuyDinh quyDinh = new QuyDinh();
+        Tool quyDinh = new Tool();
         public frmKetQua()
         {
             InitializeComponent();

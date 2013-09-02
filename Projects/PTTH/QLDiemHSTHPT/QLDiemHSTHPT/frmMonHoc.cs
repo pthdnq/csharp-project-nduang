@@ -14,7 +14,7 @@ namespace QLDiemHSTHPT
     public partial class frmMonHoc : Office2007Form
     {
         MonHocCtrl m_MonHocCtrl = new MonHocCtrl();
-        QuyDinh quyDinh = new QuyDinh();
+        Tool quyDinh = new Tool();
         public frmMonHoc()
         {
             DataService.OpenConnection();

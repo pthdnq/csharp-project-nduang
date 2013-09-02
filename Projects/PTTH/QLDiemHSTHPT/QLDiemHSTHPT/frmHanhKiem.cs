@@ -13,7 +13,7 @@ namespace QLDiemHSTHPT
     public partial class frmHanhKiem : Office2007Form
     {
         HanhKiemCtrl m_HanhKiemCtrl = new HanhKiemCtrl();
-        QuyDinh quyDinh = new QuyDinh();
+        Tool quyDinh = new Tool();
         public frmHanhKiem()
         {
             DataService.OpenConnection();

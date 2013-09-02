@@ -14,7 +14,7 @@ namespace QLDiemHSTHPT
     public partial class frmKhoaHoc : Office2007Form
     {
         NamHocCtrl m_NamHocCtrl = new NamHocCtrl();
-        QuyDinh quyDinh = new QuyDinh();
+        Tool quyDinh = new Tool();
         public frmKhoaHoc()
         {
             InitializeComponent();

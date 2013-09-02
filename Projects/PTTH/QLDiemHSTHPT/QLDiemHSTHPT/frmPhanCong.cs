@@ -17,7 +17,7 @@ namespace QLDiemHSTHPT
         LopCtrl m_LopCtrl = new LopCtrl();
         MonHocCtrl m_MonHocCtrl = new MonHocCtrl();
         GiaoVienCtrl m_GiaoVienCtrl = new GiaoVienCtrl();
-        QuyDinh quyDinh = new QuyDinh();
+        Tool tool = new Tool();
         public frmPhanCong()
         {
             InitializeComponent();
@@ -54,7 +54,7 @@ namespace QLDiemHSTHPT
                 iMaPCLast = int.Parse(MaPCLast) + 1;
             }
             
-            m_Row["STT"] = "PC" + quyDinh.LaySTT(iMaPCLast);
+            m_Row["STT"] = "PC" + tool.LaySTT(iMaPCLast);
             m_Row["MaNamHoc"] = "";
             m_Row["MaLop"] = "";
             m_Row["MaMonHoc"] = "";

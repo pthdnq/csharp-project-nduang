@@ -14,7 +14,7 @@ namespace QLDiemHSTHPT
     public partial class frmLoaiDiem : Office2007Form
     {
         LoaiDiemCtrl m_LoaiDiemCtrl = new LoaiDiemCtrl();
-        QuyDinh quyDinh = new QuyDinh();
+        Tool quyDinh = new Tool();
         public frmLoaiDiem()
         {
             InitializeComponent();

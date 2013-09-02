@@ -14,7 +14,7 @@ namespace QLDiemHSTHPT
     {
         NguoiDungCtrl m_NguoiDungCtrl = new NguoiDungCtrl();
         LoaiNguoiDungCtrl m_LoaiNguoiDungCtrl = new LoaiNguoiDungCtrl();
-        QuyDinh m_QuyDinh = new QuyDinh();
+        Tool m_QuyDinh = new Tool();
       
         public frmNguoiDung()
         {

@@ -29,7 +29,7 @@ namespace QLDiemHSTHPT
         HanhKiemCtrl m_HanhKiemCtrl = new HanhKiemCtrl();
         HocLucCtrl m_HocLucCtrl = new HocLucCtrl();
         DiemData m_DiemData = new DiemData();
-        QuyDinh quyDinh = new QuyDinh();
+        Tool quyDinh = new Tool();
         public frmXepLoaiHS()
         {
             InitializeComponent();
@@ -179,11 +179,6 @@ namespace QLDiemHSTHPT
             //if (cmbKhoaHoc.SelectedValue != null && cmbLop.SelectedValue != null)
             //m_MonHocCtrl.HienThiComboBox(cmbKhoaHoc.SelectedValue.ToString(), cmbLop.SelectedValue.ToString(), cmbMonhocCN);
             cmbKhoaHoc.DataBindings.Clear();
-        }
-
-        private void dgvNhapdiemchung_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void cmbMonhocCN_Click(object sender, EventArgs e)
