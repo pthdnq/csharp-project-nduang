@@ -242,16 +242,16 @@ namespace QLDiemHSTHPT
                                             strMaMonHoc,
                                             strMaKhoaHoc
                                             );
-            if (OK == false)
-            {
-                MessageBoxEx.Show(@"Bạn không được phân công dạy lớp "
-                                    + strTenLop +
-                                    " môn " + strTenMonHoc +
-                                    " nên không có quyền cập nhật điểm"
-                    );
-                //thoat khoi ham
-                return;
-            }
+            //if (OK == false)
+            //{
+            //    MessageBoxEx.Show(@"Bạn không được phân công dạy lớp "
+            //                        + strTenLop +
+            //                        " môn " + strTenMonHoc +
+            //                        " nên không có quyền cập nhật điểm"
+            //        );
+            //    //thoat khoi ham
+            //    return;
+            //}
             updateSTT_Diem();
             if (KiemTraDiemTruocKhiLuu("DiemMieng") == true &&
                KiemTraDiemTruocKhiLuu("Diem15phut") == true &&
