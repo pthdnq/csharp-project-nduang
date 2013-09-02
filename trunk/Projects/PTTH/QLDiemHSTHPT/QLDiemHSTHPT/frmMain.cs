@@ -127,29 +127,6 @@ namespace QLDiemHSTHPT
             }
             else m_KetQua.Activate();
         }
-
-        /*private void btnnamhoc_Click(object sender, EventArgs e)
-        {
-            if (m_NamHoc == null || m_NamHoc.IsDisposed)
-            {
-                m_NamHoc = new frmNamHoc();
-                m_NamHoc.MdiParent = frmMain.ActiveForm;
-                m_NamHoc.Show();
-            }
-            else m_NamHoc.Activate();
-        }
-
-        private void btnhocky_Click(object sender, EventArgs e)
-        {
-            if (m_HocKy == null || m_HocKy.IsDisposed)
-            {
-                m_HocKy = new frmHocKy();
-                m_HocKy.MdiParent = frmMain.ActiveForm;
-                m_HocKy.Show();
-            }
-            else m_HocKy.Activate();
-        }*/
-
         private void khốiLớpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (m_KhoiLop == null || m_KhoiLop.IsDisposed)

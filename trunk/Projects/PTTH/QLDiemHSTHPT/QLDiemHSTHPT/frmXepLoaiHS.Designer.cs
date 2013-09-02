@@ -67,6 +67,7 @@ namespace QLDiemHSTHPT
             this.btnNhapdiem = new DevComponents.DotNetBar.ButtonItem();
             this.MaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHocLuc = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.MaHanhKiem = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.nvgPanelGiaoVien.SuspendLayout();
             this.ngvPanelTimKiem.SuspendLayout();
@@ -273,6 +274,7 @@ namespace QLDiemHSTHPT
             this.dgvXepLoaiHanhKiem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaHocSinh,
             this.HoTen,
+            this.MaHocLuc,
             this.MaHanhKiem});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
@@ -467,6 +469,15 @@ namespace QLDiemHSTHPT
             this.HoTen.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.HoTen.Width = 150;
             // 
+            // MaHocLuc
+            // 
+            this.MaHocLuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaHocLuc.HeaderText = "Học Lực";
+            this.MaHocLuc.Name = "MaHocLuc";
+            this.MaHocLuc.ReadOnly = true;
+            this.MaHocLuc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaHocLuc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // MaHanhKiem
             // 
             this.MaHanhKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -532,6 +543,7 @@ namespace QLDiemHSTHPT
         private DevComponents.DotNetBar.LabelX labelX1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHocSinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
+        private System.Windows.Forms.DataGridViewComboBoxColumn MaHocLuc;
         private System.Windows.Forms.DataGridViewComboBoxColumn MaHanhKiem;
 
     }

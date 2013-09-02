@@ -254,12 +254,6 @@
     <Compile Include="frmNhapDiem.Designer.cs">
       <DependentUpon>frmNhapDiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTimKiemGV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTimKiemGV.Designer.cs">
-      <DependentUpon>frmTimKiemGV.cs</DependentUpon>
-    </Compile>
     <Compile Include="frptDanhSachGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -379,10 +373,6 @@
     <EmbeddedResource Include="frmNhapDiem.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmNhapDiem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTimKiemGV.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>frmTimKiemGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frptDanhSachGiaoVien.resx">
       <SubType>Designer</SubType>
