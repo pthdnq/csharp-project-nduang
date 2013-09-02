@@ -15,7 +15,7 @@ namespace QLDiemHSTHPT
     public partial class frmPhanBan : Office2007Form
     {
         PhanBanCtrl m_PhanBanCtrl = new PhanBanCtrl();
-        QuyDinh quyDinh = new QuyDinh();
+        Tool quyDinh = new Tool();
         public frmPhanBan()
         {
             InitializeComponent();

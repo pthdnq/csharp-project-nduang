@@ -14,7 +14,7 @@ namespace QLDiemHSTHPT
     public partial class frmHocLuc : Office2007Form
     {
         HocLucCtrl m_HocLucCtrl = new HocLucCtrl();
-        QuyDinh quyDinh = new QuyDinh();
+        Tool quyDinh = new Tool();
         public frmHocLuc()
         {
             DataService.OpenConnection();

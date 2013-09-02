@@ -301,7 +301,6 @@ namespace QLDiemHSTHPT
             this.dgvXepLoaiHanhKiem.TabIndex = 6;
             this.dgvXepLoaiHanhKiem.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvNhapdiemchung_CellBeginEdit);
             this.dgvXepLoaiHanhKiem.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvXepLoaiHanhKiem_DataError);
-            this.dgvXepLoaiHanhKiem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhapdiemchung_CellContentClick);
             // 
             // bdgXepHanhKiemHS
             // 

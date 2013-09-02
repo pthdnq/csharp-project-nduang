@@ -19,7 +19,7 @@ namespace QLDiemHSTHPT
         NamHocCtrl m_NamHocCtrl = new NamHocCtrl();
         GiaoVienCtrl m_GiaoVienCtrl = new GiaoVienCtrl();
         PhanBanCtrl m_PhanBanCtrl = new PhanBanCtrl();
-        QuyDinh quyDinh = new QuyDinh();
+        Tool quyDinh = new Tool();
 
         public frmLop()
         {

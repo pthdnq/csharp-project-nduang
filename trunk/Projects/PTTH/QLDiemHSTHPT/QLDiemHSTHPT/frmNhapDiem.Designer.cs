@@ -339,7 +339,6 @@ namespace QLDiemHSTHPT
             this.dgvNhapdiemchung.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvNhapdiemchung.Size = new System.Drawing.Size(804, 404);
             this.dgvNhapdiemchung.TabIndex = 6;
-            this.dgvNhapdiemchung.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhapdiemchung_CellValueChanged);
             this.dgvNhapdiemchung.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvNhapdiemchung_CellBeginEdit);
             this.dgvNhapdiemchung.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvNhapdiemchung_DataError);
             this.dgvNhapdiemchung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhapdiemchung_CellContentClick);
