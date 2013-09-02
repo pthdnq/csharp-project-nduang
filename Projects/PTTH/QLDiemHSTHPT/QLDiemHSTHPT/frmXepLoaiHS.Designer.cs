@@ -299,7 +299,7 @@ namespace QLDiemHSTHPT
             this.dgvXepLoaiHanhKiem.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvXepLoaiHanhKiem.Size = new System.Drawing.Size(804, 404);
             this.dgvXepLoaiHanhKiem.TabIndex = 6;
-            this.dgvXepLoaiHanhKiem.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvNhapdiemchung_CellBeginEdit);
+            this.dgvXepLoaiHanhKiem.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvXepLoaiHanhKiem_CellBeginEdit);
             this.dgvXepLoaiHanhKiem.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvXepLoaiHanhKiem_DataError);
             // 
             // bdgXepHanhKiemHS

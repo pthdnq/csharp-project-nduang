@@ -158,10 +158,11 @@ namespace QLDiemHSTHPT.Controller
                 //điểm nằm trong khoảng giới hạn
                 {
 
-                    if (isThoaManDKKhac(strBan, diemCanDuoi, diemKhongChe, m_DiemTBHKMonHoc))
+                   // if (isThoaManDKKhac(strBan, diemCanDuoi, diemKhongChe, m_DiemTBHKMonHoc))
+
                         return maHocLuc;
-                    else
-                        continue;
+                    //else
+                       // continue;
                 }
                 else
                 {

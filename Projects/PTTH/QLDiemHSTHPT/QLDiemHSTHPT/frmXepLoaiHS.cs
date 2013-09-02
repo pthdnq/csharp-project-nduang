@@ -46,7 +46,11 @@ namespace QLDiemHSTHPT
                 m_LopCtrl.HienThiComboBox(cmbKhoaHoc.SelectedValue.ToString(), cmbLop);
             String strLoaiTaiKhoan = Utilities.NguoiDung.LoaiND.MaLoaiND.Trim();
             //tai khoan hoc sinh thi an nut luu diem
-            if (strLoaiTaiKhoan == "LND004")
+            if (strLoaiTaiKhoan == "LND002")//tai khoản giáo viên mới đc sửa hạnh kiểm
+            {
+                bngluu.Visible = true;
+            }
+            else
             {
                 bngluu.Visible = false;
             }
@@ -101,6 +105,7 @@ namespace QLDiemHSTHPT
                     );
                 }
             }
+            bngluu.Enabled = false;
             //bool OK = m_PhanCongCtrl.isDuocPhepSuaDiem(strTenDangNhap,
             //                                strMaLop,
             //                                strMaMonHoc,
@@ -199,7 +204,7 @@ namespace QLDiemHSTHPT
             HienThiDSHanhKiemHS();
         }
 
-        private void dgvNhapdiemchung_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        private void dgvXepLoaiHanhKiem_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             bngluu.Enabled = true;
         }
