@@ -105,7 +105,8 @@ namespace QLDiemHSTHPT
                         bool isTonTai = m_HocSinhCtrl.isLopVaKhoiLop(maKhoiLop, maLop);
                         if (isTonTai == false)
                         {
-                            MessageBoxEx.Show(@"Thông tin học sinh về" + strHoTen + " không hợp lệ!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBoxEx.Show(@"Thông tin học sinh về" + strHoTen + " không hợp lệ!\n"
+                            +"Lớp không thuộc khối lớp đã chọn ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return false;
                         }
                     }
@@ -124,7 +125,7 @@ namespace QLDiemHSTHPT
                     String str = row.Cells[cellString].Value.ToString();
                     if (str == "")
                     {
-                        MessageBoxEx.Show(@"Thông tin học sinh về" + row.Cells["HoTen"].Value.ToString() + " không hợp lệ!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBoxEx.Show(@"Thông tin học sinh về" + row.Cells["HoTen"].Value.ToString() + " không được rỗng!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -140,6 +141,8 @@ namespace QLDiemHSTHPT
                 KiemTraTruocKhiLuu("HoTen") == true &&
                 KiemTraTruocKhiLuu("MaNamHoc") == true &&
                 KiemTraTruocKhiLuu("MaKhoiLop") == true &
+                isLopVaKhoiLop() == true &&
+                KiemTraTruocKhiLuu("DanToc") == true &&
                 KiemTraTruocKhiLuu("MaLop") == true)
             {
                     bindingNavigatorPositionItem.Focus();

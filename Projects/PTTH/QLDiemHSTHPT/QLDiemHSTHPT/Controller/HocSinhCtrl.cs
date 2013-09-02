@@ -16,7 +16,8 @@ namespace QLDiemHSTHPT.Controller
        HocSinhData m_HocSinhData = new HocSinhData();
        public bool isLopVaKhoiLop(String khoiLop, String lop)
        {
-           int i = m_HocSinhData.isLopVaKhoiLop(khoiLop, lop);
+           HocSinhData hocSinhData = new HocSinhData();
+           int i = hocSinhData.isLopVaKhoiLop(khoiLop, lop);
            if (i <= 0)
                return false;
            return true;
