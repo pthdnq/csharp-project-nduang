@@ -66,7 +66,17 @@ namespace QLDiemHSTHPT.DataLayer
        {
            DataService m_DData = new DataService();
 
-           SqlCommand cmd = new SqlCommand("INSERT INTO DIEM VALUES(@maHocSinh, @maMonHoc, @maHocKy, @maNamHoc, @maLop, @maLoaiDiem, @diemSo)");
+           SqlCommand cmd = new SqlCommand(@"
+
+            DELETE FROM DIEM 
+            WHERE maHocSinh = @maHocSinh 
+            and maMonHoc = @maMonHoc
+            and maHocKy = @maHocKy
+            and maNamHoc = @maNamHoc
+            and maLop = @maLop
+            and maLoaiDiem = @maLoaiDiem
+            ;
+            INSERT INTO DIEM VALUES(@maHocSinh, @maMonHoc, @maHocKy, @maNamHoc, @maLop, @maLoaiDiem, @diemSo)");
            cmd.Parameters.Add("maHocSinh", SqlDbType.VarChar).Value = maHocSinh;
            cmd.Parameters.Add("maMonHoc", SqlDbType.VarChar).Value = maMonHoc;
            cmd.Parameters.Add("maHocKy", SqlDbType.VarChar).Value = maHocKy;
