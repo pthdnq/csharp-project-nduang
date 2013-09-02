@@ -63,7 +63,7 @@ namespace QLDiemHSTHPT
             m_MonHocCtrl.HienThiComboBox(cmbMonhocCN);
             String strLoaiTaiKhoan = Utilities.NguoiDung.LoaiND.MaLoaiND.Trim();
             //tai khoan hoc sinh thi an nut luu diem
-            if (strLoaiTaiKhoan == "LND004")
+            if (strLoaiTaiKhoan != "LND002")
             {
                 bngluu.Visible = false;
             }
@@ -164,8 +164,6 @@ namespace QLDiemHSTHPT
                 {
                     countRowDiem++;
 
-                    //STT[countRowHocSinh, countRowDiem] = int.Parse(rowDiem["STT"].ToString());
-
                     if (rowDiem["MaLoaiDiem"].ToString() == "LD0001")
                         diemMieng[soDiemMieng++] = rowDiem["Diem"].ToString();
 
@@ -256,16 +254,16 @@ namespace QLDiemHSTHPT
                                             strMaMonHoc,
                                             strMaKhoaHoc
                                             );
-            if (OK == false)
-            {
-                MessageBoxEx.Show(@"Bạn không được phân công dạy lớp "
-                                    + strTenLop +
-                                    " môn " + strTenMonHoc +
-                                    " nên không có quyền cập nhật điểm"
-                    );
-                //thoat khoi ham
-                return;
-            }
+            //if (OK == false)
+            //{
+            //    MessageBoxEx.Show(@"Bạn không được phân công dạy lớp "
+            //                        + strTenLop +
+            //                        " môn " + strTenMonHoc +
+            //                        " nên không có quyền cập nhật điểm"
+            //        );
+            //    //thoat khoi ham
+            //    return;
+            //}
             updateSTT_Diem();
             if (KiemTraDiemTruocKhiLuu("DiemMieng") == true &&
                KiemTraDiemTruocKhiLuu("Diem15phut") == true &&
@@ -295,10 +293,8 @@ namespace QLDiemHSTHPT
                                 float[] mangDiem = quyDinh.StringToFloatArray(chuoiDiemChuaXuLy);
                                 DiemMieng = mangDiem;
                                 //lưu từng điểm miệng xuống cở sở dữ liệu
-                                for (int i = 0; i < mangDiem.Length; i++)
-                                {
-                                    LuuDiemThanhPhan(maHocSinh, strMaMonHoc, strMaHocKy, strMaKhoaHoc, strMaLop, "LD0001", mangDiem[i]);
-                                }
+
+                                LuuDiemThanhPhan(maHocSinh, strMaMonHoc, strMaHocKy, strMaKhoaHoc, strMaLop, "LD0001", chuoiDiemChuaXuLy);
                             }
                         }
 
@@ -312,10 +308,8 @@ namespace QLDiemHSTHPT
                                 float[] mangDiem = quyDinh.StringToFloatArray(chuoiDiemChuaXuLy);
                                 Diem15Phut = mangDiem;
                                 //lưu từng điểm miệng xuống cở sở dữ liệu
-                                for (int i = 0; i < mangDiem.Length; i++)
-                                {
-                                    LuuDiemThanhPhan(maHocSinh, strMaMonHoc, strMaHocKy, strMaKhoaHoc, strMaLop, "LD0002", mangDiem[i]);
-                                }
+
+                                LuuDiemThanhPhan(maHocSinh, strMaMonHoc, strMaHocKy, strMaKhoaHoc, strMaLop, "LD0002", chuoiDiemChuaXuLy);
                             }
                             
                         }
@@ -330,7 +324,7 @@ namespace QLDiemHSTHPT
                                 //lưu từng điểm miệng xuống cở sở dữ liệu
                                 for (int i = 0; i < mangDiem.Length; i++)
                                 {
-                                    LuuDiemThanhPhan(maHocSinh, strMaMonHoc, strMaHocKy, strMaKhoaHoc, strMaLop, "LD0003", mangDiem[i]);
+                                    LuuDiemThanhPhan(maHocSinh, strMaMonHoc, strMaHocKy, strMaKhoaHoc, strMaLop, "LD0003", chuoiDiemChuaXuLy);
                                 }
                             }
                         }
@@ -344,7 +338,7 @@ namespace QLDiemHSTHPT
                                 {
                                     float diem = float.Parse(diemThi);
                                     DiemThi = diem;
-                                    LuuDiemThanhPhan(maHocSinh, strMaMonHoc, strMaHocKy, strMaKhoaHoc, strMaLop, "LD0004", diem);
+                                    LuuDiemThanhPhan(maHocSinh, strMaMonHoc, strMaHocKy, strMaKhoaHoc, strMaLop, "LD0004", diemThi);
                                 }
                             }
                         }
@@ -359,7 +353,7 @@ namespace QLDiemHSTHPT
                                 {
                                     float diem = float.Parse(diemThi);
                                     DiemThiLai = diem;
-                                    LuuDiemThanhPhan(maHocSinh, strMaMonHoc, strMaHocKy, strMaKhoaHoc, strMaLop, "LD0005", diem);
+                                    LuuDiemThanhPhan(maHocSinh, strMaMonHoc, strMaHocKy, strMaKhoaHoc, strMaLop, "LD0005", diemThi);
                                 }
                             }
                         }
@@ -550,14 +544,14 @@ namespace QLDiemHSTHPT
         //Hàm này có nhiệm vụ lưu các điểm thành phần như: 
         //điểm 15 phút, miệng, 1 tiết, thi học kỳ, thi lại
         private void LuuDiemThanhPhan(
-                                String maHocSinh,//mã học sinh
-                                String maMonHoc,//mã môn học
-                                String maHocKy,//mã học kỳ
-                                String maNamHoc,//mã năm học
-                                String maLop,//mã lớp học
-                                String maLoaiDiem,//mã điểm miệng
-                                float diem //giá trị điểm
-                            )
+                                        String maHocSinh,//mã học sinh
+                                        String maMonHoc,//mã môn học
+                                        String maHocKy,//mã học kỳ
+                                        String maNamHoc,//mã năm học
+                                        String maLop,//mã lớp học
+                                        String maLoaiDiem,//mã điểm miệng
+                                        String diem //giá trị điểm dang "3;6;7.5" là chứa 3 điểm số
+                                     )
         {
             m_DiemCtrl.LuuDiem  (
                                 maHocSinh,//mã học sinh
