@@ -62,7 +62,7 @@ namespace QLDiemHSTHPT.DataLayer
            return m_DData;
        }
 
-       public void LuuDiem(String maHocSinh, String maMonHoc, String maHocKy, String maNamHoc, String maLop, String maLoaiDiem, float diemSo)
+       public void LuuDiem(String maHocSinh, String maMonHoc, String maHocKy, String maNamHoc, String maLop, String maLoaiDiem, String diemSo)
        {
            DataService m_DData = new DataService();
 
@@ -73,7 +73,7 @@ namespace QLDiemHSTHPT.DataLayer
            cmd.Parameters.Add("maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
            cmd.Parameters.Add("maLop", SqlDbType.VarChar).Value = maLop;
            cmd.Parameters.Add("maLoaiDiem", SqlDbType.VarChar).Value = maLoaiDiem;
-           cmd.Parameters.Add("diemSo", SqlDbType.Float).Value = Math.Round(diemSo, 2);
+           cmd.Parameters.Add("diemSo", SqlDbType.VarChar).Value = diemSo;
 
            m_DData.Load(cmd);
        }
