@@ -50,8 +50,7 @@ namespace QLDiemHSTHPT.DataLayer
        public DataTable LayDsHocSinhTheoMaOrHoTen(String namHoc, String lop, String maHSOrHoTen)
        {
            SqlCommand cmd = new SqlCommand("SELECT HS.MaHocSinh, HS.HoTen " +
-                                           "FROM HOCSINH HS /*INNER JOIN PHANLOP PL ON HS.MaHocSinh = PL.MaHocSinh*/ " +
-                                           "/*INNER JOIN LOP L ON L.MaLop = PL.MaLop */" +
+                                           "FROM HOCSINH HS  " +
                                            "WHERE HS.MaLop = @lop AND HS.MaNamHoc = @khoaHoc AND (HS.HoTen LIKE '%' + @maHSOrHoTen + '%' or HS.MaHocSinh LIKE '%' + @maHSOrHoTen + '%')  ");
            cmd.Parameters.Add("lop", SqlDbType.VarChar).Value = lop;
            cmd.Parameters.Add("khoaHoc", SqlDbType.VarChar).Value = namHoc;
@@ -148,14 +147,16 @@ namespace QLDiemHSTHPT.DataLayer
            m_HocSinhData.Load(cmd);
            return m_HocSinhData;
        }
-       public DataTable LayDsHocSinhTheoLopChoCapNhatHanhKiem(String maNamHoc, String malop, String maHocKy)
+       public DataTable LayDsHocSinhTheoLopChoCapNhatHanhKiem(String maHSOrhoTenHS, String maNamHoc, String malop, String maHocKy)
        {
            SqlCommand cmd = new SqlCommand();
            cmd.CommandType = CommandType.StoredProcedure;
            cmd.CommandText = "sp_LayDsHocSinhTheoLopChoCapNhatHanhKiem";
+           cmd.Parameters.Add("maHSOrhoTenHS", SqlDbType.VarChar).Value = maHSOrhoTenHS;
            cmd.Parameters.Add("malop", SqlDbType.VarChar).Value = malop;
            cmd.Parameters.Add("maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
            cmd.Parameters.Add("maHocKy", SqlDbType.VarChar).Value = maHocKy;
+
 
            m_HocSinhData.Load(cmd);
            return m_HocSinhData;

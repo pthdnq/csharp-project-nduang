@@ -739,5 +739,16 @@ namespace QLDiemHSTHPT
             }
             else m_XepLoaiHS.Activate();
         }
+
+        private void btnXepLoaiHS_Click(object sender, EventArgs e)
+        {
+            if (m_XepLoaiHS == null || m_XepLoaiHS.IsDisposed)
+            {
+                m_XepLoaiHS = new frmXepLoaiHS();
+                m_XepLoaiHS.MdiParent = frmMain.ActiveForm;
+                m_XepLoaiHS.Show();
+            }
+            else m_XepLoaiHS.Activate();
+        }
     }
 }

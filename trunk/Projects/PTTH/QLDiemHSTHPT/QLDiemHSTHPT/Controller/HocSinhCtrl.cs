@@ -93,14 +93,11 @@ namespace QLDiemHSTHPT.Controller
            )
        {
            BindingSource bS = new BindingSource();
-           if (maHSOrhoTenHS == "")
-               bS.DataSource = m_HocSinhData.LayDsHocSinhTheoLopChoCapNhatHanhKiem(
+           bS.DataSource = m_HocSinhData.LayDsHocSinhTheoLopChoCapNhatHanhKiem(maHSOrhoTenHS,
                                                                                 namHoc,
                                                                                 maLop, 
                                                                                 maHocKy
                                                                                 );
-           //else
-           //    bS.DataSource = m_HocSinhData.LayDsHocSinhTheoMaOrHoTen(namHoc, lop, maHSOrhoTenHS);
            bN.BindingSource = bS;
            dGV.DataSource = bS;
        

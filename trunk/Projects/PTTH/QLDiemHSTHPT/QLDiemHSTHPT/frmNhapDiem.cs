@@ -30,7 +30,24 @@ namespace QLDiemHSTHPT
         //MonHocCtrl m_MonHocCtrl = new MonHocCtrl();
 
         DiemData m_DiemData = new DiemData();
+
+        String strMaLop = "";
+        String strTenLop = "";
+        String strMaMonHoc ="";
+        String strTenMonHoc = "";
+        String strMaKhoaHoc = "";
+        String strMaHocKy = "";
         int[,] STT = null;
+        public void CapNhatDuLieuTrenGiaoDien()
+        {
+            
+            strMaLop = cmbLopCN.SelectedValue.ToString().Trim();
+            strTenLop = cmbLopCN.Text.Trim();
+            strMaMonHoc = cmbMonhocCN.SelectedValue.ToString().Trim();
+            strTenMonHoc = cmbMonhocCN.Text.Trim();
+            strMaKhoaHoc = cmbNanhocCN.SelectedValue.ToString().Trim();
+            strMaHocKy = cmbHockyCN.SelectedValue.ToString().Trim();
+        }
         public frmNhapDiem()
         {
             InitializeComponent();
@@ -208,6 +225,7 @@ namespace QLDiemHSTHPT
         }
         private void updateSTT_Diem()
         {
+            CapNhatDuLieuTrenGiaoDien();
             STT = new int[60, 200];
             dgvNhapdiemchung.EndEdit();
             int countRowHocSinh = 0;
@@ -215,10 +233,10 @@ namespace QLDiemHSTHPT
             {
                 countRowHocSinh++;
                 DataTable m_DT = m_DiemData.LayDsDiemHocSinh(rowHocSinh.Cells["MaHocSinh"].Value.ToString(),
-                                                      cmbMonhocCN.SelectedValue.ToString(),
-                                                      cmbHockyCN.SelectedValue.ToString(),
-                                                      cmbNanhocCN.SelectedValue.ToString(),
-                                                      cmbLopCN.SelectedValue.ToString());
+                                                      strMaMonHoc,
+                                                      strMaHocKy,
+                                                      strMaKhoaHoc,
+                                                      strMaLop);
 
                 int countRowDiem = 0;
                 foreach (DataRow rowDiem in m_DT.Rows)
@@ -231,28 +249,23 @@ namespace QLDiemHSTHPT
         }
         private void bngluu_Click_1(object sender, EventArgs e)
         {
+            CapNhatDuLieuTrenGiaoDien();
             String strTenDangNhap = Utilities.NguoiDung.TenDangNhap.Trim();
-            String strMaLop = cmbLopCN.SelectedValue.ToString().Trim();
-            String strTenLop = cmbLopCN.Text.Trim();
-            String strMaMonHoc = cmbMonhocCN.SelectedValue.ToString().Trim();
-            String strTenMonHoc = cmbMonhocCN.Text.Trim();
-            String strMaKhoaHoc = cmbNanhocCN.SelectedValue.ToString().Trim();
-            String strMaHocKy =cmbHockyCN.SelectedValue.ToString().Trim();
             bool OK = m_PhanCongCtrl.isDuocPhepSuaDiem(strTenDangNhap,
                                             strMaLop,
                                             strMaMonHoc,
                                             strMaKhoaHoc
                                             );
-            //if (OK == false)
-            //{
-            //    MessageBoxEx.Show(@"Bạn không được phân công dạy lớp "
-            //                        + strTenLop +
-            //                        " môn " + strTenMonHoc +
-            //                        " nên không có quyền cập nhật điểm"
-            //        );
-            //    //thoat khoi ham
-            //    return;
-            //}
+            if (OK == false)
+            {
+                MessageBoxEx.Show(@"Bạn không được phân công dạy lớp "
+                                    + strTenLop +
+                                    " môn " + strTenMonHoc +
+                                    " nên không có quyền cập nhật điểm"
+                    );
+                //thoat khoi ham
+                return;
+            }
             updateSTT_Diem();
             if (KiemTraDiemTruocKhiLuu("DiemMieng") == true &&
                KiemTraDiemTruocKhiLuu("Diem15phut") == true &&
@@ -358,9 +371,6 @@ namespace QLDiemHSTHPT
                             try
                             {
                                 diemTBMonHK = TinhDiemTrungBinhMon(DiemMieng, Diem15Phut, Diem1Tiet, DiemThi, DiemThiLai);
-                                //if (row.Cells["DTBHKMonHoc"].Value != null)
-                                //    diemTBMonHK = float.Parse(row.Cells["DTBHKMonHoc"].Value.ToString());
-                                //diemTBMonHK = (float)Math.Round(diemTBMonHK, 2);
                                 m_KQHocKyMonHocCtrl.LuuKetQua(row.Cells["MaHocSinh"].Value.ToString(),
                                                               cmbLopCN.SelectedValue.ToString(),
                                                               cmbMonhocCN.SelectedValue.ToString(),
