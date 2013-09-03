@@ -419,6 +419,7 @@ namespace QLDiemHSTHPT
             //btnXemDiemRieng.Enabled = false;
             btnDiem.Enabled = false;
             btnPhanCongGV.Enabled = false;
+            btnXepLoaiHS.Enabled = false;
         }
 
         public void BGH()
@@ -428,6 +429,7 @@ namespace QLDiemHSTHPT
             buttonItem30.Enabled = false;
 
             //True
+            btnXepLoaiHS.Enabled = true;
             buttondangxuat.Enabled = true;
             buttonItem29.Enabled = true;
             buttonthoat.Enabled = true;
@@ -533,6 +535,7 @@ namespace QLDiemHSTHPT
             //toolStripMenuItem77.Enabled = false;
             buttondangnhap.Enabled = false;
             btnPhanCongGV.Enabled = false;
+            btnXepLoaiHS.Enabled = true;
         }
 
         frmXepLoaiHS m_XepLoaiHanhKiemHS = null;
