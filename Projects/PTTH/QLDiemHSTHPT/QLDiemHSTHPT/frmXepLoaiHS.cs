@@ -71,9 +71,6 @@ namespace QLDiemHSTHPT
             }
         }
 
-        private void buttonX7_Click(object sender, EventArgs e)
-        {
-        }
         private void HienThiDSHanhKiemHS()
         {
             if (cmbKhoaHoc.SelectedValue != null && cmbLop.SelectedValue != null && cmbHocky.SelectedValue != null && cmbKhoaHoc.SelectedValue != null)
