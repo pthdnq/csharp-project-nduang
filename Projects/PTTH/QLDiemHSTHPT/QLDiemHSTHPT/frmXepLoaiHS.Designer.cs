@@ -184,7 +184,6 @@ namespace QLDiemHSTHPT
             this.cmbHocky.Name = "cmbHocky";
             this.cmbHocky.Size = new System.Drawing.Size(121, 21);
             this.cmbHocky.TabIndex = 40;
-            this.cmbHocky.SelectedIndexChanged += new System.EventHandler(this.cmbHocky_SelectedIndexChanged);
             // 
             // labelX5
             // 
