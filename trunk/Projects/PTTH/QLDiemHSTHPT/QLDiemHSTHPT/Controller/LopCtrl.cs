@@ -211,6 +211,11 @@ namespace QLDiemHSTHPT.Controller
         {
             m_LopData.TimTheoTen(m_TenLop);
         }
+        public bool isGiaoVienChuNhiem(String strMaGiaoVien, String strMaLop, String strMaKhoaHoc)
+        {
+            bool kq = m_LopData.isGiaoVienChuNhiem(strMaGiaoVien, strMaLop, strMaKhoaHoc);
+            return kq;
+        }
 
 
     }

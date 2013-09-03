@@ -98,5 +98,18 @@ namespace QLDiemHSTHPT.DataLayer
             m_LopData.Load(cmd);
             return m_LopData;
         }
+       public bool isGiaoVienChuNhiem(String strMaGiaoVien, String strMaLop, String strMaKhoaHoc)
+       {
+           DataService m_LopData_ = new DataService();
+           SqlCommand cmd = new SqlCommand(@"SELECT * FROM LOP 
+                                            WHERE MaLop = @MaLop 
+                                            and   MaNamHoc  = @MaNamHoc
+                                            and MaGiaoVien = @MaGiaoVien");
+           cmd.Parameters.Add("MaLop", SqlDbType.VarChar).Value = strMaLop;
+           cmd.Parameters.Add("MaNamHoc", SqlDbType.VarChar).Value = strMaKhoaHoc;
+           cmd.Parameters.Add("MaGiaoVien", SqlDbType.VarChar).Value = strMaGiaoVien;
+           m_LopData_.Load(cmd);
+           return m_LopData.Rows.Count>0;
+       }
     }
 }
