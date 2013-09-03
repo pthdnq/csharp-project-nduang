@@ -13,7 +13,7 @@ namespace QLDiemHSTHPT.DataLayer
        DataService m_HocSinhData = new DataService();
        public int isLopVaKhoiLop(String maKhoiLop, String malop)
        {
-           SqlCommand cmd = new SqlCommand(@"SELECT * FROM  HOCSINH 
+           SqlCommand cmd = new SqlCommand(@"SELECT * FROM  LOP 
                 WHERE MaLop = @malop and makhoiLop = @makhoiLop");
            cmd.Parameters.Add("malop", SqlDbType.VarChar).Value = malop;
            cmd.Parameters.Add("maKhoiLop", SqlDbType.VarChar).Value = maKhoiLop;

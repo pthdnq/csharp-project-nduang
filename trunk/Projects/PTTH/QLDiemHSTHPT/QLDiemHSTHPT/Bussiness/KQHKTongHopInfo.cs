@@ -48,6 +48,12 @@ namespace QLDiemHSTHPT.Bussiness
            get { return m_DTBMonHocKy; }
            set { m_DTBMonHocKy = value; }
        }
+       private String m_DanhHieuHS;
+       public String DanhHieuHS
+       {
+           get { return m_DanhHieuHS; }
+           set { m_DanhHieuHS = value; }       
+       }
 
     
    
