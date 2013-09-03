@@ -44,19 +44,26 @@ namespace QLDiemHSTHPT
             this.nvgPanelGiaoVien = new DevComponents.DotNetBar.NavigationPane();
             this.ngvPanelTimKiem = new DevComponents.DotNetBar.NavigationPanePanel();
             this.txtMaHS_Or_hoTenHS = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.cmbLopCN = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cmbLop = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.cmbHockyCN = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cmbHocky = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
-            this.cmbMonhocCN = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cmbMonhoc = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.btnHienthiDS = new DevComponents.DotNetBar.ButtonX();
-            this.cmbNanhocCN = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cmbKhoaHoc = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.btnCNdiem = new DevComponents.DotNetBar.ButtonItem();
             this.groupBoxDsgv = new System.Windows.Forms.GroupBox();
             this.dgvNhapdiem = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.MaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemMieng = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diem15phut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diem1tiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemThiLai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bdgNhapdiemchung = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -72,13 +79,6 @@ namespace QLDiemHSTHPT
             this.bngthoat = new System.Windows.Forms.ToolStripButton();
             this.btnCapnhatdiem = new DevComponents.DotNetBar.ButtonItem();
             this.btnNhapdiem = new DevComponents.DotNetBar.ButtonItem();
-            this.MaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemMieng = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diem15phut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diem1tiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemThiLai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nvgPanelGiaoVien.SuspendLayout();
             this.ngvPanelTimKiem.SuspendLayout();
             this.groupBoxDsgv.SuspendLayout();
@@ -128,15 +128,15 @@ namespace QLDiemHSTHPT
             // 
             this.ngvPanelTimKiem.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.ngvPanelTimKiem.Controls.Add(this.txtMaHS_Or_hoTenHS);
-            this.ngvPanelTimKiem.Controls.Add(this.cmbLopCN);
+            this.ngvPanelTimKiem.Controls.Add(this.cmbLop);
             this.ngvPanelTimKiem.Controls.Add(this.labelX4);
-            this.ngvPanelTimKiem.Controls.Add(this.cmbHockyCN);
+            this.ngvPanelTimKiem.Controls.Add(this.cmbHocky);
             this.ngvPanelTimKiem.Controls.Add(this.labelX5);
-            this.ngvPanelTimKiem.Controls.Add(this.cmbMonhocCN);
+            this.ngvPanelTimKiem.Controls.Add(this.cmbMonhoc);
             this.ngvPanelTimKiem.Controls.Add(this.labelX1);
             this.ngvPanelTimKiem.Controls.Add(this.labelX6);
             this.ngvPanelTimKiem.Controls.Add(this.btnHienthiDS);
-            this.ngvPanelTimKiem.Controls.Add(this.cmbNanhocCN);
+            this.ngvPanelTimKiem.Controls.Add(this.cmbKhoaHoc);
             this.ngvPanelTimKiem.Controls.Add(this.labelX7);
             this.ngvPanelTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ngvPanelTimKiem.Location = new System.Drawing.Point(1, 25);
@@ -164,18 +164,18 @@ namespace QLDiemHSTHPT
             this.txtMaHS_Or_hoTenHS.TabIndex = 44;
             this.txtMaHS_Or_hoTenHS.WatermarkText = "Nhập thông tin cần tìm";
             // 
-            // cmbLopCN
+            // cmbLop
             // 
-            this.cmbLopCN.DisplayMember = "Text";
-            this.cmbLopCN.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbLopCN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLopCN.FormattingEnabled = true;
-            this.cmbLopCN.ItemHeight = 15;
-            this.cmbLopCN.Location = new System.Drawing.Point(26, 86);
-            this.cmbLopCN.Name = "cmbLopCN";
-            this.cmbLopCN.Size = new System.Drawing.Size(121, 21);
-            this.cmbLopCN.TabIndex = 43;
-            this.cmbLopCN.SelectedIndexChanged += new System.EventHandler(this.cmbLopCN_SelectedIndexChanged);
+            this.cmbLop.DisplayMember = "Text";
+            this.cmbLop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLop.FormattingEnabled = true;
+            this.cmbLop.ItemHeight = 15;
+            this.cmbLop.Location = new System.Drawing.Point(26, 86);
+            this.cmbLop.Name = "cmbLop";
+            this.cmbLop.Size = new System.Drawing.Size(121, 21);
+            this.cmbLop.TabIndex = 43;
+            this.cmbLop.SelectedIndexChanged += new System.EventHandler(this.cmbLopCN_SelectedIndexChanged);
             // 
             // labelX4
             // 
@@ -185,17 +185,17 @@ namespace QLDiemHSTHPT
             this.labelX4.TabIndex = 42;
             this.labelX4.Text = "Lớp:";
             // 
-            // cmbHockyCN
+            // cmbHocky
             // 
-            this.cmbHockyCN.DisplayMember = "Text";
-            this.cmbHockyCN.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbHockyCN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbHockyCN.FormattingEnabled = true;
-            this.cmbHockyCN.ItemHeight = 15;
-            this.cmbHockyCN.Location = new System.Drawing.Point(26, 132);
-            this.cmbHockyCN.Name = "cmbHockyCN";
-            this.cmbHockyCN.Size = new System.Drawing.Size(121, 21);
-            this.cmbHockyCN.TabIndex = 40;
+            this.cmbHocky.DisplayMember = "Text";
+            this.cmbHocky.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbHocky.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbHocky.FormattingEnabled = true;
+            this.cmbHocky.ItemHeight = 15;
+            this.cmbHocky.Location = new System.Drawing.Point(26, 132);
+            this.cmbHocky.Name = "cmbHocky";
+            this.cmbHocky.Size = new System.Drawing.Size(121, 21);
+            this.cmbHocky.TabIndex = 40;
             // 
             // labelX5
             // 
@@ -205,18 +205,19 @@ namespace QLDiemHSTHPT
             this.labelX5.TabIndex = 39;
             this.labelX5.Text = "Học kỳ:";
             // 
-            // cmbMonhocCN
+            // cmbMonhoc
             // 
-            this.cmbMonhocCN.DisplayMember = "Text";
-            this.cmbMonhocCN.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbMonhocCN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMonhocCN.FormattingEnabled = true;
-            this.cmbMonhocCN.ItemHeight = 15;
-            this.cmbMonhocCN.Location = new System.Drawing.Point(26, 177);
-            this.cmbMonhocCN.Name = "cmbMonhocCN";
-            this.cmbMonhocCN.Size = new System.Drawing.Size(121, 21);
-            this.cmbMonhocCN.TabIndex = 37;
-            this.cmbMonhocCN.Click += new System.EventHandler(this.cmbMonhocCN_Click);
+            this.cmbMonhoc.DisplayMember = "Text";
+            this.cmbMonhoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbMonhoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMonhoc.FormattingEnabled = true;
+            this.cmbMonhoc.ItemHeight = 15;
+            this.cmbMonhoc.Location = new System.Drawing.Point(26, 177);
+            this.cmbMonhoc.Name = "cmbMonhoc";
+            this.cmbMonhoc.Size = new System.Drawing.Size(121, 21);
+            this.cmbMonhoc.TabIndex = 37;
+            this.cmbMonhoc.SelectedIndexChanged += new System.EventHandler(this.cmbMonhoc_SelectedIndexChanged);
+            this.cmbMonhoc.Click += new System.EventHandler(this.cmbMonhocCN_Click);
             // 
             // labelX1
             // 
@@ -245,18 +246,18 @@ namespace QLDiemHSTHPT
             this.btnHienthiDS.Text = "Hiển thị danh sách";
             this.btnHienthiDS.Click += new System.EventHandler(this.btnHienthiDS_Click);
             // 
-            // cmbNanhocCN
+            // cmbKhoaHoc
             // 
-            this.cmbNanhocCN.DisplayMember = "Text";
-            this.cmbNanhocCN.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbNanhocCN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbNanhocCN.FormattingEnabled = true;
-            this.cmbNanhocCN.ItemHeight = 15;
-            this.cmbNanhocCN.Location = new System.Drawing.Point(26, 35);
-            this.cmbNanhocCN.Name = "cmbNanhocCN";
-            this.cmbNanhocCN.Size = new System.Drawing.Size(121, 21);
-            this.cmbNanhocCN.TabIndex = 33;
-            this.cmbNanhocCN.SelectedIndexChanged += new System.EventHandler(this.cmbNanhocCN_SelectedIndexChanged);
+            this.cmbKhoaHoc.DisplayMember = "Text";
+            this.cmbKhoaHoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbKhoaHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKhoaHoc.FormattingEnabled = true;
+            this.cmbKhoaHoc.ItemHeight = 15;
+            this.cmbKhoaHoc.Location = new System.Drawing.Point(26, 35);
+            this.cmbKhoaHoc.Name = "cmbKhoaHoc";
+            this.cmbKhoaHoc.Size = new System.Drawing.Size(121, 21);
+            this.cmbKhoaHoc.TabIndex = 33;
+            this.cmbKhoaHoc.SelectedIndexChanged += new System.EventHandler(this.cmbNanhocCN_SelectedIndexChanged);
             // 
             // labelX7
             // 
@@ -337,6 +338,72 @@ namespace QLDiemHSTHPT
             this.dgvNhapdiem.TabIndex = 6;
             this.dgvNhapdiem.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvNhapdiemchung_CellBeginEdit);
             this.dgvNhapdiem.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvNhapdiemchung_DataError);
+            // 
+            // MaHocSinh
+            // 
+            this.MaHocSinh.DataPropertyName = "MaHocSinh";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaHocSinh.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MaHocSinh.HeaderText = "Mã Học Sinh";
+            this.MaHocSinh.Name = "MaHocSinh";
+            this.MaHocSinh.ReadOnly = true;
+            this.MaHocSinh.Width = 130;
+            // 
+            // HoTen
+            // 
+            this.HoTen.DataPropertyName = "HoTen";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoTen.DefaultCellStyle = dataGridViewCellStyle4;
+            this.HoTen.HeaderText = "Tên Học Sinh";
+            this.HoTen.Name = "HoTen";
+            this.HoTen.ReadOnly = true;
+            this.HoTen.Width = 150;
+            // 
+            // DiemMieng
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Format = "N1";
+            this.DiemMieng.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DiemMieng.HeaderText = "Điểm Miệng";
+            this.DiemMieng.Name = "DiemMieng";
+            // 
+            // Diem15phut
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Format = "N1";
+            dataGridViewCellStyle6.NullValue = null;
+            this.Diem15phut.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Diem15phut.HeaderText = "Điểm 15 phút";
+            this.Diem15phut.Name = "Diem15phut";
+            // 
+            // Diem1tiet
+            // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.Format = "N1";
+            dataGridViewCellStyle7.NullValue = null;
+            this.Diem1tiet.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Diem1tiet.HeaderText = "Điểm 1 tiết";
+            this.Diem1tiet.Name = "Diem1tiet";
+            this.Diem1tiet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Diem1tiet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // DiemThi
+            // 
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Format = "N1";
+            dataGridViewCellStyle8.NullValue = null;
+            this.DiemThi.DefaultCellStyle = dataGridViewCellStyle8;
+            this.DiemThi.HeaderText = "Điểm Thi";
+            this.DiemThi.Name = "DiemThi";
+            // 
+            // DiemThiLai
+            // 
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.Format = "N2";
+            dataGridViewCellStyle9.NullValue = null;
+            this.DiemThiLai.DefaultCellStyle = dataGridViewCellStyle9;
+            this.DiemThiLai.HeaderText = "Điểm Thi Lại";
+            this.DiemThiLai.Name = "DiemThiLai";
             // 
             // bdgNhapdiemchung
             // 
@@ -482,72 +549,6 @@ namespace QLDiemHSTHPT
             this.btnNhapdiem.OptionGroup = "navBar";
             this.btnNhapdiem.Text = "Nhập điểm học sinh";
             // 
-            // MaHocSinh
-            // 
-            this.MaHocSinh.DataPropertyName = "MaHocSinh";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaHocSinh.DefaultCellStyle = dataGridViewCellStyle3;
-            this.MaHocSinh.HeaderText = "Mã Học Sinh";
-            this.MaHocSinh.Name = "MaHocSinh";
-            this.MaHocSinh.ReadOnly = true;
-            this.MaHocSinh.Width = 130;
-            // 
-            // HoTen
-            // 
-            this.HoTen.DataPropertyName = "HoTen";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HoTen.DefaultCellStyle = dataGridViewCellStyle4;
-            this.HoTen.HeaderText = "Tên Học Sinh";
-            this.HoTen.Name = "HoTen";
-            this.HoTen.ReadOnly = true;
-            this.HoTen.Width = 150;
-            // 
-            // DiemMieng
-            // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.Format = "N1";
-            this.DiemMieng.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DiemMieng.HeaderText = "Điểm Miệng";
-            this.DiemMieng.Name = "DiemMieng";
-            // 
-            // Diem15phut
-            // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.Format = "N1";
-            dataGridViewCellStyle6.NullValue = null;
-            this.Diem15phut.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Diem15phut.HeaderText = "Điểm 15 phút";
-            this.Diem15phut.Name = "Diem15phut";
-            // 
-            // Diem1tiet
-            // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.Format = "N1";
-            dataGridViewCellStyle7.NullValue = null;
-            this.Diem1tiet.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Diem1tiet.HeaderText = "Điểm 1 tiết";
-            this.Diem1tiet.Name = "Diem1tiet";
-            this.Diem1tiet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Diem1tiet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // DiemThi
-            // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.Format = "N1";
-            dataGridViewCellStyle8.NullValue = null;
-            this.DiemThi.DefaultCellStyle = dataGridViewCellStyle8;
-            this.DiemThi.HeaderText = "Điểm Thi";
-            this.DiemThi.Name = "DiemThi";
-            // 
-            // DiemThiLai
-            // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.Format = "N2";
-            dataGridViewCellStyle9.NullValue = null;
-            this.DiemThiLai.DefaultCellStyle = dataGridViewCellStyle9;
-            this.DiemThiLai.HeaderText = "Điểm Thi Lại";
-            this.DiemThiLai.Name = "DiemThiLai";
-            // 
             // frmNhapDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -595,14 +596,14 @@ namespace QLDiemHSTHPT
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton bngluu;
         private System.Windows.Forms.ToolStripButton bngthoat;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbLopCN;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbLop;
         private DevComponents.DotNetBar.LabelX labelX4;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbHockyCN;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbHocky;
         private DevComponents.DotNetBar.LabelX labelX5;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbMonhocCN;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbMonhoc;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.ButtonX btnHienthiDS;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbNanhocCN;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbKhoaHoc;
         private DevComponents.DotNetBar.LabelX labelX7;
         private System.Windows.Forms.ToolStripButton btnRefresh;
         private DevComponents.DotNetBar.Controls.TextBoxX txtMaHS_Or_hoTenHS;

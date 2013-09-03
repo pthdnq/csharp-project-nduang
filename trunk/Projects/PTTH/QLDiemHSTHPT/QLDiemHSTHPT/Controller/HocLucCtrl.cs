@@ -144,7 +144,7 @@ namespace QLDiemHSTHPT.Controller
                 break;
             }
             //Lấy ra mã ban theo mã lớp - END
-            float diemTBChungCacMonHK = (float)Math.Round(m_DiemCtrl.DiemTrungBinhChungCacMonHocKy(maHocSinh, maLop, maHocKy, maNamHoc), 2);
+            float diemTBChungCacMonHK = (float)Math.Round(m_DiemCtrl.tinhDiemTrungBinhChungCacMonHocKy(maHocSinh, maLop, maHocKy, maNamHoc), 2);
             DataTable m_DiemTBHKMonHoc = m_KQHKMonHocData.LayDsKQHocKyMonHocTheoBan(maHocSinh, maLop, maHocKy, maNamHoc);
             HocLucData m_HLData = new HocLucData();
             DataTable m_DT_DS_HocLuc = m_HLData.LayDsHocLuc();
