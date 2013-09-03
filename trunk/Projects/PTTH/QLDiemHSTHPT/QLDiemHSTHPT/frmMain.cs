@@ -459,8 +459,10 @@ namespace QLDiemHSTHPT
             toolStripMenuItem63.Enabled = true;
             toolStripMenuItem81.Enabled = true;
             btnDiem.Enabled = true;
+            btnXepLoaiHS.Enabled = true;
 
             //False
+            
             buttondangnhap.Enabled = false;
             buttonItem30.Enabled = false;
             buttonItem31.Enabled = true;

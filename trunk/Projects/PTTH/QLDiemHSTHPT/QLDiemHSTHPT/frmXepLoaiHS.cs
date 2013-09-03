@@ -87,6 +87,7 @@ namespace QLDiemHSTHPT
             //Chỉ giáo viên chủ nhiệm mới được sửa hạnh kiểm
             try
             {
+                String strTenDangNhap = Utilities.NguoiDung.TenDangNhap;
                 bool ok = m_LopCtrl.isGiaoVienChuNhiem(strTenDangNhap,
                                             cmbLop.SelectedValue.ToString(),
                                             cmbKhoaHoc.SelectedValue.ToString());
