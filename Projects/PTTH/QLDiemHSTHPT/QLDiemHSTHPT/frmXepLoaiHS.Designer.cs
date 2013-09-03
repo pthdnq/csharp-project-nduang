@@ -50,6 +50,10 @@ namespace QLDiemHSTHPT
             this.btnCNdiem = new DevComponents.DotNetBar.ButtonItem();
             this.groupBoxDsHanhKiem = new System.Windows.Forms.GroupBox();
             this.dgvXepLoaiHanhKiem = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.MaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHocLuc = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.MaHanhKiem = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bdgXepHanhKiemHS = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -65,10 +69,6 @@ namespace QLDiemHSTHPT
             this.bngthoat = new System.Windows.Forms.ToolStripButton();
             this.btnCapnhatdiem = new DevComponents.DotNetBar.ButtonItem();
             this.btnNhapdiem = new DevComponents.DotNetBar.ButtonItem();
-            this.MaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaHocLuc = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.MaHanhKiem = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.nvgPanelGiaoVien.SuspendLayout();
             this.ngvPanelTimKiem.SuspendLayout();
             this.groupBoxDsHanhKiem.SuspendLayout();
@@ -184,6 +184,7 @@ namespace QLDiemHSTHPT
             this.cmbHocky.Name = "cmbHocky";
             this.cmbHocky.Size = new System.Drawing.Size(121, 21);
             this.cmbHocky.TabIndex = 40;
+            this.cmbHocky.SelectedIndexChanged += new System.EventHandler(this.cmbHocky_SelectedIndexChanged);
             // 
             // labelX5
             // 
@@ -301,6 +302,43 @@ namespace QLDiemHSTHPT
             this.dgvXepLoaiHanhKiem.TabIndex = 6;
             this.dgvXepLoaiHanhKiem.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvXepLoaiHanhKiem_CellBeginEdit);
             this.dgvXepLoaiHanhKiem.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvXepLoaiHanhKiem_DataError);
+            // 
+            // MaHocSinh
+            // 
+            this.MaHocSinh.DataPropertyName = "MaHocSinh";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaHocSinh.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MaHocSinh.HeaderText = "Mã Học Sinh";
+            this.MaHocSinh.Name = "MaHocSinh";
+            this.MaHocSinh.ReadOnly = true;
+            this.MaHocSinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaHocSinh.Width = 130;
+            // 
+            // HoTen
+            // 
+            this.HoTen.DataPropertyName = "HoTen";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoTen.DefaultCellStyle = dataGridViewCellStyle4;
+            this.HoTen.HeaderText = "Học Sinh";
+            this.HoTen.Name = "HoTen";
+            this.HoTen.ReadOnly = true;
+            this.HoTen.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.HoTen.Width = 150;
+            // 
+            // MaHocLuc
+            // 
+            this.MaHocLuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaHocLuc.HeaderText = "Học Lực";
+            this.MaHocLuc.Name = "MaHocLuc";
+            this.MaHocLuc.ReadOnly = true;
+            this.MaHocLuc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaHocLuc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // MaHanhKiem
+            // 
+            this.MaHanhKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaHanhKiem.HeaderText = "Hạnh Kiểm";
+            this.MaHanhKiem.Name = "MaHanhKiem";
             // 
             // bdgXepHanhKiemHS
             // 
@@ -445,43 +483,6 @@ namespace QLDiemHSTHPT
             this.btnNhapdiem.Name = "btnNhapdiem";
             this.btnNhapdiem.OptionGroup = "navBar";
             this.btnNhapdiem.Text = "Nhập điểm học sinh";
-            // 
-            // MaHocSinh
-            // 
-            this.MaHocSinh.DataPropertyName = "MaHocSinh";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaHocSinh.DefaultCellStyle = dataGridViewCellStyle3;
-            this.MaHocSinh.HeaderText = "Mã Học Sinh";
-            this.MaHocSinh.Name = "MaHocSinh";
-            this.MaHocSinh.ReadOnly = true;
-            this.MaHocSinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaHocSinh.Width = 130;
-            // 
-            // HoTen
-            // 
-            this.HoTen.DataPropertyName = "HoTen";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HoTen.DefaultCellStyle = dataGridViewCellStyle4;
-            this.HoTen.HeaderText = "Học Sinh";
-            this.HoTen.Name = "HoTen";
-            this.HoTen.ReadOnly = true;
-            this.HoTen.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.HoTen.Width = 150;
-            // 
-            // MaHocLuc
-            // 
-            this.MaHocLuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MaHocLuc.HeaderText = "Học Lực";
-            this.MaHocLuc.Name = "MaHocLuc";
-            this.MaHocLuc.ReadOnly = true;
-            this.MaHocLuc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaHocLuc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // MaHanhKiem
-            // 
-            this.MaHanhKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MaHanhKiem.HeaderText = "Hạnh Kiểm";
-            this.MaHanhKiem.Name = "MaHanhKiem";
             // 
             // frmXepLoaiHS
             // 

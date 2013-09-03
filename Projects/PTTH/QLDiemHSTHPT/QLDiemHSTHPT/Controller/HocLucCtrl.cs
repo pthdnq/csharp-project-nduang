@@ -135,6 +135,7 @@ namespace QLDiemHSTHPT.Controller
         }
         public String XepLoaiHLHocKy(String maHocSinh, String maLop, String maHocKy, String maNamHoc)
         {
+            Console.WriteLine(@"Ma hoc sinh: " + maHocSinh + "  co ma hoc luc: ...Enter");
             //Lấy ra mã ban theo mã lớp - BEGIN
             string strBan = "CHUA_PHAN_BAN";
             DataTable m_DT_BAN = m_LopData.TimTheoMa(maLop);
@@ -148,9 +149,11 @@ namespace QLDiemHSTHPT.Controller
             DataTable m_DiemTBHKMonHoc = m_KQHKMonHocData.LayDsKQHocKyMonHocTheoBan(maHocSinh, maLop, maHocKy, maNamHoc);
             HocLucData m_HLData = new HocLucData();
             DataTable m_DT_DS_HocLuc = m_HLData.LayDsHocLuc();
+            String maHocLucHienTai = "";
             foreach (DataRow row in m_DT_DS_HocLuc.Rows)
             {
                 String maHocLuc = row["MaHocLuc"].ToString();
+               // maHocLucHienTai = maHocLuc;
                 float diemCanTren = float.Parse(row["DiemCanTren"].ToString());
                 float diemCanDuoi = float.Parse(row["DiemCanDuoi"].ToString());
                 float diemKhongChe = float.Parse(row["diemKhongChe"].ToString());
@@ -158,30 +161,39 @@ namespace QLDiemHSTHPT.Controller
                 //điểm nằm trong khoảng giới hạn
                 {
 
-                   // if (isThoaManDKKhac(strBan, diemCanDuoi, diemKhongChe, m_DiemTBHKMonHoc))
-
-                        return maHocLuc;
-                    //else
-                       // continue;
-                }
-                else
-                {
-                    continue;
+                    if (!isThoaManDKKhac(strBan, diemCanDuoi, diemKhongChe, m_DiemTBHKMonHoc))
+                    {
+                        //in ra để dò lỗi
+                        Console.WriteLine(@"Ma hoc sinh: " + maHocSinh + " ko  co ma hoc luc: " + maHocLuc);
+                        continue;
+                    }
+                    else
+                    {
+                        maHocLucHienTai = maHocLuc;
+                    }
                 }
                 
             }
-            return "";
+            //in ra để dò lỗi
+            Console.WriteLine(@"Ma hoc sinh: "+maHocSinh+"  co ma hoc luc: null...Exit");
+            return maHocLucHienTai;
         }
         public bool isThoaManDKKhac(String strPhanBan,float diemCanDuoi,float diemKhongChe, DataTable m_DiemTBHKMonHoc)
         {
             foreach (DataRow row_diemTBHKTungMon in m_DiemTBHKMonHoc.Rows)
             {
+                Console.WriteLine(@"isThoaManDKKhac enter..");
                 float diemTBHocKyTungMon = float.Parse(row_diemTBHKTungMon["DTBMonHocKy"].ToString());
                 
                 
                 if (diemTBHocKyTungMon < diemKhongChe)// có môn dưới điểm khống chế
                 {
+                    //in ra để dò lỗi
+                    Console.WriteLine(@"Khong thoa man 
+                                       diemTBHocKyTungMon < diemKhongChe"
+                                       + " diemTBHocKyTungMon = " + diemTBHocKyTungMon);
                     return false;
+                    Console.WriteLine(@"isThoaManDKKhac exit..");
                 }
 
             }
@@ -205,6 +217,11 @@ namespace QLDiemHSTHPT.Controller
                     {
                         if (diemTBHocKyTungMon < diemCanDuoi)
                         {
+                            //in ra để dò lỗi
+                            Console.WriteLine(@"Khong thoa man 
+                                       diemTBHocKyTungMon < diemCanDuoi"
+                                               + " diemTBHocKyTungMon = " + diemTBHocKyTungMon);
+                            Console.WriteLine(@"isThoaManDKKhac..exit");
                             return false;
                         }
                     }
@@ -215,20 +232,31 @@ namespace QLDiemHSTHPT.Controller
                     countMonHoc++;
                     if (countMonHoc == 1 && heSoMonHoc ==2)
                     {
-                        if (diemTBHocKyTungMon < diemCanDuoi)
-                            continue;
-                        else
+                        if (diemTBHocKyTungMon > diemCanDuoi)
                             return true;
                     }
                     if (countMonHoc == 2 && heSoMonHoc ==2)
                     {
                         if (diemTBHocKyTungMon < diemCanDuoi)
+                        {
+                            //in ra để dò lỗi
+                            Console.WriteLine(@"Ban co ban ---Khong thoa man 
+                                       diemTBHocKyTungMon < diemCanDuoi"
+                                               + row_diemTBHKTungMon["KQ.MaMonHoc"].ToString()
+                                               + " = " + diemTBHocKyTungMon);
+                            Console.WriteLine(@"isThoaManDKKhac..exit");
+
                             return false;
+                        }
                         else
+                        {
+                            Console.WriteLine(@"isThoaManDKKhac..exit");
                             return true;
+                        }
                     }
                 }
             }
+            Console.WriteLine(@"isThoaManDKKhac..exit");
             return true;
         }
 

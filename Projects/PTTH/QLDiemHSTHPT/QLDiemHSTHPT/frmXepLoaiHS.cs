@@ -9,6 +9,7 @@ using DevComponents.DotNetBar;
 using QLDiemHSTHPT.Controller;
 using QLDiemHSTHPT.Component;
 using QLDiemHSTHPT.DataLayer;
+using System.Threading;
 
 namespace QLDiemHSTHPT
 {
@@ -86,6 +87,25 @@ namespace QLDiemHSTHPT
         }
         private void bngluu_Click_1(object sender, EventArgs e)
         {
+            LuuXepLoaiHanhKiem();
+            //bool OK = m_PhanCongCtrl.isDuocPhepSuaDiem(strTenDangNhap,
+            //                                strMaLop,
+            //                                strMaMonHoc,
+            //                                strMaKhoaHoc
+            //                                );
+            ////if (OK == false)
+            //{
+            //    MessageBoxEx.Show(@"Bạn không được phân công dạy lớp "
+            //                        + strTenLop +
+            //                        " môn " + strTenMonHoc +
+            //                        " nên không có quyền cập nhật điểm"
+            //        );
+            //    //thoat khoi ham
+            //    return;
+            //}
+        }
+        private void LuuXepLoaiHanhKiem()
+        {
             dgvXepLoaiHanhKiem.EndEdit();
             String strTenDangNhap = Utilities.NguoiDung.TenDangNhap.Trim();
             String strMaLop = cmbLop.SelectedValue.ToString().Trim();
@@ -106,23 +126,7 @@ namespace QLDiemHSTHPT
                 }
             }
             bngluu.Enabled = false;
-            //bool OK = m_PhanCongCtrl.isDuocPhepSuaDiem(strTenDangNhap,
-            //                                strMaLop,
-            //                                strMaMonHoc,
-            //                                strMaKhoaHoc
-            //                                );
-            ////if (OK == false)
-            //{
-            //    MessageBoxEx.Show(@"Bạn không được phân công dạy lớp "
-            //                        + strTenLop +
-            //                        " môn " + strTenMonHoc +
-            //                        " nên không có quyền cập nhật điểm"
-            //        );
-            //    //thoat khoi ham
-            //    return;
-            //}
         }
-
         private void dgvXepLoaiHanhKiem_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
@@ -131,31 +135,6 @@ namespace QLDiemHSTHPT
         private void bngthoat_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnNamhoc_Click(object sender, EventArgs e)
-        {
-            frmKhoaHoc m_NamHoc = null;
-            if (m_NamHoc == null || m_NamHoc.IsDisposed)
-            {
-                m_NamHoc = new frmKhoaHoc();
-                m_NamHoc.MdiParent = frmMain.ActiveForm;
-                m_NamHoc.Show();
-            }
-            else m_NamHoc.Activate();
-           // m_NamHocCtrl.HienThiComboBox(cbmnamhoc);
-        }
-
-        private void btnLop_Click(object sender, EventArgs e)
-        {
-            frmLop m_Lop = null;
-            if (m_Lop == null || m_Lop.IsDisposed)
-            {
-                m_Lop = new frmLop();
-                m_Lop.MdiParent = frmMain.ActiveForm;
-                m_Lop.Show();
-            }
-            else m_Lop.Activate();
         }
 
         private void cbmKhoaHoc_SelectedIndexChanged(object sender, EventArgs e)
@@ -207,6 +186,11 @@ namespace QLDiemHSTHPT
         private void dgvXepLoaiHanhKiem_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             bngluu.Enabled = true;
+        }
+
+        private void cmbHocky_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            HienThiDSHanhKiemHS();
         }
 
 

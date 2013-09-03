@@ -9,6 +9,7 @@ using DevComponents.DotNetBar;
 using QLDiemHSTHPT.Controller;
 using QLDiemHSTHPT.Component;
 using QLDiemHSTHPT.DataLayer;
+using System.Threading;
 
 namespace QLDiemHSTHPT
 {
@@ -93,18 +94,6 @@ namespace QLDiemHSTHPT
 
             }
             return true;
-        }
-
-
-        private void btnHienthiDS_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                HienThiDSDiem();
-            }
-            catch (Exception)
-            {
-            }
         }
 
         private void HienThiDSDiem()
@@ -417,6 +406,12 @@ namespace QLDiemHSTHPT
         private void cmbMonhoc_SelectedIndexChanged(object sender, EventArgs e)
         {
                 CapNhatDuLieuTrenGiaoDien();
+        }
+
+        private void btnHienthiDS_Click(object sender, EventArgs e)
+        {
+            CapNhatDuLieuTrenGiaoDien();
+            HienThiDSDiem();
         }
     }
 }
