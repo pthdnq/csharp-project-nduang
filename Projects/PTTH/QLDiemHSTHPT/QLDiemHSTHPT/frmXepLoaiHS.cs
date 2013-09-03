@@ -37,7 +37,7 @@ namespace QLDiemHSTHPT
             DataService.OpenConnection();
         }
 
-        private void frmNhapDiemChung_Load(object sender, EventArgs e)
+        private void frmXepLoaiHS_Load(object sender, EventArgs e)
         {
             m_HanhKiemCtrl.HienThiDataGridViewComboBoxColumn(MaHanhKiem);
             m_HocLucCtrl.HienThiDataGridViewComboBoxColumn(MaHocLuc);
@@ -84,22 +84,19 @@ namespace QLDiemHSTHPT
         }
         private void bngluu_Click_1(object sender, EventArgs e)
         {
-            LuuXepLoaiHanhKiem();
-            //bool OK = m_PhanCongCtrl.isDuocPhepSuaDiem(strTenDangNhap,
-            //                                strMaLop,
-            //                                strMaMonHoc,
-            //                                strMaKhoaHoc
-            //                                );
-            ////if (OK == false)
-            //{
-            //    MessageBoxEx.Show(@"Bạn không được phân công dạy lớp "
-            //                        + strTenLop +
-            //                        " môn " + strTenMonHoc +
-            //                        " nên không có quyền cập nhật điểm"
-            //        );
-            //    //thoat khoi ham
-            //    return;
-            //}
+            //Chỉ giáo viên chủ nhiệm mới được sửa hạnh kiểm
+            try
+            {
+                bool ok = m_LopCtrl.isGiaoVienChuNhiem(strTenDangNhap,
+                                            cmbLop.SelectedValue.ToString(),
+                                            cmbKhoaHoc.SelectedValue.ToString());
+                LuuXepLoaiHanhKiem();
+                bngluu.Enabled = false;
+            }
+            catch (Exception)
+            {
+                MessageBoxEx.Show("Lưu thất bại, có thể dữ liệu về lớp, khóa học bị trống");
+            }
         }
         private void LuuXepLoaiHanhKiem()
         {
@@ -134,20 +131,6 @@ namespace QLDiemHSTHPT
             this.Close();
         }
 
-        private void cbmKhoaHoc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //if (cbmnamhoc.SelectedValue != null)
-             //   m_LopCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop);
-            //cmblop.DataBindings.Clear();
-        }
-
-        private void cmblop_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           // if (cbmnamhoc.SelectedValue != null && cmblop.SelectedValue != null)
-           //     m_MonHocCtrl.HienThiComboBox(cbmnamhoc.SelectedValue.ToString(), cmblop.SelectedValue.ToString(), cmbMonhoc);
-            ///cmbMonhoc.DataBindings.Clear();
-        }
-
         private void cmbNanhocCN_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbKhoaHoc.SelectedValue != null)
@@ -168,12 +151,6 @@ namespace QLDiemHSTHPT
                 m_MonHocCtrl.HienThiComboBox(cmbKhoaHoc.SelectedValue.ToString(), cmbLop.SelectedValue.ToString(), cmbKhoaHoc);
             cmbKhoaHoc.DataBindings.Clear();
         }
-        public void setEnableControl(bool status)
-        {
-            bngluu.Enabled = status;
-
-   
-        }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
@@ -183,11 +160,6 @@ namespace QLDiemHSTHPT
         private void dgvXepLoaiHanhKiem_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             bngluu.Enabled = true;
-        }
-
-        private void cmbHocky_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            HienThiDSHanhKiemHS();
         }
 
 

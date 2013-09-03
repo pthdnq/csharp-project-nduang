@@ -497,7 +497,7 @@ namespace QLDiemHSTHPT
             this.Name = "frmXepLoaiHS";
             this.Text = "Xếp loại học sinh";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmNhapDiemChung_Load);
+            this.Load += new System.EventHandler(this.frmXepLoaiHS_Load);
             this.nvgPanelGiaoVien.ResumeLayout(false);
             this.ngvPanelTimKiem.ResumeLayout(false);
             this.groupBoxDsHanhKiem.ResumeLayout(false);
