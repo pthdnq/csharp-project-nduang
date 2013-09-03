@@ -114,6 +114,39 @@ namespace QLDiemHSTHPT.DataLayer
            m_DData.Load(cmd);
            return m_DData;
        }
+       public float getDiemTrungBinhMonHocKy(String maHS,
+           String strMaMonHoc,
+           String strMaHocKy,
+           String strMaKhoaHoc,
+           String strMaLop)
+       {
+           float diemDTBMonHocHocKy = 0;
+           DataService m_DData = new DataService();
+
+           SqlCommand cmd = new SqlCommand(@"SELECT DTBMonHocKy FROM KQ_HOC_KY_MON_HOC 
+                                            WHERE    MaHocSinh = @MaHocSinh
+                                                    and MaLop = @MaLop
+                                                    and MaMonHoc = @MaMonHoc
+                                                    and MaHocKy = @MaHocKy
+                                                    and MaNamHoc = @MaNamHoc
+
+
+                                            ");
+           cmd.Parameters.Add("MaHocSinh", SqlDbType.VarChar).Value = maHS;
+           cmd.Parameters.Add("MaLop", SqlDbType.VarChar).Value = strMaLop;
+           cmd.Parameters.Add("MaMonHoc", SqlDbType.VarChar).Value = strMaMonHoc;
+           cmd.Parameters.Add("MaHocKy", SqlDbType.VarChar).Value = strMaHocKy;
+           cmd.Parameters.Add("MaNamHoc", SqlDbType.VarChar).Value = strMaKhoaHoc;
+
+           m_DData.Load(cmd);
+           int dong = m_DData.Rows.Count;
+           if (dong > 0)
+           {
+               diemDTBMonHocHocKy = float.Parse(m_DData.Rows[dong - 1]["DTBMonHocKy"].ToString().Trim());
+           }
+           return diemDTBMonHocHocKy;
+       }
+
 
     
      }

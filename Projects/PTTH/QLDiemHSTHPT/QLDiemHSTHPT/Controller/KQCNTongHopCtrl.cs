@@ -18,7 +18,7 @@ namespace QLDiemHSTHPT.Controller
 
        public void LuuKetQua(String maHocSinh, String maLop, String maNamHoc)
        {
-           float diemTBChungCacMonCN = (float)Math.Round(m_DiemCtrl.DiemTrungBinhChungCacMonCaNam(maHocSinh, maLop, maNamHoc), 2);
+           float diemTBChungCacMonCN = (float)Math.Round(m_DiemCtrl.tinhDiemTrungBinhChungCacMonCaNam(maHocSinh, maLop, maNamHoc), 2);
            String hocLuc = m_HocLucCtrl.XepLoaiHocLucCaNam(maHocSinh, maLop, maNamHoc);
            String ketQua = "";
            switch (hocLuc)

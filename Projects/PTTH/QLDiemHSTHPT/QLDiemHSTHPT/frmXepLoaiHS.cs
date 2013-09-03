@@ -182,7 +182,7 @@ namespace QLDiemHSTHPT
         private void cmbLopCN_SelectedIndexChanged(object sender, EventArgs e)
         {
             //if (cmbKhoaHoc.SelectedValue != null && cmbLop.SelectedValue != null)
-            //m_MonHocCtrl.HienThiComboBox(cmbKhoaHoc.SelectedValue.ToString(), cmbLop.SelectedValue.ToString(), cmbMonhocCN);
+            //m_MonHocCtrl.HienThiComboBox(cmbKhoaHoc.SelectedValue.ToString(), cmbLop.SelectedValue.ToString(), cmbMonhoc);
             cmbKhoaHoc.DataBindings.Clear();
         }
 
