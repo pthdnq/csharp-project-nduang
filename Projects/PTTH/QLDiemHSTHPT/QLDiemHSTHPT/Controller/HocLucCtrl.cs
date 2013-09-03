@@ -175,7 +175,7 @@ namespace QLDiemHSTHPT.Controller
                 
             }
             //in ra để dò lỗi
-            Console.WriteLine(@"Ma hoc sinh: "+maHocSinh+"  co ma hoc luc: null...Exit");
+            Console.WriteLine(@"Ma hoc sinh: " + maHocSinh + "  co ma hoc luc: " + maHocLucHienTai+"  Exit");
             return maHocLucHienTai;
         }
         public bool isThoaManDKKhac(String strPhanBan,float diemCanDuoi,float diemKhongChe, DataTable m_DiemTBHKMonHoc)
@@ -192,8 +192,9 @@ namespace QLDiemHSTHPT.Controller
                     Console.WriteLine(@"Khong thoa man 
                                        diemTBHocKyTungMon < diemKhongChe"
                                        + " diemTBHocKyTungMon = " + diemTBHocKyTungMon);
-                    return false;
                     Console.WriteLine(@"isThoaManDKKhac exit..");
+                    return false;
+                    
                 }
 
             }
