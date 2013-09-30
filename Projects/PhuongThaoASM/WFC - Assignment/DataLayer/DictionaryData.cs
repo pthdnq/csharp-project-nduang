@@ -14,7 +14,7 @@ namespace Utils.DataLayer
 
        public DataTable getDictionaryList()
        {
-           SqlCommand cmd = new SqlCommand("SELECT ID_Word,Word,Meaning FROM Dictionary");
+           SqlCommand cmd = new SqlCommand("SELECT ID,Word,Meanings FROM dict_en_vi");
            m_DictionaryData.Load(cmd);
            return m_DictionaryData;
        }
@@ -36,19 +36,19 @@ namespace Utils.DataLayer
            return m_DictionaryData.ExecuteNoneQuery() > 0;
        }
 
-       public DataTable SearchByWord(String ma)
+       public DataTable SearchByWord(String word)
        {
-           SqlCommand cmd = new SqlCommand("SELECT * FROM Dictionary WHERE Word LIKE '%' + @ma + '%'");
-           cmd.Parameters.Add("ma", SqlDbType.VarChar).Value = ma;
+           SqlCommand cmd = new SqlCommand("SELECT TOP 100  * FROM dict_en_vi WHERE Word LIKE /*'%'*/ + @word + '%'");
+           cmd.Parameters.Add("word", SqlDbType.NVarChar).Value = word;
 
            m_DictionaryData.Load(cmd);
            return m_DictionaryData;
        }
 
-       public DataTable SearchByMeaning(String ten)
+       public DataTable SearchByMeaning(String meaning)
        {
-           SqlCommand cmd = new SqlCommand("SELECT * FROM Dictionary WHERE Meaning LIKE '%' + @ten + '%'");
-           cmd.Parameters.Add("ten", SqlDbType.NVarChar).Value = ten;
+           SqlCommand cmd = new SqlCommand("SELECT * FROM dict_en_vi WHERE Meaning LIKE '%' + @meaning + '%'");
+           cmd.Parameters.Add("meaning", SqlDbType.NVarChar).Value = meaning;
 
            m_DictionaryData.Load(cmd);
            return m_DictionaryData;

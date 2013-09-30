@@ -41,16 +41,16 @@ namespace Utils.Controller
            return m_DictionaryData.SaveWord();
        }
 
-       public static void SearchByWord(ListViewEx lvw, String m_ID_Word)
+       public static void SearchByWord(ListViewEx lvw, String m_Word)
        {
            DictionaryData data = new DictionaryData();
-           DataTable table= data.SearchByWord(m_ID_Word);
+           DataTable table= data.SearchByWord(m_Word);
            lvw.Items.Clear();
            foreach (DataRow row in table.Rows)
            {
-               ListViewItem item = new ListViewItem(row["ID_Word"].ToString());
+               ListViewItem item = new ListViewItem(row["ID"].ToString());
                item.SubItems.Add(row["Word"].ToString());
-               item.SubItems.Add(row["Meaning"].ToString());
+               item.SubItems.Add(row["Meanings"].ToString());
                lvw.Items.Add(item);
            }
 
