@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Utils.Component;
+using DevComponents.DotNetBar;
 
 namespace WFC___Assignment
 {
-    public partial class frmAssignment : Form
+    public partial class frmAssignment : Office2007Form
     {
 
         public frmAssignment()

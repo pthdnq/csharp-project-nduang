@@ -6,10 +6,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DevComponents.DotNetBar;
 
 namespace WFC___Assignment
 {
-    public partial class frmManager : Form
+    public partial class frmManager : Office2007Form
     {
         public frmManager()
         {
