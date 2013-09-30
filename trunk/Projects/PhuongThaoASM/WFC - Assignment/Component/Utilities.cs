@@ -8,7 +8,7 @@ using DevComponents.DotNetBar;
 using System.Collections.Generic;
 
 
-namespace QLDiemHSTHPT.Component
+namespace Utils.Component
 {
     public class QuyDinh
     {

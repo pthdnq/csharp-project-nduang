@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAssignment));
             this.mnustrpAsm = new System.Windows.Forms.MenuStrip();
             this.tlstrpmnuitemDictionary = new System.Windows.Forms.ToolStripMenuItem();
             this.tlstrpmnuitemHome = new System.Windows.Forms.ToolStripMenuItem();
@@ -301,7 +302,7 @@
             this.stlblStatus.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.stlblStatus.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.stlblStatus.Name = "stlblStatus";
-            this.stlblStatus.Size = new System.Drawing.Size(674, 19);
+            this.stlblStatus.Size = new System.Drawing.Size(787, 19);
             this.stlblStatus.Spring = true;
             this.stlblStatus.Text = "Status";
             this.stlblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -312,6 +313,7 @@
             this.nicAsm.BalloonTipText = "This application is running";
             this.nicAsm.BalloonTipTitle = "Dictionary";
             this.nicAsm.ContextMenuStrip = this.cmnustrpAsmNic;
+            this.nicAsm.Icon = ((System.Drawing.Icon)(resources.GetObject("nicAsm.Icon")));
             this.nicAsm.Text = "English Dictionary";
             this.nicAsm.Visible = true;
             this.nicAsm.DoubleClick += new System.EventHandler(this.nicAsm_DoubleClick);
@@ -361,6 +363,7 @@
             this.Controls.Add(this.lblAsm);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnustrpAsm;
             this.MaximizeBox = false;

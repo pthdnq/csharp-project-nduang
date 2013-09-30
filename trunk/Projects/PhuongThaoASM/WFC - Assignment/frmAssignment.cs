@@ -6,14 +6,17 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Utils.Component;
 
 namespace WFC___Assignment
 {
     public partial class frmAssignment : Form
     {
+
         public frmAssignment()
         {
             InitializeComponent();
+            DataService.OpenConnection();
         }
 
         //Loads the frmAssignment form

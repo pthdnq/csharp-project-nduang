@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Text;
 using DevComponents.DotNetBar.Controls;
 using System.Windows.Forms;
-using QLDiemHSTHPT.DataLayer;
+using Utils.DataLayer;
 using System.Data;
 using DevComponents.Editors.DateTimeAdv;
 
 
-namespace QLDiemHSTHPT.Controller
+namespace Utils.Controller
 {
    public class DictionaryCtrl
     {
