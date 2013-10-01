@@ -41,7 +41,9 @@ namespace WFC___Assignment
                     String word = olditem.SubItems[1].Text;
                     //lbWord.Text = word;
                     String meaning = olditem.SubItems[2].Text;
+                    meaning =meaning.Replace("\\n","\n");
                     rtbLookUp.Text = meaning;
+
                     
                 }
             }
