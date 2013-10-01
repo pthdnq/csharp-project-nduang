@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using Utilities;
 
 namespace WFC___Assignment
 {
@@ -15,6 +16,7 @@ namespace WFC___Assignment
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            
             Application.Run(new frmAssignment());
         }
     }

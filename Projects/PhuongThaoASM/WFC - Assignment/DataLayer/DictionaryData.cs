@@ -11,7 +11,7 @@ namespace Utils.DataLayer
    public class DictionaryData
     {
        DataService m_DictionaryData = new DataService();
-
+       
        public DataTable getDictionaryList()
        {
            SqlCommand cmd = new SqlCommand("SELECT ID,Word,Meanings FROM dict_en_vi");
@@ -39,6 +39,14 @@ namespace Utils.DataLayer
        public DataTable SearchByWord(String word)
        {
            SqlCommand cmd = new SqlCommand("SELECT TOP 100  * FROM dict_en_vi WHERE Word LIKE /*'%'*/ + @word + '%'");
+           cmd.Parameters.Add("word", SqlDbType.NVarChar).Value = word;
+
+           m_DictionaryData.Load(cmd);
+           return m_DictionaryData;
+       }
+       public DataTable SearchByWordExtractMatch(String word)
+       {
+           SqlCommand cmd = new SqlCommand("SELECT TOP 20  * FROM dict_en_vi WHERE Word = @word ");
            cmd.Parameters.Add("word", SqlDbType.NVarChar).Value = word;
 
            m_DictionaryData.Load(cmd);

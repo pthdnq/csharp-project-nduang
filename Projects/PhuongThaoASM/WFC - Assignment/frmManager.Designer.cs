@@ -34,13 +34,13 @@
             this.radEdit = new System.Windows.Forms.RadioButton();
             this.radAdd = new System.Windows.Forms.RadioButton();
             this.txtMeaning = new System.Windows.Forms.TextBox();
+            this.txtPhonetic = new System.Windows.Forms.TextBox();
             this.txtWord = new System.Windows.Forms.TextBox();
+            this.lblPhonetic = new System.Windows.Forms.Label();
             this.lblMeaning = new System.Windows.Forms.Label();
             this.lblWord = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.lblPhonetic = new System.Windows.Forms.Label();
-            this.txtPhonetic = new System.Windows.Forms.TextBox();
             this.grpManager.SuspendLayout();
             this.grpAddEditDelete.SuspendLayout();
             this.SuspendLayout();
@@ -114,12 +114,28 @@
             this.txtMeaning.Size = new System.Drawing.Size(445, 213);
             this.txtMeaning.TabIndex = 1;
             // 
+            // txtPhonetic
+            // 
+            this.txtPhonetic.Location = new System.Drawing.Point(168, 77);
+            this.txtPhonetic.Name = "txtPhonetic";
+            this.txtPhonetic.Size = new System.Drawing.Size(445, 20);
+            this.txtPhonetic.TabIndex = 1;
+            // 
             // txtWord
             // 
             this.txtWord.Location = new System.Drawing.Point(168, 36);
             this.txtWord.Name = "txtWord";
             this.txtWord.Size = new System.Drawing.Size(445, 20);
             this.txtWord.TabIndex = 1;
+            // 
+            // lblPhonetic
+            // 
+            this.lblPhonetic.AutoSize = true;
+            this.lblPhonetic.Location = new System.Drawing.Point(44, 80);
+            this.lblPhonetic.Name = "lblPhonetic";
+            this.lblPhonetic.Size = new System.Drawing.Size(52, 13);
+            this.lblPhonetic.TabIndex = 0;
+            this.lblPhonetic.Text = "Phonetic:";
             // 
             // lblMeaning
             // 
@@ -158,22 +174,6 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // lblPhonetic
-            // 
-            this.lblPhonetic.AutoSize = true;
-            this.lblPhonetic.Location = new System.Drawing.Point(44, 80);
-            this.lblPhonetic.Name = "lblPhonetic";
-            this.lblPhonetic.Size = new System.Drawing.Size(52, 13);
-            this.lblPhonetic.TabIndex = 0;
-            this.lblPhonetic.Text = "Phonetic:";
-            // 
-            // txtPhonetic
-            // 
-            this.txtPhonetic.Location = new System.Drawing.Point(168, 77);
-            this.txtPhonetic.Name = "txtPhonetic";
-            this.txtPhonetic.Size = new System.Drawing.Size(445, 20);
-            this.txtPhonetic.TabIndex = 1;
-            // 
             // frmManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +182,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.grpManager);
+            this.DoubleBuffered = true;
             this.Name = "frmManager";
             this.Text = "frmManager";
             this.grpManager.ResumeLayout(false);
@@ -196,8 +197,6 @@
 
         private System.Windows.Forms.GroupBox grpManager;
         private System.Windows.Forms.RadioButton radAdd;
-        private System.Windows.Forms.TextBox txtMeaning;
-        private System.Windows.Forms.TextBox txtWord;
         private System.Windows.Forms.Label lblMeaning;
         private System.Windows.Forms.Label lblWord;
         private System.Windows.Forms.GroupBox grpAddEditDelete;
@@ -205,7 +204,9 @@
         private System.Windows.Forms.RadioButton radEdit;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtPhonetic;
         private System.Windows.Forms.Label lblPhonetic;
+        public System.Windows.Forms.TextBox txtMeaning;
+        public System.Windows.Forms.TextBox txtWord;
+        public System.Windows.Forms.TextBox txtPhonetic;
     }
 }
