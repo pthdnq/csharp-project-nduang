@@ -42,6 +42,11 @@
             this.tlstrpmnuitemAboutUs = new System.Windows.Forms.ToolStripMenuItem();
             this.tlstrpmnuitemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.cmnustrpAsm = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mnSpeech = new System.Windows.Forms.ToolStripMenuItem();
+            this.addWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.delWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tlstrpmnuitemDictionaryContext = new System.Windows.Forms.ToolStripMenuItem();
             this.tlstrpmnuitemHomeContext = new System.Windows.Forms.ToolStripMenuItem();
             this.tlstrpmnuitemLookUpContext = new System.Windows.Forms.ToolStripMenuItem();
@@ -180,14 +185,50 @@
             // cmnustrpAsm
             // 
             this.cmnustrpAsm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnSpeech,
+            this.addWordToolStripMenuItem,
+            this.delWordToolStripMenuItem,
+            this.editWordToolStripMenuItem,
+            this.toolStripSeparator1,
             this.tlstrpmnuitemDictionaryContext,
             this.tlstrpmnuitemViewContext,
             this.tlstrpmnuitemManagerContext,
             this.tlstrpmnuitemHelpContext,
             this.tlstrpmnuitemExitContext});
             this.cmnustrpAsm.Name = "cmnustrpAsm";
-            this.cmnustrpAsm.Size = new System.Drawing.Size(129, 114);
+            this.cmnustrpAsm.Size = new System.Drawing.Size(153, 230);
             this.cmnustrpAsm.Text = "Assignment Menu";
+            // 
+            // mnSpeech
+            // 
+            this.mnSpeech.Name = "mnSpeech";
+            this.mnSpeech.Size = new System.Drawing.Size(152, 22);
+            this.mnSpeech.Text = "Speech";
+            this.mnSpeech.Click += new System.EventHandler(this.mnSpeech_Click);
+            // 
+            // addWordToolStripMenuItem
+            // 
+            this.addWordToolStripMenuItem.Name = "addWordToolStripMenuItem";
+            this.addWordToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addWordToolStripMenuItem.Text = "Add word";
+            // 
+            // delWordToolStripMenuItem
+            // 
+            this.delWordToolStripMenuItem.Name = "delWordToolStripMenuItem";
+            this.delWordToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.delWordToolStripMenuItem.Text = "Del word";
+            // 
+            // editWordToolStripMenuItem
+            // 
+            this.editWordToolStripMenuItem.Name = "editWordToolStripMenuItem";
+            this.editWordToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editWordToolStripMenuItem.Text = "Edit word";
+            this.editWordToolStripMenuItem.Click += new System.EventHandler(this.editWordToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // tlstrpmnuitemDictionaryContext
             // 
@@ -196,7 +237,7 @@
             this.tlstrpmnuitemLookUpContext,
             this.tlstrpmnuitemVocabularyContext});
             this.tlstrpmnuitemDictionaryContext.Name = "tlstrpmnuitemDictionaryContext";
-            this.tlstrpmnuitemDictionaryContext.Size = new System.Drawing.Size(128, 22);
+            this.tlstrpmnuitemDictionaryContext.Size = new System.Drawing.Size(152, 22);
             this.tlstrpmnuitemDictionaryContext.Text = "&Dictionary";
             this.tlstrpmnuitemDictionaryContext.ToolTipText = "Dictionary";
             this.tlstrpmnuitemDictionaryContext.MouseHover += new System.EventHandler(this.tlstrpmnuitemDictionaryContext_MouseHover);
@@ -233,7 +274,7 @@
             this.tlstrpmnuitemViewContext.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tlstrpmnuitemStatusbarContext});
             this.tlstrpmnuitemViewContext.Name = "tlstrpmnuitemViewContext";
-            this.tlstrpmnuitemViewContext.Size = new System.Drawing.Size(128, 22);
+            this.tlstrpmnuitemViewContext.Size = new System.Drawing.Size(152, 22);
             this.tlstrpmnuitemViewContext.Text = "&View";
             this.tlstrpmnuitemViewContext.ToolTipText = "View Toolbars";
             this.tlstrpmnuitemViewContext.MouseHover += new System.EventHandler(this.tlstrpmnuitemViewContext_MouseHover);
@@ -252,7 +293,7 @@
             // tlstrpmnuitemManagerContext
             // 
             this.tlstrpmnuitemManagerContext.Name = "tlstrpmnuitemManagerContext";
-            this.tlstrpmnuitemManagerContext.Size = new System.Drawing.Size(128, 22);
+            this.tlstrpmnuitemManagerContext.Size = new System.Drawing.Size(152, 22);
             this.tlstrpmnuitemManagerContext.Text = "&Manager";
             this.tlstrpmnuitemManagerContext.ToolTipText = "Manage Dictionary";
             this.tlstrpmnuitemManagerContext.Click += new System.EventHandler(this.tlstrpmnuitemManagerContext_Click);
@@ -263,7 +304,7 @@
             this.tlstrpmnuitemHelpContext.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tlstrpmnuitemAboutUsContext});
             this.tlstrpmnuitemHelpContext.Name = "tlstrpmnuitemHelpContext";
-            this.tlstrpmnuitemHelpContext.Size = new System.Drawing.Size(128, 22);
+            this.tlstrpmnuitemHelpContext.Size = new System.Drawing.Size(152, 22);
             this.tlstrpmnuitemHelpContext.Text = "&Help";
             this.tlstrpmnuitemHelpContext.ToolTipText = "Help";
             this.tlstrpmnuitemHelpContext.MouseHover += new System.EventHandler(this.tlstrpmnuitemHelpContext_MouseHover);
@@ -280,7 +321,7 @@
             // tlstrpmnuitemExitContext
             // 
             this.tlstrpmnuitemExitContext.Name = "tlstrpmnuitemExitContext";
-            this.tlstrpmnuitemExitContext.Size = new System.Drawing.Size(128, 22);
+            this.tlstrpmnuitemExitContext.Size = new System.Drawing.Size(152, 22);
             this.tlstrpmnuitemExitContext.Text = "&Exit";
             this.tlstrpmnuitemExitContext.ToolTipText = "Exit this application";
             this.tlstrpmnuitemExitContext.Click += new System.EventHandler(this.tlstrpmnuitemExitContext_Click);
@@ -313,7 +354,6 @@
             this.nicAsm.BalloonTipText = "This application is running";
             this.nicAsm.BalloonTipTitle = "Dictionary";
             this.nicAsm.ContextMenuStrip = this.cmnustrpAsmNic;
-            this.nicAsm.Icon = ((System.Drawing.Icon)(resources.GetObject("nicAsm.Icon")));
             this.nicAsm.Text = "English Dictionary";
             this.nicAsm.Visible = true;
             this.nicAsm.DoubleClick += new System.EventHandler(this.nicAsm_DoubleClick);
@@ -361,6 +401,7 @@
             this.Controls.Add(this.ststrpAsm);
             this.Controls.Add(this.mnustrpAsm);
             this.Controls.Add(this.lblAsm);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -414,6 +455,11 @@
         private System.Windows.Forms.Label lblAsm;
         private System.Windows.Forms.ToolStripMenuItem tlstrpmnuitemHome;
         private System.Windows.Forms.ToolStripMenuItem tlstrpmnuitemHomeContext;
+        private System.Windows.Forms.ToolStripMenuItem addWordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editWordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem delWordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem mnSpeech;
     }
 }
 

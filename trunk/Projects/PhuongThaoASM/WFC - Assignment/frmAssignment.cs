@@ -8,25 +8,52 @@ using System.Text;
 using System.Windows.Forms;
 using Utils.Component;
 using DevComponents.DotNetBar;
+using Gma.UserActivityMonitor;
+using Utilities;
 
 namespace WFC___Assignment
 {
     public partial class frmAssignment : Office2007Form
     {
-
+        frmAboutUs aboutUs = new frmAboutUs();
+        frmLookUp m_frmLookUp = new frmLookUp();
+        frmManager m_frmManager = new frmManager();
+        String m_word ="";
+        bool m_addWord = true;
+        String m_NewWord = "";
+        bool ctrlStatus = false;
+        globalKeyboardHook gkh = new globalKeyboardHook();
+        Keys lastKey = Keys.None;
+       
         public frmAssignment()
         {
             InitializeComponent();
             DataService.OpenConnection();
+
+
         }
 
+		void gkh_KeyDown(object sender, KeyEventArgs e) {
+			Console.WriteLine("Down\t" + e.KeyCode.ToString());
+            if ((lastKey == Keys.LControlKey) && (e.KeyCode == Keys.C))
+            {
+                showWordAndMeaningNotifyIcon();
+                
+            }
+            lastKey = e.KeyCode;
+            
+		}
         //Loads the frmAssignment form
         private void frmAssignment_Load(object sender, EventArgs e)
         {
             stlblStatus.Text = "For help, contact youngrangrace@gmail.com";
             this.ContextMenuStrip = cmnustrpAsm;
-        }
+            gkh.HookedKeys.Add(Keys.LControlKey);
+            gkh.HookedKeys.Add(Keys.C);
+            gkh.KeyDown += new KeyEventHandler(gkh_KeyDown);         
+            nicAsm.Icon = this.Icon;
 
+        }
         //Toggles the status bar
         private void tlstrpmnuitemStatusbar_Click(object sender, EventArgs e)
         {
@@ -188,10 +215,10 @@ namespace WFC___Assignment
         private void tlstrpmnuitemLookUp_Click(object sender, EventArgs e)
         {
             frmAssignment_Hide(sender, e);
-            frmLookUp newChild = new frmLookUp();
-            newChild.MdiParent = this;
-            newChild.WindowState = FormWindowState.Maximized;
-            newChild.Show();
+
+            m_frmLookUp.MdiParent = this;
+            m_frmLookUp.WindowState = FormWindowState.Maximized;
+            m_frmLookUp.Show();
         }
 
         private void tlstrpmnuitemLookUpContext_Click(object sender, EventArgs e)
@@ -218,10 +245,10 @@ namespace WFC___Assignment
         private void tlstrpmnuitemManager_Click(object sender, EventArgs e)
         {
             frmAssignment_Hide(sender, e);
-            frmManager newChild = new frmManager();
-            newChild.MdiParent = this;
-            newChild.WindowState = FormWindowState.Maximized;
-            newChild.Show();
+
+            m_frmManager.MdiParent = this;
+            m_frmManager.WindowState = FormWindowState.Maximized;
+            m_frmManager.Show();
         }
 
         private void tlstrpmnuitemManagerContext_Click(object sender, EventArgs e)
@@ -232,7 +259,7 @@ namespace WFC___Assignment
         //About Us
         private void tlstrpmnuitemAboutUs_Click(object sender, EventArgs e)
         {           
-            frmAboutUs aboutUs = new frmAboutUs();
+            
             aboutUs.StartPosition = FormStartPosition.CenterParent;
             aboutUs.ShowDialog(); 
         }
@@ -245,7 +272,7 @@ namespace WFC___Assignment
         //Eixt this application
         private void tlstrpmnuitemExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.ExitThread();
         }
 
         private void tlstrpmnuitemExitContext_Click(object sender, EventArgs e)
@@ -258,8 +285,9 @@ namespace WFC___Assignment
         {
             e.Cancel = true;
             this.Hide();
-            this.ShowInTaskbar = false;
-            nicAsm.Icon = SystemIcons.Application;
+            this.ShowInTaskbar = true;
+            nicAsm.Icon = this.Icon;
+            nicAsm.BalloonTipTitle = "Dictionary";
             nicAsm.BalloonTipText = "Dictionary has minized to tray";
             nicAsm.ShowBalloonTip(1000);
         }
@@ -272,8 +300,25 @@ namespace WFC___Assignment
             {               
                 this.ActiveMdiChild.WindowState = FormWindowState.Maximized;
             }
+            AddNewWord();
         }
-
+        private void AddNewWord()
+        {
+            if (m_addWord == true)
+            {
+                if (this.MdiChildren.Length > 0)
+                {
+                    this.ActiveMdiChild.Close();
+                }
+                lblAsm.Hide();
+                m_frmManager.MdiParent = this;
+                m_frmManager.WindowState = FormWindowState.Maximized;
+                m_frmManager.txtWord.Text = m_NewWord;
+                m_frmManager.txtPhonetic.Text = "";
+                m_frmManager.txtMeaning.Text = "";
+                m_frmManager.Show();
+            }
+        }
         private void tlstrpmnuitemShowFormNic_Click(object sender, EventArgs e)
         {
             nicAsm_DoubleClick(sender, e);
@@ -282,6 +327,58 @@ namespace WFC___Assignment
         private void tlstrpmnuitemExitNic_Click(object sender, EventArgs e)
         {
             tlstrpmnuitemExit_Click(sender, e);
+        }
+
+        private void editWordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            editWord();
+        }
+
+        private void mnSpeech_Click(object sender, EventArgs e)
+        {
+            m_word = m_frmLookUp.m_word;
+            m_frmLookUp.Speech(m_word);
+        }
+        private void editWord()
+        {
+            //get word
+            String m_ID = m_frmLookUp.m_ID;
+            String m_Meaning = m_frmLookUp.m_meaning;
+            String m_phonetis = m_frmLookUp.m_phonetis;
+            m_word = m_frmLookUp.m_word;
+
+            //set word 
+            m_frmManager.txtWord.Text = m_word;
+            m_frmManager.txtMeaning.Text = m_Meaning;
+            m_frmManager.txtPhonetic.Text = m_phonetis;
+            m_frmManager.MdiParent = this;
+            m_frmManager.WindowState = FormWindowState.Maximized;
+            m_frmManager.Show();
+        }
+        private void showWordAndMeaningNotifyIcon()
+        {
+           IDataObject iData = Clipboard.GetDataObject();
+            // Is Data Text?
+            if (iData.GetDataPresent(DataFormats.Text))
+            {    
+                String word = (String)iData.GetData(DataFormats.Text);
+                String meaning =m_frmLookUp.SearchByWord(word);
+                if(meaning =="")
+                {
+                    m_addWord = true;
+                    m_NewWord = word;
+                    meaning = "Not found a meaning. \nClick icon to add dictionary :v";
+                }
+                else
+                {
+                    m_addWord = false;
+                }
+                nicAsm.Icon =this.Icon ;
+                nicAsm.BalloonTipTitle = "Translate: "+ word;
+                nicAsm.BalloonTipText = meaning;
+                nicAsm.ShowBalloonTip(2000);
+             
+            }
         }
 
 

@@ -33,7 +33,7 @@
             this.lstLookUp = new DevComponents.DotNetBar.Controls.ListViewEx();
             this.colID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colWord = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colPhonetis = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colPhonetic = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colMeaning = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
@@ -44,6 +44,7 @@
             this.txtLookUp.Size = new System.Drawing.Size(156, 20);
             this.txtLookUp.TabIndex = 2;
             this.txtLookUp.Text = "Type a word here...";
+            this.txtLookUp.Click += new System.EventHandler(this.txtLookUp_Click);
             this.txtLookUp.TextChanged += new System.EventHandler(this.txtLookUp_TextChanged);
             // 
             // rtbLookUp
@@ -64,7 +65,7 @@
             this.lstLookUp.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colID,
             this.colWord,
-            this.colPhonetis,
+            this.colPhonetic,
             this.colMeaning});
             this.lstLookUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstLookUp.FullRowSelect = true;
@@ -86,9 +87,9 @@
             this.colWord.Text = "Word";
             this.colWord.Width = 180;
             // 
-            // colPhonetis
+            // colPhonetic
             // 
-            this.colPhonetis.Text = "Phonetis";
+            this.colPhonetic.Text = "Phonetic";
             // 
             // colMeaning
             // 
@@ -120,7 +121,7 @@
         private DevComponents.DotNetBar.Controls.ListViewEx lstLookUp;
         private System.Windows.Forms.ColumnHeader colID;
         private System.Windows.Forms.ColumnHeader colWord;
-        private System.Windows.Forms.ColumnHeader colPhonetis;
+        private System.Windows.Forms.ColumnHeader colPhonetic;
         private System.Windows.Forms.ColumnHeader colMeaning;
     }
 }

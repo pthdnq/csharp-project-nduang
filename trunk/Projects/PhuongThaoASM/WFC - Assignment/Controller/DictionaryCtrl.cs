@@ -41,7 +41,7 @@ namespace Utils.Controller
            return m_DictionaryData.SaveWord();
        }
 
-       public static void SearchByWord(ListViewEx lvw, String m_Word)
+       public static void SearchByWord(ListView lvw, String m_Word)
        {
            DictionaryData data = new DictionaryData();
            DataTable table= data.SearchByWord(m_Word);
@@ -51,11 +51,32 @@ namespace Utils.Controller
                ListViewItem item = new ListViewItem(row["ID"].ToString());
                item.SubItems.Add(row["Word"].ToString());
                item.SubItems.Add(row["Meanings"].ToString());
+               item.SubItems.Add(row["Phonetic"].ToString());
                lvw.Items.Add(item);
            }
 
        }
-
+       public static String SearchByWordExtractMatch(ListView lvw, String m_Word)
+       {
+           String meaning = "";
+           DictionaryData data = new DictionaryData();
+           DataTable table = data.SearchByWordExtractMatch(m_Word);
+           lvw.Items.Clear();
+           if(table.Rows.Count ==1)
+           {
+               foreach (DataRow row in table.Rows)
+               {
+                   ListViewItem item = new ListViewItem(row["ID"].ToString());
+                   item.SubItems.Add(row["Word"].ToString());
+                   item.SubItems.Add(row["Meanings"].ToString());
+                   item.SubItems.Add(row["Phonetic"].ToString());
+                   lvw.Items.Add(item);
+                   meaning = row["Meanings"].ToString().Trim();
+                   meaning = meaning.Replace("\\n", "\n");
+               }
+           }
+           return meaning;
+       }
        public static void SearchByMeaning(ListViewEx lvw, String m_TenHocSinh)
        {
           DictionaryData data = new DictionaryData();
@@ -63,7 +84,7 @@ namespace Utils.Controller
            lvw.Items.Clear();
            foreach (DataRow row in table.Rows)
            {
-               ListViewItem item = new ListViewItem(row["ID_Word"].ToString());
+               ListViewItem item = new ListViewItem(row["ID"].ToString());
                item.SubItems.Add(row["Word"].ToString());
                item.SubItems.Add(row["Meaning"].ToString());
                lvw.Items.Add(item);
