@@ -13,9 +13,9 @@ namespace QLDiemHSTHPT
 {
     public partial class frmMain : Office2007Form
     {
-
         public frmMain()
         {
+            
             InitializeComponent();
         }
 
@@ -25,9 +25,6 @@ namespace QLDiemHSTHPT
             
             if (DataService.OpenConnection())
             {
-                //MacDinh();
-                //DangNhap();
-                //this.Cursor = Thaydoichuot.Create(System.IO.Path.Combine(Application.StartupPath, "harrow.cur"));
                         frmDictionary m_Dictionary = null;
                         if (m_Dictionary == null || m_Dictionary.IsDisposed)
                         {
@@ -164,6 +161,48 @@ namespace QLDiemHSTHPT
         private void frmMain_SizeChanged(object sender, EventArgs e)
         {
             this.Focus();
+        }
+
+        private void frmMain_Resize(object sender, EventArgs e)
+        {
+            // Nếu Form đang Minimize thì ẩn luôn Form
+            //if (FormWindowState.Minimized == WindowState)
+               // Hide();
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            // Hiển thị lại Form nếu doubleclick vào icon dưới System tray
+            Show();
+            WindowState = FormWindowState.Maximized;
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           // WindowState = FormWindowState.Minimized;
+            Hide();
+            e.Cancel = true;
+        }
+
+        private void contextMenuStrip1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void toolStripMenuItemRestore_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+        }
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+            //e.CloseReason();
+        }
+
+        private void toolStripMenuItemExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

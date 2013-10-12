@@ -6,16 +6,10 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using System.Collections.Generic;
-using QLDiemHSTHPT.Bussiness;
 
 
 namespace QLDiemHSTHPT.Component
 {
-    public class Utilities
-    {
-       // public static NguoiDungInfo NguoiDung;
-        public static String DatabaseName;
-    }
     public class QuyDinh
     {
         

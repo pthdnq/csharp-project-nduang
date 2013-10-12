@@ -17,34 +17,11 @@ namespace QLDiemHSTHPT.Component
 
         public DataService()
         {
-        
+
 
         }
-        /*public static void ConnectionString()
-        {
-            XmlDocument xmlRed = XML.XMLReader("Connection.xml");
-            XmlElement xmlEle = xmlRed.DocumentElement;
-
-            try
-            {
-                if (xmlEle.SelectSingleNode("costatus").InnerText == "true")
-                {
-                    m_ConnectString = "Data Source=" + xmlEle.SelectSingleNode("servname").InnerText + ";Initial Catalog=" + xmlEle.SelectSingleNode("database").InnerText + ";Integrated Security=True;";
-                }
-                else
-                {
-                    m_ConnectString = "Data Source=" + xmlEle.SelectSingleNode("servname").InnerText + ";Initial Catalog=" + xmlEle.SelectSingleNode("database").InnerText + ";User Id=" + xmlEle.SelectSingleNode("username").InnerText + ";Password=" + xmlEle.SelectSingleNode("password").InnerText + ";";
-                }
-
-                Utilities.DatabaseName = xmlEle.SelectSingleNode("database").InnerText;
-            }
-            catch
-            {
-                MessageBoxEx.Show("Lỗi kết nối đến cơ sở dữ liệu! Vui lòng thiết lập lại kết nối!!!", "ERROR", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
-            }
-        }*/
         // connection SQL dynamic(kết nối tới SQL động)
-        public static void  ConnectionString()
+        public static void ConnectionString()
         {
             string conn = "";
             string strAppStart = Application.StartupPath;
@@ -93,7 +70,7 @@ namespace QLDiemHSTHPT.Component
         {
             m_Connection.Close();
         }
-        
+
 
         public int ExecuteNoneQuery()
         {
@@ -145,7 +122,7 @@ namespace QLDiemHSTHPT.Component
             }
             return result;
         }
-        
+
         public object ExecuteScalar(SqlCommand m_Sql)
         {
             object result = null;
@@ -173,38 +150,7 @@ namespace QLDiemHSTHPT.Component
             return result;
         }
 
-        public void DoiMatKhau(String userName, String newPassword)
-        {
-            m_DataAdapter = new SqlDataAdapter();
-            SqlCommand cmd = new SqlCommand("UPDATE NGUOIDUNG SET MatKhau = @matkhau WHERE TenDangNhap = @tendangnhap");
-            cmd.Parameters.Add("tendangnhap", SqlDbType.VarChar).Value = userName;
-            cmd.Parameters.Add("matkhau", SqlDbType.VarChar).Value = newPassword;
-
-            if (m_ConnectString == "")
-                ConnectionString();
-            if (m_Connection == null || m_Connection.State == ConnectionState.Closed)            {
-                m_Connection = new SqlConnection(m_ConnectString);
-                m_Connection.Open();
-            }
-            m_Command = new SqlCommand();
-            m_Command = cmd;
-
-            try
-            {
-                m_Command.Connection = m_Connection;
-                m_DataAdapter = new SqlDataAdapter();
-                m_DataAdapter.SelectCommand = m_Command;
-                m_DataAdapter.Fill(this);
-                SqlCommandBuilder buider = new SqlCommandBuilder(m_DataAdapter);
-                m_DataAdapter.Update(this);
-            }
-            catch (Exception e)
-            {
-                MessageBoxEx.Show("Không thể thực thi câu lệnh SQL này!\nLỗi: " + e.Message, "ERROR", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
-            }
-        }
-    
-        }
-       
     }
+
+}
 

@@ -5,7 +5,6 @@ using DevComponents.DotNetBar.Controls;
 using System.Windows.Forms;
 using QLDiemHSTHPT.DataLayer;
 using System.Data;
-using QLDiemHSTHPT.Bussiness;
 using DevComponents.Editors.DateTimeAdv;
 
 
