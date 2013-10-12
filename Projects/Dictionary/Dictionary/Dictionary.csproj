@@ -63,7 +63,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bussiness\QuyDinhInfo.cs" />
     <Compile Include="Component\DataService.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -349,6 +348,10 @@
   <ItemGroup>
     <None Include="Resources\Capture.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

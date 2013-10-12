@@ -15,7 +15,7 @@ namespace QLDiemHSTHPT
 {
     public partial class frmDictionary : Office2007Form
     {
-        DictionaryCtrl m_HocSinhCtrl = new DictionaryCtrl();
+        DictionaryCtrl m_DictionaryCtrl = new DictionaryCtrl();
         public frmDictionary()
         {
             InitializeComponent();

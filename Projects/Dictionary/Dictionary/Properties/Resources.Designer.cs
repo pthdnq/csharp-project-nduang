@@ -228,6 +228,13 @@ namespace QLDiemHSTHPT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap favicon {
+            get {
+                object obj = ResourceManager.GetObject("favicon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap giaovien {
             get {
                 object obj = ResourceManager.GetObject("giaovien", resourceCulture);
