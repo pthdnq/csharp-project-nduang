@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpNgayVH = new System.Windows.Forms.DateTimePicker();
             this.cmbNguyenMau = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbLoaiPT = new System.Windows.Forms.ComboBox();
@@ -62,7 +63,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtpNgayVH = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -112,6 +112,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin ";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // dtpNgayVH
+            // 
+            this.dtpNgayVH.CustomFormat = "MM/dd/yyyy";
+            this.dtpNgayVH.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayVH.Location = new System.Drawing.Point(569, 200);
+            this.dtpNgayVH.Name = "dtpNgayVH";
+            this.dtpNgayVH.Size = new System.Drawing.Size(239, 20);
+            this.dtpNgayVH.TabIndex = 36;
             // 
             // cmbNguyenMau
             // 
@@ -393,14 +402,6 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Width = 30;
-            // 
-            // dtpNgayVH
-            // 
-            this.dtpNgayVH.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayVH.Location = new System.Drawing.Point(569, 200);
-            this.dtpNgayVH.Name = "dtpNgayVH";
-            this.dtpNgayVH.Size = new System.Drawing.Size(239, 20);
-            this.dtpNgayVH.TabIndex = 36;
             // 
             // FrmPhuongTien
             // 
