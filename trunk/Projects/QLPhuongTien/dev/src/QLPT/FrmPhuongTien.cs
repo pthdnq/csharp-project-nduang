@@ -41,7 +41,7 @@ namespace QLPT
             txtLanTieuTu.Text = "";
             txtLanTrungTu.Text = "";
             txtLanDaiTu.Text = "";
-            dateEdit1.Text = "";
+            //dateEdit1.Text = "";
             //txtNguyenMauChiTiet.Text = "";
             cmbDVQL.Text = "";
             cmbDVTC.Text = "";
@@ -259,9 +259,9 @@ namespace QLPT
                             else
                                 try
                                 {
-                                    int ngay = Convert.ToInt32(this.dateEdit1.Text.Split('/')[0]);
-                                    int thang = Convert.ToInt32(this.dateEdit1.Text.Split('/')[1]);
-                                    int nam = Convert.ToInt32(this.dateEdit1.Text.Split('/')[2]);
+                                    int ngay =0 ;//Convert.ToInt32(this.dateEdit1.Text.Split('/')[0]);
+                                    int thang =0; //Convert.ToInt32(this.dateEdit1.Text.Split('/')[1]);
+                                    int nam = 0;// Convert.ToInt32(this.dateEdit1.Text.Split('/')[2]);
                                     string inputDate = (new DateTime(nam, thang, ngay)).ToString("dd/MM/yyyy");
                                     // PhuongTienID,  DonVIQLID, DonViTCID, BienDK, NgayVH , LanBDTX , LanTieuTu , LanTrungTu ,LanDaiTu, XuatXu, TongVH
                                     phuongtien.InsertPhuongTien(txtPhuongTienID.Text, cmbLoaiPT.SelectedValue.ToString(), cmbNguyenMau.SelectedValue.ToString(), cmbDVTC.SelectedValue.ToString(), cmbDVQL.SelectedValue.ToString(), txtBienDK.Text, inputDate, txtLanBDTX.Text, txtLanTieuTu.Text, txtLanTrungTu.Text, txtLanDaiTu.Text, txtXuaXu.Text, txtTongVH.Text);
@@ -298,7 +298,7 @@ namespace QLPT
             try
             {
                 dt.moketnoi();
-                string[] splitDate = dateEdit1.Text.Split('/');
+                string[] splitDate = null;// dateEdit1.Text.Split('/');
                 int ngay = Convert.ToInt32(splitDate[0]);
                 int thang = Convert.ToInt32(splitDate[1]);
                 int nam = Convert.ToInt32(splitDate[2]);
@@ -337,7 +337,7 @@ namespace QLPT
                 this.txtTongVH.Text = row.Cells[12].Value.ToString();
                 this.txtLanTieuTu.Text = row.Cells[14].Value.ToString();
                 //this.dateEdit1.Text = Convert.ToDateTime(row.Cells[17].Value).ToString("mm/dd/yyyy");
-                this.dateEdit1.Text = Convert.ToDateTime(row.Cells[17].Value).ToString("dd/MM/yyyy");
+               // this.dateEdit1.Text = Convert.ToDateTime(row.Cells[17].Value).ToString("dd/MM/yyyy");
                    // row.Cells[11].Value.ToString("dd/MM/yyyy");
                
 
