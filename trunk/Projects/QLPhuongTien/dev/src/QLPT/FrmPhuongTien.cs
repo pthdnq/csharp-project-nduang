@@ -412,6 +412,7 @@ namespace QLPT
                     phuongtien.DeletePhuongTien(this.txtPhuongTienID.Text);
                     MessageBox.Show("Đã xóa Mã lớp " + this.txtPhuongTienID.Text + " thành công !");
                     FrmPhuongTien_Load(sender, e);//trở về giao diện đầu     
+
                 }
         }
 

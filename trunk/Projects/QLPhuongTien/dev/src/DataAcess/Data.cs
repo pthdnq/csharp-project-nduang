@@ -106,5 +106,10 @@ namespace DataAcess
         //    dongketnoi();
         //}
 
+        public void LuuNhanVien()
+        {
+            //TODO
+        }
     }
+
 }
