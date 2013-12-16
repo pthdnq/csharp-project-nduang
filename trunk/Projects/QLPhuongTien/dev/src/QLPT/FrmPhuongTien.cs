@@ -298,12 +298,7 @@ namespace QLPT
             try
             {
                 dt.moketnoi();
-                string[] splitDate = null;// dateEdit1.Text.Split('/');
-                int ngay = Convert.ToInt32(splitDate[0]);
-                int thang = Convert.ToInt32(splitDate[1]);
-                int nam = Convert.ToInt32(splitDate[2]);
-                string inputDate = (new DateTime(nam, thang, ngay)).ToString("MM/dd/yyyy");
-                phuongtien.UpdatePhuongTien(txtPhuongTienID.Text, cmbLoaiPT.SelectedValue.ToString(), cmbDVQL.SelectedValue.ToString(), cmbDVTC.SelectedValue.ToString(), txtBienDK.Text, inputDate, txtLanBDTX.Text, txtLanTieuTu.Text, txtLanTrungTu.Text, txtLanDaiTu.Text, txtXuaXu.Text, txtTongVH.Text);
+                phuongtien.UpdatePhuongTien(txtPhuongTienID.Text, cmbLoaiPT.SelectedValue.ToString(), cmbDVQL.SelectedValue.ToString(), cmbDVTC.SelectedValue.ToString(), txtBienDK.Text, dtpNgayVH.Text.Trim(), txtLanBDTX.Text, txtLanTieuTu.Text, txtLanTrungTu.Text, txtLanDaiTu.Text, txtXuaXu.Text, txtTongVH.Text);
               
                 MessageBox.Show("Đã sửa  " + txtPhuongTienID.Text + " thành công !");
                 FrmPhuongTien_Load(sender, e);
