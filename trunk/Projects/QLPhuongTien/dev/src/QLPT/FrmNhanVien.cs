@@ -43,8 +43,8 @@ namespace QLPT
             SqlCommandBuilder commandBuilder = new SqlCommandBuilder(da);
             DataSet ds = new DataSet();
             da.Fill(ds, "NhanVien");
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = ds.Tables[0];
+            dgvNhanVien.DataSource = null;
+            dgvNhanVien.DataSource = ds.Tables[0];
             dt.dongketnoi();
 
         }
@@ -88,9 +88,9 @@ namespace QLPT
 
         private void dataGridView1_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
-            for (int i = 0; i < dataGridView1.RowCount; i++)
+            for (int i = 0; i < dgvNhanVien.RowCount; i++)
             {
-                dataGridView1.Rows[i].Cells[0].Value = i + 1;//hiển thị số thứ tự
+                dgvNhanVien.Rows[i].Cells[0].Value = i + 1;//hiển thị số thứ tự
             }
 
         }
@@ -121,7 +121,7 @@ namespace QLPT
 
         private void btLuu_Click(object sender, EventArgs e)
         {
-
+            nv.LuuNhanVien();
             if (this.txtNhanVien_Ten.Text.Length == 0)
                 MessageBox.Show("Trường Tên NV không được bỏ trống !");
             else
@@ -198,7 +198,7 @@ namespace QLPT
 
         private void dataGridView1_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            foreach (DataGridViewRow row in dgvNhanVien.SelectedRows)
             {
                 this.txtNhanVien_ID.Text = row.Cells[1].Value.ToString();
                 this.txtNhanVien_Ten.Text = row.Cells[2].Value.ToString();
