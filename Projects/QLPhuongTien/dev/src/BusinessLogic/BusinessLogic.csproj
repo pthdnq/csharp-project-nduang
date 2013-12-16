@@ -51,12 +51,6 @@
     <Compile Include="PhuongTien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\QLPT\QLPT.csproj">
-      <Project>{E5989D6B-4729-49A5-B7D7-D53DE328F5B2}</Project>
-      <Name>QLPT</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
