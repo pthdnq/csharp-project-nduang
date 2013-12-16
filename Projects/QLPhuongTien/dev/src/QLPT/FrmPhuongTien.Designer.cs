@@ -34,7 +34,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cmbLoaiPT = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.label16 = new System.Windows.Forms.Label();
             this.cmbDVQL = new System.Windows.Forms.ComboBox();
             this.cmbDVTC = new System.Windows.Forms.ComboBox();
@@ -63,9 +62,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtpNgayVH = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -81,11 +79,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtpNgayVH);
             this.groupBox1.Controls.Add(this.cmbNguyenMau);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cmbLoaiPT);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.dateEdit1);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.cmbDVQL);
             this.groupBox1.Controls.Add(this.cmbDVTC);
@@ -150,20 +148,6 @@
             this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 32;
             this.label3.Text = "Loại  PT :";
-            // 
-            // dateEdit1
-            // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(569, 197);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
-            this.dateEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit1.Size = new System.Drawing.Size(250, 20);
-            this.dateEdit1.TabIndex = 31;
             // 
             // label16
             // 
@@ -410,6 +394,14 @@
             this.Column1.ReadOnly = true;
             this.Column1.Width = 30;
             // 
+            // dtpNgayVH
+            // 
+            this.dtpNgayVH.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayVH.Location = new System.Drawing.Point(569, 200);
+            this.dtpNgayVH.Name = "dtpNgayVH";
+            this.dtpNgayVH.Size = new System.Drawing.Size(239, 20);
+            this.dtpNgayVH.TabIndex = 36;
+            // 
             // FrmPhuongTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,8 +419,6 @@
             this.Load += new System.EventHandler(this.FrmPhuongTien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -466,11 +456,11 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label16;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
         private System.Windows.Forms.ComboBox cmbLoaiPT;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.ComboBox cmbNguyenMau;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dtpNgayVH;
     }
 }
