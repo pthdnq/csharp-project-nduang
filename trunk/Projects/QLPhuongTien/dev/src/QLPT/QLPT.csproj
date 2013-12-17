@@ -55,12 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DonViQL.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCongTrinh.cs">
       <SubType>Form</SubType>
@@ -86,11 +85,11 @@
     <Compile Include="FrmDoiMatKhau.Designer.cs">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDonVi_QL.cs">
+    <Compile Include="frmDonVi_QL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDonVi_QL.Designer.cs">
-      <DependentUpon>FrmDonVi_QL.cs</DependentUpon>
+    <Compile Include="frmDonVi_QL.Designer.cs">
+      <DependentUpon>frmDonVi_QL.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDonVi_TC.cs">
       <SubType>Form</SubType>
@@ -136,8 +135,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCongTrinh.resx">
       <DependentUpon>FrmCongTrinh.cs</DependentUpon>
@@ -151,8 +150,8 @@
     <EmbeddedResource Include="FrmDoiMatKhau.resx">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDonVi_QL.resx">
-      <DependentUpon>FrmDonVi_QL.cs</DependentUpon>
+    <EmbeddedResource Include="frmDonVi_QL.resx">
+      <DependentUpon>frmDonVi_QL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDonVi_TC.resx">
       <DependentUpon>FrmDonVi_TC.cs</DependentUpon>
