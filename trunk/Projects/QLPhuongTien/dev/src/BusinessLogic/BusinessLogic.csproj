@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DonViQL.cs" />
+    <Compile Include="DonViQuanLyBUS.cs" />
     <Compile Include="DonVi_TC.cs" />
     <Compile Include="LoaiPT.cs" />
     <Compile Include="NguyenMau_PT.cs" />

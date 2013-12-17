@@ -7,7 +7,7 @@ using System.Data;
 
 namespace BusinessLogic
 {
-    public class DonViQL
+    public class DonViQuanLyBUS
     {
         Data da = new Data();
         public DataTable ShowDonVi_QuanLy()
@@ -18,7 +18,7 @@ namespace BusinessLogic
             return dt;
         }
         //Thêm
-        public void InsertDonVi_QuanLy(string DonViQLID , string DonViQLTen, string DonViQLToTruong, string Sdt, string Email)
+        public void insert(string DonViQLID , string DonViQLTen, string DonViQLToTruong, string Sdt, string Email)
         {
             //int retval;
             string sql = "Insert  DonViQuanLy  Values ('"+DonViQLID+"',N'" + DonViQLTen + "',N'" + DonViQLToTruong + "',' " + Sdt + "','" + Email + "')";
