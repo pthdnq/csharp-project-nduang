@@ -37,7 +37,6 @@ namespace DataAcess
         public int ExcuteNonQuery(string sql)
         {
             int retval;
-
             SqlConnection con = getConnect();
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);

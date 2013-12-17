@@ -19,9 +19,7 @@ namespace QLPT
             InitializeComponent();
         }
         Data dt = new Data();
-        DonViQL DVQL = new DonViQL();
-        //   string ID;
-         bool themmoi;
+        DonViQuanLyBUS m_DonViQuanLyBUS = new DonViQuanLyBUS();
         public void setnull()
         {
             txtDonViQL_ID.Text = "";
@@ -36,9 +34,9 @@ namespace QLPT
         {
             setnull();
             DataTable dat = new DataTable();
-            dat = DVQL.ShowDonVi_QuanLy();
+            dat = m_DonViQuanLyBUS.ShowDonVi_QuanLy();
             dataGridView1.DataSource = dat;
-            
+
         }
 
         private void dataGridView1_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
@@ -52,7 +50,6 @@ namespace QLPT
         private void btThem_Click(object sender, EventArgs e)
         {
             txtDonViQL_ID.Enabled = false;
-            themmoi = true;
             setnull();
             btSua.Enabled = false;
 
@@ -70,43 +67,34 @@ namespace QLPT
             catch { }
             txtDonViQL_ID.Text = "DVQL" + dt.LaySTT(maximumNum + 1);
 
-          
+
             dt.dongketnoi();
 
         }
 
         private void btLuu_Click(object sender, EventArgs e)
         {
-            themmoi = true;
-            if (this.txtDonViQL_ten.Text.Length == 0)
-                MessageBox.Show("Trường Mã Phương tiện không được bỏ trống !");
-            else
-                if (this.txtDonViQL_ToTruong.Text.Length == 0)
-                    MessageBox.Show("Trường Tổ trưởng không được bỏ trống !");
-                else
-                    if (this.txtEmail.Text.Length == 0)
-                        MessageBox.Show("Trường Email không được bỏ trống !");
-                    else
-                        if (this.txtSdt.Text.Length == 0)
-                            MessageBox.Show("Trường Sdt không được bỏ trống !");
-                        else
-                            try
-                            {
-                                DVQL.InsertDonVi_QuanLy(txtDonViQL_ID.Text, txtDonViQL_ten.Text, txtDonViQL_ToTruong.Text,txtSdt.Text, txtEmail.Text);
-                                //if (layID > 0)
-                                //{
-                                //    txtDonViQL_ID.Text = layID.ToString();
-                                //}
-                               
-                                MessageBox.Show("Đã thêm " + txtDonViQL_ten.Text + " thành công !");
-                                FrmDonVi_QL_Load(sender, e);
-                                
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show("Lỗi Thêm :" + ex);
-                            }
-            
+            bool Ok = validData();
+            if (Ok == false)
+            {
+                return;
+            }
+            try
+            {
+                m_DonViQuanLyBUS.insert(txtDonViQL_ID.Text
+                                        , txtDonViQL_ten.Text
+                                        , txtDonViQL_ToTruong.Text
+                                        , txtSdt.Text, txtEmail.Text);
+
+                FrmDonVi_QL_Load(sender, e);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi Thêm :" + ex);
+            }
+
+
         }
 
         private void btThoat_Click(object sender, EventArgs e)
@@ -135,29 +123,19 @@ namespace QLPT
         private void btSua_Click_1(object sender, EventArgs e)
         {
 
-            themmoi = false;
-            if (this.txtDonViQL_ten.Text.Length == 0)
-                MessageBox.Show("Trường Mã Phương tiện không được bỏ trống !");
-            else
-                if (this.txtDonViQL_ToTruong.Text.Length == 0)
-                    MessageBox.Show("Trường Tổ trưởng không được bỏ trống !");
-                else
-                    if (this.txtEmail.Text.Length == 0)
-                        MessageBox.Show("Trường Email không được bỏ trống !");
-                    else
-                        if (this.txtSdt.Text.Length == 0)
-                            MessageBox.Show("Trường Sdt không được bỏ trống !");
-                        else
-                            try
-                            {
-                                DVQL.UpdateDonVi_QuanLy(txtDonViQL_ID.Text, txtDonViQL_ten.Text, txtDonViQL_ToTruong.Text, txtSdt.Text, txtEmail.Text);
-                                MessageBox.Show("Đã sửa  ID :" + txtDonViQL_ID.Text + " thành công ");
-                                FrmDonVi_QL_Load(sender, e);
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show("Lỗi Sửa :" + ex);
-                            }
+            bool ok = validData();
+            if (!ok)
+                return;
+            try
+            {
+                m_DonViQuanLyBUS.UpdateDonVi_QuanLy(txtDonViQL_ID.Text, txtDonViQL_ten.Text, txtDonViQL_ToTruong.Text, txtSdt.Text, txtEmail.Text);
+                MessageBox.Show("Đã sửa  ID :" + txtDonViQL_ID.Text + " thành công ");
+                FrmDonVi_QL_Load(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi Sửa :" + ex);
+            }
         }
 
         private void btXoa_Click(object sender, EventArgs e)
@@ -170,10 +148,35 @@ namespace QLPT
             else
                 if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa với ID " + txtDonViQL_ID.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
-                    DVQL.DeleteDonVi_QuanLy(this.txtDonViQL_ID.Text);
+                    m_DonViQuanLyBUS.DeleteDonVi_QuanLy(this.txtDonViQL_ID.Text);
                     MessageBox.Show("Đã xóa ID " + this.txtDonViQL_ID.Text + " thành công !");
                     FrmDonVi_QL_Load(sender, e);//trở về giao diện đầu     
                 }
+        }
+        public bool validData()
+        {
+            if (this.txtDonViQL_ten.Text.Length == 0)
+            {
+                MessageBox.Show("Trường Mã Phương tiện không được bỏ trống !");
+                return false;
+            }
+            else if (this.txtDonViQL_ToTruong.Text.Length == 0)
+            {
+                MessageBox.Show("Trường Tổ trưởng không được bỏ trống !");
+                return false;
+            }
+            else if (this.txtEmail.Text.Length == 0)
+            {
+                MessageBox.Show("Trường Email không được bỏ trống !");
+                return false;
+            }
+            else if (this.txtSdt.Text.Length == 0)
+            {
+                MessageBox.Show("Trường Sdt không được bỏ trống !");
+                return false;
+            }
+            return true;
+
         }
 
     }
