@@ -5,11 +5,6 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 
-
-
-
-
-
 namespace DataAcess
 {
     public class Data
@@ -93,28 +88,6 @@ namespace DataAcess
             else
                 return "";
 
-        }
-        //public void update(string str, SqlConnection sqlConn)
-        //{
-        //    moketnoi();
-        //    try
-        //    {
-        //        SqlCommand cmd = new SqlCommand(str, sqlConn);
-        //        cmd.ExecuteNonQuery();
-
-        //        //MessageBox.Show(ThaoTac_ThanhCong, Tieu_De, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //     //  MessageBox.Show("Lỗi" + ex);
-                
-        //    }
-        //    dongketnoi();
-        //}
-
-        public void LuuNhanVien()
-        {
-            //TODO
         }
     }
 

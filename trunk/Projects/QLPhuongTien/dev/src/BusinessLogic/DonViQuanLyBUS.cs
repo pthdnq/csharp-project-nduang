@@ -29,10 +29,9 @@ namespace BusinessLogic
             m_DonViQuanLyData.update(strDonViQLID, strDonViQLTen,  strDonViQLToTruong,  strSdt,  strEmail);
         }
         //xóa
-        public void DeleteDonVi_QuanLy(string DonViQLID)
+        public void delete(string strDonViQLID)
         {
-            string sql = "Delete DonVi_QuanLy where DonViQLID = '" + DonViQLID + "'";
-            da.ExcuteNonQuery(sql);
+            m_DonViQuanLyData.delete(strDonViQLID);
         }
     }
 }

@@ -31,7 +31,6 @@ namespace QLPT
             txtSdt.Text = "";
         }
 
-
         private void FrmDonVi_QL_Load(object sender, EventArgs e)
         {
             DataTable dat = new DataTable();
@@ -139,8 +138,8 @@ namespace QLPT
             else
                 if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa với ID " + txtDonViQL_ID.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
-                    m_DonViQuanLyBUS.DeleteDonVi_QuanLy(this.txtDonViQL_ID.Text);
-                    MessageBox.Show("Đã xóa ID " + this.txtDonViQL_ID.Text + " thành công !");
+                    m_DonViQuanLyBUS.delete(txtDonViQL_ID.Text);
+                    MessageBox.Show("Đã xóa " + this.txtDonViQL_ID.Text + " thành công !");
                     FrmDonVi_QL_Load(sender, e);//trở về giao diện đầu     
                 }
         }

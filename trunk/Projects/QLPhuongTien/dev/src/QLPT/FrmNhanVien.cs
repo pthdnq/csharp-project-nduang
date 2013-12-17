@@ -121,7 +121,7 @@ namespace QLPT
 
         private void btLuu_Click(object sender, EventArgs e)
         {
-            nv.LuuNhanVien();
+           
             if (this.txtNhanVien_Ten.Text.Length == 0)
                 MessageBox.Show("Trường Tên NV không được bỏ trống !");
             else

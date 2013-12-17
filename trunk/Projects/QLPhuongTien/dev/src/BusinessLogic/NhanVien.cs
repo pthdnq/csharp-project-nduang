@@ -38,9 +38,6 @@ namespace BusinessLogic
             string sql = "Delete NhanVien where NhanVienID = '" + NhanVienID + "'";
             da.ExcuteNonQuery(sql);
         }
-        public void LuuNhanVien()
-        {
-            da.LuuNhanVien();
-        }
+ 
     }
 }

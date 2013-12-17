@@ -60,6 +60,13 @@ namespace QLPT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap _1236995_506204332791140_1185602877_n {
+            get {
+                object obj = ResourceManager.GetObject("1236995_506204332791140_1185602877_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap _500px_Crystal_Clear_action_exit_svg {
             get {
                 object obj = ResourceManager.GetObject("500px-Crystal_Clear_action_exit.svg", resourceCulture);
