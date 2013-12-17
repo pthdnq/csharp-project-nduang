@@ -46,16 +46,23 @@ namespace DataAcess
             return retval;
 
         }
-        //public void ExcuteNonQuery(string sql)
-        //{
-        //    SqlConnection con = getConnect();
-        //    con.Open();
-        //    SqlCommand cmd = new SqlCommand(sql, con);
-        //    cmd.ExecuteNonQuery();
-        //    cmd.Dispose();
-        //    con.Close();
-
-        //}
+        public String getIDNumberAuto(string tblName, string fldID)
+        {
+            try
+            {
+                string sql = @"set rowcount 1 select " + fldID + " from " + tblName + " order by " + fldID + " Desc ";
+                SqlConnection con = getConnect();
+                SqlDataAdapter ad = new SqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                string strMaxIDAuto = dt.Rows[0][0].ToString();
+                return strMaxIDAuto;
+            }
+            catch(Exception)
+            {
+                return "0";
+            }
+        }
         public void moketnoi()
         {
             sqlConn = new SqlConnection(ketnoi);

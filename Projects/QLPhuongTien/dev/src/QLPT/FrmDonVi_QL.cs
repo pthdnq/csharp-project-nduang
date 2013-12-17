@@ -8,19 +8,21 @@ using System.Text;
 using System.Windows.Forms;
 using BusinessLogic;
 using DataAcess;
+using Component;
 using System.Data.SqlClient;
 
 namespace QLPT
 {
-    public partial class FrmDonVi_QL : Form
+    public partial class frmDonVi_QL : Form
     {
-        public FrmDonVi_QL()
+        public frmDonVi_QL()
         {
             InitializeComponent();
         }
         Data dt = new Data();
+        Utils utils = new Utils();
         DonViQuanLyBUS m_DonViQuanLyBUS = new DonViQuanLyBUS();
-        public void setnull()
+        public void resetControl()
         {
             txtDonViQL_ID.Text = "";
             txtDonViQL_ten.Text = "";
@@ -32,7 +34,6 @@ namespace QLPT
 
         private void FrmDonVi_QL_Load(object sender, EventArgs e)
         {
-            setnull();
             DataTable dat = new DataTable();
             dat = m_DonViQuanLyBUS.ShowDonVi_QuanLy();
             dataGridView1.DataSource = dat;
@@ -50,15 +51,9 @@ namespace QLPT
         private void btThem_Click(object sender, EventArgs e)
         {
             txtDonViQL_ID.Enabled = false;
-            setnull();
+            resetControl();
             btSua.Enabled = false;
-
-            dt.moketnoi();
-            string sql = @"set rowcount 1 select DonViQLID from DonViQuanLy order by DonViQLID Desc ";
-            SqlDataAdapter da = new SqlDataAdapter(sql, dt.sqlConn);
-            DataSet ds = new DataSet();
-            da.Fill(ds, "DonViQuanLy");
-            string returnMaximumDonViQLId = ds.Tables["DonViQuanLy"].Rows[0][0].ToString();
+            string returnMaximumDonViQLId = utils.getIDAuto("DonViQuanLy","DonViQLID");//= getIDNumberAuto
             int maximumNum = 0;
             try
             {
@@ -66,9 +61,6 @@ namespace QLPT
             }
             catch { }
             txtDonViQL_ID.Text = "DVQL" + dt.LaySTT(maximumNum + 1);
-
-
-            dt.dongketnoi();
 
         }
 
@@ -128,8 +120,7 @@ namespace QLPT
                 return;
             try
             {
-                m_DonViQuanLyBUS.UpdateDonVi_QuanLy(txtDonViQL_ID.Text, txtDonViQL_ten.Text, txtDonViQL_ToTruong.Text, txtSdt.Text, txtEmail.Text);
-                MessageBox.Show("Đã sửa  ID :" + txtDonViQL_ID.Text + " thành công ");
+                m_DonViQuanLyBUS.update(txtDonViQL_ID.Text, txtDonViQL_ten.Text, txtDonViQL_ToTruong.Text, txtSdt.Text, txtEmail.Text);
                 FrmDonVi_QL_Load(sender, e);
             }
             catch (Exception ex)
