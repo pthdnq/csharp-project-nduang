@@ -51,16 +51,16 @@
             this.txtNguyenMau_ChiTiet = new System.Windows.Forms.TextBox();
             this.txtDaiTu = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvNguyenMau = new System.Windows.Forms.DataGridView();
+            this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btThem = new System.Windows.Forms.Button();
             this.btLuu = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.btSua = new System.Windows.Forms.Button();
             this.btThoat = new System.Windows.Forms.Button();
-            this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNguyenMau)).BeginInit();
             this.SuspendLayout();
             // 
             // lbDonViTinh
@@ -85,9 +85,9 @@
             this.lbMaPT.AutoSize = true;
             this.lbMaPT.Location = new System.Drawing.Point(8, 66);
             this.lbMaPT.Name = "lbMaPT";
-            this.lbMaPT.Size = new System.Drawing.Size(93, 13);
+            this.lbMaPT.Size = new System.Drawing.Size(50, 13);
             this.lbMaPT.TabIndex = 2;
-            this.lbMaPT.Text = "Tên nguyên mẫu :";
+            this.lbMaPT.Text = "Loại PT :";
             // 
             // lbTenPT
             // 
@@ -267,7 +267,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dgvNguyenMau);
             this.groupBox2.Location = new System.Drawing.Point(21, 291);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(858, 180);
@@ -275,20 +275,27 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách chi tiết";
             // 
-            // dataGridView1
+            // dgvNguyenMau
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvNguyenMau.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvNguyenMau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNguyenMau.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.stt});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(852, 161);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
-            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
+            this.dgvNguyenMau.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvNguyenMau.Location = new System.Drawing.Point(3, 16);
+            this.dgvNguyenMau.Name = "dgvNguyenMau";
+            this.dgvNguyenMau.ReadOnly = true;
+            this.dgvNguyenMau.Size = new System.Drawing.Size(852, 161);
+            this.dgvNguyenMau.TabIndex = 0;
+            this.dgvNguyenMau.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
+            this.dgvNguyenMau.Click += new System.EventHandler(this.dataGridView1_Click);
+            // 
+            // stt
+            // 
+            this.stt.HeaderText = "STT";
+            this.stt.Name = "stt";
+            this.stt.ReadOnly = true;
+            this.stt.Width = 30;
             // 
             // btThem
             // 
@@ -333,20 +340,13 @@
             // 
             // btThoat
             // 
-            this.btThoat.Location = new System.Drawing.Point(545, 241);
+            this.btThoat.Location = new System.Drawing.Point(801, 241);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(75, 23);
             this.btThoat.TabIndex = 11;
             this.btThoat.Text = "Thoát";
             this.btThoat.UseVisualStyleBackColor = true;
             this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
-            // 
-            // stt
-            // 
-            this.stt.HeaderText = "STT";
-            this.stt.Name = "stt";
-            this.stt.ReadOnly = true;
-            this.stt.Width = 30;
             // 
             // FrmNguyenMau_PT
             // 
@@ -366,7 +366,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNguyenMau)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,7 +382,7 @@
         private System.Windows.Forms.TextBox txtDaiTu;
         private System.Windows.Forms.TextBox txtNguyenMau_ChiTiet;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvNguyenMau;
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.Button btLuu;
         private System.Windows.Forms.Button btXoa;

@@ -64,7 +64,7 @@ namespace QLPT
                 if (dt.Rows.Count > 0)
                 {
                     this.Hide();
-                    MessageBox.Show("Đăng nhập thành công tài khoản : " + txtUser.Text, "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   // MessageBox.Show("Đăng nhập thành công tài khoản : " + txtUser.Text, "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //  Form1 frm = new Form1();
                     // FrmQLPT frmQLPT = new FrmQLPT();
                     //frm.Show();

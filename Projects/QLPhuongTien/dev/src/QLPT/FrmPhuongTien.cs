@@ -66,8 +66,8 @@ namespace QLPT
             SqlDataAdapter da1 = new SqlDataAdapter(sql1, dt.sqlConn);
             DataSet ds1 = new DataSet();
             da1.Fill(ds1, "PhuongTien");
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = ds1.Tables[0];
+            dgvPhuongTien.DataSource = null;
+            dgvPhuongTien.DataSource = ds1.Tables[0];
             dt.dongketnoi();
         }
         private void FrmPhuongTien_Load(object sender, EventArgs e)
@@ -313,7 +313,7 @@ namespace QLPT
      //   private string NgayVH;
         private void dataGridView1_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            foreach (DataGridViewRow row in dgvPhuongTien.SelectedRows)
             {
                 this.txtPhuongTienID.Text = row.Cells[1].Value.ToString();
                 this.cmbLoaiPT.Text = row.Cells[2].Value.ToString();
@@ -343,9 +343,9 @@ namespace QLPT
 
         private void dataGridView1_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
-            for (int i = 0; i < dataGridView1.RowCount; i++)
+            for (int i = 0; i < dgvPhuongTien.RowCount; i++)
             {
-                dataGridView1.Rows[i].Cells[0].Value = i + 1;//hiển thị số thứ tự
+                dgvPhuongTien.Rows[i].Cells[0].Value = i + 1;//hiển thị số thứ tự
             }
         }
 

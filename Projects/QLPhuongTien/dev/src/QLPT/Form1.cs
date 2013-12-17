@@ -89,5 +89,11 @@ namespace QLPT
             FrmPhuongTien phuongtien = new FrmPhuongTien();
             phuongtien.Show();
         }
+
+        private void tìmKiếmPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTimKiem timkiem = new FrmTimKiem();
+            timkiem.Show();
+        }
     }
 }

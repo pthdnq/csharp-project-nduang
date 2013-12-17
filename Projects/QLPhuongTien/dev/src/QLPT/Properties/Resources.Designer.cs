@@ -74,6 +74,13 @@ namespace QLPT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Back {
+            get {
+                object obj = ResourceManager.GetObject("Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Book_31 {
             get {
                 object obj = ResourceManager.GetObject("Book 31", resourceCulture);
@@ -165,6 +172,13 @@ namespace QLPT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Search1 {
+            get {
+                object obj = ResourceManager.GetObject("Search1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Taxi {
             get {
                 object obj = ResourceManager.GetObject("Taxi", resourceCulture);
@@ -203,6 +217,13 @@ namespace QLPT.Properties {
         internal static System.Drawing.Bitmap user_icon {
             get {
                 object obj = ResourceManager.GetObject("user-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap View {
+            get {
+                object obj = ResourceManager.GetObject("View", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -271,6 +271,7 @@
             this.tìmKiếmPhươngTiệnToolStripMenuItem.Name = "tìmKiếmPhươngTiệnToolStripMenuItem";
             this.tìmKiếmPhươngTiệnToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.tìmKiếmPhươngTiệnToolStripMenuItem.Text = "Tìm kiếm phương tiện";
+            this.tìmKiếmPhươngTiệnToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmPhươngTiệnToolStripMenuItem_Click);
             // 
             // trợGiúpToolStripMenuItem
             // 
