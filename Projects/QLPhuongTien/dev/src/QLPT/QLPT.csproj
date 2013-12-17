@@ -43,9 +43,6 @@
     <Reference Include="DataAcess">
       <HintPath>..\BusinessLogic\bin\Debug\DataAcess.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -271,6 +268,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Component\Component.csproj">
+      <Project>{6B2B3A1D-CAD2-4F03-A3B6-1BBCA7F61FAE}</Project>
+      <Name>Component</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
