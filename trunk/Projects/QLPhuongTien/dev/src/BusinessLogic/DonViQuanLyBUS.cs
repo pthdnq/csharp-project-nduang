@@ -29,9 +29,9 @@ namespace BusinessLogic
             m_DonViQuanLyData.update(strDonViQLID, strDonViQLTen,  strDonViQLToTruong,  strSdt,  strEmail);
         }
         //xóa
-        public void delete(string strDonViQLID)
+        public void delete1(string strDonViQLID)
         {
-            m_DonViQuanLyData.delete(strDonViQLID);
+            m_DonViQuanLyData.delete1(strDonViQLID);
         }
     }
 }

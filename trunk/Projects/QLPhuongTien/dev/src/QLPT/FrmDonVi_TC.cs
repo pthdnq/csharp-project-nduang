@@ -97,7 +97,7 @@ namespace QLPT
         {
             if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã DV : " + txtDonViTC_ID.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
-                m_DonViTCBUS.delete(txtDonViTC_ID.Text);
+                m_DonViTCBUS.delete1(txtDonViTC_ID.Text);
                 MessageBox.Show("Đã xóa " + this.txtDonViTC_ID.Text + " thành công !");
                 FrmDonVi_TC_Load(sender, e);//trở về giao diện đầu     
             }
@@ -136,7 +136,7 @@ namespace QLPT
                 this.txtDonViTC_Ten.Text = row.Cells[2].Value.ToString();
                 this.txtEmail.Text = row.Cells[5].Value.ToString();
                 this.txtDonViTC_ToTruong.Text = row.Cells[3].Value.ToString();
-                this.txtSdt.Text = row.Cells[4].Value.ToString();
+                this.txtSdt.Text = row.Cells[4].Value.ToString();           
                 btSua.Enabled = true;
                 btXoa.Enabled = true;
                 btLuu.Enabled = false;
