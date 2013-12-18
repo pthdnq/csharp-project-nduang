@@ -41,17 +41,17 @@
             this.lbMaDV = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btSua = new System.Windows.Forms.Button();
-            this.btXoa = new System.Windows.Forms.Button();
-            this.btLuu = new System.Windows.Forms.Button();
-            this.btThoat = new System.Windows.Forms.Button();
-            this.btThem = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btSua = new System.Windows.Forms.Button();
+            this.btXoa = new System.Windows.Forms.Button();
+            this.btLuu = new System.Windows.Forms.Button();
+            this.btThoat = new System.Windows.Forms.Button();
+            this.btThem = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -178,75 +178,14 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 16);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(732, 185);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
-            // 
-            // btSua
-            // 
-            this.btSua.Enabled = false;
-            this.btSua.Image = global::QLPT.Properties.Resources.application_edit;
-            this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSua.Location = new System.Drawing.Point(132, 192);
-            this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(75, 28);
-            this.btSua.TabIndex = 13;
-            this.btSua.Text = "Sửa";
-            this.btSua.UseVisualStyleBackColor = true;
-            this.btSua.Click += new System.EventHandler(this.btSua_Click);
-            // 
-            // btXoa
-            // 
-            this.btXoa.Image = global::QLPT.Properties.Resources.Delete;
-            this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoa.Location = new System.Drawing.Point(257, 193);
-            this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(75, 27);
-            this.btXoa.TabIndex = 12;
-            this.btXoa.Text = "Xóa";
-            this.btXoa.UseVisualStyleBackColor = true;
-            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
-            // 
-            // btLuu
-            // 
-            this.btLuu.Image = global::QLPT.Properties.Resources.Save;
-            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLuu.Location = new System.Drawing.Point(385, 193);
-            this.btLuu.Name = "btLuu";
-            this.btLuu.Size = new System.Drawing.Size(75, 31);
-            this.btLuu.TabIndex = 11;
-            this.btLuu.Text = "Lưu";
-            this.btLuu.UseVisualStyleBackColor = true;
-            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
-            // 
-            // btThoat
-            // 
-            this.btThoat.Image = global::QLPT.Properties.Resources.Exit;
-            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThoat.Location = new System.Drawing.Point(610, 196);
-            this.btThoat.Name = "btThoat";
-            this.btThoat.Size = new System.Drawing.Size(75, 28);
-            this.btThoat.TabIndex = 10;
-            this.btThoat.Text = "Thoát";
-            this.btThoat.UseVisualStyleBackColor = true;
-            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
-            // 
-            // btThem
-            // 
-            this.btThem.Image = global::QLPT.Properties.Resources.plus_16;
-            this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThem.Location = new System.Drawing.Point(12, 189);
-            this.btThem.Name = "btThem";
-            this.btThem.Size = new System.Drawing.Size(75, 31);
-            this.btThem.TabIndex = 9;
-            this.btThem.Text = "Thêm";
-            this.btThem.UseVisualStyleBackColor = true;
-            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // Column1
             // 
@@ -294,6 +233,69 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             this.Column6.Width = 170;
+            // 
+            // btSua
+            // 
+            this.btSua.Enabled = false;
+            this.btSua.Image = global::QLPT.Properties.Resources.application_edit;
+            this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSua.Location = new System.Drawing.Point(132, 192);
+            this.btSua.Name = "btSua";
+            this.btSua.Size = new System.Drawing.Size(75, 28);
+            this.btSua.TabIndex = 13;
+            this.btSua.Text = "Sửa";
+            this.btSua.UseVisualStyleBackColor = true;
+            this.btSua.Click += new System.EventHandler(this.btSua_Click);
+            // 
+            // btXoa
+            // 
+            this.btXoa.Enabled = false;
+            this.btXoa.Image = global::QLPT.Properties.Resources.Delete;
+            this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btXoa.Location = new System.Drawing.Point(257, 193);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.Size = new System.Drawing.Size(75, 27);
+            this.btXoa.TabIndex = 12;
+            this.btXoa.Text = "Xóa";
+            this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
+            // 
+            // btLuu
+            // 
+            this.btLuu.Enabled = false;
+            this.btLuu.Image = global::QLPT.Properties.Resources.Save;
+            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLuu.Location = new System.Drawing.Point(385, 193);
+            this.btLuu.Name = "btLuu";
+            this.btLuu.Size = new System.Drawing.Size(75, 31);
+            this.btLuu.TabIndex = 11;
+            this.btLuu.Text = "Lưu";
+            this.btLuu.UseVisualStyleBackColor = true;
+            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
+            // 
+            // btThoat
+            // 
+            this.btThoat.Image = global::QLPT.Properties.Resources.Exit;
+            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThoat.Location = new System.Drawing.Point(610, 196);
+            this.btThoat.Name = "btThoat";
+            this.btThoat.Size = new System.Drawing.Size(75, 28);
+            this.btThoat.TabIndex = 10;
+            this.btThoat.Text = "Thoát";
+            this.btThoat.UseVisualStyleBackColor = true;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
+            // 
+            // btThem
+            // 
+            this.btThem.Image = global::QLPT.Properties.Resources.plus_16;
+            this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThem.Location = new System.Drawing.Point(12, 189);
+            this.btThem.Name = "btThem";
+            this.btThem.Size = new System.Drawing.Size(75, 31);
+            this.btThem.TabIndex = 9;
+            this.btThem.Text = "Thêm";
+            this.btThem.UseVisualStyleBackColor = true;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // FrmDonVi_TC
             // 

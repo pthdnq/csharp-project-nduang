@@ -237,6 +237,7 @@
             // 
             // btSua
             // 
+            this.btSua.Enabled = false;
             this.btSua.Image = global::QLPT.Properties.Resources.application_edit;
             this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSua.Location = new System.Drawing.Point(122, 185);
@@ -249,6 +250,7 @@
             // 
             // btXoa
             // 
+            this.btXoa.Enabled = false;
             this.btXoa.Image = global::QLPT.Properties.Resources.Delete;
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btXoa.Location = new System.Drawing.Point(241, 186);
@@ -261,6 +263,7 @@
             // 
             // btLuu
             // 
+            this.btLuu.Enabled = false;
             this.btLuu.Image = global::QLPT.Properties.Resources.Save;
             this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btLuu.Location = new System.Drawing.Point(367, 186);
@@ -295,7 +298,7 @@
             this.btThem.UseVisualStyleBackColor = true;
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
-            // FrmDonVi_QL
+            // frmDonVi_QL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -308,7 +311,7 @@
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btThem);
             this.Controls.Add(this.groupBox1);
-            this.Name = "FrmDonVi_QL";
+            this.Name = "frmDonVi_QL";
             this.Text = "Đơn vị quản lý phương tiện";
             this.Load += new System.EventHandler(this.FrmDonVi_QL_Load);
             this.groupBox1.ResumeLayout(false);
