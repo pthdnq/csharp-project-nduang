@@ -134,7 +134,7 @@ namespace QLPT
         {
             if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã DV : " + txtDonViQL_ID.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
-                    m_DonViQuanLyBUS.delete(txtDonViQL_ID.Text);
+                    m_DonViQuanLyBUS.delete1(txtDonViQL_ID.Text);
                     MessageBox.Show("Đã xóa " + this.txtDonViQL_ID.Text + " thành công !");
                     FrmDonVi_QL_Load(sender, e);//trở về giao diện đầu     
                 }
