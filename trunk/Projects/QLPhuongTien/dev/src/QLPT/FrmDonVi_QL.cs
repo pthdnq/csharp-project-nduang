@@ -49,6 +49,7 @@ namespace QLPT
 
         private void btThem_Click(object sender, EventArgs e)
         {
+            btLuu.Enabled = true;
             txtDonViQL_ID.Enabled = false;
             resetControl();
             btSua.Enabled = false;
@@ -108,6 +109,7 @@ namespace QLPT
                 this.txtSdt.Text = row.Cells[4].Value.ToString();
                 this.txtEmail.Text = row.Cells[5].Value.ToString();
                 btSua.Enabled = true;
+                btXoa.Enabled = true;
             }
         }
 
@@ -130,13 +132,7 @@ namespace QLPT
 
         private void btXoa_Click(object sender, EventArgs e)
         {
-            if (this.txtDonViQL_ID.Text.Length == 0)
-            {
-                this.txtDonViQL_ID.ForeColor = Color.Red;
-                MessageBox.Show("Bạn cần chọn Mã Xe để xóa");
-            }
-            else
-                if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa với ID " + txtDonViQL_ID.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã DV : " + txtDonViQL_ID.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
                     m_DonViQuanLyBUS.delete(txtDonViQL_ID.Text);
                     MessageBox.Show("Đã xóa " + this.txtDonViQL_ID.Text + " thành công !");
