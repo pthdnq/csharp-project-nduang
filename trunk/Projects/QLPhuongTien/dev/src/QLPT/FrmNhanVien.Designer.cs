@@ -43,7 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.lbStatus = new System.Windows.Forms.Label();
             this.btTroVe = new System.Windows.Forms.Button();
@@ -53,6 +52,14 @@
             this.btLuu = new System.Windows.Forms.Button();
             this.btThoat = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
@@ -86,7 +93,6 @@
             this.cmbDVTC.Name = "cmbDVTC";
             this.cmbDVTC.Size = new System.Drawing.Size(192, 21);
             this.cmbDVTC.TabIndex = 12;
-            this.cmbDVTC.SelectedIndexChanged += new System.EventHandler(this.cmbDVTC_SelectedIndexChanged);
             // 
             // txtNhanVien_Ten
             // 
@@ -118,6 +124,7 @@
             // 
             // txtNhanVien_ID
             // 
+            this.txtNhanVien_ID.Enabled = false;
             this.txtNhanVien_ID.Location = new System.Drawing.Point(106, 28);
             this.txtNhanVien_ID.Name = "txtNhanVien_ID";
             this.txtNhanVien_ID.Size = new System.Drawing.Size(196, 20);
@@ -192,23 +199,24 @@
             this.dgvNhanVien.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
             this.dgvNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvNhanVien.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.dgvNhanVien.Location = new System.Drawing.Point(3, 16);
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.ReadOnly = true;
+            this.dgvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNhanVien.Size = new System.Drawing.Size(982, 220);
             this.dgvNhanVien.TabIndex = 0;
             this.dgvNhanVien.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             this.dgvNhanVien.Click += new System.EventHandler(this.dataGridView1_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 30;
             // 
             // txtTimKiem
             // 
@@ -250,6 +258,7 @@
             // 
             // btSua
             // 
+            this.btSua.Enabled = false;
             this.btSua.Image = global::QLPT.Properties.Resources.application_edit;
             this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSua.Location = new System.Drawing.Point(118, 179);
@@ -262,6 +271,7 @@
             // 
             // btXoa
             // 
+            this.btXoa.Enabled = false;
             this.btXoa.Image = global::QLPT.Properties.Resources.Delete;
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btXoa.Location = new System.Drawing.Point(228, 179);
@@ -274,6 +284,7 @@
             // 
             // btLuu
             // 
+            this.btLuu.Enabled = false;
             this.btLuu.Image = global::QLPT.Properties.Resources.Save;
             this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btLuu.Location = new System.Drawing.Point(334, 179);
@@ -307,6 +318,63 @@
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = true;
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 30;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "NhanVienID";
+            this.Column2.HeaderText = "Mã NV";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "NhanVienTen";
+            this.Column3.HeaderText = "Tên NV";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Sdt";
+            this.Column4.HeaderText = "Sdt";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Email";
+            this.Column5.HeaderText = "Email";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "DC";
+            this.Column6.HeaderText = "Địa chỉ";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "DonViTCID";
+            this.Column7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Column7.HeaderText = "Đơn vị TC";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "PhuongTienID";
+            this.Column8.HeaderText = "Phương tiện ";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             // 
             // FrmNhanVien
             // 
@@ -359,10 +427,17 @@
         private System.Windows.Forms.Button btSua;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvNhanVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btTroVe;
         private System.Windows.Forms.Label lbStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }
