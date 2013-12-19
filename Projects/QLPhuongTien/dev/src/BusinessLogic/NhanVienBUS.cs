@@ -13,13 +13,13 @@ namespace BusinessLogic
         Data da = new Data();
         NhanVienData m_NhanVienData = new NhanVienData();
       //  DonViTCData m_DonViTCDaTa = new DonViTCData();
-        public DataTable ShowNhanVien()
-        {
-            string sql = "select * from NhanVien";
-            DataTable dt = new DataTable();
-            dt = da.getTable(sql);
-            return dt;
-        }
+        //public DataTable ShowNhanVien()
+        //{
+        //    string sql = "select * from NhanVien";
+        //    DataTable dt = new DataTable();
+        //    dt = da.getTable(sql);
+        //    return dt;
+        //}
        
         public void insert(string NhanVienID, string NhanVienTen, string Sdt, string Email, string DC, string DonViTCID)
         {
@@ -36,6 +36,10 @@ namespace BusinessLogic
         public DataTable selectDonViTC()
         {
             return m_NhanVienData.selectDonViTC();
+        }
+        public DataTable select()
+        {
+            return m_NhanVienData.select();
         }
     }
 

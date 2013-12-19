@@ -44,8 +44,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.lbStatus = new System.Windows.Forms.Label();
-            this.btTroVe = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.btSua = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
@@ -53,13 +51,13 @@
             this.btThoat = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NhanVienID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NhanVienTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhuongTienID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
@@ -200,13 +198,13 @@
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2,
+            this.NhanVienID,
             this.NhanVienTen,
-            this.Column4,
-            this.Column5,
-            this.Column6,
+            this.Sdt,
+            this.Email,
+            this.DC,
             this.Column7,
-            this.Column8});
+            this.PhuongTienID});
             this.dgvNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvNhanVien.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.dgvNhanVien.Location = new System.Drawing.Point(3, 16);
@@ -226,26 +224,6 @@
             this.txtTimKiem.Size = new System.Drawing.Size(192, 20);
             this.txtTimKiem.TabIndex = 13;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
-            // 
-            // lbStatus
-            // 
-            this.lbStatus.AutoSize = true;
-            this.lbStatus.Location = new System.Drawing.Point(696, 78);
-            this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(37, 13);
-            this.lbStatus.TabIndex = 13;
-            this.lbStatus.Text = "Status";
-            // 
-            // btTroVe
-            // 
-            this.btTroVe.Image = global::QLPT.Properties.Resources.Back;
-            this.btTroVe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTroVe.Location = new System.Drawing.Point(909, 98);
-            this.btTroVe.Name = "btTroVe";
-            this.btTroVe.Size = new System.Drawing.Size(88, 32);
-            this.btTroVe.TabIndex = 15;
-            this.btTroVe.Text = "Trở về";
-            this.btTroVe.UseVisualStyleBackColor = true;
             // 
             // btTimKiem
             // 
@@ -329,12 +307,13 @@
             this.Column1.ReadOnly = true;
             this.Column1.Width = 30;
             // 
-            // Column2
+            // NhanVienID
             // 
-            this.Column2.DataPropertyName = "NhanVienID";
-            this.Column2.HeaderText = "Mã NV";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.NhanVienID.DataPropertyName = "NhanVienID";
+            this.NhanVienID.HeaderText = "Mã NV";
+            this.NhanVienID.Name = "NhanVienID";
+            this.NhanVienID.ReadOnly = true;
+            this.NhanVienID.Width = 60;
             // 
             // NhanVienTen
             // 
@@ -342,27 +321,30 @@
             this.NhanVienTen.HeaderText = "Tên NV";
             this.NhanVienTen.Name = "NhanVienTen";
             this.NhanVienTen.ReadOnly = true;
+            this.NhanVienTen.Width = 120;
             // 
-            // Column4
+            // Sdt
             // 
-            this.Column4.DataPropertyName = "Sdt";
-            this.Column4.HeaderText = "Sdt";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.Sdt.DataPropertyName = "Sdt";
+            this.Sdt.HeaderText = "Sdt";
+            this.Sdt.Name = "Sdt";
+            this.Sdt.ReadOnly = true;
             // 
-            // Column5
+            // Email
             // 
-            this.Column5.DataPropertyName = "Email";
-            this.Column5.HeaderText = "Email";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 150;
             // 
-            // Column6
+            // DC
             // 
-            this.Column6.DataPropertyName = "DC";
-            this.Column6.HeaderText = "Địa chỉ";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
+            this.DC.DataPropertyName = "DC";
+            this.DC.HeaderText = "Địa chỉ";
+            this.DC.Name = "DC";
+            this.DC.ReadOnly = true;
+            this.DC.Width = 200;
             // 
             // Column7
             // 
@@ -371,13 +353,15 @@
             this.Column7.HeaderText = "Đơn vị TC";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
+            this.Column7.Width = 200;
             // 
-            // Column8
+            // PhuongTienID
             // 
-            this.Column8.DataPropertyName = "PhuongTienID";
-            this.Column8.HeaderText = "Phương tiện ";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
+            this.PhuongTienID.DataPropertyName = "PhuongTienID";
+            this.PhuongTienID.HeaderText = "Phương tiện ";
+            this.PhuongTienID.Name = "PhuongTienID";
+            this.PhuongTienID.ReadOnly = true;
+            this.PhuongTienID.Width = 200;
             // 
             // FrmNhanVien
             // 
@@ -385,8 +369,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1012, 485);
-            this.Controls.Add(this.lbStatus);
-            this.Controls.Add(this.btTroVe);
             this.Controls.Add(this.btTimKiem);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.groupBox2);
@@ -432,15 +414,13 @@
         private System.Windows.Forms.DataGridView dgvNhanVien;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btTimKiem;
-        private System.Windows.Forms.Button btTroVe;
-        private System.Windows.Forms.Label lbStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NhanVienID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NhanVienTen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sdt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DC;
         private System.Windows.Forms.DataGridViewComboBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PhuongTienID;
     }
 }

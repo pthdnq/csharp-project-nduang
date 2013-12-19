@@ -31,8 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtLoaiPT_Ma = new System.Windows.Forms.TextBox();
             this.txtLoaiPT_Ten = new System.Windows.Forms.TextBox();
+            this.txtLoaiPT_Ma = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btThem = new System.Windows.Forms.Button();
@@ -41,8 +41,8 @@
             this.btSua = new System.Windows.Forms.Button();
             this.btThoat = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiPTMa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiPTTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -79,19 +79,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin ";
             // 
-            // txtLoaiPT_Ma
-            // 
-            this.txtLoaiPT_Ma.Location = new System.Drawing.Point(90, 27);
-            this.txtLoaiPT_Ma.Name = "txtLoaiPT_Ma";
-            this.txtLoaiPT_Ma.Size = new System.Drawing.Size(153, 20);
-            this.txtLoaiPT_Ma.TabIndex = 3;
-            // 
             // txtLoaiPT_Ten
             // 
             this.txtLoaiPT_Ten.Location = new System.Drawing.Point(90, 63);
             this.txtLoaiPT_Ten.Name = "txtLoaiPT_Ten";
             this.txtLoaiPT_Ten.Size = new System.Drawing.Size(153, 20);
             this.txtLoaiPT_Ten.TabIndex = 4;
+            // 
+            // txtLoaiPT_Ma
+            // 
+            this.txtLoaiPT_Ma.Location = new System.Drawing.Point(90, 27);
+            this.txtLoaiPT_Ma.Name = "txtLoaiPT_Ma";
+            this.txtLoaiPT_Ma.Size = new System.Drawing.Size(153, 20);
+            this.txtLoaiPT_Ma.TabIndex = 3;
             // 
             // groupBox2
             // 
@@ -105,11 +105,12 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2,
-            this.Column3});
+            this.LoaiPTMa,
+            this.LoaiPTTen});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 16);
             this.dataGridView1.Name = "dataGridView1";
@@ -121,9 +122,11 @@
             // 
             // btThem
             // 
-            this.btThem.Location = new System.Drawing.Point(12, 136);
+            this.btThem.Image = global::QLPT.Properties.Resources.plus_16;
+            this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThem.Location = new System.Drawing.Point(12, 142);
             this.btThem.Name = "btThem";
-            this.btThem.Size = new System.Drawing.Size(75, 23);
+            this.btThem.Size = new System.Drawing.Size(75, 26);
             this.btThem.TabIndex = 4;
             this.btThem.Text = "Thêm ";
             this.btThem.UseVisualStyleBackColor = true;
@@ -131,9 +134,12 @@
             // 
             // btLuu
             // 
-            this.btLuu.Location = new System.Drawing.Point(138, 136);
+            this.btLuu.Enabled = false;
+            this.btLuu.Image = global::QLPT.Properties.Resources.Save;
+            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLuu.Location = new System.Drawing.Point(180, 142);
             this.btLuu.Name = "btLuu";
-            this.btLuu.Size = new System.Drawing.Size(75, 23);
+            this.btLuu.Size = new System.Drawing.Size(75, 26);
             this.btLuu.TabIndex = 5;
             this.btLuu.Text = "Lưu";
             this.btLuu.UseVisualStyleBackColor = true;
@@ -141,9 +147,12 @@
             // 
             // btXoa
             // 
-            this.btXoa.Location = new System.Drawing.Point(12, 215);
+            this.btXoa.Enabled = false;
+            this.btXoa.Image = global::QLPT.Properties.Resources.Delete;
+            this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btXoa.Location = new System.Drawing.Point(12, 225);
             this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(75, 23);
+            this.btXoa.Size = new System.Drawing.Size(75, 25);
             this.btXoa.TabIndex = 6;
             this.btXoa.Text = "Xóa";
             this.btXoa.UseVisualStyleBackColor = true;
@@ -152,9 +161,11 @@
             // btSua
             // 
             this.btSua.Enabled = false;
-            this.btSua.Location = new System.Drawing.Point(12, 177);
+            this.btSua.Image = global::QLPT.Properties.Resources.application_edit;
+            this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSua.Location = new System.Drawing.Point(12, 184);
             this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(75, 23);
+            this.btSua.Size = new System.Drawing.Size(75, 25);
             this.btSua.TabIndex = 7;
             this.btSua.Text = "Sửa";
             this.btSua.UseVisualStyleBackColor = true;
@@ -162,9 +173,11 @@
             // 
             // btThoat
             // 
-            this.btThoat.Location = new System.Drawing.Point(138, 177);
+            this.btThoat.Image = global::QLPT.Properties.Resources.Exit;
+            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThoat.Location = new System.Drawing.Point(180, 184);
             this.btThoat.Name = "btThoat";
-            this.btThoat.Size = new System.Drawing.Size(75, 23);
+            this.btThoat.Size = new System.Drawing.Size(75, 25);
             this.btThoat.TabIndex = 8;
             this.btThoat.Text = "Thoát";
             this.btThoat.UseVisualStyleBackColor = true;
@@ -177,26 +190,27 @@
             this.Column1.ReadOnly = true;
             this.Column1.Width = 30;
             // 
-            // Column2
+            // LoaiPTMa
             // 
-            this.Column2.DataPropertyName = "LoaiPT_Ma";
-            this.Column2.HeaderText = "Mã loại";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 50;
+            this.LoaiPTMa.DataPropertyName = "LoaiPTMa";
+            this.LoaiPTMa.HeaderText = "Mã loại";
+            this.LoaiPTMa.Name = "LoaiPTMa";
+            this.LoaiPTMa.ReadOnly = true;
+            this.LoaiPTMa.Width = 50;
             // 
-            // Column3
+            // LoaiPTTen
             // 
-            this.Column3.DataPropertyName = "LoaiPT_Ten";
-            this.Column3.HeaderText = "Tên loại";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 200;
+            this.LoaiPTTen.DataPropertyName = "LoaiPTTen";
+            this.LoaiPTTen.HeaderText = "Tên loại";
+            this.LoaiPTTen.Name = "LoaiPTTen";
+            this.LoaiPTTen.ReadOnly = true;
+            this.LoaiPTTen.Width = 200;
             // 
             // FrmLoaiPT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(670, 262);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btSua);
@@ -206,7 +220,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmLoaiPT";
-            this.Text = "FrmLoaiPT";
+            this.Text = "Loại phương tiện";
             this.Load += new System.EventHandler(this.FrmLoaiPT_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -231,7 +245,7 @@
         private System.Windows.Forms.Button btSua;
         private System.Windows.Forms.Button btThoat;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiPTMa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiPTTen;
     }
 }

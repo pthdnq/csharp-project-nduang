@@ -46,6 +46,7 @@
     <Compile Include="DonViQuanLyBUS.cs" />
     <Compile Include="DonViTCBUS.cs" />
     <Compile Include="LoaiPT.cs" />
+    <Compile Include="LoaiPTBUS.cs" />
     <Compile Include="NguyenMau_PT.cs" />
     <Compile Include="NhanVienBUS.cs" />
     <Compile Include="PhuongTien.cs" />

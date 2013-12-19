@@ -41,7 +41,7 @@ namespace QLPT
         {
             resetControl();
             DataTable dat = new DataTable();
-            dat = m_NhanVienBUS.ShowNhanVien();
+            dat = m_NhanVienBUS.select();
             dgvNhanVien.DataSource = dat;
             try
             {
