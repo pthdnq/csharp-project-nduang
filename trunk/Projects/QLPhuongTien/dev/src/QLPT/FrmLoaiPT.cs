@@ -20,8 +20,8 @@ namespace QLPT
             InitializeComponent();
         }
         Data dt = new Data();
-        LoaiPT loaipt = new LoaiPT();
-        public void setnull()
+        LoaiPTBUS m_LoaiPTBUS = new LoaiPTBUS();
+        public void resetControl()
         {
             txtLoaiPT_Ten.Text = "";
             txtLoaiPT_Ma.Text = "";            
@@ -29,9 +29,9 @@ namespace QLPT
 
         private void FrmLoaiPT_Load(object sender, EventArgs e)
         {
-             setnull();
+            resetControl();
             DataTable dat = new DataTable();
-            dat = loaipt.ShowLoaiPT();
+            dat = m_LoaiPTBUS.select();
             dataGridView1.DataSource = dat;
         }
 
@@ -42,52 +42,67 @@ namespace QLPT
                 dataGridView1.Rows[i].Cells[0].Value = i + 1;//hiển thị số thứ tự
             }
         }
+        public bool validData()
+        {
+
+            if (this.txtLoaiPT_Ma.Text.Length == 0)
+            {
+                MessageBox.Show("Trường Mã Phương tiện không được bỏ trống !");
+                return false;
+            }
+            else if (this.txtLoaiPT_Ten.Text.Length == 0)
+            {
+                MessageBox.Show("Trường Tên Phương tiện không được bỏ trống !");
+                return false;
+            }
+           
+            return true;
+        }
 
         private void btThem_Click(object sender, EventArgs e)
         {
-            setnull();
+            resetControl();
         }
 
         private void btLuu_Click(object sender, EventArgs e)
         {
-            if (this.txtLoaiPT_Ma.Text.Length == 0)
-                MessageBox.Show("Trường Mã Phương tiện không được bỏ trống !");
-            else
-                if (this.txtLoaiPT_Ten.Text.Length == 0)
-                    MessageBox.Show("Trường Tên Loại  không được bỏ trống !");
-                else
-                    try
-                    {
-                        loaipt.InsertLoaiPT(txtLoaiPT_Ma.Text, txtLoaiPT_Ten.Text);
-                        MessageBox.Show("Đã Thêm Mã :" + txtLoaiPT_Ma.Text + " thành công ");
-                        FrmLoaiPT_Load(sender, e);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Mã : "+txtLoaiPT_Ma.Text+" đã tồn tại" +ex);
-                        this.txtLoaiPT_Ma.Focus();
-                       // MessageBox.Show("Lỗi Thêm  :" + ex);
-                    }
+
+            bool Ok = validData();
+            if (Ok == false)
+            {
+                return;
+            }
+            try
+            {
+                m_LoaiPTBUS.insert(txtLoaiPT_Ma.Text
+                                        , txtLoaiPT_Ten.Text
+                                        );
+
+                FrmLoaiPT_Load(sender, e);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi Thêm :" + ex);
+            }
         }
 
         private void btSua_Click(object sender, EventArgs e)
         {
-            if (this.txtLoaiPT_Ma.Text.Length == 0)
-                MessageBox.Show("Trường Mã Phương tiện không được bỏ trống !");
-            else
-                if (this.txtLoaiPT_Ten.Text.Length == 0)
-                    MessageBox.Show("Trường Tên Loại  không được bỏ trống !");
-                else
-                    try
-                    {
-                        loaipt.UpdateLoaiPT(txtLoaiPT_Ma.Text, txtLoaiPT_Ten.Text);
-                        MessageBox.Show("Đã sửa Mã :" + txtLoaiPT_Ma.Text + " thành công ");
-                        FrmLoaiPT_Load(sender, e);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Lỗi Sửa:" + ex);
-                    }
+            bool ok = validData();
+            if (!ok)
+                return;
+            try
+            {
+                m_LoaiPTBUS.update(txtLoaiPT_Ma.Text
+                    , txtLoaiPT_Ten.Text
+                    );
+                FrmLoaiPT_Load(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi Sửa :" + ex);
+            }
         }
 
         private void dataGridView1_Click(object sender, EventArgs e)
@@ -98,6 +113,8 @@ namespace QLPT
                 this.txtLoaiPT_Ten.Text = row.Cells[2].Value.ToString();
                
                 btSua.Enabled = true;
+                btXoa.Enabled = true;
+                btLuu.Enabled = false;
             }
         }
 
@@ -113,18 +130,12 @@ namespace QLPT
         private void btXoa_Click(object sender, EventArgs e)
         {
 
-            if (this.txtLoaiPT_Ma.Text.Length == 0)
+            if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã DV : " + txtLoaiPT_Ma.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
-                this.txtLoaiPT_Ma.ForeColor = Color.Red;
-                MessageBox.Show("Bạn cần chọn Mã Xe để xóa");
+                m_LoaiPTBUS.delete1(txtLoaiPT_Ma.Text);
+                MessageBox.Show("Đã xóa " + this.txtLoaiPT_Ma.Text + " thành công !");
+                FrmLoaiPT_Load(sender, e);//trở về giao diện đầu     
             }
-            else
-                if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa với ID " + txtLoaiPT_Ma.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
-                {
-                    loaipt.DeleteLoaiPT(this.txtLoaiPT_Ma.Text);
-                    MessageBox.Show("Đã xóa ID " + this.txtLoaiPT_Ma.Text + " thành công !");
-                    FrmLoaiPT_Load(sender, e);//trở về giao diện đầu     
-                }
         }
     }
 }
