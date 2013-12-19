@@ -45,21 +45,13 @@ namespace QLPT
             dgvNhanVien.DataSource = dat;
             try
             {
-                string sql1 = "SELECT * FROM DonViTC";
-                dt.moketnoi();
-                SqlDataAdapter da = new SqlDataAdapter(sql1, dt.sqlConn);
-                DataSet ds = new DataSet();
-                da.Fill(ds, "DonViTC");
-                DataTable dtb = ds.Tables["DonViTC"];
-              //cmbDVTC.SelectedIndex = -1;
-                dt.dongketnoi();
-                this.cmbDVTC.DataSource = dtb;
+                this.cmbDVTC.DataSource = m_NhanVienBUS.selectDonViTC();
                 this.cmbDVTC.DisplayMember = "DonViTCTen";
                 this.cmbDVTC.ValueMember = "DonViTCID";
                cmbDVTC.Text = "";
 
                DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvNhanVien.Columns[7];
-               comboBoxColumn.DataSource = m_DonViTCBUS.ShowDonViTC();
+               comboBoxColumn.DataSource = m_DonViTCBUS.selectDonViTC();
                comboBoxColumn.DisplayMember = "DonViTCTen";
                comboBoxColumn.ValueMember = "DonViTCID";
             }
@@ -198,7 +190,8 @@ namespace QLPT
                 this.txtNhanVien_Email.Text = row.Cells[4].Value.ToString();
                 this.cmbDVTC.SelectedValue = row.Cells[7].Value.ToString();
                 btSua.Enabled = true;
-                btXoa.Enabled = true; 
+                btXoa.Enabled = true;
+                btLuu.Enabled = false; 
             }
         }
 
@@ -210,6 +203,15 @@ namespace QLPT
                 MessageBox.Show("Đã xóa " + this.txtNhanVien_ID.Text + " thành công !");
                 FrmNhanVien_Load(sender, e);//trở về giao diện đầu     
             }
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dgvNhanVien.DataSource;
+            bs.Filter = dgvNhanVien.Columns["NhanVienTen"].HeaderText.ToString() + " LIKE '%" + txtTimKiem.Text + "%'";
+           // bs.Filter = "Sample NhanVienTen like '*" + txtTimKiem.Text + "*'";
+            dgvNhanVien.DataSource = bs;
         }
 
   

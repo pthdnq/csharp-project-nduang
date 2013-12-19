@@ -71,7 +71,7 @@ namespace DataAcess
             return retval > 0;
         }
 
-        public DataTable select(string DonViTCID, string DonViTCTen, string DonViTCToTruong, string Sdt, string Email)
+        public DataTable select()
         {
             SqlConnection con = data.getConnect();
             con.Open();
