@@ -207,13 +207,22 @@ namespace QLPT
 
         private void btTimKiem_Click(object sender, EventArgs e)
         {
-            BindingSource bs = new BindingSource();
-            bs.DataSource = dgvNhanVien.DataSource;
-            bs.Filter = dgvNhanVien.Columns["NhanVienTen"].HeaderText.ToString() + " LIKE '%" + txtTimKiem.Text + "%'";
-           // bs.Filter = "Sample NhanVienTen like '*" + txtTimKiem.Text + "*'";
-            dgvNhanVien.DataSource = bs;
+           // timKiem();
         }
 
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            timKiem();
+        }
+        private void timKiem()
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dgvNhanVien.DataSource;
+            //bs.Filter = dgvNhanVien.Columns["NhanVienTen"].HeaderText.ToString() + " LIKE '%" + txtTimKiem.Text + "%'";
+            bs.Filter = "NhanVienTen like '*" + txtTimKiem.Text.Trim() + "*'";
+            dgvNhanVien.DataSource = bs;
+            dgvNhanVien.Refresh();
+        }
   
        
 
