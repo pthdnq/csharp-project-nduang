@@ -1,0 +1,100 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data.SqlClient;
+using System.Data;
+
+namespace DataAcess
+{
+   public class DonViTCData
+    {
+        Data data = new Data();
+        private String tblDonViTC = "DonViTC";
+        private String fldDonViTCID = "DonViTCID";
+        private String fldDonViTCTen = "DonViTCTen";
+        private String fldDonViTCToTruong = "DonViTCToTruong";
+        private String fldSdt = "Sdt";
+        private String fldEmail = "Email";
+        public bool insert(string DonViTCID, string DonViTCTen, string DonViTCToTruong, string Sdt, string Email)
+        {
+
+            int retval;
+            SqlConnection con = data.getConnect();
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_insert_DonViTCData";
+            cmd.Parameters.Add("DonViTCID", SqlDbType.NVarChar).Value = DonViTCID;
+            cmd.Parameters.Add("DonViTCTen", SqlDbType.NVarChar).Value = DonViTCTen;
+            cmd.Parameters.Add("DonViTCToTruong", SqlDbType.NVarChar).Value = DonViTCToTruong;
+            cmd.Parameters.Add("Sdt", SqlDbType.NVarChar).Value = Sdt;
+            cmd.Parameters.Add("Email", SqlDbType.NVarChar).Value = Email;
+            retval = cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+            return retval >0;
+        }
+        public bool update(string DonViTCID, string DonViTCTen, string DonViTCToTruong, string Sdt, string Email)
+        {
+            int retval;
+            SqlConnection con = data.getConnect();
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_update_DonViTCData";
+            cmd.Parameters.Add("DonViTCID", SqlDbType.NVarChar).Value = DonViTCID;
+            cmd.Parameters.Add("DonViTCTen", SqlDbType.NVarChar).Value = DonViTCTen;
+            cmd.Parameters.Add("DonViTCToTruong", SqlDbType.NVarChar).Value = DonViTCToTruong;
+            cmd.Parameters.Add("Sdt", SqlDbType.NVarChar).Value = Sdt;
+            cmd.Parameters.Add("Email", SqlDbType.NVarChar).Value = Email;
+            retval = cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+            return retval > 0;
+        }
+        public bool delete1(string DonViTCID)
+        {
+            int retval;
+            SqlConnection con = data.getConnect();
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_delete_DonViTCData";
+            cmd.Parameters.Add("DonViTCID", SqlDbType.NVarChar).Value = DonViTCID;       
+            retval = cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+            return retval > 0;
+        }
+
+        public DataTable  select(string DonViTCID, string DonViTCTen, string DonViTCToTruong, string Sdt, string Email)
+        {
+            int retval;
+            SqlConnection con = data.getConnect();
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_select_DonViTCData";
+         
+            retval = cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+            return retval > 0;
+
+            dt.moketnoi();
+            SqlDataAdapter da = new SqlDataAdapter(sql1, dt.sqlConn);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "DonViTC");
+            DataTable dtb = ds.Tables["DonViTC"];
+        }
+        public bool isExist()
+        {
+            return true;
+        }
+    }
+}
