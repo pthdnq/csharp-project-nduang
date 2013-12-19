@@ -10,15 +10,8 @@ namespace DataAcess
   public  class NhanVienData
     {
         Data data = new Data();
-        private String tblNhanVien = "NhanVien";
-        private String fldNhanVienID = "NhanVienID";
-        private String fldNhanVienTen = "NhanVienTen";
-        private String fldSdt = "Sdt";
-        private String fldEmail = "Email";
-        private String fldDC = "DC";
-        private string fldPhuongTienID = "PhuongTienID";
-        private String fldDonViTCID = "DonViTCID";
 
+        DonViTCData m_DonViTCData = new DonViTCData();
         public bool insert(string NhanVienID, string NhanVienTen, string Sdt, string Email, string DC,  string DonViTCID)
         {
             int retval;
@@ -75,27 +68,11 @@ namespace DataAcess
             con.Close();
             return retval > 0;
         }
-      //public bool combobox(string DonViTCID , string DonViTCTen , string )
-      //  {
-      //      int retval;
-      //      SqlConnection con = data.getConnect();
-      //      con.Open();
-      //      SqlCommand cmd = new SqlCommand();
-      //      cmd.Connection = con;
-      //      cmd.CommandType = CommandType.StoredProcedure;
-      //      cmd.CommandText = "sp_select_DonViTCData";
-      //      cmd.Parameters.Add("DonViTCID", SqlDbType.NVarChar).Value = DonViTCID;
-      //      cmd.Parameters.Add("DonViTCTen", SqlDbType.NVarChar).Value = DonViTCTen;
-      //      cmd.Parameters.Add("DonViTCTen", SqlDbType.NVarChar).Value = DonViTCTen;
-      //      cmd.Parameters.Add("DonViTCTen", SqlDbType.NVarChar).Value = DonViTCTen;
-      //      cmd.Parameters.Add("DonViTCTen", SqlDbType.NVarChar).Value = DonViTCTen;
-
-      //      retval = cmd.ExecuteNonQuery();
-      //      cmd.Dispose();
-      //      con.Close();
-      //      return retval > 0;
-      //  }
-     
+      public DataTable selectDonViTC()
+        {
+            return m_DonViTCData.select();
+        }
+    
 
     }
 }

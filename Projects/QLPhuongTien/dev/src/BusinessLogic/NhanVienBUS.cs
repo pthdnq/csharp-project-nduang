@@ -33,5 +33,10 @@ namespace BusinessLogic
         {
             m_NhanVienData.delete1(NhanVienID);
         }
+        public DataTable selectDonViTC()
+        {
+            return m_NhanVienData.selectDonViTC();
+        }
     }
+
 }

@@ -37,7 +37,7 @@ namespace QLPT
         {
             resetControl();
             DataTable dat = new DataTable();
-            dat = m_DonViTCBUS.ShowDonViTC();
+            dat = m_DonViTCBUS.selectDonViTC();
             dataGridView1.DataSource = dat;
         }
 
