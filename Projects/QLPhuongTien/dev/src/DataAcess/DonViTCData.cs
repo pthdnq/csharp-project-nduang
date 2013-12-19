@@ -71,26 +71,29 @@ namespace DataAcess
             return retval > 0;
         }
 
-        public DataTable  select(string DonViTCID, string DonViTCTen, string DonViTCToTruong, string Sdt, string Email)
+        public DataTable select(string DonViTCID, string DonViTCTen, string DonViTCToTruong, string Sdt, string Email)
         {
-            int retval;
             SqlConnection con = data.getConnect();
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_select_DonViTCData";
-         
-            retval = cmd.ExecuteNonQuery();
-            cmd.Dispose();
-            con.Close();
-            return retval > 0;
-
-            dt.moketnoi();
-            SqlDataAdapter da = new SqlDataAdapter(sql1, dt.sqlConn);
-            DataSet ds = new DataSet();
-            da.Fill(ds, "DonViTC");
-            DataTable dtb = ds.Tables["DonViTC"];
+            cmd.CommandText = "sp_select_DonViTCData";        
+            //retval = cmd.ExecuteNonQuery();
+            DataTable dtb;
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "DonViTC");
+                dtb = ds.Tables["DonViTC"];
+            }
+            catch (System.Exception ex)
+            {  
+                return null;
+            }
+            return dtb;
+            
         }
         public bool isExist()
         {
