@@ -45,10 +45,9 @@
   <ItemGroup>
     <Compile Include="DonViQuanLyBUS.cs" />
     <Compile Include="DonViTCBUS.cs" />
-    <Compile Include="DonVi_TC.cs" />
     <Compile Include="LoaiPT.cs" />
     <Compile Include="NguyenMau_PT.cs" />
-    <Compile Include="NhanVien.cs" />
+    <Compile Include="NhanVienBUS.cs" />
     <Compile Include="PhuongTien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
