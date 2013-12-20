@@ -82,6 +82,34 @@ namespace DataAcess
                return null;
            }
            return dtb;
+           
+
+       }
+       public bool exist(string LoaiPTMa)
+       {
+         
+           SqlConnection con = data.getConnect();
+           con.Open();
+           SqlCommand cmd = new SqlCommand();
+           cmd.Connection = con;
+           cmd.CommandType = CommandType.StoredProcedure;
+           cmd.CommandText = "sp_exist_LoaiPT";
+           cmd.Parameters.Add("LoaiPTMa", SqlDbType.NVarChar).Value = LoaiPTMa;
+           //retval = cmd.ExecuteNonQuery();
+           DataTable dtb;
+           try
+           {
+               SqlDataAdapter da = new SqlDataAdapter(cmd);
+               DataSet ds = new DataSet();
+               da.Fill(ds, "LoaiPT");
+               dtb = ds.Tables["LoaiPT"];
+               return dtb.Rows.Count > 0;
+           }
+           catch (System.Exception ex)
+           {
+               Console.WriteLine("Lỗi " + ex.ToString());
+           }
+           return false;
 
        }
     }
