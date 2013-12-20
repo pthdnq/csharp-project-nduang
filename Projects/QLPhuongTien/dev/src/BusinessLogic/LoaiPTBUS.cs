@@ -28,5 +28,9 @@ namespace BusinessLogic
         {
             return m_LoaiPTData.select();
         }
+        public bool exist(string LoaiPTMa)
+        {
+            return m_LoaiPTData.exist(LoaiPTMa);
+        }
     }
 }

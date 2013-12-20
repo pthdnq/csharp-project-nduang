@@ -35,14 +35,14 @@
             this.txtLoaiPT_Ma = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiPTMa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiPTTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btThem = new System.Windows.Forms.Button();
             this.btLuu = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.btSua = new System.Windows.Forms.Button();
             this.btThoat = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiPTMa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiPTTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -88,6 +88,7 @@
             // 
             // txtLoaiPT_Ma
             // 
+            this.txtLoaiPT_Ma.Enabled = false;
             this.txtLoaiPT_Ma.Location = new System.Drawing.Point(90, 27);
             this.txtLoaiPT_Ma.Name = "txtLoaiPT_Ma";
             this.txtLoaiPT_Ma.Size = new System.Drawing.Size(153, 20);
@@ -115,10 +116,34 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 16);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(324, 230);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 30;
+            // 
+            // LoaiPTMa
+            // 
+            this.LoaiPTMa.DataPropertyName = "LoaiPTMa";
+            this.LoaiPTMa.HeaderText = "Mã loại";
+            this.LoaiPTMa.Name = "LoaiPTMa";
+            this.LoaiPTMa.ReadOnly = true;
+            this.LoaiPTMa.Width = 50;
+            // 
+            // LoaiPTTen
+            // 
+            this.LoaiPTTen.DataPropertyName = "LoaiPTTen";
+            this.LoaiPTTen.HeaderText = "Tên loại";
+            this.LoaiPTTen.Name = "LoaiPTTen";
+            this.LoaiPTTen.ReadOnly = true;
+            this.LoaiPTTen.Width = 200;
             // 
             // btThem
             // 
@@ -182,29 +207,6 @@
             this.btThoat.Text = "Thoát";
             this.btThoat.UseVisualStyleBackColor = true;
             this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 30;
-            // 
-            // LoaiPTMa
-            // 
-            this.LoaiPTMa.DataPropertyName = "LoaiPTMa";
-            this.LoaiPTMa.HeaderText = "Mã loại";
-            this.LoaiPTMa.Name = "LoaiPTMa";
-            this.LoaiPTMa.ReadOnly = true;
-            this.LoaiPTMa.Width = 50;
-            // 
-            // LoaiPTTen
-            // 
-            this.LoaiPTTen.DataPropertyName = "LoaiPTTen";
-            this.LoaiPTTen.HeaderText = "Tên loại";
-            this.LoaiPTTen.Name = "LoaiPTTen";
-            this.LoaiPTTen.ReadOnly = true;
-            this.LoaiPTTen.Width = 200;
             // 
             // FrmLoaiPT
             // 

@@ -44,7 +44,7 @@
     <Compile Include="DonViQuanLyData.cs" />
     <Compile Include="DonViTCData.cs" />
     <Compile Include="LoaiPTData.cs" />
-    <Compile Include="NguyenMauData.cs" />
+    <Compile Include="NguyenMauPTData.cs" />
     <Compile Include="NhanVienData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

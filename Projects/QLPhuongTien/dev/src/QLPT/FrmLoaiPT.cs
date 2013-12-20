@@ -62,18 +62,28 @@ namespace QLPT
         private void btThem_Click(object sender, EventArgs e)
         {
             resetControl();
+            txtLoaiPT_Ma.Enabled = true;
+            btLuu.Enabled = true;
         }
 
         private void btLuu_Click(object sender, EventArgs e)
         {
+
 
             bool Ok = validData();
             if (Ok == false)
             {
                 return;
             }
+
             try
             {
+                Ok= m_LoaiPTBUS.exist(txtLoaiPT_Ma.Text.Trim());
+                if (Ok == true)//ma pt da ton tai
+                {
+                    MessageBox.Show("Mã Loại PT " + txtLoaiPT_Ma.Text + " đã tồn tại ");
+                    return;
+                }
                 m_LoaiPTBUS.insert(txtLoaiPT_Ma.Text
                                         , txtLoaiPT_Ten.Text
                                         );
@@ -83,7 +93,8 @@ namespace QLPT
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi Thêm :" + ex);
+              //  MessageBox.Show("Lỗi Thêm :" + ex);
+                Console.Write("Lỗi " + ex.ToString());
             }
         }
 
@@ -129,12 +140,22 @@ namespace QLPT
 
         private void btXoa_Click(object sender, EventArgs e)
         {
-
+            bool ok = validData();
+            if (ok == false)
+                return;
             if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã DV : " + txtLoaiPT_Ma.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
-                m_LoaiPTBUS.delete1(txtLoaiPT_Ma.Text);
-                MessageBox.Show("Đã xóa " + this.txtLoaiPT_Ma.Text + " thành công !");
-                FrmLoaiPT_Load(sender, e);//trở về giao diện đầu     
+                try
+                {
+                    m_LoaiPTBUS.delete1(txtLoaiPT_Ma.Text);
+                    MessageBox.Show("Đã xóa " + this.txtLoaiPT_Ma.Text + " thành công !");
+                    FrmLoaiPT_Load(sender, e);//trở về giao diện đầu     
+                }
+                catch (System.Exception ex)
+                {
+                    Console.Write("Không xóa đc. Lỗi" + ex.ToString());
+                }
+
             }
         }
     }
