@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace DataAcess
 {
@@ -56,6 +57,31 @@ namespace DataAcess
             catch(Exception)
             {
                 return "0";
+            }
+        }
+        public ArrayList getListIDNumberAuto(string tblName, string fldID)
+        {
+            ArrayList listID = new ArrayList();
+            try
+            {
+                string sql = @" select " + fldID + " from " + tblName + " order by " + fldID + " Desc ";
+                SqlConnection con = getConnect();
+                SqlDataAdapter ad = new SqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                string strID = "";
+
+                for (int i = 0; i < dt.Rows.Count; i++ )
+                {
+                    strID = dt.Rows[i][fldID].ToString();
+                    listID.Add(strID);
+
+                }
+                return listID;
+            }
+            catch (Exception)
+            {
+                return null;
             }
         }
         public void moketnoi()

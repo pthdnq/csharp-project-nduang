@@ -55,14 +55,14 @@
             this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NguyenMauID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiPTMa = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.đa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adfs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.da = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.đá = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dsa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ds = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fsf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fsfa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NhanHieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NangLuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BDTX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TieuTu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrungTu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DaiTu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NguyenMauChiTiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btThem = new System.Windows.Forms.Button();
             this.btLuu = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
@@ -151,7 +151,6 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin ";
-            //this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtNguyenMauChiTiet
             // 
@@ -165,55 +164,102 @@
             // 
             this.spbBDTX.DecimalPlaces = 3;
             this.spbBDTX.Location = new System.Drawing.Point(585, 25);
+            this.spbBDTX.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.spbBDTX.Minimum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            -2147483648});
             this.spbBDTX.Name = "spbBDTX";
             this.spbBDTX.Size = new System.Drawing.Size(256, 20);
             this.spbBDTX.TabIndex = 29;
-            //this.spbBDTX.ValueChanged += new System.EventHandler(this.spbBDTX_ValueChanged);
             // 
             // spbTieuTu
             // 
             this.spbTieuTu.DecimalPlaces = 3;
             this.spbTieuTu.Location = new System.Drawing.Point(585, 59);
+            this.spbTieuTu.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.spbTieuTu.Minimum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            -2147483648});
             this.spbTieuTu.Name = "spbTieuTu";
             this.spbTieuTu.Size = new System.Drawing.Size(256, 20);
             this.spbTieuTu.TabIndex = 28;
-           // this.spbTieuTu.ValueChanged += new System.EventHandler(this.spbTieuTu_ValueChanged);
             // 
             // spbTrungTu
             // 
             this.spbTrungTu.DecimalPlaces = 3;
             this.spbTrungTu.Location = new System.Drawing.Point(585, 103);
+            this.spbTrungTu.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.spbTrungTu.Minimum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            -2147483648});
             this.spbTrungTu.Name = "spbTrungTu";
             this.spbTrungTu.Size = new System.Drawing.Size(256, 20);
             this.spbTrungTu.TabIndex = 27;
-            //this.spbTrungTu.ValueChanged += new System.EventHandler(this.spbTrungTu_ValueChanged);
             // 
             // spbDaiTu
             // 
             this.spbDaiTu.DecimalPlaces = 3;
             this.spbDaiTu.Location = new System.Drawing.Point(585, 148);
+            this.spbDaiTu.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.spbDaiTu.Minimum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            -2147483648});
             this.spbDaiTu.Name = "spbDaiTu";
             this.spbDaiTu.Size = new System.Drawing.Size(256, 20);
             this.spbDaiTu.TabIndex = 26;
-           // this.spbDaiTu.ValueChanged += new System.EventHandler(this.spbDaiTu_ValueChanged);
             // 
             // spbNangLuc
             // 
             this.spbNangLuc.DecimalPlaces = 3;
             this.spbNangLuc.Location = new System.Drawing.Point(107, 143);
+            this.spbNangLuc.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.spbNangLuc.Minimum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            -2147483648});
             this.spbNangLuc.Name = "spbNangLuc";
             this.spbNangLuc.Size = new System.Drawing.Size(261, 20);
             this.spbNangLuc.TabIndex = 25;
-            //this.spbNangLuc.ValueChanged += new System.EventHandler(this.spbNangLuc_ValueChanged);
             // 
             // cmbLoaiPT
             // 
+            this.cmbLoaiPT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLoaiPT.Enabled = false;
+            this.cmbLoaiPT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbLoaiPT.FormattingEnabled = true;
             this.cmbLoaiPT.Location = new System.Drawing.Point(107, 63);
             this.cmbLoaiPT.Name = "cmbLoaiPT";
             this.cmbLoaiPT.Size = new System.Drawing.Size(261, 21);
             this.cmbLoaiPT.TabIndex = 24;
-           // this.cmbLoaiPT.SelectedIndexChanged += new System.EventHandler(this.cmbLoaiPT_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -251,7 +297,7 @@
             // 
             // txtNhanHieu
             // 
-            this.txtNhanHieu.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtNhanHieu.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtNhanHieu.Location = new System.Drawing.Point(105, 100);
             this.txtNhanHieu.Name = "txtNhanHieu";
             this.txtNhanHieu.Size = new System.Drawing.Size(264, 20);
@@ -311,24 +357,23 @@
             this.stt,
             this.NguyenMauID,
             this.LoaiPTMa,
-            this.đa,
-            this.adfs,
-            this.da,
-            this.đá,
-            this.dsa,
-            this.ds,
-            this.fsf,
-            this.fsfa});
+            this.NhanHieu,
+            this.NangLuc,
+            this.DonVi,
+            this.BDTX,
+            this.TieuTu,
+            this.TrungTu,
+            this.DaiTu,
+            this.NguyenMauChiTiet});
             this.dgvNguyenMau.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvNguyenMau.Location = new System.Drawing.Point(3, 16);
             this.dgvNguyenMau.Name = "dgvNguyenMau";
             this.dgvNguyenMau.ReadOnly = true;
+            this.dgvNguyenMau.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNguyenMau.Size = new System.Drawing.Size(852, 161);
             this.dgvNguyenMau.TabIndex = 0;
-            this.dgvNguyenMau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNguyenMau_CellClick);
-            this.dgvNguyenMau.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNguyenMau_CellContentClick);
             this.dgvNguyenMau.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
-            this.dgvNguyenMau.Click += new System.EventHandler(this.dataGridView1_Click);
+            this.dgvNguyenMau.Click += new System.EventHandler(this.dgvNguyenMau_Click);
             // 
             // stt
             // 
@@ -354,68 +399,68 @@
             this.LoaiPTMa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.LoaiPTMa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // đa
+            // NhanHieu
             // 
-            this.đa.DataPropertyName = "NhanHieu";
-            this.đa.HeaderText = "Nhãn hiệu";
-            this.đa.Name = "đa";
-            this.đa.ReadOnly = true;
+            this.NhanHieu.DataPropertyName = "NhanHieu";
+            this.NhanHieu.HeaderText = "Nhãn hiệu";
+            this.NhanHieu.Name = "NhanHieu";
+            this.NhanHieu.ReadOnly = true;
             // 
-            // adfs
+            // NangLuc
             // 
-            this.adfs.DataPropertyName = "NangLuc";
-            this.adfs.HeaderText = "Năng lực";
-            this.adfs.Name = "adfs";
-            this.adfs.ReadOnly = true;
-            this.adfs.Width = 30;
+            this.NangLuc.DataPropertyName = "NangLuc";
+            this.NangLuc.HeaderText = "Năng lực";
+            this.NangLuc.Name = "NangLuc";
+            this.NangLuc.ReadOnly = true;
+            this.NangLuc.Width = 30;
             // 
-            // da
+            // DonVi
             // 
-            this.da.DataPropertyName = "DonVi";
-            this.da.HeaderText = "Đơn vị";
-            this.da.Name = "da";
-            this.da.ReadOnly = true;
-            this.da.Width = 40;
+            this.DonVi.DataPropertyName = "DonVi";
+            this.DonVi.HeaderText = "Đơn vị";
+            this.DonVi.Name = "DonVi";
+            this.DonVi.ReadOnly = true;
+            this.DonVi.Width = 40;
             // 
-            // đá
+            // BDTX
             // 
-            this.đá.DataPropertyName = "BDTX";
-            this.đá.HeaderText = "BDTX";
-            this.đá.Name = "đá";
-            this.đá.ReadOnly = true;
-            this.đá.Width = 50;
+            this.BDTX.DataPropertyName = "BDTX";
+            this.BDTX.HeaderText = "BDTX";
+            this.BDTX.Name = "BDTX";
+            this.BDTX.ReadOnly = true;
+            this.BDTX.Width = 50;
             // 
-            // dsa
+            // TieuTu
             // 
-            this.dsa.DataPropertyName = "TieuTu";
-            this.dsa.HeaderText = "Tiểu tu";
-            this.dsa.Name = "dsa";
-            this.dsa.ReadOnly = true;
-            this.dsa.Width = 50;
+            this.TieuTu.DataPropertyName = "TieuTu";
+            this.TieuTu.HeaderText = "Tiểu tu";
+            this.TieuTu.Name = "TieuTu";
+            this.TieuTu.ReadOnly = true;
+            this.TieuTu.Width = 50;
             // 
-            // ds
+            // TrungTu
             // 
-            this.ds.DataPropertyName = "TrungTu";
-            this.ds.HeaderText = "Trung tu";
-            this.ds.Name = "ds";
-            this.ds.ReadOnly = true;
-            this.ds.Width = 50;
+            this.TrungTu.DataPropertyName = "TrungTu";
+            this.TrungTu.HeaderText = "Trung tu";
+            this.TrungTu.Name = "TrungTu";
+            this.TrungTu.ReadOnly = true;
+            this.TrungTu.Width = 50;
             // 
-            // fsf
+            // DaiTu
             // 
-            this.fsf.DataPropertyName = "DaiTu";
-            this.fsf.HeaderText = "Đại tu";
-            this.fsf.Name = "fsf";
-            this.fsf.ReadOnly = true;
-            this.fsf.Width = 50;
+            this.DaiTu.DataPropertyName = "DaiTu";
+            this.DaiTu.HeaderText = "Đại tu";
+            this.DaiTu.Name = "DaiTu";
+            this.DaiTu.ReadOnly = true;
+            this.DaiTu.Width = 50;
             // 
-            // fsfa
+            // NguyenMauChiTiet
             // 
-            this.fsfa.DataPropertyName = "NguyenMauChiTiet";
-            this.fsfa.HeaderText = "Chi tiết";
-            this.fsfa.Name = "fsfa";
-            this.fsfa.ReadOnly = true;
-            this.fsfa.Width = 300;
+            this.NguyenMauChiTiet.DataPropertyName = "NguyenMauChiTiet";
+            this.NguyenMauChiTiet.HeaderText = "Chi tiết";
+            this.NguyenMauChiTiet.Name = "NguyenMauChiTiet";
+            this.NguyenMauChiTiet.ReadOnly = true;
+            this.NguyenMauChiTiet.Width = 300;
             // 
             // btThem
             // 
@@ -429,6 +474,7 @@
             // 
             // btLuu
             // 
+            this.btLuu.Enabled = false;
             this.btLuu.Location = new System.Drawing.Point(339, 322);
             this.btLuu.Name = "btLuu";
             this.btLuu.Size = new System.Drawing.Size(75, 23);
@@ -439,6 +485,7 @@
             // 
             // btXoa
             // 
+            this.btXoa.Enabled = false;
             this.btXoa.Location = new System.Drawing.Point(232, 322);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(75, 23);
@@ -530,13 +577,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn stt;
         private System.Windows.Forms.DataGridViewTextBoxColumn NguyenMauID;
         private System.Windows.Forms.DataGridViewComboBoxColumn LoaiPTMa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn đa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adfs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn da;
-        private System.Windows.Forms.DataGridViewTextBoxColumn đá;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dsa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ds;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fsf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fsfa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NhanHieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NangLuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonVi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BDTX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TieuTu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrungTu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DaiTu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NguyenMauChiTiet;
     }
 }
