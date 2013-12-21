@@ -18,15 +18,22 @@ namespace QLPT
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            //FrmDangNhap frmdn = new FrmDangNhap();
-           // frmdn.ShowDialog();
+            lockControl();
         }
 
         private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmDangNhap frmdn = new FrmDangNhap();
             frmdn.Show();
+            if(frmdn.m_isLogin == true)
+            {
+                unlockControl();
+            }
+            else
+            {
+                lockControl();
+            }
+
         }
 
         private void đăngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -94,6 +101,31 @@ namespace QLPT
         {
             FrmTimKiem timkiem = new FrmTimKiem();
             timkiem.Show();
+        }
+        public void lockControl()
+        {
+            mnBaoTri.Enabled = false;
+            mnQuanLy.Enabled = false;
+            mnTimKiem.Enabled = false;
+            mnDangKy.Enabled = false;
+            mnDangXuat.Enabled = false;
+            mnDoiMatKhau.Enabled = false;
+
+        }
+        public void unlockControl()
+        {
+            mnBaoTri.Enabled = true;
+            mnQuanLy.Enabled = true;
+            mnTimKiem.Enabled = true;
+            mnDangKy.Enabled = true;
+            mnDangXuat.Enabled = true;
+            mnDoiMatKhau.Enabled = true;
+
+        }
+
+        private void mnDangXuat_Click(object sender, EventArgs e)
+        {
+            lockControl();
         }
     }
 }
