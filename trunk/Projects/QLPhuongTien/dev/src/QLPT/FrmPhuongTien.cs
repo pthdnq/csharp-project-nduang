@@ -146,7 +146,7 @@ namespace QLPT
         }
         private void FrmPhuongTien_Load(object sender, EventArgs e)
         {
-            resetControl();
+           // resetControl();
             DataTable dat = new DataTable();
             dat = m_PhuongTienBUS.select();
             dgvPhuongTien.DataSource = dat;
@@ -160,7 +160,16 @@ namespace QLPT
 
         public bool validData()
         {
-
+             if (this.txtAutoNum.Text.Length == 0)
+            {
+                MessageBox.Show("Trường AutoNum không được bỏ trống !");
+                return false;
+            }
+             if (this.txtPhuongTienID.Text.Length == 0)
+             {
+                 MessageBox.Show("Trường Mã PT không được bỏ trống !");
+                 return false;
+             }
             if (this.cmbLoaiPT.Text.Length == 0)
             {
                 MessageBox.Show("Trường Loại PT không được bỏ trống !");
@@ -209,28 +218,18 @@ namespace QLPT
 
         private void btThem_Click(object sender, EventArgs e)
         {
-
             resetControl();
             dt.moketnoi();
+            txtTongVH.Text = "0";
+            txtLanBDTX.Text = "0";
+            txtLanTieuTu.Text = "0";
+            txtLanTrungTu.Text = "0";
+            txtLanDaiTu.Text = "0";
         }
 
         private void btLuu_Click(object sender, EventArgs e)
         {
-
-            dt.moketnoi();
-            string sql = @"set rowcount 1 select AutoNum from PhuongTien order by AutoNum Desc ";
-            SqlDataAdapter da = new SqlDataAdapter(sql, dt.sqlConn);
-            DataSet ds = new DataSet();
-            da.Fill(ds, "PhuongTien");
-            int maximumNum = 0;
-            try
-            {
-                maximumNum = Convert.ToInt32(ds.Tables["PhuongTien"].Rows[0][0].ToString());
-            }
-            catch { }
-
-            txtPhuongTienID.Text = Convert.ToString(cmbLoaiPT.SelectedValue)+ (maximumNum + 1);
-            dt.dongketnoi();
+            txtPhuongTienID.Text = generatePhuongTien();
 
             bool Ok = validData();
             if (Ok == false)
@@ -335,9 +334,16 @@ namespace QLPT
             if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã DV : " + txtPhuongTienID.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 m_PhuongTienBUS.delete1(txtPhuongTienID.Text);
-                MessageBox.Show("Đã xóa " + this.txtPhuongTienID.Text + " thành công !");
                 FrmPhuongTien_Load(sender, e);//trở về giao diện đầu     
             }
+        }
+        private string generatePhuongTien()
+        {
+            int IDMax = utils.getMaxIDAuto("PhuongTien", "AutoNum");
+            IDMax++; 
+            string strIDMax = utils.convertIntToFormatedString(IDMax);
+            txtAutoNum.Text = strIDMax;
+            return cmbLoaiPT.SelectedValue.ToString() + strIDMax;
         }
     }
 }
