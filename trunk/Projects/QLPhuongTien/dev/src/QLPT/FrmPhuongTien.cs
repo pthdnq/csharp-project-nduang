@@ -93,16 +93,10 @@ namespace QLPT
             try
             {
                 // Loại Nguyên Mẫu
-                this.cmbNguyenMau.DataSource = m_PhuongTienBUS.selectNguyeMau();
-                this.cmbNguyenMau.DisplayMember = "NhanHieu";
+                this.cmbNguyenMau.DataSource = m_PhuongTienBUS.selectPhuongTienData_LoaiPT();
+                this.cmbNguyenMau.DisplayMember = "NguyenMauTen";
                 this.cmbNguyenMau.ValueMember = "NguyenMauID";
                 cmbNguyenMau.Text = "";
-
-                //TODO
-               //DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvPhuongTien.Columns["NguyenMauID"];
-               //comboBoxColumn.DataSource = m_PhuongTienBUS.selectNguyeMau();
-               //comboBoxColumn.DisplayMember = "NhanHieu";
-               //comboBoxColumn.ValueMember = "NguyenMauID";
             }
             catch (Exception ex)
             {

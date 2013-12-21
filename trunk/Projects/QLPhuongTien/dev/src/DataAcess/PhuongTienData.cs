@@ -161,5 +161,28 @@ namespace DataAcess
        {
            return m_DonViQuanLyData.select();
        }
+       public DataTable selectPhuongTienData_LoaiPT()
+       {
+           SqlConnection con = data.getConnect();
+           con.Open();
+           SqlCommand cmd = new SqlCommand();
+           cmd.Connection = con;
+           cmd.CommandType = CommandType.StoredProcedure;
+           cmd.CommandText = "sp_select_PhuongTienData_LoaiPT";
+           //retval = cmd.ExecuteNonQuery();
+           DataTable dtb;
+           try
+           {
+               SqlDataAdapter da = new SqlDataAdapter(cmd);
+               DataSet ds = new DataSet();
+               da.Fill(ds, "PhuongTien");
+               dtb = ds.Tables["PhuongTien"];
+           }
+           catch (System.Exception ex)
+           {
+               return null;
+           }
+           return dtb;
+       }
     }
 }

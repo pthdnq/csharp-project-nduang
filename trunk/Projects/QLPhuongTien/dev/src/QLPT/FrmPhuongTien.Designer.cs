@@ -64,10 +64,6 @@
             this.btSua = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvPhuongTien = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lbStatus = new System.Windows.Forms.Label();
-            this.btTroVe = new System.Windows.Forms.Button();
-            this.btTimKiem = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AutoNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhuongTienID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,6 +80,10 @@
             this.LanDaiTu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayVH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HienTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbStatus = new System.Windows.Forms.Label();
+            this.btTroVe = new System.Windows.Forms.Button();
+            this.btTimKiem = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhuongTien)).BeginInit();
@@ -226,6 +226,7 @@
             // 
             // txtLanDaiTu
             // 
+            this.txtLanDaiTu.Enabled = false;
             this.txtLanDaiTu.Location = new System.Drawing.Point(569, 190);
             this.txtLanDaiTu.Name = "txtLanDaiTu";
             this.txtLanDaiTu.Size = new System.Drawing.Size(250, 20);
@@ -233,6 +234,7 @@
             // 
             // txtLanTrungTu
             // 
+            this.txtLanTrungTu.Enabled = false;
             this.txtLanTrungTu.Location = new System.Drawing.Point(569, 156);
             this.txtLanTrungTu.Name = "txtLanTrungTu";
             this.txtLanTrungTu.Size = new System.Drawing.Size(250, 20);
@@ -240,6 +242,7 @@
             // 
             // txtLanTieuTu
             // 
+            this.txtLanTieuTu.Enabled = false;
             this.txtLanTieuTu.Location = new System.Drawing.Point(569, 125);
             this.txtLanTieuTu.Name = "txtLanTieuTu";
             this.txtLanTieuTu.Size = new System.Drawing.Size(250, 20);
@@ -247,6 +250,7 @@
             // 
             // txtLanBDTX
             // 
+            this.txtLanBDTX.Enabled = false;
             this.txtLanBDTX.Location = new System.Drawing.Point(569, 91);
             this.txtLanBDTX.Name = "txtLanBDTX";
             this.txtLanBDTX.Size = new System.Drawing.Size(250, 20);
@@ -254,6 +258,7 @@
             // 
             // txtTongVH
             // 
+            this.txtTongVH.Enabled = false;
             this.txtTongVH.Location = new System.Drawing.Point(569, 55);
             this.txtTongVH.Name = "txtTongVH";
             this.txtTongVH.Size = new System.Drawing.Size(250, 20);
@@ -275,6 +280,7 @@
             // 
             // txtPhuongTienID
             // 
+            this.txtPhuongTienID.Enabled = false;
             this.txtPhuongTienID.Location = new System.Drawing.Point(99, 59);
             this.txtPhuongTienID.Name = "txtPhuongTienID";
             this.txtPhuongTienID.Size = new System.Drawing.Size(250, 20);
@@ -458,48 +464,11 @@
             this.dgvPhuongTien.Location = new System.Drawing.Point(3, 16);
             this.dgvPhuongTien.Name = "dgvPhuongTien";
             this.dgvPhuongTien.ReadOnly = true;
+            this.dgvPhuongTien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPhuongTien.Size = new System.Drawing.Size(1202, 246);
             this.dgvPhuongTien.TabIndex = 0;
             this.dgvPhuongTien.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             this.dgvPhuongTien.Click += new System.EventHandler(this.dataGridView1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(894, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 20);
-            this.textBox1.TabIndex = 37;
-            // 
-            // lbStatus
-            // 
-            this.lbStatus.AutoSize = true;
-            this.lbStatus.Location = new System.Drawing.Point(891, 78);
-            this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(37, 13);
-            this.lbStatus.TabIndex = 37;
-            this.lbStatus.Text = "Status";
-            // 
-            // btTroVe
-            // 
-            this.btTroVe.Image = global::QLPT.Properties.Resources.Back;
-            this.btTroVe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTroVe.Location = new System.Drawing.Point(1113, 107);
-            this.btTroVe.Name = "btTroVe";
-            this.btTroVe.Size = new System.Drawing.Size(88, 32);
-            this.btTroVe.TabIndex = 39;
-            this.btTroVe.Text = "Trở về";
-            this.btTroVe.UseVisualStyleBackColor = true;
-            // 
-            // btTimKiem
-            // 
-            this.btTimKiem.Image = global::QLPT.Properties.Resources.View;
-            this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTimKiem.Location = new System.Drawing.Point(1113, 31);
-            this.btTimKiem.Name = "btTimKiem";
-            this.btTimKiem.Size = new System.Drawing.Size(88, 28);
-            this.btTimKiem.TabIndex = 38;
-            this.btTimKiem.Text = "Tìm kiếm";
-            this.btTimKiem.UseVisualStyleBackColor = true;
             // 
             // Column1
             // 
@@ -623,6 +592,44 @@
             this.HienTrang.HeaderText = "Hiện trạng";
             this.HienTrang.Name = "HienTrang";
             this.HienTrang.ReadOnly = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(894, 39);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(182, 20);
+            this.textBox1.TabIndex = 37;
+            // 
+            // lbStatus
+            // 
+            this.lbStatus.AutoSize = true;
+            this.lbStatus.Location = new System.Drawing.Point(891, 78);
+            this.lbStatus.Name = "lbStatus";
+            this.lbStatus.Size = new System.Drawing.Size(37, 13);
+            this.lbStatus.TabIndex = 37;
+            this.lbStatus.Text = "Status";
+            // 
+            // btTroVe
+            // 
+            this.btTroVe.Image = global::QLPT.Properties.Resources.Back;
+            this.btTroVe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btTroVe.Location = new System.Drawing.Point(1113, 107);
+            this.btTroVe.Name = "btTroVe";
+            this.btTroVe.Size = new System.Drawing.Size(88, 32);
+            this.btTroVe.TabIndex = 39;
+            this.btTroVe.Text = "Trở về";
+            this.btTroVe.UseVisualStyleBackColor = true;
+            // 
+            // btTimKiem
+            // 
+            this.btTimKiem.Image = global::QLPT.Properties.Resources.View;
+            this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btTimKiem.Location = new System.Drawing.Point(1113, 31);
+            this.btTimKiem.Name = "btTimKiem";
+            this.btTimKiem.Size = new System.Drawing.Size(88, 28);
+            this.btTimKiem.TabIndex = 38;
+            this.btTimKiem.Text = "Tìm kiếm";
+            this.btTimKiem.UseVisualStyleBackColor = true;
             // 
             // FrmPhuongTien
             // 
