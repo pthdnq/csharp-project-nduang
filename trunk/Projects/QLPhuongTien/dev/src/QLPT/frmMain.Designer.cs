@@ -89,7 +89,7 @@
             // 
             this.đăngNhậpToolStripMenuItem.Image = global::QLPT.Properties.Resources.lock_and_key_icon_thumb355812;
             this.đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.đăngNhậpToolStripMenuItem.Text = "Đăng nhập";
             this.đăngNhậpToolStripMenuItem.Click += new System.EventHandler(this.đăngNhậpToolStripMenuItem_Click);
             // 
@@ -97,14 +97,14 @@
             // 
             this.đăngXuấtToolStripMenuItem.Image = global::QLPT.Properties.Resources.thoat;
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng Xuất";
             // 
             // đăngToolStripMenuItem
             // 
             this.đăngToolStripMenuItem.Image = global::QLPT.Properties.Resources.user_add;
             this.đăngToolStripMenuItem.Name = "đăngToolStripMenuItem";
-            this.đăngToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.đăngToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.đăngToolStripMenuItem.Text = "Đăng ký";
             this.đăngToolStripMenuItem.Click += new System.EventHandler(this.đăngToolStripMenuItem_Click);
             // 
@@ -112,7 +112,7 @@
             // 
             this.đổiMậtKhẩuToolStripMenuItem.Image = global::QLPT.Properties.Resources.Key;
             this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
             this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
@@ -120,7 +120,7 @@
             // 
             this.thoátToolStripMenuItem.Image = global::QLPT.Properties.Resources._500px_Crystal_Clear_action_exit_svg;
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
@@ -290,6 +290,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ thống quản lý phương tiện thi công cơ giới đường bộ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);

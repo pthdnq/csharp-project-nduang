@@ -19,8 +19,8 @@ namespace QLPT
         private void Form1_Load(object sender, EventArgs e)
         {
             
-            FrmDangNhap frmdn = new FrmDangNhap();
-            frmdn.ShowDialog();
+            //FrmDangNhap frmdn = new FrmDangNhap();
+           // frmdn.ShowDialog();
         }
 
         private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)

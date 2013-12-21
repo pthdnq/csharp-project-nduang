@@ -102,5 +102,9 @@ namespace BusinessLogic
         {
             return m_PhuongTienData.selectDonViQL();
         }
+       public DataTable select()
+        {
+            return m_PhuongTienData.select();
+        }
     }
 }

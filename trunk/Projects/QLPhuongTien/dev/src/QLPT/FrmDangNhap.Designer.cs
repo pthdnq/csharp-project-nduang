@@ -148,6 +148,7 @@
             this.Controls.Add(this.btDangNhap);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập ";
             this.Load += new System.EventHandler(this.FrmDangNhap_Load);
             this.groupBox1.ResumeLayout(false);
