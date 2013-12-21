@@ -51,10 +51,10 @@ namespace QLPT
             if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn thoát không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 Application.Exit();
         }
-        internal void ShowDiaLog()
-        {
-            throw new NotImplementedException();
-        }
+        //internal void ShowDiaLog()
+        //{
+        //    throw new NotImplementedException();
+        //}
         private bool validAccount()
         {
             if (this.txtUser.Text.Length == 0 || this.txtPass.Text.Length == 0)

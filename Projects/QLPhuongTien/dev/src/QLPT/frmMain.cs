@@ -24,7 +24,8 @@ namespace QLPT
         private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmDangNhap frmdn = new FrmDangNhap();
-            frmdn.Show();
+           // frmdn.ShowDiaLog();
+            frmdn.ShowDialog();
             if(frmdn.m_isLogin == true)
             {
                 unlockControl();
