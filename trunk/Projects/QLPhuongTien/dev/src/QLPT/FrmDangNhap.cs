@@ -14,6 +14,7 @@ namespace QLPT
     public partial class FrmDangNhap : Form
     {
         private Account m_account = new Account();
+        public bool m_isLogin = false;
         public FrmDangNhap()
         {
             InitializeComponent();
@@ -36,7 +37,8 @@ namespace QLPT
             bool isExistAccount = m_account.isExistAccount(txtUser.Text.Trim(), txtPass.Text.Trim());
             if (isExistAccount)
             {
-                this.Hide();
+                this.Close();
+                m_isLogin = true;
             }
             else
             {
