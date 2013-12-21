@@ -29,6 +29,7 @@ namespace BusinessLogic
            string TongVH
             )
         {
+           // return;
             m_PhuongTienData.insert( 
            AutoNum,
            LoaiPTMa,
