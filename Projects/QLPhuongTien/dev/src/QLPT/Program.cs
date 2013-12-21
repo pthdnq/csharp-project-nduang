@@ -16,7 +16,6 @@ namespace QLPT
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMain());
-            //Application.Run(new frmDonVi_QL());
         }
     }
 }

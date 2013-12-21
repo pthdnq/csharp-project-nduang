@@ -24,10 +24,6 @@ namespace QLPT
         Data dt = new Data();
         Utils utils = new Utils();
         PhuongTienBUS m_PhuongTienBUS = new PhuongTienBUS();
-        NguyenMauPTBUS m_NguyenMauPTBUS = new NguyenMauPTBUS();
-        LoaiPTBUS m_LoaiPTBUS = new LoaiPTBUS();
-        DonViQuanLyBUS m_DonViQuanLyBUS = new DonViQuanLyBUS();
-        DonViTCBUS m_DonViTCBUS = new DonViTCBUS();
         public void resetControl()
         {
             txtPhuongTienID.Text = "";
@@ -98,14 +94,15 @@ namespace QLPT
             {
                 // Loại Nguyên Mẫu
                 this.cmbNguyenMau.DataSource = m_PhuongTienBUS.selectNguyeMau();
-                this.cmbNguyenMau.DisplayMember = "NguyenMauID";
-                this.cmbNguyenMau.ValueMember = "LoaiPTMa";
+                this.cmbNguyenMau.DisplayMember = "NhanHieu";
+                this.cmbNguyenMau.ValueMember = "NguyenMauID";
                 cmbNguyenMau.Text = "";
 
-                DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvPhuongTien.Columns["NguyenMauID"];
-                comboBoxColumn.DataSource = m_PhuongTienBUS.selectNguyeMau();
-                comboBoxColumn.DisplayMember = "NguyenMauID";
-                comboBoxColumn.ValueMember = "LoaiPTMa";
+                //TODO
+               //DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvPhuongTien.Columns["NguyenMauID"];
+               //comboBoxColumn.DataSource = m_PhuongTienBUS.selectNguyeMau();
+               //comboBoxColumn.DisplayMember = "NhanHieu";
+               //comboBoxColumn.ValueMember = "NguyenMauID";
             }
             catch (Exception ex)
             {
@@ -157,7 +154,7 @@ namespace QLPT
         {
             resetControl();
             DataTable dat = new DataTable();
-            dat = m_LoaiPTBUS.select();
+            dat = m_PhuongTienBUS.select();
             dgvPhuongTien.DataSource = dat;
 
             ShowComboxForLoaiPTCol();

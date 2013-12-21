@@ -30,6 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtAutoNum = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.dtpNgayVH = new System.Windows.Forms.DateTimePicker();
             this.cmbNguyenMau = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -66,13 +68,11 @@
             this.lbStatus = new System.Windows.Forms.Label();
             this.btTroVe = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
-            this.txtAutoNum = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AutoNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhuongTienID = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.PhuongTienID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiPTMa = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.NguyenMauID = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.NguyenMauID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BienDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.XuatXu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonViTCID = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -83,6 +83,7 @@
             this.LanTrungTu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LanDaiTu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayVH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HienTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhuongTien)).BeginInit();
@@ -134,6 +135,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin ";
             // 
+            // txtAutoNum
+            // 
+            this.txtAutoNum.Enabled = false;
+            this.txtAutoNum.Location = new System.Drawing.Point(99, 23);
+            this.txtAutoNum.Name = "txtAutoNum";
+            this.txtAutoNum.Size = new System.Drawing.Size(250, 20);
+            this.txtAutoNum.TabIndex = 38;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(4, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 13);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "AutoNum";
+            // 
             // dtpNgayVH
             // 
             this.dtpNgayVH.CustomFormat = "MM/dd/yyyy";
@@ -145,6 +163,7 @@
             // 
             // cmbNguyenMau
             // 
+            this.cmbNguyenMau.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNguyenMau.FormattingEnabled = true;
             this.cmbNguyenMau.Location = new System.Drawing.Point(99, 124);
             this.cmbNguyenMau.Name = "cmbNguyenMau";
@@ -162,6 +181,7 @@
             // 
             // cmbLoaiPT
             // 
+            this.cmbLoaiPT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLoaiPT.FormattingEnabled = true;
             this.cmbLoaiPT.Location = new System.Drawing.Point(99, 90);
             this.cmbLoaiPT.Name = "cmbLoaiPT";
@@ -188,6 +208,7 @@
             // 
             // cmbDVQL
             // 
+            this.cmbDVQL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDVQL.FormattingEnabled = true;
             this.cmbDVQL.Location = new System.Drawing.Point(569, 18);
             this.cmbDVQL.Name = "cmbDVQL";
@@ -196,6 +217,7 @@
             // 
             // cmbDVTC
             // 
+            this.cmbDVTC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDVTC.FormattingEnabled = true;
             this.cmbDVTC.Location = new System.Drawing.Point(99, 230);
             this.cmbDVTC.Name = "cmbDVTC";
@@ -412,6 +434,7 @@
             // dgvPhuongTien
             // 
             this.dgvPhuongTien.AllowUserToAddRows = false;
+            this.dgvPhuongTien.AllowUserToDeleteRows = false;
             this.dgvPhuongTien.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvPhuongTien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhuongTien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -429,7 +452,8 @@
             this.LanTieuTu,
             this.LanTrungTu,
             this.LanDaiTu,
-            this.NgayVH});
+            this.NgayVH,
+            this.HienTrang});
             this.dgvPhuongTien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPhuongTien.Location = new System.Drawing.Point(3, 16);
             this.dgvPhuongTien.Name = "dgvPhuongTien";
@@ -477,23 +501,6 @@
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.UseVisualStyleBackColor = true;
             // 
-            // txtAutoNum
-            // 
-            this.txtAutoNum.Enabled = false;
-            this.txtAutoNum.Location = new System.Drawing.Point(99, 23);
-            this.txtAutoNum.Name = "txtAutoNum";
-            this.txtAutoNum.Size = new System.Drawing.Size(250, 20);
-            this.txtAutoNum.TabIndex = 38;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 13);
-            this.label6.TabIndex = 37;
-            this.label6.Text = "AutoNum";
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "STT";
@@ -511,12 +518,10 @@
             // PhuongTienID
             // 
             this.PhuongTienID.DataPropertyName = "PhuongTienID";
-            this.PhuongTienID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PhuongTienID.HeaderText = "Mã PT ";
             this.PhuongTienID.Name = "PhuongTienID";
             this.PhuongTienID.ReadOnly = true;
             this.PhuongTienID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PhuongTienID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // LoaiPTMa
             // 
@@ -531,21 +536,21 @@
             // NguyenMauID
             // 
             this.NguyenMauID.DataPropertyName = "NguyenMauID";
-            this.NguyenMauID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NguyenMauID.HeaderText = "Loại nguyên mấu";
             this.NguyenMauID.Name = "NguyenMauID";
             this.NguyenMauID.ReadOnly = true;
             this.NguyenMauID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.NguyenMauID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // BienDK
             // 
+            this.BienDK.DataPropertyName = "BienDK";
             this.BienDK.HeaderText = "Biển ĐK";
             this.BienDK.Name = "BienDK";
             this.BienDK.ReadOnly = true;
             // 
             // XuatXu
             // 
+            this.XuatXu.DataPropertyName = "XuatXu";
             this.XuatXu.HeaderText = "Xuất xứ";
             this.XuatXu.Name = "XuatXu";
             this.XuatXu.ReadOnly = true;
@@ -572,39 +577,52 @@
             // 
             // TongVH
             // 
+            this.TongVH.DataPropertyName = "TongVH";
             this.TongVH.HeaderText = "Tổng vận hành";
             this.TongVH.Name = "TongVH";
             this.TongVH.ReadOnly = true;
             // 
             // LanBDTX
             // 
+            this.LanBDTX.DataPropertyName = "LanBDTX";
             this.LanBDTX.HeaderText = "số lần BDTX";
             this.LanBDTX.Name = "LanBDTX";
             this.LanBDTX.ReadOnly = true;
             // 
             // LanTieuTu
             // 
+            this.LanTieuTu.DataPropertyName = "LanTieuTu";
             this.LanTieuTu.HeaderText = "Số lần tiểu tu";
             this.LanTieuTu.Name = "LanTieuTu";
             this.LanTieuTu.ReadOnly = true;
             // 
             // LanTrungTu
             // 
+            this.LanTrungTu.DataPropertyName = "LanTrungTu";
             this.LanTrungTu.HeaderText = "Số lần trung tu";
             this.LanTrungTu.Name = "LanTrungTu";
             this.LanTrungTu.ReadOnly = true;
             // 
             // LanDaiTu
             // 
+            this.LanDaiTu.DataPropertyName = "LanDaiTu";
             this.LanDaiTu.HeaderText = "Số lần đại tu";
             this.LanDaiTu.Name = "LanDaiTu";
             this.LanDaiTu.ReadOnly = true;
             // 
             // NgayVH
             // 
+            this.NgayVH.DataPropertyName = "NgayVH";
             this.NgayVH.HeaderText = "Ngày vận hành";
             this.NgayVH.Name = "NgayVH";
             this.NgayVH.ReadOnly = true;
+            // 
+            // HienTrang
+            // 
+            this.HienTrang.DataPropertyName = "HienTrang";
+            this.HienTrang.HeaderText = "Hiện trạng";
+            this.HienTrang.Name = "HienTrang";
+            this.HienTrang.ReadOnly = true;
             // 
             // FrmPhuongTien
             // 
@@ -679,9 +697,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn AutoNum;
-        private System.Windows.Forms.DataGridViewComboBoxColumn PhuongTienID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PhuongTienID;
         private System.Windows.Forms.DataGridViewComboBoxColumn LoaiPTMa;
-        private System.Windows.Forms.DataGridViewComboBoxColumn NguyenMauID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NguyenMauID;
         private System.Windows.Forms.DataGridViewTextBoxColumn BienDK;
         private System.Windows.Forms.DataGridViewTextBoxColumn XuatXu;
         private System.Windows.Forms.DataGridViewComboBoxColumn DonViTCID;
@@ -692,5 +710,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LanTrungTu;
         private System.Windows.Forms.DataGridViewTextBoxColumn LanDaiTu;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayVH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HienTrang;
     }
 }
