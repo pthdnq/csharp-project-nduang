@@ -8,7 +8,10 @@ namespace Component
 {
     class Connection
     {
-        public string strConnection = @"Data Source=(local);Initial Catalog=QuanLy_PT;Integrated Security=True";
+        public string strConnection = @"Server=.\SQLExpress;
+        AttachDbFilename=E:\Projects C#\Projects\QLPhuongTien\dev\src\QuanLy_PT.mdf;
+        Database=QuanLy_PT;
+        Trusted_Connection=Yes;";
         public SqlConnection getConnect()
         {
             return new SqlConnection(strConnection);
