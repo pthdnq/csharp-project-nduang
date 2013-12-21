@@ -274,10 +274,6 @@
       <Project>{6B2B3A1D-CAD2-4F03-A3B6-1BBCA7F61FAE}</Project>
       <Name>Component</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GenerateData\GenerateData.csproj">
-      <Project>{614934C1-2F38-4550-8602-37CC59466F63}</Project>
-      <Name>GenerateData</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1236995_506204332791140_1185602877_n.jpg" />
