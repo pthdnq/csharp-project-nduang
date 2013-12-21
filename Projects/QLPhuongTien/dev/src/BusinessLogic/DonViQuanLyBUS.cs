@@ -11,13 +11,13 @@ namespace BusinessLogic
     {
         Data da = new Data();
         DonViQuanLyData m_DonViQuanLyData = new DonViQuanLyData();
-        public DataTable ShowDonVi_QuanLy()
-        {
-            string sql = "select * from DonViQuanLy";
-            DataTable dt = new DataTable();
-            dt = da.getTable(sql);
-            return dt;
-        }
+        //public DataTable ShowDonVi_QuanLy()
+        //{
+        //    string sql = "select * from DonViQuanLy";
+        //    DataTable dt = new DataTable();
+        //    dt = da.getTable(sql);
+        //    return dt;
+        //}
         //Thêm
         public void insert(string DonViQLID , string DonViQLTen, string DonViQLToTruong, string Sdt, string Email)
         {
@@ -32,6 +32,10 @@ namespace BusinessLogic
         public void delete1(string strDonViQLID)
         {
             m_DonViQuanLyData.delete1(strDonViQLID);
+        }
+        public DataTable selectDonViQL()
+        {
+            return m_DonViQuanLyData.select();
         }
     }
 }

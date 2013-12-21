@@ -10,6 +10,12 @@ namespace DataAcess
     public class DonViQuanLyData
     {
         Data data = new Data();
+        private String tblDonViQuanLy       = "DonViQuanLy";
+        private String fldDonViQLID         = "DonViQLID";
+        private String fldDonViQLTen        = "DonViQLTen";
+        private String fldDonViQLToTruong   = "DonViQLToTruong";
+        private String fldSdt               = "Sdt";
+        private String fldEmail             = "Email";
         public bool insert(string DonViQLID, string DonViQLTen, string DonViQLToTruong, string Sdt, string Email)
         {
             int retval;
@@ -67,5 +73,30 @@ namespace DataAcess
         {
             return true;
         }
+        public DataTable select()
+        {
+            SqlConnection con = data.getConnect();
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_select_DonViQLData";
+            //retval = cmd.ExecuteNonQuery();
+            DataTable dtb;
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "DonViQuanLy");
+                dtb = ds.Tables["DonViQuanLy"];
+            }
+            catch (System.Exception ex)
+            {
+                return null;
+            }
+            return dtb;
+
+        }
+
     }
 }

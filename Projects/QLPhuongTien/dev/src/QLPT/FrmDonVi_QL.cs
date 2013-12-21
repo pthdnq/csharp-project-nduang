@@ -10,6 +10,7 @@ using BusinessLogic;
 using DataAcess;
 using Component;
 using System.Data.SqlClient;
+using GenerateData;
 
 namespace QLPT
 {
@@ -33,8 +34,18 @@ namespace QLPT
 
         private void FrmDonVi_QL_Load(object sender, EventArgs e)
         {
+            GenerateDataToTables generateData = new GenerateDataToTables();
+            try
+            {
+              //  generateData.generateDonViQuanLyData();
+            }
+            catch
+            {
+
+            }
+
             DataTable dat = new DataTable();
-            dat = m_DonViQuanLyBUS.ShowDonVi_QuanLy();
+            dat = m_DonViQuanLyBUS.selectDonViQL();
             dataGridView1.DataSource = dat;
 
         }
