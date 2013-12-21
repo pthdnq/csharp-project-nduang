@@ -10,12 +10,6 @@ namespace DataAcess
     public class DonViQuanLyData
     {
         Data data = new Data();
-        private String tblDonViQuanLy       = "DonViQuanLy";
-        private String fldDonViQLID         = "DonViQLID";
-        private String fldDonViQLTen        = "DonViQLTen";
-        private String fldDonViQLToTruong   = "DonViQLToTruong";
-        private String fldSdt               = "Sdt";
-        private String fldEmail             = "Email";
         public bool insert(string DonViQLID, string DonViQLTen, string DonViQLToTruong, string Sdt, string Email)
         {
             int retval;
