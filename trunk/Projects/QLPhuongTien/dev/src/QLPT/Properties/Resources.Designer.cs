@@ -74,6 +74,13 @@ namespace QLPT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap accept {
+            get {
+                object obj = ResourceManager.GetObject("accept", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap application_edit {
             get {
                 object obj = ResourceManager.GetObject("application_edit", resourceCulture);
