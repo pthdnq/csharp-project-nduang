@@ -111,5 +111,9 @@ namespace BusinessLogic
        {
            return m_PhuongTienData.selectPhuongTienData_LoaiPT();
        }
+       public DataTable selectPhuongTienData_LoaiPT_ByMaLoaiPT(string LoaiPTMa)
+       {
+           return m_PhuongTienData.selectPhuongTienData_LoaiPT_ByMaLoaiPT(LoaiPTMa);
+       }
     }
 }
