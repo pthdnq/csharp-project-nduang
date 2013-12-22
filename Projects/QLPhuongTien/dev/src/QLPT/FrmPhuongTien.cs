@@ -27,10 +27,6 @@ namespace QLPT
         public void resetControl()
         {
             txtPhuongTienID.Text = "";
-            //txtNguyenMauTen.Text = "";
-            //txtNhanHieu.Text = "";
-            //txtNangLuc.Text = "";
-            //txtDonVi.Text = "";
             txtTongVH.Text = "";
             txtXuaXu.Text = "";
             txtBienDK.Text = "";
@@ -38,13 +34,9 @@ namespace QLPT
             txtLanTieuTu.Text = "";
             txtLanTrungTu.Text = "";
             txtLanDaiTu.Text = "";
-            //dateEdit1.Text = "";
-            //txtNguyenMauChiTiet.Text = "";
             cmbDVQL.Text = "";
             cmbDVTC.Text = "";
             cmbLoaiPT.Text = "";
-
-
         }
         public void ShowComboxForLoaiPTCol()
         {
@@ -324,6 +316,20 @@ namespace QLPT
             txtAutoNum.Text = strIDMax;
             return cmbLoaiPT.SelectedValue.ToString() + strIDMax;
         }
-        private string 
+        private void cmbLoaiPT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string strMaLoaiPt = cmbLoaiPT.SelectedValue.ToString();
+                cmbNguyenMau.DataSource = m_PhuongTienBUS.selectLoaiPT();
+                cmbNguyenMau.DisplayMember = "NguyenMauTen";
+                cmbNguyenMau.ValueMember = "NguyenMauID";
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Lỗi rồi" + ex);
+            }
+
+        } 
     }
 }

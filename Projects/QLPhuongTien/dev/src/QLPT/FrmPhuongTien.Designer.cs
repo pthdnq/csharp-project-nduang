@@ -187,6 +187,7 @@
             this.cmbLoaiPT.Name = "cmbLoaiPT";
             this.cmbLoaiPT.Size = new System.Drawing.Size(250, 21);
             this.cmbLoaiPT.TabIndex = 33;
+            this.cmbLoaiPT.SelectedIndexChanged += new System.EventHandler(this.cmbLoaiPT_SelectedIndexChanged);
             // 
             // label3
             // 
