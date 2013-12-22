@@ -126,7 +126,8 @@ namespace QLPT
 
             ShowComboxForNguyenMauCol();
             ShowComboxForDVTCCol();
-            ShowComboxForDVQLCol();     
+            ShowComboxForDVQLCol();
+            selectPhuongTienData_LoaiPT_ByMaLoaiPT();
         }
 
         public bool validData()
@@ -318,6 +319,10 @@ namespace QLPT
         }
         private void cmbLoaiPT_SelectedIndexChanged(object sender, EventArgs e)
         {
+            selectPhuongTienData_LoaiPT_ByMaLoaiPT();
+        }
+        private void selectPhuongTienData_LoaiPT_ByMaLoaiPT()
+        {
             try
             {
                 string strMaLoaiPt = cmbLoaiPT.SelectedValue.ToString();
@@ -329,6 +334,6 @@ namespace QLPT
             {
                 MessageBox.Show("Lỗi rồi" + ex);
             }
-        } 
+        }
     }          
 }
