@@ -128,5 +128,11 @@ namespace QLPT
         {
             lockControl();
         }
+
+        private void quảnLýVậnHànhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVanHanh vanhanh = new FrmVanHanh();
+            vanhanh.Show();
+        }
     }
 }

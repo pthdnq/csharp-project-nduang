@@ -151,6 +151,13 @@ namespace QLPT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap plus_16 {
             get {
                 object obj = ResourceManager.GetObject("plus_16", resourceCulture);

@@ -115,5 +115,6 @@ namespace BusinessLogic
        {
            return m_PhuongTienData.selectPhuongTienData_LoaiPT_ByMaLoaiPT(LoaiPTMa);
        }
+
     }
 }

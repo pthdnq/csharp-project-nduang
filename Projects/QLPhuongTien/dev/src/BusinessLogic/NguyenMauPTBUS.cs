@@ -51,7 +51,19 @@ namespace BusinessLogic
           float DaiTu,
           string NguyenMauChiTiet)
         {
-            //m_NguyenMauPTData.update(LoaiPTMa, LoaiPTTen);
+            ///m_NguyenMauPTData.update(LoaiPTMa, LoaiPTTen);
+            m_NguyenMauPTData.update(
+                  NguyenMauID,
+                  NguyenMauTen,
+                  NhanHieu,
+                  NangLuc,
+                  DonVi,
+                  BDTX,
+                  TieuTu,
+                  TrungTu,
+                  DaiTu,
+                  NguyenMauChiTiet
+                );
         }
         public void delete1(string NguyenMauID)
         {
@@ -62,7 +74,7 @@ namespace BusinessLogic
         {
             //return m_NguyenMauPTData.select();
             return m_NguyenMauPTData.select();
-           
+
         }
 
         public bool exist(string LoaiPTMa)
