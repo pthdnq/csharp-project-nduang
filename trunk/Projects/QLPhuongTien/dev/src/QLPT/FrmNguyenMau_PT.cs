@@ -27,14 +27,15 @@ namespace QLPT
         {
             txtNguyenMau_ID.Text = "";
             cmbLoaiPT.Text = "";
-            spbDaiTu.Text = "";
+            spbDaiTu.Value = 0;
             txtNguyenMauChiTiet.Text = "";
-            spbBDTX.Text = "";
-            spbDaiTu.Text = "";
-            spbTrungTu.Text = "";
-            spbTieuTu.Text = "";
+            spbBDTX.Value = 0;
+            spbDaiTu.Value = 0;
+            spbTrungTu.Value = 0;
+            spbTieuTu.Value = 0;
             txtNhanHieu.Text = "";
             txtDonVi.Text = "";
+            spbNangLuc.Text = "";
         }
         public bool validData()
         {
@@ -106,6 +107,7 @@ namespace QLPT
         private string  generateIDNguyenMau()
         {
             int IDMax = utils.getMaxIDAuto("NguyenMauPT", "NguyenMauID");
+            IDMax++;
             string strIDMax = utils.convertIntToFormatedString(IDMax);
             return cmbLoaiPT.SelectedValue.ToString() + strIDMax;
         }
@@ -116,7 +118,7 @@ namespace QLPT
                 return;
             try
             {
-                m_NguyenMauPTBUS.update(
+               m_NguyenMauPTBUS.update(
                     txtNguyenMau_ID.Text.Trim(),
                     cmbLoaiPT.SelectedValue.ToString(),
                     txtNhanHieu.Text,
@@ -128,6 +130,7 @@ namespace QLPT
                     utils.ConvertDecimalToFloat(spbDaiTu.Value),
                     txtNguyenMauChiTiet.Text.Trim()
                     );
+               FrmNguyenMau_PT_Load_1(sender, e);
             }
             catch (System.Exception ex)
             {

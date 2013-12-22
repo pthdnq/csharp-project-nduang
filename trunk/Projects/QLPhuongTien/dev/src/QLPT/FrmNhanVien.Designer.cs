@@ -43,13 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btTimKiem = new System.Windows.Forms.Button();
-            this.btSua = new System.Windows.Forms.Button();
-            this.btXoa = new System.Windows.Forms.Button();
-            this.btLuu = new System.Windows.Forms.Button();
-            this.btThoat = new System.Windows.Forms.Button();
-            this.btThem = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NhanVienID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NhanVienTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +51,13 @@
             this.DC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.PhuongTienID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btTimKiem = new System.Windows.Forms.Button();
+            this.btSua = new System.Windows.Forms.Button();
+            this.btXoa = new System.Windows.Forms.Button();
+            this.btLuu = new System.Windows.Forms.Button();
+            this.btThoat = new System.Windows.Forms.Button();
+            this.btThem = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
@@ -194,6 +194,8 @@
             // 
             // dgvNhanVien
             // 
+            this.dgvNhanVien.AllowUserToAddRows = false;
+            this.dgvNhanVien.AllowUserToDeleteRows = false;
             this.dgvNhanVien.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -216,6 +218,69 @@
             this.dgvNhanVien.TabIndex = 0;
             this.dgvNhanVien.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             this.dgvNhanVien.Click += new System.EventHandler(this.dataGridView1_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 30;
+            // 
+            // NhanVienID
+            // 
+            this.NhanVienID.DataPropertyName = "NhanVienID";
+            this.NhanVienID.HeaderText = "Mã NV";
+            this.NhanVienID.Name = "NhanVienID";
+            this.NhanVienID.ReadOnly = true;
+            this.NhanVienID.Width = 60;
+            // 
+            // NhanVienTen
+            // 
+            this.NhanVienTen.DataPropertyName = "NhanVienTen";
+            this.NhanVienTen.HeaderText = "Tên NV";
+            this.NhanVienTen.Name = "NhanVienTen";
+            this.NhanVienTen.ReadOnly = true;
+            this.NhanVienTen.Width = 120;
+            // 
+            // Sdt
+            // 
+            this.Sdt.DataPropertyName = "Sdt";
+            this.Sdt.HeaderText = "Sdt";
+            this.Sdt.Name = "Sdt";
+            this.Sdt.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 150;
+            // 
+            // DC
+            // 
+            this.DC.DataPropertyName = "DC";
+            this.DC.HeaderText = "Địa chỉ";
+            this.DC.Name = "DC";
+            this.DC.ReadOnly = true;
+            this.DC.Width = 200;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "DonViTCID";
+            this.Column7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Column7.HeaderText = "Đơn vị TC";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 200;
+            // 
+            // PhuongTienID
+            // 
+            this.PhuongTienID.DataPropertyName = "PhuongTienID";
+            this.PhuongTienID.HeaderText = "Phương tiện ";
+            this.PhuongTienID.Name = "PhuongTienID";
+            this.PhuongTienID.ReadOnly = true;
+            this.PhuongTienID.Width = 200;
             // 
             // txtTimKiem
             // 
@@ -299,69 +364,6 @@
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = true;
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 30;
-            // 
-            // NhanVienID
-            // 
-            this.NhanVienID.DataPropertyName = "NhanVienID";
-            this.NhanVienID.HeaderText = "Mã NV";
-            this.NhanVienID.Name = "NhanVienID";
-            this.NhanVienID.ReadOnly = true;
-            this.NhanVienID.Width = 60;
-            // 
-            // NhanVienTen
-            // 
-            this.NhanVienTen.DataPropertyName = "NhanVienTen";
-            this.NhanVienTen.HeaderText = "Tên NV";
-            this.NhanVienTen.Name = "NhanVienTen";
-            this.NhanVienTen.ReadOnly = true;
-            this.NhanVienTen.Width = 120;
-            // 
-            // Sdt
-            // 
-            this.Sdt.DataPropertyName = "Sdt";
-            this.Sdt.HeaderText = "Sdt";
-            this.Sdt.Name = "Sdt";
-            this.Sdt.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 150;
-            // 
-            // DC
-            // 
-            this.DC.DataPropertyName = "DC";
-            this.DC.HeaderText = "Địa chỉ";
-            this.DC.Name = "DC";
-            this.DC.ReadOnly = true;
-            this.DC.Width = 200;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "DonViTCID";
-            this.Column7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Column7.HeaderText = "Đơn vị TC";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 200;
-            // 
-            // PhuongTienID
-            // 
-            this.PhuongTienID.DataPropertyName = "PhuongTienID";
-            this.PhuongTienID.HeaderText = "Phương tiện ";
-            this.PhuongTienID.Name = "PhuongTienID";
-            this.PhuongTienID.ReadOnly = true;
-            this.PhuongTienID.Width = 200;
             // 
             // FrmNhanVien
             // 

@@ -110,11 +110,11 @@ namespace QLPT
             btLuu.Enabled = true;
             resetControl();
             btSua.Enabled = false;
-            string returnMaximumDonViQLId = utils.getIDAuto("NhanVien", "NhanVienID");//= getIDNumberAuto
+            string returnMaximumNhanVienID = utils.getIDAuto("NhanVien", "NhanVienID");//= getIDNumberAuto
             int maximumNum = 0;
             try
             {
-                maximumNum = Convert.ToInt32(returnMaximumDonViQLId.Replace("NV", ""));
+                maximumNum = Convert.ToInt32(returnMaximumNhanVienID.Replace("NV", ""));
             }
             catch { }
             txtNhanVien_ID.Text = "NV" + dt.LaySTT(maximumNum + 1);
