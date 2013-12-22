@@ -80,10 +80,9 @@
             this.LanDaiTu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayVH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HienTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lbStatus = new System.Windows.Forms.Label();
+            this.txtSearchPhuongTien = new System.Windows.Forms.TextBox();
             this.btTroVe = new System.Windows.Forms.Button();
-            this.btTimKiem = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhuongTien)).BeginInit();
@@ -594,21 +593,14 @@
             this.HienTrang.Name = "HienTrang";
             this.HienTrang.ReadOnly = true;
             // 
-            // textBox1
+            // txtSearchPhuongTien
             // 
-            this.textBox1.Location = new System.Drawing.Point(894, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 20);
-            this.textBox1.TabIndex = 37;
-            // 
-            // lbStatus
-            // 
-            this.lbStatus.AutoSize = true;
-            this.lbStatus.Location = new System.Drawing.Point(891, 78);
-            this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(37, 13);
-            this.lbStatus.TabIndex = 37;
-            this.lbStatus.Text = "Status";
+            this.txtSearchPhuongTien.Location = new System.Drawing.Point(925, 35);
+            this.txtSearchPhuongTien.Name = "txtSearchPhuongTien";
+            this.txtSearchPhuongTien.Size = new System.Drawing.Size(182, 20);
+            this.txtSearchPhuongTien.TabIndex = 37;
+            this.txtSearchPhuongTien.Click += new System.EventHandler(this.txtSearchPhuongTien_Click);
+            this.txtSearchPhuongTien.TextChanged += new System.EventHandler(this.txtSearchPhuongTien_TextChanged);
             // 
             // btTroVe
             // 
@@ -621,16 +613,16 @@
             this.btTroVe.Text = "Trở về";
             this.btTroVe.UseVisualStyleBackColor = true;
             // 
-            // btTimKiem
+            // label7
             // 
-            this.btTimKiem.Image = global::QLPT.Properties.Resources.View;
-            this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTimKiem.Location = new System.Drawing.Point(1113, 31);
-            this.btTimKiem.Name = "btTimKiem";
-            this.btTimKiem.Size = new System.Drawing.Size(88, 28);
-            this.btTimKiem.TabIndex = 38;
-            this.btTimKiem.Text = "Tìm kiếm";
-            this.btTimKiem.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.Window;
+            this.label7.Image = global::QLPT.Properties.Resources.View;
+            this.label7.Location = new System.Drawing.Point(1082, 38);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(25, 13);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "      ";
             // 
             // FrmPhuongTien
             // 
@@ -638,10 +630,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1222, 669);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btTroVe);
-            this.Controls.Add(this.btTimKiem);
-            this.Controls.Add(this.lbStatus);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSearchPhuongTien);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btXoa);
@@ -697,10 +688,8 @@
         private System.Windows.Forms.ComboBox cmbNguyenMau;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpNgayVH;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lbStatus;
+        private System.Windows.Forms.TextBox txtSearchPhuongTien;
         private System.Windows.Forms.Button btTroVe;
-        private System.Windows.Forms.Button btTimKiem;
         private System.Windows.Forms.TextBox txtAutoNum;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -719,5 +708,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LanDaiTu;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayVH;
         private System.Windows.Forms.DataGridViewTextBoxColumn HienTrang;
+        private System.Windows.Forms.Label label7;
     }
 }
