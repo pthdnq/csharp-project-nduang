@@ -335,5 +335,29 @@ namespace QLPT
                 MessageBox.Show("Lỗi rồi" + ex);
             }
         }
+
+        private void txtSearchPhuongTien_TextChanged(object sender, EventArgs e)
+        {
+            timKiem();
+        }
+        private void timKiem()
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dgvPhuongTien.DataSource;
+            //bs.Filter = dgvNhanVien.Columns["NhanVienTen"].HeaderText.ToString() + " LIKE '%" + txtTimKiem.Text + "%'";
+            bs.Filter = "LoaiPTMa like '*" + txtSearchPhuongTien.Text.Trim() + "*'";
+            dgvPhuongTien.DataSource = bs;
+            dgvPhuongTien.Refresh();
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            timKiem();
+        }
+
+        private void txtSearchPhuongTien_Click(object sender, EventArgs e)
+        {
+            txtSearchPhuongTien.Text = "";
+        }
     }          
 }
