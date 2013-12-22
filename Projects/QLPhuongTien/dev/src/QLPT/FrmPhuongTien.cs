@@ -46,27 +46,6 @@ namespace QLPT
 
 
         }
-        //public void HienthiGrv()
-        //{
-        //    string sql1 = "SELECT PhuongTien.PhuongTienID as [Mã PT],NguyenMauPT.NguyenMauID as [Mã Nguyên mẫu]  ,NguyenMauPT.NguyenMauTen as [Loại nguyên mẫu],  PhuongTien.BienDK as [Biển ĐK],NguyenMauPT.NguyenMauTen as [Loại PT] , NguyenMauPT.NhanHieu as [Nhãn hiệu] ,"+
-        //        "NguyenMauPT.NangLuc as [Năng lực], NguyenMauPT.DonVi as [đơn vị] , PhuongTien.XuatXu as [Xuất xứ] , DonViTC.DonViTCTen [Đơn vị TC] , DonViQuanLy.DonViQLTen as [Đơn vị QL] ,"+
-        //        "PhuongTien.TongVH as [Tổng vận hành] , PhuongTien.LanBDTX as [số lần BDTX],PhuongTien.LanTieuTu as [Số lần tiểu tu], PhuongTien.LanTrungTu as [Số lần Trung tu], "+
-        //        "PhuongTien.LanDaiTu as [Số lần Đại tu],PhuongTien.NgayVH as [Ngày vận hành], NguyenMauPT.NguyenMauChiTiet as [Chi tiết] FROM PhuongTien " +
-        //        "INNER JOIN DonViTC on DonViTC.DonVITCID = PhuongTien.DonViTCID " +
-        //        "INNER JOIN DonViQuanLy on DonViQuanLy.DonViQLID = PhuongTien.DonViQLID " +
-        //        "INNER JOIN NguyenMauPT on PhuongTien.NguyenMauID = NguyenMauPT.NguyenMauID ";
-        //    //DataTable dtb = new DataTable();
-        //    //dtb = dt.getTable(sql);
-        //    //return dtb;
-        //    dt.moketnoi();
-        //    SqlCommand cmd = new SqlCommand(sql1);
-        //    SqlDataAdapter da1 = new SqlDataAdapter(sql1, dt.sqlConn);
-        //    DataSet ds1 = new DataSet();
-        //    da1.Fill(ds1, "PhuongTien");
-        //    dgvPhuongTien.DataSource = null;
-        //    dgvPhuongTien.DataSource = ds1.Tables[0];
-        //    dt.dongketnoi();
-        //}
         public void ShowComboxForLoaiPTCol()
         {
             try
@@ -345,5 +324,6 @@ namespace QLPT
             txtAutoNum.Text = strIDMax;
             return cmbLoaiPT.SelectedValue.ToString() + strIDMax;
         }
+        private string 
     }
 }
