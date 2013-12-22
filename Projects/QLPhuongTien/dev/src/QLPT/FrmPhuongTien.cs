@@ -329,7 +329,6 @@ namespace QLPT
             {
                 MessageBox.Show("Lỗi rồi" + ex);
             }
-
         } 
-    }
+    }          
 }
