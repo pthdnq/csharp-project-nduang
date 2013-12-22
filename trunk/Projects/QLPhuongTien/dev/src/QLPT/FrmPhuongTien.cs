@@ -321,7 +321,7 @@ namespace QLPT
             try
             {
                 string strMaLoaiPt = cmbLoaiPT.SelectedValue.ToString();
-                cmbNguyenMau.DataSource = m_PhuongTienBUS.selectLoaiPT();
+                cmbNguyenMau.DataSource = m_PhuongTienBUS.selectPhuongTienData_LoaiPT_ByMaLoaiPT(strMaLoaiPt);
                 cmbNguyenMau.DisplayMember = "NguyenMauTen";
                 cmbNguyenMau.ValueMember = "NguyenMauID";
             }
