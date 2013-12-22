@@ -55,6 +55,14 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VanHanhID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CaLamViec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhuongTienID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VanHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VanHanhDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NhanVienID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonViTCID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -288,9 +296,20 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
+            this.Column1,
+            this.VanHanhID,
+            this.CaLamViec,
+            this.PhuongTienID,
+            this.VanHanh,
+            this.VanHanhDV,
+            this.NhanVienID,
+            this.DonViTCID,
+            this.MoTa});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 16);
             this.dataGridView1.Name = "dataGridView1";
@@ -303,6 +322,62 @@
             this.Column1.HeaderText = "STT";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            // 
+            // VanHanhID
+            // 
+            this.VanHanhID.DataPropertyName = "VanHanhID";
+            this.VanHanhID.HeaderText = "Mã VH";
+            this.VanHanhID.Name = "VanHanhID";
+            this.VanHanhID.ReadOnly = true;
+            // 
+            // CaLamViec
+            // 
+            this.CaLamViec.DataPropertyName = "CaLamViec";
+            this.CaLamViec.HeaderText = "Ca làm việc";
+            this.CaLamViec.Name = "CaLamViec";
+            this.CaLamViec.ReadOnly = true;
+            // 
+            // PhuongTienID
+            // 
+            this.PhuongTienID.DataPropertyName = "PhuongTienID";
+            this.PhuongTienID.HeaderText = "Phương tiện ";
+            this.PhuongTienID.Name = "PhuongTienID";
+            this.PhuongTienID.ReadOnly = true;
+            // 
+            // VanHanh
+            // 
+            this.VanHanh.DataPropertyName = "VanHanh";
+            this.VanHanh.HeaderText = "Vận hành";
+            this.VanHanh.Name = "VanHanh";
+            this.VanHanh.ReadOnly = true;
+            // 
+            // VanHanhDV
+            // 
+            this.VanHanhDV.DataPropertyName = "VanHanhDV";
+            this.VanHanhDV.HeaderText = "Đơn vị";
+            this.VanHanhDV.Name = "VanHanhDV";
+            this.VanHanhDV.ReadOnly = true;
+            // 
+            // NhanVienID
+            // 
+            this.NhanVienID.DataPropertyName = "NhanVienID";
+            this.NhanVienID.HeaderText = "Nhân viên VH";
+            this.NhanVienID.Name = "NhanVienID";
+            this.NhanVienID.ReadOnly = true;
+            // 
+            // DonViTCID
+            // 
+            this.DonViTCID.DataPropertyName = "DonViTCID";
+            this.DonViTCID.HeaderText = "Đơn vị TC";
+            this.DonViTCID.Name = "DonViTCID";
+            this.DonViTCID.ReadOnly = true;
+            // 
+            // MoTa
+            // 
+            this.MoTa.DataPropertyName = "MoTa";
+            this.MoTa.HeaderText = "Mô tả công việc";
+            this.MoTa.Name = "MoTa";
+            this.MoTa.ReadOnly = true;
             // 
             // FrmVanHanh
             // 
@@ -355,5 +430,13 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VanHanhID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CaLamViec;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PhuongTienID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VanHanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VanHanhDV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NhanVienID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonViTCID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MoTa;
     }
 }
