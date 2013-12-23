@@ -40,6 +40,8 @@
             this.txtVanHanhID = new System.Windows.Forms.TextBox();
             this.txtMoTa = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDonVi = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.spbTan = new System.Windows.Forms.NumericUpDown();
             this.spbKm = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
@@ -66,8 +68,6 @@
             this.NhanVienID = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.DonViTCID = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtDonVi = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spbTan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spbKm)).BeginInit();
@@ -205,6 +205,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin vận hành Phương tiện";
             // 
+            // txtDonVi
+            // 
+            this.txtDonVi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtDonVi.FormattingEnabled = true;
+            this.txtDonVi.Items.AddRange(new object[] {
+            "m3",
+            "km x tấn",
+            "h",
+            "kg"});
+            this.txtDonVi.Location = new System.Drawing.Point(551, 37);
+            this.txtDonVi.Name = "txtDonVi";
+            this.txtDonVi.Size = new System.Drawing.Size(235, 21);
+            this.txtDonVi.TabIndex = 29;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(201, 182);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(22, 13);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "tấn";
+            // 
             // spbTan
             // 
             this.spbTan.DecimalPlaces = 3;
@@ -246,6 +269,11 @@
             // 
             this.spbVanHanh.DecimalPlaces = 3;
             this.spbVanHanh.Location = new System.Drawing.Point(316, 180);
+            this.spbVanHanh.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.spbVanHanh.Name = "spbVanHanh";
             this.spbVanHanh.Size = new System.Drawing.Size(75, 20);
             this.spbVanHanh.TabIndex = 24;
@@ -255,11 +283,6 @@
             this.spbCaLamViec.Location = new System.Drawing.Point(102, 107);
             this.spbCaLamViec.Maximum = new decimal(new int[] {
             4,
-            0,
-            0,
-            0});
-            this.spbCaLamViec.Minimum = new decimal(new int[] {
-            1,
             0,
             0,
             0});
@@ -473,29 +496,6 @@
             this.MoTa.HeaderText = "Mô tả công việc";
             this.MoTa.Name = "MoTa";
             this.MoTa.ReadOnly = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(201, 182);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(22, 13);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "tấn";
-            // 
-            // txtDonVi
-            // 
-            this.txtDonVi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtDonVi.FormattingEnabled = true;
-            this.txtDonVi.Items.AddRange(new object[] {
-            "m3",
-            "km x tấn",
-            "h",
-            "kg"});
-            this.txtDonVi.Location = new System.Drawing.Point(551, 37);
-            this.txtDonVi.Name = "txtDonVi";
-            this.txtDonVi.Size = new System.Drawing.Size(235, 21);
-            this.txtDonVi.TabIndex = 29;
             // 
             // FrmVanHanh
             // 

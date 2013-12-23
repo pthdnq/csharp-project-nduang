@@ -126,5 +126,39 @@ namespace DataAcess
       {
          return m_LoaiPTData.select();
       }
+      public DataTable getMocBaoTri(
+          string NguyenMauID,
+          float BDTX,
+          float TieuTu,
+          float TrungTu,
+          float DaiTu
+          )
+      {
+          SqlConnection con = data.getConnect();
+          con.Open();
+          SqlCommand cmd = new SqlCommand();
+          cmd.Connection = con;
+          cmd.CommandType = CommandType.StoredProcedure;
+          cmd.CommandText = "sp_getMocBaoTri";
+          cmd.Parameters.Add("NguyenMauID", SqlDbType.NVarChar).Value = NguyenMauID;
+          cmd.Parameters.Add("BDTX", SqlDbType.Float).Value = BDTX;
+          cmd.Parameters.Add("TieuTu", SqlDbType.Float).Value = TieuTu;
+          cmd.Parameters.Add("TrungTu", SqlDbType.Float).Value = TrungTu;
+          cmd.Parameters.Add("DaiTu", SqlDbType.Float).Value = DaiTu;
+         // retval = cmd.ExecuteNonQuery();
+          DataTable dtb;
+          try
+          {
+              SqlDataAdapter da = new SqlDataAdapter(cmd);
+              DataSet ds = new DataSet();
+              da.Fill(ds, "NguyenMauPT");
+              dtb = ds.Tables["NguyenMauPT"];
+          }
+          catch (System.Exception ex)
+          {
+              return null;
+          }
+          return dtb;
+      }
     }
 }

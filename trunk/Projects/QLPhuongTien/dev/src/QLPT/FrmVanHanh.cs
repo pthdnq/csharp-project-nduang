@@ -184,9 +184,9 @@ namespace QLPT
                                         txtVanHanhID.Text.Trim()
                                         ,cmbPhuongTienID.SelectedValue.ToString()
                                         , dtpNgayVH.Text
-                                        , spbCaLamViec.Text
-                                        , txtDonVi.Text
                                         , spbVanHanh.Text
+                                        , txtDonVi.Text
+                                        , spbCaLamViec.Text
                                         , cmbNhanVienID.SelectedValue.ToString()
                                         , cmbDVTC.SelectedValue.ToString()
                                         , txtMoTa.Text
@@ -221,18 +221,20 @@ namespace QLPT
                 return;
             try
             {
-                m_VanHanhBUS.update(txtVanHanhID.Text.Trim()
-                                        , cmbPhuongTienID.SelectedValue.ToString()
-                                        , dtpNgayVH.Text
-                                        , spbCaLamViec.Text
-                                        , txtDonVi.Text
-                                        , spbVanHanh.Text
-                                        , cmbNhanVienID.SelectedValue.ToString()
-                                        , cmbDVTC.SelectedValue.ToString()
-                                        , txtMoTa.Text
+                m_VanHanhBUS.update(
+                                    txtVanHanhID.Text.Trim()
+                                    ,cmbPhuongTienID.SelectedValue.ToString()
+                                    , dtpNgayVH.Text
+                                    , spbVanHanh.Text
+                                    , txtDonVi.Text
+                                    , spbCaLamViec.Text
+                                    , cmbNhanVienID.SelectedValue.ToString()
+                                    , cmbDVTC.SelectedValue.ToString()
+                                    , txtMoTa.Text
                     );
-                FrmVanHanh_Load(sender, e);
+               
                 updateTongVHToPhuongTien();
+                FrmVanHanh_Load(sender, e);
             }
             catch (Exception ex)
             {
@@ -267,8 +269,8 @@ namespace QLPT
                     cmbDVTC.SelectedValue = row.Cells["DonViTCID"].Value.ToString();
                     cmbPhuongTienID.SelectedValue = row.Cells["PhuongTienID2"].Value.ToString();
 
-                    spbVanHanh.Maximum = utils.ConvertStringToDecimal(row.Cells["VanHanh"].Value.ToString());
-                    spbCaLamViec.Maximum = utils.ConvertStringToDecimal(row.Cells["CaLamViec"].Value.ToString());
+                    //spbVanHanh.Maximum = utils.ConvertStringToDecimal(row.Cells["VanHanh"].Value.ToString());
+                    //spbCaLamViec.Maximum = utils.ConvertStringToDecimal(row.Cells["CaLamViec"].Value.ToString());
 
 
                     spbVanHanh.Value = utils.ConvertStringToDecimal(row.Cells["VanHanh"].Value.ToString());
