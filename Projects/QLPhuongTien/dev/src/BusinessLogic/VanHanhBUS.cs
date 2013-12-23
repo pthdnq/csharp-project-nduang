@@ -94,6 +94,25 @@ namespace BusinessLogic
        {
            return m_VanHanhData.update_TongVHToPhuongTien(PhuongTienID, TongVH);
        }
-     
+       public DataTable getMocBaoTriForPhuongTien()
+       {
+           return m_VanHanhData.getMocBaoTriForPhuongTien();
+       }
+       public DataTable update_LanBaoTri(
+          string PhuongTienID,
+          string LanBDTX,
+          string LanTieuTu,
+          string LanTrungTu,
+          string LanDaiTu)
+       {
+
+           return m_VanHanhData.update_LanBaoTri(
+                          PhuongTienID,
+                          LanBDTX,
+                          LanTieuTu,
+                          LanTrungTu,
+                          LanDaiTu
+               );
+       }
     }
 }

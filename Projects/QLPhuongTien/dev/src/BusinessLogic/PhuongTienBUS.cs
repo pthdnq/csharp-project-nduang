@@ -115,22 +115,6 @@ namespace BusinessLogic
        {
            return m_PhuongTienData.selectPhuongTienData_LoaiPT_ByMaLoaiPT(LoaiPTMa);
        }
-       public DataTable getMocBaoTriForPhuongTien(
-         string NguyenMauID,
-         float BDTX,
-         float TieuTu,
-         float TrungTu,
-         float DaiTu
-        )
-       {
-           return m_PhuongTienData.getMocBaoTriForPhuongTien(
-               NguyenMauID,
-               BDTX,
-               TieuTu,
-               TrungTu,
-               DaiTu
-               );
-       }
        public DataTable update_LanBaoTri
            (
            string PhuongTienID , 

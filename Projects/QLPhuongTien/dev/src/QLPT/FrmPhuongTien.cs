@@ -23,6 +23,7 @@ namespace QLPT
      //   Data dt = new Data();
         Data dt = new Data();
         Utils utils = new Utils();
+        
         PhuongTienBUS m_PhuongTienBUS = new PhuongTienBUS();
         public void resetControl()
         {
@@ -228,7 +229,6 @@ namespace QLPT
           
                       );
 
-
                 FrmPhuongTien_Load(sender, e);
 
             }
@@ -359,5 +359,5 @@ namespace QLPT
         {
             txtSearchPhuongTien.Text = "";
         }
-    }          
+}          
 }

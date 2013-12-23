@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoTriBUS.cs" />
     <Compile Include="DonViQuanLyBUS.cs" />
     <Compile Include="DonViTCBUS.cs" />
     <Compile Include="LoaiPT.cs" />

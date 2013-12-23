@@ -14,6 +14,7 @@ namespace DataAcess
         DonViTCData m_DonViTCData = new DonViTCData();
         NhanVienData m_NhanVienData = new NhanVienData();
         PhuongTienData m_PhuongTienData = new PhuongTienData();
+        NguyenMauPTData m_NguyenMauPTData = new NguyenMauPTData();
         public bool insert(
             string VanHanhID,
             string PhuongTienID,
@@ -74,17 +75,17 @@ namespace DataAcess
             cmd.Parameters.Add("NgayVanHanh", SqlDbType.NVarChar).Value = NgayVanHanh;
             try
             {
-                int iCaLamViec=(int)float.Parse(CaLamViec);
+                int iCaLamViec = (int)float.Parse(CaLamViec);
                 cmd.Parameters.Add("CaLamViec", SqlDbType.Int).Value = iCaLamViec;
                 cmd.Parameters.Add("VanHanh", SqlDbType.Float).Value = float.Parse(VanHanh);
             }
             catch (System.Exception ex)
             {
-            	
+
             }
-           // cmd.Parameters.Add("VanHanh", SqlDbType.Float).Value = float.Parse(VanHanh);
+            // cmd.Parameters.Add("VanHanh", SqlDbType.Float).Value = float.Parse(VanHanh);
             cmd.Parameters.Add("VanHanhDV", SqlDbType.NVarChar).Value = VanHanhDV;
-           // cmd.Parameters.Add("CaLamViec", SqlDbType.Int).Value = int.Parse(CaLamViec);
+            // cmd.Parameters.Add("CaLamViec", SqlDbType.Int).Value = int.Parse(CaLamViec);
             cmd.Parameters.Add("NhanVienID", SqlDbType.NVarChar).Value = NhanVienID;
             cmd.Parameters.Add("DonViTCID", SqlDbType.NVarChar).Value = DonViTCID;
             cmd.Parameters.Add("MoTa", SqlDbType.NVarChar).Value = MoTa;
@@ -190,9 +191,29 @@ namespace DataAcess
             }
             return dtb;
         }
-          public DataTable update_TongVHToPhuongTien(string PhuongTienID , string TongVH)
-       {
-           return m_PhuongTienData.update_TongVHToPhuongTien(PhuongTienID, TongVH);
-       }
+        public DataTable update_TongVHToPhuongTien(string PhuongTienID, string TongVH)
+        {
+            return m_PhuongTienData.update_TongVHToPhuongTien(PhuongTienID, TongVH);
+        }
+        public DataTable getMocBaoTriForPhuongTien()
+        {
+            return m_NguyenMauPTData.getMocBaoTri();
+        }
+        public DataTable update_LanBaoTri(
+           string PhuongTienID,
+           string LanBDTX,
+           string LanTieuTu,
+           string LanTrungTu,
+           string LanDaiTu)
+        {
+
+            return m_PhuongTienData.update_LanBaoTri(
+                           PhuongTienID,
+                           LanBDTX,
+                           LanTieuTu,
+                           LanTrungTu,
+                           LanDaiTu
+                );
+        }
     }
 }

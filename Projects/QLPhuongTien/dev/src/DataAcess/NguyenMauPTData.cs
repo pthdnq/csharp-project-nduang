@@ -126,13 +126,7 @@ namespace DataAcess
       {
          return m_LoaiPTData.select();
       }
-      public DataTable getMocBaoTri(
-          string NguyenMauID,
-          float BDTX,
-          float TieuTu,
-          float TrungTu,
-          float DaiTu
-          )
+      public DataTable getMocBaoTri()
       {
           SqlConnection con = data.getConnect();
           con.Open();
@@ -140,11 +134,6 @@ namespace DataAcess
           cmd.Connection = con;
           cmd.CommandType = CommandType.StoredProcedure;
           cmd.CommandText = "sp_getMocBaoTri";
-          cmd.Parameters.Add("NguyenMauID", SqlDbType.NVarChar).Value = NguyenMauID;
-          cmd.Parameters.Add("BDTX", SqlDbType.Float).Value = BDTX;
-          cmd.Parameters.Add("TieuTu", SqlDbType.Float).Value = TieuTu;
-          cmd.Parameters.Add("TrungTu", SqlDbType.Float).Value = TrungTu;
-          cmd.Parameters.Add("DaiTu", SqlDbType.Float).Value = DaiTu;
          // retval = cmd.ExecuteNonQuery();
           DataTable dtb;
           try
