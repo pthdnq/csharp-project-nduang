@@ -7,7 +7,7 @@ using System.Data;
 
 namespace DataAcess
 {
-   public class PhuongTienData
+    public class PhuongTienData
     {
         Data data = new Data();
 
@@ -67,7 +67,7 @@ namespace DataAcess
          string DonViTCID,
          string BienDK,
          string NgayVH,
-         string LanBDTX , 
+         string LanBDTX,
          string LanTieuTu,
          string LanTrungTu,
          string LanDaiTu,
@@ -145,144 +145,125 @@ namespace DataAcess
             return dtb;
 
         }
-       public DataTable selectNguyeMau()
+        public DataTable selectNguyeMau()
         {
             return m_NguyenMauPTData.select();
         }
-       public DataTable selectLoaiPT()
-       {
-           return m_LoaiPTData.select();
-       }
-       public DataTable selectDonViTC()
-       {
-           return m_DonViTCData.select();
-       }
-       public DataTable selectDonViQL()
-       {
-           return m_DonViQuanLyData.select();
-       }
-       public DataTable selectPhuongTienData_LoaiPT()
-       {
-           SqlConnection con = data.getConnect();
-           con.Open();
-           SqlCommand cmd = new SqlCommand();
-           cmd.Connection = con;
-           cmd.CommandType = CommandType.StoredProcedure;
-           cmd.CommandText = "sp_select_PhuongTienData_LoaiPT";
-           //retval = cmd.ExecuteNonQuery();
-           DataTable dtb;
-           try
-           {
-               SqlDataAdapter da = new SqlDataAdapter(cmd);
-               DataSet ds = new DataSet();
-               da.Fill(ds, "PhuongTien");
-               dtb = ds.Tables["PhuongTien"];
-           }
-           catch (System.Exception ex)
-           {
-               return null;
-           }
-           return dtb;
-       }
-       public DataTable selectPhuongTienData_LoaiPT_ByMaLoaiPT(string LoaiPTMa)
-       {
-           SqlConnection con = data.getConnect();
-           con.Open();
-           SqlCommand cmd = new SqlCommand();
-           cmd.Connection = con;
-           cmd.CommandType = CommandType.StoredProcedure;
-           cmd.CommandText = "sp_select_PhuongTienData_LoaiPT_ByMaLoaiPT";
-           cmd.Parameters.Add("LoaiPTMa", SqlDbType.NVarChar).Value = LoaiPTMa;
-           DataTable dtb;
-           try
-           {
-               SqlDataAdapter da = new SqlDataAdapter(cmd);
-               DataSet ds = new DataSet();
-               da.Fill(ds, "PhuongTien");
-               dtb = ds.Tables["PhuongTien"];
-           }
-           catch (System.Exception ex)
-           {
-               return null;
-           }
-           return dtb;
-       }
-       public DataTable update_TongVHToPhuongTien(string PhuongTienID, string TongVH)
-       {
-           SqlConnection con = data.getConnect();
-           con.Open();
-           SqlCommand cmd = new SqlCommand();
-           cmd.Connection = con;
-           cmd.CommandType = CommandType.StoredProcedure;
-           cmd.CommandText = "sp_update_TongVHToPhuongTien";
-           cmd.Parameters.Add("PhuongTienID", SqlDbType.NVarChar).Value = PhuongTienID;
-           cmd.Parameters.Add("TongVH", SqlDbType.Float).Value = TongVH;
+        public DataTable selectLoaiPT()
+        {
+            return m_LoaiPTData.select();
+        }
+        public DataTable selectDonViTC()
+        {
+            return m_DonViTCData.select();
+        }
+        public DataTable selectDonViQL()
+        {
+            return m_DonViQuanLyData.select();
+        }
+        public DataTable selectPhuongTienData_LoaiPT()
+        {
+            SqlConnection con = data.getConnect();
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_select_PhuongTienData_LoaiPT";
+            //retval = cmd.ExecuteNonQuery();
+            DataTable dtb;
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "PhuongTien");
+                dtb = ds.Tables["PhuongTien"];
+            }
+            catch (System.Exception ex)
+            {
+                return null;
+            }
+            return dtb;
+        }
+        public DataTable selectPhuongTienData_LoaiPT_ByMaLoaiPT(string LoaiPTMa)
+        {
+            SqlConnection con = data.getConnect();
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_select_PhuongTienData_LoaiPT_ByMaLoaiPT";
+            cmd.Parameters.Add("LoaiPTMa", SqlDbType.NVarChar).Value = LoaiPTMa;
+            DataTable dtb;
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "PhuongTien");
+                dtb = ds.Tables["PhuongTien"];
+            }
+            catch (System.Exception ex)
+            {
+                return null;
+            }
+            return dtb;
+        }
+        public DataTable update_TongVHToPhuongTien(string PhuongTienID, string TongVH)
+        {
+            SqlConnection con = data.getConnect();
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_update_TongVHToPhuongTien";
+            cmd.Parameters.Add("PhuongTienID", SqlDbType.NVarChar).Value = PhuongTienID;
+            cmd.Parameters.Add("TongVH", SqlDbType.Float).Value = TongVH;
 
-           DataTable dtb;
-           try
-           {
-               SqlDataAdapter da = new SqlDataAdapter(cmd);
-               DataSet ds = new DataSet();
-               da.Fill(ds, "PhuongTien");
-               dtb = ds.Tables["PhuongTien"];
-           }
-           catch (System.Exception ex)
-           {
-               return null;
-           }
-           return dtb;
-       }
-       public DataTable update_LanBaoTri(
-           string PhuongTienID , 
-           string LanBDTX , 
-           string LanTieuTu , 
-           string LanTrungTu ,
-           string LanDaiTu)
-       {
-           SqlConnection con = data.getConnect();
-           con.Open();
-           SqlCommand cmd = new SqlCommand();
-           cmd.Connection = con;
-           cmd.CommandType = CommandType.StoredProcedure;
-           cmd.CommandText = "sp_update_LanBaoTri";
-           cmd.Parameters.Add("PhuongTienID", SqlDbType.NVarChar).Value = PhuongTienID;
-           cmd.Parameters.Add("LanBDTX", SqlDbType.Float).Value = LanBDTX;
-           cmd.Parameters.Add("LanTieuTu", SqlDbType.Float).Value = LanTieuTu;
-           cmd.Parameters.Add("LanTrungTu", SqlDbType.Float).Value = LanTrungTu;
-           cmd.Parameters.Add("LanDaiTu", SqlDbType.Float).Value = LanDaiTu;
+            DataTable dtb;
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "PhuongTien");
+                dtb = ds.Tables["PhuongTien"];
+            }
+            catch (System.Exception ex)
+            {
+                return null;
+            }
+            return dtb;
+        }
+        public DataTable update_LanBaoTri(
+            string PhuongTienID,
+            string LanBDTX,
+            string LanTieuTu,
+            string LanTrungTu,
+            string LanDaiTu)
+        {
+            SqlConnection con = data.getConnect();
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_update_LanBaoTri";
+            cmd.Parameters.Add("PhuongTienID", SqlDbType.NVarChar).Value = PhuongTienID;
+            cmd.Parameters.Add("LanBDTX", SqlDbType.Float).Value = LanBDTX;
+            cmd.Parameters.Add("LanTieuTu", SqlDbType.Float).Value = LanTieuTu;
+            cmd.Parameters.Add("LanTrungTu", SqlDbType.Float).Value = LanTrungTu;
+            cmd.Parameters.Add("LanDaiTu", SqlDbType.Float).Value = LanDaiTu;
 
-           DataTable dtb;
-           try
-           {
-               SqlDataAdapter da = new SqlDataAdapter(cmd);
-               DataSet ds = new DataSet();
-               da.Fill(ds, "PhuongTien");
-               dtb = ds.Tables["PhuongTien"];
-           }
-           catch (System.Exception ex)
-           {
-               return null;
-           }
-           return dtb;
-       }
-     public DataTable getMocBaoTriForPhuongTien(
-          string NguyenMauID,
-          float  BDTX,
-          float  TieuTu,
-          float  TrungTu,
-          float  DaiTu
-         )
-       {
-           return m_NguyenMauPTData.getMocBaoTri(
-               NguyenMauID,
-               BDTX,
-               TieuTu,
-               TrungTu,
-               DaiTu
-
-               );
-       }
-
-
+            DataTable dtb;
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "PhuongTien");
+                dtb = ds.Tables["PhuongTien"];
+            }
+            catch (System.Exception ex)
+            {
+                return null;
+            }
+            return dtb;
+        }
     }
 }

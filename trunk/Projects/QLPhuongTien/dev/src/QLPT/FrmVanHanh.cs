@@ -24,6 +24,7 @@ namespace QLPT
         Data dt = new Data();
         Utils utils = new Utils();
         VanHanhBUS m_VanHanhBUS = new VanHanhBUS();
+        BaoTriBUS m_BaoTriBUS = new BaoTriBUS();
         public void resetControl()
         {
             dtpNgayVH.Text = "";
@@ -192,8 +193,11 @@ namespace QLPT
                                         , txtMoTa.Text
                                          
                                         );
-                FrmVanHanh_Load(sender, e);
+                updateMocBaoTri();
                 updateTongVHToPhuongTien();
+                FrmVanHanh_Load(sender, e);
+                
+
 
             }
             catch (Exception ex)
@@ -234,6 +238,7 @@ namespace QLPT
                     );
                
                 updateTongVHToPhuongTien();
+                updateMocBaoTri();
                 FrmVanHanh_Load(sender, e);
             }
             catch (Exception ex)
@@ -331,9 +336,33 @@ namespace QLPT
         {
             spbVanHanh.Value = spbTan.Value * spbKm.Value;
         }
-        
-   
+        public void updateMocBaoTri()
+        {
+            DataTable dtb = new DataTable();
+            dtb = m_VanHanhBUS.getMocBaoTriForPhuongTien();
+            for (int i = 0; i < dtb.Rows.Count; i++)
+            {
+                DataRow currentRow = dtb.Rows[i];
+                string strPhuongTienID = currentRow["PhuongTienID"].ToString();
+                float fDataTu = float.Parse(currentRow["DaiTu"].ToString());
+                float fTrungTu = float.Parse(currentRow["TrungTu"].ToString());
+                float fTieuTu = float.Parse(currentRow["TieuTu"].ToString());
+                float fBDTX = float.Parse(currentRow["BDTX"].ToString());
+                float fTongVH = float.Parse(currentRow["TongVH"].ToString());
+                m_BaoTriBUS.tinhSoLanBaoTri(fBDTX, fTieuTu, fTrungTu, fDataTu,fTongVH);
+                m_VanHanhBUS.update_LanBaoTri
+                    (
+                    strPhuongTienID,
+                    (m_BaoTriBUS.LanBDTX).ToString(),
+                    (m_BaoTriBUS.LanTieuTu).ToString(),
+                    (m_BaoTriBUS.LanTrungTu).ToString(),
+                    (m_BaoTriBUS.LanDaiTu).ToString()
 
+                    );
 
+            }
+
+        }
+    
     }
 }

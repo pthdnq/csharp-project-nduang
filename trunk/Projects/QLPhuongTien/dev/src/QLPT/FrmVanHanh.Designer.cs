@@ -210,10 +210,14 @@
             this.txtDonVi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtDonVi.FormattingEnabled = true;
             this.txtDonVi.Items.AddRange(new object[] {
-            "m3",
-            "km x tấn",
             "h",
-            "kg"});
+            "kg",
+            "tấn",
+            "m3",
+            "tấn/h",
+            "km x tấn",
+            "(m3 x kg)/h",
+            ""});
             this.txtDonVi.Location = new System.Drawing.Point(551, 37);
             this.txtDonVi.Name = "txtDonVi";
             this.txtDonVi.Size = new System.Drawing.Size(235, 21);
@@ -270,8 +274,8 @@
             this.spbVanHanh.DecimalPlaces = 3;
             this.spbVanHanh.Location = new System.Drawing.Point(316, 180);
             this.spbVanHanh.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
+            1874919424,
+            2328306,
             0,
             0});
             this.spbVanHanh.Name = "spbVanHanh";
