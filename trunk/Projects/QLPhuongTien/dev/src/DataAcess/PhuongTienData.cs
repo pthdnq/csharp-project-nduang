@@ -265,5 +265,22 @@ namespace DataAcess
             }
             return dtb;
         }
+        public bool updateHienTrang( string PhuongTienID , string HienTrang)
+        {
+            int retval = 0;
+            SqlConnection con = data.getConnect();
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_update_HienTrangPT";
+            cmd.Parameters.Add("PhuongTienID", SqlDbType.NVarChar).Value = PhuongTienID;
+            cmd.Parameters.Add("HienTrang", SqlDbType.NVarChar).Value = HienTrang;
+            retval = cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+            return retval > 0;
+          
+        }
     }
 }

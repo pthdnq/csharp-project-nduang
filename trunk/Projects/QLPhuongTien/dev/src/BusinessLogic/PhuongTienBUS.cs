@@ -134,6 +134,10 @@ namespace BusinessLogic
                  LanDaiTu
                  );
          }
+       public bool updateHienTrang(string PhuongTienID, string HienTrang)
+       {
+           return m_PhuongTienData.updateHienTrang( PhuongTienID , HienTrang);
+       }
 
     }
 }
