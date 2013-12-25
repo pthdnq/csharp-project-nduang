@@ -31,22 +31,26 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.View_PhuongTienBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.QuanLy_PTDataSet = new QLPT.QuanLy_PTDataSet();
+            
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.View_PhuongTienTableAdapter = new QLPT.QuanLy_PTDataSetTableAdapters.View_PhuongTienTableAdapter();
+            
+           // this.QuanLy_PTDataSet2 = new QLPT.QuanLy_PTDataSet2();
+            this.View_VanHanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
+           // this.View_VanHanhTableAdapter = new QLPT.QuanLy_PTDataSet2TableAdapters.View_VanHanhTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.View_PhuongTienBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QuanLy_PTDataSet)).BeginInit();
+            
+           // ((System.ComponentModel.ISupportInitialize)(this.QuanLy_PTDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.View_VanHanhBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // View_PhuongTienBindingSource
             // 
             this.View_PhuongTienBindingSource.DataMember = "View_PhuongTien";
-            this.View_PhuongTienBindingSource.DataSource = this.QuanLy_PTDataSet;
+           
             // 
             // QuanLy_PTDataSet
             // 
-            this.QuanLy_PTDataSet.DataSetName = "QuanLy_PTDataSet";
-            this.QuanLy_PTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+         
             // 
             // reportViewer1
             // 
@@ -62,7 +66,21 @@
             // 
             // View_PhuongTienTableAdapter
             // 
-            this.View_PhuongTienTableAdapter.ClearBeforeFill = true;
+
+            // 
+            // QuanLy_PTDataSet2
+            // 
+         //   this.QuanLy_PTDataSet2.DataSetName = "QuanLy_PTDataSet2";
+          //  this.QuanLy_PTDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // View_VanHanhBindingSource
+            // 
+            this.View_VanHanhBindingSource.DataMember = "View_VanHanh";
+          //  this.View_VanHanhBindingSource.DataSource = this.QuanLy_PTDataSet2;
+            // 
+            // View_VanHanhTableAdapter
+            // 
+           // this.View_VanHanhTableAdapter.ClearBeforeFill = true;
             // 
             // FrmReportVanHanh
             // 
@@ -74,7 +92,8 @@
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.FrmReportVanHanh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.View_PhuongTienBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QuanLy_PTDataSet)).EndInit();
+            
+            ((System.ComponentModel.ISupportInitialize)(this.View_VanHanhBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -83,7 +102,6 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource View_PhuongTienBindingSource;
-        private QuanLy_PTDataSet QuanLy_PTDataSet;
-        private QuanLy_PTDataSetTableAdapters.View_PhuongTienTableAdapter View_PhuongTienTableAdapter;
+        private System.Windows.Forms.BindingSource View_VanHanhBindingSource;
     }
 }
