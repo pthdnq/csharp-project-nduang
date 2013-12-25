@@ -44,10 +44,11 @@
             // 
             // btThoat
             // 
+            this.btThoat.Image = global::QLPT.Properties.Resources.Delete;
             this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThoat.Location = new System.Drawing.Point(296, 208);
+            this.btThoat.Location = new System.Drawing.Point(296, 196);
             this.btThoat.Name = "btThoat";
-            this.btThoat.Size = new System.Drawing.Size(77, 23);
+            this.btThoat.Size = new System.Drawing.Size(77, 35);
             this.btThoat.TabIndex = 6;
             this.btThoat.Text = "Hủy";
             this.btThoat.UseVisualStyleBackColor = true;
@@ -55,10 +56,11 @@
             // 
             // btDoiMatKhau
             // 
+            this.btDoiMatKhau.Image = global::QLPT.Properties.Resources.accept;
             this.btDoiMatKhau.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btDoiMatKhau.Location = new System.Drawing.Point(21, 208);
+            this.btDoiMatKhau.Location = new System.Drawing.Point(21, 196);
             this.btDoiMatKhau.Name = "btDoiMatKhau";
-            this.btDoiMatKhau.Size = new System.Drawing.Size(109, 23);
+            this.btDoiMatKhau.Size = new System.Drawing.Size(109, 35);
             this.btDoiMatKhau.TabIndex = 5;
             this.btDoiMatKhau.Text = "Đổi mật khẩu";
             this.btDoiMatKhau.UseVisualStyleBackColor = true;
@@ -149,7 +151,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 250);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(393, 242);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btDoiMatKhau);
             this.Controls.Add(this.groupBox1);

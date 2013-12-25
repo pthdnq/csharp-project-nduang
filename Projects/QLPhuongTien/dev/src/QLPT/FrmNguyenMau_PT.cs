@@ -102,6 +102,7 @@ namespace QLPT
             btSua.Enabled = false;
             cmbLoaiPT.Enabled = true;
             btLuu.Enabled = true;
+            btXoa.Enabled = false;
             resetControl();
         }
         private string  generateIDNguyenMau()
@@ -152,9 +153,13 @@ namespace QLPT
                     FrmNguyenMau_PT_Load_1(sender, e);//trở về giao diện đầu     
                 }
             }
-            catch (System.Exception ex)
+            catch (SqlException ex)
             {
-                MessageBox.Show("Không thể xóa Mã :" + this.txtNguyenMau_ID.Text + " !" + ex);
+                
+                if(ex.ErrorCode == utils.ERR_MA_DANG_SU_DUNG)
+                {
+                    MessageBox.Show("Không thể xóa Mã :" + this.txtNguyenMau_ID.Text + " vì đang sử dụng trong bảng PhuongTien");
+                }
             }
 
         }
@@ -225,11 +230,11 @@ namespace QLPT
                     txtNhanHieu.Text = row.Cells["NhanHieu"].Value.ToString();
                     txtDonVi.Text = row.Cells["DonVi"].Value.ToString();
 
-                    spbBDTX.Maximum = utils.ConvertStringToDecimal(row.Cells["BDTX"].Value.ToString());
-                    spbTieuTu.Maximum = utils.ConvertStringToDecimal(row.Cells["TieuTu"].Value.ToString());
-                    spbTrungTu.Maximum = utils.ConvertStringToDecimal(row.Cells["TrungTu"].Value.ToString());
-                    spbDaiTu.Maximum = utils.ConvertStringToDecimal(row.Cells["DaiTu"].Value.ToString());
-                    spbNangLuc.Maximum = utils.ConvertStringToDecimal(row.Cells["NangLuc"].Value.ToString());
+                    //spbBDTX.Maximum = utils.ConvertStringToDecimal(row.Cells["BDTX"].Value.ToString());
+                    //spbTieuTu.Maximum = utils.ConvertStringToDecimal(row.Cells["TieuTu"].Value.ToString());
+                    //spbTrungTu.Maximum = utils.ConvertStringToDecimal(row.Cells["TrungTu"].Value.ToString());
+                    //spbDaiTu.Maximum = utils.ConvertStringToDecimal(row.Cells["DaiTu"].Value.ToString());
+                   // spbNangLuc.Maximum = utils.ConvertStringToDecimal(row.Cells["NangLuc"].Value.ToString());
 
                     spbBDTX.Value = utils.ConvertStringToDecimal(row.Cells["BDTX"].Value.ToString());
                     spbTieuTu.Value = utils.ConvertStringToDecimal(row.Cells["TieuTu"].Value.ToString());

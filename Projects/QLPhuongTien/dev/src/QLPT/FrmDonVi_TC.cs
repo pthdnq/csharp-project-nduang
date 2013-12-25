@@ -95,11 +95,21 @@ namespace QLPT
 
         private void btXoa_Click(object sender, EventArgs e)
         {
-            if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã DV : " + txtDonViTC_ID.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            try
             {
-                m_DonViTCBUS.delete1(txtDonViTC_ID.Text);
-                MessageBox.Show("Đã xóa " + this.txtDonViTC_ID.Text + " thành công !");
-                FrmDonVi_TC_Load(sender, e);//trở về giao diện đầu     
+                if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã DV : " + txtDonViTC_ID.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                {
+                    m_DonViTCBUS.delete1(txtDonViTC_ID.Text);
+                    FrmDonVi_TC_Load(sender, e);//trở về giao diện đầu     
+                }
+            }
+           
+             catch (SqlException ex)
+            {
+                if (ex.ErrorCode == utils.ERR_MA_DANG_SU_DUNG)
+                {
+                    MessageBox.Show("Mã Đơn vị TC : [" + txtDonViTC_ID.Text + "] đang sử dụng ở bảng PhuongTien");
+                }
             }
         }
 

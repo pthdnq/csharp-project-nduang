@@ -74,6 +74,13 @@ namespace QLPT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap _600px_information_iconsvg {
+            get {
+                object obj = ResourceManager.GetObject("600px-information_iconsvg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap accept {
             get {
                 object obj = ResourceManager.GetObject("accept", resourceCulture);
@@ -81,9 +88,23 @@ namespace QLPT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Address_book {
+            get {
+                object obj = ResourceManager.GetObject("Address book", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap application_edit {
             get {
                 object obj = ResourceManager.GetObject("application_edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap arrow_refresh {
+            get {
+                object obj = ResourceManager.GetObject("arrow_refresh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -102,9 +123,30 @@ namespace QLPT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Book_311 {
+            get {
+                object obj = ResourceManager.GetObject("Book 311", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap book_notebook {
+            get {
+                object obj = ResourceManager.GetObject("book_notebook", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Company {
             get {
                 object obj = ResourceManager.GetObject("Company", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Database {
+            get {
+                object obj = ResourceManager.GetObject("Database", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,9 +158,23 @@ namespace QLPT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Delivery {
+            get {
+                object obj = ResourceManager.GetObject("Delivery", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Exit {
             get {
                 object obj = ResourceManager.GetObject("Exit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Folder {
+            get {
+                object obj = ResourceManager.GetObject("Folder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -144,6 +200,13 @@ namespace QLPT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap List {
+            get {
+                object obj = ResourceManager.GetObject("List", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap lock_and_key_icon_thumb355812 {
             get {
                 object obj = ResourceManager.GetObject("lock-and-key-icon-thumb355812", resourceCulture);
@@ -158,6 +221,13 @@ namespace QLPT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap People {
+            get {
+                object obj = ResourceManager.GetObject("People", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap plus_16 {
             get {
                 object obj = ResourceManager.GetObject("plus_16", resourceCulture);
@@ -165,9 +235,23 @@ namespace QLPT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Question {
+            get {
+                object obj = ResourceManager.GetObject("Question", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Repair {
             get {
                 object obj = ResourceManager.GetObject("Repair", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Report {
+            get {
+                object obj = ResourceManager.GetObject("Report", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -200,9 +284,23 @@ namespace QLPT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Search2 {
+            get {
+                object obj = ResourceManager.GetObject("Search2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Taxi {
             get {
                 object obj = ResourceManager.GetObject("Taxi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Taxi1 {
+            get {
+                object obj = ResourceManager.GetObject("Taxi1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

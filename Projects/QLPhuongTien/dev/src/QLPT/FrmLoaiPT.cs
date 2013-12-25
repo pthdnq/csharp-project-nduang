@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using BusinessLogic;
 using DataAcess;
 using System.Data.SqlClient;
+using Component;
 
 
 namespace QLPT
@@ -19,12 +20,15 @@ namespace QLPT
         {
             InitializeComponent();
         }
+
+
         Data dt = new Data();
+        Utils m_utils = new Utils();
         LoaiPTBUS m_LoaiPTBUS = new LoaiPTBUS();
         public void resetControl()
         {
             txtLoaiPT_Ten.Text = "";
-            txtLoaiPT_Ma.Text = "";            
+            txtLoaiPT_Ma.Text = "";
         }
 
         private void FrmLoaiPT_Load(object sender, EventArgs e)
@@ -55,7 +59,7 @@ namespace QLPT
                 MessageBox.Show("Trường Tên Phương tiện không được bỏ trống !");
                 return false;
             }
-           
+
             return true;
         }
 
@@ -78,12 +82,6 @@ namespace QLPT
 
             try
             {
-                Ok= m_LoaiPTBUS.exist(txtLoaiPT_Ma.Text.Trim());
-                if (Ok == true)//ma pt da ton tai
-                {
-                    MessageBox.Show("Mã Loại PT " + txtLoaiPT_Ma.Text + " đã tồn tại ");
-                    return;
-                }
                 m_LoaiPTBUS.insert(txtLoaiPT_Ma.Text
                                         , txtLoaiPT_Ten.Text
                                         );
@@ -91,10 +89,12 @@ namespace QLPT
                 FrmLoaiPT_Load(sender, e);
 
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-              //  MessageBox.Show("Lỗi Thêm :" + ex);
-                Console.Write("Lỗi " + ex.ToString());
+                if (ex.ErrorCode == m_utils.ERR_MA_DANG_SU_DUNG)
+                {
+                    MessageBox.Show("Mã Loại PT [" + txtLoaiPT_Ma.Text + "] đã tồn tại ");
+                }
             }
         }
 
@@ -110,7 +110,7 @@ namespace QLPT
                     );
                 FrmLoaiPT_Load(sender, e);
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Lỗi Sửa :" + ex);
             }
@@ -122,7 +122,7 @@ namespace QLPT
             {
                 this.txtLoaiPT_Ma.Text = row.Cells[1].Value.ToString();
                 this.txtLoaiPT_Ten.Text = row.Cells[2].Value.ToString();
-               
+
                 btSua.Enabled = true;
                 btXoa.Enabled = true;
                 btLuu.Enabled = false;
@@ -151,9 +151,13 @@ namespace QLPT
                     MessageBox.Show("Đã xóa " + this.txtLoaiPT_Ma.Text + " thành công !");
                     FrmLoaiPT_Load(sender, e);//trở về giao diện đầu     
                 }
-                catch (System.Exception ex)
+                catch (SqlException ex)
                 {
                     Console.Write("Không xóa đc. Lỗi" + ex.ToString());
+                    if (ex.ErrorCode == m_utils.ERR_MA_DANG_SU_DUNG)
+                    {
+                        MessageBox.Show("Ma đang sử dụng trong bảng phương tiện nên không thể xóa");
+                    }
                 }
 
             }

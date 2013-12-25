@@ -48,8 +48,9 @@ namespace QLPT
 
         private void btThoat_Click(object sender, EventArgs e)
         {
-            if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn thoát không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
-                Application.Exit();
+            //if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn thoát không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            //    Application.Exit();
+            this.Close();
         }
         //internal void ShowDiaLog()
         //{

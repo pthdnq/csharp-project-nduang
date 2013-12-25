@@ -43,6 +43,7 @@
             // 
             // btNhapLai
             // 
+            this.btNhapLai.Image = global::QLPT.Properties.Resources.arrow_refresh;
             this.btNhapLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btNhapLai.Location = new System.Drawing.Point(148, 181);
             this.btNhapLai.Name = "btNhapLai";
@@ -54,6 +55,7 @@
             // 
             // btThoat
             // 
+            this.btThoat.Image = global::QLPT.Properties.Resources.Exit;
             this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThoat.Location = new System.Drawing.Point(270, 181);
             this.btThoat.Name = "btThoat";
@@ -65,7 +67,8 @@
             // 
             // btDK
             // 
-            this.btDK.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btDK.Image = global::QLPT.Properties.Resources.accept;
+            this.btDK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btDK.Location = new System.Drawing.Point(12, 181);
             this.btDK.Name = "btDK";
             this.btDK.Size = new System.Drawing.Size(93, 29);
@@ -100,6 +103,7 @@
             // 
             this.txtMK.Location = new System.Drawing.Point(121, 69);
             this.txtMK.Name = "txtMK";
+            this.txtMK.PasswordChar = '*';
             this.txtMK.Size = new System.Drawing.Size(179, 20);
             this.txtMK.TabIndex = 4;
             // 
@@ -107,6 +111,7 @@
             // 
             this.txtNhapLaiMK.Location = new System.Drawing.Point(121, 109);
             this.txtNhapLaiMK.Name = "txtNhapLaiMK";
+            this.txtNhapLaiMK.PasswordChar = '*';
             this.txtNhapLaiMK.Size = new System.Drawing.Size(179, 20);
             this.txtNhapLaiMK.TabIndex = 3;
             // 
@@ -141,6 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(383, 225);
             this.Controls.Add(this.btNhapLai);
             this.Controls.Add(this.btThoat);
