@@ -134,5 +134,23 @@ namespace QLPT
             FrmVanHanh vanhanh = new FrmVanHanh();
             vanhanh.Show();
         }
+
+        private void báoCáoVậnHànhPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmReportVanHanh rptVanHanh = new FrmReportVanHanh();
+            rptVanHanh.Show();
+        }
+
+        private void thôngTinChươngTrìnhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAboutUs thongtinct = new FrmAboutUs();
+            thongtinct.Show();
+        }
+
+        private void hướngDẫnSửDụngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmHelp help = new FrmHelp();
+            help.Show();
+        }
     }
 }

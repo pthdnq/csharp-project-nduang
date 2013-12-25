@@ -303,12 +303,19 @@ namespace QLPT
         }
         private void btXoa_Click(object sender, EventArgs e)
         {
-            if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã DV : " + txtPhuongTienID.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            try
             {
-               // m_PhuongTienBUS.delete1(txtPhuongTienID.Text);
-                m_PhuongTienBUS.updateHienTrang(txtPhuongTienID.Text , "0");
-                FrmPhuongTien_Load(sender, e);//trở về giao diện đầu     
+                if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã DV : " + txtPhuongTienID.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                {
+                    // m_PhuongTienBUS.delete1(txtPhuongTienID.Text);
+                    m_PhuongTienBUS.updateHienTrang(txtPhuongTienID.Text, "0");
+                    FrmPhuongTien_Load(sender, e);//trở về giao diện đầu     
+                }
             }
+           catch(SqlException ex)
+           {
+
+           }
         }
         private string generatePhuongTien()
         {

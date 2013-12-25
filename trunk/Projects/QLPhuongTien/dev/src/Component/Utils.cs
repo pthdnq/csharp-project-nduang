@@ -9,6 +9,8 @@ namespace Component
     public class Utils
     {
         Data m_data = new Data();
+        public int ERR_MA_DANG_SU_DUNG = -2146232060;
+        public int ERR_MA_KHONG_TON_TAI = 242343;
         public String getIDAuto(string tblName,string fldID)
         {
             return m_data.getIDNumberAuto(tblName, fldID);

@@ -93,7 +93,7 @@
             this.groupBox1.Controls.Add(this.lbPass);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(294, 102);
+            this.groupBox1.Size = new System.Drawing.Size(294, 116);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đăng nhập";
@@ -102,11 +102,11 @@
             // 
             this.btThoat.Image = global::QLPT.Properties.Resources.Exit;
             this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThoat.Location = new System.Drawing.Point(165, 120);
+            this.btThoat.Location = new System.Drawing.Point(160, 134);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(87, 31);
             this.btThoat.TabIndex = 6;
-            this.btThoat.Text = "Thoát";
+            this.btThoat.Text = "Hủy";
             this.btThoat.UseVisualStyleBackColor = true;
             this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
@@ -119,9 +119,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Status});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 166);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 179);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(319, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(346, 22);
             this.statusStrip1.TabIndex = 7;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -129,7 +129,7 @@
             // 
             this.btDangNhap.Image = global::QLPT.Properties.Resources.accept;
             this.btDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btDangNhap.Location = new System.Drawing.Point(65, 120);
+            this.btDangNhap.Location = new System.Drawing.Point(60, 134);
             this.btDangNhap.Name = "btDangNhap";
             this.btDangNhap.Size = new System.Drawing.Size(94, 31);
             this.btDangNhap.TabIndex = 5;
@@ -142,11 +142,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(319, 188);
+            this.ClientSize = new System.Drawing.Size(346, 201);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btDangNhap);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "FrmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập ";

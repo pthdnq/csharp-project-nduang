@@ -165,8 +165,8 @@
             this.spbBDTX.DecimalPlaces = 3;
             this.spbBDTX.Location = new System.Drawing.Point(585, 25);
             this.spbBDTX.Maximum = new decimal(new int[] {
-            10000000,
-            0,
+            -1981284352,
+            -1966660860,
             0,
             0});
             this.spbBDTX.Minimum = new decimal(new int[] {
@@ -183,8 +183,8 @@
             this.spbTieuTu.DecimalPlaces = 3;
             this.spbTieuTu.Location = new System.Drawing.Point(585, 59);
             this.spbTieuTu.Maximum = new decimal(new int[] {
-            10000000,
-            0,
+            -1981284352,
+            -1966660860,
             0,
             0});
             this.spbTieuTu.Minimum = new decimal(new int[] {
@@ -201,8 +201,8 @@
             this.spbTrungTu.DecimalPlaces = 3;
             this.spbTrungTu.Location = new System.Drawing.Point(585, 103);
             this.spbTrungTu.Maximum = new decimal(new int[] {
-            10000000,
-            0,
+            -1981284352,
+            -1966660860,
             0,
             0});
             this.spbTrungTu.Minimum = new decimal(new int[] {
@@ -219,8 +219,8 @@
             this.spbDaiTu.DecimalPlaces = 3;
             this.spbDaiTu.Location = new System.Drawing.Point(585, 148);
             this.spbDaiTu.Maximum = new decimal(new int[] {
-            10000000,
-            0,
+            -1981284352,
+            -1966660860,
             0,
             0});
             this.spbDaiTu.Minimum = new decimal(new int[] {
@@ -237,8 +237,8 @@
             this.spbNangLuc.DecimalPlaces = 3;
             this.spbNangLuc.Location = new System.Drawing.Point(107, 143);
             this.spbNangLuc.Maximum = new decimal(new int[] {
-            10000000,
-            0,
+            1410065408,
+            2,
             0,
             0});
             this.spbNangLuc.Minimum = new decimal(new int[] {
@@ -323,6 +323,7 @@
             // 
             // txtNguyenMau_ID
             // 
+            this.txtNguyenMau_ID.Enabled = false;
             this.txtNguyenMau_ID.Location = new System.Drawing.Point(105, 25);
             this.txtNguyenMau_ID.Name = "txtNguyenMau_ID";
             this.txtNguyenMau_ID.Size = new System.Drawing.Size(263, 20);
@@ -464,6 +465,8 @@
             // 
             // btThem
             // 
+            this.btThem.Image = global::QLPT.Properties.Resources.plus_16;
+            this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThem.Location = new System.Drawing.Point(17, 322);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(75, 23);
@@ -475,6 +478,8 @@
             // btLuu
             // 
             this.btLuu.Enabled = false;
+            this.btLuu.Image = global::QLPT.Properties.Resources.Save;
+            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btLuu.Location = new System.Drawing.Point(339, 322);
             this.btLuu.Name = "btLuu";
             this.btLuu.Size = new System.Drawing.Size(75, 23);
@@ -486,6 +491,8 @@
             // btXoa
             // 
             this.btXoa.Enabled = false;
+            this.btXoa.Image = global::QLPT.Properties.Resources.Delete;
+            this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btXoa.Location = new System.Drawing.Point(232, 322);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(75, 23);
@@ -497,6 +504,8 @@
             // btSua
             // 
             this.btSua.Enabled = false;
+            this.btSua.Image = global::QLPT.Properties.Resources.application_edit;
+            this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSua.Location = new System.Drawing.Point(118, 322);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(75, 23);
@@ -507,6 +516,8 @@
             // 
             // btThoat
             // 
+            this.btThoat.Image = global::QLPT.Properties.Resources.Exit;
+            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThoat.Location = new System.Drawing.Point(802, 322);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(75, 23);
@@ -519,6 +530,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(891, 543);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btSua);

@@ -81,7 +81,6 @@
             this.NgayVH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HienTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSearchPhuongTien = new System.Windows.Forms.TextBox();
-            this.btTroVe = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -129,7 +128,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(851, 298);
+            this.groupBox1.Size = new System.Drawing.Size(851, 290);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin ";
@@ -602,17 +601,6 @@
             this.txtSearchPhuongTien.Click += new System.EventHandler(this.txtSearchPhuongTien_Click);
             this.txtSearchPhuongTien.TextChanged += new System.EventHandler(this.txtSearchPhuongTien_TextChanged);
             // 
-            // btTroVe
-            // 
-            this.btTroVe.Image = global::QLPT.Properties.Resources.Back;
-            this.btTroVe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTroVe.Location = new System.Drawing.Point(1113, 107);
-            this.btTroVe.Name = "btTroVe";
-            this.btTroVe.Size = new System.Drawing.Size(88, 32);
-            this.btTroVe.TabIndex = 39;
-            this.btTroVe.Text = "Trở về";
-            this.btTroVe.UseVisualStyleBackColor = true;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -631,7 +619,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1222, 669);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btTroVe);
             this.Controls.Add(this.txtSearchPhuongTien);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btSua);
@@ -689,7 +676,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpNgayVH;
         private System.Windows.Forms.TextBox txtSearchPhuongTien;
-        private System.Windows.Forms.Button btTroVe;
         private System.Windows.Forms.TextBox txtAutoNum;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
