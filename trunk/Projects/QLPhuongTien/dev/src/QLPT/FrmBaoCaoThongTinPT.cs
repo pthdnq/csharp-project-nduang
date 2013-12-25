@@ -9,26 +9,17 @@ using System.Windows.Forms;
 
 namespace QLPT
 {
-    public partial class FrmReportVanHanh : Form
+    public partial class FrmBaoCaoThongTinPT : Form
     {
-        public FrmReportVanHanh()
+        public FrmBaoCaoThongTinPT()
         {
             InitializeComponent();
         }
 
-        private void FrmReportVanHanh_Load(object sender, EventArgs e)
+        private void FrmBaoCaoThongTinPT_Load(object sender, EventArgs e)
         {
-            
-            try
-            {
-
-            }
-            catch (System.Exception ex)
-            {
-            	
-            }
-
-
+            // TODO: This line of code loads data into the 'View_Info_PhuongTien_DataSet.View_Info_PhuongTien' table. You can move, or remove it, as needed.
+          
             this.reportViewer1.RefreshReport();
         }
     }
