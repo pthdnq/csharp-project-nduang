@@ -29,34 +29,40 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-           
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.View_Info_PhuongTienBindingSource = new System.Windows.Forms.BindingSource(this.components);
-          
-           
+            this.DataSet_View_Info_PhuongTien = new QLPT.DataSet_View_Info_PhuongTien();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.View_Info_PhuongTienTableAdapter = new QLPT.DataSet_View_Info_PhuongTienTableAdapters.View_Info_PhuongTienTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.View_Info_PhuongTienBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet_View_Info_PhuongTien)).BeginInit();
             this.SuspendLayout();
+            // 
+            // View_Info_PhuongTienBindingSource
+            // 
+            this.View_Info_PhuongTienBindingSource.DataMember = "View_Info_PhuongTien";
+            this.View_Info_PhuongTienBindingSource.DataSource = this.DataSet_View_Info_PhuongTien;
+            // 
+            // DataSet_View_Info_PhuongTien
+            // 
+            this.DataSet_View_Info_PhuongTien.DataSetName = "DataSet_View_Info_PhuongTien";
+            this.DataSet_View_Info_PhuongTien.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "DataSet_Info_PhuongTien";
-            reportDataSource2.Value = this.View_Info_PhuongTienBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DataSet_ThongTin_PhuongTien";
+            reportDataSource1.Value = this.View_Info_PhuongTienBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "QLPT.BaoCaoThongTinPT.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(633, 262);
             this.reportViewer1.TabIndex = 0;
             // 
-            // View_Info_PhuongTien_DataSet
-            // 
-          
-            // 
-            // View_Info_PhuongTienBindingSource
-            // 
             // View_Info_PhuongTienTableAdapter
+            // 
+            this.View_Info_PhuongTienTableAdapter.ClearBeforeFill = true;
             // 
             // FrmBaoCaoThongTinPT
             // 
@@ -65,11 +71,11 @@
             this.ClientSize = new System.Drawing.Size(633, 262);
             this.Controls.Add(this.reportViewer1);
             this.Name = "FrmBaoCaoThongTinPT";
-            this.Text = "FrmBaoCaoThongTinPT";
+            this.Text = "Danh sách chi tiết";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmBaoCaoThongTinPT_Load);
-      
             ((System.ComponentModel.ISupportInitialize)(this.View_Info_PhuongTienBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet_View_Info_PhuongTien)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -78,6 +84,8 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource View_Info_PhuongTienBindingSource;
+        private DataSet_View_Info_PhuongTien DataSet_View_Info_PhuongTien;
+        private DataSet_View_Info_PhuongTienTableAdapters.View_Info_PhuongTienTableAdapter View_Info_PhuongTienTableAdapter;
         
     }
 }

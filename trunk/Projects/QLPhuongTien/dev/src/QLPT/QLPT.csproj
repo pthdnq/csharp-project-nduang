@@ -34,7 +34,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\Output\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -47,6 +47,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1388021444_22991.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BusinessLogic">
@@ -73,17 +76,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet_View_Info_PhuongTien.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_View_Info_PhuongTien.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_View_NhanVien.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_View_NhanVien.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_View_VanHanh.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_View_VanHanh.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FrmAboutUs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAboutUs.Designer.cs">
       <DependentUpon>FrmAboutUs.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBaoCaoNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaoCaoNhanVien.Designer.cs">
+      <DependentUpon>FrmBaoCaoNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBaoCaoThongTinPT.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmBaoCaoThongTinPT.Designer.cs">
       <DependentUpon>FrmBaoCaoThongTinPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaoCaoVanHanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaoCaoVanHanh.Designer.cs">
+      <DependentUpon>FrmBaoCaoVanHanh.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmHelp.cs">
       <SubType>Form</SubType>
@@ -177,11 +207,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLy_PTDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLy_PTDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLy_PTDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLy_PTDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View_VanHanh_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>View_VanHanh_DataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaoCaoNhanVien.rdlc" />
+    <EmbeddedResource Include="BaoCaoThongTinPT.rdlc" />
+    <EmbeddedResource Include="BaoCaoVanHanh.rdlc" />
     <EmbeddedResource Include="FrmAboutUs.resx">
       <DependentUpon>FrmAboutUs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaoCaoNhanVien.resx">
+      <DependentUpon>FrmBaoCaoNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBaoCaoThongTinPT.resx">
       <DependentUpon>FrmBaoCaoThongTinPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaoCaoVanHanh.resx">
+      <DependentUpon>FrmBaoCaoVanHanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHelp.resx">
       <DependentUpon>FrmHelp.cs</DependentUpon>
@@ -239,6 +293,39 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="DataSet_View_Info_PhuongTien.xsc">
+      <DependentUpon>DataSet_View_Info_PhuongTien.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_View_Info_PhuongTien.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_View_Info_PhuongTien.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_View_Info_PhuongTien.xss">
+      <DependentUpon>DataSet_View_Info_PhuongTien.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_View_NhanVien.xsc">
+      <DependentUpon>DataSet_View_NhanVien.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_View_NhanVien.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_View_NhanVien.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_View_NhanVien.xss">
+      <DependentUpon>DataSet_View_NhanVien.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_View_VanHanh.xsc">
+      <DependentUpon>DataSet_View_VanHanh.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_View_VanHanh.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_View_VanHanh.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_View_VanHanh.xss">
+      <DependentUpon>DataSet_View_VanHanh.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -248,8 +335,41 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="View_VanHanh_DataSet.xsc">
+      <DependentUpon>View_VanHanh_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View_VanHanh_DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>View_VanHanh_DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="View_VanHanh_DataSet.xss">
+      <DependentUpon>View_VanHanh_DataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="QuanLy_PTDataSet.xsc">
+      <DependentUpon>QuanLy_PTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLy_PTDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLy_PTDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLy_PTDataSet.xss">
+      <DependentUpon>QuanLy_PTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLy_PTDataSet1.xsc">
+      <DependentUpon>QuanLy_PTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLy_PTDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLy_PTDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLy_PTDataSet1.xss">
+      <DependentUpon>QuanLy_PTDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Resources\plus_16.png" />
   </ItemGroup>
   <ItemGroup>
@@ -406,6 +526,11 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1388021444_22991.ico" />
+    <None Include="Resources\12102013 khu xay dung tram thu phi.jpg" />
+    <None Include="Resources\29713-thi3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

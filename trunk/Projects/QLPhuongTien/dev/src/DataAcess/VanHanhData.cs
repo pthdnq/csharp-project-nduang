@@ -15,6 +15,7 @@ namespace DataAcess
         NhanVienData m_NhanVienData = new NhanVienData();
         PhuongTienData m_PhuongTienData = new PhuongTienData();
         NguyenMauPTData m_NguyenMauPTData = new NguyenMauPTData();
+        LoaiPTData m_LoaiPTData = new LoaiPTData();
         public bool insert(
             string VanHanhID,
             string PhuongTienID,
@@ -214,6 +215,19 @@ namespace DataAcess
                            LanTrungTu,
                            LanDaiTu
                 );
+        }
+
+        public DataTable selectDonViTCbyNhanVien(string NhanVienID)
+        {
+            return m_DonViTCData.selectDonViTCbyNhanVien(NhanVienID);
+        }
+        public DataTable selectLoaiPT()
+        {
+            return m_LoaiPTData.select();
+        }
+        public DataTable selectTenPTbyLoaiPT(string LoaiPTMa)
+        {
+            return m_LoaiPTData.selectTenPTbyLoaiPT(LoaiPTMa);
         }
     }
 }

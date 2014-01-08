@@ -17,6 +17,7 @@ namespace QLPT
 {
     public partial class FrmVanHanh : Form
     {
+        int iDatimeVH = 0;
         public FrmVanHanh()
         {
             InitializeComponent();
@@ -25,6 +26,13 @@ namespace QLPT
         Utils utils = new Utils();
         VanHanhBUS m_VanHanhBUS = new VanHanhBUS();
         BaoTriBUS m_BaoTriBUS = new BaoTriBUS();
+        enum LOAI_CONG_THUC
+        {
+            KM_TAN = 9
+            ,GIO = 4
+            ,TAN_GIO =5
+            ,
+        };
         public void resetControl()
         {
             dtpNgayVH.Text = "";
@@ -36,6 +44,7 @@ namespace QLPT
             cmbDVTC.Text = "";
             cmbNhanVienID.Text = "";
             txtMoTa.Text = "";
+            spbGio.Value = 0;
         }
 
         public bool validData()
@@ -50,11 +59,11 @@ namespace QLPT
                 MessageBox.Show("Trường Phương tiện không được bỏ trống !");
                 return false;
             }
-            else if (this.txtVanHanhID.Text.Length == 0)
-            {
-                MessageBox.Show("Trường vận hành không được bỏ trống !");
-                return false;
-            }
+            //else if (this.txtVanHanhID.Text.Length == 0)
+            //{
+            //    MessageBox.Show("Trường vận hành không được bỏ trống !");
+            //    return false;
+            //}
             else if (this.txtDonVi.Text.Length == 0)
             {
                 MessageBox.Show("Trường đơn vị không được bỏ trống !");
@@ -138,6 +147,25 @@ namespace QLPT
                 MessageBox.Show("Lỗi:" + ex);
             }
         }
+
+        public void ShowComboxForLoaiPT()
+        {
+            try
+            {
+                //Đơn vị TC
+                this.cmbLoaiPT.DataSource = m_VanHanhBUS.selectLoaiPT();
+                this.cmbLoaiPT.DisplayMember = "TenLoaiPT";
+                this.cmbLoaiPT.ValueMember = "LoaiPTMa";
+                //DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvVanHanh.Columns["DonViTCID"];
+                //comboBoxColumn.DataSource = m_VanHanhBUS.selectDonViTC();
+                //comboBoxColumn.DisplayMember = "DonViTCTen";
+                //comboBoxColumn.ValueMember = "DonViTCID";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi:" + ex);
+            }
+        }
         private void FrmVanHanh_Load(object sender, EventArgs e)
         {
             DataTable dat = new DataTable();
@@ -146,6 +174,9 @@ namespace QLPT
             ShowComboxForDVTCCol();
             ShowComboxForNhanVienCol();
             ShowComboxForPhuongTienCol();
+            ShowComboxForLoaiPT();
+          
+            
         }
 
         private void btThoat_Click(object sender, EventArgs e)
@@ -181,9 +212,16 @@ namespace QLPT
             }
             try
             {
-                m_VanHanhBUS.insert( 
+
+                if (FrmPhuongTien.iDatimeVHPT > iDatimeVH)
+                {
+                    MessageBox.Show("khong hop le");
+                }
+                else
+                {
+                    m_VanHanhBUS.insert(
                                         txtVanHanhID.Text.Trim()
-                                        ,cmbPhuongTienID.SelectedValue.ToString()
+                                        , cmbPhuongTienID.SelectedValue.ToString()
                                         , dtpNgayVH.Text
                                         , spbVanHanh.Text
                                         , txtDonVi.Text
@@ -191,12 +229,15 @@ namespace QLPT
                                         , cmbNhanVienID.SelectedValue.ToString()
                                         , cmbDVTC.SelectedValue.ToString()
                                         , txtMoTa.Text
-                                         
+
                                         );
-                updateMocBaoTri();
-                updateTongVHToPhuongTien();
-                FrmVanHanh_Load(sender, e);
+                    updateMocBaoTri();
+                    updateTongVHToPhuongTien();
+                    FrmVanHanh_Load(sender, e);
+                }
+
                 
+
 
 
             }
@@ -227,7 +268,7 @@ namespace QLPT
             {
                 m_VanHanhBUS.update(
                                     txtVanHanhID.Text.Trim()
-                                    ,cmbPhuongTienID.SelectedValue.ToString()
+                                    , cmbPhuongTienID.SelectedValue.ToString()
                                     , dtpNgayVH.Text
                                     , spbVanHanh.Text
                                     , txtDonVi.Text
@@ -236,7 +277,7 @@ namespace QLPT
                                     , cmbDVTC.SelectedValue.ToString()
                                     , txtMoTa.Text
                     );
-               
+
                 updateTongVHToPhuongTien();
                 updateMocBaoTri();
                 FrmVanHanh_Load(sender, e);
@@ -255,7 +296,7 @@ namespace QLPT
             btXoa.Enabled = true;
             btLuu.Enabled = false;
             txtVanHanhID.Enabled = false;
-          
+
         }
         private void fillDataGridViewToControl()
         {
@@ -273,6 +314,7 @@ namespace QLPT
                     cmbNhanVienID.SelectedValue = row.Cells["NhanVienID"].Value.ToString();
                     cmbDVTC.SelectedValue = row.Cells["DonViTCID"].Value.ToString();
                     cmbPhuongTienID.SelectedValue = row.Cells["PhuongTienID2"].Value.ToString();
+                    //cmbLoaiPT.SelectedValue = row.Cells["PhuongTienID2"].Value.ToString();
 
                     //spbVanHanh.Maximum = utils.ConvertStringToDecimal(row.Cells["VanHanh"].Value.ToString());
                     //spbCaLamViec.Maximum = utils.ConvertStringToDecimal(row.Cells["CaLamViec"].Value.ToString());
@@ -285,7 +327,7 @@ namespace QLPT
             }
             catch (System.Exception ex)
             {
-            	
+
             }
 
         }
@@ -310,31 +352,39 @@ namespace QLPT
 
         private void cmbPhuongTienID_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbPhuongTienID.SelectedValue.ToString().Contains("XT"))
-            {
-                spbVanHanh.Enabled = false;
-                spbKm.Enabled = true;
-                spbTan.Enabled = true;
-                
-            }
-            else
-            {
-                spbVanHanh.Enabled = true;
-                spbKm.Enabled = false;
-                spbTan.Enabled = false;
-                spbKm.Value = 0;
-                spbTan.Value = 0;
-            }
+            //if (cmbPhuongTienID.SelectedValue.ToString().Contains("XT"))
+            //{
+            //    spbVanHanh.Enabled = false;
+            //    spbKm.Enabled = true;
+            //    spbTan.Enabled = true;
+
+            //}
+            //else
+            //{
+            //    spbVanHanh.Enabled = true;
+            //    spbKm.Enabled = false;
+            //    spbTan.Enabled = false;
+            //    spbKm.Value = 0;
+            //    spbTan.Value = 0;
+            //}
+
+
+
         }
 
         private void spbKm_ValueChanged(object sender, EventArgs e)
         {
-            spbVanHanh.Value = spbTan.Value * spbKm.Value;
+            LOAI_CONG_THUC loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbLoaiPT.SelectedText.Trim());
+            EnableControlForVanHanh(loaiCongThuc);
+            TinhVanHanh(loaiCongThuc);
         }
 
         private void spbTan_ValueChanged(object sender, EventArgs e)
         {
-            spbVanHanh.Value = spbTan.Value * spbKm.Value;
+           
+            LOAI_CONG_THUC loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbLoaiPT.SelectedText.Trim());
+            EnableControlForVanHanh(loaiCongThuc);
+            TinhVanHanh(loaiCongThuc);
         }
         public void updateMocBaoTri()
         {
@@ -349,7 +399,7 @@ namespace QLPT
                 float fTieuTu = float.Parse(currentRow["TieuTu"].ToString());
                 float fBDTX = float.Parse(currentRow["BDTX"].ToString());
                 float fTongVH = float.Parse(currentRow["TongVH"].ToString());
-                m_BaoTriBUS.tinhSoLanBaoTri(fBDTX, fTieuTu, fTrungTu, fDataTu,fTongVH);
+                m_BaoTriBUS.tinhSoLanBaoTri(fBDTX, fTieuTu, fTrungTu, fDataTu, fTongVH);
                 m_VanHanhBUS.update_LanBaoTri
                     (
                     strPhuongTienID,
@@ -363,6 +413,141 @@ namespace QLPT
             }
 
         }
-    
+
+   
+        private void cmbNhanVienID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectDonViTCbyNhanVien();
+        }
+        private void selectDonViTCbyNhanVien()
+        {
+            try
+            {
+                string strNhanVienID = cmbNhanVienID.SelectedValue.ToString();
+                cmbDVTC.DataSource = m_VanHanhBUS.selectDonViTCbyNhanVien(strNhanVienID);
+                cmbDVTC.DisplayMember = "DonViTCTen";
+                cmbDVTC.ValueMember = "DonViTCID";
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Lỗi rồi" + ex);
+            }
+        }
+        private void TinhVanHanh(LOAI_CONG_THUC LoaiCongThuc)
+        {
+            switch (LoaiCongThuc)
+            {
+
+                case LOAI_CONG_THUC.TAN_GIO:
+                    spbKm.Enabled = false;
+                    spbVanHanh.Value = spbTan.Value * spbGio.Value;
+                    break;
+                case LOAI_CONG_THUC.GIO:
+                    spbTan.Enabled = false;
+                    spbKm.Enabled = false;
+                    spbVanHanh.Value = spbGio.Value;
+                    break;
+                case LOAI_CONG_THUC.KM_TAN:
+                    spbGio.Enabled = false;
+                    spbVanHanh.Value = spbKm.Value * spbKm.Value;
+                    break;
+                default:
+                    break;
+            }
+        }
+        private void selectTenPTbyLoaiPT()
+        {
+            if (cmbLoaiPT == null)
+            {
+                return;
+            }
+            if (cmbLoaiPT.SelectedValue == null)
+            {
+                return;
+            }
+            try
+            {
+                string strLoaiPTMa = cmbLoaiPT.SelectedValue.ToString();
+                cmbPhuongTienID.DataSource = m_VanHanhBUS.selectTenPTbyLoaiPT(strLoaiPTMa);
+                cmbPhuongTienID.DisplayMember = "PhuongTienInfo";
+                cmbPhuongTienID.ValueMember = "PhuongTienID2";
+            }
+            catch (System.Exception ex)
+            {
+
+            }
+
+        }
+
+        private void EnableControlForVanHanh(LOAI_CONG_THUC loaiCongThuc)
+        {
+            switch (loaiCongThuc)
+            {
+
+                case LOAI_CONG_THUC.TAN_GIO:
+                    spbGio.Enabled = true;
+                    spbKm.Enabled = false;
+                    spbTan.Enabled = true;
+                    spbVanHanh.Enabled = false;
+                    break;
+                case LOAI_CONG_THUC.GIO:
+                    spbGio.Enabled = true;
+                    spbKm.Enabled = false;
+                    spbTan.Enabled = false;
+                    spbVanHanh.Enabled = false;
+                    break;
+                case LOAI_CONG_THUC.KM_TAN:
+                    spbGio.Enabled = false;
+                    spbKm.Enabled = true;
+                    spbTan.Enabled = true;
+                    spbVanHanh.Enabled = false;
+                    break;
+                default:
+                    spbGio.Enabled = false;
+                    spbKm.Enabled = false;
+                    spbTan.Enabled = true;
+                    spbVanHanh.Enabled = false;
+                    break;
+            }
+        }
+        private void cmbLoaiPT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectTenPTbyLoaiPT();
+            LOAI_CONG_THUC loaiCongThuc;
+            try
+            {
+                loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbLoaiPT.Text.Trim());
+                EnableControlForVanHanh(loaiCongThuc);
+                TinhVanHanh(loaiCongThuc);
+            }
+            catch (System.Exception ex)
+            {
+            	
+            }
+            
+        }
+
+        private void spbGio_ValueChanged(object sender, EventArgs e)
+        {
+            LOAI_CONG_THUC loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbLoaiPT.Text.Trim());
+            EnableControlForVanHanh(loaiCongThuc);
+            TinhVanHanh(loaiCongThuc);
+        }
+
+       
+        public void ngayVHContainNgayVHPT()
+        {
+            
+        }
+
+        private void dtpNgayVH_ValueChanged(object sender, EventArgs e)
+        {
+            string strDatimeVH = dtpNgayVH.Value.ToString("yyyyMMdd");
+            iDatimeVH = int.Parse(strDatimeVH);
+            
+           
+           
+        }
+
     }
 }

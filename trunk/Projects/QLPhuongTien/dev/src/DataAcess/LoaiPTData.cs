@@ -11,7 +11,7 @@ namespace DataAcess
    public class LoaiPTData
     {
        Data data = new Data();
-       public bool insert(string LoaiPTMa, string LoaiPTTen)
+       public bool insert(string LoaiPTMa, string LoaiPTTen , string CongThucVH , string MoTaCongThuc)
        {
 
            int retval;
@@ -23,12 +23,17 @@ namespace DataAcess
            cmd.CommandText = "sp_insert_LoaiPTData";
            cmd.Parameters.Add("LoaiPTMa", SqlDbType.NVarChar).Value = LoaiPTMa;
            cmd.Parameters.Add("LoaiPTTen", SqlDbType.NVarChar).Value = LoaiPTTen;
+           cmd.Parameters.Add("CongThucVH", SqlDbType.NVarChar).Value = CongThucVH;
+           cmd.Parameters.Add("MoTaCongThuc", SqlDbType.NVarChar).Value = MoTaCongThuc;
            retval = cmd.ExecuteNonQuery();
            cmd.Dispose();
            con.Close();
            return retval > 0;
        }
-       public bool update(string LoaiPTMa, string LoaiPTTen)
+       public bool update(string LoaiPTMa
+           , string LoaiPTTen  
+           ,string CongThucVH
+           , string MoTaCongThuc)
        {
 
            int retval;
@@ -40,6 +45,8 @@ namespace DataAcess
            cmd.CommandText = "sp_update_LoaiPTData";
            cmd.Parameters.Add("LoaiPTMa", SqlDbType.NVarChar).Value = LoaiPTMa;
            cmd.Parameters.Add("LoaiPTTen", SqlDbType.NVarChar).Value = LoaiPTTen;
+           cmd.Parameters.Add("CongThucVH", SqlDbType.NVarChar).Value = CongThucVH;
+           cmd.Parameters.Add("MoTaCongThuc", SqlDbType.NVarChar).Value = MoTaCongThuc;
            retval = cmd.ExecuteNonQuery();
            cmd.Dispose();
            con.Close();
@@ -110,6 +117,31 @@ namespace DataAcess
                Console.WriteLine("Lỗi " + ex.ToString());
            }
            return false;
+
+       }
+       public DataTable selectTenPTbyLoaiPT(string LoaiPTMa)
+       {
+           SqlConnection con = data.getConnect();
+           con.Open();
+           SqlCommand cmd = new SqlCommand();
+           cmd.Connection = con;
+           cmd.CommandType = CommandType.StoredProcedure;
+           cmd.CommandText = "sp_select_TenPhuongTienbyLoaiPT";
+           cmd.Parameters.Add("LoaiPTMa", SqlDbType.NVarChar).Value = LoaiPTMa;
+           //retval = cmd.ExecuteNonQuery();
+           DataTable dtb;
+           try
+           {
+               SqlDataAdapter da = new SqlDataAdapter(cmd);
+               DataSet ds = new DataSet();
+               da.Fill(ds, "DonViTC");
+               dtb = ds.Tables["DonViTC"];
+           }
+           catch (System.Exception ex)
+           {
+               return null;
+           }
+           return dtb;
 
        }
     }

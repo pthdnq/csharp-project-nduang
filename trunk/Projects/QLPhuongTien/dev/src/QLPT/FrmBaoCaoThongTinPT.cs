@@ -18,8 +18,13 @@ namespace QLPT
 
         private void FrmBaoCaoThongTinPT_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'View_Info_PhuongTien_DataSet.View_Info_PhuongTien' table. You can move, or remove it, as needed.
-          
+            // TODO: This line of code loads data into the 'DataSet_View_Info_PhuongTien.View_Info_PhuongTien' table. You can move, or remove it, as needed.
+            try
+            {
+                this.View_Info_PhuongTienTableAdapter.Fill(this.DataSet_View_Info_PhuongTien.View_Info_PhuongTien);
+
+            }
+            catch { }
             this.reportViewer1.RefreshReport();
         }
     }

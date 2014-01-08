@@ -72,12 +72,13 @@ namespace QLPT
          public bool validData()
         {
 
-            if (this.txtNhanVien_Ten.Text.Length == 0)
-            {
-                MessageBox.Show("Trường Mã Nhân Viên không được bỏ trống !");
-                return false;
-            }
-            else if (this.txtNhanVien_Sdt.Text.Length == 0)
+            //if (this.txtNhanVien_Ten.Text.Length == 0)
+            //{
+            //    MessageBox.Show("Trường Mã Nhân Viên không được bỏ trống !");
+            //    return false;
+            //}
+            //else 
+                if (this.txtNhanVien_Sdt.Text.Length == 0)
             {
                 MessageBox.Show("Trường SDT Nhân Viên không được bỏ trống !");
                 return false;
@@ -203,11 +204,6 @@ namespace QLPT
                 MessageBox.Show("Đã xóa " + this.txtNhanVien_ID.Text + " thành công !");
                 FrmNhanVien_Load(sender, e);//trở về giao diện đầu     
             }
-        }
-
-        private void btTimKiem_Click(object sender, EventArgs e)
-        {
-           // timKiem();
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)

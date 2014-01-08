@@ -44,6 +44,8 @@ namespace QLPT
             {
                 resetControl();
             }
+            
+            
         }
 
         private void btThoat_Click(object sender, EventArgs e)

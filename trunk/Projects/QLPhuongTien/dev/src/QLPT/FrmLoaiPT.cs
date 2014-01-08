@@ -29,6 +29,8 @@ namespace QLPT
         {
             txtLoaiPT_Ten.Text = "";
             txtLoaiPT_Ma.Text = "";
+            txtCongThucVH.Text = "";
+            txtMoTaCT.Text = "";
         }
 
         private void FrmLoaiPT_Load(object sender, EventArgs e)
@@ -59,7 +61,17 @@ namespace QLPT
                 MessageBox.Show("Trường Tên Phương tiện không được bỏ trống !");
                 return false;
             }
-
+            else if (this.txtCongThucVH.Text.Length == 0)
+            {
+                MessageBox.Show("Trường Công Thức Vận Hành không được bỏ trống !");
+                return false;
+            }
+            else if (this.txtMoTaCT.Text.Length == 0)
+            {
+                MessageBox.Show("Trường Mô Tả Công Thức không được bỏ trống !");
+                return false;
+            }
+            
             return true;
         }
 
@@ -84,6 +96,8 @@ namespace QLPT
             {
                 m_LoaiPTBUS.insert(txtLoaiPT_Ma.Text
                                         , txtLoaiPT_Ten.Text
+                                        , txtCongThucVH.Text
+                                        ,txtMoTaCT.Text
                                         );
 
                 FrmLoaiPT_Load(sender, e);
@@ -107,6 +121,8 @@ namespace QLPT
             {
                 m_LoaiPTBUS.update(txtLoaiPT_Ma.Text
                     , txtLoaiPT_Ten.Text
+                    ,txtCongThucVH.Text
+                    ,txtMoTaCT.Text
                     );
                 FrmLoaiPT_Load(sender, e);
             }
@@ -120,9 +136,10 @@ namespace QLPT
         {
             foreach (DataGridViewRow row in dataGridView1.SelectedRows)
             {
-                this.txtLoaiPT_Ma.Text = row.Cells[1].Value.ToString();
-                this.txtLoaiPT_Ten.Text = row.Cells[2].Value.ToString();
-
+                this.txtLoaiPT_Ma.Text = row.Cells["LoaiPTMa"].Value.ToString();
+                this.txtLoaiPT_Ten.Text = row.Cells["LoaiPTTen"].Value.ToString();
+                this.txtCongThucVH.Text = row.Cells["CongThucVH"].Value.ToString();
+                this.txtMoTaCT.Text = row.Cells["MoTaCongThuc"].Value.ToString();
                 btSua.Enabled = true;
                 btXoa.Enabled = true;
                 btLuu.Enabled = false;
@@ -143,7 +160,7 @@ namespace QLPT
             bool ok = validData();
             if (ok == false)
                 return;
-            if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã DV : " + txtLoaiPT_Ma.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã Loại: " + txtLoaiPT_Ma.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 try
                 {
@@ -156,11 +173,13 @@ namespace QLPT
                     Console.Write("Không xóa đc. Lỗi" + ex.ToString());
                     if (ex.ErrorCode == m_utils.ERR_MA_DANG_SU_DUNG)
                     {
-                        MessageBox.Show("Ma đang sử dụng trong bảng phương tiện nên không thể xóa");
+                        MessageBox.Show("Mã [" + txtLoaiPT_Ma.Text + "] đang đươc sử dụng cho bảng khác nên không thể xóa", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
             }
         }
+
+     
     }
 }

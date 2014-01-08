@@ -29,27 +29,28 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbLoaiPT = new System.Windows.Forms.Label();
+            this.txtNangLuc = new System.Windows.Forms.NumericUpDown();
+            this.txtNhanHieu = new System.Windows.Forms.TextBox();
+            this.lbNangLuc = new System.Windows.Forms.Label();
+            this.lbNhanHieu = new System.Windows.Forms.Label();
             this.cmbLoaiPT = new System.Windows.Forms.ComboBox();
-            this.cmbNhanHieu = new System.Windows.Forms.ComboBox();
-            this.cmbNangLuc = new System.Windows.Forms.ComboBox();
-            this.btThoat = new System.Windows.Forms.Button();
+            this.lbLoaiPT = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvTimKiem = new System.Windows.Forms.DataGridView();
+            this.btThoat = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
-            this.lbNhanHieu = new System.Windows.Forms.Label();
-            this.lbNangLuc = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNangLuc)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTimKiem)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtNangLuc);
+            this.groupBox1.Controls.Add(this.txtNhanHieu);
             this.groupBox1.Controls.Add(this.lbNangLuc);
             this.groupBox1.Controls.Add(this.lbNhanHieu);
-            this.groupBox1.Controls.Add(this.cmbNangLuc);
-            this.groupBox1.Controls.Add(this.cmbNhanHieu);
             this.groupBox1.Controls.Add(this.cmbLoaiPT);
             this.groupBox1.Controls.Add(this.lbLoaiPT);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -59,6 +60,59 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tìm kiếm";
             // 
+            // txtNangLuc
+            // 
+            this.txtNangLuc.DecimalPlaces = 1;
+            this.txtNangLuc.Location = new System.Drawing.Point(107, 102);
+            this.txtNangLuc.Maximum = new decimal(new int[] {
+            -1593835520,
+            466537709,
+            54210,
+            0});
+            this.txtNangLuc.Name = "txtNangLuc";
+            this.txtNangLuc.Size = new System.Drawing.Size(190, 20);
+            this.txtNangLuc.TabIndex = 10;
+            this.txtNangLuc.Value = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            // 
+            // txtNhanHieu
+            // 
+            this.txtNhanHieu.Location = new System.Drawing.Point(104, 66);
+            this.txtNhanHieu.Name = "txtNhanHieu";
+            this.txtNhanHieu.Size = new System.Drawing.Size(190, 20);
+            this.txtNhanHieu.TabIndex = 9;
+            this.txtNhanHieu.TextChanged += new System.EventHandler(this.txtNhanHieu_TextChanged);
+            // 
+            // lbNangLuc
+            // 
+            this.lbNangLuc.AutoSize = true;
+            this.lbNangLuc.Location = new System.Drawing.Point(15, 109);
+            this.lbNangLuc.Name = "lbNangLuc";
+            this.lbNangLuc.Size = new System.Drawing.Size(86, 13);
+            this.lbNangLuc.TabIndex = 7;
+            this.lbNangLuc.Text = "Năng lực tối đa :";
+            // 
+            // lbNhanHieu
+            // 
+            this.lbNhanHieu.AutoSize = true;
+            this.lbNhanHieu.Location = new System.Drawing.Point(15, 73);
+            this.lbNhanHieu.Name = "lbNhanHieu";
+            this.lbNhanHieu.Size = new System.Drawing.Size(62, 13);
+            this.lbNhanHieu.TabIndex = 6;
+            this.lbNhanHieu.Text = "Nhãn hiệu :";
+            // 
+            // cmbLoaiPT
+            // 
+            this.cmbLoaiPT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLoaiPT.FormattingEnabled = true;
+            this.cmbLoaiPT.Location = new System.Drawing.Point(104, 26);
+            this.cmbLoaiPT.Name = "cmbLoaiPT";
+            this.cmbLoaiPT.Size = new System.Drawing.Size(190, 21);
+            this.cmbLoaiPT.TabIndex = 1;
+            // 
             // lbLoaiPT
             // 
             this.lbLoaiPT.AutoSize = true;
@@ -67,41 +121,6 @@
             this.lbLoaiPT.Size = new System.Drawing.Size(50, 13);
             this.lbLoaiPT.TabIndex = 0;
             this.lbLoaiPT.Text = "Loại PT :";
-            // 
-            // cmbLoaiPT
-            // 
-            this.cmbLoaiPT.FormattingEnabled = true;
-            this.cmbLoaiPT.Location = new System.Drawing.Point(104, 26);
-            this.cmbLoaiPT.Name = "cmbLoaiPT";
-            this.cmbLoaiPT.Size = new System.Drawing.Size(190, 21);
-            this.cmbLoaiPT.TabIndex = 1;
-            // 
-            // cmbNhanHieu
-            // 
-            this.cmbNhanHieu.FormattingEnabled = true;
-            this.cmbNhanHieu.Location = new System.Drawing.Point(104, 65);
-            this.cmbNhanHieu.Name = "cmbNhanHieu";
-            this.cmbNhanHieu.Size = new System.Drawing.Size(190, 21);
-            this.cmbNhanHieu.TabIndex = 4;
-            // 
-            // cmbNangLuc
-            // 
-            this.cmbNangLuc.FormattingEnabled = true;
-            this.cmbNangLuc.Location = new System.Drawing.Point(104, 101);
-            this.cmbNangLuc.Name = "cmbNangLuc";
-            this.cmbNangLuc.Size = new System.Drawing.Size(190, 21);
-            this.cmbNangLuc.TabIndex = 5;
-            // 
-            // btThoat
-            // 
-            this.btThoat.Image = global::QLPT.Properties.Resources.Exit;
-            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThoat.Location = new System.Drawing.Point(243, 168);
-            this.btThoat.Name = "btThoat";
-            this.btThoat.Size = new System.Drawing.Size(85, 32);
-            this.btThoat.TabIndex = 2;
-            this.btThoat.Text = "Thoát";
-            this.btThoat.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -115,13 +134,28 @@
             // 
             // dgvTimKiem
             // 
+            this.dgvTimKiem.AllowUserToAddRows = false;
+            this.dgvTimKiem.AllowUserToDeleteRows = false;
             this.dgvTimKiem.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvTimKiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTimKiem.Location = new System.Drawing.Point(3, 16);
             this.dgvTimKiem.Name = "dgvTimKiem";
+            this.dgvTimKiem.ReadOnly = true;
             this.dgvTimKiem.Size = new System.Drawing.Size(516, 315);
             this.dgvTimKiem.TabIndex = 0;
+            // 
+            // btThoat
+            // 
+            this.btThoat.Image = global::QLPT.Properties.Resources.Exit;
+            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThoat.Location = new System.Drawing.Point(243, 168);
+            this.btThoat.Name = "btThoat";
+            this.btThoat.Size = new System.Drawing.Size(85, 32);
+            this.btThoat.TabIndex = 2;
+            this.btThoat.Text = "Thoát";
+            this.btThoat.UseVisualStyleBackColor = true;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
             // btTimKiem
             // 
@@ -133,24 +167,7 @@
             this.btTimKiem.TabIndex = 1;
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.UseVisualStyleBackColor = true;
-            // 
-            // lbNhanHieu
-            // 
-            this.lbNhanHieu.AutoSize = true;
-            this.lbNhanHieu.Location = new System.Drawing.Point(15, 73);
-            this.lbNhanHieu.Name = "lbNhanHieu";
-            this.lbNhanHieu.Size = new System.Drawing.Size(62, 13);
-            this.lbNhanHieu.TabIndex = 6;
-            this.lbNhanHieu.Text = "Nhãn hiệu :";
-            // 
-            // lbNangLuc
-            // 
-            this.lbNangLuc.AutoSize = true;
-            this.lbNangLuc.Location = new System.Drawing.Point(15, 109);
-            this.lbNangLuc.Name = "lbNangLuc";
-            this.lbNangLuc.Size = new System.Drawing.Size(56, 13);
-            this.lbNangLuc.TabIndex = 7;
-            this.lbNangLuc.Text = "Năng lực :";
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // FrmTimKiem
             // 
@@ -164,8 +181,10 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmTimKiem";
             this.Text = "Tìm kiếm";
+            this.Load += new System.EventHandler(this.FrmTimKiem_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNangLuc)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTimKiem)).EndInit();
             this.ResumeLayout(false);
@@ -175,8 +194,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cmbNangLuc;
-        private System.Windows.Forms.ComboBox cmbNhanHieu;
         private System.Windows.Forms.ComboBox cmbLoaiPT;
         private System.Windows.Forms.Label lbLoaiPT;
         private System.Windows.Forms.Button btTimKiem;
@@ -185,5 +202,7 @@
         private System.Windows.Forms.DataGridView dgvTimKiem;
         private System.Windows.Forms.Label lbNangLuc;
         private System.Windows.Forms.Label lbNhanHieu;
+        private System.Windows.Forms.TextBox txtNhanHieu;
+        private System.Windows.Forms.NumericUpDown txtNangLuc;
     }
 }

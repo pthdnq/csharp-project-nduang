@@ -93,5 +93,31 @@ namespace DataAcess
         {
             return true;
         }
+        public DataTable selectDonViTCbyNhanVien(string NhanVienID)
+        {
+            SqlConnection con = data.getConnect();
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_select_DonViTCbyNhanVien";
+            cmd.Parameters.Add("NhanVienID", SqlDbType.NVarChar).Value = NhanVienID;
+            //retval = cmd.ExecuteNonQuery();
+            DataTable dtb;
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "DonViTC");
+                dtb = ds.Tables["DonViTC"];
+            }
+            catch (System.Exception ex)
+            {
+                return null;
+            }
+            return dtb;
+            
+        }
     }
+
 }

@@ -24,7 +24,7 @@ namespace QLPT {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class QuanLy_PTDataSet1 : global::System.Data.DataSet {
         
-        private View_PhuongTienDataTable tableView_PhuongTien;
+        private View_VanHanhDataTable tableView_VanHanh;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace QLPT {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["View_PhuongTien"] != null)) {
-                    base.Tables.Add(new View_PhuongTienDataTable(ds.Tables["View_PhuongTien"]));
+                if ((ds.Tables["View_VanHanh"] != null)) {
+                    base.Tables.Add(new View_VanHanhDataTable(ds.Tables["View_VanHanh"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace QLPT {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public View_PhuongTienDataTable View_PhuongTien {
+        public View_VanHanhDataTable View_VanHanh {
             get {
-                return this.tableView_PhuongTien;
+                return this.tableView_VanHanh;
             }
         }
         
@@ -152,8 +152,8 @@ namespace QLPT {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["View_PhuongTien"] != null)) {
-                    base.Tables.Add(new View_PhuongTienDataTable(ds.Tables["View_PhuongTien"]));
+                if ((ds.Tables["View_VanHanh"] != null)) {
+                    base.Tables.Add(new View_VanHanhDataTable(ds.Tables["View_VanHanh"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace QLPT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableView_PhuongTien = ((View_PhuongTienDataTable)(base.Tables["View_PhuongTien"]));
+            this.tableView_VanHanh = ((View_VanHanhDataTable)(base.Tables["View_VanHanh"]));
             if ((initTable == true)) {
-                if ((this.tableView_PhuongTien != null)) {
-                    this.tableView_PhuongTien.InitVars();
+                if ((this.tableView_VanHanh != null)) {
+                    this.tableView_VanHanh.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace QLPT {
             this.Namespace = "http://tempuri.org/QuanLy_PTDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableView_PhuongTien = new View_PhuongTienDataTable();
-            base.Tables.Add(this.tableView_PhuongTien);
+            this.tableView_VanHanh = new View_VanHanhDataTable();
+            base.Tables.Add(this.tableView_VanHanh);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeView_PhuongTien() {
+        private bool ShouldSerializeView_VanHanh() {
             return false;
         }
         
@@ -270,41 +270,37 @@ namespace QLPT {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void View_PhuongTienRowChangeEventHandler(object sender, View_PhuongTienRowChangeEvent e);
+        public delegate void View_VanHanhRowChangeEventHandler(object sender, View_VanHanhRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class View_PhuongTienDataTable : global::System.Data.TypedTableBase<View_PhuongTienRow> {
+        public partial class View_VanHanhDataTable : global::System.Data.TypedTableBase<View_VanHanhRow> {
             
             private global::System.Data.DataColumn columnNgayVanHanh;
             
+            private global::System.Data.DataColumn columnCaLamViec;
+            
+            private global::System.Data.DataColumn columnNhanVienTen;
+            
             private global::System.Data.DataColumn columnPhuongTienID;
+            
+            private global::System.Data.DataColumn columnTenPhuongTien;
+            
+            private global::System.Data.DataColumn columnBienDK;
             
             private global::System.Data.DataColumn columnVanHanh;
             
-            private global::System.Data.DataColumn columnLanDaiTu;
+            private global::System.Data.DataColumn columnVanHanhDV;
             
-            private global::System.Data.DataColumn columnXuatXu;
-            
-            private global::System.Data.DataColumn columnLanTrungTu;
-            
-            private global::System.Data.DataColumn columnLanTieuTu;
-            
-            private global::System.Data.DataColumn columnLanBDTX;
-            
-            private global::System.Data.DataColumn columnNguyenMauID;
-            
-            private global::System.Data.DataColumn columnNguyenMauTen;
-            
-            private global::System.Data.DataColumn columnCaVanHanh;
+            private global::System.Data.DataColumn columnDonViTCTen;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public View_PhuongTienDataTable() {
-                this.TableName = "View_PhuongTien";
+            public View_VanHanhDataTable() {
+                this.TableName = "View_VanHanh";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -312,7 +308,7 @@ namespace QLPT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal View_PhuongTienDataTable(global::System.Data.DataTable table) {
+            internal View_VanHanhDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -329,7 +325,7 @@ namespace QLPT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected View_PhuongTienDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected View_VanHanhDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -344,9 +340,41 @@ namespace QLPT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CaLamViecColumn {
+                get {
+                    return this.columnCaLamViec;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NhanVienTenColumn {
+                get {
+                    return this.columnNhanVienTen;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn PhuongTienIDColumn {
                 get {
                     return this.columnPhuongTienID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TenPhuongTienColumn {
+                get {
+                    return this.columnTenPhuongTien;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BienDKColumn {
+                get {
+                    return this.columnBienDK;
                 }
             }
             
@@ -360,65 +388,17 @@ namespace QLPT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn LanDaiTuColumn {
+            public global::System.Data.DataColumn VanHanhDVColumn {
                 get {
-                    return this.columnLanDaiTu;
+                    return this.columnVanHanhDV;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn XuatXuColumn {
+            public global::System.Data.DataColumn DonViTCTenColumn {
                 get {
-                    return this.columnXuatXu;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn LanTrungTuColumn {
-                get {
-                    return this.columnLanTrungTu;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn LanTieuTuColumn {
-                get {
-                    return this.columnLanTieuTu;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn LanBDTXColumn {
-                get {
-                    return this.columnLanBDTX;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NguyenMauIDColumn {
-                get {
-                    return this.columnNguyenMauID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NguyenMauTenColumn {
-                get {
-                    return this.columnNguyenMauTen;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CaVanHanhColumn {
-                get {
-                    return this.columnCaVanHanh;
+                    return this.columnDonViTCTen;
                 }
             }
             
@@ -433,62 +413,53 @@ namespace QLPT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public View_PhuongTienRow this[int index] {
+            public View_VanHanhRow this[int index] {
                 get {
-                    return ((View_PhuongTienRow)(this.Rows[index]));
+                    return ((View_VanHanhRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event View_PhuongTienRowChangeEventHandler View_PhuongTienRowChanging;
+            public event View_VanHanhRowChangeEventHandler View_VanHanhRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event View_PhuongTienRowChangeEventHandler View_PhuongTienRowChanged;
+            public event View_VanHanhRowChangeEventHandler View_VanHanhRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event View_PhuongTienRowChangeEventHandler View_PhuongTienRowDeleting;
+            public event View_VanHanhRowChangeEventHandler View_VanHanhRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event View_PhuongTienRowChangeEventHandler View_PhuongTienRowDeleted;
+            public event View_VanHanhRowChangeEventHandler View_VanHanhRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddView_PhuongTienRow(View_PhuongTienRow row) {
+            public void AddView_VanHanhRow(View_VanHanhRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public View_PhuongTienRow AddView_PhuongTienRow(System.DateTime NgayVanHanh, string PhuongTienID, double VanHanh, int LanDaiTu, string XuatXu, int LanTrungTu, int LanTieuTu, int LanBDTX, string NguyenMauID, string NguyenMauTen, string CaVanHanh) {
-                View_PhuongTienRow rowView_PhuongTienRow = ((View_PhuongTienRow)(this.NewRow()));
+            public View_VanHanhRow AddView_VanHanhRow(System.DateTime NgayVanHanh, int CaLamViec, string NhanVienTen, string PhuongTienID, string TenPhuongTien, string BienDK, double VanHanh, string VanHanhDV, string DonViTCTen) {
+                View_VanHanhRow rowView_VanHanhRow = ((View_VanHanhRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NgayVanHanh,
+                        CaLamViec,
+                        NhanVienTen,
                         PhuongTienID,
+                        TenPhuongTien,
+                        BienDK,
                         VanHanh,
-                        LanDaiTu,
-                        XuatXu,
-                        LanTrungTu,
-                        LanTieuTu,
-                        LanBDTX,
-                        NguyenMauID,
-                        NguyenMauTen,
-                        CaVanHanh};
-                rowView_PhuongTienRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowView_PhuongTienRow);
-                return rowView_PhuongTienRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public View_PhuongTienRow FindByPhuongTienID(string PhuongTienID) {
-                return ((View_PhuongTienRow)(this.Rows.Find(new object[] {
-                            PhuongTienID})));
+                        VanHanhDV,
+                        DonViTCTen};
+                rowView_VanHanhRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowView_VanHanhRow);
+                return rowView_VanHanhRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                View_PhuongTienDataTable cln = ((View_PhuongTienDataTable)(base.Clone()));
+                View_VanHanhDataTable cln = ((View_VanHanhDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -496,23 +467,21 @@ namespace QLPT {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new View_PhuongTienDataTable();
+                return new View_VanHanhDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnNgayVanHanh = base.Columns["NgayVanHanh"];
+                this.columnCaLamViec = base.Columns["CaLamViec"];
+                this.columnNhanVienTen = base.Columns["NhanVienTen"];
                 this.columnPhuongTienID = base.Columns["PhuongTienID"];
+                this.columnTenPhuongTien = base.Columns["TenPhuongTien"];
+                this.columnBienDK = base.Columns["BienDK"];
                 this.columnVanHanh = base.Columns["VanHanh"];
-                this.columnLanDaiTu = base.Columns["LanDaiTu"];
-                this.columnXuatXu = base.Columns["XuatXu"];
-                this.columnLanTrungTu = base.Columns["LanTrungTu"];
-                this.columnLanTieuTu = base.Columns["LanTieuTu"];
-                this.columnLanBDTX = base.Columns["LanBDTX"];
-                this.columnNguyenMauID = base.Columns["NguyenMauID"];
-                this.columnNguyenMauTen = base.Columns["NguyenMauTen"];
-                this.columnCaVanHanh = base.Columns["CaVanHanh"];
+                this.columnVanHanhDV = base.Columns["VanHanhDV"];
+                this.columnDonViTCTen = base.Columns["DonViTCTen"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -520,61 +489,58 @@ namespace QLPT {
             private void InitClass() {
                 this.columnNgayVanHanh = new global::System.Data.DataColumn("NgayVanHanh", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNgayVanHanh);
+                this.columnCaLamViec = new global::System.Data.DataColumn("CaLamViec", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCaLamViec);
+                this.columnNhanVienTen = new global::System.Data.DataColumn("NhanVienTen", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNhanVienTen);
                 this.columnPhuongTienID = new global::System.Data.DataColumn("PhuongTienID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhuongTienID);
+                this.columnTenPhuongTien = new global::System.Data.DataColumn("TenPhuongTien", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTenPhuongTien);
+                this.columnBienDK = new global::System.Data.DataColumn("BienDK", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBienDK);
                 this.columnVanHanh = new global::System.Data.DataColumn("VanHanh", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnVanHanh);
-                this.columnLanDaiTu = new global::System.Data.DataColumn("LanDaiTu", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLanDaiTu);
-                this.columnXuatXu = new global::System.Data.DataColumn("XuatXu", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnXuatXu);
-                this.columnLanTrungTu = new global::System.Data.DataColumn("LanTrungTu", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLanTrungTu);
-                this.columnLanTieuTu = new global::System.Data.DataColumn("LanTieuTu", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLanTieuTu);
-                this.columnLanBDTX = new global::System.Data.DataColumn("LanBDTX", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLanBDTX);
-                this.columnNguyenMauID = new global::System.Data.DataColumn("NguyenMauID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNguyenMauID);
-                this.columnNguyenMauTen = new global::System.Data.DataColumn("NguyenMauTen", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNguyenMauTen);
-                this.columnCaVanHanh = new global::System.Data.DataColumn("CaVanHanh", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCaVanHanh);
+                this.columnVanHanhDV = new global::System.Data.DataColumn("VanHanhDV", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVanHanhDV);
+                this.columnDonViTCTen = new global::System.Data.DataColumn("DonViTCTen", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDonViTCTen);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnPhuongTienID}, true));
-                this.columnPhuongTienID.AllowDBNull = false;
+                                this.columnPhuongTienID}, false));
+                this.columnNhanVienTen.MaxLength = 50;
                 this.columnPhuongTienID.Unique = true;
                 this.columnPhuongTienID.MaxLength = 50;
-                this.columnXuatXu.MaxLength = 50;
-                this.columnNguyenMauID.MaxLength = 50;
-                this.columnNguyenMauTen.ReadOnly = true;
-                this.columnNguyenMauTen.MaxLength = 225;
+                this.columnTenPhuongTien.ReadOnly = true;
+                this.columnTenPhuongTien.MaxLength = 172;
+                this.columnBienDK.MaxLength = 50;
+                this.columnVanHanhDV.MaxLength = 50;
+                this.columnDonViTCTen.MaxLength = 150;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public View_PhuongTienRow NewView_PhuongTienRow() {
-                return ((View_PhuongTienRow)(this.NewRow()));
+            public View_VanHanhRow NewView_VanHanhRow() {
+                return ((View_VanHanhRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new View_PhuongTienRow(builder);
+                return new View_VanHanhRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(View_PhuongTienRow);
+                return typeof(View_VanHanhRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.View_PhuongTienRowChanged != null)) {
-                    this.View_PhuongTienRowChanged(this, new View_PhuongTienRowChangeEvent(((View_PhuongTienRow)(e.Row)), e.Action));
+                if ((this.View_VanHanhRowChanged != null)) {
+                    this.View_VanHanhRowChanged(this, new View_VanHanhRowChangeEvent(((View_VanHanhRow)(e.Row)), e.Action));
                 }
             }
             
@@ -582,8 +548,8 @@ namespace QLPT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.View_PhuongTienRowChanging != null)) {
-                    this.View_PhuongTienRowChanging(this, new View_PhuongTienRowChangeEvent(((View_PhuongTienRow)(e.Row)), e.Action));
+                if ((this.View_VanHanhRowChanging != null)) {
+                    this.View_VanHanhRowChanging(this, new View_VanHanhRowChangeEvent(((View_VanHanhRow)(e.Row)), e.Action));
                 }
             }
             
@@ -591,8 +557,8 @@ namespace QLPT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.View_PhuongTienRowDeleted != null)) {
-                    this.View_PhuongTienRowDeleted(this, new View_PhuongTienRowChangeEvent(((View_PhuongTienRow)(e.Row)), e.Action));
+                if ((this.View_VanHanhRowDeleted != null)) {
+                    this.View_VanHanhRowDeleted(this, new View_VanHanhRowChangeEvent(((View_VanHanhRow)(e.Row)), e.Action));
                 }
             }
             
@@ -600,14 +566,14 @@ namespace QLPT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.View_PhuongTienRowDeleting != null)) {
-                    this.View_PhuongTienRowDeleting(this, new View_PhuongTienRowChangeEvent(((View_PhuongTienRow)(e.Row)), e.Action));
+                if ((this.View_VanHanhRowDeleting != null)) {
+                    this.View_VanHanhRowDeleting(this, new View_VanHanhRowChangeEvent(((View_VanHanhRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveView_PhuongTienRow(View_PhuongTienRow row) {
+            public void RemoveView_VanHanhRow(View_VanHanhRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -634,7 +600,7 @@ namespace QLPT {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "View_PhuongTienDataTable";
+                attribute2.FixedValue = "View_VanHanhDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -678,15 +644,15 @@ namespace QLPT {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class View_PhuongTienRow : global::System.Data.DataRow {
+        public partial class View_VanHanhRow : global::System.Data.DataRow {
             
-            private View_PhuongTienDataTable tableView_PhuongTien;
+            private View_VanHanhDataTable tableView_VanHanh;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal View_PhuongTienRow(global::System.Data.DataRowBuilder rb) : 
+            internal View_VanHanhRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableView_PhuongTien = ((View_PhuongTienDataTable)(this.Table));
+                this.tableView_VanHanh = ((View_VanHanhDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -694,14 +660,46 @@ namespace QLPT {
             public System.DateTime NgayVanHanh {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableView_PhuongTien.NgayVanHanhColumn]));
+                        return ((global::System.DateTime)(this[this.tableView_VanHanh.NgayVanHanhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NgayVanHanh\' in table \'View_PhuongTien\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'NgayVanHanh\' in table \'View_VanHanh\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableView_PhuongTien.NgayVanHanhColumn] = value;
+                    this[this.tableView_VanHanh.NgayVanHanhColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int CaLamViec {
+                get {
+                    try {
+                        return ((int)(this[this.tableView_VanHanh.CaLamViecColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CaLamViec\' in table \'View_VanHanh\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableView_VanHanh.CaLamViecColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NhanVienTen {
+                get {
+                    try {
+                        return ((string)(this[this.tableView_VanHanh.NhanVienTenColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NhanVienTen\' in table \'View_VanHanh\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableView_VanHanh.NhanVienTenColumn] = value;
                 }
             }
             
@@ -709,10 +707,47 @@ namespace QLPT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string PhuongTienID {
                 get {
-                    return ((string)(this[this.tableView_PhuongTien.PhuongTienIDColumn]));
+                    try {
+                        return ((string)(this[this.tableView_VanHanh.PhuongTienIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PhuongTienID\' in table \'View_VanHanh\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableView_PhuongTien.PhuongTienIDColumn] = value;
+                    this[this.tableView_VanHanh.PhuongTienIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TenPhuongTien {
+                get {
+                    try {
+                        return ((string)(this[this.tableView_VanHanh.TenPhuongTienColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TenPhuongTien\' in table \'View_VanHanh\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableView_VanHanh.TenPhuongTienColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BienDK {
+                get {
+                    try {
+                        return ((string)(this[this.tableView_VanHanh.BienDKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BienDK\' in table \'View_VanHanh\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableView_VanHanh.BienDKColumn] = value;
                 }
             }
             
@@ -721,263 +756,155 @@ namespace QLPT {
             public double VanHanh {
                 get {
                     try {
-                        return ((double)(this[this.tableView_PhuongTien.VanHanhColumn]));
+                        return ((double)(this[this.tableView_VanHanh.VanHanhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'VanHanh\' in table \'View_PhuongTien\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'VanHanh\' in table \'View_VanHanh\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableView_PhuongTien.VanHanhColumn] = value;
+                    this[this.tableView_VanHanh.VanHanhColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int LanDaiTu {
+            public string VanHanhDV {
                 get {
                     try {
-                        return ((int)(this[this.tableView_PhuongTien.LanDaiTuColumn]));
+                        return ((string)(this[this.tableView_VanHanh.VanHanhDVColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LanDaiTu\' in table \'View_PhuongTien\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'VanHanhDV\' in table \'View_VanHanh\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableView_PhuongTien.LanDaiTuColumn] = value;
+                    this[this.tableView_VanHanh.VanHanhDVColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string XuatXu {
+            public string DonViTCTen {
                 get {
                     try {
-                        return ((string)(this[this.tableView_PhuongTien.XuatXuColumn]));
+                        return ((string)(this[this.tableView_VanHanh.DonViTCTenColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'XuatXu\' in table \'View_PhuongTien\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DonViTCTen\' in table \'View_VanHanh\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableView_PhuongTien.XuatXuColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int LanTrungTu {
-                get {
-                    try {
-                        return ((int)(this[this.tableView_PhuongTien.LanTrungTuColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LanTrungTu\' in table \'View_PhuongTien\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableView_PhuongTien.LanTrungTuColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int LanTieuTu {
-                get {
-                    try {
-                        return ((int)(this[this.tableView_PhuongTien.LanTieuTuColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LanTieuTu\' in table \'View_PhuongTien\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableView_PhuongTien.LanTieuTuColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int LanBDTX {
-                get {
-                    try {
-                        return ((int)(this[this.tableView_PhuongTien.LanBDTXColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LanBDTX\' in table \'View_PhuongTien\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableView_PhuongTien.LanBDTXColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NguyenMauID {
-                get {
-                    try {
-                        return ((string)(this[this.tableView_PhuongTien.NguyenMauIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NguyenMauID\' in table \'View_PhuongTien\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableView_PhuongTien.NguyenMauIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NguyenMauTen {
-                get {
-                    try {
-                        return ((string)(this[this.tableView_PhuongTien.NguyenMauTenColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NguyenMauTen\' in table \'View_PhuongTien\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableView_PhuongTien.NguyenMauTenColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string CaVanHanh {
-                get {
-                    try {
-                        return ((string)(this[this.tableView_PhuongTien.CaVanHanhColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CaVanHanh\' in table \'View_PhuongTien\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableView_PhuongTien.CaVanHanhColumn] = value;
+                    this[this.tableView_VanHanh.DonViTCTenColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNgayVanHanhNull() {
-                return this.IsNull(this.tableView_PhuongTien.NgayVanHanhColumn);
+                return this.IsNull(this.tableView_VanHanh.NgayVanHanhColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNgayVanHanhNull() {
-                this[this.tableView_PhuongTien.NgayVanHanhColumn] = global::System.Convert.DBNull;
+                this[this.tableView_VanHanh.NgayVanHanhColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCaLamViecNull() {
+                return this.IsNull(this.tableView_VanHanh.CaLamViecColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCaLamViecNull() {
+                this[this.tableView_VanHanh.CaLamViecColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNhanVienTenNull() {
+                return this.IsNull(this.tableView_VanHanh.NhanVienTenColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNhanVienTenNull() {
+                this[this.tableView_VanHanh.NhanVienTenColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPhuongTienIDNull() {
+                return this.IsNull(this.tableView_VanHanh.PhuongTienIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPhuongTienIDNull() {
+                this[this.tableView_VanHanh.PhuongTienIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTenPhuongTienNull() {
+                return this.IsNull(this.tableView_VanHanh.TenPhuongTienColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTenPhuongTienNull() {
+                this[this.tableView_VanHanh.TenPhuongTienColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBienDKNull() {
+                return this.IsNull(this.tableView_VanHanh.BienDKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBienDKNull() {
+                this[this.tableView_VanHanh.BienDKColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsVanHanhNull() {
-                return this.IsNull(this.tableView_PhuongTien.VanHanhColumn);
+                return this.IsNull(this.tableView_VanHanh.VanHanhColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetVanHanhNull() {
-                this[this.tableView_PhuongTien.VanHanhColumn] = global::System.Convert.DBNull;
+                this[this.tableView_VanHanh.VanHanhColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsLanDaiTuNull() {
-                return this.IsNull(this.tableView_PhuongTien.LanDaiTuColumn);
+            public bool IsVanHanhDVNull() {
+                return this.IsNull(this.tableView_VanHanh.VanHanhDVColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetLanDaiTuNull() {
-                this[this.tableView_PhuongTien.LanDaiTuColumn] = global::System.Convert.DBNull;
+            public void SetVanHanhDVNull() {
+                this[this.tableView_VanHanh.VanHanhDVColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsXuatXuNull() {
-                return this.IsNull(this.tableView_PhuongTien.XuatXuColumn);
+            public bool IsDonViTCTenNull() {
+                return this.IsNull(this.tableView_VanHanh.DonViTCTenColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetXuatXuNull() {
-                this[this.tableView_PhuongTien.XuatXuColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsLanTrungTuNull() {
-                return this.IsNull(this.tableView_PhuongTien.LanTrungTuColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetLanTrungTuNull() {
-                this[this.tableView_PhuongTien.LanTrungTuColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsLanTieuTuNull() {
-                return this.IsNull(this.tableView_PhuongTien.LanTieuTuColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetLanTieuTuNull() {
-                this[this.tableView_PhuongTien.LanTieuTuColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsLanBDTXNull() {
-                return this.IsNull(this.tableView_PhuongTien.LanBDTXColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetLanBDTXNull() {
-                this[this.tableView_PhuongTien.LanBDTXColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNguyenMauIDNull() {
-                return this.IsNull(this.tableView_PhuongTien.NguyenMauIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNguyenMauIDNull() {
-                this[this.tableView_PhuongTien.NguyenMauIDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNguyenMauTenNull() {
-                return this.IsNull(this.tableView_PhuongTien.NguyenMauTenColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNguyenMauTenNull() {
-                this[this.tableView_PhuongTien.NguyenMauTenColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCaVanHanhNull() {
-                return this.IsNull(this.tableView_PhuongTien.CaVanHanhColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCaVanHanhNull() {
-                this[this.tableView_PhuongTien.CaVanHanhColumn] = global::System.Convert.DBNull;
+            public void SetDonViTCTenNull() {
+                this[this.tableView_VanHanh.DonViTCTenColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -985,22 +912,22 @@ namespace QLPT {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class View_PhuongTienRowChangeEvent : global::System.EventArgs {
+        public class View_VanHanhRowChangeEvent : global::System.EventArgs {
             
-            private View_PhuongTienRow eventRow;
+            private View_VanHanhRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public View_PhuongTienRowChangeEvent(View_PhuongTienRow row, global::System.Data.DataRowAction action) {
+            public View_VanHanhRowChangeEvent(View_VanHanhRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public View_PhuongTienRow Row {
+            public View_VanHanhRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1028,7 +955,7 @@ namespace QLPT.QuanLy_PTDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class View_PhuongTienTableAdapter : global::System.ComponentModel.Component {
+    public partial class View_VanHanhTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1042,7 +969,7 @@ namespace QLPT.QuanLy_PTDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public View_PhuongTienTableAdapter() {
+        public View_VanHanhTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1139,17 +1066,16 @@ namespace QLPT.QuanLy_PTDataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "View_PhuongTien";
+            tableMapping.DataSetTable = "View_VanHanh";
             tableMapping.ColumnMappings.Add("NgayVanHanh", "NgayVanHanh");
+            tableMapping.ColumnMappings.Add("CaLamViec", "CaLamViec");
+            tableMapping.ColumnMappings.Add("NhanVienTen", "NhanVienTen");
             tableMapping.ColumnMappings.Add("PhuongTienID", "PhuongTienID");
+            tableMapping.ColumnMappings.Add("TenPhuongTien", "TenPhuongTien");
+            tableMapping.ColumnMappings.Add("BienDK", "BienDK");
             tableMapping.ColumnMappings.Add("VanHanh", "VanHanh");
-            tableMapping.ColumnMappings.Add("LanDaiTu", "LanDaiTu");
-            tableMapping.ColumnMappings.Add("XuatXu", "XuatXu");
-            tableMapping.ColumnMappings.Add("LanTrungTu", "LanTrungTu");
-            tableMapping.ColumnMappings.Add("LanTieuTu", "LanTieuTu");
-            tableMapping.ColumnMappings.Add("LanBDTX", "LanBDTX");
-            tableMapping.ColumnMappings.Add("NguyenMauID", "NguyenMauID");
-            tableMapping.ColumnMappings.Add("NguyenMauTen", "NguyenMauTen");
+            tableMapping.ColumnMappings.Add("VanHanhDV", "VanHanhDV");
+            tableMapping.ColumnMappings.Add("DonViTCTen", "DonViTCTen");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1166,8 +1092,8 @@ namespace QLPT.QuanLy_PTDataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT NgayVanHanh, PhuongTienID, VanHanh, LanDaiTu, XuatXu, LanTrungTu, LanTieuT" +
-                "u, LanBDTX, NguyenMauID, NguyenMauTen FROM dbo.View_PhuongTien";
+            this._commandCollection[0].CommandText = "SELECT NgayVanHanh, CaLamViec, NhanVienTen, PhuongTienID, TenPhuongTien, BienDK, " +
+                "VanHanh, VanHanhDV, DonViTCTen FROM dbo.View_VanHanh";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1175,7 +1101,7 @@ namespace QLPT.QuanLy_PTDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QuanLy_PTDataSet1.View_PhuongTienDataTable dataTable) {
+        public virtual int Fill(QuanLy_PTDataSet1.View_VanHanhDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1188,9 +1114,9 @@ namespace QLPT.QuanLy_PTDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QuanLy_PTDataSet1.View_PhuongTienDataTable GetData() {
+        public virtual QuanLy_PTDataSet1.View_VanHanhDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QuanLy_PTDataSet1.View_PhuongTienDataTable dataTable = new QuanLy_PTDataSet1.View_PhuongTienDataTable();
+            QuanLy_PTDataSet1.View_VanHanhDataTable dataTable = new QuanLy_PTDataSet1.View_VanHanhDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
