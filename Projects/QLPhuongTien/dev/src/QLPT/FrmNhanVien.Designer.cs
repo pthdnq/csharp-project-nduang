@@ -52,12 +52,13 @@
             this.Column7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.PhuongTienID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btTimKiem = new System.Windows.Forms.Button();
             this.btSua = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.btLuu = new System.Windows.Forms.Button();
             this.btThoat = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
@@ -290,18 +291,6 @@
             this.txtTimKiem.TabIndex = 13;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
-            // btTimKiem
-            // 
-            this.btTimKiem.Image = global::QLPT.Properties.Resources.View;
-            this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTimKiem.Location = new System.Drawing.Point(909, 30);
-            this.btTimKiem.Name = "btTimKiem";
-            this.btTimKiem.Size = new System.Drawing.Size(88, 30);
-            this.btTimKiem.TabIndex = 14;
-            this.btTimKiem.Text = "Tìm kiếm";
-            this.btTimKiem.UseVisualStyleBackColor = true;
-            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
-            // 
             // btSua
             // 
             this.btSua.Enabled = false;
@@ -365,13 +354,34 @@
             this.btThem.UseVisualStyleBackColor = true;
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Image = global::QLPT.Properties.Resources.View;
+            this.label7.Location = new System.Drawing.Point(670, 81);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 13);
+            this.label7.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.Window;
+            this.label8.Image = global::QLPT.Properties.Resources.View;
+            this.label8.Location = new System.Drawing.Point(857, 39);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(25, 13);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "      ";
+            // 
             // FrmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1012, 485);
-            this.Controls.Add(this.btTimKiem);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btSua);
@@ -415,7 +425,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvNhanVien;
         private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.Button btTimKiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn NhanVienID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NhanVienTen;
@@ -424,5 +433,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DC;
         private System.Windows.Forms.DataGridViewComboBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhuongTienID;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

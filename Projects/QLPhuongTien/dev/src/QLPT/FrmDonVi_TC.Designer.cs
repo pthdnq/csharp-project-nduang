@@ -83,6 +83,7 @@
             this.txtDonViTC_ID.Name = "txtDonViTC_ID";
             this.txtDonViTC_ID.Size = new System.Drawing.Size(200, 20);
             this.txtDonViTC_ID.TabIndex = 9;
+          //  this.txtDonViTC_ID.TextChanged += new System.EventHandler(this.txtDonViTC_ID_TextChanged);
             // 
             // label1
             // 

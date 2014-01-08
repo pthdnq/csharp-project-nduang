@@ -12,13 +12,25 @@ namespace BusinessLogic
     {
         Data data = new Data();
         LoaiPTData m_LoaiPTData = new LoaiPTData();
-        public void insert(string LoaiPTMa, string LoaiPTTen)
+        public void insert(string LoaiPTMa
+            , string LoaiPTTen
+            , string CongThucVH
+            , string MoTaCongThuc)
         {
-            m_LoaiPTData.insert(LoaiPTMa, LoaiPTTen);
+            m_LoaiPTData.insert(LoaiPTMa
+                , LoaiPTTen
+                , CongThucVH
+                , MoTaCongThuc);
         }
-        public void update(string LoaiPTMa, string LoaiPTTen)
+        public void update(string LoaiPTMa
+            , string LoaiPTTen
+            , string CongThucVH
+            , string MoTaCongThuc)
         {
-            m_LoaiPTData.update(LoaiPTMa, LoaiPTTen);
+            m_LoaiPTData.update(LoaiPTMa
+                , LoaiPTTen
+                , CongThucVH
+                , MoTaCongThuc);
         }
         public void delete1(string LoaiPTMa)
         {

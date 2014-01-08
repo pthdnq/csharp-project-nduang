@@ -57,8 +57,8 @@ namespace QLPT
 
         private void nguyênMẫuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmNguyenMau_PT nmpt = new FrmNguyenMau_PT();
-            nmpt.Show();
+            FrmPhuongTien phuongtien = new FrmPhuongTien();
+            phuongtien.Show();
 
         }
 
@@ -94,8 +94,8 @@ namespace QLPT
 
         private void danhSáchCácPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmPhuongTien phuongtien = new FrmPhuongTien();
-            phuongtien.Show();
+            FrmNguyenMau_PT nmpt = new FrmNguyenMau_PT();
+            nmpt.Show();
         }
 
         private void tìmKiếmPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -111,6 +111,7 @@ namespace QLPT
             mnDangKy.Enabled = false;
             mnDangXuat.Enabled = false;
             mnDoiMatKhau.Enabled = false;
+            mnDangNhap.Enabled = true;
 
         }
         public void unlockControl()
@@ -122,6 +123,7 @@ namespace QLPT
             mnDangXuat.Enabled = true;
             mnDoiMatKhau.Enabled = true;
 
+            mnDangNhap.Enabled = false;
         }
 
         private void mnDangXuat_Click(object sender, EventArgs e)
@@ -135,11 +137,7 @@ namespace QLPT
             vanhanh.Show();
         }
 
-        private void báoCáoVậnHànhPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmReportVanHanh rptVanHanh = new FrmReportVanHanh();
-            rptVanHanh.Show();
-        }
+       
 
         private void thôngTinChươngTrìnhToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -151,6 +149,26 @@ namespace QLPT
         {
             FrmHelp help = new FrmHelp();
             help.Show();
+
+
+        }
+
+        private void tìnhTrạngBảoTrìToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBaoCaoThongTinPT baocaoInfoPT = new FrmBaoCaoThongTinPT();
+            baocaoInfoPT.Show();
+        }
+
+        private void danhSáchNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBaoCaoNhanVien baoCaoNhanVien = new FrmBaoCaoNhanVien();
+            baoCaoNhanVien.Show();
+        }
+
+        private void báoCáoVậnHànhPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBaoCaoVanHanh baoCaoVH = new FrmBaoCaoVanHanh();
+            baoCaoVH.Show();
         }
     }
 }

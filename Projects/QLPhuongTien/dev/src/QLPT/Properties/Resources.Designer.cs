@@ -60,9 +60,23 @@ namespace QLPT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap _12102013_khu_xay_dung_tram_thu_phi {
+            get {
+                object obj = ResourceManager.GetObject("12102013 khu xay dung tram thu phi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap _1236995_506204332791140_1185602877_n {
             get {
                 object obj = ResourceManager.GetObject("1236995_506204332791140_1185602877_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _29713_thi3 {
+            get {
+                object obj = ResourceManager.GetObject("29713-thi3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

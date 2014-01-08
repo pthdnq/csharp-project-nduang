@@ -16,14 +16,15 @@ namespace QLPT
 {
     public partial class FrmPhuongTien : Form
     {
+        public static int iDatimeVHPT = 0;
         public FrmPhuongTien()
         {
             InitializeComponent();
         }
-     //   Data dt = new Data();
+        //   Data dt = new Data();
         Data dt = new Data();
         Utils utils = new Utils();
-        
+
         PhuongTienBUS m_PhuongTienBUS = new PhuongTienBUS();
         public void resetControl()
         {
@@ -74,7 +75,7 @@ namespace QLPT
             {
                 MessageBox.Show("Lỗi:" + ex);
             }
-        }  
+        }
         public void ShowComboxForDVTCCol()
         {
             try
@@ -118,7 +119,7 @@ namespace QLPT
         }
         private void FrmPhuongTien_Load(object sender, EventArgs e)
         {
-           // resetControl();
+            // resetControl();
             DataTable dat = new DataTable();
             dat = m_PhuongTienBUS.select();
             dgvPhuongTien.DataSource = dat;
@@ -129,20 +130,22 @@ namespace QLPT
             ShowComboxForDVTCCol();
             ShowComboxForDVQLCol();
             selectPhuongTienData_LoaiPT_ByMaLoaiPT();
+            string strDatimeVHPT = dtpNgayVH.Value.ToString("yyyyMMdd");
+            iDatimeVHPT = int.Parse(strDatimeVHPT);
         }
 
         public bool validData()
         {
-             if (this.txtAutoNum.Text.Length == 0)
+            if (this.txtAutoNum.Text.Length == 0)
             {
                 MessageBox.Show("Trường AutoNum không được bỏ trống !");
                 return false;
             }
-             if (this.txtPhuongTienID.Text.Length == 0)
-             {
-                 MessageBox.Show("Trường Mã PT không được bỏ trống !");
-                 return false;
-             }
+            if (this.txtPhuongTienID.Text.Length == 0)
+            {
+                MessageBox.Show("Trường Mã PT không được bỏ trống !");
+                return false;
+            }
             if (this.cmbLoaiPT.Text.Length == 0)
             {
                 MessageBox.Show("Trường Loại PT không được bỏ trống !");
@@ -187,8 +190,6 @@ namespace QLPT
             Dispose();
         }
 
-      
-
         private void btThem_Click(object sender, EventArgs e)
         {
             resetControl();
@@ -211,23 +212,23 @@ namespace QLPT
             }
             try
             {
-            m_PhuongTienBUS.insert( 
-           txtAutoNum.Text ,
-           cmbLoaiPT.SelectedValue.ToString(),
-           txtPhuongTienID.Text,
-           cmbNguyenMau.SelectedValue.ToString(),
-           cmbDVQL.SelectedValue.ToString(),
-           cmbDVTC.SelectedValue.ToString(),
-           txtBienDK.Text,
-           dtpNgayVH.Text,
-           txtLanBDTX.Text,
-           txtLanTieuTu.Text,
-           txtLanTrungTu.Text,
-           txtLanDaiTu.Text,
-           txtXuaXu.Text,
-           txtTongVH.Text
-          
-                      );
+                m_PhuongTienBUS.insert(
+               txtAutoNum.Text,
+               cmbLoaiPT.SelectedValue.ToString(),
+               txtPhuongTienID.Text,
+               cmbNguyenMau.SelectedValue.ToString(),
+               cmbDVQL.SelectedValue.ToString(),
+               cmbDVTC.SelectedValue.ToString(),
+               txtBienDK.Text,
+               dtpNgayVH.Text,
+               txtLanBDTX.Text,
+               txtLanTieuTu.Text,
+               txtLanTrungTu.Text,
+               txtLanDaiTu.Text,
+               txtXuaXu.Text,
+               txtTongVH.Text
+
+                          );
 
                 FrmPhuongTien_Load(sender, e);
 
@@ -241,8 +242,13 @@ namespace QLPT
         private void btSua_Click(object sender, EventArgs e)
         {
             bool ok = validData();
+
             if (!ok)
                 return;
+            //else if ()
+            //{
+            //    cmbLoaiPT.Enabled = false;
+            //}
             try
             {
                 m_PhuongTienBUS.update(
@@ -267,13 +273,14 @@ namespace QLPT
             {
                 MessageBox.Show("Lỗi sửa :" + ex);
             }
+
         }
 
         private void dataGridView1_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dgvPhuongTien.SelectedRows)
             {
-               
+
                 cmbLoaiPT.SelectedValue = row.Cells["LoaiPTMa"].Value.ToString();
                 cmbDVQL.SelectedValue = row.Cells["DonVIQLID"].Value.ToString();
                 cmbDVTC.SelectedValue = row.Cells["DonViTCID"].Value.ToString();
@@ -288,7 +295,8 @@ namespace QLPT
                 txtLanDaiTu.Text = row.Cells["LanDaiTu"].Value.ToString();
                 txtTongVH.Text = row.Cells["TongVH"].Value.ToString();
                 txtLanTieuTu.Text = row.Cells["LanTieuTu"].Value.ToString();
-                
+                dtpNgayVH.Text = row.Cells["NgayVH"].Value.ToString();
+
                 btSua.Enabled = true;
 
             }
@@ -312,15 +320,15 @@ namespace QLPT
                     FrmPhuongTien_Load(sender, e);//trở về giao diện đầu     
                 }
             }
-           catch(SqlException ex)
-           {
+            catch (SqlException ex)
+            {
 
-           }
+            }
         }
         private string generatePhuongTien()
         {
             int IDMax = utils.getMaxIDAuto("PhuongTien", "AutoNum");
-            IDMax++; 
+            IDMax++;
             string strIDMax = utils.convertIntToFormatedString(IDMax);
             txtAutoNum.Text = strIDMax;
             return cmbLoaiPT.SelectedValue.ToString() + strIDMax;
@@ -367,5 +375,36 @@ namespace QLPT
         {
             txtSearchPhuongTien.Text = "";
         }
-}          
+
+        private void txtTongVH_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTongVH != null && txtTongVH.Text.Trim() != "")
+            {
+                try
+                {
+                    float tongVH = float.Parse(txtTongVH.Text.Trim());
+                    if(tongVH>0)
+                    {
+                        cmbLoaiPT.Enabled = false;
+                        cmbNguyenMau.Enabled = false;
+                        return;
+                    }
+                }
+                catch (System.Exception ex)
+                {
+
+                }
+            }
+            cmbLoaiPT.Enabled = true;
+            cmbNguyenMau.Enabled = true;
+        }
+       
+        private void dtpNgayVH_ValueChanged(object sender, EventArgs e)
+        {
+            string strDatimeVHPT = dtpNgayVH.Value.ToString("yyyyMMdd");
+            iDatimeVHPT = int.Parse(strDatimeVHPT);
+        }
+
+    
+    }
 }

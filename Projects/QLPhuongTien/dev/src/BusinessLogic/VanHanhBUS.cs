@@ -114,5 +114,17 @@ namespace BusinessLogic
                           LanDaiTu
                );
        }
+       public DataTable selectDonViTCbyNhanVien(string NhanVienID)
+       {
+           return m_VanHanhData.selectDonViTCbyNhanVien(NhanVienID);
+       }
+       public DataTable selectLoaiPT()
+       {
+           return m_VanHanhData.selectLoaiPT();
+       }
+       public DataTable selectTenPTbyLoaiPT(string LoaiPTMa)
+       {
+           return m_VanHanhData.selectTenPTbyLoaiPT(LoaiPTMa);
+       }
     }
 }
