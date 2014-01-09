@@ -159,7 +159,7 @@ namespace QLPT
                 cmbLoaiPT.Text = "";
                 DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvVanHanh.Columns["LoaiPTMa"];
                 comboBoxColumn.DataSource = m_VanHanhBUS.selectLoaiPT();
-                comboBoxColumn.DisplayMember = "TenLoaiPT";
+                comboBoxColumn.DisplayMember = "LoaiPTTen";
                 comboBoxColumn.ValueMember = "LoaiPTMa";
             }
             catch (Exception ex)
@@ -233,7 +233,7 @@ namespace QLPT
                                         , cmbNhanVienID.SelectedValue.ToString()
                                         , cmbDVTC.SelectedValue.ToString()
                                         , txtMoTa.Text
-                                        ,cmbLoaiPT.SelectedValue.ToString()
+                                        
 
                                         );
                     updateMocBaoTri();
@@ -286,7 +286,7 @@ namespace QLPT
                                   , cmbNhanVienID.SelectedValue.ToString()
                                   , cmbDVTC.SelectedValue.ToString()
                                   , txtMoTa.Text
-                                  , cmbLoaiPT.SelectedValue.ToString()
+                                  
                   );
 
                     updateTongVHToPhuongTien();
@@ -389,15 +389,15 @@ namespace QLPT
 
         private void spbKm_ValueChanged(object sender, EventArgs e)
         {
-            LOAI_CONG_THUC loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbLoaiPT.SelectedText.Trim());
+            LOAI_CONG_THUC loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbLoaiPT.Text.Trim());
             EnableControlForVanHanh(loaiCongThuc);
             TinhVanHanh(loaiCongThuc);
         }
 
         private void spbTan_ValueChanged(object sender, EventArgs e)
         {
-           
-            LOAI_CONG_THUC loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbLoaiPT.SelectedText.Trim());
+
+            LOAI_CONG_THUC loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbLoaiPT.Text.Trim());
             EnableControlForVanHanh(loaiCongThuc);
             TinhVanHanh(loaiCongThuc);
         }
@@ -464,7 +464,7 @@ namespace QLPT
                     break;
                 case LOAI_CONG_THUC.KM_TAN:
                     spbGio.Enabled = false;
-                    spbVanHanh.Value = spbKm.Value * spbKm.Value;
+                    spbVanHanh.Value = spbKm.Value * spbTan.Value;
                     break;
                 default:
                     break;

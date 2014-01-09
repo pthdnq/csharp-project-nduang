@@ -403,6 +403,7 @@
             this.spbVanHanh.Name = "spbVanHanh";
             this.spbVanHanh.Size = new System.Drawing.Size(75, 20);
             this.spbVanHanh.TabIndex = 24;
+           // this.spbVanHanh.ValueChanged += new System.EventHandler(this.spbVanHanh_ValueChanged);
             // 
             // spbCaLamViec
             // 

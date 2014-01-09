@@ -22,8 +22,8 @@ namespace BusinessLogic
             string CaLamViec,
             string NhanVienID,
             string DonViTCID,
-            string MoTa,
-           string LoaiPTMa
+            string MoTa
+          
          )
        {
            // return;
@@ -36,8 +36,8 @@ namespace BusinessLogic
                CaLamViec,
                NhanVienID,
                DonViTCID,
-               MoTa,
-               LoaiPTMa
+               MoTa
+               
                );
        
        }
@@ -50,8 +50,8 @@ namespace BusinessLogic
             string CaLamViec,
             string NhanVienID,
             string DonViTCID,
-            string MoTa,
-           string LoaiPTMa
+            string MoTa
+           
            )
        {
            m_VanHanhData.update
@@ -64,8 +64,8 @@ namespace BusinessLogic
                CaLamViec,
                NhanVienID,
                DonViTCID,
-               MoTa,
-               LoaiPTMa
+               MoTa
+              
            );
        }
        public void delete1(string VanHanhID)
