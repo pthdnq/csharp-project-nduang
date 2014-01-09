@@ -25,7 +25,8 @@ namespace DataAcess
             string CaLamViec,
             string NhanVienID,
             string DonViTCID,
-            string MoTa
+            string MoTa,
+            string LoaiPTMa
        )
         {
 
@@ -45,6 +46,7 @@ namespace DataAcess
             cmd.Parameters.Add("NhanVienID", SqlDbType.NVarChar).Value = NhanVienID;
             cmd.Parameters.Add("DonViTCID", SqlDbType.NVarChar).Value = DonViTCID;
             cmd.Parameters.Add("MoTa", SqlDbType.NVarChar).Value = MoTa;
+            cmd.Parameters.Add("LoaiPTMa", SqlDbType.NVarChar).Value = LoaiPTMa;
             retval = cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
@@ -59,7 +61,8 @@ namespace DataAcess
                  string CaLamViec,
                  string NhanVienID,
                  string DonViTCID,
-                 string MoTa
+                 string MoTa,
+                 string LoaiPTMa
 
             )
         {
@@ -90,6 +93,7 @@ namespace DataAcess
             cmd.Parameters.Add("NhanVienID", SqlDbType.NVarChar).Value = NhanVienID;
             cmd.Parameters.Add("DonViTCID", SqlDbType.NVarChar).Value = DonViTCID;
             cmd.Parameters.Add("MoTa", SqlDbType.NVarChar).Value = MoTa;
+            cmd.Parameters.Add("LoaiPTMa", SqlDbType.NVarChar).Value = LoaiPTMa;
             retval = cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
@@ -228,6 +232,11 @@ namespace DataAcess
         public DataTable selectTenPTbyLoaiPT(string LoaiPTMa)
         {
             return m_LoaiPTData.selectTenPTbyLoaiPT(LoaiPTMa);
+        }
+
+        public DataTable selectNgayVHByNgayBatDauVH(string PhuongTienID)
+        {
+            return m_PhuongTienData.selectNgayVHbyNgayBatDauVH(PhuongTienID);
         }
     }
 }

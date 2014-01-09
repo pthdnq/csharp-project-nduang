@@ -156,10 +156,11 @@ namespace QLPT
                 this.cmbLoaiPT.DataSource = m_VanHanhBUS.selectLoaiPT();
                 this.cmbLoaiPT.DisplayMember = "TenLoaiPT";
                 this.cmbLoaiPT.ValueMember = "LoaiPTMa";
-                //DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvVanHanh.Columns["DonViTCID"];
-                //comboBoxColumn.DataSource = m_VanHanhBUS.selectDonViTC();
-                //comboBoxColumn.DisplayMember = "DonViTCTen";
-                //comboBoxColumn.ValueMember = "DonViTCID";
+                cmbLoaiPT.Text = "";
+                DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvVanHanh.Columns["LoaiPTMa"];
+                comboBoxColumn.DataSource = m_VanHanhBUS.selectLoaiPT();
+                comboBoxColumn.DisplayMember = "TenLoaiPT";
+                comboBoxColumn.ValueMember = "LoaiPTMa";
             }
             catch (Exception ex)
             {
@@ -212,10 +213,13 @@ namespace QLPT
             }
             try
             {
-
-                if (FrmPhuongTien.iDatimeVHPT > iDatimeVH)
+                DataTable dt = m_VanHanhBUS.selectNgayVHByNgayBatDauVH(cmbPhuongTienID.SelectedValue.ToString());
+                string strNgayBatDauVH = dt.Rows[0][0].ToString();
+               // int i = int.Parse(strNgayBatDauVH);
+                if (0 > iDatimeVH)
                 {
                     MessageBox.Show("khong hop le");
+                    
                 }
                 else
                 {
@@ -229,16 +233,13 @@ namespace QLPT
                                         , cmbNhanVienID.SelectedValue.ToString()
                                         , cmbDVTC.SelectedValue.ToString()
                                         , txtMoTa.Text
+                                        ,cmbLoaiPT.SelectedValue.ToString()
 
                                         );
                     updateMocBaoTri();
                     updateTongVHToPhuongTien();
                     FrmVanHanh_Load(sender, e);
                 }
-
-                
-
-
 
             }
             catch (Exception ex)
@@ -266,21 +267,33 @@ namespace QLPT
                 return;
             try
             {
-                m_VanHanhBUS.update(
-                                    txtVanHanhID.Text.Trim()
-                                    , cmbPhuongTienID.SelectedValue.ToString()
-                                    , dtpNgayVH.Text
-                                    , spbVanHanh.Text
-                                    , txtDonVi.Text
-                                    , spbCaLamViec.Text
-                                    , cmbNhanVienID.SelectedValue.ToString()
-                                    , cmbDVTC.SelectedValue.ToString()
-                                    , txtMoTa.Text
-                    );
+                DataTable dt = m_VanHanhBUS.selectNgayVHByNgayBatDauVH(cmbPhuongTienID.SelectedValue.ToString());
+                string strNgayBatDauVH = dt.Rows[0][0].ToString();
 
-                updateTongVHToPhuongTien();
-                updateMocBaoTri();
-                FrmVanHanh_Load(sender, e);
+                if (0 > iDatimeVH)
+                {
+                    MessageBox.Show("khong hop le");
+                }
+                else
+                {
+                    m_VanHanhBUS.update(
+                                  txtVanHanhID.Text.Trim()
+                                  , cmbPhuongTienID.SelectedValue.ToString()
+                                  , dtpNgayVH.Text
+                                  , spbVanHanh.Text
+                                  , txtDonVi.Text
+                                  , spbCaLamViec.Text
+                                  , cmbNhanVienID.SelectedValue.ToString()
+                                  , cmbDVTC.SelectedValue.ToString()
+                                  , txtMoTa.Text
+                                  , cmbLoaiPT.SelectedValue.ToString()
+                  );
+
+                    updateTongVHToPhuongTien();
+                    updateMocBaoTri();
+                    FrmVanHanh_Load(sender, e);
+                }
+              
             }
             catch (Exception ex)
             {
@@ -313,7 +326,9 @@ namespace QLPT
 
                     cmbNhanVienID.SelectedValue = row.Cells["NhanVienID"].Value.ToString();
                     cmbDVTC.SelectedValue = row.Cells["DonViTCID"].Value.ToString();
+                    
                     cmbPhuongTienID.SelectedValue = row.Cells["PhuongTienID2"].Value.ToString();
+                    cmbLoaiPT.SelectedValue = row.Cells["LoaiPTMa"].Value.ToString();
                     //cmbLoaiPT.SelectedValue = row.Cells["PhuongTienID2"].Value.ToString();
 
                     //spbVanHanh.Maximum = utils.ConvertStringToDecimal(row.Cells["VanHanh"].Value.ToString());
@@ -534,19 +549,12 @@ namespace QLPT
             TinhVanHanh(loaiCongThuc);
         }
 
-       
-        public void ngayVHContainNgayVHPT()
-        {
-            
-        }
 
         private void dtpNgayVH_ValueChanged(object sender, EventArgs e)
         {
             string strDatimeVH = dtpNgayVH.Value.ToString("yyyyMMdd");
             iDatimeVH = int.Parse(strDatimeVH);
-            
-           
-           
+                    
         }
 
     }

@@ -22,7 +22,8 @@ namespace BusinessLogic
             string CaLamViec,
             string NhanVienID,
             string DonViTCID,
-            string MoTa
+            string MoTa,
+           string LoaiPTMa
          )
        {
            // return;
@@ -35,7 +36,9 @@ namespace BusinessLogic
                CaLamViec,
                NhanVienID,
                DonViTCID,
-               MoTa);
+               MoTa,
+               LoaiPTMa
+               );
        
        }
        public void update(
@@ -47,7 +50,9 @@ namespace BusinessLogic
             string CaLamViec,
             string NhanVienID,
             string DonViTCID,
-            string MoTa)
+            string MoTa,
+           string LoaiPTMa
+           )
        {
            m_VanHanhData.update
            (
@@ -59,7 +64,8 @@ namespace BusinessLogic
                CaLamViec,
                NhanVienID,
                DonViTCID,
-               MoTa
+               MoTa,
+               LoaiPTMa
            );
        }
        public void delete1(string VanHanhID)
@@ -125,6 +131,10 @@ namespace BusinessLogic
        public DataTable selectTenPTbyLoaiPT(string LoaiPTMa)
        {
            return m_VanHanhData.selectTenPTbyLoaiPT(LoaiPTMa);
+       }
+       public DataTable selectNgayVHByNgayBatDauVH(string PhuongTienID)
+       {
+           return m_VanHanhData.selectNgayVHByNgayBatDauVH(PhuongTienID);
        }
     }
 }

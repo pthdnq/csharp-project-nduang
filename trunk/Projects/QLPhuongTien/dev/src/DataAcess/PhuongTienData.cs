@@ -282,5 +282,29 @@ namespace DataAcess
             return retval > 0;
           
         }
+
+        public DataTable selectNgayVHbyNgayBatDauVH(string PhuongTienID)
+        {
+            SqlConnection con = data.getConnect();
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_select_NgayVHbyNgayBatDauVH";
+            cmd.Parameters.Add("PhuongTienID", SqlDbType.NVarChar).Value = PhuongTienID;
+            DataTable dtb;
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "PhuongTien");
+                dtb = ds.Tables["PhuongTien"];
+            }
+            catch (System.Exception ex)
+            {
+                return null;
+            }
+            return dtb;
+        }
     }
 }
