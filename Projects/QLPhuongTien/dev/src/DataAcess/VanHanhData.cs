@@ -25,8 +25,8 @@ namespace DataAcess
             string CaLamViec,
             string NhanVienID,
             string DonViTCID,
-            string MoTa,
-            string LoaiPTMa
+            string MoTa
+            
        )
         {
 
@@ -46,7 +46,7 @@ namespace DataAcess
             cmd.Parameters.Add("NhanVienID", SqlDbType.NVarChar).Value = NhanVienID;
             cmd.Parameters.Add("DonViTCID", SqlDbType.NVarChar).Value = DonViTCID;
             cmd.Parameters.Add("MoTa", SqlDbType.NVarChar).Value = MoTa;
-            cmd.Parameters.Add("LoaiPTMa", SqlDbType.NVarChar).Value = LoaiPTMa;
+            
             retval = cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
@@ -61,8 +61,8 @@ namespace DataAcess
                  string CaLamViec,
                  string NhanVienID,
                  string DonViTCID,
-                 string MoTa,
-                 string LoaiPTMa
+                 string MoTa
+                 
 
             )
         {
@@ -93,7 +93,7 @@ namespace DataAcess
             cmd.Parameters.Add("NhanVienID", SqlDbType.NVarChar).Value = NhanVienID;
             cmd.Parameters.Add("DonViTCID", SqlDbType.NVarChar).Value = DonViTCID;
             cmd.Parameters.Add("MoTa", SqlDbType.NVarChar).Value = MoTa;
-            cmd.Parameters.Add("LoaiPTMa", SqlDbType.NVarChar).Value = LoaiPTMa;
+            
             retval = cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
@@ -107,7 +107,7 @@ namespace DataAcess
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_delete_VanHanhID";
+            cmd.CommandText = "sp_delete_VanHanhData";
             cmd.Parameters.Add("VanHanhID", SqlDbType.NVarChar).Value = VanHanhID;
             retval = cmd.ExecuteNonQuery();
             cmd.Dispose();
