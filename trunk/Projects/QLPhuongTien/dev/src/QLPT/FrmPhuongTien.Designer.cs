@@ -286,6 +286,7 @@
             this.txtPhuongTienID.Name = "txtPhuongTienID";
             this.txtPhuongTienID.Size = new System.Drawing.Size(250, 20);
             this.txtPhuongTienID.TabIndex = 15;
+           
             // 
             // label15
             // 
