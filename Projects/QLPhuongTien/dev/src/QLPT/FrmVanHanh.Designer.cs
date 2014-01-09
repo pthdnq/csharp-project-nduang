@@ -66,6 +66,7 @@
             this.NgayVanHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VanHanhID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CaLamViec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiPTMa = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.PhuongTienID2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.VanHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VanHanhDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -480,6 +481,7 @@
             this.NgayVanHanh,
             this.VanHanhID,
             this.CaLamViec,
+            this.LoaiPTMa,
             this.PhuongTienID2,
             this.VanHanh,
             this.VanHanhDV,
@@ -522,6 +524,14 @@
             this.CaLamViec.HeaderText = "Ca làm việc";
             this.CaLamViec.Name = "CaLamViec";
             this.CaLamViec.ReadOnly = true;
+            // 
+            // LoaiPTMa
+            // 
+            this.LoaiPTMa.DataPropertyName = "LoaiPTMa";
+            this.LoaiPTMa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoaiPTMa.HeaderText = "Loại phương tiện";
+            this.LoaiPTMa.Name = "LoaiPTMa";
+            this.LoaiPTMa.ReadOnly = true;
             // 
             // PhuongTienID2
             // 
@@ -639,6 +649,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayVanHanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn VanHanhID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CaLamViec;
+        private System.Windows.Forms.DataGridViewComboBoxColumn LoaiPTMa;
         private System.Windows.Forms.DataGridViewComboBoxColumn PhuongTienID2;
         private System.Windows.Forms.DataGridViewTextBoxColumn VanHanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn VanHanhDV;

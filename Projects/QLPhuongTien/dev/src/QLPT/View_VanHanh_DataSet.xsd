@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="View_VanHanh_DataSet" targetNamespace="http://tempuri.org/View_VanHanh_DataSet.xsd" xmlns:mstns="http://tempuri.org/View_VanHanh_DataSet.xsd" xmlns="http://tempuri.org/View_VanHanh_DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QuanLy_PTConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QuanLy_PTConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QLPT.Properties.Settings.GlobalReference.Default.QuanLy_PTConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_VanHanhTableAdapter" GeneratorDataComponentClassName="View_VanHanhTableAdapter" Name="View_VanHanh" UserDataComponentName="View_VanHanhTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QuanLy_PTConnectionString (Settings)" DbObjectName="QuanLy_PT.dbo.View_VanHanh" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT NgayVanHanh, CaLamViec, NhanVienTen, PhuongTienID, TenPhuongTien, BienDK, VanHanh, VanHanhDV, DonViTCTen FROM dbo.View_VanHanh</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NgayVanHanh" DataSetColumn="NgayVanHanh" />
+              <Mapping SourceColumn="CaLamViec" DataSetColumn="CaLamViec" />
+              <Mapping SourceColumn="NhanVienTen" DataSetColumn="NhanVienTen" />
+              <Mapping SourceColumn="PhuongTienID" DataSetColumn="PhuongTienID" />
+              <Mapping SourceColumn="TenPhuongTien" DataSetColumn="TenPhuongTien" />
+              <Mapping SourceColumn="BienDK" DataSetColumn="BienDK" />
+              <Mapping SourceColumn="VanHanh" DataSetColumn="VanHanh" />
+              <Mapping SourceColumn="VanHanhDV" DataSetColumn="VanHanhDV" />
+              <Mapping SourceColumn="DonViTCTen" DataSetColumn="DonViTCTen" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="View_VanHanh_DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="View_VanHanh_DataSet" msprop:Generator_UserDSName="View_VanHanh_DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_VanHanh" msprop:Generator_TableClassName="View_VanHanhDataTable" msprop:Generator_TableVarName="tableView_VanHanh" msprop:Generator_TablePropName="View_VanHanh" msprop:Generator_RowDeletingName="View_VanHanhRowDeleting" msprop:Generator_UserTableName="View_VanHanh" msprop:Generator_RowChangingName="View_VanHanhRowChanging" msprop:Generator_RowEvHandlerName="View_VanHanhRowChangeEventHandler" msprop:Generator_RowDeletedName="View_VanHanhRowDeleted" msprop:Generator_RowEvArgName="View_VanHanhRowChangeEvent" msprop:Generator_RowChangedName="View_VanHanhRowChanged" msprop:Generator_RowClassName="View_VanHanhRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NgayVanHanh" msprop:Generator_ColumnVarNameInTable="columnNgayVanHanh" msprop:Generator_ColumnPropNameInRow="NgayVanHanh" msprop:Generator_ColumnPropNameInTable="NgayVanHanhColumn" msprop:Generator_UserColumnName="NgayVanHanh" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CaLamViec" msprop:Generator_ColumnVarNameInTable="columnCaLamViec" msprop:Generator_ColumnPropNameInRow="CaLamViec" msprop:Generator_ColumnPropNameInTable="CaLamViecColumn" msprop:Generator_UserColumnName="CaLamViec" type="xs:int" minOccurs="0" />
+              <xs:element name="NhanVienTen" msprop:Generator_ColumnVarNameInTable="columnNhanVienTen" msprop:Generator_ColumnPropNameInRow="NhanVienTen" msprop:Generator_ColumnPropNameInTable="NhanVienTenColumn" msprop:Generator_UserColumnName="NhanVienTen" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PhuongTienID" msprop:Generator_ColumnVarNameInTable="columnPhuongTienID" msprop:Generator_ColumnPropNameInRow="PhuongTienID" msprop:Generator_ColumnPropNameInTable="PhuongTienIDColumn" msprop:Generator_UserColumnName="PhuongTienID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenPhuongTien" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTenPhuongTien" msprop:Generator_ColumnPropNameInRow="TenPhuongTien" msprop:Generator_ColumnPropNameInTable="TenPhuongTienColumn" msprop:Generator_UserColumnName="TenPhuongTien" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="172" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BienDK" msprop:Generator_ColumnVarNameInTable="columnBienDK" msprop:Generator_ColumnPropNameInRow="BienDK" msprop:Generator_ColumnPropNameInTable="BienDKColumn" msprop:Generator_UserColumnName="BienDK" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VanHanh" msprop:Generator_ColumnVarNameInTable="columnVanHanh" msprop:Generator_ColumnPropNameInRow="VanHanh" msprop:Generator_ColumnPropNameInTable="VanHanhColumn" msprop:Generator_UserColumnName="VanHanh" type="xs:double" minOccurs="0" />
+              <xs:element name="VanHanhDV" msprop:Generator_ColumnVarNameInTable="columnVanHanhDV" msprop:Generator_ColumnPropNameInRow="VanHanhDV" msprop:Generator_ColumnPropNameInTable="VanHanhDVColumn" msprop:Generator_UserColumnName="VanHanhDV" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DonViTCTen" msprop:Generator_ColumnVarNameInTable="columnDonViTCTen" msprop:Generator_ColumnPropNameInRow="DonViTCTen" msprop:Generator_ColumnPropNameInTable="DonViTCTenColumn" msprop:Generator_UserColumnName="DonViTCTen" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:View_VanHanh" />
+      <xs:field xpath="mstns:PhuongTienID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
