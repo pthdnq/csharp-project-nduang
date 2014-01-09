@@ -31,24 +31,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMoTaCT = new System.Windows.Forms.TextBox();
+            this.txtCongThucVH = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtLoaiPT_Ten = new System.Windows.Forms.TextBox();
             this.txtLoaiPT_Ma = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btThem = new System.Windows.Forms.Button();
-            this.btLuu = new System.Windows.Forms.Button();
-            this.btXoa = new System.Windows.Forms.Button();
-            this.btSua = new System.Windows.Forms.Button();
-            this.btThoat = new System.Windows.Forms.Button();
-            this.txtMoTaCT = new System.Windows.Forms.TextBox();
-            this.txtCongThucVH = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiPTMa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiPTTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CongThucVH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MoTaCongThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btThem = new System.Windows.Forms.Button();
+            this.btLuu = new System.Windows.Forms.Button();
+            this.btXoa = new System.Windows.Forms.Button();
+            this.btSua = new System.Windows.Forms.Button();
+            this.btThoat = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -88,6 +88,20 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin ";
+            // 
+            // txtMoTaCT
+            // 
+            this.txtMoTaCT.Location = new System.Drawing.Point(124, 139);
+            this.txtMoTaCT.Name = "txtMoTaCT";
+            this.txtMoTaCT.Size = new System.Drawing.Size(153, 20);
+            this.txtMoTaCT.TabIndex = 8;
+            // 
+            // txtCongThucVH
+            // 
+            this.txtCongThucVH.Location = new System.Drawing.Point(124, 103);
+            this.txtCongThucVH.Name = "txtCongThucVH";
+            this.txtCongThucVH.Size = new System.Drawing.Size(153, 20);
+            this.txtCongThucVH.TabIndex = 7;
             // 
             // label4
             // 
@@ -154,6 +168,44 @@
             this.dataGridView1.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 30;
+            // 
+            // LoaiPTMa
+            // 
+            this.LoaiPTMa.DataPropertyName = "LoaiPTMa";
+            this.LoaiPTMa.HeaderText = "Mã loại";
+            this.LoaiPTMa.Name = "LoaiPTMa";
+            this.LoaiPTMa.ReadOnly = true;
+            this.LoaiPTMa.Width = 50;
+            // 
+            // LoaiPTTen
+            // 
+            this.LoaiPTTen.DataPropertyName = "LoaiPTTen";
+            this.LoaiPTTen.HeaderText = "Tên loại";
+            this.LoaiPTTen.Name = "LoaiPTTen";
+            this.LoaiPTTen.ReadOnly = true;
+            this.LoaiPTTen.Width = 160;
+            // 
+            // CongThucVH
+            // 
+            this.CongThucVH.DataPropertyName = "CongThucVH";
+            this.CongThucVH.HeaderText = "Công thức VH";
+            this.CongThucVH.Name = "CongThucVH";
+            this.CongThucVH.ReadOnly = true;
+            this.CongThucVH.Width = 50;
+            // 
+            // MoTaCongThuc
+            // 
+            this.MoTaCongThuc.DataPropertyName = "MoTaCongThuc";
+            this.MoTaCongThuc.HeaderText = "Mô tả công thức";
+            this.MoTaCongThuc.Name = "MoTaCongThuc";
+            this.MoTaCongThuc.ReadOnly = true;
+            // 
             // btThem
             // 
             this.btThem.Image = global::QLPT.Properties.Resources.plus_16;
@@ -216,58 +268,6 @@
             this.btThoat.Text = "Thoát";
             this.btThoat.UseVisualStyleBackColor = true;
             this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
-            // 
-            // txtMoTaCT
-            // 
-            this.txtMoTaCT.Location = new System.Drawing.Point(124, 139);
-            this.txtMoTaCT.Name = "txtMoTaCT";
-            this.txtMoTaCT.Size = new System.Drawing.Size(153, 20);
-            this.txtMoTaCT.TabIndex = 8;
-            // 
-            // txtCongThucVH
-            // 
-            this.txtCongThucVH.Location = new System.Drawing.Point(124, 103);
-            this.txtCongThucVH.Name = "txtCongThucVH";
-            this.txtCongThucVH.Size = new System.Drawing.Size(153, 20);
-            this.txtCongThucVH.TabIndex = 7;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 30;
-            // 
-            // LoaiPTMa
-            // 
-            this.LoaiPTMa.DataPropertyName = "LoaiPTMa";
-            this.LoaiPTMa.HeaderText = "Mã loại";
-            this.LoaiPTMa.Name = "LoaiPTMa";
-            this.LoaiPTMa.ReadOnly = true;
-            this.LoaiPTMa.Width = 50;
-            // 
-            // LoaiPTTen
-            // 
-            this.LoaiPTTen.DataPropertyName = "LoaiPTTen";
-            this.LoaiPTTen.HeaderText = "Tên loại";
-            this.LoaiPTTen.Name = "LoaiPTTen";
-            this.LoaiPTTen.ReadOnly = true;
-            this.LoaiPTTen.Width = 160;
-            // 
-            // CongThucVH
-            // 
-            this.CongThucVH.DataPropertyName = "CongThucVH";
-            this.CongThucVH.HeaderText = "Công thức VH";
-            this.CongThucVH.Name = "CongThucVH";
-            this.CongThucVH.ReadOnly = true;
-            this.CongThucVH.Width = 50;
-            // 
-            // MoTaCongThuc
-            // 
-            this.MoTaCongThuc.DataPropertyName = "MoTaCongThuc";
-            this.MoTaCongThuc.HeaderText = "Mô tả công thức";
-            this.MoTaCongThuc.Name = "MoTaCongThuc";
-            this.MoTaCongThuc.ReadOnly = true;
             // 
             // FrmLoaiPT
             // 

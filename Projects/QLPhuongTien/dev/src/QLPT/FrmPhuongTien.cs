@@ -405,6 +405,7 @@ namespace QLPT
             iDatimeVHPT = int.Parse(strDatimeVHPT);
         }
 
+
     
     }
 }
