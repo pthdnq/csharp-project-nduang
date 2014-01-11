@@ -120,5 +120,11 @@ namespace QLPT
                  this.Close();
              }
          }
+
+         private void FrmTimKiem_FormClosing(object sender, FormClosingEventArgs e)
+         {
+             e.Cancel = false;
+             this.Hide();
+         }
     }
 }

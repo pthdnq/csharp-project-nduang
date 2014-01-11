@@ -111,13 +111,19 @@ namespace QLPT
         }
         private void đăngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            if (frmdk == null || frmdk.IsDisposed)
+            {
+                frmdk = new FrmDangKy();
+            }
             frmdk.Show();
         }
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            if (frmdmk == null || frmdmk.IsDisposed)
+            {
+                frmdmk = new FrmDoiMatKhau();
+            }
             frmdmk.Show();
         }
 
@@ -129,14 +135,20 @@ namespace QLPT
 
         private void nguyênMẫuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            if (phuongtien == null || phuongtien.IsDisposed)
+            {
+                phuongtien = new FrmPhuongTien();
+            }
             phuongtien.Show();
 
         }
 
         private void quảnLýĐơnVịThiCôngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            if (DVQL == null || DVQL.IsDisposed)
+            {
+                DVQL = new frmDonVi_QL();
+            }
             DVQL.Show();
         }
 
@@ -148,30 +160,46 @@ namespace QLPT
 
         private void loạiPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (loaipt == null || loaipt.IsDisposed)
+            {
+                loaipt = new FrmLoaiPT();
+            }
             loaipt.Show();
         }
 
         private void đơnVịThiCôngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            if (dvtc == null || dvtc.IsDisposed)
+            {
+                dvtc = new FrmDonVi_TC();
+            }
             dvtc.Show();
         }
 
         private void quảnLýNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            if (nv == null || nv.IsDisposed)
+            {
+                nv = new FrmNhanVien();
+            }
             nv.Show();
         }
 
         private void danhSáchCácPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            if (nmpt == null || nmpt.IsDisposed)
+            {
+                nmpt = new FrmNguyenMau_PT();
+            }
             nmpt.Show();
         }
 
         private void tìmKiếmPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (timkiem == null || timkiem.IsDisposed)
+            {
+                timkiem = new FrmTimKiem();
+            }
             
             timkiem.Show();
         }
@@ -231,19 +259,28 @@ namespace QLPT
 
         private void tìnhTrạngBảoTrìToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            if (baocaoInfoPT == null || baocaoInfoPT.IsDisposed)
+            {
+                baocaoInfoPT = new FrmBaoCaoThongTinPT();
+            }
             baocaoInfoPT.Show();
         }
 
         private void danhSáchNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            if (baoCaoNhanVien == null || baoCaoNhanVien.IsDisposed)
+            {
+                baoCaoNhanVien = new FrmBaoCaoNhanVien();
+            }
             baoCaoNhanVien.Show();
         }
 
         private void báoCáoVậnHànhPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            if (baoCaoVH == null || baoCaoVH.IsDisposed)
+            {
+                baoCaoVH = new FrmBaoCaoVanHanh();
+            }
             baoCaoVH.Show();
         }
     }

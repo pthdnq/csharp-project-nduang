@@ -255,8 +255,10 @@ namespace QLPT
                                         , cmbNhanVienID.SelectedValue.ToString()
                                         , cmbDVTC.SelectedValue.ToString()
                                         , txtMoTa.Text
-                                        
-
+                                        , spbKm.Text
+                                        , spbTan.Text
+                                        , spbGio.Text
+                                        , spbm3.Text
                                         );
                     updateMocBaoTri();
                     updateTongVHToPhuongTien();
@@ -285,42 +287,55 @@ namespace QLPT
         private void btSua_Click(object sender, EventArgs e)
         {
             bool ok = validData();
+           bool contain_Ngay_Ca_PhuongTien = m_VanHanhBUS.contain_Ngay_Ca_PhuongTien(dtpNgayVH.Text, spbCaLamViec.Text, cmbPhuongTienID.SelectedValue.ToString());
             if (!ok)
                 return;
-            try
+            else if (contain_Ngay_Ca_PhuongTien == true)
             {
-                DataTable dt = m_VanHanhBUS.selectNgayVHByNgayBatDauVH(cmbPhuongTienID.SelectedValue.ToString());
-                string strNgayBatDauVH = dt.Rows[0][0].ToString();
-
-                if (0 > iDatimeVH)
-                {
-                    MessageBox.Show("khong hop le");
-                }
-                else
-                {
-                    m_VanHanhBUS.update(
-                                  txtVanHanhID.Text.Trim()
-                                  , cmbPhuongTienID.SelectedValue.ToString()
-                                  , dtpNgayVH.Text
-                                  , spbVanHanh.Text
-                                  , txtDonVi.Text
-                                  , spbCaLamViec.Text
-                                  , cmbNhanVienID.SelectedValue.ToString()
-                                  , cmbDVTC.SelectedValue.ToString()
-                                  , txtMoTa.Text
-                                  
-                  );
-
-                    updateTongVHToPhuongTien();
-                    updateMocBaoTri();
-                    FrmVanHanh_Load(sender, e);
-                }
-              
+                MessageBox.Show("Trùng ngày vận hành và ca làm việc với lần vận hành trước đó !");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Lỗi Sửa :" + ex);
+                try
+                {
+                    DataTable dt = m_VanHanhBUS.selectNgayVHByNgayBatDauVH(cmbPhuongTienID.SelectedValue.ToString());
+                    string strNgayBatDauVH = dt.Rows[0][0].ToString();
+
+                    if (0 > iDatimeVH)
+                    {
+                        MessageBox.Show("khong hop le");
+                    }
+                    else
+                    {
+                        m_VanHanhBUS.update(
+                                      txtVanHanhID.Text.Trim()
+                                      , cmbPhuongTienID.SelectedValue.ToString()
+                                      , dtpNgayVH.Text
+                                      , spbVanHanh.Text
+                                      , txtDonVi.Text
+                                      , spbCaLamViec.Text
+                                      , cmbNhanVienID.SelectedValue.ToString()
+                                      , cmbDVTC.SelectedValue.ToString()
+                                      , txtMoTa.Text
+                                       , spbKm.Text
+                                       , spbTan.Text
+                                       , spbGio.Text
+                                       , spbm3.Text
+
+                      );
+
+                        updateTongVHToPhuongTien();
+                        updateMocBaoTri();
+                        FrmVanHanh_Load(sender, e);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi Sửa :" + ex);
+                }
             }
+           
         }
 
         private void dgvVanHanh_Click(object sender, EventArgs e)
@@ -341,7 +356,6 @@ namespace QLPT
                 {
                     dtpNgayVH.Text = row.Cells["NgayVanHanh"].Value.ToString();
                     txtVanHanhID.Text = row.Cells["VanHanhID"].Value.ToString();
-                    txtVanHanhID.Text = row.Cells["VanHanhID"].Value.ToString();
                     txtMoTa.Text = row.Cells["MoTa"].Value.ToString();
                     txtDonVi.Text = row.Cells["VanHanhDV"].Value.ToString();
 
@@ -359,6 +373,12 @@ namespace QLPT
 
                     spbVanHanh.Value = utils.ConvertStringToDecimal(row.Cells["VanHanh"].Value.ToString());
                     spbCaLamViec.Value = utils.ConvertStringToDecimal(row.Cells["CaLamViec"].Value.ToString());
+                    spbKm.Value = utils.ConvertStringToDecimal(row.Cells["KmVH"].Value.ToString());
+                    spbTan.Value = utils.ConvertStringToDecimal(row.Cells["TanVH"].Value.ToString());
+                    spbGio.Value = utils.ConvertStringToDecimal(row.Cells["GioVH"].Value.ToString());
+                    spbm3.Value = utils.ConvertStringToDecimal(row.Cells["m3VH"].Value.ToString());
+                    
+
 
                 }
             }

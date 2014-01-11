@@ -122,7 +122,7 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(328, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(440, 249);
+            this.groupBox2.Size = new System.Drawing.Size(531, 249);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách chi tiêt";
@@ -143,7 +143,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(434, 230);
+            this.dataGridView1.Size = new System.Drawing.Size(525, 230);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
@@ -250,7 +250,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(768, 315);
+            this.ClientSize = new System.Drawing.Size(859, 315);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btXoa);

@@ -48,7 +48,6 @@ namespace QLPT
                 this.cmbLoaiPT.DataSource = m_PhuongTienBUS.selectLoaiPT();
                 this.cmbLoaiPT.DisplayMember = "LoaiPTTen";
                 this.cmbLoaiPT.ValueMember = "LoaiPTMa";
-                cmbLoaiPT.Text = "";
 
                 DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvPhuongTien.Columns["LoaiPTMa"];
                 comboBoxColumn.DataSource = m_PhuongTienBUS.selectLoaiPT();
@@ -69,7 +68,6 @@ namespace QLPT
                 this.cmbNguyenMau.DataSource = m_PhuongTienBUS.selectPhuongTienData_LoaiPT();
                 this.cmbNguyenMau.DisplayMember = "NguyenMauTen";
                 this.cmbNguyenMau.ValueMember = "NguyenMauID";
-                cmbNguyenMau.Text = "";
             }
             catch (Exception ex)
             {
@@ -126,10 +124,10 @@ namespace QLPT
 
             ShowComboxForLoaiPTCol();
 
-            ShowComboxForNguyenMauCol();
+//            ShowComboxForNguyenMauCol();
             ShowComboxForDVTCCol();
             ShowComboxForDVQLCol();
-            selectPhuongTienData_LoaiPT_ByMaLoaiPT();
+           // selectPhuongTienData_LoaiPT_ByMaLoaiPT();
             string strDatimeVHPT = dtpNgayVH.Value.ToString("yyyyMMdd");
             iDatimeVHPT = int.Parse(strDatimeVHPT);
         }
@@ -345,10 +343,15 @@ namespace QLPT
                 cmbNguyenMau.DataSource = m_PhuongTienBUS.selectPhuongTienData_LoaiPT_ByMaLoaiPT(strMaLoaiPt);
                 cmbNguyenMau.DisplayMember = "NguyenMauTen";
                 cmbNguyenMau.ValueMember = "NguyenMauID";
+
+                DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvPhuongTien.Columns["NguyenMauID"];
+                comboBoxColumn.DataSource = m_PhuongTienBUS.selectPhuongTienData_LoaiPT_ByMaLoaiPT(strMaLoaiPt);
+                comboBoxColumn.DisplayMember = "NguyenMauTen";
+                comboBoxColumn.ValueMember = "NguyenMauID";
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show("Lỗi rồi" + ex);
+                //MessageBox.Show("Lỗi rồi" + ex);
             }
         }
 
@@ -414,6 +417,11 @@ namespace QLPT
         {
             e.Cancel = true;
             this.Hide();
+        }
+
+        private void cmbNguyenMau_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
 

@@ -64,11 +64,13 @@
             this.btSua = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvPhuongTien = new System.Windows.Forms.DataGridView();
+            this.txtSearchPhuongTien = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AutoNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhuongTienID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiPTMa = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.NguyenMauID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NguyenMauID = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.BienDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.XuatXu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonViTCID = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -80,8 +82,6 @@
             this.LanDaiTu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayVH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HienTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtSearchPhuongTien = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhuongTien)).BeginInit();
@@ -168,6 +168,7 @@
             this.cmbNguyenMau.Name = "cmbNguyenMau";
             this.cmbNguyenMau.Size = new System.Drawing.Size(250, 21);
             this.cmbNguyenMau.TabIndex = 35;
+            this.cmbNguyenMau.SelectedIndexChanged += new System.EventHandler(this.cmbNguyenMau_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -472,6 +473,26 @@
             this.dgvPhuongTien.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             this.dgvPhuongTien.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
+            // txtSearchPhuongTien
+            // 
+            this.txtSearchPhuongTien.Location = new System.Drawing.Point(925, 35);
+            this.txtSearchPhuongTien.Name = "txtSearchPhuongTien";
+            this.txtSearchPhuongTien.Size = new System.Drawing.Size(182, 20);
+            this.txtSearchPhuongTien.TabIndex = 37;
+            this.txtSearchPhuongTien.Click += new System.EventHandler(this.txtSearchPhuongTien_Click);
+            this.txtSearchPhuongTien.TextChanged += new System.EventHandler(this.txtSearchPhuongTien_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.Window;
+            this.label7.Image = global::QLPT.Properties.Resources.View;
+            this.label7.Location = new System.Drawing.Point(1082, 38);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(25, 13);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "      ";
+            // 
             // Column1
             // 
             this.Column1.HeaderText = "STT";
@@ -511,6 +532,8 @@
             this.NguyenMauID.Name = "NguyenMauID";
             this.NguyenMauID.ReadOnly = true;
             this.NguyenMauID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.NguyenMauID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.NguyenMauID.Width = 200;
             // 
             // BienDK
             // 
@@ -518,6 +541,7 @@
             this.BienDK.HeaderText = "Biển ĐK";
             this.BienDK.Name = "BienDK";
             this.BienDK.ReadOnly = true;
+            this.BienDK.Width = 70;
             // 
             // XuatXu
             // 
@@ -525,6 +549,7 @@
             this.XuatXu.HeaderText = "Xuất xứ";
             this.XuatXu.Name = "XuatXu";
             this.XuatXu.ReadOnly = true;
+            this.XuatXu.Width = 66;
             // 
             // DonViTCID
             // 
@@ -535,6 +560,7 @@
             this.DonViTCID.ReadOnly = true;
             this.DonViTCID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.DonViTCID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.DonViTCID.Width = 150;
             // 
             // DonViQLID
             // 
@@ -545,6 +571,7 @@
             this.DonViQLID.ReadOnly = true;
             this.DonViQLID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.DonViQLID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.DonViQLID.Width = 150;
             // 
             // TongVH
             // 
@@ -559,6 +586,7 @@
             this.LanBDTX.HeaderText = "số lần BDTX";
             this.LanBDTX.Name = "LanBDTX";
             this.LanBDTX.ReadOnly = true;
+            this.LanBDTX.Width = 40;
             // 
             // LanTieuTu
             // 
@@ -566,6 +594,7 @@
             this.LanTieuTu.HeaderText = "Số lần tiểu tu";
             this.LanTieuTu.Name = "LanTieuTu";
             this.LanTieuTu.ReadOnly = true;
+            this.LanTieuTu.Width = 40;
             // 
             // LanTrungTu
             // 
@@ -573,6 +602,7 @@
             this.LanTrungTu.HeaderText = "Số lần trung tu";
             this.LanTrungTu.Name = "LanTrungTu";
             this.LanTrungTu.ReadOnly = true;
+            this.LanTrungTu.Width = 40;
             // 
             // LanDaiTu
             // 
@@ -580,6 +610,7 @@
             this.LanDaiTu.HeaderText = "Số lần đại tu";
             this.LanDaiTu.Name = "LanDaiTu";
             this.LanDaiTu.ReadOnly = true;
+            this.LanDaiTu.Width = 40;
             // 
             // NgayVH
             // 
@@ -594,26 +625,7 @@
             this.HienTrang.HeaderText = "Hiện trạng";
             this.HienTrang.Name = "HienTrang";
             this.HienTrang.ReadOnly = true;
-            // 
-            // txtSearchPhuongTien
-            // 
-            this.txtSearchPhuongTien.Location = new System.Drawing.Point(925, 35);
-            this.txtSearchPhuongTien.Name = "txtSearchPhuongTien";
-            this.txtSearchPhuongTien.Size = new System.Drawing.Size(182, 20);
-            this.txtSearchPhuongTien.TabIndex = 37;
-            this.txtSearchPhuongTien.Click += new System.EventHandler(this.txtSearchPhuongTien_Click);
-            this.txtSearchPhuongTien.TextChanged += new System.EventHandler(this.txtSearchPhuongTien_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.Window;
-            this.label7.Image = global::QLPT.Properties.Resources.View;
-            this.label7.Location = new System.Drawing.Point(1082, 38);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(25, 13);
-            this.label7.TabIndex = 40;
-            this.label7.Text = "      ";
+            this.HienTrang.Width = 30;
             // 
             // FrmPhuongTien
             // 
@@ -682,11 +694,12 @@
         private System.Windows.Forms.TextBox txtSearchPhuongTien;
         private System.Windows.Forms.TextBox txtAutoNum;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn AutoNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhuongTienID;
         private System.Windows.Forms.DataGridViewComboBoxColumn LoaiPTMa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NguyenMauID;
+        private System.Windows.Forms.DataGridViewComboBoxColumn NguyenMauID;
         private System.Windows.Forms.DataGridViewTextBoxColumn BienDK;
         private System.Windows.Forms.DataGridViewTextBoxColumn XuatXu;
         private System.Windows.Forms.DataGridViewComboBoxColumn DonViTCID;
@@ -698,6 +711,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LanDaiTu;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayVH;
         private System.Windows.Forms.DataGridViewTextBoxColumn HienTrang;
-        private System.Windows.Forms.Label label7;
     }
 }

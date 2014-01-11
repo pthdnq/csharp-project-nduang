@@ -72,6 +72,10 @@
             this.CaLamViec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiPTMa = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.PhuongTienID2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.KmVH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TanVH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioVH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.m3VH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VanHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VanHanhDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NhanVienID = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -148,9 +152,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(461, 142);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 13);
+            this.label7.Size = new System.Drawing.Size(50, 13);
             this.label7.TabIndex = 7;
-            this.label7.Text = "Mô tả CV :";
+            this.label7.Text = "Ghi chú :";
             // 
             // label8
             // 
@@ -180,10 +184,11 @@
             // 
             // txtMoTa
             // 
+            this.txtMoTa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMoTa.Location = new System.Drawing.Point(549, 139);
             this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(237, 47);
+            this.txtMoTa.Size = new System.Drawing.Size(237, 93);
             this.txtMoTa.TabIndex = 18;
             // 
             // groupBox1
@@ -246,16 +251,12 @@
             this.spbm3.Name = "spbm3";
             this.spbm3.Size = new System.Drawing.Size(77, 20);
             this.spbm3.TabIndex = 38;
-            this.spbm3.Value = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
             this.spbm3.ValueChanged += new System.EventHandler(this.spbm3_ValueChanged);
             // 
             // cmbCongThucVH
             // 
             this.cmbCongThucVH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCongThucVH.Enabled = false;
             this.cmbCongThucVH.FormattingEnabled = true;
             this.cmbCongThucVH.Location = new System.Drawing.Point(102, 179);
             this.cmbCongThucVH.Name = "cmbCongThucVH";
@@ -311,11 +312,6 @@
             this.spbGio.Name = "spbGio";
             this.spbGio.Size = new System.Drawing.Size(61, 20);
             this.spbGio.TabIndex = 32;
-            this.spbGio.Value = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
             this.spbGio.ValueChanged += new System.EventHandler(this.spbGio_ValueChanged);
             // 
             // txtDonVi
@@ -535,6 +531,10 @@
             this.CaLamViec,
             this.LoaiPTMa,
             this.PhuongTienID2,
+            this.KmVH,
+            this.TanVH,
+            this.GioVH,
+            this.m3VH,
             this.VanHanh,
             this.VanHanhDV,
             this.NhanVienID,
@@ -595,6 +595,34 @@
             this.PhuongTienID2.ReadOnly = true;
             this.PhuongTienID2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.PhuongTienID2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // KmVH
+            // 
+            this.KmVH.DataPropertyName = "KmVH";
+            this.KmVH.HeaderText = "Số km";
+            this.KmVH.Name = "KmVH";
+            this.KmVH.ReadOnly = true;
+            // 
+            // TanVH
+            // 
+            this.TanVH.DataPropertyName = "TanVH";
+            this.TanVH.HeaderText = "Khối lượng VH";
+            this.TanVH.Name = "TanVH";
+            this.TanVH.ReadOnly = true;
+            // 
+            // GioVH
+            // 
+            this.GioVH.DataPropertyName = "GioVH";
+            this.GioVH.HeaderText = "Số giờ";
+            this.GioVH.Name = "GioVH";
+            this.GioVH.ReadOnly = true;
+            // 
+            // m3VH
+            // 
+            this.m3VH.DataPropertyName = "m3VH";
+            this.m3VH.HeaderText = "m3";
+            this.m3VH.Name = "m3VH";
+            this.m3VH.ReadOnly = true;
             // 
             // VanHanh
             // 
@@ -724,6 +752,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CaLamViec;
         private System.Windows.Forms.DataGridViewComboBoxColumn LoaiPTMa;
         private System.Windows.Forms.DataGridViewComboBoxColumn PhuongTienID2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KmVH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TanVH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GioVH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn m3VH;
         private System.Windows.Forms.DataGridViewTextBoxColumn VanHanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn VanHanhDV;
         private System.Windows.Forms.DataGridViewComboBoxColumn NhanVienID;
