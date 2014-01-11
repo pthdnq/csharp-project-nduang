@@ -405,6 +405,17 @@ namespace QLPT
             iDatimeVHPT = int.Parse(strDatimeVHPT);
         }
 
+        private void txtPhuongTienID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmPhuongTien_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
+        }
+
 
     
     }

@@ -286,7 +286,7 @@
             this.txtPhuongTienID.Name = "txtPhuongTienID";
             this.txtPhuongTienID.Size = new System.Drawing.Size(250, 20);
             this.txtPhuongTienID.TabIndex = 15;
-           
+            this.txtPhuongTienID.TextChanged += new System.EventHandler(this.txtPhuongTienID_TextChanged);
             // 
             // label15
             // 
@@ -632,6 +632,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmPhuongTien";
             this.Text = "Phương tiện ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPhuongTien_FormClosing);
             this.Load += new System.EventHandler(this.FrmPhuongTien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

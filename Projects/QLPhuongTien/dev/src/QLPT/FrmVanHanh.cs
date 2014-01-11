@@ -28,10 +28,12 @@ namespace QLPT
         BaoTriBUS m_BaoTriBUS = new BaoTriBUS();
         enum LOAI_CONG_THUC
         {
-            KM_TAN = 9
-            ,GIO = 4
-            ,TAN_GIO =5
-            ,
+            KM_TAN = 1
+            ,GIO = 2
+            ,M3 =5
+            ,TAN = 3
+            ,KG = 4
+            ,M3_TAN = 6
         };
         public void resetControl()
         {
@@ -152,15 +154,34 @@ namespace QLPT
         {
             try
             {
-                //Đơn vị TC
+               
                 this.cmbLoaiPT.DataSource = m_VanHanhBUS.selectLoaiPT();
-                this.cmbLoaiPT.DisplayMember = "TenLoaiPT";
+                this.cmbLoaiPT.DisplayMember = "LoaiPTTen";
                 this.cmbLoaiPT.ValueMember = "LoaiPTMa";
-                cmbLoaiPT.Text = "";
+                
                 DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvVanHanh.Columns["LoaiPTMa"];
                 comboBoxColumn.DataSource = m_VanHanhBUS.selectLoaiPT();
                 comboBoxColumn.DisplayMember = "LoaiPTTen";
                 comboBoxColumn.ValueMember = "LoaiPTMa";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi:" + ex);
+            }
+        }
+
+        public void ShowComboxForCongThucVH()
+        {
+            try
+            {
+                this.cmbCongThucVH.DataSource = m_VanHanhBUS.selectLoaiPT();
+                this.cmbCongThucVH.DisplayMember = "CongThucVH_";
+                this.cmbCongThucVH.ValueMember = "LoaiPTMa";
+
+                DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvVanHanh.Columns["CongThucVH_"];
+                comboBoxColumn.DataSource = m_VanHanhBUS.selectLoaiPT();
+                comboBoxColumn.DisplayMember = "TenCT";
+                comboBoxColumn.ValueMember = "CongThucVH_";
             }
             catch (Exception ex)
             {
@@ -176,6 +197,7 @@ namespace QLPT
             ShowComboxForNhanVienCol();
             ShowComboxForPhuongTienCol();
             ShowComboxForLoaiPT();
+            ShowComboxForCongThucVH();
           
             
         }
@@ -367,29 +389,14 @@ namespace QLPT
 
         private void cmbPhuongTienID_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (cmbPhuongTienID.SelectedValue.ToString().Contains("XT"))
-            //{
-            //    spbVanHanh.Enabled = false;
-            //    spbKm.Enabled = true;
-            //    spbTan.Enabled = true;
-
-            //}
-            //else
-            //{
-            //    spbVanHanh.Enabled = true;
-            //    spbKm.Enabled = false;
-            //    spbTan.Enabled = false;
-            //    spbKm.Value = 0;
-            //    spbTan.Value = 0;
-            //}
-
+         
 
 
         }
 
         private void spbKm_ValueChanged(object sender, EventArgs e)
         {
-            LOAI_CONG_THUC loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbLoaiPT.Text.Trim());
+            LOAI_CONG_THUC loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbCongThucVH.Text.Trim());
             EnableControlForVanHanh(loaiCongThuc);
             TinhVanHanh(loaiCongThuc);
         }
@@ -397,7 +404,7 @@ namespace QLPT
         private void spbTan_ValueChanged(object sender, EventArgs e)
         {
 
-            LOAI_CONG_THUC loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbLoaiPT.Text.Trim());
+            LOAI_CONG_THUC loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbCongThucVH.Text.Trim());
             EnableControlForVanHanh(loaiCongThuc);
             TinhVanHanh(loaiCongThuc);
         }
@@ -453,18 +460,33 @@ namespace QLPT
             switch (LoaiCongThuc)
             {
 
-                case LOAI_CONG_THUC.TAN_GIO:
+                case LOAI_CONG_THUC.M3_TAN:
                     spbKm.Enabled = false;
-                    spbVanHanh.Value = spbTan.Value * spbGio.Value;
+                    spbGio.Enabled = false;
+                    spbVanHanh.Value = spbm3.Value * spbTan.Value;
                     break;
                 case LOAI_CONG_THUC.GIO:
                     spbTan.Enabled = false;
                     spbKm.Enabled = false;
+                    spbm3.Enabled = false;
                     spbVanHanh.Value = spbGio.Value;
                     break;
                 case LOAI_CONG_THUC.KM_TAN:
                     spbGio.Enabled = false;
+                    spbm3.Enabled = false;
                     spbVanHanh.Value = spbKm.Value * spbTan.Value;
+                    break;
+                case LOAI_CONG_THUC.M3:
+                    spbGio.Enabled = false;
+                    spbTan.Enabled = false;
+                    spbKm.Enabled = false;
+                    spbVanHanh.Value = spbm3.Value ;
+                    break;
+                case LOAI_CONG_THUC.TAN:
+                    spbm3.Enabled = false;
+                    spbGio.Enabled = false;
+                    spbKm.Enabled = false;
+                    spbVanHanh.Value =  spbTan.Value;
                     break;
                 default:
                     break;
@@ -499,25 +521,44 @@ namespace QLPT
             switch (loaiCongThuc)
             {
 
-                case LOAI_CONG_THUC.TAN_GIO:
-                    spbGio.Enabled = true;
+                case LOAI_CONG_THUC.M3:
+                    spbm3.Enabled = true;
+                    spbGio.Enabled = false;
                     spbKm.Enabled = false;
-                    spbTan.Enabled = true;
+                    spbTan.Enabled = false;
                     spbVanHanh.Enabled = false;
                     break;
                 case LOAI_CONG_THUC.GIO:
+                    spbm3.Enabled = false;
                     spbGio.Enabled = true;
                     spbKm.Enabled = false;
                     spbTan.Enabled = false;
                     spbVanHanh.Enabled = false;
                     break;
                 case LOAI_CONG_THUC.KM_TAN:
+                    spbm3.Enabled = false;
                     spbGio.Enabled = false;
                     spbKm.Enabled = true;
                     spbTan.Enabled = true;
                     spbVanHanh.Enabled = false;
                     break;
+                case LOAI_CONG_THUC.M3_TAN:
+                    spbm3.Enabled = true;
+                    spbGio.Enabled = false;
+                    spbKm.Enabled = false;
+                    spbTan.Enabled = true;
+                    spbVanHanh.Enabled = false;
+                    break;
+                case LOAI_CONG_THUC.TAN:
+                    spbm3.Enabled = false;
+                    spbGio.Enabled = false;
+                    spbKm.Enabled = false;
+                    spbTan.Enabled = true;
+                    spbVanHanh.Enabled = false;
+                    break;
+
                 default:
+                    spbm3.Enabled = false;
                     spbGio.Enabled = false;
                     spbKm.Enabled = false;
                     spbTan.Enabled = true;
@@ -528,12 +569,15 @@ namespace QLPT
         private void cmbLoaiPT_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectTenPTbyLoaiPT();
+           
             LOAI_CONG_THUC loaiCongThuc;
             try
             {
-                loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbLoaiPT.Text.Trim());
+                cmbCongThucVH.SelectedIndex = cmbLoaiPT.SelectedIndex;
+                loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbCongThucVH.Text.Trim());
                 EnableControlForVanHanh(loaiCongThuc);
                 TinhVanHanh(loaiCongThuc);
+                
             }
             catch (System.Exception ex)
             {
@@ -544,7 +588,7 @@ namespace QLPT
 
         private void spbGio_ValueChanged(object sender, EventArgs e)
         {
-            LOAI_CONG_THUC loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbLoaiPT.Text.Trim());
+            LOAI_CONG_THUC loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbCongThucVH.Text.Trim());
             EnableControlForVanHanh(loaiCongThuc);
             TinhVanHanh(loaiCongThuc);
         }
@@ -555,6 +599,24 @@ namespace QLPT
             string strDatimeVH = dtpNgayVH.Value.ToString("yyyyMMdd");
             iDatimeVH = int.Parse(strDatimeVH);
                     
+        }
+
+        private void FrmVanHanh_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
+        }
+
+        private void spbm3_ValueChanged(object sender, EventArgs e)
+        {
+            LOAI_CONG_THUC loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbCongThucVH.Text.Trim());
+            EnableControlForVanHanh(loaiCongThuc);
+            TinhVanHanh(loaiCongThuc);
+        }
+
+        private void spbVanHanh_ValueChanged(object sender, EventArgs e)
+        {
+
         }
 
     }

@@ -11,6 +11,24 @@ namespace QLPT
 {
     public partial class frmMain : Form
     {
+        FrmDangNhap frmdn = new FrmDangNhap();
+        FrmDangKy frmdk = new FrmDangKy();
+        FrmDoiMatKhau frmdmk = new FrmDoiMatKhau();
+        FrmPhuongTien phuongtien = new FrmPhuongTien();
+        FrmVanHanh vanhanh = new FrmVanHanh();
+        FrmBaoCaoVanHanh baoCaoVH = new FrmBaoCaoVanHanh();
+        frmDonVi_QL DVQL = new frmDonVi_QL();
+        FrmHelp help = new FrmHelp();
+        FrmAboutUs thongtinct = new FrmAboutUs();
+        FrmBaoCaoNhanVien baoCaoNhanVien = new FrmBaoCaoNhanVien();
+        FrmBaoCaoThongTinPT baocaoInfoPT = new FrmBaoCaoThongTinPT();
+        FrmDonVi_TC dvtc = new FrmDonVi_TC();
+        FrmLoaiPT loaipt = new FrmLoaiPT();
+        FrmNhanVien nv = new FrmNhanVien();
+        FrmNguyenMau_PT nmpt = new FrmNguyenMau_PT();
+        FrmTimKiem timkiem = new FrmTimKiem();
+        private static string QUYEN_QUAN_LY = "quanly";
+        private static string QUYEN_NHAN_VIEN= "nhanvien";
         public frmMain()
         {
             InitializeComponent();
@@ -23,12 +41,34 @@ namespace QLPT
 
         private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmDangNhap frmdn = new FrmDangNhap();
+            
            // frmdn.ShowDiaLog();
+           // frmdn.lbStatus.Text = "";
+            //frmdn.resetControl();
+            frmdn.txtUser.Text = "";
+            frmdn.txtPass.Text = "";
             frmdn.ShowDialog();
             if(frmdn.m_isLogin == true)
             {
                 unlockControl();
+                if(frmdn.m_PhanQuyen == QUYEN_QUAN_LY)
+                {
+                    quyenQuanLy();
+                }
+                else if(frmdn.m_PhanQuyen == QUYEN_NHAN_VIEN)
+                {
+                    quyenNhanVien();
+                }
+                //else if(dk)
+                //{
+                    //TODO
+                //}
+                else
+                {
+                    MessageBox.Show("Tài khoải chưa đượcc cấp quyền truy cập");
+                    lockControl();
+                }
+
             }
             else
             {
@@ -36,16 +76,48 @@ namespace QLPT
             }
 
         }
+        private void quyenQuanLy()
+        {
+            
+            nv.btThem.Enabled = true;
+            nv.btSua.Enabled = true;
 
+            dvtc.btThem.Visible = true;
+            dvtc.btSua.Visible = true;
+            dvtc.btXoa.Visible = true;
+            dvtc.btLuu.Visible = true;
+            mnDangKy.Enabled = true;
+            mnPhuongTien.Enabled = true;
+            mnDonViQuanLy.Enabled = true;
+            mnQuanLyVanhHanh.Enabled = true;
+            mnDanhSachNhanVien.Enabled = true;
+            mnBaoCaoVanHanh.Enabled = true;
+            mnQuanLyNhanVien.Enabled = true;
+        }
+        private void quyenNhanVien()
+        {       
+            dvtc.btThem.Visible = false;
+            dvtc.btSua.Visible = false;
+            dvtc.btXoa.Visible = false;
+            dvtc.btLuu.Visible = false;
+            mnDangKy.Enabled = false;
+            mnPhuongTien.Enabled = false;
+            mnDonViQuanLy.Enabled = false;
+            mnQuanLyVanhHanh.Enabled = false;
+            mnDanhSachNhanVien.Enabled = true;
+            mnBaoCaoVanHanh.Enabled = true;
+            mnQuanLyNhanVien.Enabled = false;
+            
+        }
         private void đăngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmDangKy frmdk = new FrmDangKy();
+            
             frmdk.Show();
         }
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmDoiMatKhau frmdmk = new FrmDoiMatKhau();
+            
             frmdmk.Show();
         }
 
@@ -57,14 +129,14 @@ namespace QLPT
 
         private void nguyênMẫuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmPhuongTien phuongtien = new FrmPhuongTien();
+            
             phuongtien.Show();
 
         }
 
         private void quảnLýĐơnVịThiCôngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDonVi_QL DVQL = new frmDonVi_QL();
+           
             DVQL.Show();
         }
 
@@ -76,31 +148,31 @@ namespace QLPT
 
         private void loạiPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmLoaiPT loaipt = new FrmLoaiPT();
+
             loaipt.Show();
         }
 
         private void đơnVịThiCôngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmDonVi_TC dvtc = new FrmDonVi_TC();
+            
             dvtc.Show();
         }
 
         private void quảnLýNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmNhanVien nv = new FrmNhanVien();
+            
             nv.Show();
         }
 
         private void danhSáchCácPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmNguyenMau_PT nmpt = new FrmNguyenMau_PT();
+            
             nmpt.Show();
         }
 
         private void tìmKiếmPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmTimKiem timkiem = new FrmTimKiem();
+            
             timkiem.Show();
         }
         public void lockControl()
@@ -133,7 +205,10 @@ namespace QLPT
 
         private void quảnLýVậnHànhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmVanHanh vanhanh = new FrmVanHanh();
+            if (vanhanh == null || vanhanh.IsDisposed)
+            {
+                vanhanh = new FrmVanHanh();
+            }
             vanhanh.Show();
         }
 
@@ -141,13 +216,14 @@ namespace QLPT
 
         private void thôngTinChươngTrìnhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmAboutUs thongtinct = new FrmAboutUs();
+
             thongtinct.Show();
+            
         }
 
         private void hướngDẫnSửDụngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmHelp help = new FrmHelp();
+            
             help.Show();
 
 
@@ -155,19 +231,19 @@ namespace QLPT
 
         private void tìnhTrạngBảoTrìToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmBaoCaoThongTinPT baocaoInfoPT = new FrmBaoCaoThongTinPT();
+           
             baocaoInfoPT.Show();
         }
 
         private void danhSáchNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmBaoCaoNhanVien baoCaoNhanVien = new FrmBaoCaoNhanVien();
+           
             baoCaoNhanVien.Show();
         }
 
         private void báoCáoVậnHànhPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmBaoCaoVanHanh baoCaoVH = new FrmBaoCaoVanHanh();
+            
             baoCaoVH.Show();
         }
     }

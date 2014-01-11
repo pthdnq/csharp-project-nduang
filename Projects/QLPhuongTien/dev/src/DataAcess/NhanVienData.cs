@@ -12,7 +12,7 @@ namespace DataAcess
         Data data = new Data();
 
         DonViTCData m_DonViTCData = new DonViTCData();
-        public bool insert(string NhanVienID, string NhanVienTen, string Sdt, string Email, string DC,  string DonViTCID)
+        public bool insert(string NhanVienID, string NhanVienTen, string Sdt, string Email, string DC, string DonViTCID, string UserName)
         {
             int retval;
             SqlConnection con = data.getConnect();
@@ -28,12 +28,13 @@ namespace DataAcess
             cmd.Parameters.Add("DC", SqlDbType.NVarChar).Value = DC;
            // cmd.Parameters.Add("PhuongTienID", SqlDbType.NVarChar).Value = PhuongTienID;
             cmd.Parameters.Add("DonViTCID", SqlDbType.NVarChar).Value = DonViTCID;
+            cmd.Parameters.Add("UserName", SqlDbType.NVarChar).Value = UserName;
             retval = cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
             return retval > 0;
         }
-        public bool update(string NhanVienID, string NhanVienTen, string Sdt, string Email, string DC, string DonViTCID)
+        public bool update(string NhanVienID, string NhanVienTen, string Sdt, string Email, string DC, string DonViTCID, string UserName)
         {
             int retval;
             SqlConnection con = data.getConnect();
@@ -48,6 +49,7 @@ namespace DataAcess
             cmd.Parameters.Add("Email", SqlDbType.NVarChar).Value = Email;
             cmd.Parameters.Add("DC", SqlDbType.NVarChar).Value = DC;
             cmd.Parameters.Add("DonViTCID", SqlDbType.NVarChar).Value = DonViTCID;
+            cmd.Parameters.Add("UserName", SqlDbType.NVarChar).Value = UserName;
             retval = cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
@@ -97,5 +99,31 @@ namespace DataAcess
           return dtb;
 
       }
+
+      public DataTable selectUserNametoNhanVien()
+      {
+          SqlConnection con = data.getConnect();
+          con.Open();
+          SqlCommand cmd = new SqlCommand();
+          cmd.Connection = con;
+          cmd.CommandType = CommandType.StoredProcedure;
+          cmd.CommandText = "select_UserNhanVienbyDangNhap";
+          //retval = cmd.ExecuteNonQuery();
+          DataTable dtb;
+          try
+          {
+              SqlDataAdapter da = new SqlDataAdapter(cmd);
+              DataSet ds = new DataSet();
+              da.Fill(ds, "NhanVien");
+              dtb = ds.Tables["NhanVien"];
+          }
+          catch (System.Exception ex)
+          {
+              return null;
+          }
+          return dtb;
+
+      }
     }
+
 }

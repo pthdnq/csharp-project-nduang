@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbTenTruyCap = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.cmbDVTC = new System.Windows.Forms.ComboBox();
             this.txtNhanVien_Ten = new System.Windows.Forms.TextBox();
             this.txtNhanVien_Sdt = new System.Windows.Forms.TextBox();
@@ -49,8 +51,8 @@
             this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.PhuongTienID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonViTCID = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.UserName = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btSua = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
@@ -66,6 +68,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbTenTruyCap);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.cmbDVTC);
             this.groupBox1.Controls.Add(this.txtNhanVien_Ten);
             this.groupBox1.Controls.Add(this.txtNhanVien_Sdt);
@@ -80,15 +84,35 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(630, 147);
+            this.groupBox1.Size = new System.Drawing.Size(630, 176);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhân viên";
             // 
+            // cmbTenTruyCap
+            // 
+            this.cmbTenTruyCap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTenTruyCap.FormattingEnabled = true;
+            this.cmbTenTruyCap.Location = new System.Drawing.Point(419, 102);
+            this.cmbTenTruyCap.Name = "cmbTenTruyCap";
+            this.cmbTenTruyCap.Size = new System.Drawing.Size(192, 21);
+            this.cmbTenTruyCap.TabIndex = 14;
+            this.cmbTenTruyCap.SelectedIndexChanged += new System.EventHandler(this.cmbTenTruyCap_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(349, 105);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 13);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Tên truy cập";
+            // 
             // cmbDVTC
             // 
+            this.cmbDVTC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDVTC.FormattingEnabled = true;
-            this.cmbDVTC.Location = new System.Drawing.Point(419, 102);
+            this.cmbDVTC.Location = new System.Drawing.Point(419, 70);
             this.cmbDVTC.Name = "cmbDVTC";
             this.cmbDVTC.Size = new System.Drawing.Size(192, 21);
             this.cmbDVTC.TabIndex = 12;
@@ -109,14 +133,14 @@
             // 
             // txtNhanVien_Email
             // 
-            this.txtNhanVien_Email.Location = new System.Drawing.Point(419, 24);
+            this.txtNhanVien_Email.Location = new System.Drawing.Point(106, 136);
             this.txtNhanVien_Email.Name = "txtNhanVien_Email";
-            this.txtNhanVien_Email.Size = new System.Drawing.Size(192, 20);
+            this.txtNhanVien_Email.Size = new System.Drawing.Size(196, 20);
             this.txtNhanVien_Email.TabIndex = 9;
             // 
             // txtNhanVien_DC
             // 
-            this.txtNhanVien_DC.Location = new System.Drawing.Point(419, 62);
+            this.txtNhanVien_DC.Location = new System.Drawing.Point(419, 30);
             this.txtNhanVien_DC.Name = "txtNhanVien_DC";
             this.txtNhanVien_DC.Size = new System.Drawing.Size(192, 20);
             this.txtNhanVien_DC.TabIndex = 8;
@@ -150,7 +174,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(351, 31);
+            this.label4.Location = new System.Drawing.Point(6, 143);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 3;
@@ -159,7 +183,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(351, 65);
+            this.label3.Location = new System.Drawing.Point(351, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 2;
@@ -168,7 +192,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(351, 105);
+            this.label2.Location = new System.Drawing.Point(351, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 1;
@@ -186,9 +210,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvNhanVien);
-            this.groupBox2.Location = new System.Drawing.Point(12, 234);
+            this.groupBox2.Location = new System.Drawing.Point(12, 263);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(988, 239);
+            this.groupBox2.Size = new System.Drawing.Size(988, 216);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách chi tiết";
@@ -206,8 +230,8 @@
             this.Sdt,
             this.Email,
             this.DC,
-            this.Column7,
-            this.PhuongTienID});
+            this.DonViTCID,
+            this.UserName});
             this.dgvNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvNhanVien.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.dgvNhanVien.Location = new System.Drawing.Point(3, 16);
@@ -215,7 +239,7 @@
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.ReadOnly = true;
             this.dgvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhanVien.Size = new System.Drawing.Size(982, 220);
+            this.dgvNhanVien.Size = new System.Drawing.Size(982, 197);
             this.dgvNhanVien.TabIndex = 0;
             this.dgvNhanVien.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             this.dgvNhanVien.Click += new System.EventHandler(this.dataGridView1_Click);
@@ -266,22 +290,24 @@
             this.DC.ReadOnly = true;
             this.DC.Width = 200;
             // 
-            // Column7
+            // DonViTCID
             // 
-            this.Column7.DataPropertyName = "DonViTCID";
-            this.Column7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Column7.HeaderText = "Đơn vị TC";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 200;
+            this.DonViTCID.DataPropertyName = "DonViTCID";
+            this.DonViTCID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DonViTCID.HeaderText = "Đơn vị TC";
+            this.DonViTCID.Name = "DonViTCID";
+            this.DonViTCID.ReadOnly = true;
+            this.DonViTCID.Width = 200;
             // 
-            // PhuongTienID
+            // UserName
             // 
-            this.PhuongTienID.DataPropertyName = "PhuongTienID";
-            this.PhuongTienID.HeaderText = "Phương tiện ";
-            this.PhuongTienID.Name = "PhuongTienID";
-            this.PhuongTienID.ReadOnly = true;
-            this.PhuongTienID.Width = 200;
+            this.UserName.DataPropertyName = "UserName";
+            this.UserName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UserName.HeaderText = "Tên truy cập";
+            this.UserName.Name = "UserName";
+            this.UserName.ReadOnly = true;
+            this.UserName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.UserName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // txtTimKiem
             // 
@@ -296,7 +322,7 @@
             this.btSua.Enabled = false;
             this.btSua.Image = global::QLPT.Properties.Resources.application_edit;
             this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSua.Location = new System.Drawing.Point(118, 179);
+            this.btSua.Location = new System.Drawing.Point(118, 209);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(75, 30);
             this.btSua.TabIndex = 5;
@@ -309,7 +335,7 @@
             this.btXoa.Enabled = false;
             this.btXoa.Image = global::QLPT.Properties.Resources.Delete;
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoa.Location = new System.Drawing.Point(228, 179);
+            this.btXoa.Location = new System.Drawing.Point(228, 209);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(75, 30);
             this.btXoa.TabIndex = 4;
@@ -322,7 +348,7 @@
             this.btLuu.Enabled = false;
             this.btLuu.Image = global::QLPT.Properties.Resources.Save;
             this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLuu.Location = new System.Drawing.Point(334, 179);
+            this.btLuu.Location = new System.Drawing.Point(334, 209);
             this.btLuu.Name = "btLuu";
             this.btLuu.Size = new System.Drawing.Size(75, 30);
             this.btLuu.TabIndex = 3;
@@ -334,7 +360,7 @@
             // 
             this.btThoat.Image = global::QLPT.Properties.Resources.Exit;
             this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThoat.Location = new System.Drawing.Point(567, 179);
+            this.btThoat.Location = new System.Drawing.Point(567, 209);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(75, 30);
             this.btThoat.TabIndex = 2;
@@ -346,7 +372,7 @@
             // 
             this.btThem.Image = global::QLPT.Properties.Resources.plus_16;
             this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThem.Location = new System.Drawing.Point(12, 179);
+            this.btThem.Location = new System.Drawing.Point(12, 209);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(75, 30);
             this.btThem.TabIndex = 1;
@@ -379,7 +405,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1012, 485);
+            this.ClientSize = new System.Drawing.Size(1012, 490);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtTimKiem);
@@ -392,6 +418,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmNhanVien";
             this.Text = "Nhân viên";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmNhanVien_FormClosing);
             this.Load += new System.EventHandler(this.FrmNhanVien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -417,23 +444,25 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.Button btThoat;
-        private System.Windows.Forms.Button btLuu;
-        private System.Windows.Forms.Button btXoa;
-        private System.Windows.Forms.Button btSua;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvNhanVien;
         private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cmbTenTruyCap;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn NhanVienID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NhanVienTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sdt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn DC;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PhuongTienID;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewComboBoxColumn DonViTCID;
+        private System.Windows.Forms.DataGridViewComboBoxColumn UserName;
+        public System.Windows.Forms.Button btThem;
+        public System.Windows.Forms.Button btSua;
+        public System.Windows.Forms.Button btLuu;
+        public System.Windows.Forms.Button btXoa;
     }
 }
