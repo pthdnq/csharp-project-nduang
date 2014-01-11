@@ -25,7 +25,11 @@ namespace DataAcess
             string CaLamViec,
             string NhanVienID,
             string DonViTCID,
-            string MoTa
+            string MoTa,
+            string KmVH,
+            string TanVH,
+            string GioVH,
+            string m3VH
             
        )
         {
@@ -46,6 +50,11 @@ namespace DataAcess
             cmd.Parameters.Add("NhanVienID", SqlDbType.NVarChar).Value = NhanVienID;
             cmd.Parameters.Add("DonViTCID", SqlDbType.NVarChar).Value = DonViTCID;
             cmd.Parameters.Add("MoTa", SqlDbType.NVarChar).Value = MoTa;
+            cmd.Parameters.Add("KmVH", SqlDbType.Float).Value = float.Parse(KmVH);
+            cmd.Parameters.Add("TanVH", SqlDbType.Float).Value = float.Parse(TanVH);
+            cmd.Parameters.Add("GioVH", SqlDbType.Float).Value = float.Parse(GioVH);
+            cmd.Parameters.Add("m3VH", SqlDbType.Float).Value = float.Parse(m3VH);
+           
             
             retval = cmd.ExecuteNonQuery();
             cmd.Dispose();
@@ -60,9 +69,12 @@ namespace DataAcess
                  string VanHanhDV,
                  string CaLamViec,
                  string NhanVienID,
-                 string DonViTCID,
-                 string MoTa
-                 
+                 string DonViTCID,               
+                 string MoTa,
+                 string KmVH,
+                 string TanVH,
+                 string GioVH,
+                 string m3VH
 
             )
         {
@@ -93,6 +105,10 @@ namespace DataAcess
             cmd.Parameters.Add("NhanVienID", SqlDbType.NVarChar).Value = NhanVienID;
             cmd.Parameters.Add("DonViTCID", SqlDbType.NVarChar).Value = DonViTCID;
             cmd.Parameters.Add("MoTa", SqlDbType.NVarChar).Value = MoTa;
+            cmd.Parameters.Add("KmVH", SqlDbType.Float).Value = float.Parse(KmVH);
+            cmd.Parameters.Add("TanVH", SqlDbType.Float).Value = float.Parse(TanVH);
+            cmd.Parameters.Add("GioVH", SqlDbType.Float).Value = float.Parse(GioVH);
+            cmd.Parameters.Add("m3VH", SqlDbType.Float).Value = float.Parse(m3VH);
             
             retval = cmd.ExecuteNonQuery();
             cmd.Dispose();
@@ -135,6 +151,7 @@ namespace DataAcess
             {
                 return null;
             }
+
             return dtb;
         }
 
@@ -194,6 +211,7 @@ namespace DataAcess
             {
                 return null;
             }
+
             return dtb;
         }
         public DataTable update_TongVHToPhuongTien(string PhuongTienID, string TongVH)
@@ -238,5 +256,35 @@ namespace DataAcess
         {
             return m_PhuongTienData.selectNgayVHbyNgayBatDauVH(PhuongTienID);
         }
+        public bool contain_Ngay_Ca_PhuongTien(string NgayVanHanh, string CaLamViec, string PhuongTienID)
+        {
+            SqlConnection con = data.getConnect();
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_contain_Ngay_Ca_PhuongTien";
+            cmd.Parameters.Add("NgayVanHanh", SqlDbType.NVarChar).Value = NgayVanHanh;
+            cmd.Parameters.Add("CaLamViec", SqlDbType.NVarChar).Value = CaLamViec;
+            cmd.Parameters.Add("PhuongTienID", SqlDbType.NVarChar).Value = PhuongTienID;
+            DataTable dtb;
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "PhuongTien");
+                dtb = ds.Tables["PhuongTien"];
+            }
+            catch (System.Exception ex)
+            {
+                return false;
+            }
+            
+            int count =  dtb.Rows.Count;
+            if (count > 0)
+                return true;
+            return false;
+        }
+
     }
 }

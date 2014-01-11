@@ -22,7 +22,11 @@ namespace BusinessLogic
             string CaLamViec,
             string NhanVienID,
             string DonViTCID,
-            string MoTa
+            string MoTa,
+            string KmVH,
+            string TanVH,
+            string GioVH,
+            string m3VH
           
          )
        {
@@ -36,7 +40,11 @@ namespace BusinessLogic
                CaLamViec,
                NhanVienID,
                DonViTCID,
-               MoTa
+               MoTa,
+               KmVH,
+               TanVH,
+               GioVH,
+               m3VH
                
                );
        
@@ -50,7 +58,11 @@ namespace BusinessLogic
             string CaLamViec,
             string NhanVienID,
             string DonViTCID,
-            string MoTa
+            string MoTa,
+             string KmVH,
+             string TanVH,
+             string GioVH,
+             string m3VH
            
            )
        {
@@ -64,7 +76,11 @@ namespace BusinessLogic
                CaLamViec,
                NhanVienID,
                DonViTCID,
-               MoTa
+               MoTa,
+               KmVH,
+               TanVH,
+               GioVH,
+               m3VH
               
            );
        }
@@ -135,6 +151,10 @@ namespace BusinessLogic
        public DataTable selectNgayVHByNgayBatDauVH(string PhuongTienID)
        {
            return m_VanHanhData.selectNgayVHByNgayBatDauVH(PhuongTienID);
+       }
+       public bool contain_Ngay_Ca_PhuongTien(string NgayVanHanh, string CaLamViec, string PhuongTienID)
+       {
+         return  m_VanHanhData.contain_Ngay_Ca_PhuongTien(NgayVanHanh, CaLamViec, PhuongTienID);
        }
     }
 }

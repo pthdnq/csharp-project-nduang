@@ -181,6 +181,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmTimKiem";
             this.Text = "Tìm kiếm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmTimKiem_FormClosing);
             this.Load += new System.EventHandler(this.FrmTimKiem_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
