@@ -32,6 +32,8 @@
             this.btThoat = new System.Windows.Forms.Button();
             this.btDK = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbPhanQuyen = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.txtMK = new System.Windows.Forms.TextBox();
             this.txtNhapLaiMK = new System.Windows.Forms.TextBox();
@@ -45,7 +47,7 @@
             // 
             this.btNhapLai.Image = global::QLPT.Properties.Resources.arrow_refresh;
             this.btNhapLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btNhapLai.Location = new System.Drawing.Point(148, 181);
+            this.btNhapLai.Location = new System.Drawing.Point(148, 210);
             this.btNhapLai.Name = "btNhapLai";
             this.btNhapLai.Size = new System.Drawing.Size(84, 29);
             this.btNhapLai.TabIndex = 7;
@@ -57,7 +59,7 @@
             // 
             this.btThoat.Image = global::QLPT.Properties.Resources.Exit;
             this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThoat.Location = new System.Drawing.Point(270, 181);
+            this.btThoat.Location = new System.Drawing.Point(270, 210);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(81, 29);
             this.btThoat.TabIndex = 6;
@@ -69,7 +71,7 @@
             // 
             this.btDK.Image = global::QLPT.Properties.Resources.accept;
             this.btDK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btDK.Location = new System.Drawing.Point(12, 181);
+            this.btDK.Location = new System.Drawing.Point(12, 210);
             this.btDK.Name = "btDK";
             this.btDK.Size = new System.Drawing.Size(93, 29);
             this.btDK.TabIndex = 5;
@@ -79,6 +81,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbPhanQuyen);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtTen);
             this.groupBox1.Controls.Add(this.txtMK);
             this.groupBox1.Controls.Add(this.txtNhapLaiMK);
@@ -87,10 +91,30 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(339, 151);
+            this.groupBox1.Size = new System.Drawing.Size(339, 177);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đăng ký tài khoản mới ";
+            // 
+            // cmbPhanQuyen
+            // 
+            this.cmbPhanQuyen.FormattingEnabled = true;
+            this.cmbPhanQuyen.Items.AddRange(new object[] {
+            "quanly",
+            "nhanvien"});
+            this.cmbPhanQuyen.Location = new System.Drawing.Point(121, 143);
+            this.cmbPhanQuyen.Name = "cmbPhanQuyen";
+            this.cmbPhanQuyen.Size = new System.Drawing.Size(179, 21);
+            this.cmbPhanQuyen.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 152);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Phân quyền :";
             // 
             // txtTen
             // 
@@ -147,13 +171,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(383, 225);
+            this.ClientSize = new System.Drawing.Size(383, 254);
             this.Controls.Add(this.btNhapLai);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btDK);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmDangKy";
             this.Text = "Đăng ký tài khoản mới";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDangKy_FormClosing);
             this.Load += new System.EventHandler(this.FrmDangKy_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -173,5 +198,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbPhanQuyen;
+        private System.Windows.Forms.Label label4;
     }
 }

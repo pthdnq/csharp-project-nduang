@@ -11,7 +11,7 @@ namespace DataAcess
    public class LoaiPTData
     {
        Data data = new Data();
-       public bool insert(string LoaiPTMa, string LoaiPTTen , string CongThucVH , string MoTaCongThuc)
+       public bool insert(string LoaiPTMa, string LoaiPTTen , string CongThucVH )
        {
 
            int retval;
@@ -24,7 +24,6 @@ namespace DataAcess
            cmd.Parameters.Add("LoaiPTMa", SqlDbType.NVarChar).Value = LoaiPTMa;
            cmd.Parameters.Add("LoaiPTTen", SqlDbType.NVarChar).Value = LoaiPTTen;
            cmd.Parameters.Add("CongThucVH", SqlDbType.NVarChar).Value = CongThucVH;
-           cmd.Parameters.Add("MoTaCongThuc", SqlDbType.NVarChar).Value = MoTaCongThuc;
            retval = cmd.ExecuteNonQuery();
            cmd.Dispose();
            con.Close();
@@ -33,7 +32,7 @@ namespace DataAcess
        public bool update(string LoaiPTMa
            , string LoaiPTTen  
            ,string CongThucVH
-           , string MoTaCongThuc)
+          )
        {
 
            int retval;
@@ -46,7 +45,7 @@ namespace DataAcess
            cmd.Parameters.Add("LoaiPTMa", SqlDbType.NVarChar).Value = LoaiPTMa;
            cmd.Parameters.Add("LoaiPTTen", SqlDbType.NVarChar).Value = LoaiPTTen;
            cmd.Parameters.Add("CongThucVH", SqlDbType.NVarChar).Value = CongThucVH;
-           cmd.Parameters.Add("MoTaCongThuc", SqlDbType.NVarChar).Value = MoTaCongThuc;
+          
            retval = cmd.ExecuteNonQuery();
            cmd.Dispose();
            con.Close();
@@ -74,7 +73,7 @@ namespace DataAcess
            SqlCommand cmd = new SqlCommand();
            cmd.Connection = con;
            cmd.CommandType = CommandType.StoredProcedure;
-           cmd.CommandText = "sp_select_LoaiPTData";
+           cmd.CommandText = "sp_select_LoaiPT";
            //retval = cmd.ExecuteNonQuery();
            DataTable dtb;
            try
@@ -144,5 +143,30 @@ namespace DataAcess
            return dtb;
 
        }
+
+       public DataTable selectCongThucVH()
+       {
+           SqlConnection con = data.getConnect();
+           con.Open();
+           SqlCommand cmd = new SqlCommand();
+           cmd.Connection = con;
+           cmd.CommandType = CommandType.StoredProcedure;
+           cmd.CommandText = "sp_selectCongThucVH";
+           DataTable dtb;
+           try
+           {
+               SqlDataAdapter da = new SqlDataAdapter(cmd);
+               DataSet ds = new DataSet();
+               da.Fill(ds, "LoaiPT");
+               dtb = ds.Tables["LoaiPT"];
+           }
+           catch (System.Exception ex)
+           {
+               return null;
+           }
+           return dtb;
+
+       }
+     
     }
 }

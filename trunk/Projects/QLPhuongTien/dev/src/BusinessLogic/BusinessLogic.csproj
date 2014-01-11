@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaoTriBUS.cs" />
+    <Compile Include="DangKyBUS.cs" />
     <Compile Include="DonViQuanLyBUS.cs" />
     <Compile Include="DonViTCBUS.cs" />
     <Compile Include="LoaiPT.cs" />

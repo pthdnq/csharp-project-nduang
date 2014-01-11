@@ -99,5 +99,11 @@ namespace QLPT
         {
             this.Close();
         }
+
+        private void FrmAboutUs_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
+        }
     }
 }

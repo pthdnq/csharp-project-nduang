@@ -29,8 +29,8 @@ namespace QLPT
         {
             txtLoaiPT_Ten.Text = "";
             txtLoaiPT_Ma.Text = "";
-            txtCongThucVH.Text = "";
-            txtMoTaCT.Text = "";
+            cmbCongThucVH.Text = "";
+           
         }
 
         private void FrmLoaiPT_Load(object sender, EventArgs e)
@@ -39,6 +39,25 @@ namespace QLPT
             DataTable dat = new DataTable();
             dat = m_LoaiPTBUS.select();
             dataGridView1.DataSource = dat;
+
+            try
+            {
+                this.cmbCongThucVH.DataSource = m_LoaiPTBUS.selectCongThucVH();
+                this.cmbCongThucVH.DisplayMember = "TenCT";
+                this.cmbCongThucVH.ValueMember = "CongThucVH_";
+
+
+                DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dataGridView1.Columns["CongThucVH_"];
+                DataTable dt = m_LoaiPTBUS.selectCongThucVH();
+                int count = dt.Rows.Count;
+                comboBoxColumn.DataSource = m_LoaiPTBUS.selectCongThucVH();
+                comboBoxColumn.DisplayMember = "TenCT";
+                comboBoxColumn.ValueMember = "CongThucVH_";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi:" + ex);
+            }
         }
 
         private void dataGridView1_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
@@ -61,17 +80,12 @@ namespace QLPT
                 MessageBox.Show("Trường Tên Phương tiện không được bỏ trống !");
                 return false;
             }
-            else if (this.txtCongThucVH.Text.Length == 0)
+            else if (this.cmbCongThucVH.Text.Length == 0)
             {
                 MessageBox.Show("Trường Công Thức Vận Hành không được bỏ trống !");
                 return false;
             }
-            else if (this.txtMoTaCT.Text.Length == 0)
-            {
-                MessageBox.Show("Trường Mô Tả Công Thức không được bỏ trống !");
-                return false;
-            }
-            
+           
             return true;
         }
 
@@ -96,8 +110,8 @@ namespace QLPT
             {
                 m_LoaiPTBUS.insert(txtLoaiPT_Ma.Text
                                         , txtLoaiPT_Ten.Text
-                                        , txtCongThucVH.Text
-                                        ,txtMoTaCT.Text
+                                        , cmbCongThucVH.Text
+                                      
                                         );
 
                 FrmLoaiPT_Load(sender, e);
@@ -119,10 +133,10 @@ namespace QLPT
                 return;
             try
             {
-                m_LoaiPTBUS.update(txtLoaiPT_Ma.Text
-                    , txtLoaiPT_Ten.Text
-                    ,txtCongThucVH.Text
-                    ,txtMoTaCT.Text
+                m_LoaiPTBUS.update(txtLoaiPT_Ma.Text.Trim()
+                    , txtLoaiPT_Ten.Text.Trim()
+                    ,cmbCongThucVH.SelectedValue.ToString()
+                    
                     );
                 FrmLoaiPT_Load(sender, e);
             }
@@ -134,16 +148,25 @@ namespace QLPT
 
         private void dataGridView1_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            try
             {
-                this.txtLoaiPT_Ma.Text = row.Cells["LoaiPTMa"].Value.ToString();
-                this.txtLoaiPT_Ten.Text = row.Cells["LoaiPTTen"].Value.ToString();
-                this.txtCongThucVH.Text = row.Cells["CongThucVH"].Value.ToString();
-                this.txtMoTaCT.Text = row.Cells["MoTaCongThuc"].Value.ToString();
-                btSua.Enabled = true;
-                btXoa.Enabled = true;
-                btLuu.Enabled = false;
+                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                {
+                    this.txtLoaiPT_Ma.Text = row.Cells["LoaiPTMa"].Value.ToString();
+                    this.txtLoaiPT_Ten.Text = row.Cells["LoaiPTTen"].Value.ToString();
+                    this.cmbCongThucVH.SelectedValue = row.Cells["CongThucVH_"].Value.ToString();
+
+
+                }
             }
+            catch (System.Exception ex)
+            {
+            	
+            }
+            btSua.Enabled = true;
+            btXoa.Enabled = true;
+            btLuu.Enabled = false;
+
         }
 
         private void btThoat_Click(object sender, EventArgs e)
@@ -178,6 +201,12 @@ namespace QLPT
                 }
 
             }
+        }
+
+        private void FrmLoaiPT_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
         }
 
 

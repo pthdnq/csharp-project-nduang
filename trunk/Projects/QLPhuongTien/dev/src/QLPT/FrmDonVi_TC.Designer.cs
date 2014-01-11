@@ -83,7 +83,6 @@
             this.txtDonViTC_ID.Name = "txtDonViTC_ID";
             this.txtDonViTC_ID.Size = new System.Drawing.Size(200, 20);
             this.txtDonViTC_ID.TabIndex = 9;
-          //  this.txtDonViTC_ID.TextChanged += new System.EventHandler(this.txtDonViTC_ID_TextChanged);
             // 
             // label1
             // 
@@ -312,7 +311,8 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmDonVi_TC";
-            this.Text = "FrmDonVi_TC";
+            this.Text = "Đơn vị thi công";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDonVi_TC_FormClosing);
             this.Load += new System.EventHandler(this.FrmDonVi_TC_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -334,11 +334,7 @@
         private System.Windows.Forms.Label lbGhiChu;
         private System.Windows.Forms.Label lbMaDV;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btSua;
-        private System.Windows.Forms.Button btXoa;
-        private System.Windows.Forms.Button btLuu;
         private System.Windows.Forms.Button btThoat;
-        private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtDonViTC_ID;
         private System.Windows.Forms.Label label1;
@@ -348,5 +344,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        public System.Windows.Forms.Button btSua;
+        public System.Windows.Forms.Button btXoa;
+        public System.Windows.Forms.Button btLuu;
+        public System.Windows.Forms.Button btThem;
     }
 }

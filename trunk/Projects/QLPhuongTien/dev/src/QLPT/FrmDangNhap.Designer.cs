@@ -151,6 +151,7 @@
             this.Name = "FrmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDangNhap_FormClosing);
             this.Load += new System.EventHandler(this.FrmDangNhap_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -164,14 +165,14 @@
         #endregion
 
         private System.Windows.Forms.Label lbUser;
-        private System.Windows.Forms.Label lbStatus;
         private System.Windows.Forms.Label lbPass;
-        private System.Windows.Forms.TextBox txtUser;
-        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btDangNhap;
         private System.Windows.Forms.Button btThoat;
         private System.Windows.Forms.ToolStripStatusLabel Status;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        public System.Windows.Forms.Label lbStatus;
+        public System.Windows.Forms.TextBox txtUser;
+        public System.Windows.Forms.TextBox txtPass;
     }
 }

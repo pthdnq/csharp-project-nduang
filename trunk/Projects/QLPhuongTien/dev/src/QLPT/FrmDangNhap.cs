@@ -6,15 +6,20 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BusinessLogic;
+using DataAcess;
 using System.Data.SqlClient;
 using Component;
+
 
 namespace QLPT
 {
     public partial class FrmDangNhap : Form
     {
         private Account m_account = new Account();
+        private Utils m_utils = new Utils();
         public bool m_isLogin = false;
+        public string m_PhanQuyen = "";
         public FrmDangNhap()
         {
             InitializeComponent();
@@ -39,10 +44,13 @@ namespace QLPT
             {
                 this.Close();
                 m_isLogin = true;
+                m_PhanQuyen = m_account.getPhanQuyen(txtUser.Text.Trim(), txtPass.Text.Trim());
             }
-            else
+            else 
             {
+                //checkExistUser();
                 resetControl();
+                m_PhanQuyen = "";
             }
             
             
@@ -50,9 +58,10 @@ namespace QLPT
 
         private void btThoat_Click(object sender, EventArgs e)
         {
-            //if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn thoát không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
-            //    Application.Exit();
+            m_isLogin = false;
+           
             this.Close();
+           
         }
         //internal void ShowDiaLog()
         //{
@@ -64,6 +73,7 @@ namespace QLPT
             {
                 this.lbStatus.ForeColor = Color.Red;
                 lbStatus.Text = "Bạn chưa nhập User hoặc Pass";
+                
                 return false;
             }
 
@@ -77,5 +87,13 @@ namespace QLPT
             this.txtPass.Text = "";
             this.txtUser.Focus();
         }
+
+        private void FrmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
+        }
+
+
     }
 }

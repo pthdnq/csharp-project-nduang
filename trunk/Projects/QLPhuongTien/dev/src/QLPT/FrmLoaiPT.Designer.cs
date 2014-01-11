@@ -31,24 +31,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtMoTaCT = new System.Windows.Forms.TextBox();
-            this.txtCongThucVH = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.cmbCongThucVH = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtLoaiPT_Ten = new System.Windows.Forms.TextBox();
             this.txtLoaiPT_Ma = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiPTMa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiPTTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CongThucVH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MoTaCongThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btThem = new System.Windows.Forms.Button();
             this.btLuu = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.btSua = new System.Windows.Forms.Button();
             this.btThoat = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiPTMa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiPTTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CongThucVH_ = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -74,9 +71,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtMoTaCT);
-            this.groupBox1.Controls.Add(this.txtCongThucVH);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.cmbCongThucVH);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtLoaiPT_Ten);
             this.groupBox1.Controls.Add(this.txtLoaiPT_Ma);
@@ -84,33 +79,19 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(283, 169);
+            this.groupBox1.Size = new System.Drawing.Size(301, 146);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin ";
             // 
-            // txtMoTaCT
+            // cmbCongThucVH
             // 
-            this.txtMoTaCT.Location = new System.Drawing.Point(124, 139);
-            this.txtMoTaCT.Name = "txtMoTaCT";
-            this.txtMoTaCT.Size = new System.Drawing.Size(153, 20);
-            this.txtMoTaCT.TabIndex = 8;
-            // 
-            // txtCongThucVH
-            // 
-            this.txtCongThucVH.Location = new System.Drawing.Point(124, 103);
-            this.txtCongThucVH.Name = "txtCongThucVH";
-            this.txtCongThucVH.Size = new System.Drawing.Size(153, 20);
-            this.txtCongThucVH.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 141);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Mô tả công thức";
+            this.cmbCongThucVH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCongThucVH.FormattingEnabled = true;
+            this.cmbCongThucVH.Location = new System.Drawing.Point(124, 98);
+            this.cmbCongThucVH.Name = "cmbCongThucVH";
+            this.cmbCongThucVH.Size = new System.Drawing.Size(153, 21);
+            this.cmbCongThucVH.TabIndex = 9;
             // 
             // label3
             // 
@@ -156,8 +137,7 @@
             this.Column1,
             this.LoaiPTMa,
             this.LoaiPTTen,
-            this.CongThucVH,
-            this.MoTaCongThuc});
+            this.CongThucVH_});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 16);
             this.dataGridView1.Name = "dataGridView1";
@@ -167,44 +147,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 30;
-            // 
-            // LoaiPTMa
-            // 
-            this.LoaiPTMa.DataPropertyName = "LoaiPTMa";
-            this.LoaiPTMa.HeaderText = "Mã loại";
-            this.LoaiPTMa.Name = "LoaiPTMa";
-            this.LoaiPTMa.ReadOnly = true;
-            this.LoaiPTMa.Width = 50;
-            // 
-            // LoaiPTTen
-            // 
-            this.LoaiPTTen.DataPropertyName = "LoaiPTTen";
-            this.LoaiPTTen.HeaderText = "Tên loại";
-            this.LoaiPTTen.Name = "LoaiPTTen";
-            this.LoaiPTTen.ReadOnly = true;
-            this.LoaiPTTen.Width = 160;
-            // 
-            // CongThucVH
-            // 
-            this.CongThucVH.DataPropertyName = "CongThucVH";
-            this.CongThucVH.HeaderText = "Công thức VH";
-            this.CongThucVH.Name = "CongThucVH";
-            this.CongThucVH.ReadOnly = true;
-            this.CongThucVH.Width = 50;
-            // 
-            // MoTaCongThuc
-            // 
-            this.MoTaCongThuc.DataPropertyName = "MoTaCongThuc";
-            this.MoTaCongThuc.HeaderText = "Mô tả công thức";
-            this.MoTaCongThuc.Name = "MoTaCongThuc";
-            this.MoTaCongThuc.ReadOnly = true;
             // 
             // btThem
             // 
@@ -269,12 +211,46 @@
             this.btThoat.UseVisualStyleBackColor = true;
             this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 30;
+            // 
+            // LoaiPTMa
+            // 
+            this.LoaiPTMa.DataPropertyName = "LoaiPTMa";
+            this.LoaiPTMa.HeaderText = "Mã loại";
+            this.LoaiPTMa.Name = "LoaiPTMa";
+            this.LoaiPTMa.ReadOnly = true;
+            this.LoaiPTMa.Width = 50;
+            // 
+            // LoaiPTTen
+            // 
+            this.LoaiPTTen.DataPropertyName = "LoaiPTTen";
+            this.LoaiPTTen.HeaderText = "Tên loại";
+            this.LoaiPTTen.Name = "LoaiPTTen";
+            this.LoaiPTTen.ReadOnly = true;
+            this.LoaiPTTen.Width = 160;
+            // 
+            // CongThucVH_
+            // 
+            this.CongThucVH_.DataPropertyName = "CongThucVH_";
+            this.CongThucVH_.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CongThucVH_.HeaderText = "Công thức VH";
+            this.CongThucVH_.Name = "CongThucVH_";
+            this.CongThucVH_.ReadOnly = true;
+            this.CongThucVH_.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.CongThucVH_.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.CongThucVH_.Width = 150;
+            // 
             // FrmLoaiPT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(696, 315);
+            this.ClientSize = new System.Drawing.Size(768, 315);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btXoa);
@@ -284,6 +260,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmLoaiPT";
             this.Text = "Loại phương tiện";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmLoaiPT_FormClosing);
             this.Load += new System.EventHandler(this.FrmLoaiPT_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -307,14 +284,11 @@
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.Button btSua;
         private System.Windows.Forms.Button btThoat;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtMoTaCT;
-        private System.Windows.Forms.TextBox txtCongThucVH;
+        private System.Windows.Forms.ComboBox cmbCongThucVH;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiPTMa;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiPTTen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CongThucVH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MoTaCongThuc;
+        private System.Windows.Forms.DataGridViewComboBoxColumn CongThucVH_;
     }
 }

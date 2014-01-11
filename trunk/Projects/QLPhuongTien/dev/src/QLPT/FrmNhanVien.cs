@@ -48,12 +48,29 @@ namespace QLPT
                 this.cmbDVTC.DataSource = m_NhanVienBUS.selectDonViTC();
                 this.cmbDVTC.DisplayMember = "DonViTCTen";
                 this.cmbDVTC.ValueMember = "DonViTCID";
-               cmbDVTC.Text = "";
+               
 
-               DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvNhanVien.Columns[7];
+               DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvNhanVien.Columns["DonViTCID"];
                comboBoxColumn.DataSource = m_DonViTCBUS.selectDonViTC();
                comboBoxColumn.DisplayMember = "DonViTCTen";
                comboBoxColumn.ValueMember = "DonViTCID";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi:" + ex);
+            }
+
+            try
+            {
+                this.cmbTenTruyCap.DataSource = m_NhanVienBUS.selectUserNametoNhanVien();
+                this.cmbTenTruyCap.DisplayMember = "UserName";
+                this.cmbTenTruyCap.ValueMember = "UserName";
+                
+
+                DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvNhanVien.Columns["UserName"];
+                comboBoxColumn.DataSource = m_NhanVienBUS.select();
+                comboBoxColumn.DisplayMember = "UserName";
+                comboBoxColumn.ValueMember = "UserName";
             }
             catch (Exception ex)
             {
@@ -126,6 +143,13 @@ namespace QLPT
         {
 
             bool Ok = validData();
+            
+            if (Ok == false)
+            {
+                return;
+            }
+            Ok = validUserName();
+
             if (Ok == false)
             {
                 return;
@@ -138,6 +162,7 @@ namespace QLPT
                                         , txtNhanVien_Email.Text
                                         , txtNhanVien_DC.Text                                     
                                          , cmbDVTC.SelectedValue.ToString()
+                                         ,cmbTenTruyCap.SelectedValue.ToString()
                                         );
 
                 FrmNhanVien_Load(sender, e);
@@ -163,6 +188,7 @@ namespace QLPT
                  ,  txtNhanVien_Email.Text
                  ,  txtNhanVien_DC.Text
                  , cmbDVTC.SelectedValue.ToString()
+                 , cmbTenTruyCap.SelectedValue.ToString()
                  );
              FrmNhanVien_Load(sender, e);
             }
@@ -189,7 +215,9 @@ namespace QLPT
                 this.txtNhanVien_DC.Text = row.Cells[5].Value.ToString();               
                 this.txtNhanVien_Sdt.Text = row.Cells[3].Value.ToString();
                 this.txtNhanVien_Email.Text = row.Cells[4].Value.ToString();
-                this.cmbDVTC.SelectedValue = row.Cells[7].Value.ToString();
+                this.cmbDVTC.SelectedValue = row.Cells["DonViTCID"].Value.ToString();
+                this.cmbTenTruyCap.SelectedValue = row.Cells["UserName"].Value.ToString();
+
                 btSua.Enabled = true;
                 btXoa.Enabled = true;
                 btLuu.Enabled = false; 
@@ -218,6 +246,31 @@ namespace QLPT
             bs.Filter = "NhanVienTen like '*" + txtTimKiem.Text.Trim() + "*'";
             dgvNhanVien.DataSource = bs;
             dgvNhanVien.Refresh();
+        }
+
+        private void cmbTenTruyCap_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //validUserName();
+        }
+        public bool validUserName()
+        {
+            for (int i = 0; i < dgvNhanVien.RowCount; i++)
+            {
+                string UserName = dgvNhanVien.Rows[i].Cells["UserName"].Value.ToString();
+                if (cmbTenTruyCap.Text.Trim() == UserName)
+                {
+                    MessageBox.Show("Tài khoản đã được sử dụng cho nhân vien khác");
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
+        private void FrmNhanVien_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = false;
+            this.Hide();
         }
   
        

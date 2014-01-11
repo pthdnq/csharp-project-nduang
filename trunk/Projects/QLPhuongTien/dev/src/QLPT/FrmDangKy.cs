@@ -9,12 +9,15 @@ using System.Windows.Forms;
 using BusinessLogic;
 using DataAcess;
 using System.Data.SqlClient;
+using Component;
 
 namespace QLPT
 {
     public partial class FrmDangKy : Form
     {
         Data dt = new Data();
+        DangKyBUS m_DangKyBUS = new DangKyBUS();
+        Utils utils = new Utils();
         public FrmDangKy()
         {
             InitializeComponent();
@@ -37,21 +40,27 @@ namespace QLPT
             }
             else
             {
-                string insert = @"INSERT INTO DangNhap (UserName , Pass) VALUES ('" + txtTen.Text + "','" + txtMK.Text + "')";
-                dt.moketnoi();
-                SqlCommand cmd = new SqlCommand(insert, dt.sqlConn);
+               // string insert = @"INSERT INTO DangNhap (UserName , Pass) VALUES ('" + txtTen.Text + "','" + txtMK.Text + "')";
+               // dt.moketnoi();
+               // SqlCommand cmd = new SqlCommand(insert, dt.sqlConn);
                 try
                 {
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Đăng ký thành công tài khoản : " + txtTen.Text, "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dt.dongketnoi();
-                    txtTen.Text = "";
-                    txtMK.Text = "";
-                    txtNhapLaiMK.Text = "";
+                    m_DangKyBUS.insert(txtTen.Text
+                                            , txtMK.Text
+                                            , cmbPhanQuyen.Text                                         
+                                            );
+                    MessageBox.Show("Đăng ký tài khoản: "+txtTen.Text+" thành công ");
+                    //this.Close();
+                    FrmDangKy_Load(sender, e);
+
+
                 }
-                catch (Exception ex)
+                catch (SqlException ex)
                 {
-                    MessageBox.Show("Lỗi Xảy Ra : " + ex, "Lỗi");
+                    if (ex.ErrorCode == utils.ERR_MA_DANG_SU_DUNG)
+                    {
+                          MessageBox.Show("Tên truy cập [" + txtTen.Text + "] đã tồn tại", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
 
 
@@ -69,6 +78,12 @@ namespace QLPT
         private void btThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmDangKy_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
         }
 
     }

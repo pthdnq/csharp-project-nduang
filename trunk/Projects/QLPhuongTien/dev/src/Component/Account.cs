@@ -22,5 +22,23 @@ namespace Component
             ad.Fill(dt);
             return dt.Rows.Count>0;
         }
+        public string getPhanQuyen(string user, string pass)
+        {
+            try
+            {
+                string sql = " select * from DangNhap where UserName = '" + user + "' and Pass = '" + pass + "'";
+                SqlConnection con = conn.getConnect();
+                SqlDataAdapter ad = new SqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                return dt.Rows[0]["phanquyen"].ToString();
+            }
+            catch (System.Exception ex)
+            {
+                return "";
+            }
+
+        }
+
     }
 }

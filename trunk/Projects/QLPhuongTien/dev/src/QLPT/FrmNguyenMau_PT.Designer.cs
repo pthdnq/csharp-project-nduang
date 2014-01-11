@@ -541,6 +541,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmNguyenMau_PT";
             this.Text = "Nguyên mẫu  - Phương tiện";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmNguyenMau_PT_FormClosing);
             this.Load += new System.EventHandler(this.FrmNguyenMau_PT_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
