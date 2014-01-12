@@ -189,8 +189,8 @@ namespace QLPT
 
         private void frmDonVi_QL_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            this.Hide();
+            
+            
         }
 
     }

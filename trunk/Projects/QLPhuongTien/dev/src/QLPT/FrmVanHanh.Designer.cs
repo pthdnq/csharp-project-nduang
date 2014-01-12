@@ -48,7 +48,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.spbGio = new System.Windows.Forms.NumericUpDown();
-            this.txtDonVi = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.spbTan = new System.Windows.Forms.NumericUpDown();
             this.spbKm = new System.Windows.Forms.NumericUpDown();
@@ -82,6 +81,7 @@
             this.DonViTCID = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CongThucVH_ = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.txtDonVi = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spbm3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spbGio)).BeginInit();
@@ -193,6 +193,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtDonVi);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.spbm3);
             this.groupBox1.Controls.Add(this.cmbCongThucVH);
@@ -201,7 +202,6 @@
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.spbGio);
-            this.groupBox1.Controls.Add(this.txtDonVi);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.spbTan);
             this.groupBox1.Controls.Add(this.spbKm);
@@ -262,6 +262,7 @@
             this.cmbCongThucVH.Name = "cmbCongThucVH";
             this.cmbCongThucVH.Size = new System.Drawing.Size(289, 21);
             this.cmbCongThucVH.TabIndex = 37;
+            this.cmbCongThucVH.SelectedIndexChanged += new System.EventHandler(this.cmbCongThucVH_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -313,24 +314,6 @@
             this.spbGio.Size = new System.Drawing.Size(61, 20);
             this.spbGio.TabIndex = 32;
             this.spbGio.ValueChanged += new System.EventHandler(this.spbGio_ValueChanged);
-            // 
-            // txtDonVi
-            // 
-            this.txtDonVi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtDonVi.FormattingEnabled = true;
-            this.txtDonVi.Items.AddRange(new object[] {
-            "h",
-            "kg",
-            "tấn",
-            "m3",
-            "tấn/h",
-            "km x tấn",
-            "(m3 x kg)/h",
-            ""});
-            this.txtDonVi.Location = new System.Drawing.Point(549, 28);
-            this.txtDonVi.Name = "txtDonVi";
-            this.txtDonVi.Size = new System.Drawing.Size(235, 21);
-            this.txtDonVi.TabIndex = 29;
             // 
             // label11
             // 
@@ -390,7 +373,6 @@
             this.spbVanHanh.Name = "spbVanHanh";
             this.spbVanHanh.Size = new System.Drawing.Size(75, 20);
             this.spbVanHanh.TabIndex = 24;
-            this.spbVanHanh.ValueChanged += new System.EventHandler(this.spbVanHanh_ValueChanged);
             // 
             // spbCaLamViec
             // 
@@ -674,6 +656,14 @@
             this.CongThucVH_.ReadOnly = true;
             this.CongThucVH_.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
+            // txtDonVi
+            // 
+            this.txtDonVi.Enabled = false;
+            this.txtDonVi.Location = new System.Drawing.Point(549, 28);
+            this.txtDonVi.Name = "txtDonVi";
+            this.txtDonVi.Size = new System.Drawing.Size(235, 20);
+            this.txtDonVi.TabIndex = 40;
+            // 
             // FrmVanHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -689,6 +679,7 @@
             this.Controls.Add(this.btSua);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "FrmVanHanh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vận hành phương tiện ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmVanHanh_FormClosing);
             this.Load += new System.EventHandler(this.FrmVanHanh_Load);
@@ -737,7 +728,6 @@
         private System.Windows.Forms.NumericUpDown spbKm;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox txtDonVi;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.NumericUpDown spbGio;
         private System.Windows.Forms.ComboBox cmbLoaiPT;
@@ -762,5 +752,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn DonViTCID;
         private System.Windows.Forms.DataGridViewTextBoxColumn MoTa;
         private System.Windows.Forms.DataGridViewComboBoxColumn CongThucVH_;
+        private System.Windows.Forms.TextBox txtDonVi;
     }
 }

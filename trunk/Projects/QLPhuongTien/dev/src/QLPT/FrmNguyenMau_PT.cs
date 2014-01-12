@@ -255,8 +255,6 @@ namespace QLPT
 
         private void FrmNguyenMau_PT_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            this.Hide();
         }
 
     }

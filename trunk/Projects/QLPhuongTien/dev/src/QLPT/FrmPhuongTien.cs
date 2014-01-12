@@ -123,15 +123,20 @@ namespace QLPT
             dgvPhuongTien.DataSource = dat;
 
             ShowComboxForLoaiPTCol();
-
-//            ShowComboxForNguyenMauCol();
             ShowComboxForDVTCCol();
             ShowComboxForDVQLCol();
-           // selectPhuongTienData_LoaiPT_ByMaLoaiPT();
+            showNguyenMauTenForNguyenMauID();
+
             string strDatimeVHPT = dtpNgayVH.Value.ToString("yyyyMMdd");
             iDatimeVHPT = int.Parse(strDatimeVHPT);
         }
-
+        public void showNguyenMauTenForNguyenMauID()
+        {
+            DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvPhuongTien.Columns["NguyenMauID"];
+            comboBoxColumn.DataSource = m_PhuongTienBUS.selectPhuongTienData_LoaiPT();
+            comboBoxColumn.DisplayMember = "NguyenMauTen";
+            comboBoxColumn.ValueMember = "NguyenMauID";
+        }
         public bool validData()
         {
             if (this.txtAutoNum.Text.Length == 0)
@@ -311,7 +316,7 @@ namespace QLPT
         {
             try
             {
-                if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã DV : " + txtPhuongTienID.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                if (DialogResult.Yes == MessageBox.Show("Khi Xóa mã : " + txtPhuongTienID.Text + " thì Thông tin Vận Hành của phương tiện này sẽ mất\n Bạn có chắc chắn không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
                     // m_PhuongTienBUS.delete1(txtPhuongTienID.Text);
                     m_PhuongTienBUS.updateHienTrang(txtPhuongTienID.Text, "0");
@@ -339,15 +344,10 @@ namespace QLPT
         {
             try
             {
-                string strMaLoaiPt = cmbLoaiPT.SelectedValue.ToString();
+                string strMaLoaiPt = cmbLoaiPT.SelectedValue.ToString().Trim();
                 cmbNguyenMau.DataSource = m_PhuongTienBUS.selectPhuongTienData_LoaiPT_ByMaLoaiPT(strMaLoaiPt);
                 cmbNguyenMau.DisplayMember = "NguyenMauTen";
                 cmbNguyenMau.ValueMember = "NguyenMauID";
-
-                DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvPhuongTien.Columns["NguyenMauID"];
-                comboBoxColumn.DataSource = m_PhuongTienBUS.selectPhuongTienData_LoaiPT_ByMaLoaiPT(strMaLoaiPt);
-                comboBoxColumn.DisplayMember = "NguyenMauTen";
-                comboBoxColumn.ValueMember = "NguyenMauID";
             }
             catch (System.Exception ex)
             {
@@ -415,13 +415,16 @@ namespace QLPT
 
         private void FrmPhuongTien_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            this.Hide();
         }
 
         private void cmbNguyenMau_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmPhuongTien_Load(sender, e);
         }
 
 

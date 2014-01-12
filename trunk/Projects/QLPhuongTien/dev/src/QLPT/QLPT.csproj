@@ -529,6 +529,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1388021444_22991.ico" />
+    <None Include="Resources\Refresh.png" />
     <None Include="Resources\12102013 khu xay dung tram thu phi.jpg" />
     <None Include="Resources\29713-thi3.jpg" />
   </ItemGroup>

@@ -180,8 +180,8 @@ namespace QLPT
 
         private void FrmDonVi_TC_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            this.Hide();
+
+
         }
 
     

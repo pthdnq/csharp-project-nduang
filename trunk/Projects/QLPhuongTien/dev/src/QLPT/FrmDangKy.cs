@@ -82,8 +82,8 @@ namespace QLPT
 
         private void FrmDangKy_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            this.Hide();
+            
+            
         }
 
     }

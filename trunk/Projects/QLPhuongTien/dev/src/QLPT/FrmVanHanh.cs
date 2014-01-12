@@ -47,8 +47,40 @@ namespace QLPT
             cmbNhanVienID.Text = "";
             txtMoTa.Text = "";
             spbGio.Value = 0;
+            spbm3.Value = 0;
         }
 
+        public void lockControlStartLoadForm()
+        {
+            dtpNgayVH.Enabled = false;
+            cmbPhuongTienID.Enabled = false;
+            txtDonVi.Enabled = false;
+            cmbNhanVienID.Enabled = false;
+            txtMoTa.Enabled = false;
+            spbVanHanh.Enabled = false;
+            spbGio.Enabled = false;
+            spbCaLamViec.Enabled = false;
+            txtVanHanhID.Enabled = false;
+            cmbDVTC.Enabled = false;
+            cmbLoaiPT.Enabled = false;
+            spbm3.Enabled = false;
+        }
+
+        public void unlockControlEndLoadForm()
+        {
+            dtpNgayVH.Enabled = true;
+            cmbPhuongTienID.Enabled = true;
+            txtDonVi.Enabled = true;
+            cmbNhanVienID.Enabled = true;
+            txtMoTa.Enabled = true;
+            spbVanHanh.Enabled = true;
+            spbGio.Enabled = true;
+            spbCaLamViec.Enabled = true;
+            txtVanHanhID.Enabled = true;
+            cmbDVTC.Enabled = true;
+            cmbLoaiPT.Enabled = true;
+            spbm3.Enabled = true;
+        }
         public bool validData()
         {
             if (this.dtpNgayVH.Text.Length == 0)
@@ -190,6 +222,7 @@ namespace QLPT
         }
         private void FrmVanHanh_Load(object sender, EventArgs e)
         {
+           // lockControlStartLoadForm();
             DataTable dat = new DataTable();
             dat = m_VanHanhBUS.selectVanHanh();
             dgvVanHanh.DataSource = dat;
@@ -212,6 +245,7 @@ namespace QLPT
 
         private void btThem_Click(object sender, EventArgs e)
         {
+            //unlockControlEndLoadForm();
             txtVanHanhID.Enabled = true;
             btLuu.Enabled = true;
             resetControl();
@@ -233,18 +267,27 @@ namespace QLPT
             {
                 return;
             }
+
+            bool contain_Ngay_Ca_PhuongTien = m_VanHanhBUS.contain_Ngay_Ca_PhuongTien(dtpNgayVH.Text, spbCaLamViec.Text, cmbPhuongTienID.SelectedValue.ToString());
+            if (contain_Ngay_Ca_PhuongTien == true)
+            {
+                MessageBox.Show("Trùng ngày vận hành và ca làm việc với lần vận hành trước đó !");
+            }
+            else
+                {
             try
             {
-                DataTable dt = m_VanHanhBUS.selectNgayVHByNgayBatDauVH(cmbPhuongTienID.SelectedValue.ToString());
-                string strNgayBatDauVH = dt.Rows[0][0].ToString();
+                //DataTable dt = m_VanHanhBUS.selectNgayVHByNgayBatDauVH(cmbPhuongTienID.SelectedValue.ToString());
+                //string strNgayBatDauVH = dt.Rows[0][0].ToString();
                // int i = int.Parse(strNgayBatDauVH);
-                if (0 > iDatimeVH)
-                {
-                    MessageBox.Show("khong hop le");
+                //if (0 > iDatimeVH)
+                //{
+                //    MessageBox.Show("khong hop le");
                     
-                }
-                else
-                {
+                //}
+                //else
+
+                
                     m_VanHanhBUS.insert(
                                         txtVanHanhID.Text.Trim()
                                         , cmbPhuongTienID.SelectedValue.ToString()
@@ -263,13 +306,14 @@ namespace QLPT
                     updateMocBaoTri();
                     updateTongVHToPhuongTien();
                     FrmVanHanh_Load(sender, e);
-                }
+                
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi Thêm :" + ex);
             }
+                }
 
 
         }
@@ -287,10 +331,10 @@ namespace QLPT
         private void btSua_Click(object sender, EventArgs e)
         {
             bool ok = validData();
-           bool contain_Ngay_Ca_PhuongTien = m_VanHanhBUS.contain_Ngay_Ca_PhuongTien(dtpNgayVH.Text, spbCaLamViec.Text, cmbPhuongTienID.SelectedValue.ToString());
             if (!ok)
                 return;
-            else if (contain_Ngay_Ca_PhuongTien == true)
+           bool contain_Ngay_Ca_PhuongTien = m_VanHanhBUS.contain_Ngay_Ca_PhuongTien(dtpNgayVH.Text, spbCaLamViec.Text, cmbPhuongTienID.SelectedValue.ToString());
+            if (contain_Ngay_Ca_PhuongTien == true)
             {
                 MessageBox.Show("Trùng ngày vận hành và ca làm việc với lần vận hành trước đó !");
             }
@@ -334,7 +378,10 @@ namespace QLPT
                 {
                     MessageBox.Show("Lỗi Sửa :" + ex);
                 }
+            
             }
+            
+               
            
         }
 
@@ -346,6 +393,7 @@ namespace QLPT
             btXoa.Enabled = true;
             btLuu.Enabled = false;
             txtVanHanhID.Enabled = false;
+           // unlockControlEndLoadForm();
 
         }
         private void fillDataGridViewToControl()
@@ -484,29 +532,34 @@ namespace QLPT
                     spbKm.Enabled = false;
                     spbGio.Enabled = false;
                     spbVanHanh.Value = spbm3.Value * spbTan.Value;
+                    txtDonVi.Text = "tan.m3";
                     break;
                 case LOAI_CONG_THUC.GIO:
                     spbTan.Enabled = false;
                     spbKm.Enabled = false;
                     spbm3.Enabled = false;
                     spbVanHanh.Value = spbGio.Value;
+                    txtDonVi.Text = "h";
                     break;
                 case LOAI_CONG_THUC.KM_TAN:
                     spbGio.Enabled = false;
                     spbm3.Enabled = false;
                     spbVanHanh.Value = spbKm.Value * spbTan.Value;
+                    txtDonVi.Text = "tan.km";
                     break;
                 case LOAI_CONG_THUC.M3:
                     spbGio.Enabled = false;
                     spbTan.Enabled = false;
                     spbKm.Enabled = false;
                     spbVanHanh.Value = spbm3.Value ;
+                    txtDonVi.Text = "m3";
                     break;
                 case LOAI_CONG_THUC.TAN:
                     spbm3.Enabled = false;
                     spbGio.Enabled = false;
                     spbKm.Enabled = false;
                     spbVanHanh.Value =  spbTan.Value;
+                    txtDonVi.Text = "tan";
                     break;
                 default:
                     break;
@@ -623,8 +676,7 @@ namespace QLPT
 
         private void FrmVanHanh_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            this.Hide();
+
         }
 
         private void spbm3_ValueChanged(object sender, EventArgs e)
@@ -634,10 +686,11 @@ namespace QLPT
             TinhVanHanh(loaiCongThuc);
         }
 
-        private void spbVanHanh_ValueChanged(object sender, EventArgs e)
+        private void cmbCongThucVH_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            LOAI_CONG_THUC loaiCongThuc = (LOAI_CONG_THUC)utils.getIntInString(cmbCongThucVH.Text.Trim());
+            TinhVanHanh(loaiCongThuc);
         }
-
+     
     }
 }

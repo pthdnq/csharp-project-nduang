@@ -18,8 +18,8 @@ namespace QLPT
 
         private void FrmHelp_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            this.Hide();
+            
+            
         }
     }
 }
