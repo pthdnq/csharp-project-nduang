@@ -115,7 +115,7 @@ namespace QLPT
             {
                 frmdk = new FrmDangKy();
             }
-            frmdk.Show();
+            frmdk.ShowDialog();
         }
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -124,7 +124,7 @@ namespace QLPT
             {
                 frmdmk = new FrmDoiMatKhau();
             }
-            frmdmk.Show();
+            frmdmk.ShowDialog();
         }
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
@@ -139,7 +139,7 @@ namespace QLPT
             {
                 phuongtien = new FrmPhuongTien();
             }
-            phuongtien.Show();
+            phuongtien.ShowDialog();
 
         }
 
@@ -149,13 +149,13 @@ namespace QLPT
             {
                 DVQL = new frmDonVi_QL();
             }
-            DVQL.Show();
+            DVQL.ShowDialog();
         }
 
         //private void hạngMụcCôngTrìnhToolStripMenuItem_Click(object sender, EventArgs e)
         //{
         //    FrmNhienLieu nhlieu = new FrmNhienLieu();
-        //    nhlieu.Show();
+        //    nhlieu.ShowDialog();
         //}
 
         private void loạiPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -164,7 +164,7 @@ namespace QLPT
             {
                 loaipt = new FrmLoaiPT();
             }
-            loaipt.Show();
+            loaipt.ShowDialog();
         }
 
         private void đơnVịThiCôngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -173,7 +173,7 @@ namespace QLPT
             {
                 dvtc = new FrmDonVi_TC();
             }
-            dvtc.Show();
+            dvtc.ShowDialog();
         }
 
         private void quảnLýNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
@@ -182,7 +182,7 @@ namespace QLPT
             {
                 nv = new FrmNhanVien();
             }
-            nv.Show();
+            nv.ShowDialog();
         }
 
         private void danhSáchCácPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -191,7 +191,7 @@ namespace QLPT
             {
                 nmpt = new FrmNguyenMau_PT();
             }
-            nmpt.Show();
+            nmpt.ShowDialog();
         }
 
         private void tìmKiếmPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -201,7 +201,7 @@ namespace QLPT
                 timkiem = new FrmTimKiem();
             }
             
-            timkiem.Show();
+            timkiem.ShowDialog();
         }
         public void lockControl()
         {
@@ -237,7 +237,7 @@ namespace QLPT
             {
                 vanhanh = new FrmVanHanh();
             }
-            vanhanh.Show();
+            vanhanh.ShowDialog();
         }
 
        
@@ -245,14 +245,14 @@ namespace QLPT
         private void thôngTinChươngTrìnhToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            thongtinct.Show();
+            thongtinct.ShowDialog();
             
         }
 
         private void hướngDẫnSửDụngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-            help.Show();
+            help.ShowDialog();
 
 
         }
@@ -263,7 +263,7 @@ namespace QLPT
             {
                 baocaoInfoPT = new FrmBaoCaoThongTinPT();
             }
-            baocaoInfoPT.Show();
+            baocaoInfoPT.ShowDialog();
         }
 
         private void danhSáchNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
@@ -272,7 +272,7 @@ namespace QLPT
             {
                 baoCaoNhanVien = new FrmBaoCaoNhanVien();
             }
-            baoCaoNhanVien.Show();
+            baoCaoNhanVien.ShowDialog();
         }
 
         private void báoCáoVậnHànhPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -281,7 +281,7 @@ namespace QLPT
             {
                 baoCaoVH = new FrmBaoCaoVanHanh();
             }
-            baoCaoVH.Show();
+            baoCaoVH.ShowDialog();
         }
     }
 }

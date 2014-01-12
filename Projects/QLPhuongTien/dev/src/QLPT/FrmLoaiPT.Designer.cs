@@ -37,15 +37,15 @@
             this.txtLoaiPT_Ma = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiPTMa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiPTTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CongThucVH_ = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.btThem = new System.Windows.Forms.Button();
             this.btLuu = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.btSua = new System.Windows.Forms.Button();
             this.btThoat = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiPTMa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiPTTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CongThucVH_ = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -122,7 +122,7 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(328, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(531, 249);
+            this.groupBox2.Size = new System.Drawing.Size(436, 249);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách chi tiêt";
@@ -143,10 +143,44 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(525, 230);
+            this.dataGridView1.Size = new System.Drawing.Size(430, 230);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 30;
+            // 
+            // LoaiPTMa
+            // 
+            this.LoaiPTMa.DataPropertyName = "LoaiPTMa";
+            this.LoaiPTMa.HeaderText = "Mã loại";
+            this.LoaiPTMa.Name = "LoaiPTMa";
+            this.LoaiPTMa.ReadOnly = true;
+            this.LoaiPTMa.Width = 50;
+            // 
+            // LoaiPTTen
+            // 
+            this.LoaiPTTen.DataPropertyName = "LoaiPTTen";
+            this.LoaiPTTen.HeaderText = "Tên loại";
+            this.LoaiPTTen.Name = "LoaiPTTen";
+            this.LoaiPTTen.ReadOnly = true;
+            this.LoaiPTTen.Width = 160;
+            // 
+            // CongThucVH_
+            // 
+            this.CongThucVH_.DataPropertyName = "CongThucVH_";
+            this.CongThucVH_.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CongThucVH_.HeaderText = "Công thức VH";
+            this.CongThucVH_.Name = "CongThucVH_";
+            this.CongThucVH_.ReadOnly = true;
+            this.CongThucVH_.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.CongThucVH_.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.CongThucVH_.Width = 150;
             // 
             // btThem
             // 
@@ -211,46 +245,12 @@
             this.btThoat.UseVisualStyleBackColor = true;
             this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 30;
-            // 
-            // LoaiPTMa
-            // 
-            this.LoaiPTMa.DataPropertyName = "LoaiPTMa";
-            this.LoaiPTMa.HeaderText = "Mã loại";
-            this.LoaiPTMa.Name = "LoaiPTMa";
-            this.LoaiPTMa.ReadOnly = true;
-            this.LoaiPTMa.Width = 50;
-            // 
-            // LoaiPTTen
-            // 
-            this.LoaiPTTen.DataPropertyName = "LoaiPTTen";
-            this.LoaiPTTen.HeaderText = "Tên loại";
-            this.LoaiPTTen.Name = "LoaiPTTen";
-            this.LoaiPTTen.ReadOnly = true;
-            this.LoaiPTTen.Width = 160;
-            // 
-            // CongThucVH_
-            // 
-            this.CongThucVH_.DataPropertyName = "CongThucVH_";
-            this.CongThucVH_.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CongThucVH_.HeaderText = "Công thức VH";
-            this.CongThucVH_.Name = "CongThucVH_";
-            this.CongThucVH_.ReadOnly = true;
-            this.CongThucVH_.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.CongThucVH_.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.CongThucVH_.Width = 150;
-            // 
             // FrmLoaiPT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(859, 315);
+            this.ClientSize = new System.Drawing.Size(773, 315);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btXoa);
@@ -258,7 +258,9 @@
             this.Controls.Add(this.btThem);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "FrmLoaiPT";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loại phương tiện";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmLoaiPT_FormClosing);
             this.Load += new System.EventHandler(this.FrmLoaiPT_Load);

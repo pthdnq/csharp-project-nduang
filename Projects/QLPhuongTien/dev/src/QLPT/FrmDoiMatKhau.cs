@@ -115,8 +115,8 @@ namespace QLPT
 
         private void FrmDoiMatKhau_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            this.Hide();
+            
+            
         }
 
     }

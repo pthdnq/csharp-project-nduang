@@ -269,8 +269,6 @@ namespace QLPT
 
         private void FrmNhanVien_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = false;
-            this.Hide();
         }
   
        

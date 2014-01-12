@@ -123,8 +123,7 @@ namespace QLPT
 
          private void FrmTimKiem_FormClosing(object sender, FormClosingEventArgs e)
          {
-             e.Cancel = false;
-             this.Hide();
+
          }
     }
 }
