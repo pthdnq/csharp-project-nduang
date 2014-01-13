@@ -1,0 +1,7 @@
+D:\QLPhuongTien\dev\src\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\QLPhuongTien\dev\src\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\QLPhuongTien\dev\src\BusinessLogic\bin\Debug\DataAcess.dll
+D:\QLPhuongTien\dev\src\BusinessLogic\bin\Debug\DataAcess.pdb
+D:\QLPhuongTien\dev\src\BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\QLPhuongTien\dev\src\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\QLPhuongTien\dev\src\BusinessLogic\obj\Debug\BusinessLogic.pdb

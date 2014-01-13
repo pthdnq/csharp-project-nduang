@@ -59,6 +59,8 @@ namespace DataAcess
                 return "0";
             }
         }
+
+        // ĐUA IDTEXTBOX VÀO MỘT LISD BẤT KÌ
         public ArrayList getListIDNumberAuto(string tblName, string fldID)
         {
             ArrayList listID = new ArrayList();
@@ -68,7 +70,7 @@ namespace DataAcess
                 SqlConnection con = getConnect();
                 SqlDataAdapter ad = new SqlDataAdapter(sql, con);
                 DataTable dt = new DataTable();
-                ad.Fill(dt);
+                ad.Fill(dt);// đựng biến ID (số) vào datatable theo chiều giảm dần
                 string strID = "";
 
                 for (int i = 0; i < dt.Rows.Count; i++ )

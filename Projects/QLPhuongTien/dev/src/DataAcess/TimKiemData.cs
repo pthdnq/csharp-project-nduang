@@ -50,5 +50,29 @@ namespace DataAcess
        {
            return m_LoaiPT.select();
        }
+       public DataTable selectNangLucByLoaiPT(string LoaiPTMa)
+       {
+           SqlConnection con = data.getConnect();
+           con.Open();
+           SqlCommand cmd = new SqlCommand();
+           cmd.Connection = con;
+           cmd.CommandType = CommandType.StoredProcedure;
+           cmd.Parameters.Add("LoaiPTMa", SqlDbType.NVarChar).Value = LoaiPTMa;
+           cmd.CommandText = "selectNangLucByLoaiPT";
+           //retval = cmd.ExecuteNonQuery();
+           DataTable dtb;
+           try
+           {
+               SqlDataAdapter da = new SqlDataAdapter(cmd);
+               DataSet ds = new DataSet();
+               da.Fill(ds, "PhuongTien111");
+               dtb = ds.Tables["PhuongTien111"];
+           }
+           catch (System.Exception ex)
+           {
+               return null;
+           }
+           return dtb;
+       }
     }
 }

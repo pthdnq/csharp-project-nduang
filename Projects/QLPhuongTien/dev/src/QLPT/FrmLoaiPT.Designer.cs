@@ -41,6 +41,7 @@
             this.LoaiPTMa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiPTTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CongThucVH_ = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.TenCT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btThem = new System.Windows.Forms.Button();
             this.btLuu = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
@@ -92,6 +93,7 @@
             this.cmbCongThucVH.Name = "cmbCongThucVH";
             this.cmbCongThucVH.Size = new System.Drawing.Size(153, 21);
             this.cmbCongThucVH.TabIndex = 9;
+           
             // 
             // label3
             // 
@@ -137,7 +139,8 @@
             this.Column1,
             this.LoaiPTMa,
             this.LoaiPTTen,
-            this.CongThucVH_});
+            this.CongThucVH_,
+            this.TenCT});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 16);
             this.dataGridView1.Name = "dataGridView1";
@@ -181,6 +184,14 @@
             this.CongThucVH_.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.CongThucVH_.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.CongThucVH_.Width = 150;
+            // 
+            // TenCT
+            // 
+            this.TenCT.DataPropertyName = "TenCT";
+            this.TenCT.HeaderText = "TenCT";
+            this.TenCT.Name = "TenCT";
+            this.TenCT.ReadOnly = true;
+            this.TenCT.Visible = false;
             // 
             // btThem
             // 
@@ -262,7 +273,7 @@
             this.Name = "FrmLoaiPT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loại phương tiện";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmLoaiPT_FormClosing);
+            
             this.Load += new System.EventHandler(this.FrmLoaiPT_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -292,5 +303,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiPTMa;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiPTTen;
         private System.Windows.Forms.DataGridViewComboBoxColumn CongThucVH_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenCT;
     }
 }

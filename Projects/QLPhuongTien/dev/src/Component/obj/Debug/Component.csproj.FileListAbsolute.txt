@@ -1,0 +1,7 @@
+D:\QLPhuongTien\dev\src\Component\bin\Debug\Component.dll
+D:\QLPhuongTien\dev\src\Component\bin\Debug\Component.pdb
+D:\QLPhuongTien\dev\src\Component\bin\Debug\DataAcess.dll
+D:\QLPhuongTien\dev\src\Component\bin\Debug\DataAcess.pdb
+D:\QLPhuongTien\dev\src\Component\obj\Debug\ResolveAssemblyReference.cache
+D:\QLPhuongTien\dev\src\Component\obj\Debug\Component.dll
+D:\QLPhuongTien\dev\src\Component\obj\Debug\Component.pdb

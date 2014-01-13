@@ -76,7 +76,7 @@ namespace QLPT
                 return;
             try
             {
-                m_DonViTCBUS.update(txtDonViTC_ID.Text, txtDonViTC_Ten.Text, txtDonViTC_ToTruong.Text, txtSdt.Text, txtEmail.Text);
+                m_DonViTCBUS.update(txtDonViTC_ID.Text, txtDonViTC_Ten.Text,  txtSdt.Text, txtEmail.Text);
                 FrmDonVi_TC_Load(sender, e);
             }
             catch (Exception ex)
@@ -124,7 +124,7 @@ namespace QLPT
             {
                 m_DonViTCBUS.insert(txtDonViTC_ID.Text
                                         , txtDonViTC_Ten.Text
-                                        , txtDonViTC_ToTruong.Text
+                                        
                                         , txtSdt.Text
                                         , txtEmail.Text);
 
@@ -142,11 +142,11 @@ namespace QLPT
         {
             foreach (DataGridViewRow row in dataGridView1.SelectedRows)
             {
-                this.txtDonViTC_ID.Text = row.Cells[1].Value.ToString();
-                this.txtDonViTC_Ten.Text = row.Cells[2].Value.ToString();
-                this.txtEmail.Text = row.Cells[5].Value.ToString();
-                this.txtDonViTC_ToTruong.Text = row.Cells[3].Value.ToString();
-                this.txtSdt.Text = row.Cells[4].Value.ToString();           
+                this.txtDonViTC_ID.Text = row.Cells["DonViTCID"].Value.ToString();
+                this.txtDonViTC_Ten.Text = row.Cells["DonViTCTen"].Value.ToString();
+                this.txtEmail.Text = row.Cells["Email"].Value.ToString();
+                //this.txtDonViTC_ToTruong.Text = row.Cells[3].Value.ToString();
+                this.txtSdt.Text = row.Cells["Sdt"].Value.ToString();           
                 btSua.Enabled = true;
                 btXoa.Enabled = true;
                 btLuu.Enabled = false;

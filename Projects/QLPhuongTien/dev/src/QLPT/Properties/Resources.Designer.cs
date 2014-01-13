@@ -367,5 +367,12 @@ namespace QLPT.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        internal static System.Drawing.Bitmap View1 {
+            get {
+                object obj = ResourceManager.GetObject("View1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

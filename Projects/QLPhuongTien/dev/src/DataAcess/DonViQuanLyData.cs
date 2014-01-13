@@ -16,7 +16,7 @@ namespace DataAcess
         private String fldDonViQLToTruong   = "DonViQLToTruong";
         private String fldSdt               = "Sdt";
         private String fldEmail             = "Email";
-        public bool insert(string DonViQLID, string DonViQLTen, string DonViQLToTruong, string Sdt, string Email)
+        public bool insert(string DonViQLID, string DonViQLTen, string Sdt, string Email)
         {
             int retval;
             SqlConnection con = data.getConnect();
@@ -27,7 +27,7 @@ namespace DataAcess
             cmd.CommandText = "sp_insert_DonViQuanLyData";
             cmd.Parameters.Add("DonViQLID", SqlDbType.NVarChar).Value = DonViQLID;
             cmd.Parameters.Add("DonViQLTen", SqlDbType.NVarChar).Value = DonViQLTen;
-            cmd.Parameters.Add("DonViQLToTruong", SqlDbType.NVarChar).Value = DonViQLToTruong;
+           // cmd.Parameters.Add("DonViQLToTruong", SqlDbType.NVarChar).Value = DonViQLToTruong;
             cmd.Parameters.Add("Sdt", SqlDbType.NVarChar).Value = Sdt;
             cmd.Parameters.Add("Email", SqlDbType.NVarChar).Value = Email;
             retval = cmd.ExecuteNonQuery();
@@ -35,7 +35,7 @@ namespace DataAcess
             con.Close();
             return retval > 0;
         }
-        public bool update(string DonViQLID, string DonViQLTen, string DonViQLToTruong, string Sdt, string Email)
+        public bool update(string DonViQLID, string DonViQLTen,  string Sdt, string Email)
         {
             int retval;
             SqlConnection con = data.getConnect();
@@ -46,7 +46,7 @@ namespace DataAcess
             cmd.CommandText = "sp_update_DonViQuanLyData";
             cmd.Parameters.Add("DonViQLID", SqlDbType.NVarChar).Value = DonViQLID;
             cmd.Parameters.Add("DonViQLTen", SqlDbType.NVarChar).Value = DonViQLTen;
-            cmd.Parameters.Add("DonViQLToTruong", SqlDbType.NVarChar).Value = DonViQLToTruong;
+            //cmd.Parameters.Add("DonViQLToTruong", SqlDbType.NVarChar).Value = DonViQLToTruong;
             cmd.Parameters.Add("Sdt", SqlDbType.NVarChar).Value = Sdt;
             cmd.Parameters.Add("Email", SqlDbType.NVarChar).Value = Email;
             retval = cmd.ExecuteNonQuery();

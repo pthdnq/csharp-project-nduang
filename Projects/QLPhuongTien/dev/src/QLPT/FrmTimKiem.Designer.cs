@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtNangLuc = new System.Windows.Forms.NumericUpDown();
             this.txtNhanHieu = new System.Windows.Forms.TextBox();
             this.lbNangLuc = new System.Windows.Forms.Label();
             this.lbNhanHieu = new System.Windows.Forms.Label();
@@ -39,15 +38,17 @@
             this.dgvTimKiem = new System.Windows.Forms.DataGridView();
             this.btThoat = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
+            this.cmbNangLucHienThi = new System.Windows.Forms.ComboBox();
+            this.cmbNangLuc = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNangLuc)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTimKiem)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtNangLuc);
+            this.groupBox1.Controls.Add(this.cmbNangLuc);
+            this.groupBox1.Controls.Add(this.cmbNangLucHienThi);
             this.groupBox1.Controls.Add(this.txtNhanHieu);
             this.groupBox1.Controls.Add(this.lbNangLuc);
             this.groupBox1.Controls.Add(this.lbNhanHieu);
@@ -55,28 +56,10 @@
             this.groupBox1.Controls.Add(this.lbLoaiPT);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(316, 139);
+            this.groupBox1.Size = new System.Drawing.Size(316, 169);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tìm kiếm";
-            // 
-            // txtNangLuc
-            // 
-            this.txtNangLuc.DecimalPlaces = 1;
-            this.txtNangLuc.Location = new System.Drawing.Point(107, 102);
-            this.txtNangLuc.Maximum = new decimal(new int[] {
-            -1593835520,
-            466537709,
-            54210,
-            0});
-            this.txtNangLuc.Name = "txtNangLuc";
-            this.txtNangLuc.Size = new System.Drawing.Size(190, 20);
-            this.txtNangLuc.TabIndex = 10;
-            this.txtNangLuc.Value = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
             // 
             // txtNhanHieu
             // 
@@ -91,9 +74,9 @@
             this.lbNangLuc.AutoSize = true;
             this.lbNangLuc.Location = new System.Drawing.Point(15, 109);
             this.lbNangLuc.Name = "lbNangLuc";
-            this.lbNangLuc.Size = new System.Drawing.Size(86, 13);
+            this.lbNangLuc.Size = new System.Drawing.Size(50, 13);
             this.lbNangLuc.TabIndex = 7;
-            this.lbNangLuc.Text = "Năng lực tối đa :";
+            this.lbNangLuc.Text = "Năng lực";
             // 
             // lbNhanHieu
             // 
@@ -112,6 +95,7 @@
             this.cmbLoaiPT.Name = "cmbLoaiPT";
             this.cmbLoaiPT.Size = new System.Drawing.Size(190, 21);
             this.cmbLoaiPT.TabIndex = 1;
+            this.cmbLoaiPT.SelectedIndexChanged += new System.EventHandler(this.cmbLoaiPT_SelectedIndexChanged);
             // 
             // lbLoaiPT
             // 
@@ -149,7 +133,7 @@
             // 
             this.btThoat.Image = global::QLPT.Properties.Resources.Exit;
             this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThoat.Location = new System.Drawing.Point(243, 168);
+            this.btThoat.Location = new System.Drawing.Point(243, 201);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(85, 32);
             this.btThoat.TabIndex = 2;
@@ -161,13 +145,31 @@
             // 
             this.btTimKiem.Image = global::QLPT.Properties.Resources.View;
             this.btTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTimKiem.Location = new System.Drawing.Point(12, 168);
+            this.btTimKiem.Location = new System.Drawing.Point(12, 201);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.Size = new System.Drawing.Size(92, 32);
             this.btTimKiem.TabIndex = 1;
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.UseVisualStyleBackColor = true;
             this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
+            // 
+            // cmbNangLucHienThi
+            // 
+            this.cmbNangLucHienThi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNangLucHienThi.FormattingEnabled = true;
+            this.cmbNangLucHienThi.Location = new System.Drawing.Point(104, 109);
+            this.cmbNangLucHienThi.Name = "cmbNangLucHienThi";
+            this.cmbNangLucHienThi.Size = new System.Drawing.Size(190, 21);
+            this.cmbNangLucHienThi.TabIndex = 10;
+            this.cmbNangLucHienThi.SelectedIndexChanged += new System.EventHandler(this.cmbNangLucHienThi_SelectedIndexChanged);
+            // 
+            // cmbNangLuc
+            // 
+            this.cmbNangLuc.FormattingEnabled = true;
+            this.cmbNangLuc.Location = new System.Drawing.Point(104, 142);
+            this.cmbNangLuc.Name = "cmbNangLuc";
+            this.cmbNangLuc.Size = new System.Drawing.Size(190, 21);
+            this.cmbNangLuc.TabIndex = 11;
             // 
             // FrmTimKiem
             // 
@@ -185,7 +187,6 @@
             this.Load += new System.EventHandler(this.FrmTimKiem_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNangLuc)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTimKiem)).EndInit();
             this.ResumeLayout(false);
@@ -204,6 +205,7 @@
         private System.Windows.Forms.Label lbNangLuc;
         private System.Windows.Forms.Label lbNhanHieu;
         private System.Windows.Forms.TextBox txtNhanHieu;
-        private System.Windows.Forms.NumericUpDown txtNangLuc;
+        private System.Windows.Forms.ComboBox cmbNangLucHienThi;
+        private System.Windows.Forms.ComboBox cmbNangLuc;
     }
 }
