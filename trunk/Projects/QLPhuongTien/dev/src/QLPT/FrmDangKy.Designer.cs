@@ -50,7 +50,7 @@
             this.btNhapLai.Location = new System.Drawing.Point(148, 210);
             this.btNhapLai.Name = "btNhapLai";
             this.btNhapLai.Size = new System.Drawing.Size(84, 29);
-            this.btNhapLai.TabIndex = 7;
+            this.btNhapLai.TabIndex = 6;
             this.btNhapLai.Text = "Nhập lại";
             this.btNhapLai.UseVisualStyleBackColor = true;
             this.btNhapLai.Click += new System.EventHandler(this.btNhapLai_Click);
@@ -62,7 +62,7 @@
             this.btThoat.Location = new System.Drawing.Point(270, 210);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(81, 29);
-            this.btThoat.TabIndex = 6;
+            this.btThoat.TabIndex = 7;
             this.btThoat.Text = "Thoát";
             this.btThoat.UseVisualStyleBackColor = true;
             this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
@@ -98,14 +98,18 @@
             // 
             // cmbPhanQuyen
             // 
+            this.cmbPhanQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPhanQuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbPhanQuyen.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cmbPhanQuyen.FormattingEnabled = true;
             this.cmbPhanQuyen.Items.AddRange(new object[] {
-            "quanly",
+            "quanlyPT",
+            "quanlyVH",
             "nhanvien"});
             this.cmbPhanQuyen.Location = new System.Drawing.Point(121, 143);
             this.cmbPhanQuyen.Name = "cmbPhanQuyen";
             this.cmbPhanQuyen.Size = new System.Drawing.Size(179, 21);
-            this.cmbPhanQuyen.TabIndex = 7;
+            this.cmbPhanQuyen.TabIndex = 4;
             // 
             // label4
             // 
@@ -121,7 +125,7 @@
             this.txtTen.Location = new System.Drawing.Point(121, 31);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(179, 20);
-            this.txtTen.TabIndex = 5;
+            this.txtTen.TabIndex = 1;
             // 
             // txtMK
             // 
@@ -129,7 +133,7 @@
             this.txtMK.Name = "txtMK";
             this.txtMK.PasswordChar = '*';
             this.txtMK.Size = new System.Drawing.Size(179, 20);
-            this.txtMK.TabIndex = 4;
+            this.txtMK.TabIndex = 2;
             // 
             // txtNhapLaiMK
             // 

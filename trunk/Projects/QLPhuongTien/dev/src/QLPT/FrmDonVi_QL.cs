@@ -86,7 +86,7 @@ namespace QLPT
             {
                 m_DonViQuanLyBUS.insert(txtDonViQL_ID.Text
                                         , txtDonViQL_ten.Text
-                                        , txtDonViQL_ToTruong.Text
+                                        
                                         , txtSdt.Text, txtEmail.Text);
 
                 FrmDonVi_QL_Load(sender, e);
@@ -114,11 +114,11 @@ namespace QLPT
             foreach (DataGridViewRow row in dataGridView1.SelectedRows)
             {
 
-                this.txtDonViQL_ID.Text = row.Cells[1].Value.ToString();
-                this.txtDonViQL_ten.Text = row.Cells[2].Value.ToString();
-                this.txtDonViQL_ToTruong.Text = row.Cells[3].Value.ToString();
-                this.txtSdt.Text = row.Cells[4].Value.ToString();
-                this.txtEmail.Text = row.Cells[5].Value.ToString();
+                this.txtDonViQL_ID.Text = row.Cells["DonViQLID"].Value.ToString();
+                this.txtDonViQL_ten.Text = row.Cells["DonViQLTen"].Value.ToString();
+               // this.txtDonViQL_ToTruong.Text = row.Cells[3].Value.ToString();
+                this.txtSdt.Text = row.Cells["Sdt"].Value.ToString();
+                this.txtEmail.Text = row.Cells["Email"].Value.ToString();
                 btSua.Enabled = true;
                 btXoa.Enabled = true;
             }
@@ -132,7 +132,7 @@ namespace QLPT
                 return;
             try
             {
-                m_DonViQuanLyBUS.update(txtDonViQL_ID.Text, txtDonViQL_ten.Text, txtDonViQL_ToTruong.Text, txtSdt.Text, txtEmail.Text);
+                m_DonViQuanLyBUS.update(txtDonViQL_ID.Text, txtDonViQL_ten.Text,  txtSdt.Text, txtEmail.Text);
                 FrmDonVi_QL_Load(sender, e);
             }
             catch (Exception ex)

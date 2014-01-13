@@ -27,8 +27,12 @@ namespace QLPT
         FrmNhanVien nv = new FrmNhanVien();
         FrmNguyenMau_PT nmpt = new FrmNguyenMau_PT();
         FrmTimKiem timkiem = new FrmTimKiem();
-        private static string QUYEN_QUAN_LY = "quanly";
+        FrmDanhSachPTTheoDonVi dspttheodv = new FrmDanhSachPTTheoDonVi();
+        FrmXoaTaiKhoan xoataikhoan = new FrmXoaTaiKhoan();
+        private static string QUYEN_QUAN_LY_CHUNG = "quanlychung";
         private static string QUYEN_NHAN_VIEN= "nhanvien";
+        private static string QUYEN_QUAN_LY_PT = "quanlyPT";
+        private static string QUYEN_QUAN_LY_VH = "quanlyVH";
         public frmMain()
         {
             InitializeComponent();
@@ -51,18 +55,24 @@ namespace QLPT
             if(frmdn.m_isLogin == true)
             {
                 unlockControl();
-                if(frmdn.m_PhanQuyen == QUYEN_QUAN_LY)
+                this.lbStatus.ForeColor = Color.Green;
+                lbStatus.Text = "Tài khoản đang đăng nhập: " + frmdn.txtUser.Text + " - quyền: " + frmdn.m_PhanQuyen;
+                if(frmdn.m_PhanQuyen == QUYEN_QUAN_LY_CHUNG)
                 {
-                    quyenQuanLy();
+                    quyenQuanLyChung();
                 }
                 else if(frmdn.m_PhanQuyen == QUYEN_NHAN_VIEN)
                 {
                     quyenNhanVien();
                 }
-                //else if(dk)
-                //{
-                    //TODO
-                //}
+                else if(frmdn.m_PhanQuyen == QUYEN_QUAN_LY_PT)
+                {
+                    quyenQuanLyPT();
+                }
+                else if(frmdn.m_PhanQuyen == QUYEN_QUAN_LY_VH)
+                {
+                    quyenQuanLyVH();
+                }
                 else
                 {
                     MessageBox.Show("Tài khoải chưa đượcc cấp quyền truy cập");
@@ -76,7 +86,43 @@ namespace QLPT
             }
 
         }
-        private void quyenQuanLy()
+        private void quyenQuanLyPT()
+        {
+            mnDangKy.Enabled = false;
+
+            mnPhuongTien.Enabled = true;
+            mnDonViQuanLy.Enabled = true;
+            mnQuanLyVanhHanh.Enabled = false;
+            mnDanhSachNhanVien.Enabled = true;
+
+            DVQL.btLuu.Visible = false;
+            DVQL.btSua.Visible = false;
+            DVQL.btXoa.Visible = false;
+
+            mnBaoCaoVanHanh.Enabled = false;
+            mnQuanLyNhanVien.Enabled = false;
+            mnDVTC.Enabled = false;
+            mnXoaTaiKhoan.Enabled = false;
+        }
+        private void quyenQuanLyVH()
+        {
+            mnDangKy.Enabled = false;
+
+            mnPhuongTien.Enabled = false;
+            mnDonViQuanLy.Enabled = false;
+            mnQuanLyVanhHanh.Enabled = true;
+            mnDanhSachNhanVien.Enabled = true;
+
+            dvtc.btLuu.Visible = false;
+            dvtc.btSua.Visible = false;
+            dvtc.btXoa.Visible = false;
+
+            mnBaoCaoVanHanh.Enabled = true;
+            mnQuanLyNhanVien.Enabled = false;
+            mnDVTC.Enabled = true;
+            mnXoaTaiKhoan.Enabled = false;
+        }
+        private void quyenQuanLyChung()
         {
             
             nv.btThem.Enabled = true;
@@ -86,6 +132,7 @@ namespace QLPT
             dvtc.btSua.Visible = true;
             dvtc.btXoa.Visible = true;
             dvtc.btLuu.Visible = true;
+
             mnDangKy.Enabled = true;
             mnPhuongTien.Enabled = true;
             mnDonViQuanLy.Enabled = true;
@@ -93,6 +140,8 @@ namespace QLPT
             mnDanhSachNhanVien.Enabled = true;
             mnBaoCaoVanHanh.Enabled = true;
             mnQuanLyNhanVien.Enabled = true;
+            mnXoaTaiKhoan.Enabled = true;
+
         }
         private void quyenNhanVien()
         {       
@@ -107,6 +156,9 @@ namespace QLPT
             mnDanhSachNhanVien.Enabled = true;
             mnBaoCaoVanHanh.Enabled = true;
             mnQuanLyNhanVien.Enabled = false;
+            mnBaoCaoVanHanh.Enabled = false;
+            mnBaoCaoPT.Enabled = false;
+            mnXoaTaiKhoan.Enabled = false;
             
         }
         private void đăngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -212,6 +264,7 @@ namespace QLPT
             mnDangXuat.Enabled = false;
             mnDoiMatKhau.Enabled = false;
             mnDangNhap.Enabled = true;
+            mnXoaTaiKhoan.Enabled = false;
 
         }
         public void unlockControl()
@@ -282,6 +335,24 @@ namespace QLPT
                 baoCaoVH = new FrmBaoCaoVanHanh();
             }
             baoCaoVH.ShowDialog();
+        }
+
+        private void tìmKiếmTheoĐơnVịToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dspttheodv == null || dspttheodv.IsDisposed)
+            {
+                dspttheodv = new FrmDanhSachPTTheoDonVi();
+            }
+            dspttheodv.ShowDialog();
+        }
+
+        private void xóaTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (xoataikhoan == null || xoataikhoan.IsDisposed)
+            {
+                xoataikhoan = new FrmXoaTaiKhoan();
+            }
+            xoataikhoan.ShowDialog();
         }
     }
 }

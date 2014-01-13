@@ -20,6 +20,7 @@ namespace QLPT
         private Utils m_utils = new Utils();
         public bool m_isLogin = false;
         public string m_PhanQuyen = "";
+        public static string currenAccount = "";
         public FrmDangNhap()
         {
             InitializeComponent();
@@ -42,6 +43,7 @@ namespace QLPT
             bool isExistAccount = m_account.isExistAccount(txtUser.Text.Trim(), txtPass.Text.Trim());
             if (isExistAccount)
             {
+                currenAccount = txtUser.Text.Trim();
                 this.Close();
                 m_isLogin = true;
                 m_PhanQuyen = m_account.getPhanQuyen(txtUser.Text.Trim(), txtPass.Text.Trim());
@@ -59,14 +61,11 @@ namespace QLPT
         private void btThoat_Click(object sender, EventArgs e)
         {
             m_isLogin = false;
-           
+            lbStatus.Text = "";
             this.Close();
            
         }
-        //internal void ShowDiaLog()
-        //{
-        //    throw new NotImplementedException();
-        //}
+
         private bool validAccount()
         {
             if (this.txtUser.Text.Length == 0 || this.txtPass.Text.Length == 0)

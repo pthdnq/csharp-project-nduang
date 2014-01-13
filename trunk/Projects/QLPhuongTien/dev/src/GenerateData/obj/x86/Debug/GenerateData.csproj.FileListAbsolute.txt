@@ -1,0 +1,9 @@
+D:\QLPhuongTien\dev\src\GenerateData\bin\Debug\GenerateData.dll
+D:\QLPhuongTien\dev\src\GenerateData\bin\Debug\GenerateData.pdb
+D:\QLPhuongTien\dev\src\GenerateData\bin\Debug\Component.dll
+D:\QLPhuongTien\dev\src\GenerateData\bin\Debug\DataAcess.dll
+D:\QLPhuongTien\dev\src\GenerateData\bin\Debug\Component.pdb
+D:\QLPhuongTien\dev\src\GenerateData\bin\Debug\DataAcess.pdb
+D:\QLPhuongTien\dev\src\GenerateData\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\QLPhuongTien\dev\src\GenerateData\obj\x86\Debug\GenerateData.dll
+D:\QLPhuongTien\dev\src\GenerateData\obj\x86\Debug\GenerateData.pdb

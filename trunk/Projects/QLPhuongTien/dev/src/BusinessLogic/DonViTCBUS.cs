@@ -21,14 +21,14 @@ namespace BusinessLogic
       
       
         //Thêm
-        public void insert(string DonViTCID, string DonViTCTen, string DonViTCToTruong, string Sdt, string Email)
+        public void insert(string DonViTCID, string DonViTCTen,  string Sdt, string Email)
         {
-            m_DonViTCData.insert(DonViTCID, DonViTCTen, DonViTCToTruong, Sdt, Email);
+            m_DonViTCData.insert(DonViTCID, DonViTCTen,  Sdt, Email);
         }
         //Sửa
-        public void update(string strDonViTCID, string strDonViTCTen, string strDonViTCToTruong, string strSdt, string strEmail)
+        public void update(string strDonViTCID, string strDonViTCTen, string strSdt, string strEmail)
         {
-            m_DonViTCData.update(strDonViTCID, strDonViTCTen, strDonViTCToTruong, strSdt, strEmail);
+            m_DonViTCData.update(strDonViTCID, strDonViTCTen, strSdt, strEmail);
         }
         //xóa
         public void delete1(string strDonViTCID)

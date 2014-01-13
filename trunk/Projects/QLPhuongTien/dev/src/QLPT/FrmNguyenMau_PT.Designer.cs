@@ -343,7 +343,7 @@
             this.groupBox2.Controls.Add(this.dgvNguyenMau);
             this.groupBox2.Location = new System.Drawing.Point(23, 351);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(858, 180);
+            this.groupBox2.Size = new System.Drawing.Size(858, 247);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách chi tiết";
@@ -371,7 +371,7 @@
             this.dgvNguyenMau.Name = "dgvNguyenMau";
             this.dgvNguyenMau.ReadOnly = true;
             this.dgvNguyenMau.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNguyenMau.Size = new System.Drawing.Size(852, 161);
+            this.dgvNguyenMau.Size = new System.Drawing.Size(852, 228);
             this.dgvNguyenMau.TabIndex = 0;
             this.dgvNguyenMau.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             this.dgvNguyenMau.Click += new System.EventHandler(this.dgvNguyenMau_Click);
@@ -531,7 +531,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(891, 543);
+            this.ClientSize = new System.Drawing.Size(891, 610);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btXoa);
@@ -540,6 +540,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmNguyenMau_PT";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nguyên mẫu  - Phương tiện";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmNguyenMau_PT_FormClosing);
             this.Load += new System.EventHandler(this.FrmNguyenMau_PT_Load_1);

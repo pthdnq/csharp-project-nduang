@@ -27,7 +27,7 @@ namespace QLPT
         public void resetControl()
         {
             txtNhanHieu.Text = "";
-            txtNangLuc.Text = "";
+            //txtNangLuc.Text = "";
 
         }
         public void ShowComboxForLoaiPTCol()
@@ -67,7 +67,7 @@ namespace QLPT
         {
             
           ShowComboxForLoaiPTCol();
-          timKiemThongTinPT("", "", "100000");
+         // timKiemThongTinPT("", "", "100000");
         }
 
         private void txtNhanHieu_TextChanged(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace QLPT
             timKiemThongTinPT(
                 cmbLoaiPT.SelectedValue.ToString()
                 ,txtNhanHieu.Text.Trim()
-                , txtNangLuc.Text.Trim()
+                , cmbNangLuc.Text.Trim()
                 );
         }
          private void timKiemThongTinPT(string LoaiPTMa, string NhanHieu, string NangLuc)
@@ -124,6 +124,44 @@ namespace QLPT
          private void FrmTimKiem_FormClosing(object sender, FormClosingEventArgs e)
          {
 
+         }
+
+         private void cmbLoaiPT_SelectedIndexChanged(object sender, EventArgs e)
+         {
+             showNangLucByLoaiPT();
+         }
+         private void showNangLucByLoaiPT()
+         {
+             try
+             {
+                 //chỉ dành hiển thị
+                 cmbNangLucHienThi.DataSource = m_TimKiemBUS.selectNangLucByLoaiPT(cmbLoaiPT.SelectedValue.ToString().Trim());
+                 cmbNangLucHienThi.DisplayMember = "NangLuc_";
+                 cmbNangLucHienThi.ValueMember = "LoaiPTMa";
+
+                 //dành cho tính toán
+                 cmbNangLuc.DataSource = m_TimKiemBUS.selectNangLucByLoaiPT(cmbLoaiPT.SelectedValue.ToString().Trim());
+                 cmbNangLuc.DisplayMember = "NangLuc";
+                 cmbNangLuc.ValueMember = "LoaiPTMa";
+
+             }
+             catch (System.Exception ex)
+             {
+
+             }
+         }
+
+         private void cmbNangLucHienThi_SelectedIndexChanged(object sender, EventArgs e)
+         {
+             try
+             {
+                 cmbNangLuc.SelectedIndex = cmbNangLucHienThi.SelectedIndex;
+             }
+             catch (System.Exception ex)
+             {
+             	
+             }
+            
          }
     }
 }

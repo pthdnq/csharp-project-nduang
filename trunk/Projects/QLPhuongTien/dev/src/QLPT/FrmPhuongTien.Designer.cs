@@ -59,6 +59,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvPhuongTien = new System.Windows.Forms.DataGridView();
+            this.txtSearchPhuongTien = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btSua = new System.Windows.Forms.Button();
+            this.btXoa = new System.Windows.Forms.Button();
+            this.btLuu = new System.Windows.Forms.Button();
+            this.btThoat = new System.Windows.Forms.Button();
+            this.btThem = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AutoNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhuongTienID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,13 +82,6 @@
             this.LanDaiTu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayVH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HienTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtSearchPhuongTien = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btSua = new System.Windows.Forms.Button();
-            this.btXoa = new System.Windows.Forms.Button();
-            this.btLuu = new System.Windows.Forms.Button();
-            this.btThoat = new System.Windows.Forms.Button();
-            this.btThem = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhuongTien)).BeginInit();
@@ -413,6 +413,86 @@
             this.dgvPhuongTien.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             this.dgvPhuongTien.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
+            // txtSearchPhuongTien
+            // 
+            this.txtSearchPhuongTien.Location = new System.Drawing.Point(925, 35);
+            this.txtSearchPhuongTien.Name = "txtSearchPhuongTien";
+            this.txtSearchPhuongTien.Size = new System.Drawing.Size(182, 20);
+            this.txtSearchPhuongTien.TabIndex = 37;
+            this.txtSearchPhuongTien.Click += new System.EventHandler(this.txtSearchPhuongTien_Click);
+            this.txtSearchPhuongTien.TextChanged += new System.EventHandler(this.txtSearchPhuongTien_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.Window;
+            this.label7.Image = global::QLPT.Properties.Resources.View;
+            this.label7.Location = new System.Drawing.Point(1082, 38);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(25, 13);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "      ";
+            // 
+            // btSua
+            // 
+            this.btSua.Image = global::QLPT.Properties.Resources.application_edit;
+            this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSua.Location = new System.Drawing.Point(111, 335);
+            this.btSua.Name = "btSua";
+            this.btSua.Size = new System.Drawing.Size(75, 30);
+            this.btSua.TabIndex = 6;
+            this.btSua.Text = "Sửa";
+            this.btSua.UseVisualStyleBackColor = true;
+            this.btSua.Click += new System.EventHandler(this.btSua_Click);
+            // 
+            // btXoa
+            // 
+            this.btXoa.Image = global::QLPT.Properties.Resources.Delete;
+            this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btXoa.Location = new System.Drawing.Point(212, 335);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.Size = new System.Drawing.Size(75, 30);
+            this.btXoa.TabIndex = 5;
+            this.btXoa.Text = "Xóa";
+            this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
+            // 
+            // btLuu
+            // 
+            this.btLuu.Image = global::QLPT.Properties.Resources.Save;
+            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLuu.Location = new System.Drawing.Point(318, 335);
+            this.btLuu.Name = "btLuu";
+            this.btLuu.Size = new System.Drawing.Size(75, 30);
+            this.btLuu.TabIndex = 4;
+            this.btLuu.Text = "Lưu";
+            this.btLuu.UseVisualStyleBackColor = true;
+            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
+            // 
+            // btThoat
+            // 
+            this.btThoat.Image = global::QLPT.Properties.Resources.Exit;
+            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThoat.Location = new System.Drawing.Point(792, 335);
+            this.btThoat.Name = "btThoat";
+            this.btThoat.Size = new System.Drawing.Size(75, 30);
+            this.btThoat.TabIndex = 3;
+            this.btThoat.Text = "Thoát";
+            this.btThoat.UseVisualStyleBackColor = true;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
+            // 
+            // btThem
+            // 
+            this.btThem.Image = global::QLPT.Properties.Resources.plus_16;
+            this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThem.Location = new System.Drawing.Point(16, 335);
+            this.btThem.Name = "btThem";
+            this.btThem.Size = new System.Drawing.Size(75, 30);
+            this.btThem.TabIndex = 2;
+            this.btThem.Text = "Thêm";
+            this.btThem.UseVisualStyleBackColor = true;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
+            // 
             // Column1
             // 
             this.Column1.HeaderText = "STT";
@@ -448,6 +528,7 @@
             // NguyenMauID
             // 
             this.NguyenMauID.DataPropertyName = "NguyenMauID";
+            this.NguyenMauID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NguyenMauID.HeaderText = "Loại nguyên mấu";
             this.NguyenMauID.Name = "NguyenMauID";
             this.NguyenMauID.ReadOnly = true;
@@ -546,86 +627,6 @@
             this.HienTrang.Name = "HienTrang";
             this.HienTrang.ReadOnly = true;
             this.HienTrang.Width = 30;
-            // 
-            // txtSearchPhuongTien
-            // 
-            this.txtSearchPhuongTien.Location = new System.Drawing.Point(925, 35);
-            this.txtSearchPhuongTien.Name = "txtSearchPhuongTien";
-            this.txtSearchPhuongTien.Size = new System.Drawing.Size(182, 20);
-            this.txtSearchPhuongTien.TabIndex = 37;
-            this.txtSearchPhuongTien.Click += new System.EventHandler(this.txtSearchPhuongTien_Click);
-            this.txtSearchPhuongTien.TextChanged += new System.EventHandler(this.txtSearchPhuongTien_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.Window;
-            this.label7.Image = global::QLPT.Properties.Resources.View;
-            this.label7.Location = new System.Drawing.Point(1082, 38);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(25, 13);
-            this.label7.TabIndex = 40;
-            this.label7.Text = "      ";
-            // 
-            // btSua
-            // 
-            this.btSua.Image = global::QLPT.Properties.Resources.application_edit;
-            this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSua.Location = new System.Drawing.Point(111, 335);
-            this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(75, 30);
-            this.btSua.TabIndex = 6;
-            this.btSua.Text = "Sửa";
-            this.btSua.UseVisualStyleBackColor = true;
-            this.btSua.Click += new System.EventHandler(this.btSua_Click);
-            // 
-            // btXoa
-            // 
-            this.btXoa.Image = global::QLPT.Properties.Resources.Delete;
-            this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoa.Location = new System.Drawing.Point(212, 335);
-            this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(75, 30);
-            this.btXoa.TabIndex = 5;
-            this.btXoa.Text = "Xóa";
-            this.btXoa.UseVisualStyleBackColor = true;
-            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
-            // 
-            // btLuu
-            // 
-            this.btLuu.Image = global::QLPT.Properties.Resources.Save;
-            this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLuu.Location = new System.Drawing.Point(318, 335);
-            this.btLuu.Name = "btLuu";
-            this.btLuu.Size = new System.Drawing.Size(75, 30);
-            this.btLuu.TabIndex = 4;
-            this.btLuu.Text = "Lưu";
-            this.btLuu.UseVisualStyleBackColor = true;
-            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
-            // 
-            // btThoat
-            // 
-            this.btThoat.Image = global::QLPT.Properties.Resources.Exit;
-            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThoat.Location = new System.Drawing.Point(792, 335);
-            this.btThoat.Name = "btThoat";
-            this.btThoat.Size = new System.Drawing.Size(75, 30);
-            this.btThoat.TabIndex = 3;
-            this.btThoat.Text = "Thoát";
-            this.btThoat.UseVisualStyleBackColor = true;
-            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
-            // 
-            // btThem
-            // 
-            this.btThem.Image = global::QLPT.Properties.Resources.plus_16;
-            this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThem.Location = new System.Drawing.Point(16, 335);
-            this.btThem.Name = "btThem";
-            this.btThem.Size = new System.Drawing.Size(75, 30);
-            this.btThem.TabIndex = 2;
-            this.btThem.Text = "Thêm";
-            this.btThem.UseVisualStyleBackColor = true;
-            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // FrmPhuongTien
             // 

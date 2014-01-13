@@ -19,14 +19,14 @@ namespace BusinessLogic
         //    return dt;
         //}
         //Thêm
-        public void insert(string DonViQLID , string DonViQLTen, string DonViQLToTruong, string Sdt, string Email)
+        public void insert(string DonViQLID , string DonViQLTen, string Sdt, string Email)
         {
-            m_DonViQuanLyData.insert(DonViQLID, DonViQLTen, DonViQLToTruong, Sdt, Email); 
+            m_DonViQuanLyData.insert(DonViQLID, DonViQLTen,  Sdt, Email); 
         }
         //Sửa
-        public void update(string strDonViQLID, string strDonViQLTen, string strDonViQLToTruong, string strSdt, string strEmail)
+        public void update(string strDonViQLID, string strDonViQLTen, string strSdt, string strEmail)
         {
-            m_DonViQuanLyData.update(strDonViQLID, strDonViQLTen,  strDonViQLToTruong,  strSdt,  strEmail);
+            m_DonViQuanLyData.update(strDonViQLID, strDonViQLTen,   strSdt,  strEmail);
         }
         //xóa
         public void delete1(string strDonViQLID)

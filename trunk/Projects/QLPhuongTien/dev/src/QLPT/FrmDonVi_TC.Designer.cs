@@ -41,17 +41,16 @@
             this.lbMaDV = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btSua = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.btLuu = new System.Windows.Forms.Button();
             this.btThoat = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonViTCID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonViTCTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -71,7 +70,7 @@
             this.groupBox1.Controls.Add(this.lbMaDV);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(726, 145);
+            this.groupBox1.Size = new System.Drawing.Size(726, 101);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đơn vị thi công";
@@ -106,6 +105,7 @@
             this.txtDonViTC_ToTruong.Name = "txtDonViTC_ToTruong";
             this.txtDonViTC_ToTruong.Size = new System.Drawing.Size(200, 20);
             this.txtDonViTC_ToTruong.TabIndex = 6;
+            this.txtDonViTC_ToTruong.Visible = false;
             // 
             // txtSdt
             // 
@@ -129,6 +129,7 @@
             this.lbTenDV.Size = new System.Drawing.Size(76, 13);
             this.lbTenDV.TabIndex = 3;
             this.lbTenDV.Text = "Tổ trưởng TC :";
+            this.lbTenDV.Visible = false;
             // 
             // lbSdt
             // 
@@ -173,11 +174,10 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
+            this.DonViTCID,
+            this.DonViTCTen,
+            this.Sdt,
+            this.Email});
             this.dataGridView1.Location = new System.Drawing.Point(3, 16);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -186,53 +186,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 30;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "DonViTCID";
-            this.Column2.HeaderText = "Mã DV";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 65;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "DonViTCTen";
-            this.Column3.HeaderText = "Tên đơn vị";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 230;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "DonViTCToTruong";
-            this.Column4.HeaderText = "Tổ trưởng ĐV";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Sdt";
-            this.Column5.HeaderText = "Số điện thoại";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 80;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Email";
-            this.Column6.HeaderText = "Email";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 170;
             // 
             // btSua
             // 
@@ -297,6 +250,45 @@
             this.btThem.UseVisualStyleBackColor = true;
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 30;
+            // 
+            // DonViTCID
+            // 
+            this.DonViTCID.DataPropertyName = "DonViTCID";
+            this.DonViTCID.HeaderText = "Mã DV";
+            this.DonViTCID.Name = "DonViTCID";
+            this.DonViTCID.ReadOnly = true;
+            this.DonViTCID.Width = 65;
+            // 
+            // DonViTCTen
+            // 
+            this.DonViTCTen.DataPropertyName = "DonViTCTen";
+            this.DonViTCTen.HeaderText = "Tên đơn vị";
+            this.DonViTCTen.Name = "DonViTCTen";
+            this.DonViTCTen.ReadOnly = true;
+            this.DonViTCTen.Width = 230;
+            // 
+            // Sdt
+            // 
+            this.Sdt.DataPropertyName = "Sdt";
+            this.Sdt.HeaderText = "Số điện thoại";
+            this.Sdt.Name = "Sdt";
+            this.Sdt.ReadOnly = true;
+            this.Sdt.Width = 80;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 170;
+            // 
             // FrmDonVi_TC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,15 +330,14 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtDonViTC_ID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         public System.Windows.Forms.Button btSua;
         public System.Windows.Forms.Button btXoa;
         public System.Windows.Forms.Button btLuu;
         public System.Windows.Forms.Button btThem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonViTCID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonViTCTen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sdt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
 }

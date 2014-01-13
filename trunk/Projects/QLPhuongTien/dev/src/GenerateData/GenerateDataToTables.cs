@@ -29,7 +29,7 @@ namespace GenerateData
                 (
                     DonViQLID
                   , DonViQLTen
-                  , DonViQLToTruong
+                  
                   , Sdt
                   , Email
                 );

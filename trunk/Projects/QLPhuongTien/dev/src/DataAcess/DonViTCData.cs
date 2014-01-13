@@ -10,7 +10,7 @@ namespace DataAcess
    public class DonViTCData
     {
         Data data = new Data();
-        public bool insert(string DonViTCID, string DonViTCTen, string DonViTCToTruong, string Sdt, string Email)
+        public bool insert(string DonViTCID, string DonViTCTen,  string Sdt, string Email)
         {
 
             int retval;
@@ -22,7 +22,7 @@ namespace DataAcess
             cmd.CommandText = "sp_insert_DonViTCData";
             cmd.Parameters.Add("DonViTCID", SqlDbType.NVarChar).Value = DonViTCID;
             cmd.Parameters.Add("DonViTCTen", SqlDbType.NVarChar).Value = DonViTCTen;
-            cmd.Parameters.Add("DonViTCToTruong", SqlDbType.NVarChar).Value = DonViTCToTruong;
+            //cmd.Parameters.Add("DonViTCToTruong", SqlDbType.NVarChar).Value = DonViTCToTruong;
             cmd.Parameters.Add("Sdt", SqlDbType.NVarChar).Value = Sdt;
             cmd.Parameters.Add("Email", SqlDbType.NVarChar).Value = Email;
             retval = cmd.ExecuteNonQuery();
@@ -30,7 +30,7 @@ namespace DataAcess
             con.Close();
             return retval >0;
         }
-        public bool update(string DonViTCID, string DonViTCTen, string DonViTCToTruong, string Sdt, string Email)
+        public bool update(string DonViTCID, string DonViTCTen,  string Sdt, string Email)
         {
             int retval;
             SqlConnection con = data.getConnect();
@@ -41,7 +41,7 @@ namespace DataAcess
             cmd.CommandText = "sp_update_DonViTCData";
             cmd.Parameters.Add("DonViTCID", SqlDbType.NVarChar).Value = DonViTCID;
             cmd.Parameters.Add("DonViTCTen", SqlDbType.NVarChar).Value = DonViTCTen;
-            cmd.Parameters.Add("DonViTCToTruong", SqlDbType.NVarChar).Value = DonViTCToTruong;
+           // cmd.Parameters.Add("DonViTCToTruong", SqlDbType.NVarChar).Value = DonViTCToTruong;
             cmd.Parameters.Add("Sdt", SqlDbType.NVarChar).Value = Sdt;
             cmd.Parameters.Add("Email", SqlDbType.NVarChar).Value = Email;
             retval = cmd.ExecuteNonQuery();

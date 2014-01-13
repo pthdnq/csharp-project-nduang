@@ -15,14 +15,16 @@ namespace Component
         {
             return m_data.getIDNumberAuto(tblName, fldID);
         }
+
+        //LẤY ID (SỐ) LỚN NHẤT
         public int getMaxIDAuto(string tblName, string fldID)
         {
             int maxID = 0;
-            ArrayList listID = m_data.getListIDNumberAuto(tblName, fldID);
+            ArrayList listID = m_data.getListIDNumberAuto(tblName, fldID);//Vào List chứa các IDtextbox 
             int i = 0;
             foreach (string strcurrentID in listID)
             {
-                int icurrentID = getIntInString(strcurrentID);
+                int icurrentID = getIntInString(strcurrentID);// lọc ra ký tự số của biến strcurrentID hiện tại
                 if (i == 0)
                 {
                     maxID = icurrentID;
@@ -44,6 +46,8 @@ namespace Component
         {
             return float.Parse(decNumber.ToString());
         }
+
+        //LỌC RA KÍ TỰ SỐ TRONG IDTEXTBOX
         public int getIntInString(string strContainsNumber)
         {
             int val = 0;

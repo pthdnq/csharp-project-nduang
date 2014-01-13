@@ -26,5 +26,9 @@ namespace BusinessLogic
        {
            return m_TimKiemData.selectLoaiPT();
        }
+       public DataTable selectNangLucByLoaiPT(string LoaiPTMa)
+       {
+           return m_TimKiemData.selectNangLucByLoaiPT(LoaiPTMa);
+       }
     }
 }
