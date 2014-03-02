@@ -169,29 +169,21 @@
             -1966660860,
             0,
             0});
-            this.spbBDTX.Minimum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            -2147483648});
             this.spbBDTX.Name = "spbBDTX";
             this.spbBDTX.Size = new System.Drawing.Size(256, 20);
             this.spbBDTX.TabIndex = 29;
+            this.spbBDTX.ValueChanged += new System.EventHandler(this.spbBDTX_ValueChanged);
             // 
             // spbTieuTu
             // 
             this.spbTieuTu.DecimalPlaces = 3;
+            this.spbTieuTu.Enabled = false;
             this.spbTieuTu.Location = new System.Drawing.Point(585, 59);
             this.spbTieuTu.Maximum = new decimal(new int[] {
             -1981284352,
             -1966660860,
             0,
             0});
-            this.spbTieuTu.Minimum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            -2147483648});
             this.spbTieuTu.Name = "spbTieuTu";
             this.spbTieuTu.Size = new System.Drawing.Size(256, 20);
             this.spbTieuTu.TabIndex = 28;
@@ -199,17 +191,13 @@
             // spbTrungTu
             // 
             this.spbTrungTu.DecimalPlaces = 3;
+            this.spbTrungTu.Enabled = false;
             this.spbTrungTu.Location = new System.Drawing.Point(585, 103);
             this.spbTrungTu.Maximum = new decimal(new int[] {
             -1981284352,
             -1966660860,
             0,
             0});
-            this.spbTrungTu.Minimum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            -2147483648});
             this.spbTrungTu.Name = "spbTrungTu";
             this.spbTrungTu.Size = new System.Drawing.Size(256, 20);
             this.spbTrungTu.TabIndex = 27;
@@ -217,17 +205,13 @@
             // spbDaiTu
             // 
             this.spbDaiTu.DecimalPlaces = 3;
+            this.spbDaiTu.Enabled = false;
             this.spbDaiTu.Location = new System.Drawing.Point(585, 148);
             this.spbDaiTu.Maximum = new decimal(new int[] {
             -1981284352,
             -1966660860,
             0,
             0});
-            this.spbDaiTu.Minimum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            -2147483648});
             this.spbDaiTu.Name = "spbDaiTu";
             this.spbDaiTu.Size = new System.Drawing.Size(256, 20);
             this.spbDaiTu.TabIndex = 26;
@@ -542,7 +526,6 @@
             this.Name = "FrmNguyenMau_PT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nguyên mẫu  - Phương tiện";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmNguyenMau_PT_FormClosing);
             this.Load += new System.EventHandler(this.FrmNguyenMau_PT_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

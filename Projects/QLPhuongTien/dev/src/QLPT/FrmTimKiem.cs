@@ -65,7 +65,7 @@ namespace QLPT
         //}
         private void FrmTimKiem_Load(object sender, EventArgs e)
         {
-            
+            cmbNangLuc.Visible = false;
           ShowComboxForLoaiPTCol();
          // timKiemThongTinPT("", "", "100000");
         }

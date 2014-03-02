@@ -27,5 +27,10 @@ namespace QLPT
             catch { }
             this.reportViewer1.RefreshReport();
         }
+
+        private void FrmBaoCaoThongTinPT_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            reportViewer1.LocalReport.ReleaseSandboxAppDomain();
+        }
     }
 }

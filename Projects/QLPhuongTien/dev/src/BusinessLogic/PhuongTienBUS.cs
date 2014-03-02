@@ -115,6 +115,10 @@ namespace BusinessLogic
        {
            return m_PhuongTienData.selectPhuongTienData_LoaiPT_ByMaLoaiPT(LoaiPTMa);
        }
+       public DataTable selectPhuongTienData_LoaiPT_ByNguyenMau(string NguyenMauMa)
+       {
+           return m_PhuongTienData.selectPhuongTienData_LoaiPT_ByNguyenMauID(NguyenMauMa);
+       }
        public DataTable update_LanBaoTri
            (
            string PhuongTienID , 

@@ -224,12 +224,12 @@ namespace QLPT
                cmbDVTC.SelectedValue.ToString(),
                txtBienDK.Text,
                dtpNgayVH.Text,
-               txtLanBDTX.Text,
-               txtLanTieuTu.Text,
-               txtLanTrungTu.Text,
-               txtLanDaiTu.Text,
+               "0",//txtLanBDTX.Text,
+               "0",//txtLanTieuTu.Text,
+               "0",//txtLanTrungTu.Text,
+               "0",//txtLanDaiTu.Text,
                txtXuaXu.Text,
-               txtTongVH.Text
+               "0"//txtTongVH.Text
 
                           );
 
@@ -270,6 +270,7 @@ namespace QLPT
                txtXuaXu.Text,
                txtTongVH.Text
                           );
+                MessageBox.Show("Sửa dữ liệu thành công !");
                 FrmPhuongTien_Load(sender, e);
             }
             catch (Exception ex)

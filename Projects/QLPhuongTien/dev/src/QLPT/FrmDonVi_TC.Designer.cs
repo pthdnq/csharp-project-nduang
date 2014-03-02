@@ -70,7 +70,7 @@
             this.groupBox1.Controls.Add(this.lbMaDV);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(726, 101);
+            this.groupBox1.Size = new System.Drawing.Size(689, 101);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đơn vị thi công";
@@ -94,7 +94,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(506, 64);
+            this.txtEmail.Location = new System.Drawing.Point(470, 64);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(203, 20);
             this.txtEmail.TabIndex = 7;
@@ -109,7 +109,7 @@
             // 
             // txtSdt
             // 
-            this.txtSdt.Location = new System.Drawing.Point(506, 29);
+            this.txtSdt.Location = new System.Drawing.Point(470, 29);
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.Size = new System.Drawing.Size(203, 20);
             this.txtSdt.TabIndex = 5;
@@ -134,7 +134,7 @@
             // lbSdt
             // 
             this.lbSdt.AutoSize = true;
-            this.lbSdt.Location = new System.Drawing.Point(395, 36);
+            this.lbSdt.Location = new System.Drawing.Point(359, 36);
             this.lbSdt.Name = "lbSdt";
             this.lbSdt.Size = new System.Drawing.Size(76, 13);
             this.lbSdt.TabIndex = 2;
@@ -143,7 +143,7 @@
             // lbGhiChu
             // 
             this.lbGhiChu.AutoSize = true;
-            this.lbGhiChu.Location = new System.Drawing.Point(395, 71);
+            this.lbGhiChu.Location = new System.Drawing.Point(359, 71);
             this.lbGhiChu.Name = "lbGhiChu";
             this.lbGhiChu.Size = new System.Drawing.Size(38, 13);
             this.lbGhiChu.TabIndex = 1;
@@ -182,7 +182,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(732, 185);
+            this.dataGridView1.Size = new System.Drawing.Size(707, 185);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
@@ -263,7 +263,6 @@
             this.DonViTCID.HeaderText = "Mã DV";
             this.DonViTCID.Name = "DonViTCID";
             this.DonViTCID.ReadOnly = true;
-            this.DonViTCID.Width = 65;
             // 
             // DonViTCTen
             // 
@@ -279,7 +278,7 @@
             this.Sdt.HeaderText = "Số điện thoại";
             this.Sdt.Name = "Sdt";
             this.Sdt.ReadOnly = true;
-            this.Sdt.Width = 80;
+            this.Sdt.Width = 120;
             // 
             // Email
             // 
@@ -287,14 +286,14 @@
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
-            this.Email.Width = 170;
+            this.Email.Width = 190;
             // 
             // FrmDonVi_TC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(912, 477);
+            this.ClientSize = new System.Drawing.Size(779, 477);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btXoa);
             this.Controls.Add(this.btLuu);
@@ -304,7 +303,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmDonVi_TC";
             this.Text = "Đơn vị thi công";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDonVi_TC_FormClosing);
             this.Load += new System.EventHandler(this.FrmDonVi_TC_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

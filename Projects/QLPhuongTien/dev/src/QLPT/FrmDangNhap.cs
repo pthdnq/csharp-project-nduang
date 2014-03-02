@@ -87,11 +87,6 @@ namespace QLPT
             this.txtUser.Focus();
         }
 
-        private void FrmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-            
-        }
 
 
     }

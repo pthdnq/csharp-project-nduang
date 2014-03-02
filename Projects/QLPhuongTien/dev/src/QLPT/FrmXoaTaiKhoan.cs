@@ -89,7 +89,11 @@ namespace QLPT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            delTaiKhoan();
+            if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa tài khoản này không ? ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            {
+                delTaiKhoan();
+            }
+            
             FrmXoaTaiKhoan_Load(sender,e);
         }
 

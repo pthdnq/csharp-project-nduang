@@ -18,9 +18,12 @@ namespace QLPT
 
         private void FrmBaoCaoNhanVien_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'DataSet_View_NhanVien.View_NhanVien' table. You can move, or remove it, as needed.
+            try{// TODO: This line of code loads data into the 'DataSet_View_NhanVien.View_NhanVien' table. You can move, or remove it, as needed.
             this.View_NhanVienTableAdapter.Fill(this.DataSet_View_NhanVien.View_NhanVien);
 
+            
+            }
+            catch { }
             this.reportViewer1.RefreshReport();
         }
     }

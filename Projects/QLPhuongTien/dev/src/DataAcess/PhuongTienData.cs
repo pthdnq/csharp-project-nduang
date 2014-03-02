@@ -207,6 +207,29 @@ namespace DataAcess
             }
             return dtb;
         }
+        public DataTable selectPhuongTienData_LoaiPT_ByNguyenMauID(string NguyenMauID)
+        {
+            SqlConnection con = data.getConnect();
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_select_PhuongTienData_LoaiPT_NguyenMauID";
+            cmd.Parameters.Add("NguyenMauID", SqlDbType.NVarChar).Value = NguyenMauID;
+            DataTable dtb;
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "PhuongTien");
+                dtb = ds.Tables["PhuongTien"];
+            }
+            catch (System.Exception ex)
+            {
+                return null;
+            }
+            return dtb;
+        }
         public DataTable update_TongVHToPhuongTien(string PhuongTienID, string TongVH)
         {
             SqlConnection con = data.getConnect();

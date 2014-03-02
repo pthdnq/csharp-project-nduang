@@ -73,6 +73,7 @@
             this.Name = "FrmBaoCaoThongTinPT";
             this.Text = "Danh sách chi tiết";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmBaoCaoThongTinPT_FormClosing);
             this.Load += new System.EventHandler(this.FrmBaoCaoThongTinPT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.View_Info_PhuongTienBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet_View_Info_PhuongTien)).EndInit();

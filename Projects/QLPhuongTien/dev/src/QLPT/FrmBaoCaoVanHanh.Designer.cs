@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.View_VanHanh_DataSet = new QLPT.View_VanHanh_DataSet();
             this.View_VanHanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.View_VanHanh_DataSet = new QLPT.View_VanHanh_DataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.View_VanHanhTableAdapter = new QLPT.View_VanHanh_DataSetTableAdapters.View_VanHanhTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.View_VanHanh_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_VanHanhBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.View_VanHanh_DataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // View_VanHanhBindingSource
+            // 
+            this.View_VanHanhBindingSource.DataMember = "View_VanHanh";
+            this.View_VanHanhBindingSource.DataSource = this.View_VanHanh_DataSet;
+            // 
+            // View_VanHanh_DataSet
+            // 
+            this.View_VanHanh_DataSet.DataSetName = "View_VanHanh_DataSet";
+            this.View_VanHanh_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -49,16 +59,6 @@
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(1133, 597);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // View_VanHanh_DataSet
-            // 
-            this.View_VanHanh_DataSet.DataSetName = "View_VanHanh_DataSet";
-            this.View_VanHanh_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // View_VanHanhBindingSource
-            // 
-            this.View_VanHanhBindingSource.DataMember = "View_VanHanh";
-            this.View_VanHanhBindingSource.DataSource = this.View_VanHanh_DataSet;
             // 
             // View_VanHanhTableAdapter
             // 
@@ -73,9 +73,10 @@
             this.Name = "FrmBaoCaoVanHanh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Báo cáo vận hành chi tiết";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmBaoCaoVanHanh_FormClosing);
             this.Load += new System.EventHandler(this.FrmBaoCaoVanHanh_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.View_VanHanh_DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_VanHanhBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.View_VanHanh_DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

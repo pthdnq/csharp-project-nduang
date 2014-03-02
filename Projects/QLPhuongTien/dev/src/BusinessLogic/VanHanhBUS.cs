@@ -84,9 +84,9 @@ namespace BusinessLogic
               
            );
        }
-       public void delete1(string VanHanhID)
+       public bool delete1(string VanHanhID)
        {
-           m_VanHanhData.delete1(VanHanhID);
+          return m_VanHanhData.delete1(VanHanhID);
        }
        public DataTable selectVanHanh()
        {

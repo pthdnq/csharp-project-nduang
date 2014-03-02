@@ -28,5 +28,10 @@ namespace QLPT
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void FrmBaoCaoVanHanh_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            reportViewer1.LocalReport.ReleaseSandboxAppDomain();
+        }
     }
 }
