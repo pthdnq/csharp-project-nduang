@@ -25,7 +25,7 @@ namespace QLPT
 
         private void FrmDangKy_Load(object sender, EventArgs e)
         {
-
+            cmbPhanQuyen.SelectedIndex = 0;
         }
 
         private void btDK_Click(object sender, EventArgs e)
@@ -78,12 +78,6 @@ namespace QLPT
         private void btThoat_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void FrmDangKy_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-            
         }
 
     }

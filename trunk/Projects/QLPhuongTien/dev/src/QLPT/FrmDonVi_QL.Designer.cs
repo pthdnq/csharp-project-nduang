@@ -307,7 +307,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmDonVi_QL";
             this.Text = "Đơn vị quản lý phương tiện";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDonVi_QL_FormClosing);
             this.Load += new System.EventHandler(this.FrmDonVi_QL_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

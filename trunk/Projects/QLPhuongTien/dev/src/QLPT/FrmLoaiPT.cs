@@ -110,7 +110,7 @@ namespace QLPT
             {
                 m_LoaiPTBUS.insert(txtLoaiPT_Ma.Text
                                         , txtLoaiPT_Ten.Text
-                                        , cmbCongThucVH.Text
+                                        , cmbCongThucVH.SelectedValue.ToString()
                                       
                                         );
 
@@ -166,6 +166,7 @@ namespace QLPT
             btSua.Enabled = true;
             btXoa.Enabled = true;
             btLuu.Enabled = false;
+            txtLoaiPT_Ma.Enabled = false;
 
         }
 

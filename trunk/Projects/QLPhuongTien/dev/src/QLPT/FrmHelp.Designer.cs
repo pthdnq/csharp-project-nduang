@@ -65,7 +65,6 @@
             this.Name = "FrmHelp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trợ giúp";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmHelp_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,10 +16,6 @@ namespace QLPT
             InitializeComponent();
         }
 
-        private void FrmHelp_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-            
-        }
+
     }
 }

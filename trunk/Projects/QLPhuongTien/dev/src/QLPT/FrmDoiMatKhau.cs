@@ -113,11 +113,5 @@ namespace QLPT
                 Application.Exit();
         }
 
-        private void FrmDoiMatKhau_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-            
-        }
-
     }
 }

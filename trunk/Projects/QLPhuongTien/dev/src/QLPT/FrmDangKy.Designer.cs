@@ -99,13 +99,13 @@
             // cmbPhanQuyen
             // 
             this.cmbPhanQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPhanQuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbPhanQuyen.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cmbPhanQuyen.FormattingEnabled = true;
             this.cmbPhanQuyen.Items.AddRange(new object[] {
             "quanlyPT",
             "quanlyVH",
-            "nhanvien"});
+            "nhanvien",
+            "quanlychung"});
             this.cmbPhanQuyen.Location = new System.Drawing.Point(121, 143);
             this.cmbPhanQuyen.Name = "cmbPhanQuyen";
             this.cmbPhanQuyen.Size = new System.Drawing.Size(179, 21);
@@ -182,7 +182,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmDangKy";
             this.Text = "Đăng ký tài khoản mới";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDangKy_FormClosing);
             this.Load += new System.EventHandler(this.FrmDangKy_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -22,6 +22,7 @@ namespace QLPT
         Data dt = new Data();
         NguyenMauPTBUS m_NguyenMauPTBUS = new NguyenMauPTBUS();
         Utils utils = new Utils();
+        PhuongTienBUS m_PhuongTien = new PhuongTienBUS();
 
         public void resetControl()
         {
@@ -54,6 +55,7 @@ namespace QLPT
                 MessageBox.Show("Trường Đơn vị không được bỏ trống !");
                 return false;
             }
+
             return true;
 
         }
@@ -72,7 +74,8 @@ namespace QLPT
 
         private void FrmNguyenMau_PT_Load_1(object sender, EventArgs e)
         {
-
+            btLuu.Enabled = false;
+            btSua.Enabled = false;
             resetControl();
             try
             {
@@ -115,6 +118,12 @@ namespace QLPT
         private void btSua_Click(object sender, EventArgs e)
         {
             bool ok = validData();
+            DataTable dt = m_PhuongTien.selectPhuongTienData_LoaiPT_ByNguyenMau(txtNguyenMau_ID.Text.Trim());
+            //if (dt.Rows.Count > 0)
+            //{
+            //    MessageBox.Show("Nguyên mẫu đang sử dụng trong bảng phương tiện !!!");
+            //    return;
+            //}
             if (ok == false)
                 return;
             try
@@ -131,6 +140,7 @@ namespace QLPT
                     utils.ConvertDecimalToFloat(spbDaiTu.Value),
                     txtNguyenMauChiTiet.Text.Trim()
                     );
+               MessageBox.Show("Sửa mã " + txtNguyenMau_ID.Text.Trim() + " thành công");
                FrmNguyenMau_PT_Load_1(sender, e);
             }
             catch (System.Exception ex)
@@ -142,6 +152,13 @@ namespace QLPT
         private void btXoa_Click(object sender, EventArgs e)
         {
             bool ok = validData();
+           // DataTable dt = m_PhuongTien.selectPhuongTienData_LoaiPT_ByNguyenMau(txtNguyenMau_ID.Text.Trim());
+            DataTable dt = m_PhuongTien.selectPhuongTienData_LoaiPT_ByNguyenMau(txtNguyenMau_ID.Text.Trim());
+            if (dt.Rows.Count > 0)
+            {
+                MessageBox.Show("Nguyên mẫu đang sử dụng trong bảng phương tiện !!!");
+                return ;
+            }
             if (ok == false)
                 return;
             try
@@ -246,15 +263,21 @@ namespace QLPT
                     btSua.Enabled = true;
                     txtNguyenMau_ID.Enabled = false;
                     cmbLoaiPT.Enabled = false;
+                 
                     btXoa.Enabled = true;
+                    btSua.Enabled = true;
+                    btLuu.Enabled = true;
                 }
             }
             catch { }
           
         }
 
-        private void FrmNguyenMau_PT_FormClosing(object sender, FormClosingEventArgs e)
+        private void spbBDTX_ValueChanged(object sender, EventArgs e)
         {
+            spbTieuTu.Value = 3 * spbBDTX.Value;
+            spbTrungTu.Value = 3 * spbTieuTu.Value;
+            spbDaiTu.Value = 3 * spbTrungTu.Value;
         }
 
     }

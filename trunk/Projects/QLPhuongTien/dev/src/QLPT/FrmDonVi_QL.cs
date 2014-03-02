@@ -145,7 +145,7 @@ namespace QLPT
         {
             try
             {
-                if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã DV : " + txtDonViQL_ID.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã QL : " + txtDonViQL_ID.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
                     m_DonViQuanLyBUS.delete1(txtDonViQL_ID.Text);
 
@@ -187,11 +187,6 @@ namespace QLPT
 
         }
 
-        private void frmDonVi_QL_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-            
-        }
 
     }
 }

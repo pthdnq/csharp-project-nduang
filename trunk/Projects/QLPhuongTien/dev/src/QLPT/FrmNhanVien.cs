@@ -226,12 +226,25 @@ namespace QLPT
 
         private void btXoa_Click(object sender, EventArgs e)
         {
-            if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã DV : " + txtNhanVien_ID.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            try
             {
-                m_NhanVienBUS.delete1(txtNhanVien_ID.Text);
-                MessageBox.Show("Đã xóa " + this.txtNhanVien_ID.Text + " thành công !");
-                FrmNhanVien_Load(sender, e);//trở về giao diện đầu     
+                if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn xóa Mã DV : " + txtNhanVien_ID.Text + "  hay không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                {
+                    m_NhanVienBUS.delete1(txtNhanVien_ID.Text);
+                    MessageBox.Show("Đã xóa " + this.txtNhanVien_ID.Text + " thành công !");
+                    FrmNhanVien_Load(sender, e);//trở về giao diện đầu     
+                }
             }
+           
+             catch (SqlException ex)
+                {
+                    Console.Write("Không xóa đc. Lỗi" + ex.ToString());
+                    if (ex.ErrorCode == utils.ERR_MA_DANG_SU_DUNG)
+                    {
+                        MessageBox.Show("Mã [" + txtNhanVien_ID.Text + "] đang đươc sử dụng cho bảng Vận hành nên không thể xóa", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)

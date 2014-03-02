@@ -40,6 +40,7 @@
             this.txtVanHanhID = new System.Windows.Forms.TextBox();
             this.txtMoTa = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDonVi = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.spbm3 = new System.Windows.Forms.NumericUpDown();
             this.cmbCongThucVH = new System.Windows.Forms.ComboBox();
@@ -81,7 +82,6 @@
             this.DonViTCID = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CongThucVH_ = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.txtDonVi = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spbm3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spbGio)).BeginInit();
@@ -195,9 +195,14 @@
             // 
             this.groupBox1.Controls.Add(this.txtDonVi);
             this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.btLuu);
+            this.groupBox1.Controls.Add(this.btThoat);
             this.groupBox1.Controls.Add(this.spbm3);
+            this.groupBox1.Controls.Add(this.btXoa);
             this.groupBox1.Controls.Add(this.cmbCongThucVH);
+            this.groupBox1.Controls.Add(this.btThem);
             this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.btSua);
             this.groupBox1.Controls.Add(this.cmbLoaiPT);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label12);
@@ -223,12 +228,21 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtVanHanhID);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(3, 10);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(816, 309);
+            this.groupBox1.Size = new System.Drawing.Size(831, 360);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin vận hành Phương tiện";
+            // 
+            // txtDonVi
+            // 
+            this.txtDonVi.Enabled = false;
+            this.txtDonVi.Location = new System.Drawing.Point(549, 28);
+            this.txtDonVi.Name = "txtDonVi";
+            this.txtDonVi.Size = new System.Drawing.Size(235, 20);
+            this.txtDonVi.TabIndex = 40;
             // 
             // label15
             // 
@@ -434,7 +448,7 @@
             // 
             this.btLuu.Image = global::QLPT.Properties.Resources.Save;
             this.btLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLuu.Location = new System.Drawing.Point(322, 338);
+            this.btLuu.Location = new System.Drawing.Point(316, 321);
             this.btLuu.Name = "btLuu";
             this.btLuu.Size = new System.Drawing.Size(75, 33);
             this.btLuu.TabIndex = 20;
@@ -446,7 +460,7 @@
             // 
             this.btXoa.Image = global::QLPT.Properties.Resources.Delete;
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoa.Location = new System.Drawing.Point(210, 338);
+            this.btXoa.Location = new System.Drawing.Point(204, 321);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(75, 33);
             this.btXoa.TabIndex = 21;
@@ -458,7 +472,7 @@
             // 
             this.btSua.Image = global::QLPT.Properties.Resources.application_edit;
             this.btSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSua.Location = new System.Drawing.Point(108, 338);
+            this.btSua.Location = new System.Drawing.Point(102, 321);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(75, 33);
             this.btSua.TabIndex = 23;
@@ -470,7 +484,7 @@
             // 
             this.btThem.Image = global::QLPT.Properties.Resources.plus_16;
             this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThem.Location = new System.Drawing.Point(20, 338);
+            this.btThem.Location = new System.Drawing.Point(14, 321);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(75, 33);
             this.btThem.TabIndex = 24;
@@ -482,7 +496,7 @@
             // 
             this.btThoat.Image = global::QLPT.Properties.Resources.Exit;
             this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThoat.Location = new System.Drawing.Point(741, 338);
+            this.btThoat.Location = new System.Drawing.Point(735, 321);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(75, 33);
             this.btThoat.TabIndex = 22;
@@ -493,9 +507,10 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvVanHanh);
-            this.groupBox2.Location = new System.Drawing.Point(11, 384);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(0, 360);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(808, 245);
+            this.groupBox2.Size = new System.Drawing.Size(831, 286);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách chi tiết ";
@@ -528,7 +543,7 @@
             this.dgvVanHanh.Name = "dgvVanHanh";
             this.dgvVanHanh.ReadOnly = true;
             this.dgvVanHanh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVanHanh.Size = new System.Drawing.Size(802, 226);
+            this.dgvVanHanh.Size = new System.Drawing.Size(825, 267);
             this.dgvVanHanh.TabIndex = 0;
             this.dgvVanHanh.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvVanHanh_RowPrePaint);
             this.dgvVanHanh.Click += new System.EventHandler(this.dgvVanHanh_Click);
@@ -656,14 +671,6 @@
             this.CongThucVH_.ReadOnly = true;
             this.CongThucVH_.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // txtDonVi
-            // 
-            this.txtDonVi.Enabled = false;
-            this.txtDonVi.Location = new System.Drawing.Point(549, 28);
-            this.txtDonVi.Name = "txtDonVi";
-            this.txtDonVi.Size = new System.Drawing.Size(235, 20);
-            this.txtDonVi.TabIndex = 40;
-            // 
             // FrmVanHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -672,16 +679,11 @@
             this.ClientSize = new System.Drawing.Size(831, 646);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btLuu);
-            this.Controls.Add(this.btThoat);
-            this.Controls.Add(this.btXoa);
-            this.Controls.Add(this.btThem);
-            this.Controls.Add(this.btSua);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "FrmVanHanh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vận hành phương tiện ";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmVanHanh_FormClosing);
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmVanHanh_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
